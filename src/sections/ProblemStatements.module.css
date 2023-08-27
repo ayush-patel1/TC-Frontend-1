@@ -1,0 +1,75 @@
+
+.headingContainer{
+    background: #974EC382;
+    height: 68px;
+    top: 870px;
+    left: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading2{
+    font-family: "Poppins";
+font-size: 40px;
+font-weight: bold;
+line-height: 45px;
+letter-spacing: 0em;
+text-align: center;
+color: #FFFFFF;
+}
+
+.ProblemStatements{
+    display: flex;
+    margin: 3rem 3rem auto 3rem;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.branch{
+    width: 220px;
+    height: 50px;
+    font-size:18px;
+    border-radius: 27px;
+    border: 3px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FE7BE5D1;
+    border-color: #974EC3C9;
+}
+
+.branch:hover{
+ color: white;
+ background: linear-gradient(180deg, rgba(26, 159, 234, 0.68) 0%, rgba(254, 123, 229, 0.82) 100%);
+ border: 2px solic;
+ border-bottom-color:rgba(26, 159, 234, 0.68) ;
+ border-top-color: rgba(26, 159, 234, 0.42) ;
+ cursor: pointer;
+}
+
+@media(max-width:768px){
+    .ProblemStatements{
+        margin: 3rem 5rem auto 5rem;
+    }
+    .branch{
+        font-size: 20px;
+    }
+}
+
+@media ( min-width: 1024px){
+    .ProblemStatements{
+        margin: 3rem 10rem auto 10rem;
+    }
+}
+
+@media(max-width: 420px){
+    .branch{
+        width: 140px;
+        font-size: 16px;
+    }
+    .headingContainer{
+        height: 110px;
+    }
+}

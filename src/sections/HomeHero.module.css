@@ -1,0 +1,68 @@
+/* HomeHero.module.css */
+.heroContainer {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .videoBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .heroContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .heroContent h1 span{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to bottom, #504099 40%,
+    #FE7BE5 100%);
+    border-radius: 10px;
+    padding: 0.1rem 1rem;
+  }
+  
+  .heroContent p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .heroContent button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #a83a94;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .heroContent button:hover {
+    background-color: #e458ca;
+  }
+
+  /* HomeHero.module.css */
+.heroContent {
+    /* ... existing styles ... */
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .heroContent.show {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  

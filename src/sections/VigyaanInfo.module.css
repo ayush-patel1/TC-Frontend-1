@@ -65,7 +65,7 @@ color: #000000;
 
 @media (max-width: 360px){
     .form{
-        width: 200px;
+        width: 70vw;
         font-size: 12px;
     }  
     
@@ -74,9 +74,12 @@ color: #000000;
     }
 }
 
-@media ( min-width: 1024px){
+@media ( max-width: 960px){
     .forms{
-        margin: 3rem 10rem auto 10rem;
+        gap: 20px;
+    }
+    .form{
+        width: 300px;
     }
 
 }

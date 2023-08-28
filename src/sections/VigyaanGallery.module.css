@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 .heading3{
@@ -20,8 +19,8 @@
     margin: 3.7rem 0;
     display: grid;
     gap: 15px;
-    height: 140vh;
-    width: 100vh;
+    height: 65vw;
+    width: 65vw;
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
@@ -45,7 +44,10 @@
 
 }
 .box5{
-    width: 280px;
+    width: 21vw;
+}
+.box6{
+    width: 21vw;
 }
 
 @media(max-width: 1000px){
@@ -56,7 +58,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 15px;
+        height: 100vh;
     }
     .GallerySection > *{
         height: 300px;

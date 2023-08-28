@@ -1,5 +1,5 @@
 import React from 'react'
-import {styles} from './Pages.module.css'
+// import {styles} from './Pages.module.css'
 import Events from '../sections/Events'
 import EveningShow from '../sections/EveningShow'
 import EventsGallery from '../sections/EventsGallery'

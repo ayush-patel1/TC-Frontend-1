@@ -7,7 +7,6 @@ import EventsGallery from '../sections/EventsGallery'
 const Aavartan = () => {
   return (
     <div>
-      Aavartan
       <Events/>
       <EveningShow/>
       <EventsGallery/>

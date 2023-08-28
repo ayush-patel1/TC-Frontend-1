@@ -13,6 +13,7 @@
     opacity: 0; /* Start with opacity 0 to make it fade in */
     transform: translateX(-50%) translateY(-50%) rotate(-90deg) translateX(-20px); /* Start with a bit of left offset */
   }
+
   
   .sidetext.show {
     display: flex;
@@ -31,3 +32,9 @@
     color: white;
   }
   
+
+  @media(width<600px){
+    .sidetext{
+      display: none;
+    }
+  }

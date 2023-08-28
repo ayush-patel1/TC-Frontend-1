@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Spons from "./sections/Spons";
 import SideText from "./components/SideText";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <SideText/>
+        <ScrollToTopButton/>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/aavartan" element={<Aavartan />} />

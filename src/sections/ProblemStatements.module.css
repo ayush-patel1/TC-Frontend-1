@@ -38,6 +38,7 @@ color: #FFFFFF;
     align-items: center;
     color: #FE7BE5D1;
     border-color: #974EC3C9;
+    margin: 1rem 0rem;
 }
 
 .branch:hover{
@@ -71,5 +72,14 @@ color: #FFFFFF;
     }
     .headingContainer{
         height: 110px;
+    }
+}
+
+.container{
+    padding: 0 5rem;
+}
+@media(width<600px){
+    .container{
+        padding: 0;
     }
 }

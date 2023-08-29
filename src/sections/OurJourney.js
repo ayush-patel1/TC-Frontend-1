@@ -19,7 +19,7 @@ function OurJourney() {
     <div id="journey">
       <div className={styles.title}>
         <h1 className={styles.heading}>
-          Our <span>Journey</span>
+          OUR <span>JOURNEY</span>
         </h1>
         <div className={styles.lineparent}>
           <div className={styles.line} />

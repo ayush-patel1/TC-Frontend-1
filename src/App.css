@@ -6518,3 +6518,17 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .AavartanContainer{
 	padding: 0 10rem;
 }
+@media (width<600px) {
+	.AavartanContainer{
+		padding: 0;
+	}
+}
+
+.HomeContainer{
+	padding: 0 15rem;
+}
+@media (width<600px) {
+	.HomeContainer{
+		padding: 0;
+	}
+}

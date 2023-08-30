@@ -6,16 +6,37 @@ import Vigyaan from "./pages/Vigyaan";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Spons from "./sections/Spons";
-import SideText from "./components/SideText";
-import ScrollToTopButton from "./components/ScrollToTopButton";
+import Navigation from "./layout/Navigation";
+import ScrollTop from "./layout/ScrollTop";
+import Login from "./layout/Login";
+import HailTechno from "./layout/HailTechno";
+import styled from 'styled-components';
+import ParticlesBackground from "./layout/ParticlesBackground";
+
+const BackgroundContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+`;
+
+const ContentContainer = styled.div`
+  position: relative;
+  z-index: 1;
+`;
 
 function App() {
   return (
     <div>
+      <ContentContainer>
       <BrowserRouter>
         <Navbar />
-        <SideText/>
-        <ScrollToTopButton/>
+        <Navigation/>
+        <Login/>
+        <ScrollTop/>
+        <HailTechno/>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/aavartan" element={<Aavartan />} />
@@ -24,6 +45,10 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
+      </ContentContainer>
+        <BackgroundContainer>
+          <ParticlesBackground/>
+        </BackgroundContainer>
     </div>
   );
 }

@@ -1,0 +1,22 @@
+.evening-title{
+    color:white;
+    margin:0px 0px 5px 0px;
+    text-align: center;
+  }
+  
+  .evening-title h1{
+    font-size: 2.8rem;
+  }
+  
+  .evening-heading {
+    font-size: 4rem;
+    /* font-family: "Times New Roman", Times, serif; */
+    /* color: rgba(255, 255, 255, 0.7); */
+    padding-top: 20px;
+  }
+  .evening-heading span {
+    background: linear-gradient(to bottom, #504099 40%,
+                      #FE7BE5 100%);
+              -webkit-text-fill-color: transparent;
+              -webkit-background-clip: text;
+  }

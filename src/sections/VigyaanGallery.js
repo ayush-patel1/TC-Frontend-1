@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./VigyaanGallery.module.css";
+import { Line } from "../components/Line";
 
 const VigyaanGallery = () => {
   return (
@@ -9,9 +10,7 @@ const VigyaanGallery = () => {
         <h1 className={styles.heading}>
           VIGYAAN <span>GALLERY</span>
         </h1>
-        <div className={styles.lineparent}>
-          <div className={styles.line} />
-        </div>
+        <Line/>
       </div>
         <div className={styles.GallerySection}>
           <div className={styles.box1}></div>

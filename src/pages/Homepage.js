@@ -1,15 +1,16 @@
 import React from 'react'
-// import {styles} from './Pages.module.css'
 import HomeHero from '../sections/HomeHero'
+import Contact from '../sections/Contact'
 import OurJourney from '../sections/OurJourney'
-// import Team from '../sections/Team'
 
 const Homepage = () => {
   return (
     <div>
-        <HomeHero/>
+      <HomeHero/>
+      <div className="AavartanContainer">
         <OurJourney/>
-        {/* <Team/> */}
+        <Contact/>
+      </div>
     </div>
   )
 }

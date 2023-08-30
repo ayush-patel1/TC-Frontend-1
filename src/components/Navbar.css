@@ -13,7 +13,7 @@ nav {
     /* background-color: #161622; */
     background-color: transparent;
     padding: 7px 14px;
-    z-index: 100000;
+    z-index: 1;
     /* position: absolute; */
     width: 100%;
     position: fixed;
@@ -37,6 +37,9 @@ nav {
     position: relative;
 
 }
+#navbar li:hover{
+    cursor: pointer;
+}
 
 #navbar li a {
     text-decoration: none;
@@ -49,7 +52,7 @@ nav {
 #navbar li a:before {
     content: "";
     position: absolute;
-    background-color: #e91e63;
+    background-color: #FE7BE5D1;
     height: 2px;
     width: 0;
     right: 0;
@@ -61,7 +64,7 @@ nav {
 #navbar li a:after {
     content: "";
     position: absolute;
-    background-color: #e91e63;
+    background-color: #FE7BE5D1;
     height: 2px;
     width: 0;
     left: 0;

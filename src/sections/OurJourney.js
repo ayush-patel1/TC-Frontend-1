@@ -6,6 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import styles from "./OurJourney.module.css";
 import { ReactComponent as Milestone } from "../assets/svgs/flag-solid.svg";
+import { Line } from "../components/Line";
 
 function OurJourney() {
   let workIconStyles = { background: "white" };
@@ -21,9 +22,7 @@ function OurJourney() {
         <h1 className={styles.heading}>
           OUR <span>JOURNEY</span>
         </h1>
-        <div className={styles.lineparent}>
-          <div className={styles.line} />
-        </div>
+        <Line/>
       </div>
 
       <VerticalTimeline lineColor={"#5b3554"}>

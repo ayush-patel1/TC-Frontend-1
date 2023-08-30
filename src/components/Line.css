@@ -1,0 +1,18 @@
+.lineparent{
+    display: flex;
+    justify-content: center;
+  }
+  
+.line {
+    border-width: 3px;
+border-style: solid;
+border-image: linear-gradient(to bottom,  #504099 70%,
+#FE7BE5 100%) 1;
+
+    border-radius: 5px;
+    width: 100%;
+    align-items: center;
+    /* color: #5b3554; */
+    /* background: linear-gradient(to bottom, #cc00ff, #7000ff); */
+    margin: 20px 0;
+  }

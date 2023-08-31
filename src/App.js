@@ -46,7 +46,7 @@ function App() {
           <Route exact path="/aavartan/gallery" element={<EventsGalleryPage />} />
           <Route exact path="/vigyaan/gallery" element={<VigyaanGalleryPage />} />
           <Route exact path="/vigyaan" element={<Vigyaan />} />
-          <Route exact path="/vigyaan/problemstatements" element={<ProblemStatements />} />
+          <Route exact path="/vigyaan/statements" element={<ProblemStatements />} />
           <Route exact path="/sponsors" element={<Spons />} />
         </Routes>
         <Footer />

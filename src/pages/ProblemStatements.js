@@ -11,6 +11,7 @@ import EE from "../components/branches/EE";
 import ECE from "../components/branches/ECE";
 import Chem from "../components/branches/Chem";
 import { useState } from "react";
+import PageBanner from "../layout/PageBanner";
 
 const ProblemStatements = () => {
   const [selectedBranch, setSelectedBranch] = useState('Arch');
@@ -46,6 +47,7 @@ const ProblemStatements = () => {
   const isActive = (branch) => selectedBranch === branch;
   return (
     <div className="metaportal_fn_blog_single">
+        <PageBanner pageName={"statements"} prePageLink={"/vigyaan"} prePageName={"vigyaan"}/>
       <div className="container small">
         <div className="metaportal_fn_wsidebar">
         {renderSelectedBranch()}

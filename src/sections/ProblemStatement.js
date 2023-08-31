@@ -15,7 +15,7 @@ const ProblemStatement = () => {
   <div>
       <Title color={color} noncolor={noncolor}/>
       <div class={`${styles.ProblemStatements} ${styles.container}`}>
-        <Link style={{textDecoration:"none"}}to="/vigyaan/problemstatements">
+        <Link style={{textDecoration:"none"}}to="/vigyaan/statements">
         <div data-aos="fade-up" class={styles.branch}>B. ARCH</div>
         </Link>
         <div data-aos="fade-up" class={styles.branch}>BIO-MED</div>

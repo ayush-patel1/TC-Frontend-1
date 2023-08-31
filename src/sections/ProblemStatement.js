@@ -3,6 +3,7 @@ import styles from './ProblemStatements.module.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Title from "../components/Title"
+import { Link } from "react-router-dom";
 
 const ProblemStatement = () => {
   useEffect(() => {
@@ -14,7 +15,9 @@ const ProblemStatement = () => {
   <div>
       <Title color={color} noncolor={noncolor}/>
       <div class={`${styles.ProblemStatements} ${styles.container}`}>
+        <Link style={{textDecoration:"none"}}to="/vigyaan/problemstatements">
         <div data-aos="fade-up" class={styles.branch}>B. ARCH</div>
+        </Link>
         <div data-aos="fade-up" class={styles.branch}>BIO-MED</div>
         <div data-aos="fade-up" class={styles.branch}>BIOTECH</div>
         <div data-aos="fade-up" class={styles.branch}>CHEMICAL</div>

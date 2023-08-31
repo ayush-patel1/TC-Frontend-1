@@ -42,6 +42,7 @@ color: #FFFFFF;
     margin: 1rem 0rem;
 }
 
+
 .branch:hover{
  color: white;
  background: linear-gradient(180deg, rgba(26, 159, 234, 0.68) 0%, rgba(254, 123, 229, 0.82) 100%);

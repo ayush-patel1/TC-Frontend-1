@@ -2,8 +2,13 @@ import { useEffect } from "react";
 import sqrimg from '../assets/images/1x1.jpg'
 import Title from "../components/Title";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const EveningShow = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   // Hero slider
   useEffect(() => {
     const fn_cs_slider = document.querySelectorAll(".fn_cs_slider");
@@ -130,13 +135,13 @@ const EveningShow = () => {
     <section id="home">
       <div className="container eveningContainer">
       <Title color={color} noncolor={noncolor}/>
-      <div className="fn_cs_desc">
+      <div data-aos="fade-down" className="fn_cs_desc">
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, amet. Fuga modi voluptatum deserunt numquam voluptatem consequuntur voluptate, rerum voluptas corrupti inventore architecto totam.
           </p>
         </div>
         {/* Slider */}
-        <div className="fn_cs_slider" data-responsive="on">
+        <div data-aos="fade-down" className="fn_cs_slider" data-responsive="on">
           <div className="slider_top">
             <img src={sqrimg} alt="" />
             <ul>

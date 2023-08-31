@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import sqrimg from '../assets/images/1x1.jpg'
 import Title from "../components/Title";
+import { Link } from "react-router-dom";
 
 const EventsGallery = () => {
   useEffect(() => {
@@ -192,15 +193,19 @@ const EventsGallery = () => {
           </div>
         </div>
         <div className="fn_cs_desc">
+          <Link style={{textDecoration:"none", color:"white"}} to="/vigyaan/gallery">
         <a
-            href="https://opensea.io/"
+            href="/"
             className="metaportal_fn_button"
             target="_blank"
             rel="noreferrer"
             style={{margin:"2rem 0"}}
           >
-            <span>Show More</span>
+            <span>
+              Show More
+              </span>
           </a>
+              </Link>
         </div>
       </div>
     </section>

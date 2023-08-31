@@ -2,10 +2,15 @@ import axios from "axios";
 import { React, useEffect, useState } from "react";
 import { connect } from "react-redux";
 import urls from "../urls.json"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const backend = urls.backend
 
 const VigyaanForm = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   const [memberCount, setMemberCount] = useState(0);
   const [form, set] = useState({
     Team_name: "",
@@ -158,10 +163,10 @@ const VigyaanForm = () => {
             </div>
             <div className="mint_list">
               <ul>
-                <li>
+                <li data-aos="fade-down">
                   <input name="Team_name" id="teamName" type="text" placeholder="Team Name" onChange={(e) => handle(e)} />
                 </li>
-                <li>
+                <li data-aos="fade-down">
                   <input
                     id="leaderName"
                     type="text"
@@ -170,7 +175,7 @@ const VigyaanForm = () => {
                     onChange={(e) => handle(e)}
                   />
                 </li>
-                <li>
+                <li data-aos="fade-down">
                   <input
                     id="leaderName"
                     type="text"
@@ -179,7 +184,7 @@ const VigyaanForm = () => {
                     onChange={(e) => handle(e)}
                   />
                 </li>
-                <li>
+                <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
@@ -188,7 +193,7 @@ const VigyaanForm = () => {
                     onChange={(e) => handle(e)}
                   />
                 </li>
-                <li>
+                <li data-aos="fade-down">
                   <input
                     id="leaderEmail"
                     type="text"
@@ -204,7 +209,7 @@ const VigyaanForm = () => {
                     placeholder="Team Size (Max 3)"
                   />
                 </li> */}
-                <li>
+                <li data-aos="fade-down">
                   <input
                     name="College"
                     id="collegeName"
@@ -213,7 +218,7 @@ const VigyaanForm = () => {
                     onChange={(e) => handle(e)}
                   />
                 </li>
-                <li>
+                <li data-aos="fade-down">
                   <input
                     name="Leader_branch"
                     id="leaderBranch"
@@ -222,7 +227,7 @@ const VigyaanForm = () => {
                     onChange={(e) => handle(e)}
                   />
                 </li>
-                <li>
+                <li data-aos="fade-down">
                   <input
                     name="Leader_yog"
                     id="leaderYog"
@@ -232,7 +237,7 @@ const VigyaanForm = () => {
                   />
                 </li>
                 {renderMemberFields()}
-                <li
+                <li data-aos="fade-down"
                   style={{
                     padding: "0",
                     display: "flex",
@@ -286,13 +291,13 @@ const VigyaanForm = () => {
           </div>
           <div className="mint_right">
             <div className="mright">
-              <div className="mint_time">
+              <div data-aos="fade-down" className="mint_time">
                 <h4>Vigyaan</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
-              <div className="mint_info">
+              <div data-aos="fade-down" className="mint_info">
                 <p>1. A team can have 2 to 3 members.</p>
                 <p>
                   2. Each and every team is expected to have a Name and a Team
@@ -305,11 +310,11 @@ const VigyaanForm = () => {
                 </p>
                 <p>4. A team can opt for only one problem statement.</p>
               </div>
-              <div style={{ paddingTop: "2rem" }} className="mint_time">
+              <div data-aos="fade-down" style={{ paddingTop: "2rem" }} className="mint_time">
                 <h4>VIGYAAN</h4>
                 <h3 className="metaportal_fn_countdown">PROCEDURES</h3>
               </div>
-              <div className="mint_info">
+              <div data-aos="fade-down" className="mint_info">
                 <p>
                   The procedure to conduct Vigyaan ensures that only the most
                   excellent, unique and original ideas are selected.
@@ -338,11 +343,12 @@ const VigyaanForm = () => {
                   that they will present on the exhibition day.
                 </p>
               </div>
+              <span className="metaportal_fn_button_2">Sample Abstract</span>
             </div>
           </div>
         </div>
         <div className="metaportal_fn_nft_cats">
-          <ul>
+          <ul data-aos="fade-down">
             <li>
               <div className="item">
                 <h4 className="parent_category">10th September</h4>

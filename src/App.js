@@ -13,6 +13,8 @@ import HailTechno from "./layout/HailTechno";
 import styled from 'styled-components';
 import ParticlesBackground from "./layout/ParticlesBackground";
 import ProblemStatements from "./pages/ProblemStatements";
+import EventsGalleryPage from "./pages/EventsGalleryPage";
+import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -41,6 +43,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/aavartan" element={<Aavartan />} />
+          <Route exact path="/aavartan/gallery" element={<EventsGalleryPage />} />
+          <Route exact path="/vigyaan/gallery" element={<VigyaanGalleryPage />} />
           <Route exact path="/vigyaan" element={<Vigyaan />} />
           <Route exact path="/vigyaan/problemstatements" element={<ProblemStatements />} />
           <Route exact path="/sponsors" element={<Spons />} />

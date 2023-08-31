@@ -45,10 +45,10 @@ color: #FFFFFF;
 
 .branch:hover{
  color: white;
- background: linear-gradient(180deg, rgba(26, 159, 234, 0.68) 0%, rgba(254, 123, 229, 0.82) 100%);
+ background: linear-gradient(to bottom, #504099c5 20%,#fe7be6c8 100%);
  border: 2px solic;
- border-bottom-color:rgba(26, 159, 234, 0.68) ;
- border-top-color: rgba(26, 159, 234, 0.42) ;
+ border-bottom-color:#FE7BE5 ;
+ border-top-color: #504099 ;
  cursor: pointer;
 }
 

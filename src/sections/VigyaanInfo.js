@@ -11,12 +11,12 @@ const VigyaanInfo = () => {
         <img src={vigyaanPhone} alt="" width="100%" className={styles.vigyaanphone} />
       </div>
     
-      <div className={`${styles.forms} ${styles.container}`}>
+      {/* <div className={`${styles.forms} ${styles.container}`}>
        <div className={styles.form}>REGISTRATION FORM</div>
        <div className={styles.form}>ABSTRACT SUBMISSION</div>
        <div className={styles.form}>SAMPLE ABSRACT</div>
        <div className={styles.form}>RULES AND REGULATION</div>
-      </div>
+      </div> */}
       
     </div>
   )

@@ -2,16 +2,17 @@ import React,{useEffect} from "react";
 import styles from './ProblemStatements.module.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Title from "../components/Title"
 
 const ProblemStatement = () => {
   useEffect(() => {
     AOS.init();
   }, [])
+  const color="PROBLEM";
+  const noncolor="STATEMENTS";
   return (
   <div>
-      <div class={styles.headingContainer}>
-        <div class={styles.heading2}>PROBLEM STATEMENTS</div>
-      </div>
+      <Title color={color} noncolor={noncolor}/>
       <div class={`${styles.ProblemStatements} ${styles.container}`}>
         <div data-aos="fade-up" class={styles.branch}>B. ARCH</div>
         <div data-aos="fade-up" class={styles.branch}>BIO-MED</div>

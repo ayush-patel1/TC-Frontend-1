@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import './EveningShow.css'
 import sqrimg from '../assets/images/1x1.jpg'
-import { Line } from "../components/Line";
+import Title from "../components/Title";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 const EveningShow = () => {
   // Hero slider
@@ -123,14 +123,20 @@ const EveningShow = () => {
     return activeIndex;
   };
 
+  const color="EVENING";
+  const noncolor="SHOWS"
+
   return (
     <section id="home">
       <div className="container eveningContainer">
-      <div className="evening-title">
-        <h1 className="evening-heading">
-           <span>Evening</span> Shows
-        </h1>
-      <Line/>
+      <Title color={color} noncolor={noncolor}/>
+      <div className="fn_cs_desc">
+          <p>
+            Meta Legends represent a collection of 17,000 legends categorized by
+            level of rarity and generated with hundreds of elements. The Legends
+            are stored as ERC-721 tokens on the Ethereum blockchain and hosted
+            on IPFS.
+          </p>
         </div>
         {/* Slider */}
         <div className="fn_cs_slider" data-responsive="on">
@@ -229,14 +235,14 @@ const EveningShow = () => {
             <a href="#" className="prev">
               <span className="circle" />
               <span className="icon">
-                <img src="/svg/down.svg" alt="" className="fn__svg" />
+                <AiOutlineArrowLeft color="white"/>
               </span>
               <span className="circle" />
             </a>
             <a href="#" className="next">
               <span className="circle" />
               <span className="icon">
-                <img src="/svg/down.svg" alt="" className="fn__svg" />
+               <AiOutlineArrowRight color="white"/>
               </span>
               <span className="circle" />
             </a>
@@ -244,6 +250,7 @@ const EveningShow = () => {
         </div>
         {/* !Slider */}
         {/* Description */}
+
         {/* !Description */}
       </div>
     </section>

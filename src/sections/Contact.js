@@ -1,15 +1,18 @@
-import { Line } from '../components/Line';
-import {styles} from './Contact.css'
+import Title from '../components/Title';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 const Contact = () => {
+  const color="CONTACT";
+  const noncolor="US";
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <section id="contact">
       <div>
-      <div className="contact-title">
-        <h1 className="contact-heading">
-           <span>CONTACT</span> US
-        </h1>
-        <Line/>
-      </div>
+        <Title color={color} noncolor={noncolor}/>
       
         <div className="fn_cs_contact_form">
           <form
@@ -21,34 +24,34 @@ const Contact = () => {
           >
             <div className="input_list">
               <ul>
-                <li>
+                <li data-aos="fade-down">
                   <input id="name" type="text" placeholder="Your Name *" />
                 </li>
-                <li>
+                <li data-aos="fade-down">
                   <input id="email" type="text" placeholder="Your Email *" />
                 </li>
-                <li>
+                <li data-aos="fade-down">
                   <input
                     id="tel"
                     type="text"
                     placeholder="Your Phone (optional)"
                   />
                 </li>
-                <li>
+                <li data-aos="fade-down">
                   <input
                     id="subject"
                     type="text"
                     placeholder="Topic (optional)"
                   />
                 </li>
-                <li className="full">
+                <li className="full" data-aos="fade-down">
                   <textarea
                     id="message"
                     placeholder="Your Message *"
                     defaultValue={""}
                   />
                 </li>
-                <li className="full">
+                <li className="full" data-aos="fade-down">
                   <div className="mw300">
                     <a
                       id="send_message"
@@ -65,7 +68,7 @@ const Contact = () => {
               className="returnmessage"
               data-success="Your message has been received, We will contact you soon."
             />
-            <div className="empty_notice">
+            <div data-aos="fade-down" className="empty_notice">
               <span>! Please Fill Required Fields !</span>
             </div>
           </form>

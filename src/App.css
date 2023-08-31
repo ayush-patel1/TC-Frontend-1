@@ -975,6 +975,7 @@ a.full_link{
   	-webkit-text-fill-color: transparent;
     content: attr(data-text);
 }
+
 /* Since v4.0 */
 .fn__maintitle.upper{
 	text-transform: uppercase;
@@ -1059,7 +1060,9 @@ a.full_link{
 .slider_nav .icon{
 	width: 34px;
 	height: 34px;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border: 2px solid rgba(255,255,255,.5);
 	position: relative;
 	border-radius: 100%;
@@ -1814,7 +1817,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .fn_cs_collection{
-	margin-bottom: 102px;
+	margin-bottom: 10px;
 }
 .fn_cs_collection .item{
 	padding-left: 40px;
@@ -2198,7 +2201,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 
 #contact{
-	padding: 144px 0 150px 0;
+	padding: 14px 0 150px 0;
 }
 
 
@@ -3347,14 +3350,14 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	margin-bottom: 73px;
 }
 .metaportal_fn_mintbox .mint_left{
-	width: 60%;
+	width: 40%;
 	padding: 115px 50px 50px;
 	position: relative;
 	border-radius: 15px 0 0 15px;
 }
 .metaportal_fn_mintbox .mint_right{
-	width: 40%;
-	padding: 115px 50px 50px;
+	width: 60%;
+	padding: 60px 50px 25px 50px;
 	border-radius: 0 15px 15px 0;
 	background-color: rgba(0,0,0,0.2);
 	border-left: 1px solid rgba(255,255,255,.15);
@@ -3368,10 +3371,10 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	position: relative;
 	font-size: 16px;
 	text-transform: uppercase;
-	color: #000;
+	color: white;
 	letter-spacing: .5px;
 	font-family: var(--hff);
-	background-color: #56b201;
+	background-color: #974EC382;
 	padding-right: 40px;
 	padding-left: 59px;
 	line-height: 48px;
@@ -3387,10 +3390,15 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     height: 0;
     border-style: solid;
     border-width: 48px 0 0 20px;
-    border-color: transparent transparent transparent #56b201;
+    border-color: transparent transparent transparent #974EC382;
 }
 .metaportal_fn_mintbox .mint_list{
 	margin-bottom: 5px;
+}
+.metaportal_fn_mintbox .mint_list label p{
+	/* color: white; */
+	font-size: 14px;
+	padding-top: 1rem;
 }
 .metaportal_fn_mintbox .mint_list ul{
 	margin: 0;
@@ -3410,10 +3418,26 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	margin-left: -40px;
 }
 .metaportal_fn_mintbox .mint_list li{
-	width: 50%;
+	width: 100%;
 	padding-left: 40px;
-	margin-bottom: 45px;
+	margin-bottom: 30px;
 }
+.metaportal_fn_mintbox .mint_list li input{
+	color: white !important;
+	width: 100% !important;
+}
+.metaportal_fn_mintbox .mint_list li li{
+	cursor: pointer;
+	width: 50%;
+	font-size: 14px;
+	margin: 0;
+}
+.metaportal_fn_mintbox .mint_list li li:hover{
+	cursor: pointer;
+	color: white;
+}
+
+
 .metaportal_fn_mintbox .mint_list .item{
 	height: 100%;
 	border-bottom: 1px solid rgba(255,255,255,0.15);
@@ -3461,6 +3485,13 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	line-height: 1.5;
 	color: var(--bc);
 	margin-top: 25px;
+}
+
+.metaportal_fn_mintbox .mint_desc{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 .metaportal_fn_mintbox .mint_desc p a{
 	text-decoration: none;
@@ -3510,7 +3541,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     text-overflow: ellipsis;
 }
 .metaportal_fn_mintbox .mright{
-	max-width: 275px;
+	/* max-width: 275px; */
 	margin: 0 auto;
 }
 .metaportal_fn_mintbox .mint_checked{
@@ -3574,8 +3605,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	display: block;
 }
 .metaportal_fn_mintbox .mint_info p{
-	margin: 0;
-	font-size: 16px;
+	margin: 15px 0;
+	font-size: 15px;
 	line-height: 1.5;
 	color: var(--bc);
 }
@@ -3601,7 +3632,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	margin-left: -40px;
 }
 .metaportal_fn_nft_cats li{
-	width: 25%;
+	width: 33%;
 	padding-left: 40px;
 	margin-bottom: 45px;
 }
@@ -6297,9 +6328,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     bottom: 0;
     border-radius: 100%;
     border: 3px solid transparent;
-    background: -moz-linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
-    background: -webkit-linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
-    background: linear-gradient(45deg,var(--mc1),var(--mc2),var(--mc1),var(--mc2)) border-box;
+    background: -moz-linear-gradient(to bottom,  #504099 0%,
+	#FE7BE5 100%) border-box;
+    background: -webkit-linear-gradient(to bottom,  #504099 0%,
+	#FE7BE5 100%) border-box;
+    background: linear-gradient(to bottom,  #504099 0%,
+	#FE7BE5 100%) border-box;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
 	-webkit-mask-composite: source-out;
@@ -6531,4 +6565,33 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	.HomeContainer{
 		padding: 0;
 	}
+}
+
+.metaportal_fn_button_2{
+    font-size:16px;
+    border-radius: 27px;
+    border: 3px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	padding: 0.5rem 1rem;
+	width: 70%;
+    color: #FE7BE5D1;
+    border-color: #974EC3C9;
+    margin: 2rem 0rem 0rem 0;
+	text-decoration: none;
+}
+@media(width<600px){
+	.metaportal_fn_button_2{
+		width: 100%;
+	}
+}
+.metaportal_fn_button_2:hover{
+	color: white;
+	background: linear-gradient(180deg, rgba(26, 159, 234, 0.68) 0%, rgba(254, 123, 229, 0.82) 100%);
+	border: 2px solic;
+	border-bottom-color:rgba(26, 159, 234, 0.68) ;
+	border-top-color: rgba(26, 159, 234, 0.42) ;
+	cursor: pointer;
+
 }

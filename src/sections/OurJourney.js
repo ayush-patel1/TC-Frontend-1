@@ -5,8 +5,10 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import styles from "./OurJourney.module.css";
-import { ReactComponent as Milestone } from "../assets/svgs/flag-solid.svg";
+// import { ReactComponent as Milestone } from "../assets/svgs/flag-solid.svg";
+import {AiFillFlag } from 'react-icons/ai';
 import { Line } from "../components/Line";
+import Title from "../components/Title";
 
 function OurJourney() {
   let workIconStyles = { background: "white" };
@@ -15,14 +17,13 @@ function OurJourney() {
     color: "white",
   };
   let showing_element_arrow = { color: "#3d4489" };
-
+  const color="OUR";
+  const noncolor="JOURNEY"
   return (
     <div id="journey">
-      <div className={styles.title}>
-        <h1 className={styles.heading}>
-          OUR <span>JOURNEY</span>
-        </h1>
-        <Line/>
+      <div style={{paddingTop:"3rem"}}>
+
+      <Title color={color} noncolor={noncolor}/>
       </div>
 
       <VerticalTimeline lineColor={"#5b3554"}>
@@ -30,7 +31,7 @@ function OurJourney() {
           key="1"
           date="2007"
           dateClassName={styles.timeline_date}
-          icon=<Milestone />
+          icon=<AiFillFlag color="#7c4283" />
           iconStyle={workIconStyles}
           contentStyle={showing_element}
           contentArrowStyle={showing_element_arrow}
@@ -50,7 +51,7 @@ function OurJourney() {
           key="2"
           date="2011"
           dateClassName={styles.timeline_date}
-          icon=<Milestone />
+          icon=<AiFillFlag color="#7c4283" />
           iconStyle={workIconStyles}
           contentStyle={showing_element}
           contentArrowStyle={showing_element_arrow}
@@ -71,7 +72,7 @@ function OurJourney() {
           key="3"
           date="2019"
           dateClassName={styles.timeline_date}
-          icon=<Milestone />
+          icon=<AiFillFlag color="#7c4283" />
           iconStyle={workIconStyles}
           contentStyle={showing_element}
           contentArrowStyle={showing_element_arrow}
@@ -92,7 +93,7 @@ function OurJourney() {
           key="4"
           date="2023"
           dateClassName={styles.timeline_date}
-          icon=<Milestone />
+          icon=<AiFillFlag color="#7c4283" />
           iconStyle={workIconStyles}
           contentStyle={showing_element}
           contentArrowStyle={showing_element_arrow}

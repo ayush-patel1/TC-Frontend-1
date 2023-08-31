@@ -1,10 +1,14 @@
 
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import sqrimg from '../assets/images/1x1.jpg'
-import './EventsGallery.css'
+import Title from "../components/Title";
 
 const EventsGallery = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   useEffect(() => {
     const collection = document.querySelector(".fn_cs_collection");
     var items = collection.querySelectorAll(".item");
@@ -40,21 +44,26 @@ const EventsGallery = () => {
     }, 2000);
   }, []);
 
+
+  const color="EVENTS";
+  const noncolor="GALLERY"
+
   return (
     <section id="collection">
       <div className="container collectionContainer">
-      <div className="collection-title">
-        <h1 className="collection-heading">
-           <span>Aavartan</span> Gallery
-        </h1>
-        <div className="collection-lineparent">
-          <div className="collection-line"/>
+      <Title color={color} noncolor={noncolor}/>
+      <div className="fn_cs_desc">
+          <p>
+            Meta Legends represent a collection of 17,000 legends categorized by
+            level of rarity and generated with hundreds of elements. The Legends
+            are stored as ERC-721 tokens on the Ethereum blockchain and hosted
+            on IPFS.
+          </p>
         </div>
-      </div>
         <div className="fn_cs_collection">
           <div className="collection_top">
             <div className="item">
-              <div className="item_in">
+              <div data-aos="fade-down" className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -70,7 +79,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/1.jpg" />
             </div>
             <div className="item">
-              <div className="item_in">
+              <div data-aos="fade-down" className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -86,7 +95,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/2.jpg" />
             </div>
             <div className="item">
-              <div className="item_in">
+              <div data-aos="fade-down" className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -102,7 +111,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/3.jpg" />
             </div>
             <div className="item">
-              <div className="item_in">
+              <div data-aos="fade-down" className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -120,7 +129,7 @@ const EventsGallery = () => {
           </div>
           <div className="collection_bottom">
             <div className="item">
-              <div className="item_in">
+              <div data-aos="fade-up" className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -136,7 +145,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/5.jpg" />
             </div>
             <div className="item">
-              <div className="item_in">
+              <div data-aos="fade-up" className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -152,7 +161,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/6.jpg" />
             </div>
             <div className="item">
-              <div className="item_in">
+              <div data-aos="fade-up" className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -168,7 +177,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/7.jpg" />
             </div>
             <div className="item">
-              <div className="item_in">
+              <div data-aos="fade-up" className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -184,6 +193,17 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/8.jpg" />
             </div>
           </div>
+        </div>
+        <div className="fn_cs_desc">
+        <a
+            href="https://opensea.io/"
+            className="metaportal_fn_button"
+            target="_blank"
+            rel="noreferrer"
+            style={{margin:"2rem 0"}}
+          >
+            <span>Buy On Opensea</span>
+          </a>
         </div>
       </div>
     </section>

@@ -54,10 +54,7 @@ const EventsGallery = () => {
       <Title color={color} noncolor={noncolor}/>
       <div className="fn_cs_desc">
           <p>
-            Meta Legends represent a collection of 17,000 legends categorized by
-            level of rarity and generated with hundreds of elements. The Legends
-            are stored as ERC-721 tokens on the Ethereum blockchain and hosted
-            on IPFS.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus commodi sint ex optio unde, similique laudantium soluta, labore praesentium quo quibusdam consectetur explicabo culpa?
           </p>
         </div>
         <div className="fn_cs_collection">
@@ -202,7 +199,7 @@ const EventsGallery = () => {
             rel="noreferrer"
             style={{margin:"2rem 0"}}
           >
-            <span>Buy On Opensea</span>
+            <span>Show More</span>
           </a>
         </div>
       </div>

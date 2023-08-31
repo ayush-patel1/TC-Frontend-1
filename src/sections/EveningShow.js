@@ -132,10 +132,7 @@ const EveningShow = () => {
       <Title color={color} noncolor={noncolor}/>
       <div className="fn_cs_desc">
           <p>
-            Meta Legends represent a collection of 17,000 legends categorized by
-            level of rarity and generated with hundreds of elements. The Legends
-            are stored as ERC-721 tokens on the Ethereum blockchain and hosted
-            on IPFS.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, amet. Fuga modi voluptatum deserunt numquam voluptatem consequuntur voluptate, rerum voluptas corrupti inventore architecto totam.
           </p>
         </div>
         {/* Slider */}

@@ -4216,6 +4216,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     transform: translateZ(0);
     position: relative;
 	overflow: hidden;
+	cursor: pointer;
 }
 .metaportal_fn_categories li a{
 	position: relative;
@@ -4313,6 +4314,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 .metaportal_fn_categories li:hover a{
 	padding-left: 40px;
+	color: #b572dfd0;
+}
+.metaportal_fn_categories li a.activa{
+	padding-left: 40px;
+	color: #b572dfd0;
 }
 .metaportal_fn_categories .more{
 	font-size: 13px;

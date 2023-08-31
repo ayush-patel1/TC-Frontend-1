@@ -1,8 +1,8 @@
 import React from 'react'
 import VigyaanInfo from '../sections/VigyaanInfo'
-import ProblemStatement from '../sections/ProblemStatement'
 import VigyaanGallery from '../sections/VigyaanGallery'
 import VigyaanForm from '../forms/VigyaanForm'
+import ProblemStatement from '../sections/ProblemStatement'
 
 const Vigyaan = () => {
   return (
@@ -10,7 +10,7 @@ const Vigyaan = () => {
       <VigyaanInfo/>
       <div className="AavartanContainer">
         <VigyaanForm/>
-      <ProblemStatement/>
+        <ProblemStatement/>
       <VigyaanGallery/>
       </div>
     </div>

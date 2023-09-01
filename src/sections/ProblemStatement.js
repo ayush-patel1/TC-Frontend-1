@@ -12,7 +12,7 @@ const ProblemStatement = () => {
   const color="PROBLEM";
   const noncolor="STATEMENTS";
   return (
-  <div>
+  <div className={styles.container}>
       <Title color={color} noncolor={noncolor}/>
       <div class={`${styles.ProblemStatements} ${styles.container}`}>
         <Link style={{textDecoration:"none"}}to="/vigyaan/statements">

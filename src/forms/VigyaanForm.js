@@ -192,6 +192,7 @@ const VigyaanForm = () => {
                     placeholder="Your Leader Whatsapp Number"
                     onChange={(e) => handle(e)}
                   />
+                  <span className="Note" style={{fontSize : "0.8rem"}}>Don't include +91 or 0</span>
                 </li>
                 <li data-aos="fade-down">
                   <input

@@ -11,7 +11,8 @@ import ScrollTop from "./layout/ScrollTop";
 import Login from "./layout/Login";
 import HailTechno from "./layout/HailTechno";
 import styled from 'styled-components';
-import ParticlesBackground from "./layout/ParticlesBackground";
+// import ParticlesBackground from "./layout/ParticlesBackground";
+import BackgroundVideo from "./layout/BackgroundVideo";
 import ProblemStatements from "./pages/ProblemStatements";
 import EventsGalleryPage from "./pages/EventsGalleryPage";
 import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
@@ -53,7 +54,8 @@ function App() {
       </BrowserRouter>
       </ContentContainer>
         <BackgroundContainer>
-          <ParticlesBackground/>
+          {/* <ParticlesBackground/> */}
+          <BackgroundVideo/>
         </BackgroundContainer>
     </div>
   );

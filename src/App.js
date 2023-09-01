@@ -5,7 +5,6 @@ import Aavartan from "./pages/Aavartan";
 import Vigyaan from "./pages/Vigyaan";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Spons from "./sections/Spons";
 import Navigation from "./layout/Navigation";
 import ScrollTop from "./layout/ScrollTop";
 import Login from "./layout/Login";
@@ -15,6 +14,7 @@ import ParticlesBackground from "./layout/ParticlesBackground";
 import ProblemStatements from "./pages/ProblemStatements";
 import EventsGalleryPage from "./pages/EventsGalleryPage";
 import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
+import SponsorsPage from "./pages/SponsorsPage";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -47,7 +47,7 @@ function App() {
           <Route exact path="/vigyaan/gallery" element={<VigyaanGalleryPage />} />
           <Route exact path="/vigyaan" element={<Vigyaan />} />
           <Route exact path="/vigyaan/statements" element={<ProblemStatements />} />
-          <Route exact path="/sponsors" element={<Spons />} />
+          <Route exact path="/sponsors" element={<SponsorsPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -9,7 +9,7 @@ function Card(props){
       }, [])
     return (
         <div data-aos="zoom-in-up" className={styles.Mcards}>
-            <img src={props.spons_img} className={styles.hehe} alt="Error"></img>
+            <img width="100%" src={props.spons_img} className={styles.hehe} alt="Error"></img>
         </div>
     )
 }

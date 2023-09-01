@@ -1,5 +1,5 @@
 .top {
-  background-image: linear-gradient(10deg, #2e456e, #825290);
+  background-image: linear-gradient(10deg, #2E456E, #825290);
   height: 500px;
   width: 100%;
   border: solid 2px #825290;
@@ -7,22 +7,21 @@
   /* z-index: -1; */
   border-radius: 0px 0px 100px 100px;
 }
-
 .page {
   display: flex;
   justify-content: center;
   padding-bottom: 4rem;
+} 
+@media(width<1024px){
+.top{
+  width: 500px;
+  height: 300px;
 }
-@media (width<1024px) {
-  .top {
-    width: 500px;
-    height: 300px;
-  }
 }
-@media (width<500px) {
-  .top {
-    width: 280px;
-    height: 200px;
+@media(width<500px){
+  .top{
+      width: 280px;
+      height: 200px;
   }
 }
 
@@ -32,11 +31,11 @@
   justify-content: center;
 }
 
-.TCard {
-  background-color: #c8baba;
+.TCard{
+  background-color: #C8BABA;
   height: 200px;
   width: 400px;
-  margin: 0 20px 40px 20px;
+  margin:0 20px 40px 20px;
 }
 
 .MiddleCards {
@@ -44,28 +43,28 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.container {
+.container{
   padding: 0 12rem;
   padding-bottom: 5rem;
 }
-@media (width<700px) {
-  .TCard {
-    height: 120px;
-    width: 250px;
-    margin: 0 0 15px 0;
+@media(width<700px){
+  .TCard{
+      height: 120px;
+      width: 250px;
+      margin: 0 0 15px 0;
   }
   .TopCards {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
   }
-  .top {
-    border-radius: 0px 0px 50px 50px;
+  .top{
+      border-radius: 0px 0px 50px 50px;
   }
   .page {
-    padding-bottom: 2rem;
-  }
-  .container {
-    padding: 0;
-    padding-bottom: 2rem;
+      padding-bottom: 2rem;
+  } 
+  .container{
+      padding: 0;
+      padding-bottom: 2rem;
   }
 }

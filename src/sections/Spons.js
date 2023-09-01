@@ -14,10 +14,6 @@ const Spons = () => {
       <div data-aos="fade-down" className={styles.page}>
         <div className={styles.top}></div>
       </div>
-      <div className={styles.TopCards}>
-        <div data-aos="zoom-in-up" className={styles.TCard}></div>
-        <div data-aos="zoom-in-up" className={styles.TCard}></div>
-      </div>
       <div className={styles.MiddleCards}>
        {Spons_data.map((data)=>{
         return(

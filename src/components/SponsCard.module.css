@@ -1,16 +1,12 @@
 .Mcards {
-    background-color: black;
+    /* background-color: #C8BABA; */
     height: 200px;
     width: 250px;
-    margin: 30px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.hehe{
-    height: 200px;
-    width: 250px;
-}
-
-
 @media(width<700px){
     .Mcards {
         height: 70px;
@@ -18,4 +14,3 @@
         margin: 7px 7px;
     }
 }
-

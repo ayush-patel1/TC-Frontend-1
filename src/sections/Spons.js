@@ -3,6 +3,7 @@ import styles from "./Spons.module.css";
 import Card from "../components/SponsCardSec";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Spons_data from "../assets/spons_data";
 
 const Spons = () => {
   useEffect(() => {
@@ -18,26 +19,13 @@ const Spons = () => {
         <div data-aos="zoom-in-up" className={styles.TCard}></div>
       </div>
       <div className={styles.MiddleCards}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+       {Spons_data.map((data)=>{
+        return(
+          <Card
+          spons_img={data.url}
+          ></Card>
+        );
+       })}
         </div>
     </div>
   );

@@ -3,7 +3,7 @@ import './AavartanHero.css';
 import ParticlesBackground from '../layout/ParticlesBackground';
 import WaterWave from 'react-water-wave'; // Import react-water-wave
 
-const AavartanHero = () => {
+const AavartanHero2 = () => {
   return (
     <section className="hero">
       <WaterWave
@@ -33,4 +33,4 @@ const AavartanHero = () => {
   );
 };
 
-export default AavartanHero;
+export default AavartanHero2;

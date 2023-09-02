@@ -58,7 +58,7 @@ function App() {
             <Route exact path="/team" element={<TeamPage />} />
             <Route
               exact
-              path="/vigyaan/statements"
+              path="/vigyaan/statements/:branch"
               element={<ProblemStatements />}
             />
             <Route exact path="/sponsors" element={<SponsorsPage />} />

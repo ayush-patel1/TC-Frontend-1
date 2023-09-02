@@ -1,4 +1,6 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate  } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Arch from "../components/branches/Arch";
 import BioMed from "../components/branches/BioMed";
 import CsItMca from "../components/branches/CsItMca";
@@ -15,17 +17,20 @@ import PageBanner from "../layout/PageBanner";
 import ProblemStatement from "../sections/ProblemStatement";
 
 const ProblemStatements = (props) => {
-  const [selectedBranch, setSelectedBranch] = useState('Arch');
-const data = props.location?.state?.data;
+  const { branch } = useParams();
+  const navigate = useNavigate ();
 
-useEffect(() => {
-  if (data) {
-    setSelectedBranch(data);
-  }
-}, [data]);
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleCategoryClick = (newBranch) => {
+    navigate(`/vigyaan/statements/${newBranch}`);
+  };
 
   const renderSelectedBranch = () => {
-    switch (selectedBranch) {
+    switch (branch) {
       case 'Arch':
         return <Arch />;
       case 'BioMed':
@@ -52,13 +57,13 @@ useEffect(() => {
         return <Arch />;
     }
   };
-  const isActive = (branch) => selectedBranch === branch;
+  const isActive = (category) => branch === category;
   return (
     <div className="metaportal_fn_blog_single">
-        <PageBanner pageName={"statements"} prePageLink={"/vigyaan"} prePageName={"vigyaan"}/>
+      <PageBanner pageName={"statements"} prePageLink={"/vigyaan"} prePageName={"vigyaan"} />
       <div className="container small">
         <div className="metaportal_fn_wsidebar">
-        {renderSelectedBranch()}
+          {renderSelectedBranch()}
           {/* !Left Sidebar */}
           {/* Right Sidebar */}
           <div className="sidebar_right">
@@ -76,67 +81,67 @@ useEffect(() => {
               >
                 <ul>
                   <li>
-                    <a onClick={() => setSelectedBranch('Arch')} className={isActive('Arch') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Arch')} className={isActive('Arch') ? 'activa' : ''}>
                       <span>Architecture</span>
                     </a>
                     <span className="count">8</span>
                   </li>
                   <li>
-                    <a onClick={() => setSelectedBranch('BioMed')} className={isActive('BioMed') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('BioMed')} className={isActive('BioMed') ? 'activa' : ''}>
                       <span>Biomedical</span>
                     </a>
                     <span className="count">8</span>
                   </li>
                   <li>
-                    <a onClick={() => setSelectedBranch('Biotech')} className={isActive('Biotech') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Biotech')} className={isActive('Biotech') ? 'activa' : ''}>
                       <span>Biotechnology</span>
                     </a>
                     <span className="count">12</span>
                   </li>
                   <li>
-                    <a onClick={() => setSelectedBranch('Civil')} className={isActive('Civil') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Civil')} className={isActive('Civil') ? 'activa' : ''}>
                       <span>Civil</span>
                     </a>
                     <span className="count">14</span>
                   </li>
                   <li>
-                    <a onClick={() => setSelectedBranch('CsItMca')} className={isActive('CsItMca') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('CsItMca')} className={isActive('CsItMca') ? 'activa' : ''}>
                       <span>CSE / IT / MCA</span>
                     </a>
                     <span className="count">11</span>
                   </li>
                   <li>
-                    <a onClick={() => setSelectedBranch('ECE')} className={isActive('ECE') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('ECE')} className={isActive('ECE') ? 'activa' : ''}>
                       <span>Electronics & Communications</span>
                     </a>
                     <span className="count">11</span>
                   </li>
                   <li>
-                    <a onClick={() => setSelectedBranch('EE')} className={isActive('EE') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('EE')} className={isActive('EE') ? 'activa' : ''}>
                       <span>Electrical</span>
                     </a>
                     <span className="count">10</span>
                   </li>
                   <li>
-                    <a onClick={() => setSelectedBranch('Mechanical')} className={isActive('Mechanical') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Mechanical')} className={isActive('Mechanical') ? 'activa' : ''}>
                       <span>Mechanical</span>
                     </a>
                     <span className="count">8</span>
                   </li>
                   <li>
-                    <a onClick={() => setSelectedBranch('Meta')} className={isActive('Meta') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Meta')} className={isActive('Meta') ? 'activa' : ''}>
                       <span>Metallurgy</span>
                     </a>
                     <span className="count">7</span>
                   </li>
                   <li>
-                    <a onClick={() => setSelectedBranch('Mining')} className={isActive('Mining') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Mining')} className={isActive('Mining') ? 'activa' : ''}>
                       <span>Mining</span>
                     </a>
                     <span className="count">16</span>
                   </li>
                   <li>
-                    <a onClick={() => setSelectedBranch('Chem')} className={isActive('Chem') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Chem')} className={isActive('Chem') ? 'activa' : ''}>
                       <span>Chemical</span>
                     </a>
                     <span className="count">9</span>

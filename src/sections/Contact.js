@@ -2,6 +2,7 @@ import Title from '../components/Title';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import styles from "./contact.module.css"
 
 const Contact = () => {
   const color="CONTACT";
@@ -18,35 +19,35 @@ const Contact = () => {
           <form
             action="/"
             method="post"
-            className="contact_form"
+            className={styles.contact_form}
             id="contact_form"
             autoComplete="off"
           >
-            <div className="input_list">
+            <div className={styles.input_list}>
               <ul>
                 <li data-aos="fade-down">
-                  <input id="name" type="text" placeholder="Your Name *" />
+                  <input id={styles.name} type="text" placeholder="Your Name *" />
                 </li>
                 <li data-aos="fade-down">
-                  <input id="email" type="text" placeholder="Your Email *" />
+                  <input id={styles.email} type="text" placeholder="Your Email *" />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="tel"
+                    id={styles.tel}
                     type="text"
                     placeholder="Your Phone (optional)"
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="subject"
+                    id={styles.subject}
                     type="text"
                     placeholder="Topic (optional)"
                   />
                 </li>
                 <li className="full" data-aos="fade-down">
                   <textarea
-                    id="message"
+                    id={styles.message}
                     placeholder="Your Message *"
                     defaultValue={""}
                   />
@@ -54,11 +55,11 @@ const Contact = () => {
                 <li className="full" data-aos="fade-down">
                   <div className="mw300">
                     <a
-                      id="send_message"
+                      id={styles.send_message}
                       href="#"
                       className="metaportal_fn_button full"
                     >
-                      <span>Send Message</span>
+                      <span className={styles.message_button}>Send Message</span>
                     </a>
                   </div>
                 </li>

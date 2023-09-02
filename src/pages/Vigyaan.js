@@ -25,9 +25,9 @@ const Vigyaan = () => {
           {/* <VigyaanInfo/> */}
           <VigyaanHero />
           <div className="AavartanContainer">
-            <VigyaanForm />
-            <ProblemStatement />
-            <VigyaanGallery />
+          <VigyaanGallery />
+          <ProblemStatement />
+          <VigyaanForm />
           </div>
         </div>
       )}

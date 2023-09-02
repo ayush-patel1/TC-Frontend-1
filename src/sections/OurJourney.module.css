@@ -1,18 +1,36 @@
-
-.timeline_date{
+.timeline_date {
   font-family: "Bebas Neue", sans-serif;
-  color:aliceblue;
+  color: aliceblue;
 }
 
-
-.timeline_info{
+.timeline_info {
   color: rgba(255, 255, 255, 0.722) !important;
-  margin:0 !important;
+  margin: 0 !important;
   font-size: 0.8rem !important;
 }
 
-.timeline_title{
-  padding-bottom:15px;
+.timeline_title {
+  padding-bottom: 15px;
   color: white !important;
   font-size: 1.2rem !important;
+}
+
+@media screen and (max-width: 1164px) {
+  .timeline {
+    width: fit-content;
+    margin: 0 150px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .timeline {
+    width: fit-content;
+    margin: 0 100px;
+  }
+}
+
+@media screen and (max-width: 664px) {
+  .timeline {
+    width: fit-content;
+    margin: 0 10vw;
+  }
 }

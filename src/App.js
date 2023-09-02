@@ -12,6 +12,7 @@ import HailTechno from "./layout/HailTechno";
 import styled from 'styled-components';
 import ParticlesBackground from "./layout/ParticlesBackground";
 import ProblemStatements from "./pages/ProblemStatements";
+import TeamPage from "./pages/TeamPage";
 import EventsGalleryPage from "./pages/EventsGalleryPage";
 import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
 import SponsorsPage from "./pages/SponsorsPage";
@@ -46,6 +47,7 @@ function App() {
           <Route exact path="/aavartan/gallery" element={<EventsGalleryPage />} />
           <Route exact path="/vigyaan/gallery" element={<VigyaanGalleryPage />} />
           <Route exact path="/vigyaan" element={<Vigyaan />} />
+          <Route exact path="/team" element={<TeamPage />} />
           <Route exact path="/vigyaan/statements" element={<ProblemStatements />} />
           <Route exact path="/sponsors" element={<SponsorsPage />} />
         </Routes>

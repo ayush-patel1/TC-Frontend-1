@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './HeadCard.css'
   
-  function Card(props){
+  function HeadCard(props){
     return(
       <div>
       <div className={styles.card}>
@@ -24,4 +24,4 @@ import styles from './HeadCard.css'
     )
   }
   
-  export default Card
+  export default HeadCard

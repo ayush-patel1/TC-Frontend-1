@@ -6256,7 +6256,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	margin-bottom: 25px;
 }
 @media(max-width: 1200px){
-	.fn_cs_faq .faq_col{width: 100%;}
+	.fn_cs_faq .faq_col{width: 100%; padding-right: 10px; margin-left: 10px;}
+	#faq{padding: 0px 0 0px;}
 }
 
 

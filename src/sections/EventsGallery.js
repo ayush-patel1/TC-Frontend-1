@@ -3,6 +3,14 @@ import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import sqrimg from '../assets/images/1x1.jpg'
+import a1 from "../assets/images/aavartan/a1.jpg"
+import a2 from "../assets/images/aavartan/a2.jpg"
+import a3 from "../assets/images/aavartan/a3.jpg"
+import a4 from "../assets/images/aavartan/a4.png"
+import a5 from "../assets/images/aavartan/a5.jpg"
+import a6 from "../assets/images/aavartan/a6.jpg"
+import a7 from "../assets/images/aavartan/a7.png"
+import a8 from "../assets/images/aavartan/a8.jpg"
 import Title from "../components/Title";
 import { Link } from "react-router-dom";
 
@@ -66,7 +74,7 @@ const EventsGallery = () => {
                   <div
                     className="abs_img"
                     style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
+                      backgroundImage: `url(${a2})`,
                       backgroundSize: 'cover', // Adjust this as needed
                       backgroundPosition: 'center', // Adjust this as needed
                     }}
@@ -82,7 +90,7 @@ const EventsGallery = () => {
                   <div
                     className="abs_img"
                     style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img2.44c4d3e2d3bd389b510b.jpg)`,
+                      backgroundImage: `url(${a1})`,
                       backgroundSize: 'cover', // Adjust this as needed
                       backgroundPosition: 'center', // Adjust this as needed
                     }}
@@ -98,7 +106,7 @@ const EventsGallery = () => {
                   <div
                     className="abs_img"
                     style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img3.84b72fe4dd3b48b6fcba.jpg)`,
+                      backgroundImage: `url(${a3})`,
                       backgroundSize: 'cover', // Adjust this as needed
                       backgroundPosition: 'center', // Adjust this as needed
                     }}
@@ -114,7 +122,7 @@ const EventsGallery = () => {
                   <div
                     className="abs_img"
                     style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img5.c9a5551f854bb77d9bdf.jpg)`,
+                      backgroundImage: `url(${a8})`,
                       backgroundSize: 'cover', // Adjust this as needed
                       backgroundPosition: 'center', // Adjust this as needed
                     }}
@@ -132,7 +140,7 @@ const EventsGallery = () => {
                   <div
                     className="abs_img"
                     style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img4.704eadcc90af7340fcae.jpg)`,
+                      backgroundImage: `url(${a6})`,
                       backgroundSize: 'cover', // Adjust this as needed
                       backgroundPosition: 'center', // Adjust this as needed
                     }}
@@ -148,7 +156,7 @@ const EventsGallery = () => {
                   <div
                     className="abs_img"
                     style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
+                      backgroundImage: `url(${a7})`,
                       backgroundSize: 'cover', // Adjust this as needed
                       backgroundPosition: 'center', // Adjust this as needed
                     }}
@@ -164,7 +172,7 @@ const EventsGallery = () => {
                   <div
                     className="abs_img"
                     style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
+                      backgroundImage: `url(${a4})`,
                       backgroundSize: 'cover', // Adjust this as needed
                       backgroundPosition: 'center', // Adjust this as needed
                     }}
@@ -180,7 +188,7 @@ const EventsGallery = () => {
                   <div
                     className="abs_img"
                     style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
+                      backgroundImage: `url(${a5})`,
                       backgroundSize: 'cover', // Adjust this as needed
                       backgroundPosition: 'center', // Adjust this as needed
                     }}

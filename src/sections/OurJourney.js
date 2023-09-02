@@ -6,7 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import styles from "./OurJourney.module.css";
 // import { ReactComponent as Milestone } from "../assets/svgs/flag-solid.svg";
-import {AiFillFlag } from 'react-icons/ai';
+import { AiFillFlag } from "react-icons/ai";
 import { Line } from "../components/Line";
 import Title from "../components/Title";
 
@@ -17,16 +17,15 @@ function OurJourney() {
     color: "white",
   };
   let showing_element_arrow = { color: "#3d4489" };
-  const color="OUR";
-  const noncolor="JOURNEY"
+  const color = "OUR";
+  const noncolor = "JOURNEY";
   return (
     <div id="journey">
-      <div style={{paddingTop:"3rem"}}>
-
-      <Title color={color} noncolor={noncolor}/>
+      <div style={{ paddingTop: "3rem" }}>
+        <Title color={color} noncolor={noncolor} />
       </div>
 
-      <VerticalTimeline lineColor={"#5b3554"}>
+      <VerticalTimeline className={styles.timeline} lineColor={"#5b3554"}>
         <VerticalTimelineElement
           key="1"
           date="2007"

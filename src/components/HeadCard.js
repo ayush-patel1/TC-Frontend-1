@@ -15,9 +15,9 @@ import styles from './HeadCard.module.css'
           </div>
         </div>
         
-        <img src="https://www.cognizance.org.in/Images/team/vectors/leftBottom.png" class="leftBottom" alt=""></img>
-        <img src="https://www.cognizance.org.in/Images/team/vectors/leftMid.png" class="leftMid" alt=""></img>
-        <img src="https://www.cognizance.org.in/Images/team/vectors/rightMid.png" class="rightMid" alt=""></img>
+        <img src="https://www.cognizance.org.in/Images/team/vectors/leftBottom.png" className={styles.leftBottom} alt=""></img>
+        <img src="https://www.cognizance.org.in/Images/team/vectors/leftMid.png" className={styles.leftMid} alt=""></img>
+        <img src="https://www.cognizance.org.in/Images/team/vectors/rightMid.png" className={styles.rightMid} alt=""></img>
       </div>
   
     </div>

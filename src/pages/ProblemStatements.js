@@ -6,7 +6,7 @@ import BioMed from "../components/branches/BioMed";
 import CsItMca from "../components/branches/CsItMca";
 import Civil from "../components/branches/Civil";
 import Biotech from "../components/branches/Biotech";
-import Mechanical from "../components/branches/Mechanical";
+import Mech from "../components/branches/Mechanical";
 import Mining from "../components/branches/Mining";
 import Meta from "../components/branches/Meta";
 import EE from "../components/branches/EE";
@@ -47,8 +47,8 @@ const ProblemStatements = (props) => {
         return <ECE />;
       case 'EE':
         return <EE />;
-      case 'Mechanical':
-        return <Mechanical />;
+      case 'Mech':
+        return <Mech />;
       case 'Meta':
         return <Meta />;
       case 'Mining':
@@ -123,7 +123,7 @@ const ProblemStatements = (props) => {
                     <span className="count">10</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('Mechanical')} className={isActive('Mechanical') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Mech')} className={isActive('Mech') ? 'activa' : ''}>
                       <span>Mechanical</span>
                     </a>
                     <span className="count">8</span>

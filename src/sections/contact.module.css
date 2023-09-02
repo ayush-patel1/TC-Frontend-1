@@ -1,0 +1,40 @@
+#name,
+#email,
+#tel,
+#subject {
+    height: 3rem;
+}
+
+#message {
+    height: 7rem;
+}
+
+.message_button {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    justify-content: center;
+}
+
+#send_message {
+    height: 3rem;
+    width: 12rem;
+    transition: 0.5s;
+}
+
+#send_message:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    margin-left: 0.5rem;
+    box-shadow: 1px 1px 2px #49088a;
+}
+
+#contact {
+    padding: 14px 0 14px 0;
+}
+
+ul {
+    padding-left: 8px;
+    padding-right: 10px;
+}
+

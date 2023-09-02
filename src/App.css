@@ -1820,7 +1820,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	margin-bottom: 10px;
 }
 .fn_cs_collection .item{
-	padding-left: 40px;
+	padding-left: 20px;
 	margin-bottom: 40px;
 }
 .fn_cs_collection img{
@@ -1828,7 +1828,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	opacity: 0;
 }
 .fn_cs_collection .abs_img{
-	transition: all .5s ease;
+	transition: all 0.8s ease;
 	overflow: hidden;
 	border-radius: 10px;
 }
@@ -1838,10 +1838,10 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .fn_cs_collection .img{
 	position: relative;
 	perspective: 600px;
-	perspective-origin: 50% 50%;
+	/* perspective-origin: 50% 50%; */
 }
 .fn_cs_collection .item_in{
-	padding: 20px;
+	padding: 10px;
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,.5);
     background-color: rgba(255,255,255,.05);
@@ -1873,7 +1873,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	align-items: flex-end;
 	margin-left: -40px;
 	flex-wrap: wrap;
-	padding-right: 40px;
+	/* padding-right: 40px; */
 }
 .fn_cs_collection .collection_top .item{
 	width: 31.2%;

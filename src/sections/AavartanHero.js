@@ -1,6 +1,6 @@
 import React from 'react';
 import './AavartanHero.css';
-import ParticlesBackground from '../layout/ParticlesBackground';
+// import ParticlesBackground from '../layout/ParticlesBackground';
 import WaterWave from 'react-water-wave'; // Import react-water-wave
 
 const AavartanHero2 = () => {

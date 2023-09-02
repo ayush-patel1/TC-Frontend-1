@@ -1,0 +1,28 @@
+.Mcards {
+    background-color: #C8BABA;
+    height: 200px;
+    width: 250px;
+    margin: 35px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hehe{
+    height: 240px;
+    width: 300px;
+}
+
+.Vigyaan_images{
+    display: flex;
+    flex-direction: row;
+}
+
+@media(width<700px){
+    .Mcards {
+        height: 70px;
+        width: 120px;
+        margin: 7px 7px;
+    }
+}

@@ -13,6 +13,12 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(null);
 
+    const closeNavbar = () => {
+        if (window.innerWidth <= 768) {
+            setToggler(false);
+        }
+    };
+
     useEffect(() => {
         setActiveLink(location.pathname);
     }, [location.pathname]);
@@ -26,34 +32,37 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                 <div>
                     <ul id="navbar" className={toggler ? "navbar active" : "navbar"}>
                         <li className={activeLink === "/" ? "active-link" : ""}>
-                            <NavLink to="/" exact activeClassName="active-link">
+                            <NavLink to="/" exact activeClassName="active-link" onClick={closeNavbar}>
                                 HOME
                             </NavLink>
                         </li>
                         <li className={activeLink === "/aavartan" ? "active-link" : ""}>
-                            <NavLink to="/aavartan" activeClassName="active-link">
+                            <NavLink to="/aavartan" activeClassName="active-link" onClick={closeNavbar}>
                                 AAVARTAN
                             </NavLink>
                         </li>
                         <li className={activeLink === "/vigyaan" ? "active-link" : ""}>
-                            <NavLink to="/vigyaan" activeClassName="active-link">
+                            <NavLink to="/vigyaan" activeClassName="active-link" onClick={closeNavbar}>
                                 VIGYAAN
                             </NavLink>
                         </li>
                         <li className={activeLink === "/sponsors" ? "active-link" : ""}>
-                            <NavLink to="/sponsors" activeClassName="active-link">
+                            <NavLink to="/sponsors" activeClassName="active-link" onClick={closeNavbar}>
                                 SPONSORS
                             </NavLink>
                         </li>
                         <li className={activeLink === "/team" ? "active-link" : ""}>
-                            <NavLink to="/team" activeClassName="active-link">
+                            <NavLink to="/team" activeClassName="active-link" onClick={closeNavbar}>
                                 TEAM
                             </NavLink>
                         </li>
                         <li>
+                            <div onClick={closeNavbar} >
                             <a onClick={(e) => { e.preventDefault(); walletToggle(true); }}>LOGIN</a>
+                            </div>
+                            
                         </li>
-                        <div className="responsive-close" onClick={()=>setToggler(!toggler)}><MdClear id='bars'/></div>
+                        <div className="responsive-close" onClick={() => setToggler(!toggler)}><MdClear id='bars' /></div>
                     </ul>
                 </div>
                 <div className="responsive-open" onClick={() => setToggler(!toggler)}>

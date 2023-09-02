@@ -1,15 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Spons from '../sections/Spons'
+import FullPageLoader from '../layout/FullPageLoader';
+
+ import Spons from '../sections/Spons'
 
 const SponsorsPage = () => {
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    AOS.init({ duration: 1000 });
-    window.scrollTo(0,0)
+    AOS.init({ duration: 1000, });
+    window.scrollTo(0, 0)
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
   }, [])
   return (
-    <Spons/>
+    <div>
+      {isLoading ? (
+        <FullPageLoader />
+      ) : (
+        <Spons/>
+      )}
+    </div>
   )
 }
 

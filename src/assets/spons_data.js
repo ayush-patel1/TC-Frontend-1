@@ -14,6 +14,8 @@ import img_13 from '../assets/spons_images/grand news.png';
 import img_14 from '../assets/spons_images/hitavada bg.png';
 import img_15 from '../assets/spons_images/myfm logo (1).png';
 import img_16 from '../assets/spons_images/rahul_travels-removebg-preview.png';
+import img_17 from '../assets/spons_images/Quince.png';
+import img_18 from '../assets/spons_images/pahuja.png';
 
 const Spons_data = [
     {
@@ -94,6 +96,16 @@ const Spons_data = [
         id: 16,
         dis: "img16",
         url: img_16,
+    },
+    {
+        id: 17,
+        dis: "img17",
+        url: img_17,
+    },
+    {
+        id: 18,
+        dis: "img18",
+        url: img_18,
     },
 ];
 

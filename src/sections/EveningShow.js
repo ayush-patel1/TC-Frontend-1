@@ -137,7 +137,7 @@ const EveningShow = () => {
       <Title color={color} noncolor={noncolor}/>
       <div data-aos="fade-down" className="fn_cs_desc">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, amet. Fuga modi voluptatum deserunt numquam voluptatem consequuntur voluptate, rerum voluptas corrupti inventore architecto totam.
+          The evening shows at Aavartan are a spectacle to behold, featuring captivating dance performances by "Nrityam," the dance club of NIT Raipur, grooving music performances by "Raaga," the music club of NIT Raipur, and an electrifying DJ night/EDM night.
           </p>
         </div>
         {/* Slider */}

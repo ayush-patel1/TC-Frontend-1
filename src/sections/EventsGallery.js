@@ -55,7 +55,7 @@ const EventsGallery = () => {
       <Title color={color} noncolor={noncolor}/>
       <div data-aos="fade-down" className="fn_cs_desc">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus commodi sint ex optio unde, similique laudantium soluta, labore praesentium quo quibusdam consectetur explicabo culpa?
+          The festivity of Aavartan starts with some Pre Aavartan events such as sky gazing and scribble followed by a whole series of breathtaking events such as treasure hunt, circuitrix, robotrek, Blind coding, Open Mic, Hydrolift and many more engaging the whole crowd and making their each and every bit getting involved in this festivism.
           </p>
         </div>
         <div className="fn_cs_collection">

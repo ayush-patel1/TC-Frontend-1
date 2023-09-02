@@ -55,7 +55,7 @@ const EventsGallery = () => {
       <Title color={color} noncolor={noncolor}/>
       <div className="fn_cs_desc">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus commodi sint ex optio unde, similique laudantium soluta, labore praesentium quo quibusdam consectetur explicabo culpa?
+          Vigyaan, the science exhibition organized during the tech fest, showcases groundbreaking innovations, cutting-edge technologies, and exciting projects, providing a platform for students to delve deeper into the world of science and explore limitless possibilities.
           </p>
         </div>
         <div className="fn_cs_collection">

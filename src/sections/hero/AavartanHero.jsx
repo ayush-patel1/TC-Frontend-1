@@ -18,7 +18,7 @@ const AavartanHero = () => {
                 <h2>AAVARTAN
                 </h2>
                 <p>
-                  The next generation gaming ecosystem for IGOs and NFT market Secure crypto solutions by blockchain technology
+                Team Technocracy organizes a wide range of events, including hackathons, coding competitions, technical workshops, seminars, and technical talks by industry experts all under the banner of our annual Tech-Fest “Aavartan” . We also undertake technical projects and research initiatives.
                 </p>
               </div>
             </div>

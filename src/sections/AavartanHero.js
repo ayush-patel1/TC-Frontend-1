@@ -23,7 +23,7 @@ const AavartanHero2 = () => {
                 <span>AAVARTAN</span>
               </h1>
               <p>
-                AAVARTAN is the annual Techfest of NIT Raipur organised by Team Technocracy, with more than 30 events. It is a two day annual symposium of NIT Raipur, by far the largest Techfest of central India.
+              Team Technocracy organizes a wide range of events, including hackathons, coding competitions, technical workshops, seminars, and technical talks by industry experts all under the banner of our annual Tech-Fest “Aavartan” . We also undertake technical projects and research initiatives.
               </p>
             </div>
           </div>

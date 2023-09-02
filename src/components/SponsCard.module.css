@@ -1,8 +1,11 @@
 .Mcards {
-    background-color: #C8BABA;
+    /* background-color: #C8BABA; */
     height: 200px;
     width: 250px;
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media(width<700px){
     .Mcards {

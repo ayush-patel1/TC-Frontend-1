@@ -20,7 +20,7 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                         <li><Link to="/aavartan">AAVARTAN</Link></li>
                         <li><Link to="/vigyaan">VIGYAAN</Link></li>
                         <li><a href="/sponsors">SPONSORS</a></li>
-                        <li><a href="/#team">TEAM</a></li>
+                        <li><a href="/team">TEAM</a></li>
                         <li><a onClick={(e) => { e.preventDefault(); walletToggle(true);}}>LOGIN</a></li>
                         <div className="responsive-close" onClick={()=>setToggler(!toggler)}><MdClear id='bars'/></div>
                     </ul>

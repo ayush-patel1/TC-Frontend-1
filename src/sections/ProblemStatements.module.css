@@ -24,7 +24,7 @@ color: #FFFFFF;
     display: flex;
     margin: 3rem 3rem 9rem 3rem;
     gap: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 

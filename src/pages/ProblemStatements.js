@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Arch from "../components/branches/Arch";
 import BioMed from "../components/branches/BioMed";
 import CsItMca from "../components/branches/CsItMca";
@@ -10,11 +10,19 @@ import Meta from "../components/branches/Meta";
 import EE from "../components/branches/EE";
 import ECE from "../components/branches/ECE";
 import Chem from "../components/branches/Chem";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageBanner from "../layout/PageBanner";
+import ProblemStatement from "../sections/ProblemStatement";
 
-const ProblemStatements = () => {
+const ProblemStatements = (props) => {
   const [selectedBranch, setSelectedBranch] = useState('Arch');
+const data = props.location?.state?.data;
+
+useEffect(() => {
+  if (data) {
+    setSelectedBranch(data);
+  }
+}, [data]);
 
   const renderSelectedBranch = () => {
     switch (selectedBranch) {

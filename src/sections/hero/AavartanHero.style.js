@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import bannerBG from "../../assets/images/VigyaanPC.png";
+import bannerBG from "../../assets/images/bgV2.png";
 
 const rocketAnimation = keyframes`
         0%,
@@ -14,10 +14,12 @@ const rocketAnimation = keyframes`
 
 const AavartanStyleWrapper = styled.section`
   position: relative;
-  background: url(http://localhost:3001/static/media/banner-bg.ef424a396f6be282227f.jpg);
+  background: url(${bannerBG});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
   padding: 250px 0;
   overflow: hidden;
 

@@ -990,7 +990,7 @@ a.full_link{
 #home{
 	overflow: hidden;
 	padding-top: 179px;
-	padding-bottom: 150px;
+	padding-bottom: 10px;
 }
 
 
@@ -1177,7 +1177,7 @@ a.full_link{
     perspective-origin: 50% 50%;
 }
 .fn_cs_slider .slider_top .item_in{
-	padding: 20px;
+	padding: 10px;
 	border-radius: 20px;
 	border: 1px solid rgba(255,255,255,.5);
 	background-color: rgba(255,255,255,.05);
@@ -1199,10 +1199,10 @@ a.full_link{
 }
 .fn_cs_slider .slider_top .img{
 	position: absolute;
-	top: 20px;
-	left: 20px;
-	right: 20px;
-	bottom: 20px;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
 }
 .fn_cs_slider .slider_top .img:after{
 	content: '';

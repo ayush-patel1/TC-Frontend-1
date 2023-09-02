@@ -8,7 +8,7 @@ import a2 from "../assets/images/aavartan/a2.jpg"
 import a3 from "../assets/images/aavartan/a3.jpg"
 import a4 from "../assets/images/aavartan/a4.png"
 import a5 from "../assets/images/aavartan/a5.jpg"
-import a6 from "../assets/images/aavartan/a6.jpg"
+import a6 from "../assets/images/aavartan/a6.png"
 import a7 from "../assets/images/aavartan/a7.png"
 import a8 from "../assets/images/aavartan/a8.jpg"
 import Title from "../components/Title";

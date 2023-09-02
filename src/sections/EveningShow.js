@@ -1,14 +1,24 @@
 import { useEffect } from "react";
-import sqrimg from '../assets/images/1x1.jpg'
+import sqrimg from "../assets/images/1x1.jpg";
 import Title from "../components/Title";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import es_1 from "../assets/images/eveningshows/es_1.jpg";
+import es_2 from "../assets/images/eveningshows/es_2.jpg";
+import es_3 from "../assets/images/eveningshows/es_3.jpg";
+import es_4 from "../assets/images/eveningshows/es_4.jpg";
+import es_5 from "../assets/images/eveningshows/es_5.jpg";
+import es_6 from "../assets/images/eveningshows/es_6.jpg";
+import es_7 from "../assets/images/eveningshows/es_7.jpg";
+import es_8 from "../assets/images/eveningshows/es_8.jpg";
+import es_9 from "../assets/images/eveningshows/es_9.jpg";
+import es_10 from "../assets/images/eveningshows/es_10.jpg";
 
 const EveningShow = () => {
   useEffect(() => {
     AOS.init();
-  }, [])
+  }, []);
   // Hero slider
   useEffect(() => {
     const fn_cs_slider = document.querySelectorAll(".fn_cs_slider");
@@ -128,16 +138,19 @@ const EveningShow = () => {
     return activeIndex;
   };
 
-  const color="EVENING";
-  const noncolor="SHOWS"
+  const color = "EVENING";
+  const noncolor = "SHOWS";
 
   return (
     <section id="home">
       <div className="container eveningContainer">
-      <Title color={color} noncolor={noncolor}/>
-      <div data-aos="fade-down" className="fn_cs_desc">
-          <p>
-          The evening shows at Aavartan are a spectacle to behold, featuring captivating dance performances by "Nrityam," the dance club of NIT Raipur, grooving music performances by "Raaga," the music club of NIT Raipur, and an electrifying DJ night/EDM night.
+        <Title color={color} noncolor={noncolor} />
+        <div data-aos="fade-down" className="fn_cs_desc">
+          <p style={{margin:"0"}}>
+            The evening shows at Aavartan are a spectacle to behold, featuring
+            captivating dance performances by "Nrityam," the dance club of NIT
+            Raipur, grooving music performances by "Raaga," the music club of
+            NIT Raipur, and an electrifying DJ night/EDM night.
           </p>
         </div>
         {/* Slider */}
@@ -149,13 +162,14 @@ const EveningShow = () => {
                 <div className="item">
                   <img src={sqrimg} alt="" />
                   <div className="item_in">
-                    <div className="img" 
-                                       style={{
-                                        // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
-                                        backgroundSize: 'cover', // Adjust this as needed
-                                        backgroundPosition: 'center', // Adjust this as needed
-                                      }}
-                     />
+                    <div
+                      className="img"
+                      style={{
+                        backgroundImage: `url(${es_1})`,
+                        backgroundSize: "cover", // Adjust this as needed
+                        backgroundPosition: "center", // Adjust this as needed
+                      }}
+                    />
                   </div>
                 </div>
               </li>
@@ -163,23 +177,29 @@ const EveningShow = () => {
                 <div className="item">
                   <img src={sqrimg} alt="" />
                   <div className="item_in">
-                    <div className="img"                    style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
-                      backgroundSize: 'cover', // Adjust this as needed
-                      backgroundPosition: 'center', // Adjust this as needed
-                    }} />
+                    <div
+                      className="img"
+                      style={{
+                        backgroundImage: `url(${es_2})`,
+                        backgroundSize: "cover", // Adjust this as needed
+                        backgroundPosition: "center", // Adjust this as needed
+                      }}
+                    />
                   </div>
                 </div>
               </li>
-              <li className="next2" data-index={3}>
+              <li className="next" data-index={3}>
                 <div className="item">
                   <img src={sqrimg} alt="" />
                   <div className="item_in">
-                    <div className="img"                    style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
-                      backgroundSize: 'cover', // Adjust this as needed
-                      backgroundPosition: 'center', // Adjust this as needed
-                    }} />
+                    <div
+                      className="img"
+                      style={{
+                        backgroundImage: `url(${es_3})`,
+                        backgroundSize: "cover", // Adjust this as needed
+                        backgroundPosition: "center", // Adjust this as needed
+                      }}
+                    />
                   </div>
                 </div>
               </li>
@@ -187,11 +207,14 @@ const EveningShow = () => {
                 <div className="item">
                   <img src={sqrimg} alt="" />
                   <div className="item_in">
-                    <div className="img"                    style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
-                      backgroundSize: 'cover', // Adjust this as needed
-                      backgroundPosition: 'center', // Adjust this as needed
-                    }} />
+                    <div
+                      className="img"
+                      style={{
+                        backgroundImage: `url(${es_4})`,
+                        backgroundSize: "cover", // Adjust this as needed
+                        backgroundPosition: "center", // Adjust this as needed
+                      }}
+                    />
                   </div>
                 </div>
               </li>
@@ -199,11 +222,14 @@ const EveningShow = () => {
                 <div className="item">
                   <img src={sqrimg} alt="" />
                   <div className="item_in">
-                    <div className="img"                    style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
-                      backgroundSize: 'cover', // Adjust this as needed
-                      backgroundPosition: 'center', // Adjust this as needed
-                    }} />
+                    <div
+                      className="img"
+                      style={{
+                        backgroundImage: `url(${es_5})`,
+                        backgroundSize: "cover", // Adjust this as needed
+                        backgroundPosition: "center", // Adjust this as needed
+                      }}
+                    />
                   </div>
                 </div>
               </li>
@@ -211,23 +237,74 @@ const EveningShow = () => {
                 <div className="item">
                   <img src={sqrimg} alt="" />
                   <div className="item_in">
-                    <div className="img"                    style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
-                      backgroundSize: 'cover', // Adjust this as needed
-                      backgroundPosition: 'center', // Adjust this as needed
-                    }} />
+                    <div
+                      className="img"
+                      style={{
+                        backgroundImage: `url(${es_6})`,
+                        backgroundSize: "cover", // Adjust this as needed
+                        backgroundPosition: "center", // Adjust this as needed
+                      }}
+                    />
                   </div>
                 </div>
               </li>
-              <li className="prev2" data-index={7}>
+              <li data-index={7}>
                 <div className="item">
                   <img src={sqrimg} alt="" />
                   <div className="item_in">
-                    <div className="img"                    style={{
-                      // backgroundImage: `url(https://technocracy.nitrr.ac.in/static/media/img1.16509a822bfd9a7b4772.jpg)`,
-                      backgroundSize: 'cover', // Adjust this as needed
-                      backgroundPosition: 'center', // Adjust this as needed
-                    }} />
+                    <div
+                      className="img"
+                      style={{
+                        backgroundImage: `url(${es_7})`,
+                        backgroundSize: "cover", // Adjust this as needed
+                        backgroundPosition: "center", // Adjust this as needed
+                      }}
+                    />
+                  </div>
+                </div>
+              </li>
+              <li data-index={8}>
+                <div className="item">
+                  <img src={sqrimg} alt="" />
+                  <div className="item_in">
+                    <div
+                      className="img"
+                      style={{
+                        backgroundImage: `url(${es_8})`,
+                        backgroundSize: "cover", // Adjust this as needed
+                        backgroundPosition: "center", // Adjust this as needed
+                      }}
+                    />
+                  </div>
+                </div>
+              </li>
+              <li data-index={9}>
+                <div className="item">
+                  <img src={sqrimg} alt="" />
+                  <div className="item_in">
+                    <div
+                      className="img"
+                      style={{
+                        backgroundImage: `url(${es_9})`,
+                        backgroundSize: "cover", // Adjust this as needed
+                        backgroundPosition: "center", // Adjust this as needed
+                      }}
+                    />
+                  </div>
+                </div>
+              </li>
+              <li className="prev2" data-index={10}>
+                <div className="item">
+                  <img src={sqrimg} alt="" />
+                  <div className="item_in">
+                    <div
+                      className="img"
+                      style={{
+                        backgroundImage: `url(${es_10})`,
+                        backgroundSize: "cover", // Adjust this as needed
+                        backgroundPosition: "center", // Adjust this as needed
+                      }}
+                    />
                   </div>
                 </div>
               </li>
@@ -237,14 +314,14 @@ const EveningShow = () => {
             <a href="#" className="prev">
               <span className="circle" />
               <span className="icon">
-                <AiOutlineArrowLeft color="white"/>
+                <AiOutlineArrowLeft color="white" />
               </span>
               <span className="circle" />
             </a>
             <a href="#" className="next">
               <span className="circle" />
               <span className="icon">
-               <AiOutlineArrowRight color="white"/>
+                <AiOutlineArrowRight color="white" />
               </span>
               <span className="circle" />
             </a>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import videoBg from "../assets/videos/spaceship.webm";
+import videoBg from "../assets/videos/blackhole.webm";
 import styles from './HomeHero.module.css';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import VIGButton from "../layout/VIGButton";
 
 const HomeHero = () => {
 	const [showContent, setShowContent] = useState(false);
@@ -16,10 +17,11 @@ const HomeHero = () => {
 				<source src={videoBg} type="video/webm" />
 				Your browser does not support the video tag.
 			</video>
+			
 			<div className={`${styles.heroContent} ${showContent && styles.show}`}>
 				<h1><span>TEAM TECHNOCRACY</span></h1>
 				<p>The Student Technical Committee of NIT Raipur</p>
-				<Link to="/vigyaan"><button>VIGYAAN</button></Link>
+				<NavLink to="/vigyaan"> <VIGButton text="VIGYAAN" /></NavLink>
 			</div>
 		</div>
 	);

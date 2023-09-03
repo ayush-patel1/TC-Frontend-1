@@ -17,10 +17,7 @@ const Vigyaan = () => {
     }, 2000);
   }, [])
   return (
-    <div>
-      {isLoading ? (
-        <FullPageLoader />
-      ) : (
+    
         <div>
           {/* <VigyaanInfo/> */}
           <VigyaanHero />
@@ -30,8 +27,7 @@ const Vigyaan = () => {
           <VigyaanForm />
           </div>
         </div>
-      )}
-    </div>
+    
   )
 }
 

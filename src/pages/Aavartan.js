@@ -5,22 +5,17 @@ import Events from '../sections/Events'
 import EveningShow from '../sections/EveningShow'
 import EventsGallery from '../sections/EventsGallery'
 import AavartanHero from '../sections/hero/AavartanHero'
-import FullPageLoader from '../layout/FullPageLoader';
+
 const Aavartan = () => {
-  const [isLoading, setIsLoading] = useState(true);
+ 
   useEffect(() => {
     AOS.init({ duration: 1000, });
     window.scrollTo(0, 0)
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
+    
   }, [])
   return (
     <div>
-      {isLoading ? (
-        <FullPageLoader />
-      ) : (
-        <div>
+    
           {/* <Events/> */}
           {/* <AavartanHero/> */}
           <AavartanHero />
@@ -29,8 +24,7 @@ const Aavartan = () => {
             <EventsGallery />
           </div>
         </div>
-      )}
-    </div>
+   
   )
 }
 

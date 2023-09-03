@@ -7,7 +7,7 @@
   position: relative;
   cursor: pointer;
   width:  23vw;
-  height: 30vw;
+  height: 27vw;
 }
 
 .card::after{
@@ -32,7 +32,6 @@
 
 .content {
   bottom: 0;
-  height: 10vh;
   position: absolute;
   width: 100%;
   z-index: 5;
@@ -57,7 +56,7 @@
 
 .position{
   color: #9359f1;
-  font-family: ClashDisplay;
+  font-family: poppins;
   font-variation-settings: "wght" 500;
   text-align: center;
   font-size: 1.6rem;
@@ -70,10 +69,12 @@
   display: flex;
   justify-content: center;
   gap: 3rem;
+  position: absolute;
+  bottom: 15vh;
   opacity: 0;
   align-items: center;
   margin-bottom: -10vh;
-  transition: all .4s ease;
+  transition: all .3s ease;
   transform: translateY(50px);
 }
 
@@ -95,16 +96,14 @@ i{
   filter: grayscale(0);
 }
 
-.card:hover .content{
-  height: 40vh;
-}
+
 .card:hover .name{
-  transform: translateY(-50px);
+  transform: translateY(-100px);
   opacity: 0;
 }
 
 .card:hover .position{
-  transform: translateY(-50px);
+  transform: translateY(-100px);
   opacity: 0;
 }
 
@@ -154,84 +153,76 @@ i{
 }
 
 @media(max-width:1280px){
+  
+  .social{
+    bottom: 12vh;
+  }
   .name{
     font-size: 1.2rem;
   }
   .position{
     font-size: 1.2rem;
-  }
-  .card:hover .content{
-    height: 22vh;
   }
   i{
     font-size: 2.5rem;
   }
 }
 
-@media(max-width:880px){
-  .content{
-    height: 9vh;
+@media(max-width: 900px){
+  .card{
+    width: 60vw;
+    height: 68vw;
   }
   .name{
-    font-size: 1rem;
+    font-size: 2.3rem;
   }
   .position{
-    font-size: 0.8rem;
-  }
-  .card:hover .content{
-    height: 20vh;
+    font-size: 2.3rem;
   }
   i{
+    font-size: 4rem;
+  }
+  .social{
+    bottom: 15vh;
+  }
+  .leftMid, .rightMid {
+    top: 25%;
+    width: 28vw;
+  }
+  .card:hover .leftMid{
+    transform: translateX(-30px);
+  }
+  .card:hover .rightMid{
+    transform: translateX(30px);
+  }
+}
+
+@media(max-width: 640px){
+  .name{
     font-size: 1.8rem;
   }
-  .social{
-    gap: 30px;
-  }
-}
-
-@media (max-width:700px) {
-
-  .card:hover .content{
-    height: 20vh;
-  }
-  .name{
-    font-size: 0.6rem;
-
-  }
   .position{
-    font-size: 0.6rem;
+    font-size: 1.8rem;
   }
   i{
-    font-size: 1.4rem;
+    font-size: 3.5rem;
   }
   .social{
-    gap: 1.5rem;
+    bottom: 13vh;
   }
 }
 
-@media (max-width:460px) {
-
-  .card:hover .content{
-    height: 16vh;
-  }
+@media(max-width: 510px){
   .name{
-    font-size: 0.4rem;
-
+    font-size: 1.3rem;
   }
   .position{
-    font-size: 0.4rem;
-  }
-  .content{
-    height: 7vh;
-  }
-  .position{
-    font-size: 0.4rem;
+    font-size: 1.3rem;
   }
   i{
-    font-size: 1.2rem;
+    font-size: 3rem;
   }
   .social{
-    gap: 15px;
+    bottom: 11vh;
   }
 }
-

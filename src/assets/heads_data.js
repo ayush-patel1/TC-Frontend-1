@@ -22,14 +22,13 @@ import Rishav_Gandhi from "../../../images/coordinators/Rishav_Gandhi.jpg";
 export const coordinatorsList = [
   {
     id: 1,
-    name: "Vaibhav Sawant",
-    imgUrl: Vaibhav_Sawant,
-    linkedinUrl: "https://www.linkedin.com/in/vaibhav-sawant-59522922a/",
-    instaUrl: "https://instagram.com/simply_vaibhav?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
+    name: "Arpit Pandey",
+    imgUrl: Arpit_Pandey,
+    linkedinUrl: "https://www.linkedin.com/in/arpit-pandey-1866a2142/",
+    instaUrl: "https://www.instagram.com/arpitp_192/?hl=en",
     facebookUrl : "#",
     githubUrl : "#",
-    domain: "Chemical"
-    
+    domain:"MME"
   },
   {
     id: 2,
@@ -54,116 +53,17 @@ export const coordinatorsList = [
   },
   {
     id: 4,
-    name: "Arpit Pandey",
-    imgUrl: Arpit_Pandey,
-    linkedinUrl: "https://www.linkedin.com/in/arpit-pandey-1866a2142/",
-    instaUrl: "https://www.instagram.com/arpitp_192/?hl=en",
+    name: "Vaibhav Sawant",
+    imgUrl: Vaibhav_Sawant,
+    linkedinUrl: "https://www.linkedin.com/in/vaibhav-sawant-59522922a/",
+    instaUrl: "https://instagram.com/simply_vaibhav?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"MME"
+    domain: "Chemical"
+    
   },
   {
     id: 5,
-    name: "Anushree Banerjee",
-    imgUrl: Anushree_Banerjee,
-    linkedinUrl: "https://www.linkedin.com/in/anushree001/",
-    instaUrl: "http://instagram.com/momo_02.04/",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"Bio-Med"
-  },
-  {
-    id: 6,
-    name: "Aparna Gupta",
-    imgUrl: Aparna_Gupta,
-    linkedinUrl: "https://www.linkedin.com/in/aparna-gupta-185981214/",
-    instaUrl: "https://instagram.com/apar_na_gupta__?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"Chemical"
-  },
-  {
-    id: 7,
-    name: "Kushal Jain",
-    imgUrl: Kushal_Jain,
-    linkedinUrl: "https://www.linkedin.com/in/kushal-jain-8645ab202/",
-    instaUrl: "https://www.instagram.com/kushaljain.202/",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"Chemical"
-  },
-  {
-    id: 8,
-    name: "Pratham Gandhi",
-    imgUrl: Pratham_Gandhi,
-    linkedinUrl: "https://www.linkedin.com/in/prathamgandhi1308/",
-    instaUrl: "#",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"CSE"
-  },
-  {
-    id: 9,
-    name: "Shreya Borikar",
-    imgUrl: Shreya_Borikar,
-    linkedinUrl: "https://www.linkedin.com/in/shreya-borikar-223b75227/",
-    instaUrl: "https://instagram.com/shreya1211_?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"CSE"
-  },
-  {
-    id: 10,
-    name: "Satyam Singh",
-    imgUrl: Satyam_Singh,
-    linkedinUrl: "https://www.linkedin.com/in/satyam-singh-0a0b4721a/",
-    instaUrl: "https://www.instagram.com/singhsatyam480532023/",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"CSE"
-  },
-  {
-    id: 11,
-    name: "Pramil Kesarwani",
-    imgUrl: Pramil_Kesarwani,
-    linkedinUrl: "https://www.linkedin.com/in/pramil-kesarwani-10b374214/",
-    instaUrl: "https://www.instagram.com/kesarwanipramil/",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"ECE"
-  },
-  {
-    id: 12,
-    name: "Arkita Dam",
-    imgUrl: Arkita_Dam,
-    linkedinUrl: "https://www.linkedin.com/in/arkita-dam-7865551a1/",
-    instaUrl: "https://instagram.com/shreya1211_?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"ECE"
-  },
-  {
-    id: 13,
-    name: "Sameer Trivedi",
-    imgUrl: Sameer_Trivedi,
-    linkedinUrl: "https://www.linkedin.com/in/sameert89/",
-    instaUrl: "https://www.instagram.com/s_ameer___/",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"ECE"
-  },
-  {
-    id: 14,
-    name: "Sujoy Banerjee",
-    imgUrl: Sujoy_Banerjee,
-    linkedinUrl: "https://www.linkedin.com/in/sujoy-banerjee-a698aa210/",
-    instaUrl: "https://instagram.com/sujoy0910?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"ECE"
-  },
-  {
-    id: 15,
     name: "Gopal Katankar",
     imgUrl: Gopal_Katankar,
     linkedinUrl: "https://www.linkedin.com/in/gopal-katankar-a03849206/",
@@ -173,17 +73,27 @@ export const coordinatorsList = [
     domain:"ECE"
   },
   {
-    id: 16,
-    name: "Suraj Jogani",
-    imgUrl: Suraj_Jogani,
-    linkedinUrl: "https://www.linkedin.com/in/suraj-jogani/",
-    instaUrl: "https://instagram.com/_jogani.suraj_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",
+    id: 6,
+    name: "Shreya Borikar",
+    imgUrl: Shreya_Borikar,
+    linkedinUrl: "https://www.linkedin.com/in/shreya-borikar-223b75227/",
+    instaUrl: "https://instagram.com/shreya1211_?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"Electrical"
+    domain:"CSE"
   },
   {
-    id: 17,
+    id: 7,
+    name: "Pramil Kesarwani",
+    imgUrl: Pramil_Kesarwani,
+    linkedinUrl: "https://www.linkedin.com/in/pramil-kesarwani-10b374214/",
+    instaUrl: "https://www.instagram.com/kesarwanipramil/",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"ECE"
+  },
+  {
+    id: 8,
     name: "Nakshatra Singh",
     imgUrl: Nakshatra_Singh,
     linkedinUrl: "https://www.linkedin.com/in/nakshatra-singh-96929a21b/",
@@ -193,7 +103,57 @@ export const coordinatorsList = [
     domain:"IT"
   },
   {
-    id: 18,
+    id: 9,
+    name: "Abhijeet Kumar Singh",
+    imgUrl: Abhijeet_Kumar_Singh,
+    linkedinUrl: "https://www.linkedin.com/in/abhijeet-kumar-singh-3517b7122/",
+    instaUrl: "https://www.instagram.com/abhijeetsingh12082001/",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"MME"
+  },
+  {
+    id: 10,
+    name: "Aparna Gupta",
+    imgUrl: Aparna_Gupta,
+    linkedinUrl: "https://www.linkedin.com/in/aparna-gupta-185981214/",
+    instaUrl: "https://instagram.com/apar_na_gupta__?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"Chemical"
+  },
+  {
+    id: 11,
+    name: "Satyam Singh",
+    imgUrl: Satyam_Singh,
+    linkedinUrl: "https://www.linkedin.com/in/satyam-singh-0a0b4721a/",
+    instaUrl: "https://www.instagram.com/singhsatyam480532023/",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"CSE"
+  },
+  {
+    id: 12,
+    name: "Anushree Banerjee",
+    imgUrl: Anushree_Banerjee,
+    linkedinUrl: "https://www.linkedin.com/in/anushree001/",
+    instaUrl: "http://instagram.com/momo_02.04/",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"Bio-Med"
+  },
+  {
+    id: 13,
+    name: "Pratham Gandhi",
+    imgUrl: Pratham_Gandhi,
+    linkedinUrl: "https://www.linkedin.com/in/prathamgandhi1308/",
+    instaUrl: "#",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"CSE"
+  },
+  {
+    id: 14,
     name: "Pranshul Hatwar",
     imgUrl: Pranshul_Hatwar,
     linkedinUrl: "https://www.linkedin.com/in/pranshul-hatwar/",
@@ -203,14 +163,54 @@ export const coordinatorsList = [
     domain:"IT"
   },
   {
-    id: 19,
-    name: "Abhijeet Kumar Singh",
-    imgUrl: Abhijeet_Kumar_Singh,
-    linkedinUrl: "https://www.linkedin.com/in/abhijeet-kumar-singh-3517b7122/",
-    instaUrl: "https://www.instagram.com/abhijeetsingh12082001/",
+    id: 15,
+    name: "Arkita Dam",
+    imgUrl: Arkita_Dam,
+    linkedinUrl: "https://www.linkedin.com/in/arkita-dam-7865551a1/",
+    instaUrl: "https://instagram.com/shreya1211_?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"MME"
+    domain:"ECE"
+  },
+  {
+    id: 16,
+    name: "Sameer Trivedi",
+    imgUrl: Sameer_Trivedi,
+    linkedinUrl: "https://www.linkedin.com/in/sameert89/",
+    instaUrl: "https://www.instagram.com/s_ameer___/",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"ECE"
+  },  
+  {
+    id: 17,
+    name: "Kushal Jain",
+    imgUrl: Kushal_Jain,
+    linkedinUrl: "https://www.linkedin.com/in/kushal-jain-8645ab202/",
+    instaUrl: "https://www.instagram.com/kushaljain.202/",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"Chemical"
+  },
+  {
+    id: 18,
+    name: "Suraj Jogani",
+    imgUrl: Suraj_Jogani,
+    linkedinUrl: "https://www.linkedin.com/in/suraj-jogani/",
+    instaUrl: "https://instagram.com/_jogani.suraj_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"Electrical"
+  }, 
+  {
+    id: 19,
+    name: "Sujoy Banerjee",
+    imgUrl: Sujoy_Banerjee,
+    linkedinUrl: "https://www.linkedin.com/in/sujoy-banerjee-a698aa210/",
+    instaUrl: "https://instagram.com/sujoy0910?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"ECE"
   },
   {
     id: 20,

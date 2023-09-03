@@ -13,10 +13,9 @@ nav {
   justify-content: space-between;
   background-color: transparent;
   padding: 7px 14px;
-  z-index: 1;
+  z-index: 8;
   width: 100%;
   position: fixed;
-  z-index: 9999999;
 }
 
 .navlogo {

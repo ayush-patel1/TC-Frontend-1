@@ -1302,13 +1302,10 @@ a.full_link{
 }
 .fn_cs_desc p{
 	margin: 0;
-	font-size: 20px;
-	line-height: 30px;
+	font-size: 15px;
+	line-height: 20px;
 	margin-bottom: 41px;
 }
-
-
-
 
 
 
@@ -5606,7 +5603,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	}
 	.metaportal_fn_leftnav .copyright p,
 	.metaportal_fn_leftnav .nav_holder ul{
-		text-align: left;
+		text-align: center;
 	}
 	.metaportal_fn_leftnav .social_icons ul{
 		justify-content: flex-start;

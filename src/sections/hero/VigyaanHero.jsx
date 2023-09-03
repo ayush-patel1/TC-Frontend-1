@@ -2,9 +2,9 @@
 // import BannerStyleWrapper from "./Banner.style";
 
 import rocketThumb from "../../assets/images/rocket-front-color.png";
-import planet from "../../assets/images/vighero/vig_planet.png";
-import name from "../../assets/images/vighero/vigyaan_font.png";
-import ring from "../../assets/images/vighero/planet_orbit.png";
+import planet from "../../assets/images/vighero/vig_planet.webp";
+import name from "../../assets/images/vighero/vigyaan_font.webp";
+import ring from "../../assets/images/vighero/planet_orbit.webp";
 import rocketParticle from "../../assets/images/rocketStar.svg";
 import VigyaanStyleWrapper from "./VigyaanHero.style";
 import VIGButton from "../../layout/VIGButton";

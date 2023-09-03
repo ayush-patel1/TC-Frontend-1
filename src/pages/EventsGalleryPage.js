@@ -5,7 +5,6 @@ import PageBanner from "../layout/PageBanner"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Aavartan_data from '../assets/aavartan_data';
-import Aavartan_Card from '../components/AavartanCard';
 
 const EventsGalleryPage = () => {
   useEffect(() => {
@@ -31,10 +30,15 @@ const EventsGalleryPage = () => {
                   <ul className="grid">
                   {Aavartan_data.map((data)=>{
                     return(
-                      <Aavartan_Card
-                      aavartan_img={data.url}
+                      <li data-aos="fade-down"
                       >
-                      </Aavartan_Card>
+                        <div className="nft__item">
+                          <div className="img_holder">
+                            <img width="100%" src={data.url} alt="" />
+                          </div>
+                        </div>
+                      </li>
+                      
                     );
                   })}
                   </ul>

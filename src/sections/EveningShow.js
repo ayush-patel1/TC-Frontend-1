@@ -4,16 +4,16 @@ import Title from "../components/Title";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import es_1 from "../assets/images/eveningshows/es_1.jpg";
-import es_2 from "../assets/images/eveningshows/es_2.jpg";
-import es_3 from "../assets/images/eveningshows/es_3.jpg";
-import es_4 from "../assets/images/eveningshows/es_4.jpg";
-import es_5 from "../assets/images/eveningshows/es_5.jpg";
-import es_6 from "../assets/images/eveningshows/es_6.jpg";
-import es_7 from "../assets/images/eveningshows/es_7.jpg";
-import es_8 from "../assets/images/eveningshows/es_8.jpg";
-import es_9 from "../assets/images/eveningshows/es_9.jpg";
-import es_10 from "../assets/images/eveningshows/es_10.jpg";
+import es_1 from "../assets/images/eveningshows/es_1.webp";
+import es_2 from "../assets/images/eveningshows/es_2.webp";
+import es_3 from "../assets/images/eveningshows/es_3.webp";
+import es_4 from "../assets/images/eveningshows/es_4.webp";
+import es_5 from "../assets/images/eveningshows/es_5.webp";
+import es_6 from "../assets/images/eveningshows/es_6.webp";
+import es_7 from "../assets/images/eveningshows/es_7.webp";
+import es_8 from "../assets/images/eveningshows/es_8.webp";
+import es_9 from "../assets/images/eveningshows/es_9.webp";
+import es_10 from "../assets/images/eveningshows/es_10.webp";
 
 const EveningShow = () => {
   useEffect(() => {

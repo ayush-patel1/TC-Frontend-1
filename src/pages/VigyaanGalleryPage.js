@@ -4,7 +4,6 @@ import Title from '../components/Title';
 import PageBanner from "../layout/PageBanner"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Vigyaan_Card from '../components/VigyanCard';
 import Vigyaan_data from '../assets/vigyaan_data';
 
 const VigyaanGalleryPage = () => {
@@ -32,9 +31,14 @@ const VigyaanGalleryPage = () => {
 
                   {Vigyaan_data.map((data)=>{
                     return(
-                      <Vigyaan_Card
-                        vigyaan_img={data.url}
-                      />
+                      <li data-aos="fade-down"
+                      >
+                        <div className="nft__item">
+                          <div className="img_holder">
+                            <img width="100%" src={data.url} alt="" />
+                          </div>
+                        </div>
+                      </li>
                     );
                   })}  
                   </ul>

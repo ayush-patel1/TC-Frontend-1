@@ -3736,6 +3736,16 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .nft__item .img_holder{
 	border-radius: 10px;
 	overflow: hidden;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* margin-bottom: 22px; */
+}
+.nft__item .img_holder img{
+	width: 100%; /* Make the image take 100% of the container's width */
+  /* height: 100%; Allow the height to adjust proportionally based on the image's aspect ratio */
+  object-fit:cover !important;
 	/* margin-bottom: 22px; */
 }
 .metaportal_fn_similar{

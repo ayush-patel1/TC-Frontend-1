@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import bannerBG from "../../assets/images/vighero/vig_bg.png";
+import bannerBG from "../../assets/images/vighero/vig_bg.webp";
 
 const rocketAnimation = keyframes`
         0%,

@@ -3,14 +3,14 @@ import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import sqrimg from '../assets/images/1x1.jpg'
-import a1 from "../assets/images/aavartan/a1.jpg"
-import a2 from "../assets/images/aavartan/a2.jpg"
-import a3 from "../assets/images/aavartan/a3.jpg"
-import a4 from "../assets/images/aavartan/a4.png"
-import a5 from "../assets/images/aavartan/a5.jpg"
-import a6 from "../assets/images/aavartan/a6.png"
-import a7 from "../assets/images/aavartan/a7.png"
-import a8 from "../assets/images/aavartan/a8.jpg"
+import a1 from "../assets/images/aavartan/a1.webp"
+import a2 from "../assets/images/aavartan/a2.webp"
+import a3 from "../assets/images/aavartan/a3.webp"
+import a4 from "../assets/images/aavartan/a4.webp"
+import a5 from "../assets/images/aavartan/a5.webp"
+import a6 from "../assets/images/aavartan/a6.webp"
+import a7 from "../assets/images/aavartan/a7.webp"
+import a8 from "../assets/images/aavartan/a8.webp"
 import Title from "../components/Title";
 import { Link } from "react-router-dom";
 
@@ -82,7 +82,7 @@ const EventsGallery = () => {
                   <img src={sqrimg} alt="" />
                 </div>
               </div>
-              <input type="hidden" defaultValue="img/collection/1.jpg" />
+              <input type="hidden" defaultValue="img/collection/1.webp" />
             </div>
             <div className="item">
               <div data-aos="fade-down" className="item_in">
@@ -98,7 +98,7 @@ const EventsGallery = () => {
                   <img src={sqrimg} alt="" />
                 </div>
               </div>
-              <input type="hidden" defaultValue="img/collection/2.jpg" />
+              <input type="hidden" defaultValue="img/collection/2.webp" />
             </div>
             <div className="item">
               <div data-aos="fade-down" className="item_in">
@@ -114,7 +114,7 @@ const EventsGallery = () => {
                   <img src={sqrimg} alt="" />
                 </div>
               </div>
-              <input type="hidden" defaultValue="img/collection/3.jpg" />
+              <input type="hidden" defaultValue="img/collection/3.webp" />
             </div>
             <div className="item">
               <div data-aos="fade-down" className="item_in">
@@ -130,7 +130,7 @@ const EventsGallery = () => {
                   <img src={sqrimg} alt="" />
                 </div>
               </div>
-              <input type="hidden" defaultValue="img/collection/4.jpg" />
+              <input type="hidden" defaultValue="img/collection/4.webp" />
             </div>
           </div>
           <div className="collection_bottom">
@@ -148,7 +148,7 @@ const EventsGallery = () => {
                   <img src={sqrimg} alt="" />
                 </div>
               </div>
-              <input type="hidden" defaultValue="img/collection/5.jpg" />
+              <input type="hidden" defaultValue="img/collection/5.webp" />
             </div>
             <div className="item">
               <div data-aos="fade-up" className="item_in">
@@ -164,7 +164,7 @@ const EventsGallery = () => {
                   <img src={sqrimg} alt="" />
                 </div>
               </div>
-              <input type="hidden" defaultValue="img/collection/6.jpg" />
+              <input type="hidden" defaultValue="img/collection/6.webp" />
             </div>
             <div className="item">
               <div data-aos="fade-up" className="item_in">
@@ -180,7 +180,7 @@ const EventsGallery = () => {
                   <img src={sqrimg} alt="" />
                 </div>
               </div>
-              <input type="hidden" defaultValue="img/collection/7.jpg" />
+              <input type="hidden" defaultValue="img/collection/7.webp" />
             </div>
             <div className="item">
               <div data-aos="fade-up" className="item_in">
@@ -196,7 +196,7 @@ const EventsGallery = () => {
                   <img src={sqrimg} alt="" />
                 </div>
               </div>
-              <input type="hidden" defaultValue="img/collection/8.jpg" />
+              <input type="hidden" defaultValue="img/collection/8.webp" />
             </div>
           </div>
         </div>

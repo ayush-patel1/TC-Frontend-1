@@ -14,9 +14,7 @@ const SponsorsPage = () => {
   }, [])
   return (
     <div>
-     
         <Spons/>
-   
     </div>
   )
 }

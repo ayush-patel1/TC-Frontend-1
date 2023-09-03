@@ -210,7 +210,43 @@ const VigyaanStyleWrapper = styled.section`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
+    height: 100vh;
+
+    .btncontainer{
+      position: absolute;
+      left: 50%;
+      bottom: 0px;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%)
+    }
+    .vigyaan-font {
+      -webkit-animation: cosmos-animation 3s;
+      animation: cosmos-animation 3s;
+      left: 50%;
+      opacity: .5;
+      position: absolute;
+      top: 35%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 45vw;
+      z-index: 3;
+    }
+    .vigyaan-planet {
+      padding-top: 20%;
+      left: 50%;
+      position: relative;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 75vw;
+      z-index: 2;
+  }
+  .vigyaan-ring {
+   display:none;
+  }
+
+  
+
     padding-bottom: 80px;
 
     .buy_token {

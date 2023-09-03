@@ -6,7 +6,7 @@ import {GrInstagram} from 'react-icons/gr';
 import {SiGmail} from 'react-icons/si';
 import {BsTelegram, BsInstagram, BsYoutube, BsMagic} from 'react-icons/bs';
 import { AiFillHeart } from "react-icons/ai";
-
+import '../App.css'
 const Navigation = ({ navigation, navigationToggle }) => {
   const [subMenu, setSubMenu] = useState(null);
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Button.module.css'
+import styles from './VIGButton.module.css'
 
-const Button = () => {
+const VIGButton = ({text}) => {
     const scrollToRegistration = () => {
         const registrationElement = document.getElementById('registration');
         if (registrationElement) {
@@ -10,11 +10,11 @@ const Button = () => {
     };
     return (
         <div className={styles.wrap}>
-            <button className={styles.button} onClick={scrollToRegistration}>
-                Register
+            <button className={styles.vigbutton} onClick={scrollToRegistration}>
+            {text}
             </button>
         </div>
     )
 }
 
-export default Button;
+export default VIGButton;

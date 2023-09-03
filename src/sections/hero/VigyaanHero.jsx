@@ -7,7 +7,7 @@ import name from "../../assets/images/vighero/vigyaan_font.png";
 import ring from "../../assets/images/vighero/planet_orbit.png";
 import rocketParticle from "../../assets/images/rocketStar.svg";
 import VigyaanStyleWrapper from "./VigyaanHero.style";
-import Button from "../../layout/button";
+import VIGButton from "../../layout/VIGButton";
 // import tokenImg1 from "assets/images/homeV2/buyTokenlogo1.png";
 // import tokenImg2 from "assets/images/homeV2/buyTokenlogo2.png";
 // import tokenImg3 from "assets/images/homeV2/buyTokenlogo3.png";
@@ -30,7 +30,7 @@ const VigyaanHero = () => {
         <img className="vigyaan-font" src={name} alt="name"></img>
         <img className="vigyaan-ring" src={ring} alt="name"></img>
         <div className="btncontainer">
-        <Button/>
+        <VIGButton text="REGISTER" />
         </div>
         
           {/* <div className="row">

@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-.button {
+.vigbutton {
   min-width: 300px;
   min-height: 60px;
   font-family: 'Nunito', sans-serif;
@@ -26,7 +26,7 @@
   padding: 10px;
   }
 
-button::before {
+  .vigbutton::before {
 content: '';
   border-radius: 1000px;
   min-width: calc(300px + 12px);
@@ -41,16 +41,16 @@ content: '';
   transition: all .3s ease-in-out 0s;
 }
 
-.button:hover, .button:focus {
+.vigbutton:hover, .vigbutton:focus {
   color: #fff;
   transform: translateY(-6px);
 }
 
-button:hover::before, button:focus::before {
+.vigbutton:hover::before, .vigbutton:focus::before {
   opacity: 1;
 }
 
-button::after {
+.vigbutton::after {
   content: '';
   width: 30px; height: 30px;
   border-radius: 100%;
@@ -63,7 +63,7 @@ button::after {
   animation: ring 1.5s infinite;
 }
 
-button:hover::after, button:focus::after {
+.vigbutton:hover::after, .vigbutton:focus::after {
   animation: none;
   display: none;
 }
@@ -80,8 +80,13 @@ button:hover::after, button:focus::after {
     opacity: 0;
   }
 }
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
 @media (max-width: 767px) {
-  .button {
+  .vigbutton {
     min-width: 200px;
     min-height: 50px;
     font-family: 'Nunito', sans-serif;
@@ -101,7 +106,7 @@ button:hover::after, button:focus::after {
     position: relative;
     padding: 10px;
     }
-  button::before {
+    .vigbutton::before {
 content: '';
   border-radius: 1000px;
   min-width: calc(200px + 12px);

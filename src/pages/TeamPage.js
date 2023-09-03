@@ -11,11 +11,10 @@ const TeamPage = () => {
    
   }, [])
   return (
+    <div>
+       <div><Team/></div>
 
-    
-    <div><Team/></div>
-    
-    
+    </div>
   )
 }
 

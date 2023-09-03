@@ -26,7 +26,7 @@ const Homepage = () => {
           <div className="HomeContainer">
             <OurJourney />
             <Faq />
-            <Contact />
+            {/* <Contact /> */}
           </div>
         </div>
       )}

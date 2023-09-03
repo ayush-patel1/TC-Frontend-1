@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Team.module.css'
 import HeadCard from '../components/HeadCard'
+import Contact from './Contact'
 //import coordinatorsList from ../assets/heads_data.js
 
 const Team = () => {
@@ -26,8 +27,9 @@ const Team = () => {
       domain = "ECE"
       linkedinId = "https://www.linkedin.com/in/b-deewakar-rao-960438280/"
       />      
+      <div className={styles.contactSection}><Contact/></div>
       </div>
-
+      
       </div>
 
   )

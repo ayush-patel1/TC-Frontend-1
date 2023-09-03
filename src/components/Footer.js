@@ -44,6 +44,7 @@ function Footer (){
 							<h4>CONTACT</h4>
 							<ul>
 								<li><a href="mailto:nitrr.technocracy@gmail.com"><AiFillMail style={{ fontSize: "20px", color: "white" }} />&nbsp;nitrr.technocracy@gmail.com</a></li>
+								<li><a href="mailto:aavartan@nitrr.ac.in"><AiFillMail style={{ fontSize: "20px", color: "white" }} />&nbsp;aavartan@nitrr.ac.in</a></li>
 								<li><a href="https://goo.gl/maps/d19JmXcjgCiS2PjQ6" target='_blank' rel='noreferrer'><FaLocationArrow style={{ fontSize: "20px", color: "white" }} />&nbsp;NIT Raipur, Raipur, CG 492013</a></li>
 							</ul>
 						</div>

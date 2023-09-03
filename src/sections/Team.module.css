@@ -22,14 +22,13 @@ h1{
 }
 
 .HeadSection{
-    grid-column-gap: 10vw;
-    grid-row-gap: 10vh;
-    -webkit-column-gap: 10vw;
-    column-gap: 8vw;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    row-gap: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 0 15rem;
 }
+
 
 .cardStyle{
     height: 34vw;
@@ -45,8 +44,7 @@ h1{
     row-gap: 10vh;
     }
     .HeadSection {
-        grid-template-columns: auto;
-        row-gap: 10vh;
+        padding: 0;
     }
 }
 

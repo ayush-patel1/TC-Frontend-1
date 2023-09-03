@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './HeadCard.module.css'
+import styles from './OCCard.module.css'
   
-  function HeadCard(props){
+  function OCCard(props){
     return(
       <div className={styles.parentcard}>
       <div className={styles.card}>
@@ -24,4 +24,4 @@ import styles from './HeadCard.module.css'
     )
   }
   
-  export default HeadCard
+  export default OCCard

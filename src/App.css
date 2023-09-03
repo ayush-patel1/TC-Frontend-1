@@ -1302,12 +1302,17 @@ a.full_link{
 }
 .fn_cs_desc p{
 	margin: 0;
-	font-size: 15px;
-	line-height: 20px;
+	font-size: 20px;
+	line-height: 30px;
 	margin-bottom: 41px;
 }
 
-
+@media(width<900px){
+	.fn_cs_desc p{
+	font-size: 15px;
+	line-height: 20px;
+	}
+}
 
 #fun_facts{
 	border-top: 1px solid rgba(255,255,255,.08);

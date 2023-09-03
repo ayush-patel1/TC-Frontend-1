@@ -2,8 +2,12 @@
 // import BannerStyleWrapper from "./Banner.style";
 
 import rocketThumb from "../../assets/images/rocket-front-color.png";
+import planet from "../../assets/images/vighero/vig_planet.png";
+import name from "../../assets/images/vighero/vigyaan_font.png";
+import ring from "../../assets/images/vighero/planet_orbit.png";
 import rocketParticle from "../../assets/images/rocketStar.svg";
 import VigyaanStyleWrapper from "./VigyaanHero.style";
+import Button from "../../layout/button";
 // import tokenImg1 from "assets/images/homeV2/buyTokenlogo1.png";
 // import tokenImg2 from "assets/images/homeV2/buyTokenlogo2.png";
 // import tokenImg3 from "assets/images/homeV2/buyTokenlogo3.png";
@@ -22,7 +26,14 @@ const VigyaanHero = () => {
     <>
       <VigyaanStyleWrapper>
         <div className="container">
-          <div className="row">
+        <img className="vigyaan-planet" src={planet} alt="vig_planet"/>
+        <img className="vigyaan-font" src={name} alt="name"></img>
+        <img className="vigyaan-ring" src={ring} alt="name"></img>
+        <div className="btncontainer">
+        <Button/>
+        </div>
+        
+          {/* <div className="row">
             <div className="col-md-6">
               <div className="gamfi_v2_hero_left">
                 <h2>
@@ -51,7 +62,7 @@ const VigyaanHero = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </VigyaanStyleWrapper>
     </>

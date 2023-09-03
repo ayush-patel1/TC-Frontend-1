@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import bannerBG from "../../assets/images/bgV2.png";
+import bannerBG from "../../assets/images/vighero/vig_bg.png";
 
 const rocketAnimation = keyframes`
         0%,
@@ -27,10 +27,65 @@ const VigyaanStyleWrapper = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
-  padding: 250px 0px;
+  // height: 100vh;
+  padding: 0px 0px;
   overflow: hidden;
 
+  .vigyaan-planet {
+    left: 50%;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 75vw;
+    z-index: 2;
+}
+.vigyaan-font {
+  -webkit-animation: cosmos-animation 3s;
+  animation: cosmos-animation 3s;
+  left: 50%;
+  opacity: .5;
+  position: absolute;
+  top: 8vh;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 45vw;
+  z-index: 1;
+}
+.vigyaan-ring {
+  -webkit-animation: ring-animation 3s;
+  animation: ring-animation 3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  left: 50%;
+  position: absolute;
+  top: 40vw;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 90vw;
+  z-index: 2;
+}
+.button-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 45vh;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  width: 100vw;
+  z-index: 2;
+}
+
+.btncontainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  z-index: 3;
+}
   .gamfi_v2_hero_left {
     h2 {
         max-width: 515px;

@@ -14,24 +14,28 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	/* z-index: 200; */
 }
 
 .footercol{
 	padding: 3rem 0;
+	z-index: 200;
 }
 
 ul{
 	list-style: none;
+	
 }
 .footer{
 	background-image: linear-gradient(to bottom,#5f3778 0%, #7c4283 100%);
     padding: 50px 50px;
 	border-top: 0.5px solid whitesmoke;
-	;
+	z-index: 200;
 }
 
 .fcontainer{
 	margin: 0;
+	
 }
 
 .footercol h4{

@@ -33,6 +33,7 @@ const AavartanHero = () => {
                     <img height="100%" src={prop2} alt="Rocket thumb" />
                   </span>
                 </div>
+                <span className="metaportal_fn_button_3">Go To VIGYAAN</span>
               </div>
             </div>
           </div>

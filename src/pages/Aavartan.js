@@ -6,6 +6,7 @@ import EveningShow from '../sections/EveningShow'
 import EventsGallery from '../sections/EventsGallery'
 import AavartanHero from '../sections/hero/AavartanHero'
 import { useLocation } from 'react-router-dom';
+import StarFieldAnimation from '../layout/StarFieldAnimation';
 
 const Aavartan = () => {
     const location = useLocation();
@@ -40,7 +41,8 @@ const handleScroll = () => {
 
   return (
     <div className={scrolled ? "Aavartanscrolled" : "Aavartannotscrolled"}>
-    
+      <div className={scrolled ? "dark-overlay" : ""}></div>
+          <StarFieldAnimation/>
           {/* <Events/> */}
           {/* <AavartanHero/> */}
           <AavartanHero />

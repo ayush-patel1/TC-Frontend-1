@@ -1,7 +1,9 @@
 .title{
     color:white;
     margin:0px 0px 50px 0px;
+    position:relative;
     text-align: center;
+    z-index: 3;
   }
   
   .title h1{

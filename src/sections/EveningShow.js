@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import sqrimg from "../assets/images/1x1.jpg";
 import Title from "../components/Title";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import es_1 from "../assets/images/eveningshows/es_1.webp";
 import es_2 from "../assets/images/eveningshows/es_2.webp";
 import es_3 from "../assets/images/eveningshows/es_3.webp";
@@ -14,12 +14,28 @@ import es_7 from "../assets/images/eveningshows/es_7.webp";
 import es_8 from "../assets/images/eveningshows/es_8.webp";
 import es_9 from "../assets/images/eveningshows/es_9.webp";
 import es_10 from "../assets/images/eveningshows/es_10.webp";
-import prop3 from "../assets/prop3.png"
+import prop3 from "../assets/prop4.png"
+import { css, keyframes, styled } from "styled-components";
+
+const rotate360 = keyframes`
+0%,
+100% {
+  right: 5%;
+}
+
+50% {
+  right: 10%;
+} 
+`;
+
+const RotatingImage = styled.img`
+  animation: ${rotate360} 5s linear infinite;
+`;
 
 const EveningShow = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init();
+  // }, []);
   // Hero slider
   useEffect(() => {
     const fn_cs_slider = document.querySelectorAll(".fn_cs_slider");
@@ -146,7 +162,10 @@ const EveningShow = () => {
     <section id="home">
       <div className="container eveningContainer">
         <Title color={color} noncolor={noncolor} />
-        <img style={{position:"absolute", top:"220vh", right:"5%"}} height={300} src={prop3} alt="" />
+        {/* <AnimatedDiv>
+                    <img style={{position:"absolute", top:"220vh", right:"5%", animation: "${rocketAnimation} 5s infinite"}} height={200} src={prop3} alt="Rocket thumb" />
+                    </AnimatedDiv> */}
+                    <RotatingImage style={{position:"absolute", top:"230vh", right:"5%"}} src={prop3} height={200} alt="Rocket thumb" />
         <div data-aos="fade-down" className="fn_cs_desc">
           <p style={{margin:"0"}}>
             The evening shows at Aavartan are a spectacle to behold, featuring
@@ -156,7 +175,7 @@ const EveningShow = () => {
           </p>
         </div>
         {/* Slider */}
-        <div data-aos="fade-down" className="fn_cs_slider" data-responsive="on">
+        <div  className="fn_cs_slider" data-responsive="on">
           <div className="slider_top">
             <img src={sqrimg} alt="" />
             <ul>

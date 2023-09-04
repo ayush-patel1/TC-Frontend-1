@@ -4,11 +4,21 @@ import bannerBG from "../../assets/images/bg2.png";
 const rocketAnimation = keyframes`
         0%,
         100% {
-            bottom: 0;
+            bottom: 20px;
         }
 
         50% {
-            bottom: 50px;
+            bottom: 80px;
+        } 
+`;
+const rocketAnimation2 = keyframes`
+        0%,
+        100% {
+            left: 20px;
+        }
+
+        50% {
+            left: 80px;
         } 
 `;
 
@@ -33,11 +43,11 @@ const AavartanStyleWrapper = styled.section`
     display:flex;
   }
   .colmd{
-    width:60%;
+    width:85%;
     margin:0;
   }
   .colmd2{
-    width:40%;
+    width:35%;
     margin:0;
   }
 
@@ -49,8 +59,8 @@ const AavartanStyleWrapper = styled.section`
       text-shadow:3px 3px 10px black;
       line-height: 70px;
       text-transform: uppercase;
-      margin-top : 60px;
-      margin-bottom: 0px;
+      position: absolute;
+      top:25vh;
       img {
         margin: 0 15px;
       }
@@ -64,6 +74,9 @@ const AavartanStyleWrapper = styled.section`
       margin-top: 60px;
       text-shadow: 3px 3px 5px black;
       font-family: Inter;
+      position: absolute;
+      top:35vh;
+      width:50vw;
     }
   }
 
@@ -71,6 +84,12 @@ const AavartanStyleWrapper = styled.section`
   .gamfi_v2_hero_right {
     display: flex;
     flex-direction: column;
+    .metaportal_fn_button_3{
+      position:absolute;
+      bottom:20vh;
+      left:40%;
+      width:300px;
+    }
 
     .gamfi_v2_hero_thumb {
       width:100%;
@@ -79,13 +98,15 @@ const AavartanStyleWrapper = styled.section`
       justify-content:center;
       align-item:center;
       .rocket_thumb {
-        position: relative;
+        position: absolute;
+        right : 10px;
         animation: ${rocketAnimation} 5s infinite;
         z-index: 1;
       }
       .rocket_thumb2 {
         position: absolute;
-        animation: ${rocketAnimation} 5s infinite;
+        bottom:5px;
+        animation: ${rocketAnimation2} 5s infinite;
         z-index: 1;
         left:100px;
       }

@@ -54,8 +54,8 @@ const EventsGallery = () => {
   }, []);
 
 
-  const color="EVENTS";
-  const noncolor="GALLERY"
+  const color="";
+  const noncolor="EVENTS GALLERY"
 
   return (
     <section id="collection">

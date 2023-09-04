@@ -14,6 +14,7 @@ import es_7 from "../assets/images/eveningshows/es_7.webp";
 import es_8 from "../assets/images/eveningshows/es_8.webp";
 import es_9 from "../assets/images/eveningshows/es_9.webp";
 import es_10 from "../assets/images/eveningshows/es_10.webp";
+import prop3 from "../assets/prop3.png"
 
 const EveningShow = () => {
   useEffect(() => {
@@ -138,13 +139,14 @@ const EveningShow = () => {
     return activeIndex;
   };
 
-  const color = "EVENING";
-  const noncolor = "SHOWS";
+  const color = "";
+  const noncolor = "EVENING SHOWS";
 
   return (
     <section id="home">
       <div className="container eveningContainer">
         <Title color={color} noncolor={noncolor} />
+        <img style={{position:"absolute", top:"220vh", right:"5%"}} height={300} src={prop3} alt="" />
         <div data-aos="fade-down" className="fn_cs_desc">
           <p style={{margin:"0"}}>
             The evening shows at Aavartan are a spectacle to behold, featuring

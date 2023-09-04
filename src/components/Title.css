@@ -6,6 +6,7 @@
   
   .title h1{
     font-size: 2.8rem;
+
   }
   
   .heading {
@@ -13,6 +14,7 @@
     /* font-family: "Times New Roman", Times, serif; */
     /* color: rgba(255, 255, 255, 0.7); */
     padding-top: 20px;
+    text-shadow: 2px 2px 10px rgb(106, 37, 138);
   }
   .heading span {
     background: linear-gradient(to bottom, #504099 40%,

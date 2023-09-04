@@ -14,11 +14,11 @@ const rocketAnimation = keyframes`
 
 const AavartanStyleWrapper = styled.section`
   position: relative;
-  background: url(${bannerBG});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  // background: url(${bannerBG});
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-attachment: fixed;
   height: 100vh;
   padding: 250px 0;
   overflow: hidden;

@@ -4,7 +4,7 @@ import { navigationToggle } from "../redux/actions/siteSettings";
 import { Link } from "react-router-dom";
 import {GrInstagram} from 'react-icons/gr';
 import {SiGmail} from 'react-icons/si';
-import {BsTelegram, BsInstagram, BsYoutube, BsMagic} from 'react-icons/bs';
+import {BsTelegram, BsInstagram, BsYoutube, BsMagic,BsFacebook} from 'react-icons/bs';
 import { AiFillHeart } from "react-icons/ai";
 import '../App.css'
 const Navigation = ({ navigation, navigationToggle }) => {
@@ -163,13 +163,13 @@ const Navigation = ({ navigation, navigationToggle }) => {
                   </a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/blog-single">
                   <a onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Our Journey</span>
                   </a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="info_holder">
@@ -177,7 +177,7 @@ const Navigation = ({ navigation, navigationToggle }) => {
               <p>
                 Made With with MAGIC by <br />
                 <a
-                  href=""
+                  href="#"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -188,25 +188,25 @@ const Navigation = ({ navigation, navigationToggle }) => {
             <div className="social_icons">
               <ul>
                 <li>
-                  <a href="">
-                    <BsYoutube/>
+                  <a href="https://www.facebook.com/tc.nitrr">
+                    <BsFacebook/>
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="">
                   <SiGmail/>
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a href="https://www.instagram.com/nitrr.aavartan/">
                     <BsInstagram/>
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="">
                     <BsTelegram/>
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

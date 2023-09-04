@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './HeadCard.module.css'
-  
+import pic from '../assets/images/stars.png'
+import pic2 from '../assets/images/rocket.png'
   function HeadCard(props){
     return(
       <div className={styles.parentcard}>
@@ -14,10 +15,9 @@ import styles from './HeadCard.module.css'
             <p><a className={styles.insta} href={props.InstaId}><i class="fa-brands fa-instagram"></i></a></p>
           </div>
         </div>
-        
-        <img src="https://www.cognizance.org.in/Images/team/vectors/leftBottom.png" className={styles.leftBottom} alt=""></img>
+      
         <img src="https://www.cognizance.org.in/Images/team/vectors/leftMid.png" className={styles.leftMid} alt=""></img>
-        <img src="https://www.cognizance.org.in/Images/team/vectors/rightMid.png" className={styles.rightMid} alt=""></img>
+        <img src={pic2} className={styles.rightMid} alt=""></img>
       </div>
   
     </div>

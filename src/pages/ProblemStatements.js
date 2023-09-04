@@ -84,7 +84,7 @@ const ProblemStatements = (props) => {
                     <a onClick={() => handleCategoryClick('Arch')} className={isActive('Arch') ? 'activa' : ''}>
                       <span>Architecture</span>
                     </a>
-                    <span className="count">8</span>
+                    <span className="count">11</span>
                   </li>
                   <li>
                     <a onClick={() => handleCategoryClick('BioMed')} className={isActive('BioMed') ? 'activa' : ''}>

@@ -177,7 +177,7 @@ const Navigation = ({ navigation, navigationToggle }) => {
               <p>
                 Made With with MAGIC by <br />
                 <a
-                  href="https://themeforest.net/user/codeefly/portfolio"
+                  href=""
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -188,22 +188,22 @@ const Navigation = ({ navigation, navigationToggle }) => {
             <div className="social_icons">
               <ul>
                 <li>
-                  <a href="https://www.youtube.com/@shinnex_production">
+                  <a href="">
                     <BsYoutube/>
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:shinnextream@gmail.com">
+                  <a href="">
                   <SiGmail/>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/shinnex_production/">
+                  <a href="https://www.instagram.com/nitrr.aavartan/">
                     <BsInstagram/>
                   </a>
                 </li>
                 <li>
-                  <a href="https://t.me/Attackontitanhindidubb">
+                  <a href="">
                     <BsTelegram/>
                   </a>
                 </li>

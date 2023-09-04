@@ -15,6 +15,12 @@ import prop5 from "../../assets/prop5.png";
 import { keyframes, styled } from "styled-components";
 
 const VigyaanHero = () => {
+  const scrollToRegistration = () => {
+    const registrationElement = document.getElementById('registration');
+    if (registrationElement) {
+        registrationElement.scrollIntoView({ behavior: 'smooth' });
+    }
+};
   const particles = [
     rocketParticle,
     rocketParticle,
@@ -81,7 +87,7 @@ const VigyaanHero = () => {
         <div className="vigyaan-desc">Vigyaan, the science exhibition organized during the tech fest, showcases groundbreaking innovations, cutting-edge technologies, and exciting projects, providing a platform for students to delve deeper into the world of science and explore limitless possibilities.</div>
         <img className="vigyaan-ring" src={ring} alt="name"></img>
         <div className="btncontainer">
-        <span className="metaportal_fn_button_3">Click Here To Register</span>
+        <span className="metaportal_fn_button_3" onClick={scrollToRegistration} >Click Here To Register</span>
         </div>
         
           {/* <div className="row">

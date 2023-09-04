@@ -8,6 +8,7 @@ import rocketIcon from "../../assets/images/tcLogo.png"
 import ufoShape from "../../assets/images/tcLogo.png"
 
 import AavartanStyleWrapper from "./AavartanHero.style";
+import { NavLink } from "react-router-dom";
 const AavartanHero = () => {
   return (
     <>
@@ -33,7 +34,7 @@ const AavartanHero = () => {
                     <img height="100%" src={prop2} alt="Rocket thumb" />
                   </span>
                 </div>
-                <span className="metaportal_fn_button_3">Go To VIGYAAN</span>
+                <NavLink to="/vigyaan">   <span className="metaportal_fn_button_3">Go To VIGYAAN</span></NavLink>
               </div>
             </div>
           </div>

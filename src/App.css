@@ -195,9 +195,9 @@ body{
 	background: -moz-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
 	background: -webkit-linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%);
 	background: linear-gradient(90deg, rgba(27,18,29,1) 0%, rgba(18,15,47,1) 50%, rgba(27,18,29,1) 100%); */
-	/* background: url("./assets/images/bgV2.png");
+	background: url("./assets/images/bgV2.png");
 	background-size: cover;
-	background-attachment: fixed; */
+	background-attachment: fixed;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b121d",endColorstr="#1b121d",GradientType=1);
 }
 body,
@@ -3296,7 +3296,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	width: 60%;
 	padding: 60px 50px 25px 50px;
 	border-radius: 0 15px 15px 0;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(255, 255, 255, 0.2);
 	border-left: 1px solid rgba(255,255,255,.15);
 }
 .metaportal_fn_mintbox .mint_title{
@@ -3311,7 +3311,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	color: white;
 	letter-spacing: .5px;
 	font-family: var(--hff);
-	background-color: #974EC382;
+	background-color: #964ec3ce;
 	padding-right: 40px;
 	padding-left: 59px;
 	line-height: 48px;
@@ -3327,7 +3327,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     height: 0;
     border-style: solid;
     border-width: 48px 0 0 20px;
-    border-color: transparent transparent transparent #974EC382;
+    border-color: transparent transparent transparent #964ec3ce;
 }
 .metaportal_fn_mintbox .mint_list{
 	margin-bottom: 5px;
@@ -3362,12 +3362,17 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 .metaportal_fn_mintbox .mint_list li input{
 	color: white !important;
 	width: 100% !important;
+	border: 1.5px solid rgba(255, 255, 255, 0.762) !important;
+}
+.metaportal_fn_mintbox .mint_list li input::placeholder{
+	color: rgba(255, 255, 255, 0.762) !important;
 }
 .metaportal_fn_mintbox .mint_list li li{
 	cursor: pointer;
 	width: 50%;
 	font-size: 14px;
 	margin: 0;
+	color:rgba(255, 255, 255, 0.762);
 }
 .metaportal_fn_mintbox .mint_list li li:hover{
 	cursor: pointer;
@@ -3458,13 +3463,13 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 .metaportal_fn_mintbox .mint_time h4{
 	font-size: 16px;
-    color: var(--bc);
+    color: #a35ad0;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
     letter-spacing: .5px;
     margin-bottom: 1px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .metaportal_fn_mintbox .mint_time h3{
 	margin: 0;
@@ -6540,6 +6545,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
     border-color: #974EC3C9;
     margin: 2rem 0rem 0rem 0;
 	text-decoration: none;
+	position: relative;
+	z-index: 1;
 }
 @media(width<600px){
 	.metaportal_fn_button_2{
@@ -6580,6 +6587,36 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 .metaportal_fn_button_3:hover{
 	color: white;
+	cursor: pointer;
+}
+
+
+.metaportal_fn_button_4{
+    width: 220px;
+    height: 50px;
+    font-size:18px;
+    /* border-radius: 20px; */
+    border: 4px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-weight: 500;
+    border-image: linear-gradient(to right, #4c90d5, #FE7BE5); /* Define your linear gradient colors here */
+    border-image-slice: 1; /* Keeps the entire gradient within the border */
+    border-image-repeat: stretch; 
+    margin: 1.5rem 0rem;
+	position: relative;
+	z-index:1;
+}
+@media(width<600px){
+	.metaportal_fn_button_4{
+		width: 100%;
+	}
+}
+.metaportal_fn_button_4:hover{
+	color: white;
+	background: linear-gradient(to right, #4c90d5, #FE7BE5);
 	cursor: pointer;
 }
 

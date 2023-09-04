@@ -72,7 +72,7 @@ function App() {
       </ContentContainer>
       <BackgroundContainer>
         {/* <ParticlesBackground /> */}
-        {/* <StarFieldAnimation/> */}
+        <StarFieldAnimation/>
       </BackgroundContainer>
     </div>
   );

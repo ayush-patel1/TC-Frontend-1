@@ -6,7 +6,7 @@
 .line {
     border-width: 3px;
 border-style: solid;
-border-image: linear-gradient(to bottom,  #504099 70%,
+border-image: linear-gradient(to bottom,  #4c90d5 70%,
 #FE7BE5 100%) 1;
 
     border-radius: 5px;

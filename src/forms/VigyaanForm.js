@@ -344,7 +344,7 @@ const VigyaanForm = () => {
                   that they will present on the exhibition day.
                 </p>
               </div>
-              <span className="metaportal_fn_button_2">Sample Abstract</span>
+              <span className="metaportal_fn_button_4">Sample Abstract</span>
             </div>
           </div>
         </div>
@@ -354,7 +354,7 @@ const VigyaanForm = () => {
               <div className="item">
                 <h4 className="parent_category">10th September</h4>
                 <h3 className="child_category" title="Black Yukata">
-                  Registration and Abstract Submission
+                  Reg & Abstract Submission
                 </h3>
               </div>
             </li>

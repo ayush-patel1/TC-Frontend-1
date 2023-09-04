@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './OCCard.module.css'
-import {item1} from "../assets/images/lines.png"
-  
-  function OCCard(props){
-    return(
-      <div className={styles.parentcard}>
+import { item1 } from "../assets/images/lines.png"
+import pic from '../assets/images/stars.png'
+
+function OCCard(props) {
+  return (
+    <div className={styles.parentcard}>
       <div className={styles.card}>
         <img className={styles.image} src={props.img} alt="" />
         <div className={styles.content}>
@@ -15,14 +16,14 @@ import {item1} from "../assets/images/lines.png"
             <p><a className={styles.insta} href={props.InstaId}><i class="fa-brands fa-instagram"></i></a></p>
           </div>
         </div>
+
         
-        <img src="https://www.cognizance.org.in/Images/team/vectors/leftBottom.png" className={styles.leftBottom} alt=""></img>
         <img src="https://www.cognizance.org.in/Images/team/vectors/leftMid.png" className={styles.leftMid} alt=""></img>
-        <img src="https://www.cognizance.org.in/Images/team/vectors/rightMid.png" className={styles.rightMid} alt=""></img>
+        <img src={pic} className={styles.rightMid} alt=""></img>
       </div>
-  
+
     </div>
-    )
-  }
-  
-  export default OCCard
+  )
+}
+
+export default OCCard

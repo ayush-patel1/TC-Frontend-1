@@ -19,6 +19,8 @@ import SponsorsPage from "./pages/SponsorsPage";
 import OurJourney from "./sections/OurJourney";
 import { StarField } from "starfield-react";
 import StarFieldAnimation from "./layout/StarFieldAnimation";
+import About from "./components/About"
+
 const BackgroundContainer = styled.div`
   position: fixed;
   top: 0;
@@ -65,6 +67,7 @@ function App() {
               element={<ProblemStatements />}
             />
             <Route exact path="/sponsors" element={<SponsorsPage />} />
+            <Route exact path = "/About us" element={<About/>}/>  
             {/* <Route exact path="/ourjourney" element={<OurJourney />} /> */}
           </Routes>
           <Footer />

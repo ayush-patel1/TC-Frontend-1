@@ -31,7 +31,7 @@ const Aavartan = () => {
 }, [location.pathname]);
 
 const handleScroll = () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 700) {
         setScrolled(true); // User has scrolled down
     } else {
         setScrolled(false); // User is at the top

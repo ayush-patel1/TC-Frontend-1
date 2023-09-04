@@ -6594,8 +6594,20 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background: url("./assets/images/bg2.png");
 	background-size: cover;
 	background-attachment: fixed;
-	/* filter: grayscale(.9); */
-	/* backdrop-filter:grayscale(.9); */
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: background-color 0.9s ease;
+}
+.Vigyaannotscrolled{
+	background: url("./assets/images/bg1.png");
+	background-size: cover;
+	background-attachment: fixed;
+	transition: background-color 0.9s ease;
+}
+
+.Vigyaanscrolled{
+	background: url("./assets/images/bg1.png");
+	background-size: cover;
+	background-attachment: fixed;
 	background-color: rgba(0, 0, 0, 0.5);
 	transition: background-color 0.9s ease;
 }

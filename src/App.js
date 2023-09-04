@@ -34,46 +34,52 @@ const ContentContainer = styled.div`
   z-index: 1;
 `;
 
+function CustomCursorContainer({ children }) {
+  return <div className="custom-cursor">{children}</div>;
+}
+
 function App() {
   return (
     <div>
-      <ContentContainer>
-        <BrowserRouter>
-          <Navbar />
-          <Navigation />
-          <Login />
-          <ScrollTop />
-          <HailTechno />
-          <Routes>
-            <Route exact path="/" element={<Homepage />} />
-            <Route exact path="/aavartan" element={<Aavartan />} />
-            <Route
-              exact
-              path="/aavartan/gallery"
-              element={<EventsGalleryPage />}
-            />
-            <Route
-              exact
-              path="/vigyaan/gallery"
-              element={<VigyaanGalleryPage />}
-            />
-            <Route exact path="/vigyaan" element={<Vigyaan />} />
-            <Route exact path="/team" element={<TeamPage />} />
-            <Route
-              exact
-              path="/vigyaan/statements/:branch"
-              element={<ProblemStatements />}
-            />
-            <Route exact path="/sponsors" element={<SponsorsPage />} />
-            {/* <Route exact path="/ourjourney" element={<OurJourney />} /> */}
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </ContentContainer>
-      <BackgroundContainer>
-        {/* <ParticlesBackground /> */}
-        <StarFieldAnimation/>
-      </BackgroundContainer>
+      <CustomCursorContainer>
+        <ContentContainer>
+          <BrowserRouter>
+              <Navbar />
+              <Navigation />
+              <Login />
+              <ScrollTop />
+              <HailTechno />
+              <Routes>
+                <Route exact path="/" element={<Homepage />} />
+                <Route exact path="/aavartan" element={<Aavartan />} />
+                <Route
+                  exact
+                  path="/aavartan/gallery"
+                  element={<EventsGalleryPage />}
+                />
+                <Route
+                  exact
+                  path="/vigyaan/gallery"
+                  element={<VigyaanGalleryPage />}
+                />
+                <Route exact path="/vigyaan" element={<Vigyaan />} />
+                <Route exact path="/team" element={<TeamPage />} />
+                <Route
+                  exact
+                  path="/vigyaan/statements/:branch"
+                  element={<ProblemStatements />}
+                />
+                <Route exact path="/sponsors" element={<SponsorsPage />} />
+                {/* <Route exact path="/ourjourney" element={<OurJourney />} /> */}
+              </Routes>
+              <Footer />
+          </BrowserRouter>
+        </ContentContainer>
+        <BackgroundContainer>
+          {/* <ParticlesBackground /> */}
+          <StarFieldAnimation/>
+        </BackgroundContainer>
+      </CustomCursorContainer>  
     </div>
   );
 }

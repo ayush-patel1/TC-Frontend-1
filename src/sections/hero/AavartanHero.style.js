@@ -289,6 +289,16 @@ const AavartanStyleWrapper = styled.section`
       }
     }
   }
+    @media only screen and (max-width: 321px) {
+    .gamfi_v2_hero_right{
+      .metaportal_fn_button_3 {
+        position: absolute;
+        bottom: 16vh;
+        left: 10%;
+        width: 200px;
+      }
+    }
+  }
 `;
 
 export default AavartanStyleWrapper;

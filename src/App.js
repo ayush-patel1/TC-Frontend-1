@@ -19,6 +19,8 @@ import SponsorsPage from "./pages/SponsorsPage";
 import OurJourney from "./sections/OurJourney";
 import { StarField } from "starfield-react";
 import StarFieldAnimation from "./layout/StarFieldAnimation";
+import About from "./components/About"
+
 const BackgroundContainer = styled.div`
   position: fixed;
   top: 0;
@@ -41,6 +43,7 @@ function CustomCursorContainer({ children }) {
 function App() {
   return (
     <div>
+
       <CustomCursorContainer>
         <ContentContainer>
           <BrowserRouter>
@@ -80,6 +83,8 @@ function App() {
           <StarFieldAnimation/>
         </BackgroundContainer>
       </CustomCursorContainer>  
+
+
     </div>
   );
 }

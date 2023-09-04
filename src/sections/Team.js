@@ -3,8 +3,10 @@ import styles from "./Team.module.css";
 import HeadCard from "../components/HeadCard";
 import { coordinatorsList } from "../assets/heads_data";
 import { coresList } from "../assets/cores_data";
+import { executivesList } from "../assets/executives_data";
 import OCCard from "../components/OCCard";
 import Title from "../components/Title";
+import Domain from "./Domain";
 
 const Team = () => {
   return (
@@ -69,6 +71,10 @@ const Team = () => {
           );
         })}
       </div>
+      <Title color={"EXECUTIVES"} noncolor={""} />
+      <Domain name1={"Event Management"} name2={"Media And Public Relation"} name3={"Sponsorship"}/>
+      <Domain name1={"Design And Editing"} name2={"Vigyaan"} name3={"Tech"}/>
+      <Domain name1={"Documentation"}/>
     </div>
   );
 };

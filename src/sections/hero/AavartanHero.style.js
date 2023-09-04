@@ -116,7 +116,7 @@ const AavartanStyleWrapper = styled.section`
         animation: ${rocketAnimation2} 5s infinite;
         z-index: 1;
         left: 100px;
-        height: 100px;
+        height: 280px;
       }
     }
 
@@ -158,7 +158,7 @@ const AavartanStyleWrapper = styled.section`
           }
   
          .rocket_thumb2 {
-           height: 80px ;
+           height: 280px ;
           }
       }
     }
@@ -176,7 +176,7 @@ const AavartanStyleWrapper = styled.section`
           }
   
          .rocket_thumb2 {
-           height: 70px ;
+           height: 160px ;
           }
       }
     }
@@ -214,7 +214,7 @@ const AavartanStyleWrapper = styled.section`
           }
   
          .rocket_thumb2 {
-           height: 60px ;
+           height: 200px ;
           }
       }
     }
@@ -257,11 +257,11 @@ const AavartanStyleWrapper = styled.section`
       }
       .gamfi_v2_hero_thumb {
         .rocket_thumb {
-           height: 100px ;
+           height: 120px ;
           }
   
          .rocket_thumb2 {
-           height: 50px ;
+           height: 120px ;
           }
       }
     }
@@ -280,12 +280,22 @@ const AavartanStyleWrapper = styled.section`
       }
       .gamfi_v2_hero_thumb {
         .rocket_thumb {
-           height: 80px ;
+           height: 100px ;
           }
   
          .rocket_thumb2 {
-           height: 40px ;
+           height: 100px ;
           }
+      }
+    }
+  }
+    @media only screen and (max-width: 321px) {
+    .gamfi_v2_hero_right{
+      .metaportal_fn_button_3 {
+        position: absolute;
+        bottom: 16vh;
+        left: 10%;
+        width: 200px;
       }
     }
   }

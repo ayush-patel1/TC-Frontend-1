@@ -25,7 +25,7 @@ h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 0 15rem;
 }
 .CoreSection{
@@ -51,6 +51,8 @@ h1{
     }
     .HeadSection {
         padding: 0;
+        /* display: flex;
+        justify-content: space-between; */
     }
     .CoreSection{
         padding: 0;

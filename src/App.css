@@ -6659,5 +6659,5 @@ a.metaportal_fn_videobutton:hover .fn__svg,
   }
 
 .custom-cursor {
-	cursor:url("./assets/images/cursor.png"), auto;
+	cursor:url("./assets/images/cursor.svg"), auto;
 }

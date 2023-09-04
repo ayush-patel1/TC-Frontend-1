@@ -8,7 +8,7 @@ const Login = ({ walletToggle, wallet }) => {
         className={`metaportal_fn_wallet_closer ${wallet ? "active" : ""}`}
         onClick={() => walletToggle(false)}
       />
-      <div top="80" right="40" className={`metaportal_fn_walletbox ${wallet ? "active" : ""}`}>
+      <div className={`metaportal_fn_walletbox ${wallet ? "active" : ""}`}>
         <a href="#" className="fn__closer" onClick={() => walletToggle(false)}>
           <span />
         </a>

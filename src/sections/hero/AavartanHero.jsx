@@ -27,14 +27,10 @@ const AavartanHero = () => {
             <div className="colmd2">
               <div className="gamfi_v2_hero_right">
                 <div className="gamfi_v2_hero_thumb">
-                  <span className="rocket_thumb">
-                    <img height="500vh" src={prop1} alt="Rocket thumb" />
-                  </span>
-                  <span className="rocket_thumb2">
-                    <img height="100%" src={prop2} alt="Rocket thumb" />
-                  </span>
+                  <img className="rocket_thumb" src={prop1} alt="Rocket thumb" />
+                  <img className="rocket_thumb2" src={prop2} alt="Rocket thumb" />
                 </div>
-                <NavLink to="/vigyaan">   <span className="metaportal_fn_button_3">Go To VIGYAAN</span></NavLink>
+                <NavLink to="/vigyaan">  <span className="metaportal_fn_button_3">Go To VIGYAAN</span></NavLink>
               </div>
             </div>
           </div>

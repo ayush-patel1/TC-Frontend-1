@@ -6,24 +6,20 @@
 }
 
 .vigbutton {
-  min-width: 300px;
-  min-height: 60px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 22px;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  font-weight: 700;
-  color: #fff;
-  background: #CC00FF;
-  /* background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%); */
-  border: none;
-  border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgb(112,0,255);
-  transition: all 0.3s ease-in-out 0s;
-  cursor: pointer;
-  outline: none;
-  position: relative;
-  padding: 10px;
+  font-size:16px;
+  border-radius: 10px;
+  border: 3px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+padding: 0.5rem 1rem;
+width: 70%;
+color: white;
+background: linear-gradient(to bottom, #504099c5 20%,#fe7be6c8 100%);
+border: 2px solic;
+border-bottom-color:#FE7BE5 ;
+border-top-color: #504099 ;
+cursor: pointer;
   }
 
   .vigbutton::before {
@@ -41,14 +37,14 @@ content: '';
   transition: all .3s ease-in-out 0s;
 }
 
-.vigbutton:hover, .vigbutton:focus {
+/* .vigbutton:hover, .vigbutton:focus {
   color: #fff;
   transform: translateY(-6px);
-}
+} */
 
-.vigbutton:hover::before, .vigbutton:focus::before {
+/* .vigbutton:hover::before, .vigbutton:focus::before {
   opacity: 1;
-}
+} */
 
 .vigbutton::after {
   content: '';
@@ -63,10 +59,10 @@ content: '';
   animation: ring 1.5s infinite;
 }
 
-.vigbutton:hover::after, .vigbutton:focus::after {
+/* .vigbutton:hover::after, .vigbutton:focus::after {
   animation: none;
   display: none;
-}
+} */
 
 @keyframes ring {
   0% {

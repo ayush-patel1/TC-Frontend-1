@@ -22,11 +22,11 @@ const rocketParticleAnimation = (start, end) => {
 
 const VigyaanStyleWrapper = styled.section`
   position: relative; 
-  background: url(${bannerBG});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  // background: url(${bannerBG});
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-attachment: fixed;
   // height: 100vh;
   padding: 0px 0px;
   overflow: hidden;
@@ -36,20 +36,32 @@ const VigyaanStyleWrapper = styled.section`
     position: relative;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    width: 75vw;
-    z-index: 2;
+    width: 70vw;
+    z-index: 1;
 }
 .vigyaan-font {
-  -webkit-animation: cosmos-animation 3s;
-  animation: cosmos-animation 3s;
-  left: 50%;
-  opacity: .5;
+  // -webkit-animation: cosmos-animation 3s;
+  // animation: cosmos-animation 3s;
+  left: 35%;
+  // opacity: .5;
   position: absolute;
-  top: 8vh;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 45vw;
-  z-index: 1;
+  top: 35vh;
+  // -webkit-transform: translateX(-50%);
+  // transform: translateX(-50%);
+  // width: 45vw;
+  font-size: 108px;
+  color:white;
+  z-index: 2;
+  font-weight: 900;
+  text-shadow: 2px 2px 5px #FE7BE5D1;
+}
+.vigyaan-desc{
+  position:absolute;
+  top: 53vh;
+  z-index:2;
+  padding: 0 13rem 0 10rem;
+  color:white;
+  z-index: 2;
 }
 .vigyaan-ring {
   -webkit-animation: ring-animation 3s;
@@ -59,9 +71,11 @@ const VigyaanStyleWrapper = styled.section`
   left: 50%;
   position: absolute;
   top: 40vw;
+  top: 58vh;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 90vw;
+  width: 70vw;
   z-index: 2;
 }
 .button-container {
@@ -71,16 +85,16 @@ const VigyaanStyleWrapper = styled.section`
   left: 50%;
   position: absolute;
   text-align: center;
-  top: 45vh;
+  top: 53vw;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
-  width: 100vw;
+  width: 70vw;
   z-index: 2;
 }
 
 .btncontainer{
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;

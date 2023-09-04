@@ -27,10 +27,11 @@ const VigyaanHero = () => {
       <VigyaanStyleWrapper>
         <div className="container">
         <img className="vigyaan-planet" src={planet} alt="vig_planet"/>
-        <img className="vigyaan-font" src={name} alt="name"></img>
+        <div className="vigyaan-font" >VIGYAAN</div>
+        <div className="vigyaan-desc">Vigyaan, the science exhibition organized during the tech fest, showcases groundbreaking innovations, cutting-edge technologies, and exciting projects, providing a platform for students to delve deeper into the world of science and explore limitless possibilities.</div>
         <img className="vigyaan-ring" src={ring} alt="name"></img>
         <div className="btncontainer">
-        <VIGButton text="REGISTER" />
+        <span className="metaportal_fn_button_3">Click Here To Register</span>
         </div>
         
           {/* <div className="row">

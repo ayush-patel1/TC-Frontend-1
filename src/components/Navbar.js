@@ -12,6 +12,7 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
     const [toggler, setToggler] = useState(false);
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(null);
+    const [scrolled, setScrolled] = useState(false);
 
     const closeNavbar = () => {
         if (window.innerWidth <= 768) {
@@ -21,10 +22,28 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
 
     useEffect(() => {
         setActiveLink(location.pathname);
+                        // Add event listener for scroll
+                        window.addEventListener("scroll", handleScroll);
+
+                        // Cleanup the event listener on unmount
+                        return () => {
+                            window.removeEventListener("scroll", handleScroll);
+                        };
     }, [location.pathname]);
+
+    const handleScroll = () => {
+        if (window.scrollY > 500) {
+            setScrolled(true); // User has scrolled down
+        } else {
+            setScrolled(false); // User is at the top
+        }
+    };
 
     return (
         <div>
+             <div className={scrolled ? "scrolled" : "notscrolled"}>
+
+</div>
             <nav>
                 <a href="#" onClick={() => navigationToggle(true)}>
                     <img className="navlogo" src={tc2} alt="#jpg" />

@@ -17,6 +17,8 @@ import EventsGalleryPage from "./pages/EventsGalleryPage";
 import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
 import SponsorsPage from "./pages/SponsorsPage";
 import OurJourney from "./sections/OurJourney";
+import { StarField } from "starfield-react";
+import StarFieldAnimation from "./layout/StarFieldAnimation";
 const BackgroundContainer = styled.div`
   position: fixed;
   top: 0;
@@ -24,6 +26,7 @@ const BackgroundContainer = styled.div`
   width: 100%;
   height: 100%;
   z-index: -1;
+  overflow: hidden; /* Ensure the starfield doesn't overflow the container */
 `;
 
 const ContentContainer = styled.div`
@@ -68,7 +71,8 @@ function App() {
         </BrowserRouter>
       </ContentContainer>
       <BackgroundContainer>
-        <ParticlesBackground />
+        {/* <ParticlesBackground /> */}
+        <StarFieldAnimation/>
       </BackgroundContainer>
     </div>
   );

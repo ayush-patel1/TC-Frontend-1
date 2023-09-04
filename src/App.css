@@ -6655,5 +6655,9 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for darkness */
+	background-color: rgba(0, 0, 0, 0.5);
   }
+
+.custom-cursor {
+	cursor:url("./assets/images/cursor.png"), auto;
+}

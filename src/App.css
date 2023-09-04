@@ -6663,5 +6663,5 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background-color: rgba(0, 0, 0, 0.5); /* New background color when active */
   }
 .custom-cursor {
-	cursor:url("./assets/images/cursor.png"), auto;
+	cursor:url("./assets/images/cursor.svg"), auto;
 }

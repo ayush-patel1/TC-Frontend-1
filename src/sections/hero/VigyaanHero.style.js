@@ -14,11 +14,46 @@ const rocketAnimation = keyframes`
 
 const rocketParticleAnimation = (start, end) => {
   return keyframes`
-
         from {top: ${start}; opacity: 1}
         to {top: ${end}; opacity: 0}
     `;
 };
+
+const rotate360 = keyframes`
+0% {
+  transform: rotate(0deg);
+  right : 5%;
+}
+50% {
+  right : 15%
+}
+100% {
+  transform: rotate(360deg);
+  right : 5%
+}
+`;
+const quarterCircle = keyframes`
+0% {
+  bottom : 0;
+}
+50% {
+ bottom 30%;
+}
+100% {
+  bottom : 0;
+}
+}
+`;
+const Circle = keyframes`
+0% {
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(360deg);
+}
+}
+`;
+
 
 const VigyaanStyleWrapper = styled.section`
   position: relative; 
@@ -30,6 +65,33 @@ const VigyaanStyleWrapper = styled.section`
   // height: 100vh;
   padding: 0px 0px;
   overflow: hidden;
+
+  .asto{
+    position: absolute ;
+    top: 110vh ;
+    left: 5vw;
+    height: 400px ;
+  }
+
+  .planet1{
+    position: absolute;
+    top: 10vh;
+    right: 0%;
+    height: 100px ;
+    animation: ${rotate360} 15s linear infinite;
+  }
+  .planet2{
+     animation: ${quarterCircle} 4s linear infinite;
+     left: 0%;
+     height: 200px ;
+  }
+  .planet3{
+    position: absolute;
+    top: 30vh; 
+    left: 2vw;
+    height: 200px ;
+    animation: ${Circle} 15s linear infinite;
+  }
 
   .vigyaan-planet {
     left: 50%;
@@ -78,19 +140,6 @@ const VigyaanStyleWrapper = styled.section`
   width: 70vw;
   z-index: 2;
 }
-.button-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  top: 53vw;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
-  width: 70vw;
-  z-index: 2;
-}
 
 .btncontainer{
   position: absolute;
@@ -100,195 +149,399 @@ const VigyaanStyleWrapper = styled.section`
   padding: 10px;
   z-index: 3;
 }
-  .gamfi_v2_hero_left {
-    h2 {
-        max-width: 515px;
-        font-size: 50px;
-        color: #ffffff;
-        line-height: 70px;
-        text-transform: uppercase;
-        margin-bottom: 0px;
-        img {
-          margin: 0 15px;
-        }
-      }
 
-      p {
-        color: #ffffff;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 30px;
-        margin-top: 30px;
-        font-family: Inter;
-      }
+
+
+
+  @media only screen and (max-width: 1441px) {
+    .asto{
+      position: absolute ;
+      top: 110vh ;
+      left: 5vw;
+      height: 400px ;
     }
-
-  .banner-btns {
-    display: flex;
-    align-items: center;
-    column-gap: 30px;
-    margin-bottom: 106px;
-  }
-
-//   .buy_token {
-//     h6 {
-//       font-size: 16px;
-//       line-height: 19px;
-//       text-transform: uppercase;
-//       margin-bottom: 26px;
-//       color: #ffffff;
-//     }
-
-//     .token-list {
-//       display: flex;
-//       flex-wrap: nowrap;
-//       align-items: center;
-//       justify-content: flex-start;
-//       column-gap: 32px;
-//     }
-//   }
-  .gamfi_v2_hero_right {
-    display: flex;
-    // align-items: flex-end;
-    // justify-content: center;
-    // flex-direction: column;
-    // max-width: 450px;
-    // margin-left: auto;
-    // height: 100%;
-    // width: 100%;
-    justify-content: flex-end; 
-    align-items: center; 
-
-    .gamfi_v2_hero_thumb {
-        position: relative;
-        margin: 0;
-        display:flex;
-        flex-direction: column;
-
-      .rocket_thumb {
-        position: relative;
-        z-index: 1;
-        animation: ${rocketAnimation} 5s infinite;
-      }
-
-      .rocket_particle {
-        position: absolute;
-
-        &.particle_1 {
-          top: 15%;
-          left: 40%;
-          z-index: 2;
-          animation: ${rocketParticleAnimation("0", "25%")} 0.95s infinite;
-        }
-        &.particle_2 {
-          top: 50%;
-          left: 25%;
-          z-index: 2;
-          animation: ${rocketParticleAnimation("25%", "50%")} 0.95s infinite;
-        }
-        &.particle_3 {
-          top: 62%;
-          right: 29%;
-          z-index: 2;
-          animation: ${rocketParticleAnimation("40%", "60%")} 1s infinite;
-        }
-        &.particle_4 {
-          top: 60%;
-          left: 35%;
-          z-index: 0;
-          animation: ${rocketParticleAnimation("50%", "80%")} 1.05s infinite;
-        }
-        &.particle_5 {
-          top: 40%;
-          right: 33.5%;
-          z-index: 0;
-          animation: ${rocketParticleAnimation("50%", "90%")} 1.05s infinite;
-        }
-      }
-    }
-  }
-
-  @media only screen and (max-width: 1199px) {
-    .gamfi_v2_hero_left {
-      h2 {
-        font-size: 43px;
-       
-      }
-    }
-  }
-  @media only screen and (max-width: 991px) {
-    .gamfi_v2_hero_left {
-      p {
-        font-size: 17px;
-      }
-    }
-  }
-
-  @media (max-width: 767px) {
-    height: 100vh;
-
-    .btncontainer{
+  
+    .planet1{
       position: absolute;
-      left: 50%;
-      bottom: 0px;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%)
+      top: 10vh;
+      right: 0%;
+      height: 100px ;
+      animation: ${rotate360} 15s linear infinite;
     }
-    .vigyaan-font {
-      -webkit-animation: cosmos-animation 3s;
-      animation: cosmos-animation 3s;
-      left: 50%;
-      opacity: .5;
+    .planet2{
+       animation: ${quarterCircle} 4s linear infinite;
+       left: 0%;
+       height: 200px ;
+    }
+    .planet3{
       position: absolute;
-      top: 35%;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
-      width: 45vw;
-      z-index: 3;
+      top: 30vh; 
+      left: 2vw;
+      height: 200px ;
+      animation: ${Circle} 15s linear infinite;
     }
+  
     .vigyaan-planet {
-      padding-top: 20%;
       left: 50%;
       position: relative;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
-      width: 75vw;
-      z-index: 2;
+      width: 70vw;
+      z-index: 1;
+  }
+  .vigyaan-font {
+    // -webkit-animation: cosmos-animation 3s;
+    // animation: cosmos-animation 3s;
+    left: 35%;
+    // opacity: .5;
+    position: absolute;
+    top: 35vh;
+    // -webkit-transform: translateX(-50%);
+    // transform: translateX(-50%);
+    // width: 45vw;
+    font-size: 108px;
+    color:white;
+    z-index: 2;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px #FE7BE5D1;
+  }
+  .vigyaan-desc{
+    position:absolute;
+    top: 53vh;
+    z-index:2;
+    padding: 0 13rem 0 10rem;
+    color:white;
+    z-index: 2;
   }
   .vigyaan-ring {
-   display:none;
+    -webkit-animation: ring-animation 3s;
+    animation: ring-animation 3s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    left: 50%;
+    position: absolute;
+    top: 40vw;
+    top: 58vh;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 90vw;
+    width: 70vw;
+    z-index: 2;
   }
-
   
-
-    padding-bottom: 80px;
-
-    .buy_token {
-      .token-list {
-        flex-wrap: wrap;
-        row-gap: 20px;
-
-        a {
-          width: 40%;
-        }
-      }
+  .btncontainer{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    z-index: 3;
+  }
+  }
+  @media only screen and (max-width: 1025px) {
+    .asto{
+      position: absolute ;
+      top: 90vh ;
+      left: 5vw;
+      height: 300px ;
     }
+  
+    .planet1{
+      position: absolute;
+      top: 10vh;
+      right: 0%;
+      height: 80px ;
+      animation: ${rotate360} 15s linear infinite;
+    }
+    .planet2{
+       animation: ${quarterCircle} 4s linear infinite;
+       left: 0%;
+       height: 180px ;
+    }
+    .planet3{
+      position: absolute;
+      top: 30vh; 
+      left: 2vw;
+      height: 180px ;
+      animation: ${Circle} 15s linear infinite;
+    }
+  
+    .vigyaan-planet {
+      left: 50%;
+      position: relative;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 70vw;
+      z-index: 1;
+  }
+  .vigyaan-font {
+    // -webkit-animation: cosmos-animation 3s;
+    // animation: cosmos-animation 3s;
+    left: 30%;
+    // opacity: .5;
+    position: absolute;
+    top: 35vh;
+    // -webkit-transform: translateX(-50%);
+    // transform: translateX(-50%);
+    // width: 45vw;
+    font-size: 90px;
+    color:white;
+    z-index: 2;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px #FE7BE5D1;
+  }
+  .vigyaan-desc{
+    position:absolute;
+    top: 53vh;
+    z-index:2;
+    padding: 0 12rem 0 12rem;
+    color:white;
+    z-index: 2;
+  }
+  .vigyaan-ring {
+    -webkit-animation: ring-animation 3s;
+    animation: ring-animation 3s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    left: 50%;
+    position: absolute;
+    top: 65vh;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 70vw;
+    z-index: 2;
+  }
+  
+  .btncontainer{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    z-index: 3;
+  }
   }
 
-  @media only screen and (max-width: 575px) {
-    .gamfi_v2_hero_left {
-      h2 {
-        font-size: 33px;
-        line-height: 60px;
-      }
+  @media only screen and (max-width: 769px) {
+    .vigyaan-font {
+      left: 32%;
+      position: absolute;
+      top: 22vh;
+      font-size: 60px;
+      color:white;
+      z-index: 2;
+      font-weight: 900;
+      text-shadow: 2px 2px 5px #FE7BE5D1;
     }
+    .vigyaan-desc{
+      position:absolute;
+      top: 35vh;
+      color:white;
+      z-index: 2;
+      padding: 0 10rem 0 10rem;
+    }
+    .btncontainer{
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5px;
+      z-index: 3;
+      font-size: 18px;
+    }
+    .asto{
+      position: absolute ;
+      top: 70vh ;
+      left: 5vw;
+      height: 200px ;
+    }
+    .planet1{
+      position: absolute;
+      top: 10vh;
+      right: 0%;
+      height: 70px ;
+      animation: ${rotate360} 15s linear infinite;
+    }
+    .planet2{
+      animation: ${quarterCircle} 4s linear infinite;
+      left: 0%;
+      height: 160px ;
+   }
+   .planet3{
+     position: absolute;
+     top: 30vh; 
+     left: 2vw;
+     height: 160px ;
+     animation: ${Circle} 15s linear infinite;
+   }
+   .vigyaan-ring {
+     display: none;
+   }
+  
   }
-  @media only screen and (max-width: 375px) {
-    .gamfi_v2_hero_left {
-      h2 {
-        font-size: 27px;
-      }
+
+  @media only screen and (max-width: 426px) {
+     height: 100vh;
+
+    .vigyaan-planet {
+      top: 8vh;
+      left: 50%;
+      position: relative;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 70vw;
+      z-index: 1;
+  }
+    .vigyaan-font {
+      left: 27%;
+      position: absolute;
+      top: 28vh;
+      font-size: 40px;
+      color:white;
+      z-index: 2;
+      font-weight: 900;
+      text-shadow: 2px 2px 5px #FE7BE5D1;
     }
+    .vigyaan-desc{
+      position:absolute;
+      top: 40vh;
+      color:white;
+      z-index: 2;
+      padding: 0 1rem 0 1rem;
+    }
+    .btncontainer{
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5px;
+      z-index: 3;
+    }
+    .metaportal_fn_button_3{
+      font-size: 15px;
+    }
+    .asto{
+      display: none;
+      position: absolute ;
+      top: 70vh ;
+      left: 5vw;
+      height: 100px ;
+    }
+    .planet1{
+      position: absolute;
+      top: 10vh;
+      right: 0%;
+      height: 60px ;
+      animation: ${rotate360} 15s linear infinite;
+    }
+    .planet2{
+      animation: ${quarterCircle} 4s linear infinite;
+      left: 0%;
+      height: 80px ;
+   }
+   .planet3{
+     position: absolute;
+     top: 30vh; 
+     left: 2vw;
+     height: 80px ;
+     animation: ${Circle} 15s linear infinite;
+   }
+   .vigyaan-ring {
+     display: none;
+   }
+  }
+  @media only screen and (max-width: 376px) {
+    height: 100vh;
+
+    .vigyaan-planet {
+      top: 8vh;
+      left: 50%;
+      position: relative;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 70vw;
+      z-index: 1;
+  }
+    .vigyaan-font {
+      left: 28%;
+      position: absolute;
+      top: 25vh;
+      font-size: 35px;
+      color:white;
+      z-index: 2;
+      font-weight: 900;
+      text-shadow: 2px 2px 5px #FE7BE5D1;
+    }
+    .vigyaan-desc{
+      position:absolute;
+      top: 40vh;
+      color:white;
+      z-index: 2;
+      padding: 0 1rem 0 1rem;
+    }
+    .btncontainer{
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5px;
+      z-index: 3;
+      width: 70%;
+    }
+    .metaportal_fn_button_3{
+      font-size: 18px;
+
+    }
+    .asto{
+      display: none;
+      position: absolute ;
+      top: 70vh ;
+      left: 5vw;
+      height: 100px ;
+    }
+    .planet1{
+      position: absolute;
+      top: 10vh;
+      right: 0%;
+      height: 50px ;
+      animation: ${rotate360} 15s linear infinite;
+    }
+    .planet2{
+      animation: ${quarterCircle} 4s linear infinite;
+      left: 0%;
+      height: 70px ;
+   }
+   .planet3{
+     position: absolute;
+     top: 30vh; 
+     left: 2vw;
+     height: 70px ;
+     animation: ${Circle} 15s linear infinite;
+   }
+   .vigyaan-ring {
+     display: none;
+   }
+   @media only screen and (max-width: 321px) {
+    .vigyaan-font {
+      left: 28%;
+      position: absolute;
+      top: 22vh;
+      font-size: 30px;
+      color:white;
+      z-index: 2;
+      font-weight: 900;
+      text-shadow: 2px 2px 5px #FE7BE5D1;
+    }
+    .btncontainer{
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5px;
+      z-index: 3;
+      width: 80%;
+    }
+   }
   }
 `;
 

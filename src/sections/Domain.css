@@ -1,0 +1,34 @@
+.executives_data{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 30px;
+}
+
+
+
+.executives_data ul{
+    display: flex;
+    flex-direction: column;
+    /* width: 30%; */
+}
+
+.executives_data li{
+    list-style: none;
+    
+}
+
+@media (max-width: 1024px) {
+    .executives_data{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 80%;
+        margin: 30px;
+    }
+
+    .child_data{
+        margin: 15px 0px;
+    }
+  }
+  

@@ -244,7 +244,7 @@ export const coresList = [
   },
   {
     id: "41",
-    Name: "Ankit Lakara",
+    Name: "Ankit Kumar Lakra",
     Branch: "",
     Domain: "Tech",
   },

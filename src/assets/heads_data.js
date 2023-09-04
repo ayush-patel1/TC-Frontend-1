@@ -21,28 +21,17 @@ import Rishav_Gandhi from "../assets/images/heads/Rishav_Gandhi.jpg.png";
 
 export const coordinatorsList = [
   {
-    id: 1,
-    name: "Arpit Pandey",
-    imgUrl: Arpit_Pandey,
-    linkedinUrl: "https://www.linkedin.com/in/arpit-pandey-1866a2142/",
-    instaUrl: "https://www.instagram.com/arpitp_192/?hl=en",
+    id: 4,
+    name: "Vaibhav Sawant",
+    imgUrl: Vaibhav_Sawant,
+    linkedinUrl: "https://www.linkedin.com/in/vaibhav-sawant-59522922a/",
+    instaUrl: "https://instagram.com/simply_vaibhav?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"MME"
+    domain: "Chemical"
   },
   {
     id: 2,
-    name: "Chirag Singhal",
-    imgUrl: Chirag_Singhal,
-    linkedinUrl: "https://www.linkedin.com/in/chirag-singhal-a61b40228/",
-    instaUrl: "https://instagram.com/1502.chirag?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
-    facebookUrl : "#",
-    githubUrl : "#",
-    domain:"CSE"
-
-  },
-  {
-    id: 3,
     name: "Ishan Nayak",
     imgUrl: Ishan_Nayak,
     linkedinUrl: "https://www.linkedin.com/in/ishan-nayak-340b6b218/",
@@ -52,14 +41,24 @@ export const coordinatorsList = [
     domain:"ECE"
   },
   {
-    id: 4,
-    name: "Vaibhav Sawant",
-    imgUrl: Vaibhav_Sawant,
-    linkedinUrl: "https://www.linkedin.com/in/vaibhav-sawant-59522922a/",
-    instaUrl: "https://instagram.com/simply_vaibhav?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
+    id: 3,
+    name: "Chirag Singhal",
+    imgUrl: Chirag_Singhal,
+    linkedinUrl: "https://www.linkedin.com/in/chirag-singhal-a61b40228/",
+    instaUrl: "https://instagram.com/1502.chirag?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain: "Chemical"
+    domain:"CSE"
+  },
+  {
+    id: 1,
+    name: "Arpit Pandey",
+    imgUrl: Arpit_Pandey,
+    linkedinUrl: "https://www.linkedin.com/in/arpit-pandey-1866a2142/",
+    instaUrl: "https://www.instagram.com/arpitp_192/?hl=en",
+    facebookUrl : "#",
+    githubUrl : "#",
+    domain:"MME"
     
   },
   {

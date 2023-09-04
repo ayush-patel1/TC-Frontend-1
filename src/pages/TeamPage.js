@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Team from '../sections/Team'
 import Executive from '../sections/Executive.js'
-import FullPageLoader from '../layout/FullPageLoader';
+// import FullPageLoader from '../layout/FullPageLoader';
 const TeamPage = () => {
 
   useEffect(() => {

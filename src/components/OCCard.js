@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './OCCard.module.css'
+import {item1} from "../assets/images/lines.png"
   
   function OCCard(props){
     return(

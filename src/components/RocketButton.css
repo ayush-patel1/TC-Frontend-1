@@ -29,7 +29,7 @@
   }
   @media(width<700px){
     #rocket-svg {
-      height:100px;
+      height:65px;
     }
     .loader-container{
       height: 50px;

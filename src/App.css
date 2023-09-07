@@ -2435,6 +2435,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	-o-flex-direction: column;
 	flex-direction: column;
 	justify-content: center;
+	position: relative;
+	z-index: 15;
 }
 .metaportal_fn_leftnav .nav_holder{
 	padding: 73px 0 64px;

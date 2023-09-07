@@ -2051,7 +2051,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	color: var(--mc1);
 }
 
-
+@media(max-width: 500px){
+	.blog__item{
+		padding: 5px;
+	}
+}
 
 
 

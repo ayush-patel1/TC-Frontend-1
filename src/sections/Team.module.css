@@ -63,6 +63,12 @@
     .title  h1{
         font-size: 3rem;
     }
+    .container{
+        gap: 0;
+    }
+    .OverallHeadSection, .HeadSection{
+        margin-bottom: 2rem;
+    }
 }
 
 @media(max-width: 400px){
@@ -76,6 +82,9 @@
 
 
 
+.fn_cs_steps{
+    padding-bottom: 4rem;
+}
 
 .fn_cs_steps ul{
 	margin: 0;

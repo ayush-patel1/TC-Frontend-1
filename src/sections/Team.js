@@ -14,9 +14,9 @@ const Team = () => {
     <div className={styles.container}>
       <Title color={"TEAM"} noncolor={"TECHNOCRACY"} />
       <div data-aos="fade-up" className="container">
-        <div className="fn_cs_news container" style={{paddingBottom:"4rem"}}>
+        <div className="fn_cs_news container">
           <div className="news_part">
-            <div className="left_items">
+            <div className="left_items" style={{margin:"0"}}>
               <div  className="blog__item">
                       <img src={teampic} width="100%" alt="" />
               </div>

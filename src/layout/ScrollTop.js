@@ -16,13 +16,13 @@ const ScrollTop = () => {
   }, []);
 
   return (
-    <a  onClick={scrollToTop} href="#" className="metaportal_fn_totop" style={{ height: "183px" }}>
+    <button  onClick={scrollToTop} className="metaportal_fn_totop" style={{ height: "183px" }}>
       <span className="totop_inner">
         <span className="icon">
       <ImArrowUp2 size={20} color="black"/>
         </span>
       </span>
-    </a>
+    </button>
   );
 };
 export default ScrollTop;

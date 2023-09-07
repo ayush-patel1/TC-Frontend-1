@@ -1,24 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import bannerBG from "../../assets/images/vighero/vig_bg.webp";
 
-const rocketAnimation = keyframes`
-        0%,
-        100% {
-            bottom: 0;
-        }
-
-        50% {
-            bottom: 30px;
-        } 
-`;
-
-const rocketParticleAnimation = (start, end) => {
-  return keyframes`
-        from {top: ${start}; opacity: 1}
-        to {top: ${end}; opacity: 0}
-    `;
-};
-
 const rotate360 = keyframes`
 0% {
   transform: rotate(0deg);

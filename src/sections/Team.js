@@ -3,7 +3,6 @@ import styles from "./Team.module.css";
 import HeadCard from "../components/HeadCard";
 import { coordinatorsList } from "../assets/heads_data";
 import { coresList } from "../assets/cores_data";
-import { executivesList } from "../assets/executives_data";
 import OCCard from "../components/OCCard";
 import Title from "../components/Title";
 import Domain from "./Domain";

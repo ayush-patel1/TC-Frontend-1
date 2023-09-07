@@ -17,7 +17,6 @@ import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
 import SponsorsPage from "./pages/SponsorsPage";
 
 import StarFieldAnimation from "./layout/StarFieldAnimation";
-import About from "./components/About"
 
 const BackgroundContainer = styled.div`
   position: fixed;

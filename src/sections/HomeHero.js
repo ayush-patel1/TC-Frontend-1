@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import videoBg from "../assets/videos/blackhole.webm";
 import styles from './HomeHero.module.css';
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import VIGButton from "../layout/VIGButton";
 
 const HomeHero = () => {

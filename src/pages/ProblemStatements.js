@@ -1,4 +1,4 @@
-import { Link, useParams, useNavigate  } from "react-router-dom";
+import { useParams, useNavigate  } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Arch from "../components/branches/Arch";
@@ -12,13 +12,11 @@ import Meta from "../components/branches/Meta";
 import EE from "../components/branches/EE";
 import ECE from "../components/branches/ECE";
 import Chem from "../components/branches/Chem";
-import { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom';
+import { useEffect } from "react";
 import PageBanner from "../layout/PageBanner";
-import ProblemStatement from "../sections/ProblemStatement";
 import StarFieldAnimation from "../layout/StarFieldAnimation";
 
-const ProblemStatements = (props) => {
+const ProblemStatements = () => {
   const { branch } = useParams();
   const navigate = useNavigate ();
 
@@ -26,30 +24,6 @@ const ProblemStatements = (props) => {
     AOS.init({ duration: 1000 });
     window.scrollTo(0, 0);
   }, []);
-
-  const [isLoading, setIsLoading] = useState(true);
-  const location = useLocation();
-  const [activeLink, setActiveLink] = useState(null);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    setActiveLink(location.pathname);
-                    // Add event listener for scroll
-                    window.addEventListener("scroll", handleScroll);
-
-                    // Cleanup the event listener on unmount
-                    return () => {
-                        window.removeEventListener("scroll", handleScroll);
-                    };
-}, [location.pathname]);
-
-const handleScroll = () => {
-    if (window.scrollY > 0) {
-        setScrolled(true); // User has scrolled down
-    } else {
-        setScrolled(false); // User is at the top
-    }
-};
 
   const handleCategoryClick = (newBranch) => {
     navigate(`/vigyaan/statements/${newBranch}`);
@@ -85,8 +59,8 @@ const handleScroll = () => {
   };
   const isActive = (category) => branch === category;
   return (
-    <div className={scrolled ? "Vigyaanscrolled" : "Vigyaannotscrolled"}>
-      <div className="dark-overlay2" style={{zIndex:"1"}}></div>
+    <div className="Vigyaanscrolled">
+      <div className="dark-overlay" style={{zIndex:"1"}}></div>
           <StarFieldAnimation/>
 
     <div className="metaportal_fn_blog_single" style={{position:"relative",zIndex:"2"}}>
@@ -111,69 +85,69 @@ const handleScroll = () => {
               >
                 <ul>
                   <li>
-                    <a onClick={() => handleCategoryClick('Arch')} className={isActive('Arch') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('Arch')} className={isActive('Arch') ? 'activa' : ''}>
                       <span>Architecture</span>
-                    </a>
+                    </button> 
                     <span className="count">11</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('BioMed')} className={isActive('BioMed') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('BioMed')} className={isActive('BioMed') ? 'activa' : ''}>
                       <span>Biomedical</span>
-                    </a>
+                    </button> 
                     <span className="count">8</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('Biotech')} className={isActive('Biotech') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('Biotech')} className={isActive('Biotech') ? 'activa' : ''}>
                       <span>Biotechnology</span>
-                    </a>
+                    </button> 
                     <span className="count">12</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('Civil')} className={isActive('Civil') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('Civil')} className={isActive('Civil') ? 'activa' : ''}>
                       <span>Civil</span>
-                    </a>
+                    </button> 
                     <span className="count">14</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('CsItMca')} className={isActive('CsItMca') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('CsItMca')} className={isActive('CsItMca') ? 'activa' : ''}>
                       <span>CSE / IT / MCA</span>
-                    </a>
+                    </button> 
                     <span className="count">11</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('ECE')} className={isActive('ECE') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('ECE')} className={isActive('ECE') ? 'activa' : ''}>
                       <span>Electronics & Communications</span>
-                    </a>
+                    </button> 
                     <span className="count">11</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('EE')} className={isActive('EE') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('EE')} className={isActive('EE') ? 'activa' : ''}>
                       <span>Electrical</span>
-                    </a>
+                    </button> 
                     <span className="count">10</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('Mech')} className={isActive('Mech') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('Mech')} className={isActive('Mech') ? 'activa' : ''}>
                       <span>Mechanical</span>
-                    </a>
+                    </button> 
                     <span className="count">8</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('Meta')} className={isActive('Meta') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('Meta')} className={isActive('Meta') ? 'activa' : ''}>
                       <span>Metallurgy</span>
-                    </a>
+                    </button> 
                     <span className="count">7</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('Mining')} className={isActive('Mining') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('Mining')} className={isActive('Mining') ? 'activa' : ''}>
                       <span>Mining</span>
-                    </a>
+                    </button> 
                     <span className="count">16</span>
                   </li>
                   <li>
-                    <a onClick={() => handleCategoryClick('Chem')} className={isActive('Chem') ? 'activa' : ''}>
+                    <button onClick={() => handleCategoryClick('Chem')} className={isActive('Chem') ? 'activa' : ''}>
                       <span>Chemical</span>
-                    </a>
+                    </button> 
                     <span className="count">9</span>
                   </li>
                 </ul>

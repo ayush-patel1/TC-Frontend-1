@@ -31,8 +31,8 @@ const EventsGallery = () => {
       }
       var firstDiv = items[numberOne];
       var secondDiv = items[numberTwo];
-      var firstImage = firstDiv.querySelector("input").value;
-      var secondImage = secondDiv.querySelector("input").value;
+      // var firstImage = firstDiv.querySelector("input").value;
+      // var secondImage = secondDiv.querySelector("input").value;
       firstDiv.classList.add("ready");
       secondDiv.classList.add("ready");
       // console.log(firstDiv.querySelector("input").value == firstDiv);
@@ -202,16 +202,15 @@ const EventsGallery = () => {
         </div>
         <div className="fn_cs_desc">
           <Link style={{textDecoration:"none", color:"white"}} to="/aavartan/gallery">
-        <a
-            href="/"
-            className="metaportal_fn_button"
+        <div
+            className="goodbtn"
             target="_blank"
             rel="noreferrer"
-            style={{margin:"2rem 0"}}
+            style={{margin:"2rem 0", position:"relative", zIndex:"1"}}
           > <span>
             Show More
             </span>
-          </a>
+          </div>
             </Link>
         </div>
       </div>

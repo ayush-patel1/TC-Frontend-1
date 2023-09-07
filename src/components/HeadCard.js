@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './HeadCard.module.css'
-import pic from '../assets/images/stars.png'
 import pic2 from '../assets/images/rocket.png'
   function HeadCard(props){
     return(

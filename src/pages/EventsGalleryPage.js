@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import sqrimg from '../assets/images/1x1.jpg'
 import Title from '../components/Title';
 import PageBanner from "../layout/PageBanner"
 import AOS from 'aos';

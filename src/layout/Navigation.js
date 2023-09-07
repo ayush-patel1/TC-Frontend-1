@@ -1,14 +1,10 @@
-import { Fragment, useState } from "react";
+import { Fragment} from "react";
 import { connect } from "react-redux";
 import { navigationToggle } from "../redux/actions/siteSettings";
 import { Link } from "react-router-dom";
-import {GrInstagram} from 'react-icons/gr';
-import {SiGmail} from 'react-icons/si';
-import {BsTelegram, BsInstagram, BsYoutube, BsMagic,BsFacebook} from 'react-icons/bs';
-import { AiFillHeart } from "react-icons/ai";
+import {BsInstagram, BsFacebook} from 'react-icons/bs';
 import '../App.css'
 const Navigation = ({ navigation, navigationToggle }) => {
-  const [subMenu, setSubMenu] = useState(null);
   return (
     <Fragment>
       <div
@@ -16,13 +12,12 @@ const Navigation = ({ navigation, navigationToggle }) => {
         className={`metaportal_fn_leftnav_closer ${navigation ? "active" : ""}`}
       />
       <div className={`metaportal_fn_leftnav ${navigation ? "active" : ""}`}>
-        <a
-          href="#"
+        <button
           className="fn__closer"
           onClick={() => navigationToggle(false)}
         >
           <span />
-        </a>
+        </button>
         <div className="navbox">
           <div className="list_holder">
             <ul className="metaportal_fn_items">
@@ -64,44 +59,40 @@ const Navigation = ({ navigation, navigationToggle }) => {
               <img src="/svg/down.svg" alt="" className="fn__svg" />
             </span>
             {/* For JS */}
-            <ul
-              style={{
-                transform: `translateX(${subMenu !== null ? "-100" : "0"}%)`,
-              }}
-            >
+            <ul>
                             <li>
                 <Link to="/">
-                  <a onClick={() => navigationToggle(false)}>
+                  <button onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Home</span>
-                  </a>
+                  </button>
                 </Link>
               </li>
               <li>
                 <Link to="/aavartan">
-                  <a onClick={() => navigationToggle(false)}>
+                  <button onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Aavartan</span>
-                  </a>
+                  </button>
                 </Link>
               </li>
               <li>
                 <Link to="/vigyaan">
-                  <a onClick={() => navigationToggle(false)}>
+                  <button onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Vigyaan</span>
-                  </a>
+                  </button>
                 </Link>
               </li>
               <li>
               <Link to="/team">
-                  <a onClick={() => navigationToggle(false)}>
+                  <button onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Team</span>
-                  </a>
+                  </button>
                 </Link>
               </li>
               <li>
                 <Link to="/sponsors">
-                  <a onClick={() => navigationToggle(false)}>
+                  <button onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Sponsors</span>
-                  </a>
+                  </button>
                 </Link>
               </li>
               {/* <li>
@@ -117,13 +108,12 @@ const Navigation = ({ navigation, navigationToggle }) => {
             <div className="copyright">
               <p>
                 Made With with MAGIC by <br />
-                <a
-                  href="#"
+                <button
                   target="_blank"
                   rel="noreferrer"
                 >
                   Tech Team
-                </a>
+                </button>
               </p>
             </div>
             <div className="social_icons">

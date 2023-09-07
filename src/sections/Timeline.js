@@ -103,7 +103,7 @@ export default function App() {
                     <div className="blog__item_timeline">
                       <h4 className="fw-bold mb-4">We Are Coming Back</h4>
                       <p className="text-muted mb-4">
-                        <MDBIcon far icon="clock" size="sm" /> 2014
+                        <MDBIcon far icon="clock" size="sm" /> 2023
                       </p>
                       <p className="mb-0">
                         Aavartan will be back with its new edition with stellar

@@ -8,6 +8,7 @@ import prop6 from "../../assets/prop6.webp";
 import prop7 from "../../assets/prop7.webp";
 import prop8 from "../../assets/prop8.webp";
 import prop5 from "../../assets/prop5.webp";
+import RocketButton from "../../components/RocketButton";
 
 const VigyaanHero = () => {
   const scrollToRegistration = () => {
@@ -29,7 +30,8 @@ const VigyaanHero = () => {
         <div className="vigyaan-font" ><p>VIGYAAN</p></div>
         <div className="vigyaan-desc">Vigyaan, the science exhibition organized during the tech fest, showcases groundbreaking innovations, cutting-edge technologies, and exciting projects, providing a platform for students to delve deeper into the world of science and explore limitless possibilities.</div>
         <img className="vigyaan-ring" src={ring} alt="name"/>
-        <div className="btncontainer">
+        <div className="btncontainer" style={{display:"flex"}}>
+          <RocketButton/>
         <span className="metaportal_fn_button_3" onClick={scrollToRegistration} >Click Here To Register</span>
         </div>
         

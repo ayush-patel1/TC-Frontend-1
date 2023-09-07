@@ -1,7 +1,5 @@
 
 import { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import sqrimg from '../assets/images/1x1.jpg'
 import Title from "../components/Title";
 import v1 from "../assets/images/vigyaan/v1.webp"
@@ -15,9 +13,6 @@ import v8 from "../assets/images/vigyaan/v8.webp"
 import { Link } from "react-router-dom";
 
 const EventsGallery = () => {
-  useEffect(() => {
-    AOS.init();
-  }, [])
   useEffect(() => {
     const collection = document.querySelector(".fn_cs_collection");
     var items = collection.querySelectorAll(".item");
@@ -69,7 +64,7 @@ const EventsGallery = () => {
         <div className="fn_cs_collection">
           <div className="collection_top">
             <div className="item">
-              <div data-aos="fade-down" className="item_in">
+              <div className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -85,7 +80,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/1.webp" />
             </div>
             <div className="item">
-              <div data-aos="fade-down" className="item_in">
+              <div className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -101,7 +96,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/2.webp" />
             </div>
             <div className="item">
-              <div data-aos="fade-down" className="item_in">
+              <div className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -117,7 +112,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/3.webp" />
             </div>
             <div className="item">
-              <div data-aos="fade-down" className="item_in">
+              <div className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -135,7 +130,7 @@ const EventsGallery = () => {
           </div>
           <div className="collection_bottom">
             <div className="item">
-              <div data-aos="fade-up" className="item_in">
+              <div className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -151,7 +146,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/5.webp" />
             </div>
             <div className="item">
-              <div data-aos="fade-up" className="item_in">
+              <div className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -167,7 +162,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/6.webp" />
             </div>
             <div className="item">
-              <div data-aos="fade-up" className="item_in">
+              <div className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"
@@ -183,7 +178,7 @@ const EventsGallery = () => {
               <input type="hidden" defaultValue="img/collection/7.webp" />
             </div>
             <div className="item">
-              <div data-aos="fade-up" className="item_in">
+              <div className="item_in">
                 <div className="img">
                   <div
                     className="abs_img"

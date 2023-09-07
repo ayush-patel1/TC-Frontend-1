@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./About.module.css";
 import Title from "./Title";
 
 function About() {
-  const [counterOn, setCounterOn] = useState(false);
   return (
     <div className={styles.about_container}>
       <Title color={"ABOUT"} noncolor={"US"} />

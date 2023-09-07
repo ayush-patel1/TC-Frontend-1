@@ -9,9 +9,9 @@ const Login = ({ walletToggle, wallet }) => {
         onClick={() => walletToggle(false)}
       />
       <div className={`metaportal_fn_walletbox ${wallet ? "active" : ""}`}>
-        <a href="#" className="fn__closer" onClick={() => walletToggle(false)}>
+        <button className="fn__closer" onClick={() => walletToggle(false)}>
           <span />
-        </a>
+        </button>
         <div className="walletbox">
           <div className="title_holder">
             <h3>Login</h3>

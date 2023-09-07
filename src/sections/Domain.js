@@ -9,7 +9,7 @@ function MyComponent(props) {
         <h3>{props.name1}</h3>
         <ul style={{ listStyleType: 'none', padding: 0 }}>
         {executivesList.map((heads) => {
-          if (heads.Domain == props.name1) {
+          if (heads.Domain === props.name1) {
             return (
           <li>{heads.Name}</li>
             );
@@ -24,7 +24,7 @@ function MyComponent(props) {
         <h3>{props.name2}</h3>
         <ul style={{ listStyleType: 'none', padding: 0 }}>
         {executivesList.map((heads) => {
-          if (heads.Domain == props.name2) {
+          if (heads.Domain === props.name2) {
             return (
           <li>{heads.Name}</li>
             );
@@ -38,7 +38,7 @@ function MyComponent(props) {
         <h3>{props.name3}</h3>
         <ul style={{ listStyleType: 'none', padding: 0 }}>
         {executivesList.map((heads) => {
-          if (heads.Domain == props.name3) {
+          if (heads.Domain === props.name3) {
             return (
           <li>{heads.Name}</li>
             );

@@ -108,10 +108,10 @@ export const heroSlider2 = () => {
     let current_left = w / 2 - width / 2,
       next1_left = current_left + width / 2.5,
       next2_left = next1_left + width / 2.5,
-      next3_left = next2_left + width / 2.5,
+      // next3_left = next2_left + width / 2.5,
       prev1_left = current_left - width / 2.5,
-      prev2_left = prev1_left - width / 2.5,
-      prev3_left = prev1_left - width / 2.5;
+      prev2_left = prev1_left - width / 2.5;
+      // prev3_left = prev1_left - width / 2.5;
     let current = ul.getElementsByClassName("current")[0],
       next1 = ul.getElementsByClassName("next1")[0],
       next2 = ul.getElementsByClassName("next2")[0],
@@ -192,7 +192,7 @@ export const heroSlider2 = () => {
   };
 
   const indexNumber = (index, length) => {
-    return index == 0 ? length - 1 : index - 1;
+    return index === 0 ? length - 1 : index - 1;
   };
 
   const frenify_cards_gallery = document.querySelectorAll(

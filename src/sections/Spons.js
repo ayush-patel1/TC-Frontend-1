@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import styles from "./Spons.module.css";
-import Card from "../components/SponsCardSec";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Spons_data from "../assets/spons_data";
-import PageBanner from "../layout/PageBanner";
 import Title from "../components/Title";
 import tsp from "../assets/spons_images/sp15.webp"
 

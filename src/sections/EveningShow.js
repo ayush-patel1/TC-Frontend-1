@@ -15,7 +15,7 @@ import es_8 from "../assets/images/eveningshows/es_8.webp";
 import es_9 from "../assets/images/eveningshows/es_9.webp";
 import es_10 from "../assets/images/eveningshows/es_10.webp";
 import prop3 from "../assets/prop4.webp"
-import { css, keyframes, styled } from "styled-components";
+import { keyframes, styled } from "styled-components";
 
 const rotate360 = keyframes`
 0%,

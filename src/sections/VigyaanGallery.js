@@ -31,8 +31,8 @@ const EventsGallery = () => {
       }
       var firstDiv = items[numberOne];
       var secondDiv = items[numberTwo];
-      var firstImage = firstDiv.querySelector("input").value;
-      var secondImage = secondDiv.querySelector("input").value;
+      // var firstImage = firstDiv.querySelector("input").value;
+      // var secondImage = secondDiv.querySelector("input").value;
       firstDiv.classList.add("ready");
       secondDiv.classList.add("ready");
       // console.log(firstDiv.querySelector("input").value == firstDiv);

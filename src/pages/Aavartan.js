@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Events from '../sections/Events'
 import EveningShow from '../sections/EveningShow'
 import EventsGallery from '../sections/EventsGallery'
 import AavartanHero from '../sections/hero/AavartanHero'
@@ -40,7 +39,7 @@ const handleScroll = () => {
 
 
   return (
-    <div className={scrolled ? "Aavartanscrolled" : "Aavartannotscrolled"}>
+    <div className="Aavartanscrolled">
       <div className={scrolled ? "dark-overlay" : ""}></div>
           <StarFieldAnimation/>
           {/* <Events/> */}

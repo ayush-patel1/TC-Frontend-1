@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { connect } from "react-redux";
 import { navigationToggle, walletToggle } from "../redux/actions/siteSettings";
 import { MdClear } from 'react-icons/md';
@@ -45,9 +45,9 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
 
 </div>
             <nav>
-                <a href="#" onClick={() => navigationToggle(true)}>
+                <div onClick={() => navigationToggle(true)}>
                     <img className="navlogo" src={tc2} alt="#jpg" />
-                </a>
+                </div>
                 <div>
                     <ul id="navbar" className={toggler ? "navbar active" : "navbar"}>
                         <li className={activeLink === "/" ? "active-link" : ""}>

@@ -3,9 +3,6 @@
 
 import prop1 from "../../assets/prop1.webp";
 import prop2 from "../../assets/prop2.webp";
-import dollorIcon from "../../assets/images/tcLogo.png"
-import rocketIcon from "../../assets/images/tcLogo.png"
-import ufoShape from "../../assets/images/tcLogo.png"
 
 import AavartanStyleWrapper from "./AavartanHero.style";
 import { NavLink } from "react-router-dom";

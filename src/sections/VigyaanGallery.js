@@ -202,17 +202,17 @@ const EventsGallery = () => {
         </div>
         <div className="fn_cs_desc">
           <Link style={{textDecoration:"none", color:"white"}} to="/vigyaan/gallery">
-        <a
+        <div
             href="/"
-            className="metaportal_fn_button"
+            className="goodbtn"
             target="_blank"
             rel="noreferrer"
-            style={{margin:"2rem 0"}}
+            style={{margin:"2rem 0", position:"relative", zIndex:"1"}}
           >
             <span>
               Show More
               </span>
-          </a>
+          </div>
               </Link>
         </div>
       </div>

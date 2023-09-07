@@ -1,16 +1,14 @@
-
-  .loader-container {
-    position: relative;
-    background-color: #212526;
-  }
-  
-  .structure, .smoke {
+ /* .structure, .smoke {
     position: absolute;
     z-index: 1000;
     top: calc(50% - 65px);
     left: calc(50% - 100px);
     width: 200px;
     height: 130px;
+  } */
+
+  .structure{
+    height: 50px;
   }
   
   .smoke {
@@ -24,21 +22,37 @@
   }
   
   #rocket-svg {
-    position: absolute;
-    top: -112px;
+    /* position: absolute;
+    top: px; */
     transform: rotate(90deg);
+    height:140px;
+  }
+  @media(width<700px){
+    #rocket-svg {
+      height:100px;
+    }
+    .loader-container{
+      height: 50px;
+    }
+    .rocket-container{
+      height: 50px;
+    }
+    .structure{
+      height: 50px;
+      display: flex;
+    }
   }
   
   #right-wing , #left-wing, #nose, #window-stroke, #middle-wing {
-    fill: #F44336;
+    fill: #ffffff;
   }
   
   #rocket-main-part {
-    fill: #ffd700;
+    fill: #e73dbf;
   }
   
   #window-inner {
-    fill: #212526;
+    fill: #262421;
   }
   
   .smoke span {
@@ -79,7 +93,7 @@
   /* Generated CSS for smoke animations and meteors animations is not included here, but it should remain unchanged. */
 /* Styles for the first smoke element */
 .smoke span:nth-child(1) {
-    top: 28px;
+    top: 50px;
     left: -50px;
     box-shadow: 0px 0px 5px #fff;
     animation: smokeAnim-1 ease-out 1s infinite;
@@ -87,7 +101,7 @@
   
   @keyframes smokeAnim-1 {
     from {
-      left: -50px;
+      left: -58px;
       opacity: 1;
     }
     to {
@@ -98,15 +112,15 @@
   
   /* Styles for the second smoke element */
   .smoke span:nth-child(2) {
-    top: 36px;
-    left: -50px;
+    top: 55px;
+    left: -40px;
     box-shadow: 0px 0px 5px #fff;
     animation: smokeAnim-2 ease-out 1.2s infinite;
   }
   
   @keyframes smokeAnim-2 {
     from {
-      left: -50px;
+      left: -58px;
       opacity: 1;
     }
     to {
@@ -117,15 +131,15 @@
   
   /* Styles for the third smoke element */
   .smoke span:nth-child(3) {
-    top: 44px;
-    left: -50px;
+    top: 60px;
+    left: -30px;
     box-shadow: 0px 0px 5px #fff;
-    animation: smokeAnim-3 ease-out 1.4s infinite;
+    animation: smokeAnim-1 ease-out 1.3s infinite;
   }
   
   @keyframes smokeAnim-3 {
     from {
-      left: -50px;
+      left: -58px;
       opacity: 1;
     }
     to {
@@ -135,15 +149,15 @@
   }
   /* Styles for the third smoke element */
   .smoke span:nth-child(4) {
-    top: 52px;
-    left: -50px;
+    top: 65px;
+    left: -20px;
     box-shadow: 0px 0px 5px #fff;
     animation: smokeAnim-3 ease-out 1.4s infinite;
   }
   
   @keyframes smokeAnim-4 {
     from {
-      left: -50px;
+      left: -58px;
       opacity: 1;
     }
     to {
@@ -153,10 +167,10 @@
   }
   /* Styles for the third smoke element */
   .smoke span:nth-child(5) {
-    top: 52px;
-    left: -50px;
+    top: 70px;
+    left: -10px;
     box-shadow: 0px 0px 5px #fff;
-    animation: smokeAnim-3 ease-out 1.4s infinite;
+    animation: smokeAnim-5 ease-out 1.5s infinite;
   }
   
   @keyframes smokeAnim-5 {
@@ -171,10 +185,10 @@
   }
   /* Styles for the third smoke element */
   .smoke span:nth-child(6) {
-    top: 60px;
-    left: -50px;
+    top: 75px;
+    left: -20px;
     box-shadow: 0px 0px 5px #fff;
-    animation: smokeAnim-3 ease-out 1.4s infinite;
+    animation: smokeAnim-6 ease-out 1.6s infinite;
   }
   
   @keyframes smokeAnim-6 {
@@ -188,10 +202,10 @@
     }
   }
   .smoke span:nth-child(7) {
-    top: 68px;
-    left: -50px;
+    top: 80px;
+    left: -30px;
     box-shadow: 0px 0px 5px #fff;
-    animation: smokeAnim-3 ease-out 1.4s infinite;
+    animation: smokeAnim-7 ease-out 1.7s infinite;
   }
   
   @keyframes smokeAnim-7 {
@@ -205,10 +219,10 @@
     }
   }
   .smoke span:nth-child(8) {
-    top: 72px;
-    left: -50px;
+    top: 90px;
+    left: -40px;
     box-shadow: 0px 0px 5px #fff;
-    animation: smokeAnim-3 ease-out 1.4s infinite;
+    animation: smokeAnim-8 ease-out 1.8s infinite;
   }
   
   @keyframes smokeAnim-8 {
@@ -222,10 +236,10 @@
     }
   }
   .smoke span:nth-child(9) {
-    top: 68px;
-    left: -50px;
+    top: 95px;
+    left: -30px;
     box-shadow: 0px 0px 5px #fff;
-    animation: smokeAnim-3 ease-out 1.4s infinite;
+    animation: smokeAnim-9 ease-out 1.9s infinite;
   }
   
   @keyframes smokeAnim-9 {
@@ -239,10 +253,10 @@
     }
   }
   .smoke span:nth-child(10) {
-    top: 74px;
-    left: -50px;
+    top: 100px;
+    left: -20px;
     box-shadow: 0px 0px 5px #fff;
-    animation: smokeAnim-3 ease-out 1.4s infinite;
+    animation: smokeAnim-10 ease-out 2s infinite;
   }
   
   @keyframes smokeAnim-10 {

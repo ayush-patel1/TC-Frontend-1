@@ -6,7 +6,7 @@ const RocketButton = () => {
     <div className='loader-container'>
       <div className='rocket-container'>
         <div className='structure'>
-          <svg height='352' id='rocket-svg' version='1.1' viewBox='0 0 59.266662 93.133333' width='224' xmlns='http://www.w3.org/2000/svg'>
+          <svg id='rocket-svg' version='1.1' viewBox='0 0 53.34 83.82' width="100%" xmlns='http://www.w3.org/2000/svg'>
             <g id='layer2' transform='translate(-33.866666,-33.866666)'>
               <path d='m 296,336 a 8.0000078,8.0000078 0 0 0 -8,8 v 80 a 8.0000078,7.9999501 0 0 0 1.16406,4.14062 l -0.22461,0.11329 49.32227,49.32031 0.0781,0.0801 0.004,-0.004 A 7.9999934,8.0000655 0 0 0 344,480 a 7.9999934,8.0000655 0 0 0 8,-8 v -80 a 7.9999934,7.9998924 0 0 0 -2.34961,-5.65625 l 0.004,-0.004 -48.00391,-48.00195 -0.004,0.002 A 8.0000078,8.0000078 0 0 0 296,336 Z' id='right-wing' style={{ opacity: 1, fillOpacity: 1, stroke: 'none', strokeWidth: 0.99999994, strokeLinecap: 'round', strokeLinejoin: 'bevel', strokeMiterlimit: 4, strokeDasharray: 'none', strokeDashoffset: 0, strokeOpacity: 1 }} transform='scale(0.26458333)' />
               <path d='m 184,336 a 8.0000006,8.0000078 0 0 0 -5.65234,2.3457 l -0.004,-0.002 -47.91797,47.91797 -0.082,0.082 0.004,0.002 A 8.0000078,7.9998924 0 0 0 128,392 v 80 a 8.0000078,8.0000655 0 0 0 8,8 8.0000078,8.0000655 0 0 0 5.65625,-2.34961 l 0.004,0.004 49.40039,-49.40039 -0.22657,-0.11329 A 8.0000006,7.9999501 0 0 0 192,424 v -80 a 8.0000006,8.0000078 0 0 0 -8,-8 z' id='left-wing' style={{ opacity: 1, fillOpacity: 1, stroke: 'none', strokeWidth: 0.99999994, strokeLinecap: 'round', strokeLinejoin: 'bevel', strokeMiterlimit: 4, strokeDasharray: 'none', strokeDashoffset: 0, strokeOpacity: 1 }} transform='scale(0.26458333)' />
@@ -32,14 +32,14 @@ const RocketButton = () => {
           <span></span>
         </div>
       </div>
-      <div className='meteors-container'>
+      {/* <div className='meteors-container'>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -155,9 +155,6 @@ const VigyaanStyleWrapper = styled.section`
   z-index: 3;
 }
 
-
-
-
   @media only screen and (max-width: 1441px) {
     .asto{
       position: absolute ;
@@ -328,6 +325,7 @@ const VigyaanStyleWrapper = styled.section`
   }
 
   @media only screen and (max-width: 769px) {
+    height:100vh;
     .vigyaan-font {
       left: 32%;
       position: absolute;
@@ -410,6 +408,7 @@ const VigyaanStyleWrapper = styled.section`
     .vigyaan-desc{
       position:absolute;
       top: 40vh;
+      font-size:1rem;
       color:white;
       z-index: 2;
       padding: 0 1rem 0 1rem;

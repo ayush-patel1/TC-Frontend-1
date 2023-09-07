@@ -45,9 +45,9 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
 
 </div>
             <nav>
-                <button  onClick={() => navigationToggle(true)}>
+                <div onClick={() => navigationToggle(true)}>
                     <img className="navlogo" src={tc2} alt="#jpg" />
-                </button>
+                </div>
                 <div>
                     <ul id="navbar" className={toggler ? "navbar active" : "navbar"}>
                         <li className={activeLink === "/" ? "active-link" : ""}>
@@ -77,7 +77,7 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                         </li>
                         <li>
                             <div onClick={closeNavbar} >
-                            <button onClick={(e) => { e.preventDefault(); walletToggle(true); }}>LOGIN</button>
+                            <a onClick={(e) => { e.preventDefault(); walletToggle(true); }}>LOGIN</a>
                             </div>
                             
                         </li>

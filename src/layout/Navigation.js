@@ -62,37 +62,37 @@ const Navigation = ({ navigation, navigationToggle }) => {
             <ul>
                             <li>
                 <Link to="/">
-                  <button onClick={() => navigationToggle(false)}>
+                  <div onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Home</span>
-                  </button>
+                  </div>
                 </Link>
               </li>
               <li>
                 <Link to="/aavartan">
-                  <button onClick={() => navigationToggle(false)}>
+                  <div onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Aavartan</span>
-                  </button>
+                  </div>
                 </Link>
               </li>
               <li>
                 <Link to="/vigyaan">
-                  <button onClick={() => navigationToggle(false)}>
+                  <div onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Vigyaan</span>
-                  </button>
+                  </div>
                 </Link>
               </li>
               <li>
               <Link to="/team">
-                  <button onClick={() => navigationToggle(false)}>
+                  <div onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Team</span>
-                  </button>
+                  </div>
                 </Link>
               </li>
               <li>
                 <Link to="/sponsors">
-                  <button onClick={() => navigationToggle(false)}>
+                  <div onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Sponsors</span>
-                  </button>
+                  </div>
                 </Link>
               </li>
               {/* <li>
@@ -108,12 +108,12 @@ const Navigation = ({ navigation, navigationToggle }) => {
             <div className="copyright">
               <p>
                 Made With with MAGIC by <br />
-                <button
+                <div
                   target="_blank"
                   rel="noreferrer"
                 >
                   Tech Team
-                </button>
+                </div>
               </p>
             </div>
             <div className="social_icons">

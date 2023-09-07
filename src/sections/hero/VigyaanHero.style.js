@@ -493,7 +493,7 @@ const VigyaanStyleWrapper = styled.section`
       width: 70%;
     }
     .metaportal_fn_button_3{
-      font-size: 18px;
+      font-size: 14px;
 
     }
     .asto{

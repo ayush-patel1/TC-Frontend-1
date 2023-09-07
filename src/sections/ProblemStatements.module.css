@@ -88,4 +88,7 @@ color: #FFFFFF;
     .container{
         padding: 0;
     }
+    .ProblemStatements{
+        justify-content: center;
+    }
 }

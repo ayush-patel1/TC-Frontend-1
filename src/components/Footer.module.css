@@ -31,7 +31,7 @@ ul{
     padding: 50px 50px;
 	border-top: 0.5px solid whitesmoke;
 	position: relative;
-	z-index: 200;
+	z-index: 3;
 }
 
 .fcontainer{

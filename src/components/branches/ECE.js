@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from '../Title'
+import pdf from "../../assets/problem_statements/ECE.pdf"
 
 const ECE = () => {
   return (
@@ -71,7 +72,7 @@ const ECE = () => {
     </div>
     <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
       <div className="goodbtn" >
-            DOWNLOAD PDF
+      <a href={pdf}>DOWNLOAD PDF</a>
           </div>
       </div>
 </div>

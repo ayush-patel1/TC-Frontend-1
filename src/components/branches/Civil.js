@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from '../Title'
+import pdf from "../../assets/problem_statements/Civil.pdf"
 
 const Civil = () => {
   return (
@@ -74,7 +75,7 @@ Prepare a model of smart road systems with integrated sensors and data analytics
             </div>
             <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
       <div className="goodbtn" >
-            DOWNLOAD PDF
+      <a href={pdf}>DOWNLOAD PDF</a>
           </div>
       </div>
           </div>

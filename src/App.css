@@ -6449,36 +6449,37 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	border-top-color: #504099 ;
 	cursor: pointer;
 }
-.metaportal_fn_button_3{
-    font-size:20px;
-	font-weight: 600;
+.metaportal_fn_button_3 {
+    font-size: 20px;
+    font-weight: 600;
     border-radius: 10px;
-    /* border: 3px solid; */
     display: flex;
     justify-content: center;
     align-items: center;
-	padding: 0.5rem 1rem;
-	width: 100%;
+    padding: 0.5rem 1rem;
+    width: 100%;
     color: rgba(255, 255, 255, 1);
-    background: linear-gradient(to bottom, #504099c5 20%,#fe7be6c8 100%);
-	/* border: 1px solic; */
-	/* border-bottom-color:#FE7BE5 ;
-	border-top-color: #504099 ; */
+    background: linear-gradient(to bottom, #504099c5 20%, #fe7be6c8 100%);
     margin: 3rem 0rem 0rem 2rem;
-	text-decoration: none;
-	box-shadow: 2px 4px 15px black;
+    text-decoration: none;
+    box-shadow: 2px 4px 15px black;
+    transition: color 0.3s ease, background 0.3s ease; /* Add transition for color and background */
 }
-@media(width<600px){
-	.metaportal_fn_button_3{
-		width: 100%;
-		margin: 0;
-	margin-top: 1rem;
-	}
+
+@media (max-width: 600px) { /* Correct the media query syntax */
+    .metaportal_fn_button_3 {
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+    }
 }
-.metaportal_fn_button_3:hover{
-	color: white;
-	cursor: pointer;
+
+.metaportal_fn_button_3:hover {
+    color: white;
+	background: linear-gradient(to bottom, #fe7be6c8 20%, #504099c5 100%);
+    cursor: pointer;
 }
+
 
 
 .metaportal_fn_button_4{
@@ -6514,7 +6515,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background: url("./assets/images/aavartanbg.webp");
 	background-size: cover;
 	background-attachment: fixed;
-	transition: background-color 0.9s ease;
+	/* transition: background-color 0.9s ease; */
 }
 
 .Aavartanscrolled{
@@ -6522,13 +6523,13 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background-size: cover;
 	background-attachment: fixed;
 	background-color: rgba(0, 0, 0, 0.5);
-	transition: background-color 0.9s ease;
+	/* transition: background-color 0.9s ease; */
 }
 .Vigyaannotscrolled{
 	background: url("./assets/images/vigyaanbg.webp");
 	background-size: cover;
 	background-attachment: fixed;
-	transition: background-color 0.9s ease;
+	/* transition: background-color 0.9s ease; */
 }
 
 .Vigyaanscrolled{
@@ -6536,8 +6537,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background-size: cover;
 	background-attachment: fixed;
 	background-color: rgba(0, 0, 0, 0.5);
-	backdrop-filter: blur(100px) !important;
-	transition: background-color 0.9s ease;
+	/* backdrop-filter: blur(10px) !important; */
+	/* transition: background-color 0.9s ease; */
 }
 
 .dark-overlay2 {
@@ -6562,7 +6563,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
   }
 
   .dark-overlay.active {
-	background-color: rgba(0, 0, 0, 0.5); /* New background color when active */
+	background-color: rgba(0, 0, 0, 0.5); 
   }
 .custom-cursor {
 	cursor:url("./assets/images/cursor.svg"), auto;

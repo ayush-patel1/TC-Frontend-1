@@ -10,14 +10,12 @@ import ScrollTop from "./layout/ScrollTop";
 import Login from "./layout/Login";
 import HailTechno from "./layout/HailTechno";
 import styled from "styled-components";
-import ParticlesBackground from "./layout/ParticlesBackground";
 import ProblemStatements from "./pages/ProblemStatements";
 import TeamPage from "./pages/TeamPage";
 import EventsGalleryPage from "./pages/EventsGalleryPage";
 import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
 import SponsorsPage from "./pages/SponsorsPage";
-import OurJourney from "./sections/OurJourney";
-import { StarField } from "starfield-react";
+
 import StarFieldAnimation from "./layout/StarFieldAnimation";
 import About from "./components/About"
 

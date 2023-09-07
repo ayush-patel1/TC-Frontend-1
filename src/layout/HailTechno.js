@@ -9,7 +9,7 @@ const HailTechno = () => {
   return (
     <div id="social" className="hold">
        <div className="social">
-        <h4 className="title" style={{fontFamily:"font1", fontSize:"1.5rem", letterSpacing:"2px", display:"flex"}}>
+        <h4 className="title" style={{fontFamily:"font1", fontSize:"1.5rem", letterSpacing:"2px", display:"flex", position:"relative", zIndex:"10"}}>
           HAIL &nbsp;TECHNOCRACY &nbsp;<RxRocket size={40}/>
         </h4>
       </div>

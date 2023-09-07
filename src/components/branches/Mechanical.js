@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from '../Title'
+import pdf from "../../assets/problem_statements/Mech.pdf"
 
 const Mechanical = () => {
   return (
@@ -42,7 +43,7 @@ Participants of this project need to construct a 360-degree fire protection syst
     </div>
     <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
       <div className="goodbtn" >
-            DOWNLOAD PDF
+      <a href={pdf}>DOWNLOAD PDF</a>
           </div>
       </div>
   </div>

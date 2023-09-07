@@ -6529,8 +6529,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	transition: background-color 0.5s ease;
-	backdrop-filter: blur(5px); /* Add a transition */
+	/* transition: background-color 0.5s ease; */
+	/* backdrop-filter: blur(2px); */
   }
 .dark-overlay {
 	position: absolute;
@@ -6539,8 +6539,8 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	transition: background-color 0.5s ease;
-	backdrop-filter: blur(1px);
+	/* transition: background-color 0.5s ease; */
+	/* backdrop-filter: blur(1px); */
   }
 
   .dark-overlay.active {

@@ -6567,3 +6567,25 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 		margin: 0 !important;
 	}
 }
+.rimageaav{
+    position:absolute;
+    top:240vh;
+    right:0%;
+    height:200px;
+}
+@media (max-width: 769px) {
+    .rimageaav{
+		position: absolute;
+		height: 150px;
+		top: 250vh;
+		margin-right: 25%;
+    }
+}
+@media (max-width: 426px) {
+    .rimageaav{
+		position: absolute;
+		height: 100px;
+		top: 250vh;
+		margin-right: 15%;
+    }
+}

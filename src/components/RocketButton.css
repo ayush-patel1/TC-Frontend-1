@@ -27,7 +27,7 @@
     transform: rotate(90deg);
     height:140px;
   }
-  @media(width<700px){
+  @media(width<601px){
     #rocket-svg {
       height:65px;
     }

@@ -4,8 +4,9 @@ import { connect } from "react-redux";
 import { navigationToggle, walletToggle } from "../redux/actions/siteSettings";
 // import { MdClear } from 'react-icons/md';
 // import { AiOutlineMenu } from 'react-icons/ai';
+import menu from "../assets/svgs/menu.svg"
 
-import tc2 from "../assets/images/tcLogo.png";
+import tc2 from "../assets/images/tcLogo-min.webp";
 import "./Navbar.css";
 
 const Navbar = ({ walletToggle, navigationToggle }) => {
@@ -75,12 +76,6 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                                 TEAM
                             </NavLink>
                         </li>
-                        <li>
-                            <div onClick={closeNavbar} >
-                            <a onClick={(e) => { e.preventDefault(); walletToggle(true); }}>LOGIN</a>
-                            </div>
-                            
-                        </li>
                         <div className="responsive-close" onClick={() => navigationToggle(true)}>
                             {/* <MdClear id='bars' /> */}
                             </div>
@@ -88,6 +83,7 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                 </div>
                 <div className="responsive-open" onClick={() => navigationToggle(true)}>
                     {/* <AiOutlineMenu id='bars' /> */}
+                    <img src={menu} alt="" />
                 </div>
             </nav>
         </div>

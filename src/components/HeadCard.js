@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './HeadCard.module.css'
-import pic2 from '../assets/images/rocket.png'
+// import pic2 from '../assets/images/rocket.png'
   function HeadCard(props){
     return(
       <div className={styles.parentcard}>
@@ -16,7 +16,6 @@ import pic2 from '../assets/images/rocket.png'
         </div>
       
         <img src="https://www.cognizance.org.in/Images/team/vectors/leftMid.png" className={styles.leftMid} alt=""></img>
-        <img src={pic2} className={styles.rightMid} alt=""></img>
       </div>
   
     </div>

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import sqrimg from "../assets/images/1x1.jpg";
+import sqrimg from "../assets/images/1x1-min.webp";
 import Title from "../components/Title";
 import left from "../assets/svgs/leftarrow.svg"
 import right from "../assets/svgs/rightarrow.svg"

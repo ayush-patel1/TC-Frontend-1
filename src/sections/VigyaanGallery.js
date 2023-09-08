@@ -1,6 +1,6 @@
 
 import { useEffect } from "react";
-import sqrimg from '../assets/images/1x1.jpg'
+import sqrimg from '../assets/images/1x1-min.webp'
 import Title from "../components/Title";
 import v1 from "../assets/images/vigyaan/v1.webp"
 import v2 from "../assets/images/vigyaan/v2.webp"

@@ -83,7 +83,16 @@ nav {
   color: #fff;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 848px) {
+  #navbar li a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+    position: relative; /* Added for stacking order */
+  }
+}
+@media screen and (max-width: 772px) {
   #navbar {
     display: flex;
     flex-direction: column;

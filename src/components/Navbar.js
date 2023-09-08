@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { connect } from "react-redux";
 import { navigationToggle, walletToggle } from "../redux/actions/siteSettings";
-import { MdClear } from 'react-icons/md';
-import { AiOutlineMenu } from 'react-icons/ai';
+// import { MdClear } from 'react-icons/md';
+// import { AiOutlineMenu } from 'react-icons/ai';
 
 import tc2 from "../assets/images/tcLogo.png";
 import "./Navbar.css";
@@ -81,11 +81,13 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                             </div>
                             
                         </li>
-                        <div className="responsive-close" onClick={() => navigationToggle(true)}><MdClear id='bars' /></div>
+                        <div className="responsive-close" onClick={() => navigationToggle(true)}>
+                            {/* <MdClear id='bars' /> */}
+                            </div>
                     </ul>
                 </div>
                 <div className="responsive-open" onClick={() => navigationToggle(true)}>
-                    <AiOutlineMenu id='bars' />
+                    {/* <AiOutlineMenu id='bars' /> */}
                 </div>
             </nav>
         </div>

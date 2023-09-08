@@ -75,7 +75,7 @@ const VigyaanStyleWrapper = styled.section`
     animation: ${Circle} 15s linear infinite;
   }
   .vigyaan-planet {
-    left: 50%;
+    left: 49%;
     position: relative;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);

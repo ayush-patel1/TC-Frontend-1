@@ -34,6 +34,14 @@ const AavartanStyleWrapper = styled.section`
   padding: 250px 0;
   overflow: hidden;
 
+  .btncontainer{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+   }
+   
   .ufo_shape {
     position: absolute;
     top: 2%;
@@ -45,11 +53,11 @@ const AavartanStyleWrapper = styled.section`
     display: flex;
   }
 
-  .cta{
-    position:absolute;
-    top:70%;
-    left:40%;
-  }
+  // .cta{
+  //   position:absolute;
+  //   top:70%;
+  //   left:40%;
+  // }
 
   .colmd {
     width: 85%;
@@ -174,9 +182,11 @@ const AavartanStyleWrapper = styled.section`
   }
 
   @media only screen and (max-width: 1025px) {
-    .gamfi_v2_hero_left h2 {
-      font-size: 6rem; /* Adjust font size for 1024px */
-    }
+    .gamfi_v2_hero_left{
+      h2 {
+        font-size: 6rem; /* Adjust font size for 1024px */
+      }
+    } 
     .gamfi_v2_hero_right{
       .gamfi_v2_hero_thumb {
         .rocket_thumb {
@@ -189,8 +199,23 @@ const AavartanStyleWrapper = styled.section`
       }
     }
   }
-
+  @media only screen and (max-width: 821px) {
+    .btncontainer{
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+     }
+  }
   @media only screen and (max-width: 769px) {
+    .btncontainer{
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+     }
     .gamfi_v2_hero_left {
     h2 {
       font-size: 4rem; /* Adjust font size for 768px */
@@ -208,6 +233,7 @@ const AavartanStyleWrapper = styled.section`
       top: 25vh;
       width: 70vw;
     }
+    
   }
     .gamfi_v2_hero_right{
       .metaportal_fn_button_3 {
@@ -298,6 +324,13 @@ const AavartanStyleWrapper = styled.section`
     }
   }
     @media only screen and (max-width: 321px) {
+      .btncontainer{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+       }
     .gamfi_v2_hero_right{
       .metaportal_fn_button_3 {
         position: absolute;

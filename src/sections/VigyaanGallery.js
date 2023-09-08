@@ -14,29 +14,27 @@ import { Link } from "react-router-dom";
 
 const EventsGallery = () => {
   useEffect(() => {
-    const collection = document.querySelector(".fn_cs_collection");
-    var items = collection.querySelectorAll(".item");
-    var itemsLength = items.length;
-    setInterval(function () {
-      var numberOne = Math.floor(Math.random() * itemsLength);
-      var numberTwo = Math.floor(Math.random() * itemsLength);
+    // const collection = document.querySelector(".fn_cs_collection");
+    // var items = collection.querySelectorAll(".item");
+    // var itemsLength = items.length;
+    // setInterval(function () {
+    //   var numberOne = Math.floor(Math.random() * itemsLength);
+    //   var numberTwo = Math.floor(Math.random() * itemsLength);
 
-      while (numberTwo === numberOne) {
-        numberTwo = Math.floor(Math.random() * itemsLength);
-      }
-      var firstDiv = items[numberOne];
-      var secondDiv = items[numberTwo];
-      // var firstImage = firstDiv.querySelector("input").value;
-      // var secondImage = secondDiv.querySelector("input").value;
-      firstDiv.classList.add("ready");
-      secondDiv.classList.add("ready");
-      // // console.log(firstDiv.querySelector("input").value == firstDiv);
-      // setTimeout(function () {
+    //   while (numberTwo === numberOne) {
+    //     numberTwo = Math.floor(Math.random() * itemsLength);
+    //   }
+    //   var firstDiv = items[numberOne];
+    //   var secondDiv = items[numberTwo];
+    //   firstDiv.classList.add("ready");
+    //   secondDiv.classList.add("ready");
+      
+    //   setTimeout(function () {
 
-      //   firstDiv.classList.remove("ready");
-      //   secondDiv.classList.remove("ready");
-      // }, 500);
-    }, 2000);
+    //     firstDiv.classList.remove("ready");
+    //     secondDiv.classList.remove("ready");
+    //   }, 500);
+    // }, 2000);
   }, []);
 
 

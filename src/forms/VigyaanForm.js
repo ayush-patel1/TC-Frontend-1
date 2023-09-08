@@ -362,7 +362,7 @@ const VigyaanForm = () => {
             </li>
             <li>
               <div className="item">
-                <h4 className="parent_category">7th & 28th September</h4>
+                <h4 className="parent_category">27th & 28th September</h4>
                 <h3 className="child_category" title="Daydreaming">
                   Presentation Round
                 </h3>

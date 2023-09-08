@@ -41,6 +41,9 @@
       height: 50px;
       display: flex;
     }
+    .smoke{
+      display: none;
+    }
   }
   
   #right-wing , #left-wing, #nose, #window-stroke, #middle-wing {
@@ -79,14 +82,14 @@
     10%, 90% {
       transform: translate3d(-1px, 1px, 0);
     }
-    20%, 80% {
-      transform: translate3d(2px, 2px, 0);
+    40%, 80% {
+      transform: translate3d(1px, 1px, 0);
     }
-    30%, 50%, 70% {
-      transform: translate3d(-2px, -2px, 0);
+    60%, 100% {
+      transform: translate3d(-1px, -1px, 0);
     }
-    40%, 60% {
-      transform: translate3d(2px, 2px, 0);
+    80% {
+      transform: translate3d(1px, 1px, 0);
     }
   }
   

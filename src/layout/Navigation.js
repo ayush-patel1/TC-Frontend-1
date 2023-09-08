@@ -2,7 +2,11 @@ import { Fragment} from "react";
 import { connect } from "react-redux";
 import { navigationToggle } from "../redux/actions/siteSettings";
 import { Link } from "react-router-dom";
-import {BsInstagram, BsFacebook} from 'react-icons/bs';
+import fb from "../assets/svgs/facebook.svg"
+import insta from "../assets/svgs/insta.svg"
+import linkedin from "../assets/svgs/linkedin.svg"
+import x from "../assets/svgs/x.svg"
+// import {BsInstagram, BsFacebook} from 'react-icons/bs';
 import '../App.css'
 const Navigation = ({ navigation, navigationToggle }) => {
   return (
@@ -120,7 +124,8 @@ const Navigation = ({ navigation, navigationToggle }) => {
               <ul>
                 <li>
                   <a href="https://www.facebook.com/tc.nitrr">
-                    <BsFacebook/>
+                    {/* <BsFacebook/> */}
+                    <img src={fb} width={22} alt="" />
                   </a>
                 </li>
                 {/* <li>
@@ -130,7 +135,20 @@ const Navigation = ({ navigation, navigationToggle }) => {
                 </li> */}
                 <li>
                   <a href="https://www.instagram.com/nitrr.aavartan/">
-                    <BsInstagram/>
+                    {/* <BsInstagram/> */}
+                    <img src={insta} width={22} alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/nitrr.aavartan/">
+                    {/* <BsInstagram/> */}
+                    <img src={linkedin} width={22} alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/nitrr.aavartan/">
+                    {/* <BsInstagram/> */}
+                    <img src={x} width={24} alt="" />
                   </a>
                 </li>
                 {/* <li>

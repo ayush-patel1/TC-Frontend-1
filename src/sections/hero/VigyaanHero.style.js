@@ -76,7 +76,7 @@ const VigyaanStyleWrapper = styled.section`
   }
 
   .vigyaan-planet {
-    left: 50%;
+    left: 49%;
     position: relative;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);

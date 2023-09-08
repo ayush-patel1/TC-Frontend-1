@@ -45,6 +45,12 @@ const AavartanStyleWrapper = styled.section`
     display: flex;
   }
 
+  .cta{
+    position:absolute;
+    top:70%;
+    left:40%;
+  }
+
   .colmd {
     width: 85%;
     margin: 0;
@@ -73,11 +79,11 @@ const AavartanStyleWrapper = styled.section`
 
     p {
       color: #ffffff;
-      font-weight: 600;
+      font-weight: 300;
       font-size: 18px;
       line-height: 30px;
       margin-top: 60px;
-      text-shadow: 3px 3px 5px black;
+      text-shadow: 1px 1px 1px black;
       font-family: Inter;
       position: absolute;
       top: 35vh;

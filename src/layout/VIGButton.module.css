@@ -21,6 +21,9 @@ border-bottom-color:#FE7BE5 ;
 border-top-color: #504099 ;
 cursor: pointer;
   }
+  .vigbutton:hover{
+    background: linear-gradient(to  bottom, #fe7be6c8 20%,#504099c5 100%);
+  }
 
   .vigbutton::before {
 content: '';

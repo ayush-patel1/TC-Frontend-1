@@ -6464,6 +6464,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
         width: 100%;
         margin: 0;
         margin-top: 1rem;
+		font-size: 14px;
     }
 }
 

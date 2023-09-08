@@ -11,21 +11,21 @@ export const imgToSVG = () => {
         const xmlDoc = parser.parseFromString(response, "text/html");
         let svg = xmlDoc.querySelector("svg");
 
-        setTimeout(() => {
-          if (svg !== null) {
-            if (typeof imgID !== "undefined") {
-              svg.setAttribute("id", imgID);
-            }
+        // setTimeout(() => {
+        //   if (svg !== null) {
+        //     if (typeof imgID !== "undefined") {
+        //       svg.setAttribute("id", imgID);
+        //     }
 
-            if (typeof imgClass !== "undefined") {
-              svg.setAttribute("class", imgClass + " replaced-svg");
-            }
+        //     if (typeof imgClass !== "undefined") {
+        //       svg.setAttribute("class", imgClass + " replaced-svg");
+        //     }
 
-            svg.removeAttribute("xmlns:a");
+        //     svg.removeAttribute("xmlns:a");
 
-            el.parentNode && el.parentNode.replaceChild(svg, el);
-          }
-        }, 500);
+        //     el.parentNode && el.parentNode.replaceChild(svg, el);
+        //   }
+        // }, 500);
       });
   });
 };

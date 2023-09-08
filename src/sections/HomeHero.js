@@ -5,15 +5,15 @@ import { NavLink } from "react-router-dom";
 import VIGButton from "../layout/VIGButton";
 
 const HomeHero = () => {
-	const [showContent, setShowContent] = useState(false);
+	const [showContent, setShowContent] = useState(true);
 
-	useEffect(() => {
-		setShowContent(true);
-	}, []);
+	// useEffect(() => {
+	// 	setShowContent(true);
+	// }, []);
 
 	return (
 		<div className={styles.heroContainer}>
-			<video autoPlay muted loop className={styles.videoBg}>
+			<video autoPlay muted loop preload="auto" loading="lazy" className={styles.videoBg}>
 				<source src={videoBg} type="video/webm" />
 				Your browser does not support the video tag.
 			</video>

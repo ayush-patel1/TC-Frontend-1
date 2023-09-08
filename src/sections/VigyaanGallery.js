@@ -13,7 +13,7 @@ import v8 from "../assets/images/vigyaan/v8.webp"
 import { Link } from "react-router-dom";
 
 const EventsGallery = () => {
-  useEffect(() => {
+  // useEffect(() => {
     // const collection = document.querySelector(".fn_cs_collection");
     // var items = collection.querySelectorAll(".item");
     // var itemsLength = items.length;
@@ -35,7 +35,7 @@ const EventsGallery = () => {
     //     secondDiv.classList.remove("ready");
     //   }, 500);
     // }, 2000);
-  }, []);
+  // }, []);
 
 
   const color="VIGYAAN";

@@ -11,7 +11,7 @@ import Title from "../components/Title";
 export default function App() {
   return (
     <MDBContainer fluid className="py-5">
-        <Title color={"OUR"} noncolor={"JOURNEY"} />
+      <Title color={"OUR"} noncolor={"JOURNEY"} />
       <div className="main-timeline-2">
         <div className="timeline-2 left-2">
           <MDBCard>

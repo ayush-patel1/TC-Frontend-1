@@ -43,11 +43,11 @@ function App() {
       <CustomCursorContainer>
         <ContentContainer>
           <BrowserRouter>
-              <Navbar />
               <Navigation />
               <Login />
               <ScrollTop />
               <HailTechno />
+              <Navbar />
               <Routes>
                 <Route exact path="/" element={<Homepage />} />
                 <Route exact path="/aavartan" element={<Aavartan />} />

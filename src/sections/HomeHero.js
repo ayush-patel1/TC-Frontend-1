@@ -24,7 +24,8 @@ const HomeHero = () => {
         </h1>
         <p>The Student Technical Committee of NIT Raipur</p>
         <NavLink to="/vigyaan" style={{display:"flex", justifyContent:"center"}}>
-          <a class="cta" href="/vigyaan" style={{ width:"100%"}}>
+        <div className={styles.btncontainer} style={{ display: "flex" }}>
+          <a className={styles.cta} href="/vigyaan" style={{ width:"100%"}}>
             <span>VIGYAAN</span>
             <span>
               <svg width="66px" height="25px" viewBox="0 0 66 43" version="1.1">
@@ -54,6 +55,7 @@ const HomeHero = () => {
               </svg>
             </span>
           </a>
+          </div>
         </NavLink>
       </div>
     </div>

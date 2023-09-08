@@ -23,7 +23,8 @@ const AavartanHero = () => {
                   undertake technical projects and research initiatives.
                 </p>
               </div>
-              <a class="cta" href="/vigyaan" style={{ width: "400px" }}>
+              <div className="btncontainer" style={{ display: "flex" }}>
+                 <a class="cta" href="/vigyaan">
                 <span>VIGYAAN</span>
                 <span>
                   <svg
@@ -58,6 +59,7 @@ const AavartanHero = () => {
                   </svg>
                 </span>
               </a>
+              </div>
             </div>
             <div className="colmd2">
               <div className="gamfi_v2_hero_right">

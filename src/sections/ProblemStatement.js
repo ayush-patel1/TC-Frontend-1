@@ -14,57 +14,57 @@ const ProblemStatement = () => {
       <Title color={"PROBLEM"} noncolor={"STATEMENTS"} />
       <div class={`${styles.ProblemStatements} ${styles.container}`}>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Arch'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             B. ARCH
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'BioMed'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             BIO-MED
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Biotech'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             BIOTECH
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Chem'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             CHEMICAL
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Civil'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             CIVIL
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'CsItMca'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             CSE / IT / MCA
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'ECE'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             ECE
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'EE'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             EE
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Mech'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             MECH
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Meta'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             META
           </div>
         </Link>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Mining'}`}>
-          <div data-aos="fade-up" className={styles.branch}>
+          <div data-aos="flip-up" className={styles.branch}>
             MINING
           </div>
         </Link>

@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import styles from './Footer.module.css'
-import logo from '../assets/images/tcLogo.png'
+import logo from '../assets/images/tcLogo-min.webp'
 import { Quotes } from '../assets/utils/Quotes';
 import location from "../assets/svgs/location.svg"
 import email from "../assets/svgs/email.svg"

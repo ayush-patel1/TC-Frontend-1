@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
-import sqrimg from '../assets/images/1x1.jpg'
+import sqrimg from '../assets/images/1x1-min.webp'
 import a1 from "../assets/images/aavartan/a1.webp"
 import a2 from "../assets/images/aavartan/a2.webp"
 import a3 from "../assets/images/aavartan/a3.webp"

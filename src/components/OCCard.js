@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './OCCard.module.css'
-import pic from '../assets/images/stars.png'
+import pic from '../assets/images/stars-min.webp'
 
 function OCCard(props) {
   return (

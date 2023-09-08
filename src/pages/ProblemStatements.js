@@ -85,69 +85,69 @@ const ProblemStatements = () => {
               >
                 <ul>
                   <li>
-                    <button onClick={() => handleCategoryClick('Arch')} className={isActive('Arch') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Arch')} className={isActive('Arch') ? 'activa' : ''}>
                       <span>Architecture</span>
-                    </button> 
+                    </a> 
                     <span className="count">11</span>
                   </li>
                   <li>
-                    <button onClick={() => handleCategoryClick('BioMed')} className={isActive('BioMed') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('BioMed')} className={isActive('BioMed') ? 'activa' : ''}>
                       <span>Biomedical</span>
-                    </button> 
+                    </a> 
                     <span className="count">8</span>
                   </li>
                   <li>
-                    <button onClick={() => handleCategoryClick('Biotech')} className={isActive('Biotech') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Biotech')} className={isActive('Biotech') ? 'activa' : ''}>
                       <span>Biotechnology</span>
-                    </button> 
+                    </a> 
                     <span className="count">12</span>
                   </li>
                   <li>
-                    <button onClick={() => handleCategoryClick('Civil')} className={isActive('Civil') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Civil')} className={isActive('Civil') ? 'activa' : ''}>
                       <span>Civil</span>
-                    </button> 
+                    </a> 
                     <span className="count">14</span>
                   </li>
                   <li>
-                    <button onClick={() => handleCategoryClick('CsItMca')} className={isActive('CsItMca') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('CsItMca')} className={isActive('CsItMca') ? 'activa' : ''}>
                       <span>CSE / IT / MCA</span>
-                    </button> 
+                    </a> 
                     <span className="count">11</span>
                   </li>
                   <li>
-                    <button onClick={() => handleCategoryClick('ECE')} className={isActive('ECE') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('ECE')} className={isActive('ECE') ? 'activa' : ''}>
                       <span>Electronics & Communications</span>
-                    </button> 
+                    </a> 
                     <span className="count">11</span>
                   </li>
                   <li>
-                    <button onClick={() => handleCategoryClick('EE')} className={isActive('EE') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('EE')} className={isActive('EE') ? 'activa' : ''}>
                       <span>Electrical</span>
-                    </button> 
+                    </a> 
                     <span className="count">10</span>
                   </li>
                   <li>
-                    <button onClick={() => handleCategoryClick('Mech')} className={isActive('Mech') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Mech')} className={isActive('Mech') ? 'activa' : ''}>
                       <span>Mechanical</span>
-                    </button> 
+                    </a> 
                     <span className="count">8</span>
                   </li>
                   <li>
-                    <button onClick={() => handleCategoryClick('Meta')} className={isActive('Meta') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Meta')} className={isActive('Meta') ? 'activa' : ''}>
                       <span>Metallurgy</span>
-                    </button> 
+                    </a> 
                     <span className="count">7</span>
                   </li>
                   <li>
-                    <button onClick={() => handleCategoryClick('Mining')} className={isActive('Mining') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Mining')} className={isActive('Mining') ? 'activa' : ''}>
                       <span>Mining</span>
-                    </button> 
+                    </a> 
                     <span className="count">16</span>
                   </li>
                   <li>
-                    <button onClick={() => handleCategoryClick('Chem')} className={isActive('Chem') ? 'activa' : ''}>
+                    <a onClick={() => handleCategoryClick('Chem')} className={isActive('Chem') ? 'activa' : ''}>
                       <span>Chemical</span>
-                    </button> 
+                    </a> 
                     <span className="count">9</span>
                   </li>
                 </ul>

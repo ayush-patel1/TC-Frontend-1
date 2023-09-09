@@ -86,13 +86,13 @@ const AavartanStyleWrapper = styled.section`
     }
 
     p {
-      color: #ffffff;
+      color: rgba(255, 255, 255, 0.937);
       font-weight: 300;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 30px;
       margin-top: 60px;
       text-shadow: 1px 1px 1px black;
-      font-family: Inter;
+      font-family: "kanit";
       position: absolute;
       top: 35vh;
       width: 50vw;
@@ -228,7 +228,7 @@ const AavartanStyleWrapper = styled.section`
       line-height: 30px;
       margin-top: 30px;
       text-shadow: 3px 3px 5px black;
-      font-family: Inter;
+      font-family: "kanit";
       position: absolute;
       top: 25vh;
       width: 70vw;
@@ -276,7 +276,7 @@ const AavartanStyleWrapper = styled.section`
       line-height: 30px;
       margin-top: 30px;
       text-shadow: 3px 3px 5px black;
-      font-family: Inter;
+      font-family: "kanit";
       position: absolute;
       top: 25vh;
       width: 90%;

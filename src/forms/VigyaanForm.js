@@ -370,7 +370,7 @@ const VigyaanForm = () => {
                   that they will present on the exhibition day.
                 </p>
               </div>
-              <a href={SampleAbstract}><span className="metaportal_fn_button_4">Sample Abstract</span></a>
+              <a style={{textDecoration:"none"}} href={SampleAbstract}><span className="metaportal_fn_button_4">Sample Abstract</span></a>
 
             </div>
           </div>

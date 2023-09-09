@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import videoBg from "../assets/videos/blackhole.webm";
 import styles from "./HomeHero.module.css";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 // import VIGButton from "../layout/VIGButton";
 
 const HomeHero = () => {
@@ -23,7 +23,6 @@ const HomeHero = () => {
           <span>TEAM TECHNOCRACY</span>
         </h1>
         <p>The Student Technical Committee of NIT Raipur</p>
-        <NavLink to="/vigyaan" style={{display:"flex", justifyContent:"center"}}>
         <div className={styles.btncontainer} style={{ display: "flex" }}>
           <a className={styles.cta} href="/vigyaan" style={{ width:"100%"}}>
             <span>VIGYAAN</span>
@@ -56,7 +55,6 @@ const HomeHero = () => {
             </span>
           </a>
           </div>
-        </NavLink>
       </div>
     </div>
   );

@@ -4,11 +4,11 @@
 import planet from "../../assets/images/vighero/vig_planet.webp";
 import ring from "../../assets/images/vighero/planet_orbit.webp";
 import VigyaanStyleWrapper from "./VigyaanHero.style";
-import prop6 from "../../assets/prop6.webp";
-import prop7 from "../../assets/prop7.webp";
+// import prop6 from "../../assets/prop6.webp";
+// import prop7 from "../../assets/prop7.webp";
 import prop8 from "../../assets/prop8.webp";
 import prop5 from "../../assets/prop5.webp";
-import RocketButton from "../../components/RocketButton";
+// import RocketButton from "../../components/RocketButton";
 
 const VigyaanHero = () => {
   const scrollToRegistration = () => {

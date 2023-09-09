@@ -5,7 +5,7 @@ import prop1 from "../../assets/prop1.webp";
 import prop2 from "../../assets/prop2.webp";
 
 import AavartanStyleWrapper from "./AavartanHero.style";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 const AavartanHero = () => {
   return (
     <>

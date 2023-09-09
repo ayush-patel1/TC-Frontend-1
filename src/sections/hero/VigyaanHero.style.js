@@ -207,7 +207,7 @@ const VigyaanStyleWrapper = styled.section`
     top: 40vh;
   }
   .btncontainer{
-    top: 80%;
+    top: 75%;
   }
   
 

@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React from "react";
 import styles from './Footer.module.css'
 import logo from '../assets/images/tcLogo-min.webp'
 import { Quotes } from '../assets/utils/Quotes';

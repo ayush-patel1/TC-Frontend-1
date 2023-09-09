@@ -4,22 +4,22 @@ import bannerBG from "../../assets/images/aavartanbg.webp";
 const rocketAnimation = keyframes`
     0%,
     100% {
-        bottom: 20px;
+        bottom: 3rem;
     }
 
     50% {
-        bottom: 80px;
+        bottom: 6rem;
     }
 `;
 
 const rocketAnimation2 = keyframes`
     0%,
     100% {
-        left: 20px;
+        left: 3rem;
     }
 
     50% {
-        left: 80px;
+        left: 6rem;
     }
 `;
 
@@ -46,7 +46,7 @@ const AavartanStyleWrapper = styled.section`
     position: absolute;
     top: 2%;
     left: 10%;
-    z-index: 1;
+    z-index: 0;
   }
 
   .row {
@@ -82,7 +82,7 @@ const AavartanStyleWrapper = styled.section`
       img {
         margin: 0 15px;
       }
-      
+      z-index:2;
     }
 
     p {
@@ -96,6 +96,7 @@ const AavartanStyleWrapper = styled.section`
       position: absolute;
       top: 35vh;
       width: 50vw;
+      z-index:2;
     }
   }
 
@@ -119,20 +120,20 @@ const AavartanStyleWrapper = styled.section`
 
       .rocket_thumb {
         position: absolute;
-        right: 10px;
+        right: 3rem;
         animation: ${rocketAnimation} 5s infinite;
-        z-index: 1;
-        height: 500px;
+        z-index: 0;
+        height: 400px;
         
       }
 
       .rocket_thumb2 {
         position: absolute;
-        bottom: 5px;
+        bottom: 3rem;
         animation: ${rocketAnimation2} 5s infinite;
-        z-index: 1;
+        z-index: 0;
         left: 100px;
-        height: 280px;
+        height: 250px;
       }
     }
 
@@ -211,7 +212,7 @@ const AavartanStyleWrapper = styled.section`
   @media only screen and (max-width: 769px) {
     .btncontainer{
       position: absolute;
-      top: 80%;
+      top: 65%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 3;
@@ -326,7 +327,7 @@ const AavartanStyleWrapper = styled.section`
     @media only screen and (max-width: 321px) {
       .btncontainer{
         position: absolute;
-        top: 90%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 3;

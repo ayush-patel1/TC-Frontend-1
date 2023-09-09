@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import sqrimg from '../assets/images/1x1-min.webp'
 import Title from "../components/Title";
 import v1 from "../assets/images/vigyaan/v1.webp"

@@ -17,7 +17,7 @@ export default function App() {
                     <div className="blog__item_timeline">
                       <h4>The Beginning</h4>
                       <p>
-                        <img src={clock} width={20} alt="" /> 2007
+                        <img src={clock} width={20} alt="img" /> 2007
                       </p>
                       <p className="mb-0">
                         The grand fest of Aavartan had its seed sown back in
@@ -42,7 +42,7 @@ export default function App() {
                     <div className="blog__item_timeline">
                       <h4 className="fw-bold mb-4">Vigyaan</h4>
                       <p className="text-muted mb-4">
-                      <img src={clock} width={20}/> 2011
+                      <img src={clock} width={20} alt="img"/> 2011
                       </p>
                       <p className="mb-0">
                         It was 2011, when people witnessed the massive
@@ -70,7 +70,7 @@ export default function App() {
                         Central India's Largest Tech-fest
                       </h4>
                       <p className="text-muted mb-4">
-                      <img src={clock} width={20}/> 2019
+                      <img src={clock} width={20} alt="img"/> 2019
                       </p>
                       <p className="mb-0">
                         Team Technocracy took it to the next level as
@@ -97,7 +97,7 @@ export default function App() {
                     <div className="blog__item_timeline">
                       <h4 className="fw-bold mb-4">We Are Coming Back</h4>
                       <p className="text-muted mb-4">
-                      <img src={clock} width={20}/> 2023
+                      <img src={clock} width={20} alt="img"/> 2023
                       </p>
                       <p className="mb-0">
                         Aavartan will be back with its new edition with stellar

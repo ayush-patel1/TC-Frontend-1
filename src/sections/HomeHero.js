@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import videoBg from "../assets/videos/blackhole.webm";
 import styles from "./HomeHero.module.css";
 import { NavLink } from "react-router-dom";
-import VIGButton from "../layout/VIGButton";
+// import VIGButton from "../layout/VIGButton";
 
 const HomeHero = () => {
   const [showContent, setShowContent] = useState(false);

@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import sqrimg from "../assets/images/1x1.jpg";
 import Title from "../components/Title";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import left from "../assets/svgs/leftarrow.svg"
+import right from "../assets/svgs/rightarrow.svg"
+
+// import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
 import es_1 from "../assets/images/eveningshows/es_1.webp";
@@ -335,14 +338,16 @@ const EveningShow = () => {
             <a href="#" className="prev">
               <span className="circle" />
               <span className="icon">
-                <AiOutlineArrowLeft color="white" />
+                {/* <AiOutlineArrowLeft color="white" /> */}
+                <img src={left} alt="" />
               </span>
               <span className="circle" />
             </a>
             <a href="#" className="next">
               <span className="circle" />
               <span className="icon">
-                <AiOutlineArrowRight color="white" />
+                <img src={right} alt="" />
+                {/* <AiOutlineArrowRight color="white" /> */}
               </span>
               <span className="circle" />
             </a>

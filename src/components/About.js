@@ -7,7 +7,7 @@ function About() {
     <div className={styles.about_container}>
       <Title color={"ABOUT"} noncolor={"US"} />
       <div className="fn_cs_join">
-        <div className="join_in">
+        <div className="join_in" >
           <p>
             Team Technocracy is the official technical committee of NIT Raipur,
             dedicated to fostering innovation, technical skills, and a passion

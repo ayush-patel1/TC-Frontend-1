@@ -11,9 +11,11 @@ const backend = urls.backend
 const VigyaanForm = () => {
   useEffect(() => {
     AOS.init();
+    console.log(cachedForm)
   }, [])
   const [memberCount, setMemberCount] = useState(0);
-  const [form, set] = useState({
+
+  const cachedForm = JSON.parse(localStorage.getItem('vigyaanForm')) || {
     Team_name: "",
     Leader_name: "",
     Leader_email: "",
@@ -31,9 +33,11 @@ const VigyaanForm = () => {
     Member3_yog: "",
     Member3_whatsapp: "",
     Member3_branch: "",
-    Problem_code: "",
-    file: null,
-  });
+    Problem_code: ""
+  };
+
+  const [form, set] = useState(cachedForm);
+
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
 
@@ -53,6 +57,7 @@ const VigyaanForm = () => {
     const update = { ...form }
     update[e.target.name] = e.target.value
     set(update)
+    localStorage.setItem('vigyaanForm', JSON.stringify(update));
   }
 
   const submit = async () => {
@@ -78,7 +83,7 @@ const VigyaanForm = () => {
         }
         catch (err) {
           console.error(err)
-          alert(err.reponse.data.message)
+          alert(err.response.data.message)
         }
       }
       else {
@@ -110,6 +115,7 @@ const VigyaanForm = () => {
               type="text"
               placeholder={`Member ${i} Name`}
               onChange={(e) => handle(e)}
+              value={form[`Member${i + 1}_name`]}
             />
           </li>
           <li>
@@ -119,7 +125,9 @@ const VigyaanForm = () => {
               type="text"
               placeholder={`Member ${i} Whatsapp Number`}
               onChange={(e) => handle(e)}
+              value={form[`Member${i + 1}_whatsapp`]}
             />
+            <span style={{ fontSize: "0.7rem" }}>* Don't include +91 or 0.</span>
           </li>
           <li>
             <input
@@ -128,6 +136,7 @@ const VigyaanForm = () => {
               type="text"
               placeholder={`Member ${i} Email ID`}
               onChange={(e) => handle(e)}
+              value={form[`Member${i + 1}_email`]}
             />
           </li>
           <li>
@@ -137,6 +146,7 @@ const VigyaanForm = () => {
               type="text"
               placeholder={`Member ${i}'s Branch`}
               onChange={(e) => handle(e)}
+              value={form[`Member${i + 1}_branch`]}
             />
           </li>
           <li>
@@ -146,6 +156,7 @@ const VigyaanForm = () => {
               type="text"
               placeholder={`Member ${i}'s year of graduation`}
               onChange={(e) => handle(e)}
+              value={form[`Member${i + 1}_yog`]}
             />
           </li>
         </div>
@@ -155,7 +166,7 @@ const VigyaanForm = () => {
   };
 
   return (
-    <div className="metaportal_fn_mintpage" id="registration" style={{position:"relative",zIndex:"0"}}>
+    <div className="metaportal_fn_mintpage" id="registration" style={{ position: "relative", zIndex: "0" }}>
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -165,7 +176,14 @@ const VigyaanForm = () => {
             <div className="mint_list">
               <ul>
                 <li data-aos="fade-down">
-                  <input name="Team_name" id="teamName" type="text" placeholder="Team Name" onChange={(e) => handle(e)} />
+                  <input
+                    name="Team_name"
+                    id="teamName"
+                    type="text"
+                    placeholder="Team Name"
+                    onChange={(e) => handle(e)}
+                    value={form.Team_name}
+                  />
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -174,6 +192,7 @@ const VigyaanForm = () => {
                     name="Problem_code"
                     placeholder="Problem Code"
                     onChange={(e) => handle(e)}
+                    value={form.Problem_code}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -183,6 +202,7 @@ const VigyaanForm = () => {
                     name="Leader_name"
                     placeholder="Your Leader Name"
                     onChange={(e) => handle(e)}
+                    value={form.Leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -192,8 +212,9 @@ const VigyaanForm = () => {
                     name="Leader_whatsapp"
                     placeholder="Your Leader Whatsapp Number"
                     onChange={(e) => handle(e)}
+                    value={form.Leader_whatsapp}
                   />
-                  <span style={{fontSize : "0.7rem"}}>* Don't include +91 or 0.</span>
+                  <span style={{ fontSize: "0.7rem" }}>* Don't include +91 or 0.</span>
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -202,6 +223,7 @@ const VigyaanForm = () => {
                     name="Leader_email"
                     placeholder="Your Leader Email ID"
                     onChange={(e) => handle(e)}
+                    value={form.Leader_email}
                   />
                 </li>
                 {/* <li>
@@ -218,6 +240,7 @@ const VigyaanForm = () => {
                     type="text"
                     placeholder="College Name"
                     onChange={(e) => handle(e)}
+                    value={form.College}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -227,6 +250,7 @@ const VigyaanForm = () => {
                     type="text"
                     placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
+                    value={form.Leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -236,6 +260,7 @@ const VigyaanForm = () => {
                     type="text"
                     placeholder="Leader's year of graduation"
                     onChange={(e) => handle(e)}
+                    value={form.Leader_yog}
                   />
                 </li>
                 {renderMemberFields()}
@@ -346,7 +371,7 @@ const VigyaanForm = () => {
                 </p>
               </div>
               <a href={SampleAbstract}><span className="metaportal_fn_button_4">Sample Abstract</span></a>
-                   
+
             </div>
           </div>
         </div>

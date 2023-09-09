@@ -36,6 +36,11 @@ const VigyaanForm = () => {
     Problem_code: ""
   };
 
+  useEffect(() => {
+    const tmp = JSON.parse(localStorage.getItem('memberCount')) || 0
+    setMemberCount(tmp)
+  })
+
   const [form, set] = useState(cachedForm);
 
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -44,12 +49,21 @@ const VigyaanForm = () => {
   const handleAddMember = () => {
     if (memberCount < 2) {
       setMemberCount(memberCount + 1);
+      localStorage.setItem('memberCount', memberCount + 1)
     }
   };
 
   const handleRemoveMember = () => {
     if (memberCount > 0) {
+      form[`Member${memberCount + 1}_name`] = "";
+      form[`Member${memberCount + 1}_whatsapp`] = "";
+      form[`Member${memberCount + 1}_email`] = "";
+      form[`Member${memberCount + 1}_branch`] = "";
+      form[`Member${memberCount + 1}_yog`] = "";
+
       setMemberCount(memberCount - 1);
+      localStorage.setItem('memberCount', memberCount - 1)
+      localStorage.setItem('vigyaanForm', JSON.stringify(form));
     }
   };
 

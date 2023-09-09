@@ -83,7 +83,7 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                 </div>
                 <div className="responsive-open" onClick={() => navigationToggle(true)}>
                     {/* <AiOutlineMenu id='bars' /> */}
-                    <img src={menu} alt="" />
+                    <img src={menu} width={35} alt="" />
                 </div>
             </nav>
         </div>

@@ -61,7 +61,7 @@ ul{
 }
 .footercol ul li{
 	display: flex;
-	justify-content: start;
+	/* justify-content: start; */
 }
 .footercol ul li a{
 	font-size: 18px;

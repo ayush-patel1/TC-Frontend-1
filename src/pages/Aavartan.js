@@ -6,6 +6,7 @@ import EventsGallery from '../sections/EventsGallery'
 import AavartanHero from '../sections/hero/AavartanHero'
 import { useLocation } from 'react-router-dom';
 import StarFieldAnimation from '../layout/StarFieldAnimation';
+import Merchandise from '../sections/Merchandise';
 
 const Aavartan = () => {
     const location = useLocation();
@@ -48,6 +49,7 @@ const handleScroll = () => {
           <div className='AavartanContainer'>
             <EveningShow />
             <EventsGallery />
+            <Merchandise/>
           </div>
         </div>
    

@@ -1,28 +1,23 @@
 import React from "react";
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBContainer,
-  MDBIcon,
-} from "mdb-react-ui-kit";
 import "./Timeline.css";
 import Title from "../components/Title";
+import clock from "../assets/svgs/clock.svg"
 
 export default function App() {
   return (
-    <MDBContainer fluid className="py-5">
-      <Title color={"OUR"} noncolor={"JOURNEY"} />
+    <div>
+        <Title color={"OUR"} noncolor={"JOURNEY"} />
       <div className="main-timeline-2">
         <div className="timeline-2 left-2">
-          <MDBCard>
-            <MDBCardBody className="p-4">
+          <div>
+            <div>
               <div data-aos="flip-up">
                 <div className="news_part_timeline">
                   <div className="left_items_timeline">
                     <div className="blog__item_timeline">
-                      <h4 className="fw-bold mb-4">The Beginning</h4>
-                      <p className="text-muted mb-4">
-                        <MDBIcon far icon="clock" size="sm" /> 2007
+                      <h4>The Beginning</h4>
+                      <p>
+                        <img src={clock} width={20} alt="" /> 2007
                       </p>
                       <p className="mb-0">
                         The grand fest of Aavartan had its seed sown back in
@@ -35,19 +30,19 @@ export default function App() {
                   </div>
                 </div>
               </div>
-            </MDBCardBody>
-          </MDBCard>
+            </div>
+          </div>
         </div>
         <div className="timeline-2 right-2">
-          <MDBCard>
-            <MDBCardBody className="p-4">
+          <div>
+            <div className="p-4">
               <div data-aos="flip-up">
                 <div className="news_part_timeline">
                   <div className="left_items_timeline">
                     <div className="blog__item_timeline">
                       <h4 className="fw-bold mb-4">Vigyaan</h4>
                       <p className="text-muted mb-4">
-                        <MDBIcon far icon="clock" size="sm" /> 2011
+                      <img src={clock} width={20}/> 2011
                       </p>
                       <p className="mb-0">
                         It was 2011, when people witnessed the massive
@@ -61,12 +56,12 @@ export default function App() {
                   </div>
                 </div>
               </div>
-            </MDBCardBody>
-          </MDBCard>
+            </div>
+          </div>
         </div>
         <div className="timeline-2 left-2">
-          <MDBCard>
-            <MDBCardBody className="p-4">
+          <div>
+            <div className="p-4">
               <div data-aos="flip-up">
                 <div className="news_part_timeline">
                   <div className="left_items_timeline">
@@ -75,7 +70,7 @@ export default function App() {
                         Central India's Largest Tech-fest
                       </h4>
                       <p className="text-muted mb-4">
-                        <MDBIcon far icon="clock" size="sm" /> 2019
+                      <img src={clock} width={20}/> 2019
                       </p>
                       <p className="mb-0">
                         Team Technocracy took it to the next level as
@@ -90,19 +85,19 @@ export default function App() {
                   </div>
                 </div>
               </div>
-            </MDBCardBody>
-          </MDBCard>
+            </div>
+          </div>
         </div>
         <div className="timeline-2 right-2">
-          <MDBCard>
-            <MDBCardBody className="p-4">
+          <div>
+            <div className="p-4">
               <div data-aos="flip-up">
                 <div className="news_part_timeline">
                   <div className="left_items_timeline">
                     <div className="blog__item_timeline">
                       <h4 className="fw-bold mb-4">We Are Coming Back</h4>
                       <p className="text-muted mb-4">
-                        <MDBIcon far icon="clock" size="sm" /> 2023
+                      <img src={clock} width={20}/> 2023
                       </p>
                       <p className="mb-0">
                         Aavartan will be back with its new edition with stellar
@@ -115,10 +110,10 @@ export default function App() {
                   </div>
                 </div>
               </div>
-            </MDBCardBody>
-          </MDBCard>
+            </div>
+          </div>
         </div>
       </div>
-    </MDBContainer>
+    </div>
   );
 }

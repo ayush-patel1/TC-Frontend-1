@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './OCCard.module.css'
-import pic from '../assets/images/stars.png'
+import pic from '../assets/images/stars-min.webp'
+import linkedin from "../assets/svgs/linkedin.svg"
+import insta from "../assets/svgs/insta.svg"
 
 function OCCard(props) {
   return (
@@ -11,8 +13,8 @@ function OCCard(props) {
           <p className={styles.name}>{props.name}</p>
           <p className={styles.position}>{props.domain}</p>
           <div className={styles.social}>
-            <p><a className={styles.linkedin} href={props.linkedinId}><i class="fa-brands fa-linkedin"></i></a></p>
-            <p><a className={styles.insta} href={props.InstaId}><i class="fa-brands fa-instagram"></i></a></p>
+            <p><a className={styles.linkedin} href={props.linkedinId}><img src={linkedin} width={40} alt="" /></a></p>
+            <p><a className={styles.insta} href={props.InstaId}><img src={insta} width={40} alt="" /></a></p>
           </div>
         </div>
 

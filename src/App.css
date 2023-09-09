@@ -1,26 +1,11 @@
 @charset "utf-8";
-/*
-/*	Copyright (c) 2022 Frenify
-/*	Author: Frenify
-/*	This file is made for CURRENT TEMPLATE
-/*
-
-
-	List of CSS codes:
-	
-	01) Base
-
-
-/*------------------------------------------------------------------*/
-/*	01) Base
-/*------------------------------------------------------------------*/
 :root{
 	--mc1: #cc00ff;
 	--mc2: #7000ff;
 	--hc: #e6e6e6ef;
 	--bc: #d8dae6d2;
-	--hff: 'Heebo', sans-serif;
-	--bff: 'Nunito', sans-serif;
+	--hff:  "kanit";
+	--bff: "kanit";
 }
 html{
 	overflow-x: hidden;
@@ -184,7 +169,7 @@ html{
 
 body{
 	font-family: var(--bff);
-	font-size: 18px;
+	font-size: 20px;
 	letter-spacing: 0;
 	line-height: 1.44;
 	font-weight: 400;
@@ -259,7 +244,7 @@ h1, h2, h3, h4, h5, h6{
 	color: var(--hc);
 	font-family: var(--hff);
 	line-height: 1.22;
-	letter-spacing: 0;
+	letter-spacing: 0.5px;
 }
 h1>a, h2>a, h3>a, h4>a, h5>a, h6>a{
 	text-decoration: none;
@@ -6588,6 +6573,14 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	font-family: 'angora';
 	src: url('./assets/font/angora.otf') format('opentype');
 }
+@font-face {
+	font-family: 'poppins';
+	src: url('./assets/font/Poppins-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'kanit';
+	src: url('./assets/font/Kanit-Regular.ttf') format('truetype');
+}
 
   @media(width<600px){
 	.blog__item{
@@ -6665,7 +6658,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	  display: flex;
 	  padding: 5px 45px;
 	  text-decoration: none;
-	  font-family: 'Poppins', sans-serif;
+	  font-family: 'kanit', sans-serif;
 	  font-size: 25px;
 	  font-weight: 600;
 	  color: white;

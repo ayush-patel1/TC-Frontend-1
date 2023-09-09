@@ -1,23 +1,23 @@
-import Vaibhav_Sawant from "../assets/images/heads/Vaibhav_Sawant.jpg.png";
-import Chirag_Singhal from "../assets/images/heads/Chirag_Singhal.jpg.png";
-import Ishan_Nayak from "../assets/images/heads/Ishan_Nayak.jpg.png";
-import Arpit_Pandey from "../assets/images/heads/Arpit_Pandey.jpg.png";
-import Anushree_Banerjee from "../assets/images/heads/Anushree_Banerjee.jpg.png";
-import Aparna_Gupta from "../assets/images/heads/Aparna_Gupta.jpg.png";
-import Kushal_Jain from "../assets/images/heads/Kushal_Jain.jpg.png";
-import Pratham_Gandhi from "../assets/images/heads/Pratham_Gandhi.jpg.png";
-import Shreya_Borikar from "../assets/images/heads/Shreya_Borikar.jpg.png";
-import Satyam_Singh from "../assets/images/heads/Satyam_Singh.jpg.png";
-import Pramil_Kesarwani from "../assets/images/heads/Pramil_Kesarwani.jpg.png";
-import Arkita_Dam from "../assets/images/heads/Arkita_Dam.jpg.png";
-import Sameer_Trivedi from "../assets/images/heads/Sameer_Trivedi.jpg.png";
-import Sujoy_Banerjee from "../assets/images/heads/Sujoy_Banerjee.jpg.png";
-import Gopal_Katankar from "../assets/images/heads/Gopal_Katankar.jpg.png";
-import Suraj_Jogani from "../assets/images/heads/Suraj_Jogani.jpg.png";
-import Nakshatra_Singh from "../assets/images/heads/Nakshatra_Singh.jpg.png";
-import Pranshul_Hatwar from "../assets/images/heads/Pranshul_Hatwar.jpg.png";
-import Abhijeet_Kumar_Singh from "../assets/images/heads/Abhijeet_Kumar_Singh.jpg.png";
-import Rishav_Gandhi from "../assets/images/heads/Rishav_Gandhi.jpg.png";
+import Vaibhav_Sawant from "../assets/images/heads/Vaibhav_Sawant.webp";
+import Chirag_Singhal from "../assets/images/heads/Chirag_Singhal.webp";
+import Ishan_Nayak from "../assets/images/heads/Ishan_Nayak.webp";
+import Arpit_Pandey from "../assets/images/heads/Arpit_Pandey.webp";
+import Anushree_Banerjee from "../assets/images/heads/Anushree_Banerjee.webp";
+import Aparna_Gupta from "../assets/images/heads/Aparna_Gupta.webp";
+import Kushal_Jain from "../assets/images/heads/Kushal_Jain.webp";
+import Pratham_Gandhi from "../assets/images/heads/Pratham_Gandhi.webp";
+import Shreya_Borikar from "../assets/images/heads/Shreya_Borikar.webp";
+import Satyam_Singh from "../assets/images/heads/Satyam_Singh.webp";
+import Pramil_Kesarwani from "../assets/images/heads/Pramil_Kesarwani.webp";
+import Arkita_Dam from "../assets/images/heads/Arkita_Dam.webp";
+import Sameer_Trivedi from "../assets/images/heads/Sameer_Trivedi.webp";
+import Sujoy_Banerjee from "../assets/images/heads/Sujoy_Banerjee.webp";
+import Gopal_Katankar from "../assets/images/heads/Gopal_Katankar.webp";
+import Suraj_Jogani from "../assets/images/heads/Suraj_Jogani.webp";
+import Nakshatra_Singh from "../assets/images/heads/Nakshatra_Singh.webp";
+import Pranshul_Hatwar from "../assets/images/heads/Pranshul_Hatwar.webp";
+import Abhijeet_Kumar_Singh from "../assets/images/heads/Abhijeet_Kumar_Singh.webp";
+import Rishav_Gandhi from "../assets/images/heads/Rishav_Gandhi.webp";
 
 export const coordinatorsList = [
   {
@@ -28,7 +28,7 @@ export const coordinatorsList = [
     instaUrl: "https://instagram.com/simply_vaibhav?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain: "Chemical"
+    domain: "Overall Coordinator"
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ export const coordinatorsList = [
     instaUrl: "https://instagram.com/ishan_nayak_1607?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"ECE"
+    domain:"Overall Coordinator"
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ export const coordinatorsList = [
     instaUrl: "https://instagram.com/1502.chirag?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"CSE"
+    domain:"Overall Coordinator"
   },
   {
     id: 1,
@@ -58,7 +58,7 @@ export const coordinatorsList = [
     instaUrl: "https://www.instagram.com/arpitp_192/?hl=en",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"MME"
+    domain:"Overall Coordinator"
     
   },
   {
@@ -69,7 +69,7 @@ export const coordinatorsList = [
     instaUrl: "https://www.instagram.com/gopalkatankar/",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"ECE"
+    domain:"Event Management"
   },
   {
     id: 6,
@@ -79,7 +79,7 @@ export const coordinatorsList = [
     instaUrl: "https://instagram.com/shreya1211_?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"CSE"
+    domain:"Event Management"
   },
   {
     id: 7,
@@ -89,7 +89,7 @@ export const coordinatorsList = [
     instaUrl: "https://www.instagram.com/kesarwanipramil/",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"ECE"
+    domain:"Event Management"
   },
   {
     id: 8,
@@ -99,7 +99,7 @@ export const coordinatorsList = [
     instaUrl: "https://instagram.com/nakshsinghhh?igshid=OGQ5ZDc2ODk2ZA==",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"IT"
+    domain:"Event Management"
   },
   {
     id: 9,
@@ -109,7 +109,7 @@ export const coordinatorsList = [
     instaUrl: "https://www.instagram.com/abhijeetsingh12082001/",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"MME"
+    domain:"Sponsorship"
   },
   {
     id: 10,
@@ -119,7 +119,7 @@ export const coordinatorsList = [
     instaUrl: "https://instagram.com/apar_na_gupta__?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"Chemical"
+    domain:"PR & Media"
   },
   {
     id: 11,
@@ -129,7 +129,7 @@ export const coordinatorsList = [
     instaUrl: "https://www.instagram.com/singhsatyam480532023/",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"CSE"
+    domain:"PR & Media"
   },
   {
     id: 12,
@@ -139,7 +139,7 @@ export const coordinatorsList = [
     instaUrl: "http://instagram.com/momo_02.04/",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"Bio-Med"
+    domain:"Vigyaan"
   },
   {
     id: 13,
@@ -149,7 +149,7 @@ export const coordinatorsList = [
     instaUrl: "#",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"CSE"
+    domain:"Vigyaan"
   },
   {
     id: 14,
@@ -159,7 +159,7 @@ export const coordinatorsList = [
     instaUrl: "https://www.instagram.com/pranshul_hatwar1510/",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"IT"
+    domain:"Vigyaan"
   },
   {
     id: 15,
@@ -169,7 +169,7 @@ export const coordinatorsList = [
     instaUrl: "https://www.instagram.com/arkitadam/",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"ECE"
+    domain:"Documentation"
   },
   {
     id: 16,
@@ -179,7 +179,7 @@ export const coordinatorsList = [
     instaUrl: "https://www.instagram.com/s_ameer___/",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"ECE"
+    domain:"Documentation"
   },  
   {
     id: 17,
@@ -189,7 +189,7 @@ export const coordinatorsList = [
     instaUrl: "https://www.instagram.com/kushaljain.202/",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"Chemical"
+    domain:"Design"
   },
   {
     id: 18,
@@ -199,7 +199,7 @@ export const coordinatorsList = [
     instaUrl: "https://instagram.com/_jogani.suraj_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"Electrical"
+    domain:"Design"
   }, 
   {
     id: 19,
@@ -209,7 +209,7 @@ export const coordinatorsList = [
     instaUrl: "https://instagram.com/sujoy0910?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"ECE"
+    domain:"Design"
   },
   {
     id: 20,
@@ -219,6 +219,6 @@ export const coordinatorsList = [
     instaUrl: "https://instagram.com/___rishav._?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",
     facebookUrl : "#",
     githubUrl : "#",
-    domain:"MME"
+    domain:"Technical"
   }
 ];

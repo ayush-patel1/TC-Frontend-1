@@ -12,7 +12,7 @@ const Contact = () => {
   }, [])
   return (
     <section id="contact">
-      <div>
+      <div className={styles.ContactContainer}>
         <Title color={color} noncolor={noncolor}/>
       
         <div className="fn_cs_contact_form">
@@ -56,7 +56,7 @@ const Contact = () => {
                   <div className="mw300">
                     <a
                       id={styles.send_message}
-                      href="#"
+                      href="/"
                       className="metaportal_fn_button full"
                     >
                       <span className={styles.message_button}>Send Message</span>

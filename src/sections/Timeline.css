@@ -138,6 +138,10 @@
 }
 .blog__item_timeline p{
 	font-size: 1rem;
+  display: flex;
+}
+.blog__item_timeline p img{
+	margin-right: 0.5rem;
 }
 .blog__item_timeline h4{
 	font-size: 1.3rem;

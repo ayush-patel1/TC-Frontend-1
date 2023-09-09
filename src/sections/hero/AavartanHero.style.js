@@ -227,7 +227,7 @@ const AavartanStyleWrapper = styled.section`
       font-size: 18px;
       line-height: 30px;
       margin-top: 30px;
-      text-shadow: 3px 3px 5px black;
+      text-shadow: 1px 1px 1px black;
       font-family: "kanit";
       position: absolute;
       top: 25vh;
@@ -271,11 +271,11 @@ const AavartanStyleWrapper = styled.section`
     }
     p {
       color: #ffffff;
-      font-weight: 600;
+      font-weight: 400;
       font-size: 18px;
       line-height: 30px;
       margin-top: 30px;
-      text-shadow: 3px 3px 5px black;
+      text-shadow: 1px 1px 1px black;
       font-family: "kanit";
       position: absolute;
       top: 25vh;

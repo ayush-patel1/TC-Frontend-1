@@ -1,21 +1,25 @@
 import axios from "axios";
 import { React, useEffect, useState } from "react";
 import { connect } from "react-redux";
-import urls from "../urls.json"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import SampleAbstract from '../assets/sample_abstract/SampleAbstract.pdf'
+import urls from "../urls.json";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import SampleAbstract from "../assets/sample_abstract/SampleAbstract.pdf";
 
-const backend = urls.backend
+const backend = urls.backend;
 
 const VigyaanForm = () => {
   useEffect(() => {
     AOS.init();
-    console.log(cachedForm)
-  }, [])
+    console.log(cachedForm);
+  }, []);
   const [memberCount, setMemberCount] = useState(0);
 
-  const cachedForm = JSON.parse(localStorage.getItem('vigyaanForm')) || {
+  const [phoneNumberError, setPhoneNumberError] = useState("");
+  const [memberPhoneNumberValidations, setMemberPhoneNumberValidations] =
+    useState([true, true, true]);
+
+  const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
     Team_name: "",
     Leader_name: "",
     Leader_email: "",
@@ -26,20 +30,20 @@ const VigyaanForm = () => {
     Member2_name: "",
     Member2_email: "",
     Member2_yog: "",
-    Member2_whatsapp: "",
+    Member2_whatsappno: "",
     Member2_branch: "",
     Member3_name: "",
     Member3_email: "",
     Member3_yog: "",
-    Member3_whatsapp: "",
+    Member3_whatsappno: "",
     Member3_branch: "",
-    Problem_code: ""
+    Problem_code: "",
   };
 
   useEffect(() => {
-    const tmp = JSON.parse(localStorage.getItem('memberCount')) || 0
-    setMemberCount(tmp)
-  })
+    const tmp = JSON.parse(localStorage.getItem("memberCount")) || 0;
+    setMemberCount(tmp);
+  });
 
   const [form, set] = useState(cachedForm);
 
@@ -49,63 +53,103 @@ const VigyaanForm = () => {
   const handleAddMember = () => {
     if (memberCount < 2) {
       setMemberCount(memberCount + 1);
-      localStorage.setItem('memberCount', memberCount + 1)
+      localStorage.setItem("memberCount", memberCount + 1);
     }
   };
 
   const handleRemoveMember = () => {
     if (memberCount > 0) {
       form[`Member${memberCount + 1}_name`] = "";
-      form[`Member${memberCount + 1}_whatsapp`] = "";
+      form[`Member${memberCount + 1}_whatsappno`] = "";
       form[`Member${memberCount + 1}_email`] = "";
       form[`Member${memberCount + 1}_branch`] = "";
       form[`Member${memberCount + 1}_yog`] = "";
 
       setMemberCount(memberCount - 1);
-      localStorage.setItem('memberCount', memberCount - 1)
-      localStorage.setItem('vigyaanForm', JSON.stringify(form));
+      localStorage.setItem("memberCount", memberCount - 1);
+      localStorage.setItem("vigyaanForm", JSON.stringify(form));
     }
   };
 
   const handle = (e) => {
-    const update = { ...form }
-    update[e.target.name] = e.target.value
-    set(update)
-    localStorage.setItem('vigyaanForm', JSON.stringify(update));
-  }
+    const update = { ...form };
+    update[e.target.name] = e.target.value;
+
+    if (e.target.name === "Leader_whatsapp") {
+      const phoneNumber = e.target.value;
+      if (!/^\d{10}$/.test(phoneNumber)) {
+        setPhoneNumberError("Enter a number of 10 digits only.");
+      } else {
+        setPhoneNumberError("");
+      }
+    }
+
+    if (e.target.name.endsWith("whatsappno")) {
+      const memberIndex = parseInt(e.target.name.match(/\d+/)[0]) - 1;
+      const memberPhoneNumbers = [...memberPhoneNumberValidations];
+      const memberPhoneNumber = e.target.value;
+
+      memberPhoneNumbers[memberIndex] = /^\d{10}$/.test(memberPhoneNumber);
+      setMemberPhoneNumberValidations(memberPhoneNumbers);
+    }
+
+    set(update);
+    localStorage.setItem("vigyaanForm", JSON.stringify(update));
+  };
 
   const submit = async () => {
-    setSubmit(true)
-    console.log(form)
+    setSubmit(true);
+    console.log(form);
     if (memberCount < 1) {
-      alert("Minimum Team Size: 2")
-    }
-    else {
-      let condition1 = form.Team_name !== "" && form.Leader_name !== "" && form.Leader_email !== "" && form.Leader_whatsapp !== "" && form.College !== "" && form.Leader_yog !== "" && form.Leader_branch !== "" && form.Member2_name !== "" && form.Member2_email !== "" && form.Member2_yog !== "" && form.Member2_whatsapp !== "" && form.Member2_branch !== "" && form.Problem_code !== "" && form.file;
+      alert("Minimum Team Size: 2");
+    } else if (memberPhoneNumberValidations.includes(false)) {
+      alert("Please fill all phone numbers with 10 digits.");
+    } else {
+      let condition1 =
+        form.Team_name !== "" &&
+        form.Leader_name !== "" &&
+        form.Leader_email !== "" &&
+        form.Leader_whatsapp !== "" &&
+        form.College !== "" &&
+        form.Leader_yog !== "" &&
+        form.Leader_branch !== "" &&
+        form.Member2_name !== "" &&
+        form.Member2_email !== "" &&
+        form.Member2_yog !== "" &&
+        form.Member2_whatsappno !== "" &&
+        form.Member2_branch !== "" &&
+        form.Problem_code !== "" &&
+        form.file &&
+        memberPhoneNumberValidations.includes(true);
 
-      let condition2 = true
-      if (memberCount == 2) condition2 = form.Member3_email !== "" && form.Member3_name !== "" && form.Member3_whatsapp !== "" && form.Member3_whatsapp !== "" && form.Member3_yog !== "" && form.Member3_branch !== "";
-
+      let condition2 = true;
+      if (memberCount == 2)
+        condition2 =
+          form.Member3_email !== "" &&
+          form.Member3_name !== "" &&
+          form.Member3_whatsappno !== "" &&
+          form.Member3_whatsappno !== "" &&
+          form.Member3_yog !== "" &&
+          form.Member3_branch !== "" &&
+          memberPhoneNumberValidations.includes(true);
       if (condition1 && condition2) {
         try {
           const res = await axios.post(`${backend}/vigyaanReg`, form, {
             headers: {
               "Content-Type": "multipart/form-data",
-            }
-          })
-          alert(res.data.message)
+            },
+          });
+          alert(res.data.message);
+        } catch (err) {
+          console.error(err);
+          alert(err.response.data.message);
         }
-        catch (err) {
-          console.error(err)
-          alert(err.response.data.message)
-        }
-      }
-      else {
-        alert("Please fill all the necessary details")
+      } else {
+        alert("Please fill all the necessary details");
       }
     }
-    setSubmit(false)
-  }
+    setSubmit(false);
+  };
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -134,14 +178,19 @@ const VigyaanForm = () => {
           </li>
           <li>
             <input
-              name={`Member${i + 1}_whatsapp`}
+              name={`Member${i + 1}_whatsappno`}
               className="memberNumber"
               type="text"
               placeholder={`Member ${i} Whatsapp Number`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_whatsapp`]}
+              value={form[`Member${i + 1}_whatsappno`]}
             />
-            <span style={{ fontSize: "0.7rem" }}>* Don't include +91 or 0.</span>
+            <span style={{ fontSize: "0.7rem" }}>
+              * Don't include +91 or 0.
+            </span>
+            {!memberPhoneNumberValidations[i] && (
+              <p style={{ color: "red" }}>Enter a number of 10 digits only.</p>
+            )}
           </li>
           <li>
             <input
@@ -180,7 +229,11 @@ const VigyaanForm = () => {
   };
 
   return (
-    <div className="metaportal_fn_mintpage" id="registration" style={{ position: "relative", zIndex: "0" }}>
+    <div
+      className="metaportal_fn_mintpage"
+      id="registration"
+      style={{ position: "relative", zIndex: "0" }}
+    >
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -228,7 +281,12 @@ const VigyaanForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>* Don't include +91 or 0.</span>
+                  <span style={{ fontSize: "0.7rem" }}>
+                    * Don't include +91 or 0.
+                  </span>
+                  {phoneNumberError && (
+                    <p style={{ color: "red" }}>{phoneNumberError}</p>
+                  )}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -278,12 +336,13 @@ const VigyaanForm = () => {
                   />
                 </li>
                 {renderMemberFields()}
-                <li data-aos="fade-down"
+                <li
+                  data-aos="fade-down"
                   style={{
                     padding: "0",
                     display: "flex",
                     justifyContent: "space-between",
-                    margin: "0"
+                    margin: "0",
                   }}
                 >
                   {memberCount < 2 && (
@@ -305,15 +364,26 @@ const VigyaanForm = () => {
                 type="file"
                 onChange={handleFileChange}
               />
-              <label style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} htmlFor="file-input">
-                <span className="metaportal_fn_button_2">Upload Your Abstract</span>
+              <label
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                }}
+                htmlFor="file-input"
+              >
+                <span className="metaportal_fn_button_2">
+                  Upload Your Abstract
+                </span>
                 {uploadedFileName && (
-                  <p style={{ color: "white", paddingTop: "1rem" }}>Uploaded File: {uploadedFileName}</p>
+                  <p style={{ color: "white", paddingTop: "1rem" }}>
+                    Uploaded File: {uploadedFileName}
+                  </p>
                 )}
               </label>
             </div>
-            <div className="mint_desc" style={{ paddingTop: "4rem", }}>
-              {!isSubmitting ?
+            <div className="mint_desc" style={{ paddingTop: "4rem" }}>
+              {!isSubmitting ? (
                 <div
                   target="_blank"
                   rel="noreferrer"
@@ -324,9 +394,9 @@ const VigyaanForm = () => {
                 >
                   <span>Submit</span>
                 </div>
-                :
+              ) : (
                 <>Submitting...</>
-              }
+              )}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
           </div>
@@ -351,7 +421,11 @@ const VigyaanForm = () => {
                 </p>
                 <p>4. A team can opt for only one problem statement.</p>
               </div>
-              <div data-aos="fade-down" style={{ paddingTop: "2rem" }} className="mint_time">
+              <div
+                data-aos="fade-down"
+                style={{ paddingTop: "2rem" }}
+                className="mint_time"
+              >
                 <h4>VIGYAAN</h4>
                 <h3 className="metaportal_fn_countdown">PROCEDURES</h3>
               </div>
@@ -384,8 +458,9 @@ const VigyaanForm = () => {
                   that they will present on the exhibition day.
                 </p>
               </div>
-              <a style={{textDecoration:"none"}} href={SampleAbstract}><span className="metaportal_fn_button_4">Sample Abstract</span></a>
-
+              <a style={{ textDecoration: "none" }} href={SampleAbstract}>
+                <span className="metaportal_fn_button_4">Sample Abstract</span>
+              </a>
             </div>
           </div>
         </div>
@@ -415,7 +490,6 @@ const VigyaanForm = () => {
                 </h3>
               </div>
             </li>
-
           </ul>
         </div>
       </div>

@@ -148,6 +148,11 @@ const VigyaanStyleWrapper = styled.section`
   .btncontainer{
     top: 70%;
   }
+  @media (max-width: 921px) {
+    .btncontainer{
+      top: 75%;
+    }
+  }
   @media (max-width: 890px) {
     height:100vh;
   
@@ -211,6 +216,11 @@ const VigyaanStyleWrapper = styled.section`
   }
   
 
+}
+@media (max-width: 441px) {
+  .btncontainer{
+    top: 90%;
+  }
 }
 @media (max-width: 426px) {
   .vigyaan-font {

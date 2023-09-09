@@ -255,7 +255,15 @@ const AavartanStyleWrapper = styled.section`
     }
   
   }
-
+  @media only screen and (max-width: 555px) {
+    .btncontainer{
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+     }
+  }
   @media only screen and (max-width: 426px) {
     .gamfi_v2_hero_left {
       h2 {
@@ -325,13 +333,6 @@ const AavartanStyleWrapper = styled.section`
     }
   }
     @media only screen and (max-width: 321px) {
-      .btncontainer{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 3;
-       }
     .gamfi_v2_hero_right{
       .metaportal_fn_button_3 {
         position: absolute;
@@ -339,6 +340,11 @@ const AavartanStyleWrapper = styled.section`
         left: 10%;
         width: 200px;
       }
+    }
+    @media only screen and (max-width: 301px) {
+      .btncontainer{
+        top: 90%;
+       }
     }
   }
 `;

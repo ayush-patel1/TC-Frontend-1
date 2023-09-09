@@ -271,7 +271,7 @@ const AavartanStyleWrapper = styled.section`
     }
     p {
       color: #ffffff;
-      font-weight: 600;
+      font-weight: 400;
       font-size: 18px;
       line-height: 30px;
       margin-top: 30px;

@@ -6,6 +6,7 @@ import Faq from '../sections/Faq'
 import FullPageLoader from '../layout/FullPageLoader';
 import About from '../components/About';
 import Timeline from '../sections/Timeline';
+import FloatingImage from '../sections/FloatingImage';
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,7 +23,8 @@ const Homepage = () => {
         <FullPageLoader />
       ) : (
         <div>
-          <HomeHero />
+          <FloatingImage/>
+          {/* <HomeHero /> */}
           <div className="HomeContainer">
             <About/>
             <Timeline/>

@@ -6575,6 +6575,26 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	font-family: 'kanit';
 	src: url('./assets/font/Kanit-Regular.ttf') format('truetype');
 }
+@font-face {
+	font-family: 'Rockwill';
+	src: url('./assets/font/Rockwill.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Bravest';
+	src: url('./assets/font/Bravest.otf') format('truetype');
+}
+@font-face {
+	font-family: 'foreign';
+	src: url('./assets/font/foreign.otf') format('truetype');
+}
+@font-face {
+	font-family: 'SpaceMono';
+	src: url('./assets/font/SpaceMono.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Potra';
+	src: url('./assets/font/Potra.ttf') format('truetype');
+}
 
   @media(width<600px){
 	.blog__item{

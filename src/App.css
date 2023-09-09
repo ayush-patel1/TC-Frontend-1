@@ -1588,7 +1588,7 @@ a.metaportal_fn_videobutton .fn__svg,
 }
 a.metaportal_fn_videobutton .stroke-solid,
 .fn_cs_video a .stroke-solid{
-	stroke-width: 6px;
+	strokeWidth: 6px;
 	stroke: rgba(255,255,255,.5);
 }
 a.metaportal_fn_videobutton .icon,
@@ -1608,7 +1608,7 @@ a.metaportal_fn_videobutton .stroke-solid,
 .fn_cs_video a .stroke-solid {
 	stroke-dashoffset: 0;
 	stroke-dashArray: 300;
-	stroke-width: 4px;
+	strokeWidth: 4px;
 	transition: stroke-dashoffset 1s ease, opacity 1s ease;
 }
 a.metaportal_fn_videobutton .icon,
@@ -1633,7 +1633,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	height: 250px;
 }
 .fn_cs_video.bg a .stroke-solid{
-	stroke-width: 2px;
+	strokeWidth: 2px;
 }
 .fn_cs_video.bg a .icon{
 	transform: scale(.3);

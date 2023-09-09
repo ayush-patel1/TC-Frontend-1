@@ -12,7 +12,7 @@ const ProblemStatement = () => {
   return (
     <div className={styles.container}>
       <Title color={"PROBLEM"} noncolor={"STATEMENTS"} />
-      <div class={`${styles.ProblemStatements} ${styles.container}`}>
+      <div className={`${styles.ProblemStatements} ${styles.container}`}>
         <Link style={{ textDecoration: "none" }} to={`/vigyaan/statements/${'Arch'}`}>
           <div data-aos="flip-up" className={styles.branch}>
             B. ARCH

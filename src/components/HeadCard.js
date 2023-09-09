@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './HeadCard.module.css'
+import linkedin from "../assets/svgs/linkedin.svg"
+import insta from "../assets/svgs/insta.svg"
 // import pic2 from '../assets/images/rocket.png'
   function HeadCard(props){
     return(
@@ -10,8 +12,8 @@ import styles from './HeadCard.module.css'
           <p className={styles.name}>{props.name}</p>
           <p className={styles.position}>{props.domain}</p>
           <div className={styles.social}>
-            <p><a className={styles.linkedin} href={props.linkedinId}><i class="fa-brands fa-linkedin"></i></a></p>
-            <p><a className={styles.insta} href={props.InstaId}><i class="fa-brands fa-instagram"></i></a></p>
+            <p><a className={styles.linkedin} href={props.linkedinId}><img src={linkedin} width={40} alt="" /></a></p>
+            <p><a className={styles.insta} href={props.InstaId}><img src={insta} width={40} alt="" /></a></p>
           </div>
         </div>
       

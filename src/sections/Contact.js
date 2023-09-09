@@ -12,7 +12,7 @@ const Contact = () => {
   }, [])
   return (
     <section id="contact">
-      <div>
+      <div className={styles.ContactContainer}>
         <Title color={color} noncolor={noncolor}/>
       
         <div className="fn_cs_contact_form">

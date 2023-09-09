@@ -2096,21 +2096,15 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
 #contact{
-	padding: 14px 0 150px 0;
+	padding: 0 15rem 4rem 15rem;
 }
-
-
-
-
+@media(width<700px){
+	#contact{
+		padding: 0;
+		padding-bottom: 4rem !important;
+	}
+}
 
 .fn_cs_contact_info{
 	padding: 140px 0 32px;

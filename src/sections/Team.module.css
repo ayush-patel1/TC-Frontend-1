@@ -65,6 +65,7 @@
     }
     .container{
         gap: 0;
+        padding-bottom: 0;
     }
     .OverallHeadSection, .HeadSection{
         margin-bottom: 2rem;

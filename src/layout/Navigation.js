@@ -111,7 +111,7 @@ const Navigation = ({ navigation, navigationToggle }) => {
           <div className="info_holder">
             <div className="copyright">
               <p>
-                Made With with MAGIC by <br />
+                Made With MAGIC by <br />
                 <div
                   target="_blank"
                   rel="noreferrer"

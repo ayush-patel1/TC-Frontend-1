@@ -22,10 +22,11 @@ const Homepage = () => {
       {isLoading ? (
         <FullPageLoader />
       ) : (
-        <div>
+        <div className="Homescrolled">
+          {/* <div className="dark-overlay" style={{position:"relative", zIndex:"0"}}></div> */}
           <FloatingImage/>
           {/* <HomeHero /> */}
-          <div className="HomeContainer">
+          <div className="HomeContainer" style={{position:"relative", zIndex:"2"}}>
             <About/>
             <Timeline/>
             <Faq />

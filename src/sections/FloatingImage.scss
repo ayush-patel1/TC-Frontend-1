@@ -111,7 +111,7 @@ body {
     top: -0.125rem;
 	left: -20rem;
     background: white;
-    box-shadow: stars(7000, 5000);
+    box-shadow: stars(10000, 5000);
     border-radius: 100px;
   }
   margin: 0 auto;
@@ -394,11 +394,17 @@ body {
 	font-size: 1.5rem;
 	margin-bottom: 2rem;
 	margin-top: 1rem;
+	// width: 100%;
 	// font-family: 'Bravest';
   }
 
   .btncontainer{
 	width: 40%;
+  }
+  @media(width<700px){
+	.btncontainer{
+		width: 100%;
+	}
   }
   
   .cta {

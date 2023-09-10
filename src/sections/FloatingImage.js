@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./FloatingImage.scss";
-import img from "../assets/prop.png"
+import img from "../assets/prop.webp"
 
 class SpaceAnimation extends Component {
   render() {

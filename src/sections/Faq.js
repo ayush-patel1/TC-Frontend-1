@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Title from "../components/Title";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import prop9 from "../assets/prop3.png"
+import prop9 from "../assets/prop31.webp"
 
 const Faq = () => {
   useEffect(() => {

@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../Title";
-import pdf from "../../assets/problem_statements/Mining.pdf"
+import pdf from "../../assets/problem_statements/Mining.pdf";
 
 const Mining = () => {
   return (
@@ -151,9 +151,9 @@ const Mining = () => {
           padding: "1rem 0rem",
         }}
       >
-        <div className="goodbtn">
-        <a href={pdf}>DOWNLOAD PDF</a>
-        </div>
+        <a href={pdf} style={{ textDecoration: "none" }}>
+          <div className="goodbtn">DOWNLOAD PDF</div>
+        </a>
       </div>
     </div>
   );

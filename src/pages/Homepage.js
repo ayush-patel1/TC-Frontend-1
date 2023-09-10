@@ -1,7 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import HomeHero from '../sections/HomeHero'
 import Faq from '../sections/Faq'
 import FullPageLoader from '../layout/FullPageLoader';
 import About from '../components/About';

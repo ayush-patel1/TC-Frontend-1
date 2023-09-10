@@ -73,10 +73,17 @@ Prepare a model of smart road systems with integrated sensors and data analytics
 
 
             </div>
-            <div style={{width:"100%", display:"flex", justifyContent:"center", padding:"1rem 0rem"}}>
-      <div className="goodbtn" >
-      <a href={pdf}>DOWNLOAD PDF</a>
-          </div>
+            <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          padding: "1rem 0rem",
+        }}
+      >
+        <a href={pdf} style={{ textDecoration: "none" }}>
+          <div className="goodbtn">DOWNLOAD PDF</div>
+        </a>
       </div>
           </div>
   )

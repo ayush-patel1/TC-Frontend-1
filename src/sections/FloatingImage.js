@@ -9,7 +9,7 @@ class SpaceAnimation extends Component {
         <img className="float" src={img} width={150} alt="" />
         <div className="heroContent showContent">
           <h1>
-            <span>TEAM TECHNOCRACY</span>
+            <span> TEAM TECHNOCRACY</span>
           </h1>
           <p>The Student Technical Committee of NIT Raipur</p>
           <div className="btncontainer" style={{ display: "flex" }}>

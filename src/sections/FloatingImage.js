@@ -6,7 +6,7 @@ class SpaceAnimation extends Component {
   render() {
     return (
       <div className="solarparent">
-        <img className="float" src={img} width={150} alt="" />
+        <img className="float" src={img} width={100} alt="" />
         <div className="heroContent showContent">
           <h1>
             <span> TEAM TECHNOCRACY</span>

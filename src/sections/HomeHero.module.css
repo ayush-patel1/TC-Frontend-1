@@ -182,7 +182,7 @@ path.two {
   }
 }
  
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .heroContent {
     top: 70vh;
     left: 50%;
@@ -190,10 +190,10 @@ path.two {
   .heroContent h1 span {
     font-size: 1rem;
     margin-bottom: 1rem;
-    /* background: linear-gradient(to bottom, #504099 40%,#FE7BE5 100%); */
+    background: linear-gradient(to bottom, #504099 40%,#FE7BE5 100%);
     border-radius: 10px;
     display: contents;
-    /* padding: 0.1rem 1rem; */
+    padding: 0.1rem 1rem;
   }
   
   .heroContent p {
@@ -201,7 +201,7 @@ path.two {
     margin-bottom: 2rem;
     margin-top: 1rem;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .heroContent {

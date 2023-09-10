@@ -140,13 +140,13 @@ const Navigation = ({ navigation, navigationToggle }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/nitrr.aavartan/">
+                  <a href="https://www.linkedin.com/company/aavartan/">
                     {/* <BsInstagram/> */}
                     <img src={linkedin} width={22} alt="" />
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/nitrr.aavartan/">
+                  <a href="https://twitter.com/nitrr_aavartan">
                     {/* <BsInstagram/> */}
                     <img src={x} width={24} alt="" />
                   </a>

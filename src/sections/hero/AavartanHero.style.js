@@ -200,7 +200,7 @@ const AavartanStyleWrapper = styled.section`
       }
     }
   }
-  @media only screen and (max-width: 821px) {
+  @media only screen and (max-width: 861px) {
     .btncontainer{
       position: absolute;
       top: 90%;
@@ -209,6 +209,7 @@ const AavartanStyleWrapper = styled.section`
       z-index: 3;
      }
   }
+ 
   @media only screen and (max-width: 769px) {
     .btncontainer{
       position: absolute;
@@ -255,7 +256,13 @@ const AavartanStyleWrapper = styled.section`
     }
   
   }
-  @media only screen and (max-width: 555px) {
+  @media only screen and (max-width: 571px) {
+    .gamfi_v2_hero_left {
+      h2 {
+        font-size: 3rem; /* Adjust font size for 768px */
+        top: 15vh;
+      }
+    }
     .btncontainer{
       position: absolute;
       top: 80%;
@@ -264,6 +271,7 @@ const AavartanStyleWrapper = styled.section`
       z-index: 3;
      }
   }
+
   @media only screen and (max-width: 426px) {
     .gamfi_v2_hero_left {
       h2 {
@@ -333,6 +341,9 @@ const AavartanStyleWrapper = styled.section`
     }
   }
     @media only screen and (max-width: 321px) {
+      .gamfi_v2_hero_left h2 {
+        font-size: 2rem;
+      }
     .gamfi_v2_hero_right{
       .metaportal_fn_button_3 {
         position: absolute;
@@ -344,8 +355,28 @@ const AavartanStyleWrapper = styled.section`
     @media only screen and (max-width: 301px) {
       .btncontainer{
         top: 90%;
+        width:90%;
        }
+       .cta {
+        font-size: 10px;
+      }
     }
+    @media only screen and (max-width: 261px) {
+      .btncontainer{
+        top: 95%;
+        width:90%;
+       }
+       .gamfi_v2_hero_left {
+        h2 {
+        font-size: 1rem;
+        }
+        p{
+          font-size: 0.8rem;
+        }
+    }
+
+    }
+
   }
 `;
 

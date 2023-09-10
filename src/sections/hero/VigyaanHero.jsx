@@ -11,12 +11,6 @@ import prop5 from "../../assets/prop5.webp";
 // import RocketButton from "../../components/RocketButton";
 
 const VigyaanHero = () => {
-  const scrollToRegistration = () => {
-    const registrationElement = document.getElementById("registration");
-    if (registrationElement) {
-      registrationElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <>
@@ -37,12 +31,18 @@ const VigyaanHero = () => {
             into the world of science and explore limitless possibilities.
           </div>
           <img className="vigyaan-ring" src={ring} alt="name" />
-          <div className="btncontainer" style={{ display: "flex" }}>
+          <div className="btncontainer2" style={{ display: "flex" }}>
             {/* <a href="#" className="funkybtn">Click Here To Register</a> */}
-            <a className="cta" href="#registration">
+            <a className="cta2" href="#registration">
               <span >CLICK TO REGISTER</span>
               <span >
                 <svg
+                  width="66px"
+                  height="25px"
+                  viewBox="0 0 66 43"
+                  version="1.1"
+                >
+                 <svg
                   width="66px"
                   height="25px"
                   viewBox="0 0 66 43"
@@ -71,6 +71,7 @@ const VigyaanHero = () => {
                       fill="#FFFFFF"
                     ></path>
                   </g>
+                </svg>
                 </svg>
               </span>
             </a>

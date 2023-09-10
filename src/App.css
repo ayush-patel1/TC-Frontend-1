@@ -6521,7 +6521,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	z-index: 0; /* Ensure the overlay is above the background image */
   }
 .Homescrolled{
-	background: url("./assets/images/spacebg.png");
+	background: url("./assets/images/spacebg.webp");
 	background-size: cover;
 	background-attachment: fixed;
 	/* transition: background-color 0.9s ease; */
@@ -6591,26 +6591,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	font-family: 'kanit';
 	src: url('./assets/font/Kanit-Regular.ttf') format('truetype');
 }
-@font-face {
-	font-family: 'Rockwill';
-	src: url('./assets/font/Rockwill.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'Bravest';
-	src: url('./assets/font/Bravest.otf') format('truetype');
-}
-@font-face {
-	font-family: 'foreign';
-	src: url('./assets/font/foreign.otf') format('truetype');
-}
-@font-face {
-	font-family: 'SpaceMono';
-	src: url('./assets/font/SpaceMono.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'Potra';
-	src: url('./assets/font/Potra.ttf') format('truetype');
-}
+
 
   @media(width<600px){
 	.blog__item{

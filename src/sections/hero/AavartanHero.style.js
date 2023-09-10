@@ -120,7 +120,7 @@ const AavartanStyleWrapper = styled.section`
 
       .rocket_thumb {
         position: absolute;
-        right: 3rem;
+        right: 1rem;
         animation: ${rocketAnimation} 5s infinite;
         z-index: 0;
         height: 400px;
@@ -129,7 +129,7 @@ const AavartanStyleWrapper = styled.section`
 
       .rocket_thumb2 {
         position: absolute;
-        bottom: 3rem;
+        bottom: 1rem;
         animation: ${rocketAnimation2} 5s infinite;
         z-index: 0;
         left: 100px;
@@ -250,7 +250,7 @@ const AavartanStyleWrapper = styled.section`
           }
   
          .rocket_thumb2 {
-           height: 200px ;
+           height: 100px ;
           }
       }
     }
@@ -270,6 +270,19 @@ const AavartanStyleWrapper = styled.section`
       transform: translate(-50%, -50%);
       z-index: 3;
      }
+     .gamfi_v2_hero_right{
+      .gamfi_v2_hero_thumb {
+        .rocket_thumb {
+           height: 100px ;
+           right: 0px;
+          }
+  
+         .rocket_thumb2 {
+           height: 80px ;
+           bottom: 0rem;
+          }
+      }
+    }
   }
 
   @media only screen and (max-width: 426px) {
@@ -308,11 +321,13 @@ const AavartanStyleWrapper = styled.section`
       }
       .gamfi_v2_hero_thumb {
         .rocket_thumb {
-           height: 120px ;
+           height: 100px ;
+           right: 0px;
           }
   
          .rocket_thumb2 {
-           height: 120px ;
+           height: 80px ;
+           bottom: 0rem;
           }
       }
     }
@@ -332,10 +347,12 @@ const AavartanStyleWrapper = styled.section`
       .gamfi_v2_hero_thumb {
         .rocket_thumb {
            height: 100px ;
+           right: 0px;
           }
   
          .rocket_thumb2 {
-           height: 100px ;
+           height: 80px ;
+           bottom: 0px;
           }
       }
     }
@@ -360,6 +377,19 @@ const AavartanStyleWrapper = styled.section`
        .cta {
         font-size: 10px;
       }
+      .gamfi_v2_hero_right{
+        .gamfi_v2_hero_thumb {
+          .rocket_thumb {
+             height: 100px ;
+             right: 0px;
+            }
+    
+           .rocket_thumb2 {
+             height: 80px ;
+             bottom: 5rem;
+            }
+        }
+      }
     }
     @media only screen and (max-width: 261px) {
       .btncontainer{
@@ -374,7 +404,7 @@ const AavartanStyleWrapper = styled.section`
           font-size: 0.8rem;
         }
     }
-
+ 
     }
 
   }

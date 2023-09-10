@@ -13,7 +13,7 @@ const SponsorsPage = () => {
    
   }, [])
   return (
-    <div>
+    <div className="Homescrolled">
         <Spons/>
     </div>
   )

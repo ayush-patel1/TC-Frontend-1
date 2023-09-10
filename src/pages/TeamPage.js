@@ -12,8 +12,8 @@ const TeamPage = () => {
    
   }, [])
   return (
-    <div>
-       <div><Team/></div>
+    <div className='Homescrolled' style={{position:"relative", zIndex:"-1"}}>
+       <div style={{position:"relative", zIndex:"0"}}><Team/></div>
        <Contact/>
     </div>
   )

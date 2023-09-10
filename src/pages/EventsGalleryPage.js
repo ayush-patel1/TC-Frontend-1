@@ -11,7 +11,7 @@ const EventsGalleryPage = () => {
     window.scrollTo(0,0)
   }, [])
   return (
-      <div className="metaportal_fn_collectionpage">
+      <div className="metaportal_fn_collectionpage Homescrolled">
         <div className="container">
           <div className="metaportal_fn_collection">
             {/* Filters */}
@@ -23,7 +23,7 @@ const EventsGalleryPage = () => {
               {/* !Result Box */}
               {/* Result List */}
               <div className="metaportal_fn_result_list">
-                <div className="metaportal_fn_drops">
+                <div className="metaportal_fn_drops" style={{position:"relative", zIndex:"1"}}>
                 <PageBanner pageName={"gallery"} prePageName={"aavartan"} prePageLink={"/aavartan"} />
                   <Title color="EVENTS" noncolor="GALLERY"/>
                   <ul className="grid">

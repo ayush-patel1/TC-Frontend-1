@@ -11,7 +11,8 @@ const VigyaanGalleryPage = () => {
     window.scrollTo(0,0)
   }, [])
   return (
-      <div className="metaportal_fn_collectionpage">
+    <div className='Homescrolled' style={{position:"relative", zIndex:"-1"}}>
+      <div className="metaportal_fn_collectionpage" style={{position:"relative", zIndex:"0"}}>
         <div className="container">
           <div className="metaportal_fn_collection">
             {/* Filters */}
@@ -47,6 +48,7 @@ const VigyaanGalleryPage = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
   );
 };

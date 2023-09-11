@@ -30,12 +30,12 @@ const VigyaanForm = () => {
     Member2_name: "",
     Member2_email: "",
     Member2_yog: "",
-    Member2_whatsappno: "",
+    Member2_whatsapp: "",
     Member2_branch: "",
     Member3_name: "",
     Member3_email: "",
     Member3_yog: "",
-    Member3_whatsappno: "",
+    Member3_whatsapp: "",
     Member3_branch: "",
     Problem_code: "",
   };
@@ -60,7 +60,7 @@ const VigyaanForm = () => {
   const handleRemoveMember = () => {
     if (memberCount > 0) {
       form[`Member${memberCount + 1}_name`] = "";
-      form[`Member${memberCount + 1}_whatsappno`] = "";
+      form[`Member${memberCount + 1}_whatsapp`] = "";
       form[`Member${memberCount + 1}_email`] = "";
       form[`Member${memberCount + 1}_branch`] = "";
       form[`Member${memberCount + 1}_yog`] = "";
@@ -75,23 +75,23 @@ const VigyaanForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
 
-    if (e.target.name === "Leader_whatsapp") {
-      const phoneNumber = e.target.value;
-      if (!/^\d{10}$/.test(phoneNumber)) {
-        setPhoneNumberError("Enter a number of 10 digits only.");
-      } else {
-        setPhoneNumberError("");
-      }
-    }
+    // if (e.target.name === "Leader_whatsapp") {
+    //   const phoneNumber = e.target.value;
+    //   if (!/^\d{10}$/.test(phoneNumber)) {
+    //     setPhoneNumberError("Enter a number of 10 digits only.");
+    //   } else {
+    //     setPhoneNumberError("");
+    //   }
+    // }
 
-    if (e.target.name.endsWith("whatsappno")) {
-      const memberIndex = parseInt(e.target.name.match(/\d+/)[0]) - 1;
-      const memberPhoneNumbers = [...memberPhoneNumberValidations];
-      const memberPhoneNumber = e.target.value;
+    // if (e.target.name.endsWith("whatsappno")) {
+    //   const memberIndex = parseInt(e.target.name.match(/\d+/)[0]) - 1;
+    //   const memberPhoneNumbers = [...memberPhoneNumberValidations];
+    //   const memberPhoneNumber = e.target.value;
 
-      memberPhoneNumbers[memberIndex] = /^\d{10}$/.test(memberPhoneNumber);
-      setMemberPhoneNumberValidations(memberPhoneNumbers);
-    }
+    //   memberPhoneNumbers[memberIndex] = /^\d{10}$/.test(memberPhoneNumber);
+    //   setMemberPhoneNumberValidations(memberPhoneNumbers);
+    // }
 
     set(update);
     localStorage.setItem("vigyaanForm", JSON.stringify(update));
@@ -116,22 +116,22 @@ const VigyaanForm = () => {
         form.Member2_name !== "" &&
         form.Member2_email !== "" &&
         form.Member2_yog !== "" &&
-        form.Member2_whatsappno !== "" &&
+        form.Member2_whatsapp !== "" &&
         form.Member2_branch !== "" &&
         form.Problem_code !== "" &&
         form.file &&
-        memberPhoneNumberValidations.includes(true);
+        form.Member2_whatsapp.length === 10
 
       let condition2 = true;
-      if (memberCount == 2)
+      if (memberCount === 2) {
         condition2 =
           form.Member3_email !== "" &&
           form.Member3_name !== "" &&
-          form.Member3_whatsappno !== "" &&
-          form.Member3_whatsappno !== "" &&
+          form.Member3_whatsapp !== "" &&
+          form.Member3_whatsapp.length === 10 &&
           form.Member3_yog !== "" &&
-          form.Member3_branch !== "" &&
-          memberPhoneNumberValidations.includes(true);
+          form.Member3_branch !== "";
+      }
       if (condition1 && condition2) {
         try {
           const res = await axios.post(`${backend}/vigyaanReg`, form, {
@@ -145,7 +145,7 @@ const VigyaanForm = () => {
           alert(err.response.data.message);
         }
       } else {
-        alert("Please fill all the necessary details");
+        alert("Please fill all the necessary details correctly");
       }
     }
     setSubmit(false);
@@ -178,17 +178,17 @@ const VigyaanForm = () => {
           </li>
           <li>
             <input
-              name={`Member${i + 1}_whatsappno`}
+              name={`Member${i + 1}_whatsapp`}
               className="memberNumber"
               type="text"
               placeholder={`Member ${i} Whatsapp Number`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_whatsappno`]}
+              value={form[`Member${i + 1}_whatsapp`]}
             />
             <span style={{ fontSize: "0.7rem" }}>
               * Don't include +91 or 0.
             </span>
-            {!memberPhoneNumberValidations[i] && (
+            {form[`Member${i + 1}_whatsapp`] !== "" && form[`Member${i + 1}_whatsapp`].length !== 10 && (
               <p style={{ color: "red" }}>Enter a number of 10 digits only.</p>
             )}
           </li>
@@ -284,8 +284,8 @@ const VigyaanForm = () => {
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {phoneNumberError && (
-                    <p style={{ color: "red" }}>{phoneNumberError}</p>
+                  {form.Leader_whatsapp !== "" && form.Leader_whatsapp.length !== 10 && (
+                    <p style={{ color: "red" }}>Enter a number of 10 digits only.</p>
                   )}
                 </li>
                 <li data-aos="fade-down">

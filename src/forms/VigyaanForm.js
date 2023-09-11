@@ -468,7 +468,7 @@ const VigyaanForm = () => {
           <ul data-aos="fade-down">
             <li>
               <div className="item">
-                <h4 className="parent_category">10th September</h4>
+                <h4 className="parent_category">15th September</h4>
                 <h3 className="child_category" title="Black Yukata">
                   Reg & Abstract Submission
                 </h3>

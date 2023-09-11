@@ -6553,7 +6553,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background-color: rgba(0, 0, 0, 0.5); 
   }
 .custom-cursor {
-	cursor:url("./assets/images/cursor.svg"), auto;
+	cursor:url("./assets/images/cursor.svg") 10 10, auto;
 }
 
 .goodbtn{

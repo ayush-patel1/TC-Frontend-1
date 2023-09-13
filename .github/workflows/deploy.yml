@@ -30,7 +30,7 @@ jobs:
     - name: Generate PEM
       run: echo "$PEM" >> techno.pem && chmod 400 techno.pem
       env:
-        PEM: ${{vars.PEM}}
+        PEM: ${{secrets.PEM}}
 
     - name: Copy build folder contents to AWS
       run: scp -o StrictHostKeyChecking=no -i techno.pem -r build/* ec2-user@ec2-3-111-170-203.ap-south-1.compute.amazonaws.com:~/frontend

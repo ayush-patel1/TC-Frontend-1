@@ -68,7 +68,15 @@ Prepare models for early warning systems for earthquake - prone regions to minim
                 <h3>CIV14: Modeling Smart Road Systems. </h3>
 Prepare a model of smart road systems with integrated sensors and data analytics to enhance traffic management, safety and maintenance efficiency.
               </p>
+<p>
+               <h3>CIV15: Smart water distribution system</h3>
+               Water distribution technology today is old and becoming obsolete causing loss of
+water, time and money. Develop a smart water distribution system ensuring
+increased efficiency in the distribution of water with less maintenance and
+increased reliability.
 
+</p>
+             
 
 
 

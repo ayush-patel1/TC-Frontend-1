@@ -17,6 +17,7 @@ import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
 import SponsorsPage from "./pages/SponsorsPage";
 
 import StarFieldAnimation from "./layout/StarFieldAnimation";
+import TechTeam from "./pages/TechTeam";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -70,6 +71,7 @@ function App() {
                   element={<ProblemStatements />}
                 />
                 <Route exact="true" path="/sponsors" element={<SponsorsPage />} />
+                <Route exact="true" path="/tech-team" element={<TechTeam/>}/>
                 {/* <Route exact path="/ourjourney" element={<OurJourney />} /> */}
               </Routes>
               <Footer />

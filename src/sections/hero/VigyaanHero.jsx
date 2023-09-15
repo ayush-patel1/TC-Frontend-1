@@ -42,7 +42,8 @@ const VigyaanHero = () => {
           <div className="btncontainer2" style={{ display: "flex" }}>
             {/* <a href="#" className="funkybtn">Click Here To Register</a> */}
             <a className="cta2" onClick={scrollToRegistration} >
-              <span >CLICK TO REGISTER</span>
+              {/* <span >CLICK TO REGISTER</span> */}
+              <span >Registration Closed</span>
               <span >
                 <svg
                   width="66px"

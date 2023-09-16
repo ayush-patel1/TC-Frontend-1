@@ -8,6 +8,7 @@ import fb from "../assets/svgs/facebook.svg"
 import insta from "../assets/svgs/insta.svg"
 import linkedin from "../assets/svgs/linkedin.svg"
 import x from "../assets/svgs/x.svg"
+import yt from "../assets/svgs/youtube.svg"
 // import { AiFillFacebook } from 'react-icons/ai';
 // import { AiFillTwitterCircle } from 'react-icons/ai';
 // import { BsInstagram } from 'react-icons/bs';
@@ -53,6 +54,7 @@ function Footer (){
 								<a href="https://www.instagram.com/nitrr.aavartan/?hl=en" target='_blank' rel='noreferrer'><img width={30} src={insta} alt="" /></a>
 								<a href="https://in.linkedin.com/company/aavartan" target='_blank' rel='noreferrer'><img width={30} src={linkedin} alt="" /></a>
 								<a href="https://twitter.com/nitrr_aavartan" target='_blank' rel='noreferrer'><img width={32} src={x} alt="" /></a>
+								<a href="https://www.youtube.com/@AAVARTANNITRAIPUR" target='_blank' rel='noreferrer'><img width={32}  src={yt} alt=""/></a>
 							</div>
 						</div>
 					</div>

@@ -9,7 +9,7 @@ function TechTeamSec() {
     <div className={styles.Container}>
       <Title color={"TECH"} noncolor={"TEAM"} />
       <h4>
-      "Bringing Imagination to Life - Our Tech Team's Journey"</h4>
+      <span className={styles.begin}>"Bringing Imagination to Life -</span> Our Tech Team's Journey"</h4>
       <div className={styles.CardContainer}>
         {techteamList.map(item=>{
           return(

@@ -35,8 +35,8 @@
 }
 
 .cardText{
-    font-size: 25px;
-    color: rgba(255,255,255,.2);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.522);
 }
 
 .social{
@@ -49,7 +49,7 @@
 
 .icon, .cardTitle{
     color: #fff;
-    font-size: 38px;
+    font-size: 28px;
 }
 
 .icon:hover{

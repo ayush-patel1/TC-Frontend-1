@@ -6,7 +6,8 @@ import Title from "../components/Title";
 
 function TechTeamSec() {
   return (
-    <div className={styles.Container}>
+    <div className='Homescrolled' style={{position:"relative", zIndex:"-1"}}>
+    <div className={styles.Container} style={{position:"relative", zIndex:"0"}}>
       <Title color={"TECH"} noncolor={"TEAM"} />
       <h4>
       <span className={styles.begin}>"Bringing Imagination to Life -</span> Our Tech Team's Journey"</h4>
@@ -24,6 +25,7 @@ function TechTeamSec() {
           )
         })}
       </div>
+    </div>
     </div>
   );
 }

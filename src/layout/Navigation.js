@@ -123,10 +123,9 @@ const Navigation = ({ navigation, navigationToggle }) => {
                 {/* <div
                   target="_blank"
                   rel="noreferrer"
-                  onClick={}
-                >
                   Tech Team
                 </div> */}
+
               </p>
             </div>
             <div className="social_icons">

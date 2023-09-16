@@ -8,16 +8,19 @@ function TeamMemberCard(props) {
 
   useEffect(() => {
   
+    if (cardRef.current) {
       VanillaTilt.init(cardRef.current, {
         max: 12,
         speed: 300,
         glare: true,
         'max-glare': 0.2,
       });
-  
+    }
       return () => {
         
-         cardRef.current.vanillaTilt.destroy();
+        if (cardRef.current) {
+          cardRef.current.vanillaTilt.destroy();
+        }
   
       };
     }, []);

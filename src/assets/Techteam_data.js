@@ -40,6 +40,7 @@ export const techteamList = [
         instaUrl: "https://www.instagram.com/ankitklakra/",
         gmail:"",
         desi: "Core Coordinator"
+
     },
     {
         id: 4,
@@ -93,13 +94,13 @@ export const techteamList = [
     },
     {
       id: 9,
-      name: "Nehil Sahu",
-      imgUrl: Nehil_Sahu,
-      githubUrl:"https://github.com/Nehilsa2",
-      linkedinUrl: "https://www.linkedin.com/in/nehil-sahu-35811a1b7/",
-      instaUrl: "https://instagram.com/nehil_sahu?igshid=MzMyNGUyNmU2YQ==",
-      gmail:"nehilsahu281@gmail.com",
-      desi: "Executive"
+    name: "Nehil Sahu",
+    imgUrl: Nehil_Sahu,
+    githubUrl: "https://github.com/Nehilsa2",
+    linkedinUrl: "https://www.linkedin.com/in/nehil-sahu-35811a1b7/",
+    instaUrl: "https://instagram.com/nehil_sahu?igshid=MzMyNGUyNmU2YQ==",
+    gmail: "nehilsahu281@gmail.com",
+    desi: "Executive"
     },
     {
       id: 10,

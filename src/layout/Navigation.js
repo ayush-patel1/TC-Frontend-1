@@ -116,7 +116,11 @@ const Navigation = ({ navigation, navigationToggle }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Tech Team
+                  <Link to="/tech-team">
+                  <div onClick={() => navigationToggle(false)}>
+                    <span className="creative_link">Tech Team</span>
+                  </div>
+                </Link>
                 </div>
               </p>
             </div>

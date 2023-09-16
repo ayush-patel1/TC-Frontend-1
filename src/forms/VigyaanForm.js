@@ -235,7 +235,7 @@ const VigyaanForm = () => {
       style={{ position: "relative", zIndex: "0" }}
     >
       <div className="container small" style={{ paddingTop: "3rem" }}>
-        <div className="metaportal_fn_mintbox">
+        {/* <div className="metaportal_fn_mintbox">
           <div className="mint_left">
             <div className="mint_title">
               <span>REGISTER NOW</span>
@@ -298,13 +298,6 @@ const VigyaanForm = () => {
                     value={form.Leader_email}
                   />
                 </li>
-                {/* <li>
-                  <input
-                    id="teamSize"
-                    type="text"
-                    placeholder="Team Size (Max 3)"
-                  />
-                </li> */}
                 <li data-aos="fade-down">
                   <input
                     name="College"
@@ -463,7 +456,7 @@ const VigyaanForm = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="metaportal_fn_nft_cats">
           <ul data-aos="fade-down">
             <li>

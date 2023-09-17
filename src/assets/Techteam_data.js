@@ -34,13 +34,13 @@ export const techteamList = [
     {
         id: 3,
         name: "Ankit Kumar Lakra",
-       imgUrl: Ankit_Kumar_Lakra,
-       githubUrl:"https://github.com/ankitklakra",
-       linkedinUrl: "https://www.linkedin.com/in/ankitklakra/",
-       instaUrl: "https://www.instagram.com/ankitklakra/",
-       gmail:"",
-       desi: "Core Coordinator"
-       
+        imgUrl: Ankit_Kumar_Lakra,
+        githubUrl:"https://github.com/ankitklakra",
+        linkedinUrl: "https://www.linkedin.com/in/ankitklakra/",
+        instaUrl: "https://www.instagram.com/ankitklakra/",
+        gmail:"",
+        desi: "Core Coordinator"
+
     },
     {
         id: 4,
@@ -74,6 +74,16 @@ export const techteamList = [
     },
     {
       id: 7,
+      name: "Karan Singh",
+      imgUrl: Karan_Singh,
+      githubUrl:"https://github.com/Karan741187",
+      linkedinUrl: "https://www.linkedin.com/in/karan-singh-037194260/",
+      instaUrl: "#",
+      gmail:"",
+      desi: "Executive"
+    },
+    {
+      id: 8,
       name: "Mayank Sahu",
       imgUrl: Mayank_Sahu,
       githubUrl:"https://github.com/student-mayank",
@@ -83,33 +93,23 @@ export const techteamList = [
       desi: "Executive"
     },
     {
-      id: 8,
-      name: "Nehil Sahu",
-      imgUrl: Nehil_Sahu,
-      githubUrl:"https://github.com/Nehilsa2",
-      linkedinUrl: "https://www.linkedin.com/in/nehil-sahu-35811a1b7/",
-      instaUrl: "https://instagram.com/nehil_sahu?igshid=MzMyNGUyNmU2YQ==",
-      gmail:"nehilsahu281@gmail.com",
-      desi: "Executive"
+      id: 9,
+    name: "Nehil Sahu",
+    imgUrl: Nehil_Sahu,
+    githubUrl: "https://github.com/Nehilsa2",
+    linkedinUrl: "https://www.linkedin.com/in/nehil-sahu-35811a1b7/",
+    instaUrl: "https://instagram.com/nehil_sahu?igshid=MzMyNGUyNmU2YQ==",
+    gmail: "nehilsahu281@gmail.com",
+    desi: "Executive"
     },
     {
-      id: 9,
+      id: 10,
       name: "Prabhat Sharma",
       imgUrl: Prabhat_Sharma,
       githubUrl:"https://github.com/probot-codes",
       linkedinUrl: "https://www.linkedin.com/in/prabhatsharma2508/",
       instaUrl: "https://www.instagram.com/prabhat_sharma2508/",
       gmail:"ps25082005@gmail.com",
-      desi: "Executive"
-    },
-    {
-      id: 10,
-      name: "Karan Singh",
-      imgUrl: Karan_Singh,
-      githubUrl:"https://github.com/Karan741187",
-      linkedinUrl: "https://www.linkedin.com/in/karan-singh-037194260/",
-      instaUrl: "#",
-      gmail:"",
       desi: "Executive"
     },
     /*{

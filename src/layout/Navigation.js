@@ -1,11 +1,14 @@
 import { Fragment} from "react";
+// import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { navigationToggle } from "../redux/actions/siteSettings";
 import { Link } from "react-router-dom";
+// import TechTeam from "./pages/TechTeam";
 import fb from "../assets/svgs/facebook.svg"
 import insta from "../assets/svgs/insta.svg"
 import linkedin from "../assets/svgs/linkedin.svg"
 import x from "../assets/svgs/x.svg"
+import yt from "../assets/svgs/youtube.svg"
 // import {BsInstagram, BsFacebook} from 'react-icons/bs';
 import '../App.css'
 const Navigation = ({ navigation, navigationToggle }) => {
@@ -112,16 +115,17 @@ const Navigation = ({ navigation, navigationToggle }) => {
             <div className="copyright">
               <p>
                 Made With MAGIC by <br />
-                <div
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Link to="/tech-team">
+                <Link to="/tech-team">
                   <div onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Tech Team</span>
                   </div>
                 </Link>
-                </div>
+                {/* <div
+                  target="_blank"
+                  rel="noreferrer"
+                  Tech Team
+                </div> */}
+
               </p>
             </div>
             <div className="social_icons">
@@ -160,6 +164,12 @@ const Navigation = ({ navigation, navigationToggle }) => {
                     <BsTelegram/>
                   </a>
                 </li> */}
+                <li>
+                  <a href="https://www.youtube.com/@AAVARTANNITRAIPUR">
+                    {/* <BsInstagram/> */}
+                    <img src={yt} width={24} alt="" />
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

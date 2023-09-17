@@ -1,42 +1,26 @@
 import React from "react";
-import Title from "../components/Title";
-import videoBg from "../assets/videos/tshirt.webm";
-import styles from "./Merchandise.module.css";
 
-const Merchandise = () => {
-
-    const videostyles = {
-        // position:"absolute",
-        // top:"0",
-        // left:"0",
-        // width:"100%",
-        // height:"100%",
-        // objectFit:"cover",
-        width:"100%"
-      }
-  return (
-    <div className="container collectionContainer" style={{paddingBottom:"3rem"}}>
-      <Title color={"OUR"} noncolor={"MERCHANDISE"} />
-      <div className={styles.MerchSection}>
-      <div className={styles.discription}>
-      <div  className="fn_cs_desc">
+export const RecruitForm = ()=>{
+    const styleObj={
+        display:"flex",
+        justifyContent:"center",
+        alignItems:"center",
+    }
+    return(
+        <div  className="fn_cs_join fn_cs_desc">
+            <h2>VOLUNTEER RECRUITMENT FOR AAVARTAN'23-24
+</h2>
           <p>
-          Slay the college fest season in a Techy look and embrace the engineer within you! ✨
+            <br />
+"Unlock Your Potential with Team Technocracy: Ignite change, shape the future!" 🚀🌟
 
-Tech would flow through your blood and come out through your sweat as  Team Technocracy launches its very own Merchandise for you all! 🚀 
+Ready to make an impact? Team Technocracy needs driven individuals like you! As a volunteer, you can use your unique skills to shape the future and gain an insight into sponsorship, marketing, management and more.
 
-Be a part of the gigantic Tech Fest AAVARTAN'23-24 (Cosmoscape) and have some imprints of it on yourselves! 
+Your dedication powers our mission. Join a network of change-makers who are committed to innovation and transformation. Be a catalyst for a brighter future. 🌟🚀
 
-The comfortable and trendy attire awaits you! Hurry up and Order now through the given link! 🔗
-<br />
- Last date to Order: 
-<br />
-Price:
-
-          </p>
-          <div className="btn-container" style={{ display: "flex" }}>
-                 <a className="cta" href="">
-                <span>BUY NOW</span>
+ <div className="btn-container" style={styleObj}>
+                 <a className="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSduqtATM9iIy1tzIHnACS0J-3GJw7c1Wi2kxw7ajrpcnOgyGw/viewform?vc=0&c=0&w=1&flr=0">
+                <span>REGISTER</span>
                 <span>
                   <svg
                     width="66px"
@@ -71,31 +55,10 @@ Price:
                 </span>
               </a>
               </div>
-        </div>
-      </div>
-      <div className={styles.MerchContainer}>
-      <div data-aos="fade-up" className="container">
-        <div className="fn_cs_news container">
-          <div className="news_part">
-            <div className="left_items" style={{ margin: "0" }}>
-              <div className="blog__item">
-                <video autoPlay muted loop style={videostyles}>
-                  <source src={videoBg} type="video/webm" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.MerchButtons}>
-        <div className={styles.merch}>T-Shirt</div>
-        <div className={styles.merch}>Hoodie</div>
-      </div>
-      </div>
-      </div>
-    </div>
-  );
-};
+<br />
+🕛 Deadline: 20/09/2023
 
-export default Merchandise;
+          </p>
+        </div>
+    )
+}

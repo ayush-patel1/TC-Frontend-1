@@ -1,0 +1,26 @@
+.recimage{
+    width:90%;
+    height:100vh;
+    margin-top:2rem;
+}
+@media screen and (max-width:517px) {
+    .recimage{
+        height:80vh;
+    }
+}
+@media screen and (max-width:478px) {
+    .recimage{
+        height:60vh;
+    }
+}
+@media screen and (max-width:375px) {
+    .recimage{
+        height:40vh;
+    }
+}
+@media screen and (max-width:269px) {
+    .recimage{
+        height:30vh;
+        width: 100%;
+    }
+}

@@ -6,7 +6,7 @@ import FullPageLoader from '../layout/FullPageLoader';
 import About from '../components/About';
 import Timeline from '../sections/Timeline';
 import FloatingImage from '../sections/FloatingImage';
-import { RecruitForm } from '../components/Recruitment';
+// import { RecruitForm } from '../components/Recruitment';
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,7 +27,7 @@ const Homepage = () => {
           <FloatingImage/>
           {/* <HomeHero /> */}
           <div className="HomeContainer" style={{position:"relative", zIndex:"2"}}>
-            <RecruitForm/>
+            {/* <RecruitForm/> */}
             <About/>
             <Timeline/>
             <Faq />

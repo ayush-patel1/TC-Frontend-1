@@ -1,6 +1,7 @@
 .MerchSection{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
     gap: 20px;
 }
 
@@ -43,4 +44,18 @@
     .description{
         margin: auto 20px;
     }
+}
+
+.Merchimage{
+    width: 350px;
+    height: 400px;
+    margin-top:2rem;
+}
+
+@media(max-width: 900px){
+    .Merchimage{
+       width: 260px;
+       height: 320px;
+    }
+    
 }

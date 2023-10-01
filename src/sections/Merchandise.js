@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../components/Title";
 import videoBg from "../assets/videos/tshirt.webm";
 import styles from "./Merchandise.module.css";
-
+import MerchIMG from "../assets/aavartan_images/MerchandiseIMG.webp"
 const Merchandise = () => {
 
     const videostyles = {
@@ -31,11 +31,11 @@ The comfortable and trendy attire awaits you! Hurry up and Order now through the
 <br />
  Last date to Order: 
 <br />
-Price:
+Price: Rs 350
 
           </p>
           <div className="btn-container" style={{ display: "flex" }}>
-                 <a className="cta" href="">
+                 <a className="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScJgWhzPO5QMSWxAml2-Y8K9ob6QWCFvyTwxDNbPZcC-LCmRg/viewform">
                 <span>BUY NOW</span>
                 <span>
                   <svg
@@ -73,6 +73,7 @@ Price:
               </div>
         </div>
       </div>
+      <img src={MerchIMG} className={styles.Merchimage} alt="" />
       <div className={styles.MerchContainer}>
       <div data-aos="fade-up" className="container">
         <div className="fn_cs_news container">

@@ -89,6 +89,13 @@ const Navigation = ({ navigation, navigationToggle }) => {
                 </Link>
               </li>
               <li>
+                <Link to="/aavartan">
+                  <div onClick={() => navigationToggle(false)}>
+                    <span className="creative_link">Merchandise</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
               <Link to="/team">
                   <div onClick={() => navigationToggle(false)}>
                     <span className="creative_link">Team</span>

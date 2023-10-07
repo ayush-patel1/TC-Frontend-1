@@ -89,10 +89,10 @@ Price: Rs 350
           </div>
         </div>
       </div>
-      <div className={styles.MerchButtons}>
+      {/*<div className={styles.MerchButtons}>
         <div className={styles.merch}>T-Shirt</div>
         <div className={styles.merch}>Hoodie</div>
-      </div>
+  </div>*/}
       </div>
       </div>
     </div>

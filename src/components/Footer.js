@@ -57,6 +57,9 @@ function Footer (){
 								<a href="https://www.youtube.com/@AAVARTANNITRAIPUR" target='_blank' rel='noreferrer'><img width={32}  src={yt} alt=""/></a>
 							</div>
 						</div>
+						<div className={styles.techTeam} >
+						<a href="/tech-team">Made With <span className={styles.magic}>MAGIC</span> by Tech Team</a>
+						</div>
 					</div>
 				</div>
 			</footer>

@@ -18,6 +18,10 @@ import SponsorsPage from "./pages/SponsorsPage";
 
 import StarFieldAnimation from "./layout/StarFieldAnimation";
 import TechTeam from "./pages/TechTeam";
+import BlogPage from "./pages/BlogPage";
+import BlogSinglePage from "./pages/BlogSinglePage";
+import EventPage from "./pages/EventPage";
+import Event1Page from "./pages/Event1Page";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -53,6 +57,10 @@ function App() {
               <Routes>
                 <Route exact="true" path="/" element={<Homepage />} />
                 <Route exact="true" path="/aavartan" element={<Aavartan />} />
+                <Route exact="true" path="/blog-single" element={<BlogSinglePage />} />
+                <Route exact="true" path="/blog" element={<BlogPage />} />
+                <Route exact="true" path="/events" element={<EventPage />} />
+                <Route exact="true" path="/event1" element={<Event1Page />} />
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

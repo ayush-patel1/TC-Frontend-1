@@ -1992,7 +1992,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	margin: 0;
 }
 .blog__item .title{
-	margin-bottom: 30px;
+	margin: 10px;
 }
 .blog__item .title h3{
 	margin: 0;
@@ -2008,10 +2008,10 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	text-transform: uppercase;
 	letter-spacing: .5px;
 	color: var(--bc);
-	padding-left: 100px;
+	padding-left: 20px;
 	position: relative;
 }
-.blog__item .read_more a:after{
+/* .blog__item .read_more a:after{
 	left: 0;
 	width: 100px;
 	height: 1px;
@@ -2020,7 +2020,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	top: 50%;
 	background-color: #8d898e;
 	transition: all .3s ease;
-}
+} */
 .blog__item .read_more span{
 	opacity: 0;
 	transition: opacity .3s ease,transform .3s ease;
@@ -4650,6 +4650,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	width: 100%;
 	min-width: 100%;
 	display: block;
+	color:white;
 }
 .metaportal_fn_comments .comment-form input[type="text"]{
 	height: 80px;

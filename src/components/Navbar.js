@@ -56,6 +56,11 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
                                 HOME
                             </NavLink>
                         </li>
+                        <li className={activeLink === "/events" ? "active-link" : ""}>
+                            <NavLink to="/events" activeclassname="active-link" onClick={closeNavbar}>
+                                EVENTS
+                            </NavLink>
+                        </li>
                         <li className={activeLink === "/aavartan" ? "active-link" : ""}>
                             <NavLink to="/aavartan" activeclassname="active-link" onClick={closeNavbar}>
                                 AAVARTAN

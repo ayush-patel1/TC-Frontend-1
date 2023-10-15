@@ -29,6 +29,7 @@ const Homepage = () => {
           <div className="HomeContainer" style={{position:"relative", zIndex:"2"}}>
             {/* <RecruitForm/> */}
             <About/>
+            {/* <Blog/> */}
             <Timeline/>
             <Faq />
           </div>

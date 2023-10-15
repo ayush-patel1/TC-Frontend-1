@@ -27,7 +27,7 @@ function TeamMemberCard(props) {
 
   return (
     <>
-    <div ref={cardRef} className={styles.card}>
+<div ref={cardRef} className={styles.card}>
         <img src={props.imgSrc} className={styles.cardImage} alt="..." />
         <div className={styles.cardBody}>
           <div className={styles.cardTitle}>{props.name}</div>

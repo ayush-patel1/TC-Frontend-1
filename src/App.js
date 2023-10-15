@@ -22,6 +22,7 @@ import BlogPage from "./pages/BlogPage";
 import BlogSinglePage from "./pages/BlogSinglePage";
 import EventPage from "./pages/EventPage";
 import EventFormPage from "./pages/EventFormPage";
+import TerrainTreaderForm from "./forms/TerrainTreaderForm";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -61,6 +62,7 @@ function App() {
                 <Route exact="true" path="/blog" element={<BlogPage />} />
                 <Route exact="true" path="/events" element={<EventPage />} />
                 <Route exact="true" path="/event-form" element={<EventFormPage />} />
+                <Route exact="true" path="/events/terrainTreaderForm" element={<TerrainTreaderForm />} />
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

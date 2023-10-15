@@ -1,14 +1,16 @@
+import event1 from '../assets/eventsPoster/terrainTreader2.png'
 import coming_soon from '../assets/images/cs.jpg'
 
 export const EventsList = [
     {
       id: 1,
-      name: "Event One",
-      imgUrl: coming_soon,
-      date:"Coming Soon",
-      time:"Coming Soon",
-      venue:"Coming Soon",
-      des: "Coming Soon"
+      name: "TERRAIN TREADER",
+      imgUrl: event1,
+      date:"28th Oct",
+      time:"12 P.M.",
+      venue:"Front Of CCD",
+      des: "Life is full of hurdles, and so is Terrain Treader 2.0 . Imagine crafting your own bots, unleashing them into a maze of challenges.",
+      link:"/events/terrainTreaderForm"
     },
     {
       id: 2,

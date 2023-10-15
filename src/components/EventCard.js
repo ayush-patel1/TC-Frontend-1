@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import styles from "./EventCard.module.css";
+import { Link } from "react-router-dom";
 
 function EventCard(props) {
   const cardRef = useRef(null);
@@ -23,6 +24,7 @@ function EventCard(props) {
 
   return (
     <>
+        <Link style={{textDecoration:"none"}} to={props.link}>
       <div ref={cardRef} className={styles.card}>
         <img src={props.imgSrc} className={styles.cardImage} alt="..." />
         <div className={styles.cardBody}>
@@ -42,6 +44,7 @@ function EventCard(props) {
           </div>
         </div>
       </div>
+      </Link>
     </>
   );
 }

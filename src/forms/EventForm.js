@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import urls from "../urls.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Title from "../components/Title";
 
 const backend = urls.backend;
 
@@ -233,6 +234,7 @@ const EventForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop:"5rem" }}
     >
+        <Title color={"Event"} noncolor={"Name"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">

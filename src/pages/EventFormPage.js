@@ -1,7 +1,7 @@
 import React from "react";
 import EventForm from "../forms/EventForm";
 
-const Event1Page = ()=>{
+const EventFormPage = ()=>{
     return(
         <>
         <EventForm/>
@@ -9,4 +9,4 @@ const Event1Page = ()=>{
     )
 }
 
-export default Event1Page;
+export default EventFormPage;

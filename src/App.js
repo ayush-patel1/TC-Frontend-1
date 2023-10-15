@@ -21,7 +21,7 @@ import TechTeam from "./pages/TechTeam";
 import BlogPage from "./pages/BlogPage";
 import BlogSinglePage from "./pages/BlogSinglePage";
 import EventPage from "./pages/EventPage";
-import Event1Page from "./pages/Event1Page";
+import EventFormPage from "./pages/EventFormPage";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -60,7 +60,7 @@ function App() {
                 <Route exact="true" path="/blog-single" element={<BlogSinglePage />} />
                 <Route exact="true" path="/blog" element={<BlogPage />} />
                 <Route exact="true" path="/events" element={<EventPage />} />
-                <Route exact="true" path="/event1" element={<Event1Page />} />
+                <Route exact="true" path="/event-form" element={<EventFormPage />} />
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

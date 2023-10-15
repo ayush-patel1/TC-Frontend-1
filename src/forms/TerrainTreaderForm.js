@@ -141,12 +141,13 @@ const TerrainTreaderForm = () => {
                 </li>
               </ul>
             </div>
-            <ReCAPTCHA sitekey={process.env.REACT_APP_CODE} />
+            {/* <ReCAPTCHA sitekey={process.env.REACT_APP_CODE} /> */}
+            <ReCAPTCHA sitekey='6Lec8aMoAAAAAICLvUtNen73ofGbIZ' />
             <div className="mint_desc" style={{ paddingTop: "4rem" }}>
-              <ReCAPTCHA
+              {/* <ReCAPTCHA
                 sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
                 ref={recaptchaRef}
-              />
+              /> */}
               {!isSubmitting ? (
                 <div
                   target="_blank"

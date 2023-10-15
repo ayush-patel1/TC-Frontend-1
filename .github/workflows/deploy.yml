@@ -24,6 +24,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Generate keys.json file
+      run: echo "$KEYS" >> ./src/keys.json
+      env:
+        KEYS: ${{secrets.KEYS}}
+
     - name: Build
       run: npm run build
       

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { React, useEffect, useState } from "react";
 import { connect } from "react-redux";
-import urls from "../urls.json";
+import urls from "../keys.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";

@@ -1,18 +1,16 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
-import urls from "../urls.json";
+import keys from "../keys.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/terrainTreader.docx";
-import ReCAPTCHA from "react-google-recaptcha";
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
-const backend = urls.backend;
+const backend = keys.backend;
 
 const TerrainTreaderForm = () => {
-  console.log(process.env.REACT_APP_CODE);
-  const recaptchaRef = useRef();
   useEffect(() => {
     AOS.init();
   }, []);
@@ -35,11 +33,27 @@ const TerrainTreaderForm = () => {
     localStorage.setItem("terrainTreaderForm", JSON.stringify(update));
   };
 
+  const [token, setToken] = useState(null);
+  const captchaRef = useRef(null);
+
+  const onLoad = () => {
+    // this reaches out to the hCaptcha JS API and runs the
+    // execute function on it. you can use other functions as
+    // documented here:
+    // https://docs.hcaptcha.com/configuration#jsapi
+    captchaRef.current.execute();
+  };
+
+  useEffect(() => {
+    if (token)
+      console.log(`hCaptcha Token: ${token}`);
+  }, [token]);
+
   const submit = async () => {
-    const recaptchaValue = recaptchaRef.current.getValue();
+    // const recaptchaValue = recaptchaRef.current.getValue();
     // Send the recaptchaValue along with the form data to your server for verification.
+    if (!token) return;
     setSubmit(true);
-    console.log(form);
     let condition =
       form.Team_name !== "" &&
       form.Leader_name !== "" &&
@@ -64,6 +78,10 @@ const TerrainTreaderForm = () => {
     }
     setSubmit(false);
   };
+
+  const onVerifyCaptcha = () => {
+
+  }
 
   return (
     <div
@@ -141,8 +159,12 @@ const TerrainTreaderForm = () => {
                 </li>
               </ul>
             </div>
-            {/* <ReCAPTCHA sitekey={process.env.REACT_APP_CODE} /> */}
-            <ReCAPTCHA sitekey='6Lec8aMoAAAAAICLvUtNen73ofGbIZ' />
+            <HCaptcha
+              sitekey={keys.hcaptcha}
+              onLoad={onLoad}
+              onVerify={setToken}
+              ref={captchaRef}
+            />
             <div className="mint_desc" style={{ paddingTop: "4rem" }}>
               {/* <ReCAPTCHA
                 sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"

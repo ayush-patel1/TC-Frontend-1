@@ -1,6 +1,6 @@
 
 .card{
-    width: 500px;
+    width: 300px;
     /* height: 500px; */
     cursor: pointer;
     background-color: rgba(255,255,255,.01);
@@ -27,7 +27,7 @@
 
 
 .cardBody{
-    margin-top: -50px;
+    margin-top: -120px;
     color: #fff;
     font-weight: bold;
     display: flex;
@@ -66,7 +66,7 @@
 }
 
 .cardText{
-    font-size: 20px;
+    font-size: 17px;
     font-weight:200;
     color: rgba(255, 255, 255, 0.522);
     margin: 1rem 0;
@@ -74,7 +74,7 @@
 
 .cardTitle{
     color: #fff;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 @media (max-width:1200px) {

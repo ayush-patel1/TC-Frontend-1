@@ -1,10 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import {
-  BiLogoGithub,
-  BiLogoLinkedinSquare,
-  BiLogoGmail,
-  BiLogoInstagram,
-} from "react-icons/bi";
 import VanillaTilt from "vanilla-tilt";
 import styles from "./EventCard.module.css";
 

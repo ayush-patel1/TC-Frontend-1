@@ -1,4 +1,4 @@
-import event1 from '../assets/eventsPoster/terrainTreader2.png'
+import event1 from '../assets/eventsPoster/terrainTreader2.webp'
 import coming_soon from '../assets/images/cs.jpg'
 
 export const EventsList = [

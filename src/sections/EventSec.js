@@ -6,7 +6,7 @@ import Title from "../components/Title";
 
 function EventSec() {
   return (
-    <div className='Homescrolled' style={{position:"relative", zIndex:"-1"}}>
+    <div className='Homescrolled' style={{position:"relative", zIndex:"-1", paddingTop:"5rem"}}>
     <div className={styles.Container} style={{position:"relative", zIndex:"0"}}>
       <Title color={"Events"} noncolor={""} />
       <div className={styles.CardContainer}>

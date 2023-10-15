@@ -1,15 +1,17 @@
 import axios from "axios";
-import { React, useEffect, useState } from "react";
+import { React, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import urls from "../urls.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/terrainTreader.docx";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const backend = urls.backend;
 
 const TerrainTreaderForm = () => {
+  const recaptchaRef = useRef();
   useEffect(() => {
     AOS.init();
     console.log(cachedForm);
@@ -99,6 +101,8 @@ const TerrainTreaderForm = () => {
   };
 
   const submit = async () => {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    // Send the recaptchaValue along with the form data to your server for verification.
     setSubmit(true);
     console.log(form);
     if (memberCount < 1) {
@@ -384,6 +388,10 @@ const TerrainTreaderForm = () => {
               </label>
             </div>
             <div className="mint_desc" style={{ paddingTop: "4rem" }}>
+              <ReCAPTCHA
+                sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
+                ref={recaptchaRef}
+              />
               {!isSubmitting ? (
                 <div
                   target="_blank"
@@ -448,22 +456,26 @@ const TerrainTreaderForm = () => {
                   1. The competition is based on time, performance and
                   perfection trail system. There will a qualifying round for
                   each team.
-                  <br /><br /> 2. The top team from qualifying round makes it to the
+                  <br />
+                  <br /> 2. The top team from qualifying round makes it to the
                   final round on basis of time trials.
-                  <br /><br /> 3. 2 hand touches are allowed without any penalty after
+                  <br />
+                  <br /> 3. 2 hand touches are allowed without any penalty after
                   that there will be penalty of 7 sec for each hand touch,
                   penalty time will be added further too overall time required
                   by robot for completion of specified round.
-                  <br /><br /> 4. If any of the robots starts off before start up
+                  <br />
+                  <br /> 4. If any of the robots starts off before start up
                   call, the counter would be restarted and the machines will get
                   a second chance.
-                  
-                  <br /><br /> 5. Your robot must be ready when call is made for your
+                  <br />
+                  <br /> 5. Your robot must be ready when call is made for your
                   team.
-                  <br /><br /> 6. Machine must not contain any readymade kits,
+                  <br />
+                  <br /> 6. Machine must not contain any readymade kits,
                   pneumatic & hydraulic systems, IC engines.
-                 <br /> <br /> 7. Decision about your robot will be taken by the
-                  organizers.
+                  <br /> <br /> 7. Decision about your robot will be taken by
+                  the organizers.
                 </p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>

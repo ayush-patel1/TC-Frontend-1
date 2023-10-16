@@ -1,5 +1,6 @@
 import event1 from '../assets/eventsPoster/terrainTreader2.webp'
 import event2 from '../assets/eventsPoster/roboSoccer.webp'
+import event3 from '../assets/eventsPoster/bgmi.webp'
 import coming_soon from '../assets/images/cs.jpg'
 
 export const EventsList = [
@@ -25,12 +26,13 @@ export const EventsList = [
     },
     {
       id: 3,
-      name: "Event Three",
-      imgUrl: coming_soon,
-      date:"Coming Soon",
-      time:"Coming Soon",
-      venue:"Coming Soon",
-      des: "Coming Soon"
+      // name: "BGMI Tournament",
+      imgUrl: event3,
+      date:"27-28th Oct",
+      time:"12 P.M.",
+      venue:"Online",
+      des: "Enter a digital realm where bullets meet anime magic – the BGMI Tournament awaits!",
+      link:"/events/bgmiForm"
     },
     {
       id: 4,

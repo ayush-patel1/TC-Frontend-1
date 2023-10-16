@@ -461,25 +461,25 @@ const VigyaanForm = () => {
           <ul data-aos="fade-down">
             <li>
               <div className="item">
-                <h4 className="parent_category">15th September</h4>
-                <h3 className="child_category" title="Black Yukata">
-                  Reg & Abstract Submission
-                </h3>
-              </div>
-            </li>
-            <li>
-              <div className="item">
                 <h4 className="parent_category">27th & 28th September</h4>
-                <h3 className="child_category" title="Daydreaming">
-                  Presentation Round
+                <h3 className="child_category" title="Black Yukata">
+                Presentation Round
                 </h3>
               </div>
             </li>
             <li>
               <div className="item">
-                <h4 className="parent_category">23rd October(Tentative)</h4>
+                <h4 className="parent_category">25-26 October</h4>
+                <h3 className="child_category" title="Daydreaming">
+                Prototype Round
+                </h3>
+              </div>
+            </li>
+            <li>
+              <div className="item">
+                <h4 className="parent_category">28-29 October</h4>
                 <h3 className="child_category" title="Fireflies, Smoke">
-                  Prototype Round
+                Exhibition
                 </h3>
               </div>
             </li>

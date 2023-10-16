@@ -1,4 +1,5 @@
 import event1 from '../assets/eventsPoster/terrainTreader2.webp'
+import event2 from '../assets/eventsPoster/roboSoccer.webp'
 import coming_soon from '../assets/images/cs.jpg'
 
 export const EventsList = [
@@ -14,12 +15,13 @@ export const EventsList = [
     },
     {
       id: 2,
-      name: "Event Two",
-      imgUrl: coming_soon,
-      date:"Coming Soon",
-      time:"Coming Soon",
-      venue:"Coming Soon",
-      des: "Coming Soon"
+      name: "Robo Soccer",
+      imgUrl: event2,
+      date:"29th Oct",
+      time:"12 P.M.",
+      venue:"Front Of CCD",
+      des: "Where Champions Are Forged in the Fires of Innovation!",
+      link:"/events/roboSoccerForm"
     },
     {
       id: 3,

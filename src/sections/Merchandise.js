@@ -15,7 +15,7 @@ const Merchandise = () => {
         width:"100%"
       }
   return (
-    <div className="container collectionContainer" style={{paddingBottom:"3rem"}}>
+    <div className="container collectionContainer" style={{paddingBottom:"3rem", zIndex:"20"}}>
       <Title color={"OUR"} noncolor={"MERCHANDISE"} />
       <div className={styles.MerchSection}>
       <div className={styles.discription}>

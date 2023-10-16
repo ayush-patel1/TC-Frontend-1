@@ -45,8 +45,10 @@ const TerrainTreaderForm = () => {
   };
 
   useEffect(() => {
-    if (token)
-      console.log(`hCaptcha Token: ${token}`);
+    if (token) {
+      console.log('Captcha verified')
+    }
+      // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {

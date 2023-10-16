@@ -2,7 +2,7 @@
   "name": "tc-frontend2",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "https://technocracy.nitrr.ac.in/backend",
   "dependencies": {
     "@hcaptcha/react-hcaptcha": "^1.8.1",
     "@testing-library/jest-dom": "^5.17.0",

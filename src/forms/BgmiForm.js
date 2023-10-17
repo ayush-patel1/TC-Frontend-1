@@ -7,6 +7,7 @@ import Title from "../components/Title";
 import docs from "../assets/eventsAssets/bgmi.docx";
 import keys from "../keys.json";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import qr from "../assets/eventsAssets/bgmiQr.jpeg"
 
 const backend = keys.backend;
 
@@ -166,6 +167,9 @@ const BgmiForm = () => {
                   />
                 </li>
               </ul>
+            </div>
+            <div>
+              <img src={qr} width="100%" alt="" />
             </div>
             <HCaptcha
               sitekey={keys.hcaptcha}

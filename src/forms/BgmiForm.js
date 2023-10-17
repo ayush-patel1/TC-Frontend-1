@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/bgmi.docx";
 import keys from "../keys.json";
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
@@ -20,7 +20,7 @@ const BgmiForm = () => {
     Leader_name: "",
     Leader_whatsapp: "",
     Leader_branch: "",
-    Leader_yog: ""
+    Leader_yog: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -46,9 +46,9 @@ const BgmiForm = () => {
 
   useEffect(() => {
     if (token) {
-      console.log('Captcha verified')
+      console.log("Captcha verified");
     }
-      // console.log(`hCaptcha Token: ${token}`);
+    // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
@@ -69,11 +69,15 @@ const BgmiForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=terrainTreader`, form, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await axios.post(
+          `/server/register?event=terrainTreader`,
+          form,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -85,9 +89,7 @@ const BgmiForm = () => {
     setSubmit(false);
   };
 
-  const onVerifyCaptcha = () => {
-
-  }
+  const onVerifyCaptcha = () => {};
 
   return (
     <div
@@ -196,70 +198,65 @@ const BgmiForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Terrain Treader</h4>
+                <h4>BGMI</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
+                <p>1. All games will be a Battle Royal. (Team size =5)</p>
                 <p>
-                  1. This is racing event so fastest and most balanced robot
-                  will win.
-                </p>
-                <p>2. Robot should be as per the given specifications.</p>
-                <p>
-                  3. Each team can have maximum 3 members. (Students from
-                  different branches can form a team)
+                  2. All players must have the latest version of BGMI installed
+                  on their device and all the classic maps should be downloaded.
                 </p>
                 <p>
-                  4. The robot must not leave behind any of its parts during the
-                  run; else it will result in deduction in points.
+                  3. Players must have a BGMI account eligible for competitive
+                  games in order to compete. This same account must be used for
+                  all matches during the competition.
                 </p>
                 <p>
-                  5. No any AC/DC power supply will be provided at the sight of
-                  play.
+                  4. If a player receives a ban due to in-game behaviour or
+                  Terms of Services violation, that player is not eligible to
+                  participate further. This applies to all accounts owned by a
+                  player, not just their registered account. The judges have
+                  right to include or discount bans on a case-tocase basis.
                 </p>
                 <p>
-                  6. Unethical behaviour could lead to disqualification.
-                  Faculty-coordinators have all the rights to take final
-                  decision for any matter during the event.
+                  5. Teams are responsible for being aware of any player's loss
+                  of eligibility for any reason, and must take appropriate
+                  proactive action to change their roster or otherwise notify
+                  organising team of any such loss of eligibility
                 </p>
-                <p>7. Judge's decision will be considered final.</p>
-                <p>8. Certificates will be given to all the participants.</p>
               </div>
               <div
                 data-aos="fade-down"
                 style={{ paddingTop: "2rem" }}
                 className="mint_time"
               >
-                <h4>PROCEDURES</h4>
-                <h3 className="metaportal_fn_countdown">PHASES IN THE EVENT</h3>
+                <h4>BGMI</h4>
+                <h3 className="metaportal_fn_countdown">ROSTER REQUIREMENTS</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. The competition is based on time, performance and
-                  perfection trail system. There will a qualifying round for
-                  each team.
+                  Each Team must maintain, at all times during any Official
+                  Competition, exactly four players plus one optional
+                  substitute.
                   <br />
-                  <br /> 2. The top team from qualifying round makes it to the
-                  final round on basis of time trials.
                   <br />
-                  <br /> 3. 2 hand touches are allowed without any penalty after
-                  that there will be penalty of 7 sec for each hand touch,
-                  penalty time will be added further too overall time required
-                  by robot for completion of specified round.
+                  Each Team must designate one player as its captain when
+                  completing the online registration process ("Team Captain").
                   <br />
-                  <br /> 4. If any of the robots starts off before start up
-                  call, the counter would be restarted and the machines will get
-                  a second chance.
                   <br />
-                  <br /> 5. Your robot must be ready when call is made for your
-                  team.
+                  The Team Captain will be responsible for all Team
+                  communications with Tournament Officials.
                   <br />
-                  <br /> 6. Machine must not contain any readymade kits,
-                  pneumatic & hydraulic systems, IC engines.
-                  <br /> <br /> 7. Decision about your robot will be taken by
-                  the organizers.
+                  <br />
+                  The Tournament Officials may rely upon any communications from
+                  the Team Captain as being made by all players on the Team.
+                  <br />
+                  <br />
+                  The Team Captain must at all times be a player on the Team's
+                  roster.
                 </p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>

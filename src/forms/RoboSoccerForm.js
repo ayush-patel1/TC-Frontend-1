@@ -20,7 +20,8 @@ const RoboSoccerForm = () => {
     Team_name: "",
     Leader_name: "",
     Leader_whatsapp: "",
-    Leader_branch: ""
+    Leader_branch: "",
+    Leader_yog: ""
   };
   const [form, set] = useState(cachedForm);
   const [isSubmitting, setSubmit] = useState(false);
@@ -60,7 +61,8 @@ const RoboSoccerForm = () => {
       form.Leader_name !== "" &&
       form.Leader_whatsapp !== "" &&
       form.Leader_branch !== "" &&
-      form.Leader_whatsapp.length == 10;
+      form.Leader_whatsapp.length == 10 &&
+      form.Leader_yog !== "";
 
     if (condition) {
       try {
@@ -141,6 +143,16 @@ const RoboSoccerForm = () => {
                     placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
                     value={form.Leader_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_yog"
+                    id="leaderBranch"
+                    type="text"
+                    placeholder="Leader Year of graduation"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_yog}
                   />
                 </li>
               </ul>

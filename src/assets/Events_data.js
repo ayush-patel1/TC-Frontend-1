@@ -26,7 +26,7 @@ export const EventsList = [
     },
     {
       id: 3,
-      // name: "BGMI Tournament",
+      name: "BGMI Tournament",
       imgUrl: event3,
       date:"27-28th Oct",
       time:"12 P.M.",

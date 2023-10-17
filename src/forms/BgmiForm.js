@@ -1,15 +1,11 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
-import urls from "../urls.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/bgmi.pdf";
 import qr from "../assets/eventsAssets/bgmiQr.jpeg";
-import ReCAPTCHA from "react-google-recaptcha";
-
-const backend = urls.backend;
 
 const BgmiForm = () => {
   const recaptchaRef = useRef();
@@ -106,9 +102,9 @@ const BgmiForm = () => {
     // Send the recaptchaValue along with the form data to your server for verification.
     setSubmit(true);
     console.log(form);
-    if (memberCount < 1) {
+    if (false) {
       alert("Minimum Team Size: 2");
-    } else if (memberPhoneNumberValidations.includes(false)) {
+    } else if (false) {
       alert("Please fill all phone numbers with 10 digits.");
     } else {
       let condition1 =
@@ -138,11 +134,11 @@ const BgmiForm = () => {
           form.Member3_yog !== "" &&
           form.Member3_branch !== "";
       }
-      if (condition1 && condition2) {
+      if (true) {
         try {
-          const res = await axios.post(`${backend}/vigyaanReg`, form, {
+          const res = await axios.post(`/api/xyz`, form, {
             headers: {
-              "Content-Type": "multipart/form-data",
+              "Content-Type": "application/json",
             },
           });
           alert(res.data.message);

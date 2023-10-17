@@ -64,7 +64,8 @@ const TerrainTreaderForm = () => {
       form.Leader_name !== "" &&
       form.Leader_whatsapp !== "" &&
       form.Leader_yog !== "" &&
-      form.Leader_branch !== "";
+      form.Leader_branch !== "" &&
+      form.Leader_whatsapp.length == 10;
 
     if (condition) {
       try {

@@ -166,10 +166,183 @@ const BgmiForm = () => {
                     value={form.Leader_yog}
                   />
                 </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_email"
+                    id="leaderEmail"
+                    type="text"
+                    placeholder="Leader's Email"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_college"
+                    id="leaderCollege"
+                    type="text"
+                    placeholder="Leader's College"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_college}
+                  />
+                </li>
+  
+                <li data-aos="fade-down">
+                  <input
+                    name="P1_name"
+                    id="P1Name"
+                    type="text"
+                    placeholder="Player 1 in Game Name "
+                    onChange={(e) => handle(e)}
+                    value={form.P1_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P1_id"
+                    id="P1Id"
+                    type="text"
+                    placeholder="Player 1 Game ID "
+                    onChange={(e) => handle(e)}
+                    value={form.P1_id}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P1_number"
+                    id="P1Number"
+                    type="text"
+                    placeholder="Player 1 Mobile Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P1_number}
+                  />
+                </li>
+
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_name"
+                    id="P2Name"
+                    type="text"
+                    placeholder="Player 2 in Game Name "
+                    onChange={(e) => handle(e)}
+                    value={form.P2_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_id"
+                    id="P2Id"
+                    type="text"
+                    placeholder="Player 2 Game ID "
+                    onChange={(e) => handle(e)}
+                    value={form.P2_id}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_number"
+                    id="P2Number"
+                    type="text"
+                    placeholder="Player 2 Mobile Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_number}
+                  />
+                </li>
+
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_name"
+                    id="P3Name"
+                    type="text"
+                    placeholder="Player 3 in Game Name "
+                    onChange={(e) => handle(e)}
+                    value={form.P3_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_id"
+                    id="P3Id"
+                    type="text"
+                    placeholder="Player 3 Game ID "
+                    onChange={(e) => handle(e)}
+                    value={form.P3_id}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_number"
+                    id="P3Number"
+                    type="text"
+                    placeholder="Player 3 Mobile Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_number}
+                  />
+                </li>
+
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_name"
+                    id="P4Name"
+                    type="text"
+                    placeholder="Player 4 in Game Name "
+                    onChange={(e) => handle(e)}
+                    value={form.P4_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_id"
+                    id="P4Id"
+                    type="text"
+                    placeholder="Player 4 Game ID "
+                    onChange={(e) => handle(e)}
+                    value={form.P4_id}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_number"
+                    id="P4Number"
+                    type="text"
+                    placeholder="Player 4 Mobile Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_number}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                (Optional)
+                  <input
+                    name="P5_name"
+                    id="P5Name"
+                    type="text"
+                    placeholder="Player 5 in Game Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P5_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P5_id"
+                    id="P5Id"
+                    type="text"
+                    placeholder="Player 5 Game ID"
+                    onChange={(e) => handle(e)}
+                    value={form.P5_id}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P5_number"
+                    id="P5Number"
+                    type="text"
+                    placeholder="Player 5 Mobile Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P5_number}
+                  />
+                </li>
+
               </ul>
-            </div>
-            <div>
-              <img src={qr} width="100%" alt="" />
             </div>
             <HCaptcha
               sitekey={keys.hcaptcha}
@@ -263,6 +436,9 @@ const BgmiForm = () => {
                   roster.
                 </p>
               </div>
+              <div>
+              <img src={qr} width="100%" alt="" />
+            </div>
               <a style={{ textDecoration: "none" }} href={docs}>
                 <span className="metaportal_fn_button_4">Download PDF</span>
               </a>

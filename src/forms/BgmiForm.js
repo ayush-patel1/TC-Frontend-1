@@ -461,7 +461,7 @@ const BgmiForm = () => {
                 </li>
               </ul>
               <div>
-                Pay 100 Rs
+                Pay Registration Fee 100 Rs
                 <img src={qr} width="100%" alt="" />
               </div>
               <input

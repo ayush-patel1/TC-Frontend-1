@@ -42,10 +42,18 @@ const BgmiForm = () => {
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
+  const [fileError, setFileError] = useState();
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
+    if (!file) return;
+    const size = (file.size / 1024) / 1024;
+    if (size > 1) {
+      setFileError("File size must be <= 1 MB")
+      return;
+    }
     if (file) {
+      setFileError(null);
       const newData = { ...form };
       newData["file"] = file;
       set(newData);
@@ -470,9 +478,14 @@ const BgmiForm = () => {
                 <span className="metaportal_fn_button_2">
                   Upload Payment Screenshot
                 </span>
-                {uploadedFileName && (
+                {!fileError && uploadedFileName && (
                   <p style={{ color: "white", paddingTop: "1rem" }}>
                     Uploaded File: {uploadedFileName}
+                  </p>
+                )}
+                {fileError && (
+                  <p style={{ color: "red", paddingTop: "1rem" }}>
+                    {fileError}
                   </p>
                 )}
               </label>

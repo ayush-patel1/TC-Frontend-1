@@ -99,7 +99,6 @@ const VigyaanForm = () => {
 
   const submit = async () => {
     setSubmit(true);
-    console.log(form);
     if (memberCount < 1) {
       alert("Minimum Team Size: 2");
     } else if (memberPhoneNumberValidations.includes(false)) {

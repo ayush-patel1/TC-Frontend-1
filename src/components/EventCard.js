@@ -42,6 +42,10 @@ function EventCard(props) {
             <div>Venue</div>
             <div>{props.venue}</div>
           </div>
+          <div>
+            <div>Deadline</div>
+            <div>{props.deadline}</div>
+          </div>
         </div>
       </div>
       </Link>

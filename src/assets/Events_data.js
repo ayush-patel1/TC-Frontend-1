@@ -12,7 +12,8 @@ export const EventsList = [
       time:"12 P.M.",
       venue:"Front Of CCD",
       des: "Life is full of hurdles, and so is Terrain Treader 2.0 . Imagine crafting your own bots, unleashing them into a maze of challenges.",
-      link:"/events/terrainTreaderForm"
+      link:"/events/terrainTreaderForm",
+      deadline:"26th Oct"
     },
     {
       id: 2,
@@ -22,7 +23,8 @@ export const EventsList = [
       time:"12 P.M.",
       venue:"Front Of CCD",
       des: "Where Champions Are Forged in the Fires of Innovation!",
-      link:"/events/roboSoccerForm"
+      link:"/events/roboSoccerForm",
+      deadline:"26th Oct"
     },
     {
       id: 3,
@@ -32,7 +34,8 @@ export const EventsList = [
       time:"12 P.M.",
       venue:"Online",
       des: "Enter a digital realm where bullets meet anime magic – the BGMI Tournament awaits!",
-      link:"/events/bgmiForm"
+      link:"/events/bgmiForm",
+      deadline:"26th Oct"
     },
     {
       id: 4,

@@ -20,6 +20,7 @@ function EventSec() {
             time={item.time}
             venue= {item.venue}
             link={item.link}
+            deadline={item.deadline}
             />
           )
         })}

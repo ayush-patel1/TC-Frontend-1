@@ -460,6 +460,10 @@ const BgmiForm = () => {
                     )}
                 </li>
               </ul>
+              <div>
+                Pay 100 Rs
+                <img src={qr} width="100%" alt="" />
+              </div>
               <input
                 accept="image/*"
                 style={{ display: "none" }}
@@ -582,9 +586,6 @@ const BgmiForm = () => {
                   The Team Captain must at all times be a player on the Team's
                   roster.
                 </p>
-              </div>
-              <div>
-                <img src={qr} width="100%" alt="" />
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>
                 <span className="metaportal_fn_button_4">Download PDF</span>

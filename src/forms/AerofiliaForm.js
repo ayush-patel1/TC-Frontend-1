@@ -58,10 +58,10 @@ const AerofiliaForm = () => {
   const submit = async () => {
     // const recaptchaValue = recaptchaRef.current.getValue();
     // Send the recaptchaValue along with the form data to your server for verification.
-    // if (!token) {
-    //   alert("Human verification is mandatory");
-    //   return;
-    // }
+    if (!token) {
+      alert("Human verification is mandatory");
+      return;
+    }
     setSubmit(true);
     let condition =
       form.Team_name !== "" &&

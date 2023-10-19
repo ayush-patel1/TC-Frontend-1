@@ -39,7 +39,7 @@ export const EventsList = [
     },
     {
       id: 4,
-      name: "Event Four",
+      name: "Aerofilia",
       imgUrl: coming_soon,
       date:"29th October",
       time:"2 P.M. - 5 P.M.",

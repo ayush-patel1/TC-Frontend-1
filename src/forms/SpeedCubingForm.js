@@ -95,7 +95,7 @@ const SpeedCubingForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"TERRAIN"} noncolor={"TREADER"} />
+      <Title color={"SPEED"} noncolor={"CUBING"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">

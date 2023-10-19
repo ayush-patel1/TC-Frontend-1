@@ -18,9 +18,13 @@ const AerofiliaForm = () => {
   const cachedForm = JSON.parse(localStorage.getItem("aerofiliaForm")) || {
     Team_name: "",
     Leader_name: "",
+    Leader_email: "",
     Leader_whatsapp: "",
+    Leader_college: "",
     Leader_branch: "",
-    Leader_yog: ""
+    Leader_yog: "",
+    P2_name: "",
+    P3_name: ""
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -62,9 +66,12 @@ const AerofiliaForm = () => {
     let condition =
       form.Team_name !== "" &&
       form.Leader_name !== "" &&
+      form.Leader_email !== "" &&
       form.Leader_whatsapp !== "" &&
-      form.Leader_yog !== "" &&
+      form.Leader_college !== "" &&
       form.Leader_branch !== "" &&
+      form.Leader_yog !== "" &&
+      form.P2_name !== "" &&
       form.Leader_whatsapp.length == 10;
 
     if (condition) {
@@ -126,6 +133,16 @@ const AerofiliaForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    id="leaderName"
+                    type="text"
+                    name="Leader_email"
+                    placeholder="Leader Email"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
                     id="leaderNumber"
                     type="text"
                     name="Leader_whatsapp"
@@ -145,6 +162,16 @@ const AerofiliaForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    name="Leader_college"
+                    id="leaderBranch"
+                    type="text"
+                    placeholder="Leader College"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_college}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
                     name="Leader_branch"
                     id="leaderBranch"
                     type="text"
@@ -161,6 +188,26 @@ const AerofiliaForm = () => {
                     placeholder="Leader's year of graduation"
                     onChange={(e) => handle(e)}
                     value={form.Leader_yog}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_name"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Player 2 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_name"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Player 3 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_name}
                   />
                 </li>
               </ul>

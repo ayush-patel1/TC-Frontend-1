@@ -1,6 +1,7 @@
 import event1 from '../assets/eventsPoster/terrainTreader2.webp'
 import event2 from '../assets/eventsPoster/roboSoccer.webp'
 import event3 from '../assets/eventsPoster/bgmi.webp'
+import event4 from '../assets/eventsPoster/aerofilia.webp'
 import coming_soon from '../assets/images/cs.jpg'
 
 export const EventsList = [
@@ -40,7 +41,7 @@ export const EventsList = [
     {
       id: 4,
       name: "AEROFILIA",
-      imgUrl: coming_soon,
+      imgUrl: event4,
       date:"29th October",
       time:"2 P.M. - 5 P.M.",
       venue:"S42",

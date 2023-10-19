@@ -26,6 +26,8 @@ import TerrainTreaderForm from "./forms/TerrainTreaderForm";
 import RoboSoccerForm from "./forms/RoboSoccerForm";
 import BgmiForm from "./forms/BgmiForm";
 import AerofiliaForm from "./forms/AerofiliaForm";
+import LogoDesignForm from "./forms/LogoDesignForm";
+import SpeedCubingForm from "./forms/SpeedCubingForm";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -69,6 +71,8 @@ function App() {
                 <Route exact="true" path="/events/roboSoccerForm" element={<RoboSoccerForm />} />
                 <Route exact="true" path="/events/bgmiForm" element={<BgmiForm />} />
                 <Route exact="true" path="/events/aerofiliaForm" element={<AerofiliaForm />} />
+                <Route exact="true" path="/events/logoDesignForm" element={<LogoDesignForm />} />
+                <Route exact="true" path="/events/speedCubingForm" element={<SpeedCubingForm />} />
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

@@ -198,6 +198,23 @@ const AerofiliaForm = () => {
               <div data-aos="fade-down" className="mint_time">
                 <h4>Aerofilia</h4>
                 <h3 className="metaportal_fn_countdown">
+                DESCRIPTION
+                </h3>
+              </div>
+              <div data-aos="fade-down" className="mint_info">
+                <p>
+                Design a bridge using spaghetti under the given dimensions. Weights will be placed on the top parts of the bridges. The team with a bridge handling the maximum load wins. A complete bridge should contain no other materials than spaghetti and the glue or tapes provided. Each team will be provided spaghetti at the beginning of the event.
+                </p>
+                <p>
+                Team size: 2-3
+                </p>
+                <p>
+                Time duration:  3 hrs
+                </p>
+              </div>
+              <div data-aos="fade-down" className="mint_time">
+                <h4>Aerofilia</h4>
+                <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>

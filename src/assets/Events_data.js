@@ -45,7 +45,7 @@ export const EventsList = [
       time:"2 P.M. - 5 P.M.",
       venue:"S42",
       des: "Bridge the gap! Can your bridge handle the weight",
-      link:"/events/bgmiForm",
+      link:"/events/aerofiliaForm",
       deadline:"27th October"
     },
     {

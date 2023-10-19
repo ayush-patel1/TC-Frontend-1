@@ -17,7 +17,7 @@ export const EventsList = [
     },
     {
       id: 2,
-      name: "Robo Soccer",
+      name: "ROBO SOCCER",
       imgUrl: event2,
       date:"29th October",
       time:"12 P.M.",
@@ -28,7 +28,7 @@ export const EventsList = [
     },
     {
       id: 3,
-      name: "BGMI Tournament",
+      name: "BGMI TOURNAMENT",
       imgUrl: event3,
       date:"27-28th October",
       time:"12 P.M.",
@@ -39,7 +39,7 @@ export const EventsList = [
     },
     {
       id: 4,
-      name: "Aerofilia",
+      name: "AEROFILIA",
       imgUrl: coming_soon,
       date:"29th October",
       time:"2 P.M. - 5 P.M.",

@@ -106,30 +106,30 @@ const SpeedCubingForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
-                    id="teamName"
+                    name="participant_name"
+                    id="participantName"
                     type="text"
-                    placeholder="Team Name"
+                    placeholder="Name Of Participant"
                     onChange={(e) => handle(e)}
-                    value={form.Team_name}
+                    value={form.participant_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    id="emailId"
                     type="text"
-                    name="Leader_name"
-                    placeholder="Leader Name"
+                    name="email_id"
+                    placeholder="Email Id"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.email_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderNumber"
+                    id="whatsappNumber"
                     type="text"
-                    name="Leader_whatsapp"
-                    placeholder="Leader Whatsapp Number"
+                    name="whatsapp_number"
+                    placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
@@ -145,22 +145,72 @@ const SpeedCubingForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
-                    id="leaderBranch"
+                    name="college_name"
+                    id="collegeName"
                     type="text"
-                    placeholder="Leader Branch"
+                    placeholder="College Name"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.college_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="branch"
+                    id="branch"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="year"
+                    id="year"
+                    type="text"
+                    placeholder="Year"
+                    onChange={(e) => handle(e)}
+                    value={form.year}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="roll_number"
+                    id="rollNumber"
+                    type="text"
+                    placeholder="Roll Number"
+                    onChange={(e) => handle(e)}
+                    value={form.roll_number}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="cube"
+                    id="cube"
+                    type="text"
+                    placeholder="What type of cube you're used to? (e.g. 3x3x3, Pyraminx, etc)"
+                    onChange={(e) => handle(e)}
+                    value={form.cube}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="how_long"
+                    id="howLong"
+                    type="text"
+                    placeholder="How long have you been solving the cube?"
+                    onChange={(e) => handle(e)}
+                    value={form.how_long}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="achievement"
+                    id="achievement"
+                    type="text"
+                    placeholder="Any achievement(s) in solving cube-related events?"
+                    onChange={(e) => handle(e)}
+                    value={form.achievement}
                   />
                 </li>
               </ul>

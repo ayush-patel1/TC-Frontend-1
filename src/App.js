@@ -25,6 +25,7 @@ import EventFormPage from "./pages/EventFormPage";
 import TerrainTreaderForm from "./forms/TerrainTreaderForm";
 import RoboSoccerForm from "./forms/RoboSoccerForm";
 import BgmiForm from "./forms/BgmiForm";
+import AerofiliaForm from "./forms/AerofiliaForm";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -67,6 +68,7 @@ function App() {
                 <Route exact="true" path="/events/terrainTreaderForm" element={<TerrainTreaderForm />} />
                 <Route exact="true" path="/events/roboSoccerForm" element={<RoboSoccerForm />} />
                 <Route exact="true" path="/events/bgmiForm" element={<BgmiForm />} />
+                <Route exact="true" path="/events/aerofiliaForm" element={<AerofiliaForm />} />
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

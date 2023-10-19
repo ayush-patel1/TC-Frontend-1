@@ -15,12 +15,16 @@ const LogoDesignForm = () => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("terrainTreaderForm")) || {
-    Team_name: "",
-    Leader_name: "",
-    Leader_whatsapp: "",
-    Leader_branch: "",
-    Leader_yog: ""
+  const cachedForm = JSON.parse(localStorage.getItem("LogoDesignForm")) || {
+    Name: "",
+    Email: "",
+    Whatsapp: "",
+    College: "",
+    Branch: "",
+    Year: "",
+    Roll_Number: "",
+    Software_Used: "",
+    Prior_Experience: ""
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -30,7 +34,7 @@ const LogoDesignForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("terrainTreaderForm", JSON.stringify(update));
+    localStorage.setItem("LogoDesignForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -48,28 +52,30 @@ const LogoDesignForm = () => {
     if (token) {
       console.log('Captcha verified')
     }
-      // console.log(`hCaptcha Token: ${token}`);
+    // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
-    // const recaptchaValue = recaptchaRef.current.getValue();
-    // Send the recaptchaValue along with the form data to your server for verification.
     if (!token) {
       alert("Human verification is mandatory");
       return;
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
-      form.Leader_name !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_yog !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_whatsapp.length == 10;
+      form.Name !== "" &&
+      form.Email !== "" &&
+      form.Whatsapp !== "" &&
+      form.Whatsapp.length == 10 &&
+      form.College !== "" &&
+      form.Branch !== "" &&
+      form.Year !== "" &&
+      form.Roll_Number !== "" &&
+      form.Software_Used !== "" &&
+      form.Prior_Experience !== "";
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=terrainTreader`, form, {
+        const res = await axios.post(`/server/register?event=LogoDesign`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -106,38 +112,38 @@ const LogoDesignForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="participant_name"
+                    name="Name"
                     id="participantName"
                     type="text"
                     placeholder="Name Of Participant"
                     onChange={(e) => handle(e)}
-                    value={form.participant_name}
+                    value={form.Name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="emailId"
                     type="text"
-                    name="email_id"
+                    name="Email"
                     placeholder="Email Id"
                     onChange={(e) => handle(e)}
-                    value={form.email_id}
+                    value={form.Email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="whatsappNumber"
                     type="text"
-                    name="whatsapp_number"
+                    name="Whatsapp"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.Whatsapp}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {form.Whatsapp !== "" &&
+                    form.Whatsapp.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -145,62 +151,62 @@ const LogoDesignForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="college_name"
+                    name="College"
                     id="collegeName"
                     type="text"
                     placeholder="College Name"
                     onChange={(e) => handle(e)}
-                    value={form.college_name}
+                    value={form.College}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="branch"
+                    name="Branch"
                     id="branch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.branch}
+                    value={form.Branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="year"
+                    name="Year"
                     id="year"
                     type="text"
                     placeholder="Year"
                     onChange={(e) => handle(e)}
-                    value={form.year}
+                    value={form.Year}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="roll_number"
+                    name="Roll_Number"
                     id="rollNumber"
                     type="text"
                     placeholder="Roll Number"
                     onChange={(e) => handle(e)}
-                    value={form.roll_number}
+                    value={form.Roll_Number}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="software"
+                    name="Software_Used"
                     id="software"
                     type="text"
                     placeholder="Designing Software You are Most Used To"
                     onChange={(e) => handle(e)}
-                    value={form.software}
+                    value={form.Software_Used}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="prior_experience"
+                    name="Prior_Experience"
                     id="priorExperience"
                     type="text"
                     placeholder="Prior Experience in Designing (No of Months / Years)"
                     onChange={(e) => handle(e)}
-                    value={form.prior_experience}
+                    value={form.Prior_Experience}
                   />
                 </li>
               </ul>

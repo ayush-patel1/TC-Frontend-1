@@ -77,20 +77,22 @@ export const EventsList = [
       name: "CODEMIME QUEST",
       imgUrl: coming_soon,
       date:"28th October",
-      time:"27th October",
+      time:"11:30 A.M. to 2:30 P.M.",
       venue:"F-42",
       des: "CodeMime Quest: Where Programming Meets Pantomime!",
-      // link:"/events/codemimeQuestForm",
+      link:"/events/codemimeQuestForm",
       deadline:"27th October"
     },
     {
       id: 8,
-      name: "Event Eight",
+      name: "CIRCUITRIX 2.0",
       imgUrl: coming_soon,
-      date:"Coming Soon",
-      time:"Coming Soon",
-      venue:"Coming Soon",
-      des: "Coming Soon"
+      date:"R1: 27th, R2 & 3: 28th",
+      time:"R1(Online): 10-10:30PM R2&3: 1-4PM",
+      venue:"S-42",
+      des: "Dynamic competition focused on the art and science of assembling circuits",
+        link:"/events/circuitrix2Form",
+        deadline:"26th October, 6 P.M."
     },
     {
       id: 9,

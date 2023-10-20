@@ -49,6 +49,7 @@
     justify-content: space-between;
     font-weight: 100;
         line-height: 1.7;
+        font-size: 18px;
 }
 .cardBody>div:nth-child(4){
     display: flex;
@@ -56,6 +57,7 @@
     justify-content: space-between;
     font-weight: 100;
         line-height: 1.7;
+        font-size: 18px;
 }
 .cardBody>div:nth-child(5){
     display: flex;
@@ -63,6 +65,7 @@
     justify-content: space-between;
     font-weight: 100;
         line-height: 1.7;
+        font-size: 18px;
 }
 .cardBody>div:nth-child(6){
     display: flex;
@@ -70,6 +73,7 @@
     justify-content: space-between;
     font-weight: 100;
         line-height: 1.7;
+        font-size: 18px;
 }
 
 .cardText{

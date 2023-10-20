@@ -69,17 +69,19 @@ export const EventsList = [
       time:"4 P.M.",
       venue:"Infront of Central garden",
       des: "Decode the complexity, Align the spectrum. Can you solve the cube and seize glory? The challenge awaits, and victory beckons!",
-      link:"/events/speedCubingForm",
+      // link:"/events/speedCubingForm",
       deadline:"27th October"
     },
     {
       id: 7,
-      name: "Event Seven",
+      name: "CODEMIME QUEST",
       imgUrl: coming_soon,
-      date:"Coming Soon",
-      time:"Coming Soon",
-      venue:"Coming Soon",
-      des: "Coming Soon"
+      date:"28th October",
+      time:"27th October",
+      venue:"F-42",
+      des: "CodeMime Quest: Where Programming Meets Pantomime!",
+      // link:"/events/codemimeQuestForm",
+      deadline:"27th October"
     },
     {
       id: 8,

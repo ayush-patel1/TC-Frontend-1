@@ -16,7 +16,7 @@ const ValorantForm = () => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("bgmiForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("valoForm")) || {
     Team_name: "",
     Leader_name: "",
     Leader_whatsapp: "",
@@ -24,19 +24,14 @@ const ValorantForm = () => {
     Leader_yog: "",
     Leader_email: "",
     Leader_college: "",
-    Leader_Game_Name: "",
-    Leader_id: "",
-    P2_name: "",
-    P2_id: "",
+    Leader_game_id: "",
+    P2_game_id: "",
     P2_number: "",
-    P3_name: "",
-    P3_id: "",
+    P3_game_id: "",
     P3_number: "",
-    P4_name: "",
-    P4_id: "",
+    P4_game_id: "",
     P4_number: "",
-    P5_name: "",
-    P5_id: "",
+    P5_game_id: "",
     P5_number: "",
   };
   const [form, set] = useState(cachedForm);
@@ -65,7 +60,7 @@ const ValorantForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("bgmiForm", JSON.stringify(update));
+    localStorage.setItem("valoForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -107,17 +102,15 @@ const ValorantForm = () => {
       form.Leader_yog !== "" &&
       form.Leader_email !== "" &&
       form.Leader_college !== "" &&
-      form.Leader_Game_Name !== "" &&
-      form.Leader_id !== "" &&
+      form.Leader_game_id !== "" &&
       form.Leader_whatsapp.length === 10;
 
     let condition2 = false;
-    if (form.P2_id === form.P2_name && form.P2_name === form.P2_number && form.P2_id === "") {
+    if (form.P2_game_id === form.P2_number && form.P2_number === "") {
       condition2 = true;
     }
     else if (
-      form.P2_id !== "" &&
-      form.P2_name !== "" &&
+      form.P2_game_id !== "" &&
       form.P2_number !== "" &&
       form.P2_number.length === 10
     ) {
@@ -125,12 +118,11 @@ const ValorantForm = () => {
     }
 
     let condition3 = false;
-    if (form.P3_id === form.P3_name && form.P3_name === form.P3_number && form.P3_id === "") {
+    if (form.P3_game_id === form.P3_number && form.P3_number === "") {
       condition3 = true;
     }
     else if (
-      form.P3_id !== "" &&
-      form.P3_name !== "" &&
+      form.P3_game_id !== "" &&
       form.P3_number !== "" &&
       form.P3_number.length === 10
     ) {
@@ -138,12 +130,11 @@ const ValorantForm = () => {
     }
 
     let condition4 = false;
-    if (form.P4_id === form.P4_name && form.P4_name === form.P4_number && form.P4_id === "") {
+    if (form.P4_game_id === form.P4_number && form.P4_number === "") {
       condition4 = true;
     }
     else if (
-      form.P4_id !== "" &&
-      form.P4_name !== "" &&
+      form.P4_game_id !== "" &&
       form.P4_number !== "" &&
       form.P4_number.length === 10
     ) {
@@ -151,12 +142,11 @@ const ValorantForm = () => {
     }
 
     let condition5 = false;
-    if (form.P5_id === form.P5_name && form.P5_name === form.P5_number && form.P5_id === "") {
+    if (form.P5_game_id === form.P5_number && form.P5_number === "") {
       condition5 = true;
     }
     else if (
-      form.P5_id !== "" &&
-      form.P5_name !== "" &&
+      form.P5_game_id !== "" &&
       form.P5_number !== "" &&
       form.P5_number.length === 10
     ) {
@@ -166,11 +156,11 @@ const ValorantForm = () => {
     if (condition1 && condition2 && condition3 && condition4 && condition5) {
       try {
         const res = await axios.post(
-          `/server/register/bgmi`,
+          `/server/register?event=valo`,
           form,
           {
             headers: {
-              "Content-Type": "multipart/form-data",
+              "Content-Type": "application/json",
             },
           }
         );
@@ -241,6 +231,16 @@ const ValorantForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    name="Leader_college"
+                    id="leaderCollege"
+                    type="text"
+                    placeholder="Leader's College"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_college}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
                     name="Leader_branch"
                     id="leaderBranch"
                     type="text"
@@ -271,33 +271,22 @@ const ValorantForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
-                    id="leaderCollege"
-                    type="text"
-                    placeholder="Leader's College"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_college}
-                  />
-                </li>
-
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_id"
+                    name="Leader_game_id"
                     id="P1Id"
                     type="text"
                     placeholder="Leader Game ID "
                     onChange={(e) => handle(e)}
-                    value={form.Leader_id}
+                    value={form.Leader_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_id"
+                    name="P2_game_id"
                     id="P2Id"
                     type="text"
                     placeholder="Player 2 Game ID "
                     onChange={(e) => handle(e)}
-                    value={form.P2_id}
+                    value={form.P2_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -321,12 +310,12 @@ const ValorantForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_id"
+                    name="P3_game_id"
                     id="P3Id"
                     type="text"
                     placeholder="Player 3 Game ID "
                     onChange={(e) => handle(e)}
-                    value={form.P3_id}
+                    value={form.P3_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -350,12 +339,12 @@ const ValorantForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_id"
+                    name="P4_game_id"
                     id="P4Id"
                     type="text"
                     placeholder="Player 4 Game ID "
                     onChange={(e) => handle(e)}
-                    value={form.P4_id}
+                    value={form.P4_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -379,12 +368,12 @@ const ValorantForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P5_id"
+                    name="P5_game_id"
                     id="P5Id"
                     type="text"
                     placeholder="Player 5 Game ID"
                     onChange={(e) => handle(e)}
-                    value={form.P5_id}
+                    value={form.P5_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -448,10 +437,6 @@ const ValorantForm = () => {
               ref={captchaRef}
             />
             <div className="mint_desc" style={{ paddingTop: "4rem" }}>
-              {/* <ReCAPTCHA
-                sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
-                ref={recaptchaRef}
-              /> */}
               {!isSubmitting ? (
                 <div
                   target="_blank"

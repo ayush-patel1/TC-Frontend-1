@@ -84,10 +84,10 @@ const ValorantForm = () => {
   const submit = async () => {
     // const recaptchaValue = recaptchaRef.current.getValue();
     // Send the recaptchaValue along with the form data to your server for verification.
-    if (!token) {
-      alert("Human verification is mandatory");
-      return;
-    }
+    // if (!token) {
+    //   alert("Human verification is mandatory");
+    //   return;
+    // }
     if (uploadedFileName === "") {
       alert("Please upload the payment screenshot");
       return;
@@ -160,7 +160,7 @@ const ValorantForm = () => {
           form,
           {
             headers: {
-              "Content-Type": "application/json",
+              "Content-Type": "multipart/form-data",
             },
           }
         );

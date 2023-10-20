@@ -15,16 +15,14 @@ const Circuitrix2Form = () => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("aerofiliaForm")) || {
-    Team_name: "",
-    Leader_name: "",
-    Leader_email: "",
-    Leader_whatsapp: "",
-    Leader_college: "",
-    Leader_branch: "",
-    Leader_yog: "",
-    P2_name: "",
-    P3_name: "",
+  const cachedForm = JSON.parse(localStorage.getItem("circuitrixForm")) || {
+    Participant_name: "",
+    Email: "",
+    Whatsapp: "",
+    College: "",
+    Branch: "",
+    YOG: "",
+    Roll_number: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -34,7 +32,7 @@ const Circuitrix2Form = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("aerofiliaForm", JSON.stringify(update));
+    localStorage.setItem("circuitrixForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -64,19 +62,18 @@ const Circuitrix2Form = () => {
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
-      form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
-      form.P2_name !== "" &&
-      form.Leader_whatsapp.length == 10;
+      form.Participant_name !== "" &&
+      form.Email !== "" &&
+      form.Whatsapp !== "" &&
+      form.College !== "" &&
+      form.Branch !== "" &&
+      form.YOG !== "" &&
+      form.Roll_number !== "" &&
+      form.Whatsapp.length === 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=aerofilia`, form, {
+        const res = await axios.post(`/server/register?event=Circuitrix`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -114,36 +111,36 @@ const Circuitrix2Form = () => {
                   <input
                     id="name"
                     type="text"
-                    name="name"
+                    name="Participant_name"
                     placeholder="Name of Participant"
                     onChange={(e) => handle(e)}
-                    value={form.name}
+                    value={form.Participant_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="email"
                     type="text"
-                    name="email"
+                    name="Email"
                     placeholder="Email Id"
                     onChange={(e) => handle(e)}
-                    value={form.email}
+                    value={form.Email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="number"
                     type="text"
-                    name="number"
+                    name="Whatsapp"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.number}
+                    value={form.Whatsapp}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {form.Whatsapp !== "" &&
+                    form.Whatsapp.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -151,42 +148,42 @@ const Circuitrix2Form = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="college_name"
+                    name="College"
                     id="collegeName"
                     type="text"
                     placeholder="College Name"
                     onChange={(e) => handle(e)}
-                    value={form.college_name}
+                    value={form.College}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="branch"
+                    name="Branch"
                     id="branch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.branch}
+                    value={form.Branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="yog"
+                    name="YOG"
                     id="yog"
                     type="text"
                     placeholder="Year of graduation"
                     onChange={(e) => handle(e)}
-                    value={form.yog}
+                    value={form.YOG}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="roll_number"
+                    name="Roll_number"
                     id="rollNumber"
                     type="text"
                     placeholder="Roll Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.Roll_number}
                   />
                 </li>
 

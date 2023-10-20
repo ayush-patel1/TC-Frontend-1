@@ -30,6 +30,7 @@ import LogoDesignForm from "./forms/LogoDesignForm";
 import SpeedCubingForm from "./forms/SpeedCubingForm";
 import CodemimeQuestForm from "./forms/CodemimeQuestForm";
 import Circuitrix2Form from "./forms/Circuitrix2Form";
+import ValorantForm from "./forms/ValorantForm";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -77,6 +78,7 @@ function App() {
                 <Route exact="true" path="/events/speedCubingForm" element={<SpeedCubingForm />} />
                 <Route exact="true" path="/events/codemimeQuestForm" element={<CodemimeQuestForm />} />
                 <Route exact="true" path="/events/circuitrix2Form" element={<Circuitrix2Form />} />
+                <Route exact="true" path="/events/valorantForm" element={<ValorantForm />} />
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

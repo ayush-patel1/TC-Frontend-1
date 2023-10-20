@@ -3,6 +3,7 @@ import event2 from '../assets/eventsPoster/roboSoccer.webp'
 import event3 from '../assets/eventsPoster/bgmi.webp'
 import event4 from '../assets/eventsPoster/aerofilia.webp'
 import event5 from '../assets/eventsPoster/logoDesign.webp'
+import event9 from '../assets/eventsPoster/valorant.webp'
 import coming_soon from '../assets/images/cs.jpg'
 
 export const EventsList = [
@@ -96,12 +97,14 @@ export const EventsList = [
     },
     {
       id: 9,
-      name: "Event Nine",
-      imgUrl: coming_soon,
-      date:"Coming Soon",
-      time:"Coming Soon",
-      venue:"Coming Soon",
-      des: "Coming Soon"
+      name: "VALORANT TOURNAMENT",
+      imgUrl: event9,
+      date:"29th October",
+      time:"11 A.M.",
+      venue:"CCC",
+      des: "Amidst the fervor of Valorant's arena, where tactical genius and epic showdowns reign supreme, the resounding question persist: Are you prepared for championship glory, where victory awaits as your destiny?",
+      link:"/events/valorantForm",
+      deadline:"26th October"
     },
 
   ];

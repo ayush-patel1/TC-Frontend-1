@@ -56,10 +56,10 @@ const Circuitrix2Form = () => {
   const submit = async () => {
     // const recaptchaValue = recaptchaRef.current.getValue();
     // Send the recaptchaValue along with the form data to your server for verification.
-    if (!token) {
-      alert("Human verification is mandatory");
-      return;
-    }
+    // if (!token) {
+    //   alert("Human verification is mandatory");
+    //   return;
+    // }
     setSubmit(true);
     let condition =
       form.Participant_name !== "" &&
@@ -73,7 +73,7 @@ const Circuitrix2Form = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=Circuitrix`, form, {
+        const res = await axios.post(`http://localhost:5000/server/register?event=Circuitrix`, form, {
           headers: {
             "Content-Type": "application/json",
           },

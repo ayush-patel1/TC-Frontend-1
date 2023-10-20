@@ -3260,7 +3260,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	width: 60%;
 	padding: 60px 50px 25px 50px;
 	border-radius: 0 15px 15px 0;
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.066);
 	border-left: 1px solid rgba(255,255,255,.15);
 }
 .metaportal_fn_mintbox .mint_title{

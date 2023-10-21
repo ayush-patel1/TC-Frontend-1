@@ -86,10 +86,10 @@ const ValorantForm = () => {
       alert("Human verification is mandatory");
       return;
     }
-    if (uploadedFileName === "") {
-      alert("Please upload the payment screenshot");
-      return;
-    }
+    // if (uploadedFileName === "") {
+    //   alert("Please upload the payment screenshot");
+    //   return;
+    // }
     setSubmit(true);
     console.log(form);
     let condition1 =

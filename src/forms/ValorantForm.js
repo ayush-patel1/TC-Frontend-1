@@ -489,7 +489,7 @@ team winning the final match will be crowned as the Valorant Champions at
 Aavartan ’23-24. 
                 </p>
                 <p>
-                Winners : Exciting Prizes
+                Winners : Assured Exciting Prizes
                 </p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>

@@ -4,6 +4,7 @@ import event3 from '../assets/eventsPoster/bgmi.webp'
 import event4 from '../assets/eventsPoster/aerofilia.webp'
 import event5 from '../assets/eventsPoster/logoDesign.webp'
 import event9 from '../assets/eventsPoster/valorant.webp'
+import event7 from '../assets/eventsPoster/codemimeQuest.png'
 import event10 from '../assets/eventsPoster/autocad.png'
 import coming_soon from '../assets/images/cs.jpg'
 
@@ -77,7 +78,7 @@ export const EventsList = [
     {
       id: 7,
       name: "CODEMIME QUEST",
-      imgUrl: coming_soon,
+      imgUrl: event7,
       date:"28th October",
       time:"11:30 A.M. to 2:30 P.M.",
       venue:"F-42",

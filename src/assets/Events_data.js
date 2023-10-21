@@ -4,7 +4,7 @@ import event3 from '../assets/eventsPoster/bgmi.webp'
 import event4 from '../assets/eventsPoster/aerofilia.webp'
 import event5 from '../assets/eventsPoster/logoDesign.webp'
 import event9 from '../assets/eventsPoster/valorant.webp'
-import event10 from '../assets/eventsPoster/autocad.webp'
+import event10 from '../assets/eventsPoster/autocad.png'
 import coming_soon from '../assets/images/cs.jpg'
 
 export const EventsList = [

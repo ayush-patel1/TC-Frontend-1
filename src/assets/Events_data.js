@@ -4,6 +4,7 @@ import event3 from '../assets/eventsPoster/bgmi.webp'
 import event4 from '../assets/eventsPoster/aerofilia.webp'
 import event5 from '../assets/eventsPoster/logoDesign.webp'
 import event9 from '../assets/eventsPoster/valorant.webp'
+import event10 from '../assets/eventsPoster/autocad.webp'
 import coming_soon from '../assets/images/cs.jpg'
 
 export const EventsList = [
@@ -102,8 +103,19 @@ export const EventsList = [
       date:"29th October",
       time:"11 A.M.",
       venue:"CCC",
-      des: "Amidst the fervor of Valorant's arena, where tactical genius and epic showdowns reign supreme, the resounding question persist: Are you prepared for championship glory, where victory awaits as your destiny?",
+      des: "Amidst the fervor of Valorant's arena, where tactical genius and epic showdowns reign supreme, the resounding question persist.",
       link:"/events/valorantForm",
+      deadline:"26th October"
+    },
+    {
+      id: 10,
+      name: "AUTOCAD",
+      imgUrl: event9,
+      date:"28th October",
+      time:"11 A.M.",
+      venue:"G-4",
+      des: "Dive into the world of creativity with Dimensions. Let your imagination soar to new heights as you envision the extraordinary. Design the future and leave your mark on the world.",
+      link:"/events/autocadForm",
       deadline:"26th October"
     },
 

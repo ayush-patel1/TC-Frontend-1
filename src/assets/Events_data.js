@@ -110,7 +110,7 @@ export const EventsList = [
     {
       id: 10,
       name: "AUTOCAD",
-      imgUrl: event9,
+      imgUrl: event10,
       date:"28th October",
       time:"11 A.M.",
       venue:"G-4",

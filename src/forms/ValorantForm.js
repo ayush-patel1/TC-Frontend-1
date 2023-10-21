@@ -394,10 +394,10 @@ const ValorantForm = () => {
                     )}
                 </li>
               </ul>
-              <div>
+              {/* <div>
                 Pay Registration Fee 400 Rs
                 <img src={qr} width="100%" alt="" />
-              </div>
+              </div> */}
               <input
                 accept="image/*"
                 style={{ display: "none" }}

@@ -63,10 +63,10 @@ const AutocadForm = () => {
   const submit = async () => {
     // const recaptchaValue = recaptchaRef.current.getValue();
     // Send the recaptchaValue along with the form data to your server for verification.
-    if (!token) {
-      alert("Human verification is mandatory");
-      return;
-    }
+    // if (!token) {
+    //   alert("Human verification is mandatory");
+    //   return;
+    // }
     setSubmit(true);
     let condition =
       form.Team_name !== "" &&
@@ -81,9 +81,9 @@ const AutocadForm = () => {
       form.P3_name !== "" &&
       form.P3_branch !== "" &&
       form.P3_yog !== "" &&
-      form.Leader_whatsapp.length == 10 &&
-      form.P2_number.length == 10 &&
-      form.P3_number.length == 10;
+      form.Leader_whatsapp.length === 10 &&
+      form.P2_number.length === 10 &&
+      form.P3_number.length === 10;
 
     if (condition) {
       try {

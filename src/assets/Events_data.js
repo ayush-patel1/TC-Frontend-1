@@ -116,7 +116,7 @@ export const EventsList = [
       venue:"G-4",
       des: "Dive into the world of creativity with Dimensions. Let your imagination soar to new heights as you envision the extraordinary. Design the future and leave your mark on the world.",
       link:"/events/autocadForm",
-      deadline:"26th October"
+      deadline:"25th October"
     },
 
   ];

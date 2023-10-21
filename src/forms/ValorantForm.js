@@ -35,26 +35,26 @@ const ValorantForm = () => {
     P5_number: "",
   };
   const [form, set] = useState(cachedForm);
-  const [uploadedFileName, setUploadedFileName] = useState("");
+  // const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
-  const [fileError, setFileError] = useState();
+  // const [fileError, setFileError] = useState();
 
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
-    const size = (file.size / 1024) / 1024;
-    if (size > 1) {
-      setFileError("File size must be <= 1 MB")
-      return;
-    }
-    if (file) {
-      setFileError(null);
-      const newData = { ...form };
-      newData["file"] = file;
-      set(newData);
-      setUploadedFileName(file.name);
-    }
-  };
+  // const handleFileChange = (event) => {
+  //   const file = event.target.files[0];
+  //   if (!file) return;
+  //   const size = (file.size / 1024) / 1024;
+  //   if (size > 1) {
+  //     setFileError("File size must be <= 1 MB")
+  //     return;
+  //   }
+  //   if (file) {
+  //     setFileError(null);
+  //     const newData = { ...form };
+  //     newData["file"] = file;
+  //     set(newData);
+  //     setUploadedFileName(file.name);
+  //   }
+  // };
 
   const handle = (e) => {
     const update = { ...form };
@@ -398,7 +398,7 @@ const ValorantForm = () => {
                 Pay Registration Fee 400 Rs
                 <img src={qr} width="100%" alt="" />
               </div> */}
-              <input
+              {/* <input
                 accept="image/*"
                 style={{ display: "none" }}
                 id="file-input"
@@ -426,7 +426,7 @@ const ValorantForm = () => {
                     {fileError}
                   </p>
                 )}
-              </label>
+              </label> */}
             </div>
             <HCaptcha
               sitekey={keys.hcaptcha}
@@ -489,7 +489,7 @@ team winning the final match will be crowned as the Valorant Champions at
 Aavartan ’23-24. 
                 </p>
                 <p>
-                Winners : Prizes worth 5K
+                Winners : Exciting Prizes
                 </p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>

@@ -15,16 +15,19 @@ const CodemimeQuestForm = () => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("aerofiliaForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("codeMimeForm")) || {
     Team_name: "",
     Leader_name: "",
-    Leader_email: "",
     Leader_whatsapp: "",
     Leader_college: "",
     Leader_branch: "",
     Leader_yog: "",
     P2_name: "",
-    P3_name: ""
+    P2_branch: "",
+    P2_yog: "",
+    P3_name: "",
+    P3_branch: "",
+    P3_yog: ""
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -34,7 +37,7 @@ const CodemimeQuestForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("aerofiliaForm", JSON.stringify(update));
+    localStorage.setItem("codeMimeForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -56,27 +59,41 @@ const CodemimeQuestForm = () => {
   }, [token]);
 
   const submit = async () => {
-    // const recaptchaValue = recaptchaRef.current.getValue();
-    // Send the recaptchaValue along with the form data to your server for verification.
     if (!token) {
       alert("Human verification is mandatory");
       return;
     }
     setSubmit(true);
-    let condition =
+    let condition1 =
       form.Team_name !== "" &&
       form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
       form.Leader_whatsapp !== "" &&
       form.Leader_college !== "" &&
       form.Leader_branch !== "" &&
       form.Leader_yog !== "" &&
       form.P2_name !== "" &&
+      form.P2_branch !== "" &&
+      form.P2_year !== "" &&
       form.Leader_whatsapp.length == 10;
 
-    if (condition) {
+    let condition2 = false;
+    if (form.P3_name === form.P3_branch && form.P3_branch === form.P3_yog && form.P3_name === "") condition2 = true;
+    else if (form.P3_name !== "" && form.P3_branch !== "" && form.P3_yog !== "") condition2 = true;
+
+    let condition3 = false;
+    if (form.Leader_yog === form.P2_yog) {
+      condition3 = true;
+      if (form.P3_yog !== "" && form.P3_yog !== form.Leader_yog) condition3 = false;
+    }
+
+    if (!condition3) {
+      alert("All participants must be from the same year");
+      return;
+    }
+
+    if (condition1 && condition2 && condition3) {
       try {
-        const res = await axios.post(`/server/register?event=aerofilia`, form, {
+        const res = await axios.post(`/server/register?event=codemime`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -130,16 +147,6 @@ const CodemimeQuestForm = () => {
                     placeholder="Leader Name"
                     onChange={(e) => handle(e)}
                     value={form.Leader_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    id="leaderName"
-                    type="text"
-                    name="Leader_email"
-                    placeholder="Leader Email"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_email}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -203,22 +210,22 @@ const CodemimeQuestForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
-                    id="leaderBranch"
-                    type="text"
-                    placeholder="Player 2 Branch"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_yog"
+                    name="P2_branch"
                     id="leaderYog"
                     type="text"
                     placeholder="Player's 2 Year of Graduation"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.P2_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_yog"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Player's 2 Year of Graduation"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_yog}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -233,22 +240,22 @@ const CodemimeQuestForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
+                    name="P3_branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Player 3 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.P3_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
+                    name="P3_yog"
                     id="leaderYog"
                     type="text"
                     placeholder="Player's 3 Year of Graduation"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.P3_yog}
                   />
                 </li>
               </ul>

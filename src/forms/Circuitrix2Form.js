@@ -73,7 +73,7 @@ const Circuitrix2Form = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`http://localhost:5000/server/register?event=Circuitrix`, form, {
+        const res = await axios.post(`/server/register?event=Circuitrix`, form, {
           headers: {
             "Content-Type": "application/json",
           },

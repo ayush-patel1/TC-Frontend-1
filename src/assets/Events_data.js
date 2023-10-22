@@ -1,12 +1,12 @@
-import event1 from '../assets/eventsPoster/terrainTreader2.webp'
+import event1 from '../assets/eventsPoster/terrainTreader.webp'
 import event2 from '../assets/eventsPoster/roboSoccer.webp'
 import event3 from '../assets/eventsPoster/bgmi.webp'
 import event4 from '../assets/eventsPoster/aerofilia.webp'
 import event5 from '../assets/eventsPoster/logoDesign.webp'
 import event9 from '../assets/eventsPoster/valorant.webp'
-import event7 from '../assets/eventsPoster/codemimeQuest.png'
-import event10 from '../assets/eventsPoster/autocad.png'
-import coming_soon from '../assets/images/cs.jpg'
+import event7 from '../assets/eventsPoster/codemimeQuest.webp'
+import event10 from '../assets/eventsPoster/autocad.webp'
+import event11 from '../assets/eventsPoster/survivalArtboard.webp'
 
 export const EventsList = [
     {
@@ -67,7 +67,7 @@ export const EventsList = [
     {
       id: 6,
       name: "SPEED CUBING",
-      imgUrl: coming_soon,
+      // imgUrl: coming_soon,
       date:"28th October",
       time:"4 P.M.",
       venue:"Infront of Central garden",
@@ -89,7 +89,7 @@ export const EventsList = [
     {
       id: 8,
       name: "CIRCUITRIX 2.0",
-      imgUrl: coming_soon,
+      // imgUrl: coming_soon,
       date:"R1: 27th, R2 & 3: 28th",
       time:"R1(Online): 10-10:30PM R2&3: 1-4PM",
       venue:"S-42",
@@ -117,6 +117,17 @@ export const EventsList = [
       venue:"G-4",
       des: "Dive into the world of creativity with Dimensions. Let your imagination soar to new heights as you envision the extraordinary. Design the future and leave your mark on the world.",
       link:"/events/autocadForm",
+      deadline:"25th October"
+    },
+    {
+      id: 11,
+      name: "SURVIVAL ARTBOARD",
+      imgUrl: event11,
+      date:"28th October",
+      time:"2 P.M.",
+      venue:"S-4",
+      des: "Get the opportunity to script an epic tale of survival! Here, every choice counts, for the consequences remain shrouded in mystery. Remember, Survival is only Of The Fittest.",
+      link:"/events/survivalArtboardForm",
       deadline:"25th October"
     },
 

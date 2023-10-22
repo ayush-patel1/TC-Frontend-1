@@ -33,6 +33,7 @@ import Circuitrix2Form from "./forms/Circuitrix2Form";
 import ValorantForm from "./forms/ValorantForm";
 import AutocadForm from "./forms/AutocadForm";
 import SurvivalArtboardForm from "./forms/SurvivalArtboardForm";
+import ReactionRacingForm from "./forms/ReactionRacingForm";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -83,6 +84,7 @@ function App() {
                 <Route exact="true" path="/events/valorantForm" element={<ValorantForm />} />
                 <Route exact="true" path="/events/autocadForm" element={<AutocadForm />} />
                 <Route exact="true" path="/events/survivalArtboardForm" element={<SurvivalArtboardForm/>} />
+                <Route exact="true" path="/events/reactionRacingForm" element={<ReactionRacingForm/>} />
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

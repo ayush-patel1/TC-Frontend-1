@@ -7,7 +7,7 @@ import event9 from '../assets/eventsPoster/valorant.webp'
 import event7 from '../assets/eventsPoster/codemimeQuest.webp'
 import event10 from '../assets/eventsPoster/autocad.webp'
 import event11 from '../assets/eventsPoster/survivalArtboard.webp'
-
+import event12 from '../assets/eventsPoster/reactionRacing.webp'
 export const EventsList = [
     {
       id: 1,
@@ -130,5 +130,16 @@ export const EventsList = [
       link:"/events/survivalArtboardForm",
       deadline:"25th October"
     },
+    {
+      id: 12,
+      name: "REACTION RACING",
+      imgUrl: event12,
+      date:"29th October",
+      time:"2 P.M. to 5 P.M.",
+      venue:"Amul Parlour",
+      des: "Reaction Racing is a thrilling and educational game that combines the excitement of   racing with the power of chemical reactions. Participants will design and build miniature cars powered by various chemical reactions, competing to cover the longest distance while ensuring safety.",
+      link:"/events/reactionRacingForm",
+      deadline:"29th October"
+    }
 
   ];

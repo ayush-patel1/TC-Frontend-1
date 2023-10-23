@@ -3,13 +3,14 @@ import event2 from '../assets/eventsPoster/roboSoccer.webp'
 import event3 from '../assets/eventsPoster/bgmi.webp'
 import event4 from '../assets/eventsPoster/aerofilia.webp'
 import event5 from '../assets/eventsPoster/logoDesign.webp'
+import event6 from '../assets/eventsPoster/speedCubing.webp'
 import event7 from '../assets/eventsPoster/codemimeQuest.webp'
 import event8 from '../assets/eventsPoster/circuitrix.webp'
 import event9 from '../assets/eventsPoster/valorant.webp'
 import event10 from '../assets/eventsPoster/autocad.webp'
 import event11 from '../assets/eventsPoster/survivalArtboard.webp'
 import event12 from '../assets/eventsPoster/reactionRacing.webp'
-import coming_soon from '../assets/eventsPoster/comingSoon.webp'
+
 export const EventsList = [
     {
       id: 1,
@@ -69,7 +70,7 @@ export const EventsList = [
     {
       id: 6,
       name: "SPEED CUBING",
-      imgUrl: coming_soon,
+      imgUrl: event6,
       date:"28th October",
       time:"4 P.M.",
       venue:"Infront of Central garden",

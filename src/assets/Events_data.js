@@ -74,7 +74,7 @@ export const EventsList = [
       time:"4 P.M.",
       venue:"Infront of Central garden",
       des: "Decode the complexity, Align the spectrum. Can you solve the cube and seize glory? The challenge awaits, and victory beckons!",
-      // link:"/events/speedCubingForm",
+      link:"/events/speedCubingForm",
       deadline:"27th October"
     },
     {

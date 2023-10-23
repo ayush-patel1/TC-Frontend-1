@@ -3,11 +3,13 @@ import event2 from '../assets/eventsPoster/roboSoccer.webp'
 import event3 from '../assets/eventsPoster/bgmi.webp'
 import event4 from '../assets/eventsPoster/aerofilia.webp'
 import event5 from '../assets/eventsPoster/logoDesign.webp'
-import event9 from '../assets/eventsPoster/valorant.webp'
 import event7 from '../assets/eventsPoster/codemimeQuest.webp'
+import event8 from '../assets/eventsPoster/circuitrix.webp'
+import event9 from '../assets/eventsPoster/valorant.webp'
 import event10 from '../assets/eventsPoster/autocad.webp'
 import event11 from '../assets/eventsPoster/survivalArtboard.webp'
 import event12 from '../assets/eventsPoster/reactionRacing.webp'
+import coming_soon from '../assets/eventsPoster/comingSoon.webp'
 export const EventsList = [
     {
       id: 1,
@@ -67,7 +69,7 @@ export const EventsList = [
     {
       id: 6,
       name: "SPEED CUBING",
-      // imgUrl: coming_soon,
+      imgUrl: coming_soon,
       date:"28th October",
       time:"4 P.M.",
       venue:"Infront of Central garden",
@@ -89,7 +91,7 @@ export const EventsList = [
     {
       id: 8,
       name: "CIRCUITRIX 2.0",
-      // imgUrl: coming_soon,
+      imgUrl: event8,
       date:"R1: 27th, R2 & 3: 28th",
       time:"R1(Online): 10-10:30PM R2&3: 1-4PM",
       venue:"S-42",

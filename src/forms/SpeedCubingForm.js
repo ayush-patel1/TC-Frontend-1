@@ -15,12 +15,18 @@ const SpeedCubingForm = () => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("terrainTreaderForm")) || {
-    Team_name: "",
-    Leader_name: "",
-    Leader_whatsapp: "",
-    Leader_branch: "",
-    Leader_yog: ""
+  const cachedForm = JSON.parse(localStorage.getItem("speedCubingForm")) || {
+    Name: "",
+    Email: "",
+    Phone: "",
+    Additional_phone: "",
+    College: "",
+    Branch: "",
+    YOG: "",
+    Roll_number: "",
+    Preferred_cube_type: "",
+    Experience: "",
+    Achievements: ""
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -30,17 +36,13 @@ const SpeedCubingForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("terrainTreaderForm", JSON.stringify(update));
+    localStorage.setItem("speedCubingForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
   const captchaRef = useRef(null);
 
   const onLoad = () => {
-    // this reaches out to the hCaptcha JS API and runs the
-    // execute function on it. you can use other functions as
-    // documented here:
-    // https://docs.hcaptcha.com/configuration#jsapi
     captchaRef.current.execute();
   };
 
@@ -54,22 +56,24 @@ const SpeedCubingForm = () => {
   const submit = async () => {
     // const recaptchaValue = recaptchaRef.current.getValue();
     // Send the recaptchaValue along with the form data to your server for verification.
-    if (!token) {
-      alert("Human verification is mandatory");
-      return;
-    }
+    // if (!token) {
+    //   alert("Human verification is mandatory");
+    //   return;
+    // }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
-      form.Leader_name !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_yog !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_whatsapp.length == 10;
+      form.Name !== "" &&
+      form.Email !== "" &&
+      form.Phone !== "" &&
+      form.College !== "" &&
+      form.Branch !== "" &&
+      form.YOG !== "" &&
+      form.Preferred_cube_type !== "" &&
+      form.Phone.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=terrainTreader`, form, {
+        const res = await axios.post(`/server/register?event=speedCubing`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -86,7 +90,6 @@ const SpeedCubingForm = () => {
   };
 
   const onVerifyCaptcha = () => {
-
   }
 
   return (
@@ -106,38 +109,38 @@ const SpeedCubingForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="participant_name"
+                    name="Name"
                     id="participantName"
                     type="text"
                     placeholder="Name Of Participant"
                     onChange={(e) => handle(e)}
-                    value={form.participant_name}
+                    value={form.Name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="emailId"
                     type="text"
-                    name="email_id"
+                    name="Email"
                     placeholder="Email Id"
                     onChange={(e) => handle(e)}
-                    value={form.email_id}
+                    value={form.Email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="whatsappNumber"
                     type="text"
-                    name="whatsapp_number"
+                    name="Phone"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.Phone}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {form.Phone !== "" &&
+                    form.Phone.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -145,72 +148,81 @@ const SpeedCubingForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="college_name"
+                    id="whatsappNumber"
+                    type="text"
+                    name="Additional_phone"
+                    placeholder="Additional phone Number"
+                    onChange={(e) => handle(e)}
+                    value={form.Additional_phone}
+                  />
+                  <span style={{ fontSize: "0.7rem" }}>
+                    * Don't include +91 or 0.
+                  </span>
+                  {form.Additional_phone !== "" &&
+                    form.Additional_phone.length !== 10 && (
+                      <p style={{ color: "red" }}>
+                        Enter a number of 10 digits only.
+                      </p>
+                    )}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="College"
                     id="collegeName"
                     type="text"
                     placeholder="College Name"
                     onChange={(e) => handle(e)}
-                    value={form.college_name}
+                    value={form.College}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="branch"
+                    name="Branch"
                     id="branch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.branch}
+                    value={form.Branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="year"
+                    name="YOG"
                     id="year"
                     type="text"
                     placeholder="Year"
                     onChange={(e) => handle(e)}
-                    value={form.year}
+                    value={form.YOG}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="roll_number"
+                    name="Preferred_cube_type"
                     id="rollNumber"
                     type="text"
-                    placeholder="Roll Number"
+                    placeholder="Preferred Cube Type"
                     onChange={(e) => handle(e)}
-                    value={form.roll_number}
+                    value={form.Preferred_cube_type}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="cube"
-                    id="cube"
-                    type="text"
-                    placeholder="What type of cube you're used to? (e.g. 3x3x3, Pyraminx, etc)"
-                    onChange={(e) => handle(e)}
-                    value={form.cube}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="how_long"
+                    name="Experience"
                     id="howLong"
                     type="text"
                     placeholder="How long have you been solving the cube?"
                     onChange={(e) => handle(e)}
-                    value={form.how_long}
+                    value={form.Experience}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="achievement"
+                    name="Achievements"
                     id="achievement"
                     type="text"
                     placeholder="Any achievement(s) in solving cube-related events?"
                     onChange={(e) => handle(e)}
-                    value={form.achievement}
+                    value={form.Achievements}
                   />
                 </li>
               </ul>

@@ -117,7 +117,7 @@ export const EventsList = [
       venue:"G-4",
       des: "Dive into the world of creativity with Dimensions. Let your imagination soar to new heights as you envision the extraordinary. Design the future and leave your mark on the world.",
       link:"/events/autocadForm",
-      deadline:"25th October"
+      deadline:"26th October"
     },
     {
       id: 11,
@@ -137,7 +137,7 @@ export const EventsList = [
       date:"29th October",
       time:"2 P.M. to 5 P.M.",
       venue:"Amul Parlour",
-      des: "Reaction Racing is a thrilling and educational game that combines the excitement of   racing with the power of chemical reactions. Participants will design and build miniature cars powered by various chemical reactions, competing to cover the longest distance while ensuring safety.",
+      des: "Ready, steady, react! Brace yourself for a pulse-pounding spectacle of physics showdown with chemical chaos in this turbo-charged event. Can your reaction propel you to victory? Get ready to race, roar, and discover!",
       link:"/events/reactionRacingForm",
       deadline:"29th October"
     }

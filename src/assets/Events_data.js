@@ -137,7 +137,7 @@ export const EventsList = [
       date:"29th October",
       time:"2 P.M. to 5 P.M.",
       venue:"Amul Parlour",
-      des: "Ready, steady, react! Brace yourself for a pulse-pounding spectacle of physics showdown with chemical chaos in this turbo-charged event. Can your reaction propel you to victory? Get ready to race, roar, and discover!.",
+      des: "Ready, steady, react! Brace yourself for a pulse-pounding spectacle of physics showdown with chemical chaos in this turbo-charged event. Can your reaction propel you to victory? Get ready to race, roar, and discover!",
       link:"/events/reactionRacingForm",
       deadline:"29th October"
     }

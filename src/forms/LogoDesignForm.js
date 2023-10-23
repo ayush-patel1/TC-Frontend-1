@@ -29,6 +29,7 @@ const LogoDesignForm = () => {
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
+  const [isSubmitted, setValue] = useState(false);
 
   const handle = (e) => {
     const update = { ...form };
@@ -80,6 +81,7 @@ const LogoDesignForm = () => {
             "Content-Type": "application/json",
           },
         });
+        setValue(true);
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -217,7 +219,10 @@ const LogoDesignForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div className="mint_desc" style={{ paddingTop: "4rem" }}>
+            <div style={{ fontSize: '17px' }}>
+              Don't forget to join the WhatsApp Group after registration!
+            </div>
+            <div className="mint_desc" style={{ paddingTop: "2rem" }}>
               {/* <ReCAPTCHA
                 sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
                 ref={recaptchaRef}
@@ -236,6 +241,17 @@ const LogoDesignForm = () => {
               ) : (
                 <>Submitting...</>
               )}
+              <div>
+              {isSubmitted && (
+                <div>
+                  <div>
+                    <a style={{ textDecoration: "none"}} href="https://chat.whatsapp.com/DNYul3AnvjYElO2dsH86o5">
+                      <span className="metaportal_fn_button_4">Join WA Group</span>
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
           </div>

@@ -464,6 +464,7 @@ const ValorantForm = () => {
                 <p>Each team’s roster must consist of exactly 5 players. The format will be of 5 v 5
 matches. </p>
                 <p>Maps: Bind, Haven, Split, Ascent, Icebox, Breeze, Fracture.</p>
+    <p>Participants should bring their own system.</p>
               </div>
               <div
                 data-aos="fade-down"

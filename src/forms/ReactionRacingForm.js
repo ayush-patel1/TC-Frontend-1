@@ -16,7 +16,7 @@ const ReactionRacingForm = () => {
   const [memberCount, setMemberCount] = useState(0);
   const [token, setToken] = useState(null);
   const captchaRef = useRef(null);
-  const cachedForm = JSON.parse(localStorage.getItem("survivalForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("reactionRacingForm")) || {
     Leader_name: "",
     Leader_whatsapp: "",
     Leader_branch: "",
@@ -42,7 +42,7 @@ const ReactionRacingForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("survivalForm", JSON.stringify(update));
+    localStorage.setItem("reactionRacingForm", JSON.stringify(update));
   };
 
 
@@ -56,10 +56,10 @@ const ReactionRacingForm = () => {
   };
 
   const submit = async () => {
-    // if (!token) {
-    //   alert("Human verification is mandatory");
-    //   return;
-    // }
+    if (!token) {
+      alert("Human verification is mandatory");
+      return;
+    }
     setSubmit(true);
     let condition =
       form.Leader_name !== "" &&

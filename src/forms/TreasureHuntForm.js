@@ -4,14 +4,14 @@ import { connect } from "react-redux";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
-import docs from "../assets/eventsAssets/bgmi.docx";
+import docs from "../assets/eventsAssets/tresureHunt.docx";
 import keys from "../keys.json";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import qr from "../assets/eventsAssets/bgmiQr.jpeg"
 
 // const backend = keys.backend;
 
-const TreasureHunt = () => {
+const TreasureHuntForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -135,7 +135,7 @@ const TreasureHunt = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"BGMI"} noncolor={"TOURNAMENT"} />
+      <Title color={"Mock CID"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -218,7 +218,7 @@ const TreasureHunt = () => {
                     name="P2_name"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 2 Name "
+                    placeholder="Member 1 Name "
                     onChange={(e) => handle(e)}
                     value={form.P2_name}
                   />
@@ -228,7 +228,7 @@ const TreasureHunt = () => {
                     name="P2_number"
                     id="P2Number"
                     type="text"
-                    placeholder="Player 2 Mobile Number"
+                    placeholder="Member 1 Mobile Number"
                     onChange={(e) => handle(e)}
                     value={form.P2_number}
                   />
@@ -247,7 +247,7 @@ const TreasureHunt = () => {
                     name="P2_branch"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 2 Branch"
+                    placeholder="Member 1 Branch"
                     onChange={(e) => handle(e)}
                     value={form.P2_branch}
                   />
@@ -257,7 +257,7 @@ const TreasureHunt = () => {
                     name="P2_yog"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 2 year of grad."
+                    placeholder="Member 1 year of grad."
                     onChange={(e) => handle(e)}
                     value={form.P2_yog}
                   />
@@ -267,7 +267,7 @@ const TreasureHunt = () => {
                     name="P3_name"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 3 Name"
+                    placeholder="Member 2 Name"
                     onChange={(e) => handle(e)}
                     value={form.P3_name}
                   />
@@ -277,7 +277,7 @@ const TreasureHunt = () => {
                     name="P3_number"
                     id="P2Number"
                     type="text"
-                    placeholder="Player 3 Mobile Number"
+                    placeholder="Member 2 Mobile Number"
                     onChange={(e) => handle(e)}
                     value={form.P3_number}
                   />
@@ -296,7 +296,7 @@ const TreasureHunt = () => {
                     name="P3_branch"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 3 branch"
+                    placeholder="Member 2 branch"
                     onChange={(e) => handle(e)}
                     value={form.P3_branch}
                   />
@@ -306,7 +306,7 @@ const TreasureHunt = () => {
                     name="P3_yog"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 3 Year of grad."
+                    placeholder="Member 2 Year of grad."
                     onChange={(e) => handle(e)}
                     value={form.P3_yog}
                   />
@@ -316,7 +316,7 @@ const TreasureHunt = () => {
                     name="P4_name"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 4 Name"
+                    placeholder="Member 3 Name"
                     onChange={(e) => handle(e)}
                     value={form.P4_name}
                   />
@@ -326,7 +326,7 @@ const TreasureHunt = () => {
                     name="P4_number"
                     id="P2Number"
                     type="text"
-                    placeholder="Player 4 Mobile Number"
+                    placeholder="Member 3 Mobile Number"
                     onChange={(e) => handle(e)}
                     value={form.P4_number}
                   />
@@ -345,7 +345,7 @@ const TreasureHunt = () => {
                     name="P4_branch"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 4 branch"
+                    placeholder="Member 3 branch"
                     onChange={(e) => handle(e)}
                     value={form.P4_branch}
                   />
@@ -355,7 +355,7 @@ const TreasureHunt = () => {
                     name="P4_yog"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 4 Year of grad."
+                    placeholder="Member 3 Year of grad."
                     onChange={(e) => handle(e)}
                     value={form.P4_yog}
                   />
@@ -365,7 +365,7 @@ const TreasureHunt = () => {
                     name="P5_name"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 5 Name"
+                    placeholder="Member 4 Name"
                     onChange={(e) => handle(e)}
                     value={form.P5_name}
                   />
@@ -375,7 +375,7 @@ const TreasureHunt = () => {
                     name="P5_number"
                     id="P2Number"
                     type="text"
-                    placeholder="Player 5 Mobile Number"
+                    placeholder="Member 4 Mobile Number"
                     onChange={(e) => handle(e)}
                     value={form.P5_number}
                   />
@@ -394,7 +394,7 @@ const TreasureHunt = () => {
                     name="P5_branch"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 5 branch"
+                    placeholder="Member 4 branch"
                     onChange={(e) => handle(e)}
                     value={form.P5_branch}
                   />
@@ -404,7 +404,7 @@ const TreasureHunt = () => {
                     name="P5_yog"
                     id="P2Name"
                     type="text"
-                    placeholder="Player 5 Year of grad."
+                    placeholder="Member 4 Year of grad."
                     onChange={(e) => handle(e)}
                     value={form.P5_yog}
                   />
@@ -442,68 +442,32 @@ const TreasureHunt = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>BGMI</h4>
+                <h4></h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p>1. All games will be a Battle Royal. (Min Team size = 1, Max Team size = 5)</p>
-                <p>2. Registration Fee: Rs. 100</p>
+              <p>1. An interesting on-campus murder story will be there.</p>
+                <p>2. Clues are left behind all around the campus</p>
                 <p>
-                  3. All players must have the latest version of BGMI installed
-                  on their device and all the classic maps should be downloaded.
+                  3. Some volunteers will act as witnesses or cast for the murder mystery.
                 </p>
                 <p>
-                  4. Players must have a BGMI account eligible for competitive
-                  games in order to compete. This same account must be used for
-                  all matches during the competition.
+                  4. The team who finds out the real murderer first wins.
                 </p>
                 <p>
-                  5. If a player receives a ban due to in-game behaviour or
-                  Terms of Services violation, that player is not eligible to
-                  participate further. This applies to all accounts owned by a
-                  player, not just their registered account. The judges have
-                  right to include or discount bans on a case-tocase basis.
+                  5. Multiple participating teams 
                 </p>
                 <p>
-                  6. Teams are responsible for being aware of any player's loss
-                  of eligibility for any reason, and must take appropriate
-                  proactive action to change their roster or otherwise notify
-                  organising team of any such loss of eligibility
+                  6. Each team needs to have 5 members. No restrictions (branchwise, yearwise or genderwise) on creating teams.
                 </p>
+                <p>7. A quiz round might be conducted first for the selection of participating teams.</p>
+                <p>8. Clues can be left behind all around the emtircampus.</p>
+
+  
               </div>
-              <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <h4>BGMI</h4>
-                <h3 className="metaportal_fn_countdown">ROSTER REQUIREMENTS</h3>
-              </div>
-              <div data-aos="fade-down" className="mint_info">
-                <p>
-                  Each Team must maintain, at all times during any Official
-                  Competition, exactly four players plus one optional
-                  substitute.
-                  <br />
-                  <br />
-                  Each Team must designate one player as its captain when
-                  completing the online registration process ("Team Captain").
-                  <br />
-                  <br />
-                  The Team Captain will be responsible for all Team
-                  communications with Tournament Officials.
-                  <br />
-                  <br />
-                  The Tournament Officials may rely upon any communications from
-                  the Team Captain as being made by all players on the Team.
-                  <br />
-                  <br />
-                  The Team Captain must at all times be a player on the Team's
-                  roster.
-                </p>
-              </div>
+    
               <a style={{ textDecoration: "none" }} href={docs}>
                 <span className="metaportal_fn_button_4">Download PDF</span>
               </a>
@@ -515,4 +479,4 @@ const TreasureHunt = () => {
   );
 };
 
-export default TreasureHunt;
+export default TreasureHuntForm;

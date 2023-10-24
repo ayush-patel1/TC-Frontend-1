@@ -86,7 +86,7 @@ function App() {
                 <Route exact="true" path="/events/circuitrix2Form" element={<Circuitrix2Form />} />
                 <Route exact="true" path="/events/valorantForm" element={<ValorantForm />} />
                 <Route exact="true" path="/events/autocadForm" element={<AutocadForm />} />
-                <Route exact="true" path="/events/survivalArtboardForm" element={<SurvivalArtboardForm/>} />
+                <Route exact="true" path="/events/survivalForm" element={<SurvivalArtboardForm/>} />
                 <Route exact="true" path="/events/reactionRacingForm" element={<ReactionRacingForm/>} />
                 <Route exact="true" path="/events/tresureHuntForm" element={<TreasureHuntForm/>}/>
                 <Route exact="true" path="/events/mechanicalJunkyardForm" element={<MechanicalJunkyardForm/>}/>

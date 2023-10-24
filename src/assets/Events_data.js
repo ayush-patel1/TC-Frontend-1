@@ -129,17 +129,17 @@ export const EventsList = [
       venue:"G-4",
       des: "Dive into the world of creativity with Dimensions. Let your imagination soar to new heights as you envision the extraordinary. Design the future and leave your mark on the world.",
       link:"/events/autocadForm",
-      deadline:"26th October"
+      deadline:"27th October"
     },
     {
       id: 11,
-      name: "SURVIVAL ARTBOARD",
+      name: "SURVIVAL",
       imgUrl: event11,
       date:"28th October",
       time:"2 P.M.",
       venue:"S-4",
       des: "Get the opportunity to script an epic tale of survival! Here, every choice counts, for the consequences remain shrouded in mystery. Remember, Survival is only Of The Fittest.",
-      link:"/events/survivalArtboardForm",
+      link:"/events/survivalForm",
       deadline:"25th October"
     },
     {
@@ -161,7 +161,7 @@ export const EventsList = [
       time:"11 A.M.",
       venue:"Amul Parlour",
       des: "Do you have what it takes to solve a murder mystery? Assemble your detective squad to unravel the enigma of an on-campus murder. Dive into the intrigue and prove your investigative mettle. Tick-tock, the hunt for the culprit begins – can your team outsmart the murderer?",
-      link:"/events/tresureHuntForm",
+      link:"/events/treasureHuntForm",
       deadline:"27th October"
     },
     {

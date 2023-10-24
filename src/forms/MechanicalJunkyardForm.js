@@ -4,41 +4,40 @@ import { connect } from "react-redux";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
-import docs from "../assets/eventsAssets/tresureHunt.docx";
+import docs from "../assets/eventsAssets/mechanicalJunkyard.docx";
 import keys from "../keys.json";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 
 // const backend = keys.backend;
 
-const TreasureHuntForm = () => {
+const MechanicalJunkyardForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("treasureHuntForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("mechanicalJunkyardForm")) || {
     Team_name: "",
     Leader_name: "",
     Leader_whatsapp: "",
-    Leader_college: "",
+    Leader_semester: "",
     Leader_branch: "",
-    Leader_yog: "",
+    Leader_Email: "",
     P2_name: "",
     P2_number: "",
     P2_branch: "",
-    P2_yog: "",
+    P2_Email: "",
+    P2_semester:"",
     P3_name: "",
     P3_number: "",
     P3_branch: "",
-    P3_yog: "",
+    P3_Email: "",
+    P3_semester:"",
     P4_name: "",
     P4_number: "",
     P4_branch: "",
-    P4_yog: "",
-    P5_name: "",
-    P5_number: "",
-    P5_branch: "",
-    P5_yog: "",
+    P4_Email: "",
+    P4_semester:"",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -48,7 +47,7 @@ const TreasureHuntForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("treasureHuntForm", JSON.stringify(update));
+    localStorage.setItem("mechanicalJunkyardForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -84,33 +83,43 @@ const TreasureHuntForm = () => {
       form.Leader_whatsapp !== "" &&
       form.Leader_college !== "" &&
       form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
+      form.Leader_Email !== "" &&
       form.P2_name !== "" &&
       form.P2_number !== "" &&
       form.P2_branch !== "" &&
-      form.P2_yog !== "" &&
+      form.P2_Email !== "" &&
+      form.P2_semeseter!==""&&
       form.P3_name !== "" &&
       form.P3_number !== "" &&
       form.P3_branch !== "" &&
-      form.P3_yog !== "" &&
+      form.P3_Email!== "" &&
+      form.P3_semeseter!==""&&
       form.P4_name !== "" &&
       form.P4_number !== "" &&
       form.P4_branch !== "" &&
-      form.P4_yog !== "" &&
-      form.P5_name !== "" &&
-      form.P5_number !== "" &&
-      form.P5_branch !== "" &&
-      form.P5_yog !== "" &&
+      form.P4_Email !== "" &&
+      form.P4_semeseter!==""&&
       form.Leader_whatsapp.length === 10 &&
       form.P2_number.length === 10 &&
       form.P3_number.length === 10 &&
-      form.P4_number.length === 10 &&
-      form.P5_number.length === 10;
+      form.P4_number.length === 10 ;
 
+    let condition2 = false;
+    if (form.P2_id === form.P2_name && form.P2_name === form.P2_number && form.P2_id === "") {
+      condition2 = true;
+    }
+    else if (
+      form.P2_id !== "" &&
+      form.P2_name !== "" &&
+      form.P2_number !== "" &&
+      form.P2_number.length === 10
+    ) {
+      condition2 = true;
+    }
     if (condition1) {
       try {
         const res = await axios.post(
-          `/server/register?event=TreasureHunt`,
+          `/server/register?event=MechanicalJunkyard`,
           form,
           {
             headers: {
@@ -135,7 +144,7 @@ const TreasureHuntForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"Mock CID"} noncolor={""} />
+      <Title color={"MECHANICAL"} noncolor={"JUNKYARD"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -185,12 +194,12 @@ const TreasureHuntForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
+                    name="Leader_semester"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader College"
+                    placeholder="Leader Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_college}
+                    value={form.Leader_semester}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -205,12 +214,12 @@ const TreasureHuntForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="Leader_Email"
+                    id="leaderEmail"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Leader Email"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.Leader_Email}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -218,7 +227,7 @@ const TreasureHuntForm = () => {
                     name="P2_name"
                     id="P2Name"
                     type="text"
-                    placeholder="Member 1 Name "
+                    placeholder="Member 2 Name "
                     onChange={(e) => handle(e)}
                     value={form.P2_name}
                   />
@@ -228,7 +237,7 @@ const TreasureHuntForm = () => {
                     name="P2_number"
                     id="P2Number"
                     type="text"
-                    placeholder="Member 1 Mobile Number"
+                    placeholder="Member 2 Mobile Number"
                     onChange={(e) => handle(e)}
                     value={form.P2_number}
                   />
@@ -244,30 +253,40 @@ const TreasureHuntForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    name="P2_semester"
+                    id="P2Branch"
+                    type="text"
+                    placeholder="Member 2 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_semester}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
                     name="P2_branch"
                     id="P2Name"
                     type="text"
-                    placeholder="Member 1 Branch"
+                    placeholder="Member 2 Branch"
                     onChange={(e) => handle(e)}
                     value={form.P2_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_yog"
+                    name="P2_Email"
                     id="P2Name"
                     type="text"
-                    placeholder="Member 1 year of grad."
+                    placeholder="Member 2 Email."
                     onChange={(e) => handle(e)}
-                    value={form.P2_yog}
+                    value={form.P2_Email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="P3_name"
-                    id="P2Name"
+                    id="P3Name"
                     type="text"
-                    placeholder="Member 2 Name"
+                    placeholder="Member 3 Name "
                     onChange={(e) => handle(e)}
                     value={form.P3_name}
                   />
@@ -275,9 +294,9 @@ const TreasureHuntForm = () => {
                 <li data-aos="fade-down">
                   <input
                     name="P3_number"
-                    id="P2Number"
+                    id="P3Number"
                     type="text"
-                    placeholder="Member 2 Mobile Number"
+                    placeholder="Member 3 Mobile Number"
                     onChange={(e) => handle(e)}
                     value={form.P3_number}
                   />
@@ -293,30 +312,40 @@ const TreasureHuntForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_branch"
-                    id="P2Name"
+                    name="P3_semester"
+                    id="P3Branch"
                     type="text"
-                    placeholder="Member 2 branch"
+                    placeholder="Member 3 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_semester}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_branch"
+                    id="P3Name"
+                    type="text"
+                    placeholder="Member 3 Branch"
                     onChange={(e) => handle(e)}
                     value={form.P3_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_yog"
-                    id="P2Name"
+                    name="P3_Email"
+                    id="P3Name"
                     type="text"
-                    placeholder="Member 2 Year of grad."
+                    placeholder="Member 3 Email."
                     onChange={(e) => handle(e)}
-                    value={form.P3_yog}
+                    value={form.P3_Email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="P4_name"
-                    id="P2Name"
+                    id="P4Name"
                     type="text"
-                    placeholder="Member 3 Name"
+                    placeholder="Member 4 Name"
                     onChange={(e) => handle(e)}
                     value={form.P4_name}
                   />
@@ -324,9 +353,9 @@ const TreasureHuntForm = () => {
                 <li data-aos="fade-down">
                   <input
                     name="P4_number"
-                    id="P2Number"
+                    id="P4Number"
                     type="text"
-                    placeholder="Member 3 Mobile Number"
+                    placeholder="Member 4 Mobile Number"
                     onChange={(e) => handle(e)}
                     value={form.P4_number}
                   />
@@ -342,71 +371,32 @@ const TreasureHuntForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_branch"
-                    id="P2Name"
+                    name="P4_semester"
+                    id="Member4Branch"
                     type="text"
-                    placeholder="Member 3 branch"
+                    placeholder="Member 4 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_semester}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_branch"
+                    id="P4Name"
+                    type="text"
+                    placeholder="Member 4 branch"
                     onChange={(e) => handle(e)}
                     value={form.P4_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_yog"
+                    name="P4_Email"
                     id="P2Name"
                     type="text"
-                    placeholder="Member 3 Year of grad."
+                    placeholder="Member 4 Email."
                     onChange={(e) => handle(e)}
-                    value={form.P4_yog}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P5_name"
-                    id="P2Name"
-                    type="text"
-                    placeholder="Member 4 Name"
-                    onChange={(e) => handle(e)}
-                    value={form.P5_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P5_number"
-                    id="P2Number"
-                    type="text"
-                    placeholder="Member 4 Mobile Number"
-                    onChange={(e) => handle(e)}
-                    value={form.P5_number}
-                  />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  {form.P5_number !== "" &&
-                    form.P5_number.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P5_branch"
-                    id="P2Name"
-                    type="text"
-                    placeholder="Member 4 branch"
-                    onChange={(e) => handle(e)}
-                    value={form.P5_branch}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P5_yog"
-                    id="P2Name"
-                    type="text"
-                    placeholder="Member 4 Year of grad."
-                    onChange={(e) => handle(e)}
-                    value={form.P5_yog}
+                    value={form.P4_Email}
                   />
                 </li>
               </ul>
@@ -442,30 +432,26 @@ const TreasureHuntForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4></h4>
+                <h4>Mechanical Junkyard</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-              <p>1. An interesting on-campus murder story will be there.</p>
-                <p>2. Clues are left behind all around the campus</p>
+              <p>1. One round event ,2-4 members in each group.</p>
+                <p>2. Max 10 groups on a first come first serve basis.</p>
                 <p>
-                  3. Some volunteers will act as witnesses or cast for the murder mystery.
+                  3. The best and most creative model in given time will be announced winner.
                 </p>
                 <p>
-                  4. The team who finds out the real murderer first wins.
+                  4. Participants will be provided some mechanical junk and waste, cardboard and necessary items.
                 </p>
                 <p>
-                  5. Multiple participating teams 
+                  5. Participants have to bring their own glue, scissors, sheets, any other stationary, if they find it useful.
                 </p>
                 <p>
-                  6. Each team needs to have 5 members. No restrictions (branchwise, yearwise or genderwise) on creating teams.
+                  6. Winner will be decided 
                 </p>
-                <p>7. A quiz round might be conducted first for the selection of participating teams.</p>
-                <p>8. Clues can be left behind all around the emtircampus.</p>
-
-  
               </div>
     
               <a style={{ textDecoration: "none" }} href={docs}>
@@ -479,4 +465,4 @@ const TreasureHuntForm = () => {
   );
 };
 
-export default TreasureHuntForm;
+export default MechanicalJunkyardForm;

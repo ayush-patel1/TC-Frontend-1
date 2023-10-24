@@ -14,7 +14,7 @@ import event13 from '../assets/eventsPoster/tresureHunt.webp'
 import event14 from '../assets/eventsPoster/mechanicalJunkyard.webp'
 import event15 from '../assets/eventsPoster/comingSoon.webp'
 import event16 from '../assets/eventsPoster/ticTacToe.webp'
-import event17 from '../assets/eventsPoster/comingSoon.webp'
+import event17 from '../assets/eventsPoster/ecopolis.webp'
 import event18 from '../assets/eventsPoster/comingSoon.webp'
 import event19 from '../assets/eventsPoster/comingSoon.webp'
 import event20 from '../assets/eventsPoster/comingSoon.webp'
@@ -196,7 +196,19 @@ export const EventsList = [
       des: "The Human Tic Tac Toe Tournament will foster a sense of camaraderie and intellectual competition among participants. Through the familiar format of Tic Tac Toe, we hope to bring people together and celebrate the spirit of strategic thinking in a fun and innovative way. ",
       link:"/events/ticTacToeForm",
       deadline:"coming soon"
-    }
+    },
+    {
+    id: 17,
+    name: "ECOPOLIS",
+    imgUrl: event17,
+    date:"28th October",
+    time:"11:30 A.M.",
+    venue:"Architecture Studio 3,4",
+    des: "Where Imagination Fuels Urban Metamorphosis. Collaborate with visionary minds to craft eco-friendly urban utopias that redefine the future.🌏",
+    link:"/events/ecopolisForm",
+    deadline:"coming soon"
+  }
+
 
 
 

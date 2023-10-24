@@ -4,19 +4,19 @@ import { connect } from "react-redux";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
-import docs from "../assets/eventsAssets/mechanicalJunkyard.docx";
+import docs from "../assets/eventsAssets/ecopolis.docx";
 import keys from "../keys.json";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 
 // const backend = keys.backend;
 
-const MechanicalJunkyardForm = () => {
+const EcopolisForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("mechanicalJunkyardForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("ecopolisForm")) || {
     Team_name: "",
     Leader_name: "",
     Leader_whatsapp: "",
@@ -33,11 +33,6 @@ const MechanicalJunkyardForm = () => {
     P3_branch: "",
     P3_Email: "",
     P3_semester:"",
-    P4_name: "",
-    P4_number: "",
-    P4_branch: "",
-    P4_Email: "",
-    P4_semester:"",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -47,7 +42,7 @@ const MechanicalJunkyardForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("mechanicalJunkyardForm", JSON.stringify(update));
+    localStorage.setItem("ecopolisForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -94,16 +89,10 @@ const MechanicalJunkyardForm = () => {
       form.P3_branch !== "" &&
       form.P3_Email!== "" &&
       form.P3_semeseter!==""&&
-      form.P4_name !== "" &&
-      form.P4_number !== "" &&
-      form.P4_branch !== "" &&
-      form.P4_Email !== "" &&
-      form.P4_semeseter!==""&&
       form.Leader_whatsapp.length === 10 &&
       form.P2_number.length === 10 &&
-      form.P3_number.length === 10 &&
-      form.P4_number.length === 10 ;
-
+      form.P3_number.length === 10 ;
+    
     if (condition1) {
       try {
         const res = await axios.post(
@@ -132,7 +121,7 @@ const MechanicalJunkyardForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"MECHANICAL"} noncolor={"JUNKYARD"} />
+      <Title color={"ECOPOLIS"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -328,65 +317,6 @@ const MechanicalJunkyardForm = () => {
                     value={form.P3_Email}
                   />
                 </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P4_name"
-                    id="P4Name"
-                    type="text"
-                    placeholder="Member 4 Name"
-                    onChange={(e) => handle(e)}
-                    value={form.P4_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P4_number"
-                    id="P4Number"
-                    type="text"
-                    placeholder="Member 4 Mobile Number"
-                    onChange={(e) => handle(e)}
-                    value={form.P4_number}
-                  />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  {form.P4_number !== "" &&
-                    form.P4_number.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P4_semester"
-                    id="Member4Branch"
-                    type="text"
-                    placeholder="Member 4 Semester"
-                    onChange={(e) => handle(e)}
-                    value={form.P4_semester}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P4_branch"
-                    id="P4Name"
-                    type="text"
-                    placeholder="Member 4 branch"
-                    onChange={(e) => handle(e)}
-                    value={form.P4_branch}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P4_Email"
-                    id="P2Name"
-                    type="text"
-                    placeholder="Member 4 Email."
-                    onChange={(e) => handle(e)}
-                    value={form.P4_Email}
-                  />
-                </li>
               </ul>
             </div>
             <HCaptcha
@@ -420,25 +350,23 @@ const MechanicalJunkyardForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Mechanical Junkyard</h4>
+                <h4>Ecopolis</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-              <p>1. One round event ,2-4 members in each group.</p>
-                <p>2. Max 10 groups on a first come first serve basis.</p>
+              <p>1. Round 1 : PPT presentation(1 slider).<br/>
+</p>
+                <p>2.Top 5 teams will qualify.</p>
                 <p>
-                  3. The best and most creative model in given time will be announced winner.
+                  3.Round 2:Proper ppt presentation(max 10 slides).
                 </p>
                 <p>
-                  4. Participants will be provided some mechanical junk and waste, cardboard and necessary items.
+                  4. 3 winners.
                 </p>
                 <p>
-                  5. Participants have to bring their own glue, scissors, sheets, any other stationary, if they find it useful.
-                </p>
-                <p>
-                  6. Winner will be decided 
+                  5.Model presentation. 
                 </p>
               </div>
     
@@ -453,4 +381,4 @@ const MechanicalJunkyardForm = () => {
   );
 };
 
-export default MechanicalJunkyardForm;
+export default EcopolisForm;

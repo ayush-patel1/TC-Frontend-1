@@ -34,6 +34,7 @@ import ValorantForm from "./forms/ValorantForm";
 import AutocadForm from "./forms/AutocadForm";
 import SurvivalArtboardForm from "./forms/SurvivalArtboardForm";
 import ReactionRacingForm from "./forms/ReactionRacingForm";
+import TreasureHunt from "./forms/TreasureHunt";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -85,6 +86,7 @@ function App() {
                 <Route exact="true" path="/events/autocadForm" element={<AutocadForm />} />
                 <Route exact="true" path="/events/survivalArtboardForm" element={<SurvivalArtboardForm/>} />
                 <Route exact="true" path="/events/reactionRacingForm" element={<ReactionRacingForm/>} />
+                <Route exact="true" path="/events/treasureHuntForm" element={<TreasureHunt />} />
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

@@ -16,16 +16,17 @@ const ReactionRacingForm = () => {
   const [memberCount, setMemberCount] = useState(0);
   const [token, setToken] = useState(null);
   const captchaRef = useRef(null);
-  const cachedForm = JSON.parse(localStorage.getItem("survivalArtboardForm")) || {
-    Team_name: "",
+  const cachedForm = JSON.parse(localStorage.getItem("survivalForm")) || {
     Leader_name: "",
     Leader_whatsapp: "",
     Leader_branch: "",
-    Leader_yog: "",
+    Leader_sem: "",
+    Leader_email: "",
     P2_name: "",
+    P2_branch: "",
+    P2_sem: "",
+    P2_email: "",
     P2_number: "",
-    P3_name: "",
-    P3_number: "",
   };
   const [form, set] = useState(cachedForm);
   const [isSubmitting, setSubmit] = useState(false);
@@ -41,7 +42,7 @@ const ReactionRacingForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("survivalArtboardForm", JSON.stringify(update));
+    localStorage.setItem("survivalForm", JSON.stringify(update));
   };
 
 
@@ -55,50 +56,29 @@ const ReactionRacingForm = () => {
   };
 
   const submit = async () => {
-    if (!token) {
-      alert("Human verification is mandatory");
-      return;
-    }
+    // if (!token) {
+    //   alert("Human verification is mandatory");
+    //   return;
+    // }
     setSubmit(true);
-    let condition1 =
-      form.Team_name !== "" &&
+    let condition =
       form.Leader_name !== "" &&
       form.Leader_whatsapp !== "" &&
       form.Leader_branch !== "" &&
-      form.Leader_whatsapp.length == 10 &&
-      form.Leader_yog !== "";
+      form.Leader_sem !== "" &&
+      form.Leader_email !== "" &&
+      form.P2_name !== "" &&
+      form.P2_branch !== "" &&
+      form.P2_sem !== "" &&
+      form.P2_email !== "" &&
+      form.P2_number !== "" &&
+      form.P2_number.length === 10 &&
+      form.Leader_whatsapp.length === 10;
 
-      let condition2 = false;
 
-      if (form.P2_id === form.P2_name && form.P2_name === form.P2_number) {
-        condition2 = true;
-      }
-      else if (
-        form.P2_id !== "" &&
-        form.P2_name !== "" &&
-        form.P2_number !== "" &&
-        form.P2_number.length === 10
-      ) {
-        condition2 = true;
-      }
-  
-      let condition3 = false;
-      if (form.P3_id === form.P3_name && form.P3_name === form.P3_number) {
-        condition3 = true;
-      }
-      else if (
-        form.P3_id !== "" &&
-        form.P3_name !== "" &&
-        form.P3_number !== "" &&
-        form.P3_number.length === 10
-      ) {
-        condition3 = true;
-      }
-  
-      
-    if (condition1 && condition2 && condition3) {
+    if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=SurvivalArtboard`, form, {
+        const res = await axios.post(`/server/register?event=ReactionRacing`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -119,7 +99,7 @@ const ReactionRacingForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"SURVIVAL"} noncolor={"ARTBOARD"} />
+      <Title color={"REACTION"} noncolor={"RACING"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -128,16 +108,6 @@ const ReactionRacingForm = () => {
             </div>
             <div className="mint_list">
               <ul>
-                <li data-aos="fade-down">
-                  <input
-                    name="Team_name"
-                    id="teamName"
-                    type="text"
-                    placeholder="Team Name"
-                    onChange={(e) => handle(e)}
-                    value={form.Team_name}
-                  />
-                </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderName"
@@ -179,12 +149,22 @@ const ReactionRacingForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
+                    name="Leader_sem"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader Year of graduation"
+                    placeholder="Leader's Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.Leader_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_email"
+                    id="leaderBranch"
+                    type="text"
+                    placeholder="Leader's Email Id"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_email}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -199,6 +179,36 @@ const ReactionRacingForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    id="P2Name"
+                    type="text"
+                    name="P2_branch"
+                    placeholder="Player 2 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="P2Name"
+                    type="text"
+                    name="P2_sem"
+                    placeholder="Player 2 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="P2Name"
+                    type="text"
+                    name="P2_email"
+                    placeholder="Player 2 Email Id"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
                     name="P2_number"
                     id="P2Number"
                     type="text"
@@ -209,31 +219,13 @@ const ReactionRacingForm = () => {
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
+                  {form.P2_number !== "" &&
+                    form.P2_number.length !== 10 && (
+                      <p style={{ color: "red" }}>
+                        Enter a number of 10 digits only.
+                      </p>
+                    )}
                 </li>
-                <li data-aos="fade-down">
-                  <input
-                    id="P3Name"
-                    type="text"
-                    name="P3_name"
-                    placeholder="Player 3 Name"
-                    onChange={(e) => handle(e)}
-                    value={form.P3_name}
-                  />
-                </li>
-                <li data-aos="fade-down">   
-                  <input
-                    name="P3_number"
-                    id="P3Number"
-                    type="text"
-                    placeholder="Player 3 Mobile Number"
-                    onChange={(e) => handle(e)}
-                    value={form.P3_number}
-                  />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  </li>
-
               </ul>
             </div>
             <HCaptcha
@@ -263,21 +255,15 @@ const ReactionRacingForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Reaction Racing</h4>
+                <h4>Survival</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p>1. Participants will have to bring their own car models, which can be easily made with toy wheels, wooden sticks, an adhesive like fevicol, a tape, a wooden or cardboard pad and a plastic bottle preferably of 1 L capacity.</p>
-                <p>2. Participants are advised to bring chemical reactants by themselves. If they fail to do so, we will be providing the necessary chemicals from our side. </p>
-                <p>3. Participants can make modifications of their choice, that may help in propelling the cars farther.</p>
-                <p>4. Any kind of visual modifications are also allowed as long as they aren't offensive or harmful.</p>
-                <p>5. Each participant's car will be placed at the starting line. Upon activating the chemical reaction, the car will move forward, covering distance until the reaction's energy is depleted. The distance covered by the car will be measured and recorded.</p>
-                <p>6. Participants will be judged based on two main criteria: safety and distance covered. Cars must not pose any safety risks during the race. The longer the distance covered, the better the chances of winning.</p>
-                
+                <p>All rules and Regulations will be told on the venue.</p>
               </div>
-        
+
               <a style={{ textDecoration: "none" }} href={docs}>
                 <span className="metaportal_fn_button_4">Download PDF</span>
               </a>

@@ -180,11 +180,11 @@ export const EventsList = [
       name: "TALENT SHOW",
       imgUrl: event15,
       date:"28th October",
-      time:"To be decided",
-      venue:"To be decided",
+      time:"3-6 P.M.",
+      venue:"Amul Parlour",
       des: "An engaging show to provide peers a platform to discover themselves and showcase their talents. An opportunity to make lasting connections and savor the evening of class, culture and unlimited fun.",
       link:"/events/talentShowForm",
-      deadline:"To be decided"
+      deadline:"26th October"
     },
     {
       id: 16,

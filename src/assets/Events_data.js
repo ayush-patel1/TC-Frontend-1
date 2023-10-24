@@ -13,7 +13,7 @@ import event12 from '../assets/eventsPoster/reactionRacing.webp'
 import event13 from '../assets/eventsPoster/tresureHunt.webp'
 import event14 from '../assets/eventsPoster/mechanicalJunkyard.webp'
 import event15 from '../assets/eventsPoster/comingSoon.webp'
-import event16 from '../assets/eventsPoster/comingSoon.webp'
+import event16 from '../assets/eventsPoster/ticTacToe.webp'
 import event17 from '../assets/eventsPoster/comingSoon.webp'
 import event18 from '../assets/eventsPoster/comingSoon.webp'
 import event19 from '../assets/eventsPoster/comingSoon.webp'
@@ -165,7 +165,7 @@ export const EventsList = [
       deadline:"27th October"
     },
     {
-      id: 13,
+      id: 14,
       name: "MECHANICAL JUNKYARD",
       imgUrl: event14,
       date:"28th October",
@@ -176,7 +176,7 @@ export const EventsList = [
       deadline:"27th October"
     },
     {
-      id: 13,
+      id: 15,
       name: "TALENT SHOW",
       imgUrl: event15,
       date:"28th October",
@@ -185,7 +185,19 @@ export const EventsList = [
       des: "An engaging show to provide peers a platform to discover themselves and showcase their talents. An opportunity to make lasting connections and savor the evening of class, culture and unlimited fun.",
       link:"/events/talentShowForm",
       deadline:"To be decided"
+    },
+    {
+      id: 16,
+      name: "HUMAN TIC-TAC-TOE",
+      imgUrl: event16,
+      date:"29th October",
+      time:"3 P.M. to 5 P.M.",
+      venue:"Basketball Court",
+      des: "The Human Tic Tac Toe Tournament will foster a sense of camaraderie and intellectual competition among participants. Through the familiar format of Tic Tac Toe, we hope to bring people together and celebrate the spirit of strategic thinking in a fun and innovative way. ",
+      link:"/events/ticTacToeForm",
+      deadline:"coming soon"
     }
+
 
 
 

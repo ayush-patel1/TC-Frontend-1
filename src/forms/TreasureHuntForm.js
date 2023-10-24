@@ -7,7 +7,7 @@ import Title from "../components/Title";
 import docs from "../assets/eventsAssets/tresureHunt.docx";
 import keys from "../keys.json";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-
+import qr from "../assets/eventsAssets/bgmiQr.jpeg"
 
 // const backend = keys.backend;
 

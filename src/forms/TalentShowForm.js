@@ -25,8 +25,7 @@ const TalentShowForm = () => {
     YOG: "",
     Roll_number: "",
     Preferred_cube_type: "",
-    Experience: "",
-    Achievements: ""
+    PIG:"",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -70,6 +69,7 @@ const TalentShowForm = () => {
       form.Branch !== "" &&
       form.YOG !== "" &&
       form.Preferred_cube_type !== "" &&
+      form.PIG !==""&&
       form.Phone.length == 10;
 
     if (condition) {
@@ -197,6 +197,18 @@ const TalentShowForm = () => {
                     value={form.YOG}
                   />
                 </li>
+                
+                <li data-aos="fade-down">
+                <h4 style={{marginBottom:"0.8rem",color:"red"}}>Performing in Group?</h4>
+                  <input
+                    name="group"
+                    id="PIG"
+                    type="text"
+                    placeholder="Yes Or No"
+                    onChange={(e) => handle(e)}
+                    value={form.group}
+                  />
+                </li>
               </ul>
             </div>
             <HCaptcha
@@ -205,9 +217,9 @@ const TalentShowForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div style={{ fontSize: '17px' }}>
+            {/* <div style={{ fontSize: '17px' }}>
               Don't forget to join the WhatsApp Group after registration!
-            </div>
+            </div> */}
             <div className="mint_desc" style={{ paddingTop: "2rem" }}>
               {/* <ReCAPTCHA
                 sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"

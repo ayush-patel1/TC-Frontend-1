@@ -11,6 +11,14 @@ import event10 from '../assets/eventsPoster/autocad.webp'
 import event11 from '../assets/eventsPoster/survivalArtboard.webp'
 import event12 from '../assets/eventsPoster/reactionRacing.webp'
 import event13 from '../assets/eventsPoster/tresureHunt.webp'
+import event14 from '../assets/eventsPoster/mechanicalJunkyard.webp'
+import event15 from '../assets/eventsPoster/comingSoon.webp'
+import event16 from '../assets/eventsPoster/comingSoon.webp'
+import event17 from '../assets/eventsPoster/comingSoon.webp'
+import event18 from '../assets/eventsPoster/comingSoon.webp'
+import event19 from '../assets/eventsPoster/comingSoon.webp'
+import event20 from '../assets/eventsPoster/comingSoon.webp'
+
 
 export const EventsList = [
     {
@@ -147,7 +155,7 @@ export const EventsList = [
     },
     {
       id: 13,
-      name: "Mock CID (Treasure Hunt 2.0)",
+      name: "MOCK CID (TREASURE HUNT 2.0)",
       imgUrl: event13,
       date:"29th October",
       time:"11 A.M.",
@@ -155,6 +163,30 @@ export const EventsList = [
       des: "Do you have what it takes to solve a murder mystery? Assemble your detective squad to unravel the enigma of an on-campus murder. Dive into the intrigue and prove your investigative mettle. Tick-tock, the hunt for the culprit begins – can your team outsmart the murderer?",
       link:"/events/tresureHuntForm",
       deadline:"27th October"
+    },
+    {
+      id: 13,
+      name: "MECHANICAL JUNKYARD",
+      imgUrl: event14,
+      date:"28th October",
+      time:"11 A.M.",
+      venue:"Left Garden",
+      des: "This event is an on-spot design and fabrication task for the teams, we will provide them with some mechanical junk or waste, the teams will be provided some limited time to discuss and execute their ideas of making something creative with that junk.",
+      link:"/events/mechanicalJunkyardForm",
+      deadline:"27th October"
+    },
+    {
+      id: 13,
+      name: "TALENT SHOW",
+      imgUrl: event15,
+      date:"28th October",
+      time:"To be decided",
+      venue:"To be decided",
+      des: "An engaging show to provide peers a platform to discover themselves and showcase their talents. An opportunity to make lasting connections and savor the evening of class, culture and unlimited fun.",
+      link:"/events/talentShowForm",
+      deadline:"To be decided"
     }
+
+
 
   ];

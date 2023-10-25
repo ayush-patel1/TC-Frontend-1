@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
-import docs from "../assets/eventsAssets/survivalArtboard.docx";
+import docs from "../assets/eventsAssets/survivalArtboard.pdf";
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import keys from "../keys.json";
 

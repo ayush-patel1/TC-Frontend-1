@@ -202,7 +202,7 @@ export const EventsList = [
     name: "ECOPOLIS",
     imgUrl: event17,
     date:"28th October",
-    time:"11:30 A.M.",
+    time:"11:30 A.M. to 1 P.M.",
     venue:"Architecture Studio 3,4",
     des: "Where Imagination Fuels Urban Metamorphosis. Collaborate with visionary minds to craft eco-friendly urban utopias that redefine the future.🌏",
     link:"/events/ecopolisForm",

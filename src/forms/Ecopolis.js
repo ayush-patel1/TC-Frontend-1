@@ -18,20 +18,16 @@ const EcopolisForm = () => {
 
   const cachedForm = JSON.parse(localStorage.getItem("ecopolisForm")) || {
     Team_name: "",
+    No_of_members:"",
     Leader_name: "",
-    Leader_whatsapp: "",
+    Leader_number: "",
     Leader_semester: "",
-    Leader_branch: "",
     Leader_Email: "",
     P2_name: "",
     P2_number: "",
-    P2_branch: "",
-    P2_Email: "",
     P2_semester:"",
     P3_name: "",
     P3_number: "",
-    P3_branch: "",
-    P3_Email: "",
     P3_semester:"",
   };
   const [form, set] = useState(cachedForm);
@@ -75,28 +71,23 @@ const EcopolisForm = () => {
     let condition1 =
       form.Team_name !== "" &&
       form.Leader_name !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
+      form.Leader_number !== "" &&
       form.Leader_Email !== "" &&
+      form.Leader_semester!==""&&
       form.P2_name !== "" &&
       form.P2_number !== "" &&
-      form.P2_branch !== "" &&
-      form.P2_Email !== "" &&
       form.P2_semeseter!==""&&
       form.P3_name !== "" &&
       form.P3_number !== "" &&
-      form.P3_branch !== "" &&
-      form.P3_Email!== "" &&
       form.P3_semeseter!==""&&
-      form.Leader_whatsapp.length === 10 &&
+      form.Leader_number.length === 10 &&
       form.P2_number.length === 10 &&
       form.P3_number.length === 10 ;
     
     if (condition1) {
       try {
         const res = await axios.post(
-          `/server/register?event=MechanicalJunkyard`,
+          `/server/register?event=Ecopolis`,
           form,
           {
             headers: {
@@ -154,16 +145,16 @@ const EcopolisForm = () => {
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="Leader_whatsapp"
-                    placeholder="Leader Whatsapp Number"
+                    name="Leader_number"
+                    placeholder="Leader  Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.Leader_number}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {form.Leader_number !== "" &&
+                    form.Leader_number.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -177,16 +168,6 @@ const EcopolisForm = () => {
                     placeholder="Leader Semester"
                     onChange={(e) => handle(e)}
                     value={form.Leader_semester}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_branch"
-                    id="leaderBranch"
-                    type="text"
-                    placeholder="Leader Branch"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -240,26 +221,6 @@ const EcopolisForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_branch"
-                    id="P2Name"
-                    type="text"
-                    placeholder="Member 2 Branch"
-                    onChange={(e) => handle(e)}
-                    value={form.P2_branch}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P2_Email"
-                    id="P2Name"
-                    type="text"
-                    placeholder="Member 2 Email."
-                    onChange={(e) => handle(e)}
-                    value={form.P2_Email}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
                     name="P3_name"
                     id="P3Name"
                     type="text"
@@ -295,26 +256,6 @@ const EcopolisForm = () => {
                     placeholder="Member 3 Semester"
                     onChange={(e) => handle(e)}
                     value={form.P3_semester}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P3_branch"
-                    id="P3Name"
-                    type="text"
-                    placeholder="Member 3 Branch"
-                    onChange={(e) => handle(e)}
-                    value={form.P3_branch}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P3_Email"
-                    id="P3Name"
-                    type="text"
-                    placeholder="Member 3 Email."
-                    onChange={(e) => handle(e)}
-                    value={form.P3_Email}
                   />
                 </li>
               </ul>

@@ -290,26 +290,62 @@ const EcopolisForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Ecopolis</h4>
+                <h4>Terrain Treader</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-              <p>1. Round 1 : PPT presentation(1 slider).<br/>
-</p>
-                <p>2.Top 5 teams will qualify.</p>
                 <p>
-                  3.Round 2:Proper ppt presentation(max 10 slides).
+                1. It is a city planning event. The purpose of this competition is choosing the best architectural and urban planning concept (master plan) of a new city.
+                </p>
+                <p>2. Date: 28/10/2023</p>
+                <p>
+                  3. Venue: architecture studio 3,4
                 </p>
                 <p>
-                  4. 3 winners.
+                4. Time : 11:00 am – 1: pm 
+                  
                 </p>
                 <p>
-                  5.Model presentation. 
+                5. Team of max 3 members will be allowed.
+                   
+                </p>
+                <p>
+                6. Requirement : 2-3 architecture executives and 3-4 volunteers
+                  
+                </p>
+                <p>7. The problem statement will be given to the participants 45 mins prior competition .</p>
+                <p>8. Participants  have to make city plan according to the problem statement given on the sheet provided to them. </p>
+              </div>
+              <div
+                data-aos="fade-down"
+                style={{ paddingTop: "2rem" }}
+                className="mint_time"
+              >
+                <h4>PROCEDURES</h4>
+                <h3 className="metaportal_fn_countdown">PHASES IN THE EVENT</h3>
+              </div>
+              <div data-aos="fade-down" className="mint_info">
+                <p>1. Round 1:
+                
+                                 
+                  <br />
+                  <br />• PPT presentation(1 slider).
+                  <br />
+                  <br />•	Top 5 teams will qualify   
+
+
+                  <br />
+                  <br />2. Round 2:  
+                  <br />
+                  <br />• Proper ppt presentation(max 10 slides). 
+                  <br /> 
+                  <br />• 3 winners.
+                  <br/>
+                  <br />• Model presentation.
                 </p>
               </div>
-    
               <a style={{ textDecoration: "none" }} href={docs}>
                 <span className="metaportal_fn_button_4">Download PDF</span>
               </a>

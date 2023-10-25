@@ -58,10 +58,10 @@ const TalentShowForm = () => {
   }, [token]);
 
   const submit = async () => {
-    // if (!token) {
-    //   alert("Human verification is mandatory");
-    //   return;
-    // }
+    if (!token) {
+      alert("Human verification is mandatory");
+      return;
+    }
     setSubmit(true);
     let condition =
       form.P1_name !== "" &&

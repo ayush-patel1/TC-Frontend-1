@@ -18,11 +18,10 @@ const EcopolisForm = () => {
 
   const cachedForm = JSON.parse(localStorage.getItem("ecopolisForm")) || {
     Team_name: "",
-    No_of_members:"",
     Leader_name: "",
-    Leader_number: "",
+    Leader_whatsapp: "",
+    Leader_email: "",
     Leader_semester: "",
-    Leader_Email: "",
     P2_name: "",
     P2_number: "",
     P2_semester:"",
@@ -62,17 +61,17 @@ const EcopolisForm = () => {
   const submit = async () => {
     // const recaptchaValue = recaptchaRef.current.getValue();
     // Send the recaptchaValue along with the form data to your server for verification.
-    if (!token) {
-      alert("Human verification is mandatory");
-      return;
-    }
+    // if (!token) {
+    //   alert("Human verification is mandatory");
+    //   return;
+    // }
     setSubmit(true);
     console.log(form);
     let condition1 =
       form.Team_name !== "" &&
       form.Leader_name !== "" &&
-      form.Leader_number !== "" &&
-      form.Leader_Email !== "" &&
+      form.Leader_whatsapp !== "" &&
+      form.Leader_email !== "" &&
       form.Leader_semester!==""&&
       form.P2_name !== "" &&
       form.P2_number !== "" &&
@@ -80,7 +79,7 @@ const EcopolisForm = () => {
       form.P3_name !== "" &&
       form.P3_number !== "" &&
       form.P3_semeseter!==""&&
-      form.Leader_number.length === 10 &&
+      form.Leader_whatsapp.length === 10 &&
       form.P2_number.length === 10 &&
       form.P3_number.length === 10 ;
     
@@ -145,16 +144,16 @@ const EcopolisForm = () => {
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="Leader_number"
+                    name="Leader_whatsapp"
                     placeholder="Leader  Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_number}
+                    value={form.Leader_whatsapp}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_number !== "" &&
-                    form.Leader_number.length !== 10 && (
+                  {form.Leader_whatsapp !== "" &&
+                    form.Leader_whatsapp.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -172,12 +171,12 @@ const EcopolisForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_Email"
+                    name="Leader_email"
                     id="leaderEmail"
                     type="text"
                     placeholder="Leader Email"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_Email}
+                    value={form.Leader_email}
                   />
                 </li>
                 <li data-aos="fade-down">

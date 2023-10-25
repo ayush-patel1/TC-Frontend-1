@@ -1,5 +1,5 @@
 import axios from "axios";
-import { React, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import keys from "../keys.json";
 import AOS from "aos";
@@ -16,16 +16,21 @@ const TalentShowForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("talentShowForm")) || {
-    Name: "",
-    Email: "",
-    Phone: "",
-    Additional_phone: "",
-    College: "",
-    Branch: "",
-    YOG: "",
-    Roll_number: "",
-    Preferred_cube_type: "",
-    PIG:"",
+    P1_name: "",
+    P1_rollno: "",
+    P1_email: "",
+    P1_whatsapp: "",
+    Performance: "",
+    Duration: "",
+    P2_name: "",
+    P2_rollno: "",
+    P2_whatsapp: "",
+    P3_name: "",
+    P3_rollno: "",
+    P3_whatsapp: "",
+    P4_name: "",
+    P4_rollno: "",
+    P4_whatsapp: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -48,38 +53,45 @@ const TalentShowForm = () => {
 
   useEffect(() => {
     if (token) {
-      console.log('Captcha verified')
+      console.log('Captcha verified');
     }
-      // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
-    // const recaptchaValue = recaptchaRef.current.getValue();
-    // Send the recaptchaValue along with the form data to your server for verification.
     if (!token) {
       alert("Human verification is mandatory");
       return;
     }
     setSubmit(true);
     let condition =
-      form.Name !== "" &&
-      form.Email !== "" &&
-      form.Phone !== "" &&
-      form.College !== "" &&
-      form.Branch !== "" &&
-      form.YOG !== "" &&
-      form.Preferred_cube_type !== "" &&
-      form.PIG !==""&&
-      form.Phone.length == 10;
+      form.P1_name !== "" &&
+      form.P1_rollno !== "" &&
+      form.P1_email !== "" &&
+      form.P1_whatsapp !== "" &&
+      form.Performance !== "" &&
+      form.Duration !== "" &&
+      form.P2_name !== "" &&
+      form.P2_rollno !== "" &&
+      form.P2_whatsapp !== "" &&
+      form.P3_name !== "" &&
+      form.P3_rollno !== "" &&
+      form.P3_whatsapp !== "" &&
+      form.P4_name !== "" &&
+      form.P4_rollno !== "" &&
+      form.P4_whatsapp !== "" &&
+      form.P1_whatsapp?.length === 10 &&
+      form.P2_whatsapp?.length === 10 &&
+      form.P3_whatsapp?.length === 10 &&
+      form.P4_whatsapp?.length === 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=talentShow`, form, {
+        const res = await axios.post('/server/register?event=talentShow', form, {
           headers: {
             "Content-Type": "application/json",
           },
         });
-	setValue(true);
+        setValue(true);
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -92,7 +104,7 @@ const TalentShowForm = () => {
   };
 
   const onVerifyCaptcha = () => {
-  }
+  };
 
   return (
     <div
@@ -111,38 +123,48 @@ const TalentShowForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Name"
-                    id="participantName"
+                    name="P1_name"
+                    id="P1name"
                     type="text"
-                    placeholder="Name Of Participant"
+                    placeholder="Participant 1 Name"
                     onChange={(e) => handle(e)}
-                    value={form.Name}
+                    value={form.P1_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="emailId"
+                    id="P1rollno"
                     type="text"
-                    name="Email"
-                    placeholder="Email Id"
+                    name="P1_rollno"
+                    placeholder="Participant 1 Roll Number"
                     onChange={(e) => handle(e)}
-                    value={form.Email}
+                    value={form.P1_rollno}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="whatsappNumber"
+                    id="P1email"
                     type="text"
-                    name="Phone"
-                    placeholder="Whatsapp Number"
+                    name="P1_email"
+                    placeholder="Participant 1 Email"
                     onChange={(e) => handle(e)}
-                    value={form.Phone}
+                    value={form.P1_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="P1whatsapp"
+                    type="text"
+                    name="P1_whatsapp"
+                    placeholder="Participant 1 Whatsapp Number"
+                    onChange={(e) => handle(e)}
+                    value={form.P1_whatsapp}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Phone !== "" &&
-                    form.Phone.length !== 10 && (
+                  {form.P1_whatsapp !== "" &&
+                    form.P1_whatsapp?.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -150,18 +172,58 @@ const TalentShowForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="whatsappNumber"
+                    id="performance"
                     type="text"
-                    name="Additional_phone"
-                    placeholder="Additional phone Number"
+                    name="Performance"
+                    placeholder="What are you going to perform?"
                     onChange={(e) => handle(e)}
-                    value={form.Additional_phone}
+                    value={form.Performance}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="duration"
+                    type="text"
+                    name="Duration"
+                    placeholder="Duration Of Performance"
+                    onChange={(e) => handle(e)}
+                    value={form.Duration}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_name"
+                    id="P2name"
+                    type="text"
+                    placeholder="Participant 2 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="P2rollno"
+                    type="text"
+                    name="P2_rollno"
+                    placeholder="Participant 2 Roll Number"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_rollno}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="P2whatsapp"
+                    type="text"
+                    name="P2_whatsapp"
+                    placeholder="Participant 2 Whatsapp Number"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_whatsapp}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Additional_phone !== "" &&
-                    form.Additional_phone.length !== 10 && (
+                  {form.P2_whatsapp !== "" &&
+                    form.P2_whatsapp?.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -169,45 +231,81 @@ const TalentShowForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="College"
-                    id="collegeName"
+                    name="P3_name"
+                    id="P3name"
                     type="text"
-                    placeholder="College Name"
+                    placeholder="Participant 3 Name"
                     onChange={(e) => handle(e)}
-                    value={form.College}
+                    value={form.P3_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Branch"
-                    id="branch"
+                    id="P3rollno"
                     type="text"
-                    placeholder="Branch"
+                    name="P3_rollno"
+                    placeholder="Participant 3 Roll Number"
                     onChange={(e) => handle(e)}
-                    value={form.Branch}
+                    value={form.P3_rollno}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="YOG"
-                    id="year"
+                    id="P3whatsapp"
                     type="text"
-                    placeholder="Year"
+                    name="P3_whatsapp"
+                    placeholder="Participant 3 Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.YOG}
+                    value={form.P3_whatsapp}
+                  />
+                  <span style={{ fontSize: "0.7rem" }}>
+                    * Don't include +91 or 0.
+                  </span>
+                  {form.P3_whatsapp !== "" &&
+                    form.P3_whatsapp?.length !== 10 && (
+                      <p style={{ color: "red" }}>
+                        Enter a number of 10 digits only.
+                      </p>
+                    )}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_name"
+                    id="P4name"
+                    type="text"
+                    placeholder="Participant 4 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_name}
                   />
                 </li>
-                
                 <li data-aos="fade-down">
-                <h4 style={{marginBottom:"0.8rem",color:"red"}}>Performing in Group?</h4>
                   <input
-                    name="group"
-                    id="PIG"
+                    id="P4rollno"
                     type="text"
-                    placeholder="Yes Or No"
+                    name="P4_rollno"
+                    placeholder="Participant 4 Roll Number"
                     onChange={(e) => handle(e)}
-                    value={form.group}
+                    value={form.P4_rollno}
                   />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="P4whatsapp"
+                    type="text"
+                    name="P4_whatsapp"
+                    placeholder="Participant 4 Whatsapp Number"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_whatsapp}
+                  />
+                  <span style={{ fontSize: "0.7rem" }}>
+                    * Don't include +91 or 0.
+                  </span>
+                  {form.P4_whatsapp !== "" &&
+                    form.P4_whatsapp?.length !== 10 && (
+                      <p style={{ color: "red" }}>
+                        Enter a number of 10 digits only.
+                      </p>
+                    )}
                 </li>
               </ul>
             </div>
@@ -217,14 +315,7 @@ const TalentShowForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            {/* <div style={{ fontSize: '17px' }}>
-              Don't forget to join the WhatsApp Group after registration!
-            </div> */}
             <div className="mint_desc" style={{ paddingTop: "2rem" }}>
-              {/* <ReCAPTCHA
-                sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
-                ref={recaptchaRef}
-              /> */}
               {!isSubmitting ? (
                 <div
                   target="_blank"
@@ -239,17 +330,17 @@ const TalentShowForm = () => {
               ) : (
                 <>Submitting...</>
               )}
-	      <div>
-              {isSubmitted && (
-                {/* <div>
-                  <div>
-                    <a style={{ textDecoration: "none"}} href="https://chat.whatsapp.com/LhuUE4GCgnhGy5nYrJ9S3q">
-                      <span className="metaportal_fn_button_4">Join WA Group</span>
-                    </a>
-                  </div>
-                </div> */}
-              )}
-            </div>
+              <div>
+                {isSubmitted && (
+                  {/* <div>
+                    <div>
+                      <a style={{ textDecoration: "none"}} href="https://chat.whatsapp.com/LhuUE4GCgnhGy5nYrJ9S3q">
+                        <span className="metaportal_fn_button_4">Join WA Group</span>
+                      </a>
+                    </div>
+                  </div> */}
+                )}
+              </div>
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
           </div>
@@ -263,16 +354,16 @@ const TalentShowForm = () => {
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                1. Every performance should satisfy the time limit criteria.<br/>
-                TIME LIMIT:<br/>  Stand up: 5-7 mins<br/>
-                 Others: 3 mins
+                  1. Every performance should satisfy the time limit criteria.<br/>
+                  TIME LIMIT:<br/>  Stand up: 5-7 mins<br/>
+                  Others: 3 mins
                 </p>
                 <p>
-                2.Avoid using foul language 
+                  2. Avoid using foul language 
                 </p>
                 <p>
-                3.Adhere the formalities of the event 
-               </p>
+                  3. Adhere to the formalities of the event 
+                </p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>
                 {/* <span className="metaportal_fn_button_4">Download PDF</span> */}

@@ -86,7 +86,7 @@ function App() {
                 <Route exact="true" path="/events/autocadForm" element={<AutocadForm />} />
                 <Route exact="true" path="/events/survivalForm" element={<SurvivalArtboardForm/>} />
                 <Route exact="true" path="/events/reactionRacingForm" element={<ReactionRacingForm/>} />
-                <Route exact="true" path="/events/tresureHuntForm" element={<TreasureHuntForm/>}/>
+                <Route exact="true" path="/events/treasurehuntform" element={<TreasureHuntForm/>}/>
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

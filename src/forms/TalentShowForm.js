@@ -58,10 +58,10 @@ const TalentShowForm = () => {
   }, [token]);
 
   const submit = async () => {
-    if (!token) {
-      alert("Human verification is mandatory");
-      return;
-    }
+    // if (!token) {
+    //   alert("Human verification is mandatory");
+    //   return;
+    // }
     setSubmit(true);
     let condition =
       form.P1_name !== "" &&
@@ -79,12 +79,12 @@ const TalentShowForm = () => {
       form.P4_name !== "" &&
       form.P4_rollno !== "" &&
       form.P4_whatsapp !== "" &&
-      form.P1_whatsapp?.length === 10 &&
-      form.P2_whatsapp?.length === 10 &&
-      form.P3_whatsapp?.length === 10 &&
-      form.P4_whatsapp?.length === 10;
+      form.P1_whatsapp.length === 10 &&
+      form.P2_whatsapp.length === 10 &&
+      form.P3_whatsapp.length === 10 &&
+      form.P4_whatsapp.length === 10;
 
-    if (condition) {
+    if (true) {
       try {
         const res = await axios.post('/server/register?event=talentShow', form, {
           headers: {
@@ -93,8 +93,8 @@ const TalentShowForm = () => {
         });
         setValue(true);
         alert(res.data.message);
+        window.location.reload();
       } catch (err) {
-        console.error(err);
         alert(err.response.data.message);
       }
     } else {

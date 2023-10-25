@@ -10,21 +10,22 @@ import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const backend = keys.backend;
 
-const LogoDesignForm = () => {
+const TalentShowForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("LogoDesignForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("talentShowForm")) || {
     Name: "",
     Email: "",
-    Whatsapp: "",
+    Phone: "",
+    Additional_phone: "",
     College: "",
     Branch: "",
-    Year: "",
-    Roll_Number: "",
-    Software_Used: "",
-    Prior_Experience: ""
+    YOG: "",
+    Roll_number: "",
+    Preferred_cube_type: "",
+    PIG:"",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -35,17 +36,13 @@ const LogoDesignForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("LogoDesignForm", JSON.stringify(update));
+    localStorage.setItem("talentShowForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
   const captchaRef = useRef(null);
 
   const onLoad = () => {
-    // this reaches out to the hCaptcha JS API and runs the
-    // execute function on it. you can use other functions as
-    // documented here:
-    // https://docs.hcaptcha.com/configuration#jsapi
     captchaRef.current.execute();
   };
 
@@ -53,10 +50,12 @@ const LogoDesignForm = () => {
     if (token) {
       console.log('Captcha verified')
     }
-    // console.log(`hCaptcha Token: ${token}`);
+      // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
+    // const recaptchaValue = recaptchaRef.current.getValue();
+    // Send the recaptchaValue along with the form data to your server for verification.
     if (!token) {
       alert("Human verification is mandatory");
       return;
@@ -65,23 +64,22 @@ const LogoDesignForm = () => {
     let condition =
       form.Name !== "" &&
       form.Email !== "" &&
-      form.Whatsapp !== "" &&
-      form.Whatsapp.length == 10 &&
+      form.Phone !== "" &&
       form.College !== "" &&
       form.Branch !== "" &&
-      form.Year !== "" &&
-      form.Roll_Number !== "" &&
-      form.Software_Used !== "" &&
-      form.Prior_Experience !== "";
+      form.YOG !== "" &&
+      form.Preferred_cube_type !== "" &&
+      form.PIG !==""&&
+      form.Phone.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=LogoDesign`, form, {
+        const res = await axios.post(`/server/register?event=talentShow`, form, {
           headers: {
             "Content-Type": "application/json",
           },
         });
-        setValue(true);
+	setValue(true);
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -94,7 +92,6 @@ const LogoDesignForm = () => {
   };
 
   const onVerifyCaptcha = () => {
-
   }
 
   return (
@@ -103,7 +100,7 @@ const LogoDesignForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"LOGO"} noncolor={"DESIGN"} />
+      <Title color={"TALENT"} noncolor={"SHOW"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -136,16 +133,35 @@ const LogoDesignForm = () => {
                   <input
                     id="whatsappNumber"
                     type="text"
-                    name="Whatsapp"
+                    name="Phone"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Whatsapp}
+                    value={form.Phone}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Whatsapp !== "" &&
-                    form.Whatsapp.length !== 10 && (
+                  {form.Phone !== "" &&
+                    form.Phone.length !== 10 && (
+                      <p style={{ color: "red" }}>
+                        Enter a number of 10 digits only.
+                      </p>
+                    )}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="whatsappNumber"
+                    type="text"
+                    name="Additional_phone"
+                    placeholder="Additional phone Number"
+                    onChange={(e) => handle(e)}
+                    value={form.Additional_phone}
+                  />
+                  <span style={{ fontSize: "0.7rem" }}>
+                    * Don't include +91 or 0.
+                  </span>
+                  {form.Additional_phone !== "" &&
+                    form.Additional_phone.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -173,42 +189,24 @@ const LogoDesignForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Year"
+                    name="YOG"
                     id="year"
                     type="text"
                     placeholder="Year"
                     onChange={(e) => handle(e)}
-                    value={form.Year}
+                    value={form.YOG}
                   />
                 </li>
+                
                 <li data-aos="fade-down">
+                <h4 style={{marginBottom:"0.8rem",color:"red"}}>Performing in Group?</h4>
                   <input
-                    name="Roll_Number"
-                    id="rollNumber"
+                    name="group"
+                    id="PIG"
                     type="text"
-                    placeholder="Roll Number"
+                    placeholder="Yes Or No"
                     onChange={(e) => handle(e)}
-                    value={form.Roll_Number}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Software_Used"
-                    id="software"
-                    type="text"
-                    placeholder="Designing Software You are Most Used To"
-                    onChange={(e) => handle(e)}
-                    value={form.Software_Used}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Prior_Experience"
-                    id="priorExperience"
-                    type="text"
-                    placeholder="Prior Experience in Designing (No of Months / Years)"
-                    onChange={(e) => handle(e)}
-                    value={form.Prior_Experience}
+                    value={form.group}
                   />
                 </li>
               </ul>
@@ -219,9 +217,9 @@ const LogoDesignForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div style={{ fontSize: '17px' }}>
+            {/* <div style={{ fontSize: '17px' }}>
               Don't forget to join the WhatsApp Group after registration!
-            </div>
+            </div> */}
             <div className="mint_desc" style={{ paddingTop: "2rem" }}>
               {/* <ReCAPTCHA
                 sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
@@ -241,15 +239,15 @@ const LogoDesignForm = () => {
               ) : (
                 <>Submitting...</>
               )}
-              <div>
+	      <div>
               {isSubmitted && (
-                <div>
+                {/* <div>
                   <div>
-                    <a style={{ textDecoration: "none"}} href="https://chat.whatsapp.com/DNYul3AnvjYElO2dsH86o5">
+                    <a style={{ textDecoration: "none"}} href="https://chat.whatsapp.com/LhuUE4GCgnhGy5nYrJ9S3q">
                       <span className="metaportal_fn_button_4">Join WA Group</span>
                     </a>
                   </div>
-                </div>
+                </div> */}
               )}
             </div>
               <p>* Read the Rules & Regulations before Submitting</p>
@@ -258,28 +256,23 @@ const LogoDesignForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Logo Design</h4>
+                <h4>Talent Show</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. Candidates should bring their own laptops.
+                1. Every performance should satisfy the time limit criteria.<br/>
+                TIME LIMIT:<br/>  Stand up: 5-7 mins<br/>
+                 Others: 3 mins
                 </p>
-                  <p>
-                2. Participants will be given abstracts accordingly which a logo has to be designed. They'll be given ample amount of time for completion of their task at the venue itself.
+                <p>
+                2.Avoid using foul language 
                 </p>
-                <p>2. Each participant have to submit only one logo design.</p>
-                <p>3. Participants can use any of the following softwares: Adobe Illustrator CC, Adobe Photoshop, Canva, Figma, or Gimp.</p>
-                <p>4. Submissions should be in digital format (JPEG or PNG) and high resolution (at least 300 dpi).</p>
-                <p>5. The design should be scalable, ensuring it looks good both in small and large sizes.</p>
-                <p>6. The deadline for submitting entries will be told during the event. Late submissions will not be accepted.</p>
-                <p>7. The logo should not include any offensive or explicit material.</p>
-                <p>8. Submissions should include a brief explanation of the logo's concept and design choices.</p>
-                <p>9. Label your submission with your full name and the title of the logo.</p>
-                <p>10. A panel of judges will evaluate the submissions based on creativity, originality, and overall design quality. The decision of the judges is final and binding.</p>
-                <p>11. Participants should provide accurate contact information (name, email, phone) for notification purposes.</p>
+                <p>
+                3.Adhere the formalities of the event 
+               </p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>
                 {/* <span className="metaportal_fn_button_4">Download PDF</span> */}
@@ -292,4 +285,4 @@ const LogoDesignForm = () => {
   );
 };
 
-export default LogoDesignForm;
+export default TalentShowForm;

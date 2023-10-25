@@ -11,6 +11,14 @@ import event10 from '../assets/eventsPoster/autocad.webp'
 import event11 from '../assets/eventsPoster/survivalArtboard.webp'
 import event12 from '../assets/eventsPoster/reactionRacing.webp'
 import event13 from '../assets/eventsPoster/tresureHunt.webp'
+import event14 from '../assets/eventsPoster/mechanicalJunkyard.webp'
+import event15 from '../assets/eventsPoster/comingSoon.webp'
+import event16 from '../assets/eventsPoster/ticTacToe.webp'
+import event17 from '../assets/eventsPoster/ecopolis.webp'
+import event18 from '../assets/eventsPoster/comingSoon.webp'
+import event19 from '../assets/eventsPoster/comingSoon.webp'
+import event20 from '../assets/eventsPoster/comingSoon.webp'
+
 
 export const EventsList = [
     {
@@ -147,14 +155,62 @@ export const EventsList = [
     },
     {
       id: 13,
-      name: "Mock CID (Treasure Hunt 2.0)",
+      name: "MOCK CID (TREASURE HUNT 2.0)",
       imgUrl: event13,
       date:"29th October",
       time:"11 A.M.",
       venue:"Amul Parlour",
       des: "Do you have what it takes to solve a murder mystery? Assemble your detective squad to unravel the enigma of an on-campus murder. Dive into the intrigue and prove your investigative mettle. Tick-tock, the hunt for the culprit begins – can your team outsmart the murderer?",
-      link:"/events/tresureHuntForm",
+      link:"/events/treasureHuntForm",
       deadline:"27th October"
-    }
+    },
+    {
+      id: 14,
+      name: "MECHANICAL JUNKYARD",
+      imgUrl: event14,
+      date:"28th October",
+      time:"11 A.M.",
+      venue:"Left Garden",
+      des: "This event is an on-spot design and fabrication task for the teams, we will provide them with some mechanical junk or waste, the teams will be provided some limited time to discuss and execute their ideas of making something creative with that junk.",
+      link:"/events/mechanicalJunkyardForm",
+      deadline:"27th October"
+    },
+    {
+      id: 15,
+      name: "TALENT SHOW",
+      imgUrl: event15,
+      date:"28th October",
+      time:"3-6 P.M.",
+      venue:"Amul Parlour",
+      des: "An engaging show to provide peers a platform to discover themselves and showcase their talents. An opportunity to make lasting connections and savor the evening of class, culture and unlimited fun.",
+      link:"/events/talentShowForm",
+      deadline:"26th October"
+    },
+    {
+      id: 16,
+      name: "HUMAN TIC-TAC-TOE",
+      imgUrl: event16,
+      date:"29th October",
+      time:"3 P.M. to 5 P.M.",
+      venue:"Basketball Court",
+      des: "The Human Tic Tac Toe Tournament will foster a sense of camaraderie and intellectual competition among participants. Through the familiar format of Tic Tac Toe, we hope to bring people together and celebrate the spirit of strategic thinking in a fun and innovative way. ",
+      link:"/events/ticTacToeForm",
+      deadline:"coming soon"
+    },
+    {
+    id: 17,
+    name: "ECOPOLIS",
+    imgUrl: event17,
+    date:"28th October",
+    time:"11:30 A.M.",
+    venue:"Architecture Studio 3,4",
+    des: "Where Imagination Fuels Urban Metamorphosis. Collaborate with visionary minds to craft eco-friendly urban utopias that redefine the future.🌏",
+    link:"/events/ecopolisForm",
+    deadline:"coming soon"
+  }
+
+
+
+
 
   ];

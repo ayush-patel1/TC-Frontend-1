@@ -1,41 +1,44 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
-import keys from "../keys.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
-import docs from "../assets/eventsAssets/terrainTreader.docx";
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import docs from "../assets/eventsAssets/ecopolis.docx";
+import keys from "../keys.json";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
-const backend = keys.backend;
 
-const LogoDesignForm = () => {
+// const backend = keys.backend;
+
+const EcopolisForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("LogoDesignForm")) || {
-    Name: "",
-    Email: "",
-    Whatsapp: "",
-    College: "",
-    Branch: "",
-    Year: "",
-    Roll_Number: "",
-    Software_Used: "",
-    Prior_Experience: ""
+  const cachedForm = JSON.parse(localStorage.getItem("ecopolisForm")) || {
+    Team_name: "",
+    No_of_members:"",
+    Leader_name: "",
+    Leader_number: "",
+    Leader_semester: "",
+    Leader_Email: "",
+    P2_name: "",
+    P2_number: "",
+    P2_semester:"",
+    P3_name: "",
+    P3_number: "",
+    P3_semester:"",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
-  const [isSubmitted, setValue] = useState(false);
 
   const handle = (e) => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("LogoDesignForm", JSON.stringify(update));
+    localStorage.setItem("ecopolisForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -51,37 +54,47 @@ const LogoDesignForm = () => {
 
   useEffect(() => {
     if (token) {
-      console.log('Captcha verified')
+      console.log("Captcha verified");
     }
     // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
+    // const recaptchaValue = recaptchaRef.current.getValue();
+    // Send the recaptchaValue along with the form data to your server for verification.
     if (!token) {
       alert("Human verification is mandatory");
       return;
     }
     setSubmit(true);
-    let condition =
-      form.Name !== "" &&
-      form.Email !== "" &&
-      form.Whatsapp !== "" &&
-      form.Whatsapp.length == 10 &&
-      form.College !== "" &&
-      form.Branch !== "" &&
-      form.Year !== "" &&
-      form.Roll_Number !== "" &&
-      form.Software_Used !== "" &&
-      form.Prior_Experience !== "";
-
-    if (condition) {
+    console.log(form);
+    let condition1 =
+      form.Team_name !== "" &&
+      form.Leader_name !== "" &&
+      form.Leader_number !== "" &&
+      form.Leader_Email !== "" &&
+      form.Leader_semester!==""&&
+      form.P2_name !== "" &&
+      form.P2_number !== "" &&
+      form.P2_semeseter!==""&&
+      form.P3_name !== "" &&
+      form.P3_number !== "" &&
+      form.P3_semeseter!==""&&
+      form.Leader_number.length === 10 &&
+      form.P2_number.length === 10 &&
+      form.P3_number.length === 10 ;
+    
+    if (condition1) {
       try {
-        const res = await axios.post(`/server/register?event=LogoDesign`, form, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        setValue(true);
+        const res = await axios.post(
+          `/server/register?event=Ecopolis`,
+          form,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -93,17 +106,13 @@ const LogoDesignForm = () => {
     setSubmit(false);
   };
 
-  const onVerifyCaptcha = () => {
-
-  }
-
   return (
     <div
       className="metaportal_fn_mintpage"
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"LOGO"} noncolor={"DESIGN"} />
+      <Title color={"ECOPOLIS"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -114,38 +123,38 @@ const LogoDesignForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Name"
-                    id="participantName"
+                    name="Team_name"
+                    id="teamName"
                     type="text"
-                    placeholder="Name Of Participant"
+                    placeholder="Team Name"
                     onChange={(e) => handle(e)}
-                    value={form.Name}
+                    value={form.Team_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="emailId"
+                    id="leaderName"
                     type="text"
-                    name="Email"
-                    placeholder="Email Id"
+                    name="Leader_name"
+                    placeholder="Leader Name"
                     onChange={(e) => handle(e)}
-                    value={form.Email}
+                    value={form.Leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="whatsappNumber"
+                    id="leaderNumber"
                     type="text"
-                    name="Whatsapp"
-                    placeholder="Whatsapp Number"
+                    name="Leader_number"
+                    placeholder="Leader  Number"
                     onChange={(e) => handle(e)}
-                    value={form.Whatsapp}
+                    value={form.Leader_number}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Whatsapp !== "" &&
-                    form.Whatsapp.length !== 10 && (
+                  {form.Leader_number !== "" &&
+                    form.Leader_number.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -153,62 +162,100 @@ const LogoDesignForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="College"
-                    id="collegeName"
+                    name="Leader_semester"
+                    id="leaderBranch"
                     type="text"
-                    placeholder="College Name"
+                    placeholder="Leader Semester"
                     onChange={(e) => handle(e)}
-                    value={form.College}
+                    value={form.Leader_semester}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Branch"
-                    id="branch"
+                    name="Leader_Email"
+                    id="leaderEmail"
                     type="text"
-                    placeholder="Branch"
+                    placeholder="Leader Email"
                     onChange={(e) => handle(e)}
-                    value={form.Branch}
+                    value={form.Leader_Email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Year"
-                    id="year"
+                    name="P2_name"
+                    id="P2Name"
                     type="text"
-                    placeholder="Year"
+                    placeholder="Member 2 Name "
                     onChange={(e) => handle(e)}
-                    value={form.Year}
+                    value={form.P2_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Roll_Number"
-                    id="rollNumber"
+                    name="P2_number"
+                    id="P2Number"
                     type="text"
-                    placeholder="Roll Number"
+                    placeholder="Member 2 Mobile Number"
                     onChange={(e) => handle(e)}
-                    value={form.Roll_Number}
+                    value={form.P2_number}
+                  />
+                  <span style={{ fontSize: "0.7rem" }}>
+                    * Don't include +91 or 0.
+                  </span>
+                  {form.P2_number !== "" &&
+                    form.P2_number.length !== 10 && (
+                      <p style={{ color: "red" }}>
+                        Enter a number of 10 digits only.
+                      </p>
+                    )}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_semester"
+                    id="P2Branch"
+                    type="text"
+                    placeholder="Member 2 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_semester}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Software_Used"
-                    id="software"
+                    name="P3_name"
+                    id="P3Name"
                     type="text"
-                    placeholder="Designing Software You are Most Used To"
+                    placeholder="Member 3 Name "
                     onChange={(e) => handle(e)}
-                    value={form.Software_Used}
+                    value={form.P3_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Prior_Experience"
-                    id="priorExperience"
+                    name="P3_number"
+                    id="P3Number"
                     type="text"
-                    placeholder="Prior Experience in Designing (No of Months / Years)"
+                    placeholder="Member 3 Mobile Number"
                     onChange={(e) => handle(e)}
-                    value={form.Prior_Experience}
+                    value={form.P3_number}
+                  />
+                  <span style={{ fontSize: "0.7rem" }}>
+                    * Don't include +91 or 0.
+                  </span>
+                  {form.P3_number !== "" &&
+                    form.P3_number.length !== 10 && (
+                      <p style={{ color: "red" }}>
+                        Enter a number of 10 digits only.
+                      </p>
+                    )}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_semester"
+                    id="P3Branch"
+                    type="text"
+                    placeholder="Member 3 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_semester}
                   />
                 </li>
               </ul>
@@ -219,10 +266,7 @@ const LogoDesignForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div style={{ fontSize: '17px' }}>
-              Don't forget to join the WhatsApp Group after registration!
-            </div>
-            <div className="mint_desc" style={{ paddingTop: "2rem" }}>
+            <div className="mint_desc" style={{ paddingTop: "4rem" }}>
               {/* <ReCAPTCHA
                 sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
                 ref={recaptchaRef}
@@ -241,48 +285,34 @@ const LogoDesignForm = () => {
               ) : (
                 <>Submitting...</>
               )}
-              <div>
-              {isSubmitted && (
-                <div>
-                  <div>
-                    <a style={{ textDecoration: "none"}} href="https://chat.whatsapp.com/DNYul3AnvjYElO2dsH86o5">
-                      <span className="metaportal_fn_button_4">Join WA Group</span>
-                    </a>
-                  </div>
-                </div>
-              )}
-            </div>
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
           </div>
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Logo Design</h4>
+                <h4>Ecopolis</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
+              <p>1. Round 1 : PPT presentation(1 slider).<br/>
+</p>
+                <p>2.Top 5 teams will qualify.</p>
                 <p>
-                  1. Candidates should bring their own laptops.
+                  3.Round 2:Proper ppt presentation(max 10 slides).
                 </p>
-                  <p>
-                2. Participants will be given abstracts accordingly which a logo has to be designed. They'll be given ample amount of time for completion of their task at the venue itself.
+                <p>
+                  4. 3 winners.
                 </p>
-                <p>2. Each participant have to submit only one logo design.</p>
-                <p>3. Participants can use any of the following softwares: Adobe Illustrator CC, Adobe Photoshop, Canva, Figma, or Gimp.</p>
-                <p>4. Submissions should be in digital format (JPEG or PNG) and high resolution (at least 300 dpi).</p>
-                <p>5. The design should be scalable, ensuring it looks good both in small and large sizes.</p>
-                <p>6. The deadline for submitting entries will be told during the event. Late submissions will not be accepted.</p>
-                <p>7. The logo should not include any offensive or explicit material.</p>
-                <p>8. Submissions should include a brief explanation of the logo's concept and design choices.</p>
-                <p>9. Label your submission with your full name and the title of the logo.</p>
-                <p>10. A panel of judges will evaluate the submissions based on creativity, originality, and overall design quality. The decision of the judges is final and binding.</p>
-                <p>11. Participants should provide accurate contact information (name, email, phone) for notification purposes.</p>
+                <p>
+                  5.Model presentation. 
+                </p>
               </div>
+    
               <a style={{ textDecoration: "none" }} href={docs}>
-                {/* <span className="metaportal_fn_button_4">Download PDF</span> */}
+                <span className="metaportal_fn_button_4">Download PDF</span>
               </a>
             </div>
           </div>
@@ -292,4 +322,4 @@ const LogoDesignForm = () => {
   );
 };
 
-export default LogoDesignForm;
+export default EcopolisForm;

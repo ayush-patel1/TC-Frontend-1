@@ -22,22 +22,25 @@ const MechanicalJunkyardForm = () => {
     Leader_whatsapp: "",
     Leader_semester: "",
     Leader_branch: "",
-    Leader_Email: "",
+    Leader_email: "",
+
     P2_name: "",
-    P2_number: "",
     P2_branch: "",
-    P2_Email: "",
     P2_semester:"",
+    P2_number: "",
+    P2_email: "",
+
     P3_name: "",
-    P3_number: "",
     P3_branch: "",
-    P3_Email: "",
     P3_semester:"",
+    P3_number: "",
+    P3_email: "",
+
     P4_name: "",
-    P4_number: "",
     P4_branch: "",
-    P4_Email: "",
     P4_semester:"",
+    P4_number: "",
+    P4_email: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -89,20 +92,8 @@ const MechanicalJunkyardForm = () => {
       form.P2_branch !== "" &&
       form.P2_Email !== "" &&
       form.P2_semeseter!==""&&
-      form.P3_name !== "" &&
-      form.P3_number !== "" &&
-      form.P3_branch !== "" &&
-      form.P3_Email!== "" &&
-      form.P3_semeseter!==""&&
-      form.P4_name !== "" &&
-      form.P4_number !== "" &&
-      form.P4_branch !== "" &&
-      form.P4_Email !== "" &&
-      form.P4_semeseter!==""&&
       form.Leader_whatsapp.length === 10 &&
-      form.P2_number.length === 10 &&
-      form.P3_number.length === 10 &&
-      form.P4_number.length === 10 ;
+      form.P2_number.length === 10;
 
     if (condition1) {
       try {
@@ -202,12 +193,12 @@ const MechanicalJunkyardForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_Email"
+                    name="Leader_email"
                     id="leaderEmail"
                     type="text"
                     placeholder="Leader Email"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_Email}
+                    value={form.Leader_email}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -261,12 +252,12 @@ const MechanicalJunkyardForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_Email"
+                    name="P2_email"
                     id="P2Name"
                     type="text"
                     placeholder="Member 2 Email."
                     onChange={(e) => handle(e)}
-                    value={form.P2_Email}
+                    value={form.P2_email}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -320,12 +311,12 @@ const MechanicalJunkyardForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_Email"
+                    name="P3_email"
                     id="P3Name"
                     type="text"
                     placeholder="Member 3 Email."
                     onChange={(e) => handle(e)}
-                    value={form.P3_Email}
+                    value={form.P3_email}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -379,12 +370,12 @@ const MechanicalJunkyardForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_Email"
+                    name="P4_email"
                     id="P2Name"
                     type="text"
                     placeholder="Member 4 Email."
                     onChange={(e) => handle(e)}
-                    value={form.P4_Email}
+                    value={form.P4_email}
                   />
                 </li>
               </ul>

@@ -267,6 +267,9 @@ const LogoDesignForm = () => {
                 <p>
                   1. Candidates should bring their own laptops.
                 </p>
+                  <p>
+                2. Participants will be given abstracts accordingly which a logo has to be designed. They'll be given ample amount of time for completion of their task at the venue itself.
+                </p>
                 <p>2. Each participant have to submit only one logo design.</p>
                 <p>3. Participants can use any of the following softwares: Adobe Illustrator CC, Adobe Photoshop, Canva, Figma, or Gimp.</p>
                 <p>4. Submissions should be in digital format (JPEG or PNG) and high resolution (at least 300 dpi).</p>

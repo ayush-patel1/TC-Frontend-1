@@ -73,15 +73,7 @@ const EcopolisForm = () => {
       form.Leader_whatsapp !== "" &&
       form.Leader_email !== "" &&
       form.Leader_semester!==""&&
-      form.P2_name !== "" &&
-      form.P2_number !== "" &&
-      form.P2_semeseter!==""&&
-      form.P3_name !== "" &&
-      form.P3_number !== "" &&
-      form.P3_semeseter!==""&&
-      form.Leader_whatsapp.length === 10 &&
-      form.P2_number.length === 10 &&
-      form.P3_number.length === 10 ;
+      form.Leader_whatsapp.length === 10;
     
     if (condition1) {
       try {
@@ -90,7 +82,7 @@ const EcopolisForm = () => {
           form,
           {
             headers: {
-              "Content-Type": "multipart/form-data",
+              "Content-Type": "application/json",
             },
           }
         );

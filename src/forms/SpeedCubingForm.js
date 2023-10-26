@@ -295,6 +295,9 @@ const SpeedCubingForm = () => {
                 <p>
                 6. All the participants must report to concerned venue at the reported time. Late reporting can lead to disqualification.
                 </p>
+		 <p>
+                7. Joining the WhatsApp group through the link which is given is mandatory
+                </p>
               </div>
               {/* <div
                 data-aos="fade-down"

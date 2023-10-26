@@ -39,6 +39,7 @@ import MechanicalJunkyardForm from "./forms/MechanicalJunkyardForm";
 import TalentShowForm from "./forms/TalentShowForm";
 import TicTacToeForm from "./forms/TicTacToeForm";
 import EcopolisForm from "./forms/Ecopolis";
+import HydroliftForm from "./forms/Hydrolift";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -95,6 +96,7 @@ function App() {
                 <Route exact="true" path="/events/talentShowForm" element={<TalentShowForm/>}/>
                 <Route exact="true" path="/events/tictacToeForm" element={<TicTacToeForm/>}/>
                 <Route exact="true" path="/events/ecopolisForm" element={<EcopolisForm/>}/>
+                <Route exact="true" path="/events/hydroliftForm" element={<HydroliftForm/>}/>
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

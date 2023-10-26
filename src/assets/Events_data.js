@@ -15,7 +15,7 @@ import event14 from '../assets/eventsPoster/mechanicalJunkyard.webp'
 import event15 from '../assets/eventsPoster/comingSoon.webp'
 import event16 from '../assets/eventsPoster/ticTacToe.webp'
 import event17 from '../assets/eventsPoster/ecopolis.webp'
-import event18 from '../assets/eventsPoster/comingSoon.webp'
+import event18 from '../assets/eventsPoster/hydrolift.webp'
 import event19 from '../assets/eventsPoster/comingSoon.webp'
 import event20 from '../assets/eventsPoster/comingSoon.webp'
 
@@ -207,7 +207,19 @@ export const EventsList = [
     des: "Where Imagination Fuels Urban Metamorphosis. Collaborate with visionary minds to craft eco-friendly urban utopias that redefine the future.🌏",
     link:"/events/ecopolisForm",
     deadline:"coming soon"
+  },
+  {
+    id: 18,
+    name: "HYDROLIFT",
+    imgUrl: event18,
+    date:"28th October",
+    time:"1 P.M.",
+    venue:"F-37",
+    des: "Elevate your Engineering with the power of Pascal's law.",
+    link:"/events/hydroliftForm",
+    deadline:"27th October 8 P.M."
   }
+
 
 
 

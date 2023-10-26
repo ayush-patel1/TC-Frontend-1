@@ -16,21 +16,22 @@ const HydroliftForm = () => {
     }, []);
 
     const cachedForm = JSON.parse(localStorage.getItem("hydroliftForm")) || {
-        P1_name: "",
-        P1_rollno: "",
-        P1_email: "",
-        P1_whatsapp: "",
-        Performance: "",
-        Duration: "",
+        Team_name: "",
+        Leader_name: "",
+        Leader_whatsapp: "",
+        Leader_branch: "",
+        Leader_year: "",
+        Leader_college: "",
         P2_name: "",
-        P2_rollno: "",
         P2_whatsapp: "",
+        P2_branch: "",
+        P2_year: "",
+        P2_college: "",
         P3_name: "",
-        P3_rollno: "",
         P3_whatsapp: "",
-        P4_name: "",
-        P4_rollno: "",
-        P4_whatsapp: "",
+        P3_branch: "",
+        P3_year: "",
+        P3_college: "",
     };
     const [form, set] = useState(cachedForm);
     const [uploadedFileName, setUploadedFileName] = useState("");
@@ -58,34 +59,29 @@ const HydroliftForm = () => {
     }, [token]);
 
     const submit = async () => {
-        if (!token) {
-            alert("Human verification is mandatory");
-            return;
-        }
+        // if (!token) {
+        //     alert("Human verification is mandatory");
+        //     return;
+        // }
         setSubmit(true);
         let condition =
+            form.Team_name !== "" &&
             form.Leader_name !== "" &&
             form.Leader_branch !== "" &&
             form.Leader_year !== "" &&
             form.Leader_whatsapp !== "" &&
-            form.Leader_college_name !== "" &&
+            form.Leader_college !== "" &&
             form.P2_name !== "" &&
             form.P2_branch !== "" &&
             form.P2_whatsapp !== "" &&
             form.P2_year !== "" &&
-            form.P2_college_name!== "" &&
-            form.P3_name !== "" &&
-            form.P3_branch !== "" &&
-            form.P3_whatsapp !== "" &&
-            form.P3_year !== "" &&
-            form.P3_college_name!== "" &&
+            form.P2_college !== "" &&
             form.Leader_whatsapp.length === 10 &&
-            form.P2_whatsapp.length === 10 &&
-            form.P3_whatsapp.length === 10 ;
+            form.P2_whatsapp.length === 10;
 
         if (true) {
             try {
-                const res = await axios.post('/server/register?event=hydrolift', form, {
+                const res = await axios.post('/server/register?event=Hydrolift', form, {
                     headers: {
                         "Content-Type": "application/json",
                     },
@@ -120,6 +116,16 @@ const HydroliftForm = () => {
                         </div>
                         <div className="mint_list">
                             <ul>
+                            <li data-aos="fade-down">
+                                    <input
+                                        name="Team_name"
+                                        id="Leadername"
+                                        type="text"
+                                        placeholder="Team Name"
+                                        onChange={(e) => handle(e)}
+                                        value={form.Team_name}
+                                    />
+                                </li>
                                 <li data-aos="fade-down">
                                     <input
                                         name="Leader_name"
@@ -134,10 +140,10 @@ const HydroliftForm = () => {
                                     <input
                                         id="leadercollegename"
                                         type="text"
-                                        name="Leader_college_name"
+                                        name="Leader_college"
                                         placeholder="Leader's college name"
                                         onChange={(e) => handle(e)}
-                                        value={form.Leader_college_name}
+                                        value={form.Leader_college}
                                     />
                                 </li>
                                 <li data-aos="fade-down">
@@ -193,10 +199,10 @@ const HydroliftForm = () => {
                                     <input
                                         id="P2collegename"
                                         type="text"
-                                        name="P2_college_name"
+                                        name="P2_college"
                                         placeholder="Member 2 college name"
                                         onChange={(e) => handle(e)}
-                                        value={form.P2_college_name}
+                                        value={form.P2_college}
                                     />
                                 </li>
                                 <li data-aos="fade-down">
@@ -252,10 +258,10 @@ const HydroliftForm = () => {
                                     <input
                                         id="P3collegename"
                                         type="text"
-                                        name="P3_college_name"
+                                        name="P3_college"
                                         placeholder="Member 3 college name"
                                         onChange={(e) => handle(e)}
-                                        value={form.P3_college_name}
+                                        value={form.P3_college}
                                     />
                                 </li>
                                 <li data-aos="fade-down">

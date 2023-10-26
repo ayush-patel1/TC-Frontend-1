@@ -66,7 +66,6 @@ const EcopolisForm = () => {
     //   return;
     // }
     setSubmit(true);
-    console.log(form);
     let condition1 =
       form.Team_name !== "" &&
       form.Leader_name !== "" &&

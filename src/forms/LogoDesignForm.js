@@ -280,6 +280,9 @@ const LogoDesignForm = () => {
                 <p>9. Label your submission with your full name and the title of the logo.</p>
                 <p>10. A panel of judges will evaluate the submissions based on creativity, originality, and overall design quality. The decision of the judges is final and binding.</p>
                 <p>11. Participants should provide accurate contact information (name, email, phone) for notification purposes.</p>
+                 <p>
+                12. Joining the WhatsApp group through the link which is given is mandatory
+                </p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>
                 {/* <span className="metaportal_fn_button_4">Download PDF</span> */}

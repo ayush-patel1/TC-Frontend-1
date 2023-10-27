@@ -113,12 +113,12 @@ export const EventsList = [
       id: 9,
       name: "VALORANT TOURNAMENT",
       imgUrl: event9,
-      date:"28th October",
-      time:"6 P.M.",
+      date:"29th October",
+      time:"11 A.M.",
       venue:"CCC",
       des: "Amidst the fervor of Valorant's arena, where tactical genius and epic showdowns reign supreme, the resounding question persist.",
       link:"/events/valorantForm",
-      deadline:"26th October"
+      deadline:"28th October, 6 P.M."
     },
     {
       id: 10,

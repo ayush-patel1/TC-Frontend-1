@@ -52,10 +52,19 @@ const HydroliftForm = () => {
         captchaRef.current.execute();
     };
 
+    // useEffect(() => {
+    //     if (token) {
+    //         console.log('Captcha verified');
+    //     }
+    // }, [token]);
+
     useEffect(() => {
+        alert("Registration Closed, see you next year😊");
+        window.location.href = "/events";
         if (token) {
-            console.log('Captcha verified');
+            console.log("Captcha verified");
         }
+        // console.log(`hCaptcha Token: ${token}`);
     }, [token]);
 
     const submit = async () => {
@@ -116,7 +125,7 @@ const HydroliftForm = () => {
                         </div>
                         <div className="mint_list">
                             <ul>
-                            <li data-aos="fade-down">
+                                <li data-aos="fade-down">
                                     <input
                                         name="Team_name"
                                         id="Leadername"

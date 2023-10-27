@@ -52,6 +52,8 @@ const CodemimeQuestForm = () => {
   };
 
   useEffect(() => {
+    alert("Registration Closed, see you next year😊");
+    window.location.href = "/events";
     if (token) {
       console.log('Captcha verified')
     }

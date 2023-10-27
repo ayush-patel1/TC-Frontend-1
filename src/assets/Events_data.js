@@ -142,17 +142,17 @@ export const EventsList = [
       link:"/events/survivalForm",
       deadline:"25th October"
     },
-    // {
-    //   id: 12,
-    //   name: "REACTION RACING",
-    //   imgUrl: event12,
-    //   date:"29th October",
-    //   time:"2 P.M. to 5 P.M.",
-    //   venue:"Amul Parlour",
-    //   des: "Ready, steady, react! Brace yourself for a pulse-pounding spectacle of physics showdown with chemical chaos in this turbo-charged event. Can your reaction propel you to victory? Get ready to race, roar, and discover!",
-    //   link:"/events/reactionRacingForm",
-    //   deadline:"29th October"
-    // },
+    {
+      id: 12,
+      name: "REACTION RACING",
+      imgUrl: event12,
+      date:"29th October",
+      time:"2 P.M. to 5 P.M.",
+      venue:"Amul Parlour",
+      des: "Ready, steady, react! Brace yourself for a pulse-pounding spectacle of physics showdown with chemical chaos in this turbo-charged event. Can your reaction propel you to victory? Get ready to race, roar, and discover!",
+      link:"/events/reactionRacingForm",
+      deadline:"29th October"
+    },
     {
       id: 13,
       name: "MOCK CID (TREASURE HUNT 2.0)",

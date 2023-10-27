@@ -59,10 +59,10 @@ const HydroliftForm = () => {
     }, [token]);
 
     const submit = async () => {
-        // if (!token) {
-        //     alert("Human verification is mandatory");
-        //     return;
-        // }
+        if (!token) {
+            alert("Human verification is mandatory");
+            return;
+        }
         setSubmit(true);
         let condition =
             form.Team_name !== "" &&

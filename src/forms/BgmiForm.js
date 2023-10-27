@@ -80,6 +80,8 @@ const BgmiForm = () => {
   };
 
   useEffect(() => {
+    alert("Registration Closed, see you next year😊");
+    window.location.href = "/events";
     if (token) {
       console.log("Captcha verified");
     }

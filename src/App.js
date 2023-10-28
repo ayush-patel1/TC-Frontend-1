@@ -98,7 +98,6 @@ function App() {
                 <Route exact="true" path="/events/ecopolisForm" element={<EcopolisForm/>}/>
                 <Route exact="true" path="/events/hydroliftForm" element={<HydroliftForm/>}/>
 
-                Route
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

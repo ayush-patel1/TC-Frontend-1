@@ -82,7 +82,7 @@ export const EventsList = [
       imgUrl: event6,
       date:"28th October",
       time:"4 P.M.",
-      venue:"Infront of Central garden",
+      venue:"Cricket Ground",
       des: "Decode the complexity, Align the spectrum. Can you solve the cube and seize glory? The challenge awaits, and victory beckons!",
       link:"/events/speedCubingForm",
       deadline:"27th October"

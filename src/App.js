@@ -97,6 +97,7 @@ function App() {
                 <Route exact="true" path="/events/tictacToeForm" element={<TicTacToeForm/>}/>
                 <Route exact="true" path="/events/ecopolisForm" element={<EcopolisForm/>}/>
                 <Route exact="true" path="/events/hydroliftForm" element={<HydroliftForm/>}/>
+
                 <Route
                   exact="true"
                   path="/aavartan/gallery"

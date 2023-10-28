@@ -6,6 +6,7 @@ import VigyaanForm from '../forms/VigyaanForm'
 import ProblemStatement from '../sections/ProblemStatement'
 import VigyaanHero from '../sections/hero/VigyaanHero'
 import { useLocation } from 'react-router-dom';
+import VigyaanFinalistSection from '../sections/VigyaanFinalistSection';
 
 const Vigyaan = () => {
   const location = useLocation();
@@ -43,6 +44,7 @@ const handleScroll = () => {
       <div className={scrolled ? "dark-overlay" : ""}></div>
           <VigyaanHero />
           <div className="AavartanContainer">
+          <VigyaanFinalistSection/>
           <VigyaanGallery />
           <ProblemStatement />
           <VigyaanForm />

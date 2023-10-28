@@ -13,17 +13,12 @@ export const vigyaanFinalistList = [
         team1:"ARCHIPELAGO ",
         team2:"Design Dynamo ",
         team3:"Trikone",
-        team4:"Team 4 Name",
-        team5:"Team 5 Name",
         branch: "Architecture"
     },
     {
         id:2,
         team1:"TEAM SAILORS",
         team2:"DEVISER",
-        team3:"Team 3 Name",
-        team4:"Team 4 Name",
-        team5:"Team 5 Name",
         branch: "Mining"
     },
     {
@@ -31,17 +26,12 @@ export const vigyaanFinalistList = [
         team1:"BUILD3D",
         team2:"IRON INSIGHTS",
         team3:"Three Musketeers",
-        team4:"Team 4 Name",
-        team5:"Team 5 Name",
         branch: "Metallurgy"
     },
     {
         id:4,
         team1:"Mechanites",
         team2:"Aero Elites",
-        team3:"Team 3 Name",
-        team4:"Team 4 Name",
-        team5:"Team 5 Name",
         branch: "Mechanical"
     },
     {
@@ -49,17 +39,12 @@ export const vigyaanFinalistList = [
         team1:"Dead Poets",
         team2:"Civil Nerved",
         team3:"Eco Roof Innovators",
-        team4:"Team 4 Name",
-        team5:"Team 5 Name",
         branch: "Civil"
     },
     {
         id:6,
         team1:"Bolt -Runners",
         team2:"S.K.Y",
-        team3:"Team 3 Name",
-        team4:"Team 4 Name",
-        team5:"Team 5 Name",
         branch: "Electrical"
     },
     {
@@ -79,8 +64,6 @@ export const vigyaanFinalistList = [
         team1:"SOLUTION SEEKERS",
         team2:"AGASTHYA",
         team3:"NURTURE TECH",
-        team4:"Team 4 Name",
-        team5:"Team 5 Name",
         branch: "Biomedical"
     },
     {

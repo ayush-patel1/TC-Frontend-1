@@ -3,3 +3,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+@media(max-width: 1040px){
+    .vigyaan-card--container{
+        justify-content: center;
+    }
+}

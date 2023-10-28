@@ -4,7 +4,7 @@ import "./VigyaanCard.css"
 const VigyaanCard = (props) => {
   return (
     <div className='vigyaan--card'>
-        <div>
+        <div className='heading'>
             <h4>
                 {props.branch}
             </h4>

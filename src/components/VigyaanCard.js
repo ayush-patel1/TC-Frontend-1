@@ -1,6 +1,5 @@
 import React from 'react'
 import "./VigyaanCard.css"
-import rocket from "../assets/images/rocket.png"
 
 const VigyaanCard = (props) => {
   return (

@@ -44,7 +44,7 @@ const handleScroll = () => {
       <div className={scrolled ? "dark-overlay" : ""}></div>
           <VigyaanHero />
           <div className="AavartanContainer">
-          <VigyaanFinalistSection/>
+          {/*<VigyaanFinalistSection/>*/}
           <VigyaanGallery />
           <ProblemStatement />
           <VigyaanForm />

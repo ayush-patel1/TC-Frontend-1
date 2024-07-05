@@ -94,7 +94,7 @@ const ProblemStatements = () => {
                     <a onClick={() => handleCategoryClick('BioMed')} className={isActive('BioMed') ? 'activa' : ''}>
                       <span>Biomedical</span>
                     </a> 
-                    <span className="count">8</span>
+                    <span className="count">7</span>
                   </li>
                   <li>
                     <a onClick={() => handleCategoryClick('Biotech')} className={isActive('Biotech') ? 'activa' : ''}>
@@ -130,7 +130,7 @@ const ProblemStatements = () => {
                     <a onClick={() => handleCategoryClick('Mech')} className={isActive('Mech') ? 'activa' : ''}>
                       <span>Mechanical</span>
                     </a> 
-                    <span className="count">8</span>
+                    <span className="count">5</span>
                   </li>
                   <li>
                     <a onClick={() => handleCategoryClick('Meta')} className={isActive('Meta') ? 'activa' : ''}>
@@ -142,7 +142,7 @@ const ProblemStatements = () => {
                     <a onClick={() => handleCategoryClick('Mining')} className={isActive('Mining') ? 'activa' : ''}>
                       <span>Mining</span>
                     </a> 
-                    <span className="count">16</span>
+                    <span className="count">15</span>
                   </li>
                   <li>
                     <a onClick={() => handleCategoryClick('Chem')} className={isActive('Chem') ? 'activa' : ''}>

@@ -11,136 +11,117 @@ const Mining = () => {
       </div>
       <div className="single_desc">
         <p>
-          <h3> MIN01 : Enhancing Mine Safety Innovations </h3>
-          Mining involves heavy machinery, explosives, and other hazardous
-          materials that can cause minor accidents to fatal incidents. To reduce
-          the risk of accidents , fatalities for mines, develop the innovative
-          technologies or strategies to enhance safety measures in both surface
-          and underground mines.
+          <h3> MIN01 :  Dynamic Route Planning and Optimization for Truck Haulage </h3>
+          Truck  haulage  plays  a  crucial  role  in  the  transportation  of  coal  within  mining  operations. 
+However,  the  dynamic  nature  of  mine  environments,  changing  operational  conditions,  and 
+varying  demands  necessitate  the  development  of  intelligent  systems  for  dynamic  route 
+planning  and  optimization.  The  challenge  is  to  create  adaptive  systems  that  can  optimize 
+truck  routes  in  real  time,  improving  efficiency,  reducing  congestion,  and  enhancing  overall 
+transportation effectiveness. 
         </p>
 
         <p>
-          <h3> MIN02 : Underground Mine Communication Systems </h3>
-          Create robust and reliable communication systems tailored for
-          underground mine environments, enabling seamless communication between
-          miners and surface personnel for improved coordination and emergency
-          response.
+          <h3> MIN02 :  Ventilation Survey Protocol at High Altitudes </h3>
+          Develop  a  ventilation  survey  protocol  for  a  mining  facility  operating  at  high  altitudes, 
+addressing  the  reduced  oxygen  levels  and  unique  atmospheric  conditions  to  safeguard  the 
+health  and  well-being  of  workers  and  optimize  equipment  performance.  Mining  operations  at 
+high  altitudes  present  unique  challenges  in  terms  of  air  quality,  safety,  and  health  for 
+underground workers
         </p>
 
         <p>
-          <h3> MIN03 : Autonomous Mining Systems </h3>
-          Design and implement autonomous or semi-autonomous mining systems for
-          underground operations, aiming to increase efficiency, reduce labor
-          costs, and minimize human exposure to hazardous environments
+          <h3> MIN03 : Integration  of  Drones  and  Unmanned  Aerial  Vehicles  (UAVs)  in 
+          Rescue  Operations </h3>
+          Develop  UAVs  capable  of  rapid  exploration  of  inaccessible  mine  areas,  delivering  essential 
+supplies,  and  providing  real-time  video  feeds  to  enhance  situational  awareness  and  support 
+decision-making during emergencies. 
         </p>
 
         <p>
-          <h3> MIN04 : Accurate Surveying in Difficult Environments. </h3>
-          Surveying and mapping are indispensable in mining as geo-spatial and
-          sub surface data constitute the foundation of any mine project. But
-          high-precision surveying is very challenging in difficult
-          environments, model the developing techniques and technologies for
-          conducting accurate and high-precision mine surveys in difficult
-          conditions, such as underground mines or areas with limited access.
+          <h3> MIN04 :   Impact of Varying seam thickness on high wall mining productivity. </h3>
+          Develop  a  predictive  model  incorporating  geological  data  to  optimise  the  selection  of 
+mining  equipment  and  cutting  parameters  for  different  seam  profiles  and  investigate  the 
+impact of varying seam thickness on high wall mining productivity.
         </p>
 
         <p>
-          <h3> MIN05 : Real-Time Subsidence Monitoring </h3>
-          During the extraction of minerals or ores, voids were created which
-          leads to overlying ground to collapse, minimizing subsidence is a
-          challenge in mining operations, based on this develop real-time
-          monitoring systems to detect and map to track and analyze subsidence
-          and ground movement in and around mining areas.
+          <h3> MIN05 : Innovative Grouting Techniques for Strata Consolidation </h3>
+          Develop  novel  grouting  techniques  that  not  only  consolidate  strata  but  also  address 
+environmental  concerns  associated  with  conventional  methods.  Investigate  environmentally 
+friendly  grouting  materials  and  methods  that  improve  the  long-term  stability  of  strata  and 
+minimise ecological impact. 
         </p>
 
         <p>
-          <h3> MIN06 : Multi-Sensor Data Fusion for Surveys. </h3>
-          Develop Multi-Sensor Data Fusion by using algorithms and techniques to
-          fuse data from various sensors, such as LiDAR, GNSS, and inertial
-          measurement units to enhance the accuracy and completeness of mine
-          surveying data.
+          <h3> MIN06 : Stoping strategy for ore bodies with variable dip angles </h3>
+          Develop  a  stoping  strategy  for  orebodies  with  variable  dip  angles,  taking  into  account 
+geological  variations  to  optimise  ore  recovery  and  minimise  operational  challenges  in 
+underground mining. 
         </p>
 
         <p>
-          <h3> MIN07 : Advanced Subsurface Characterization </h3>
-          Develop advanced subsurface characterization techniques, like seismic
-          imaging and borehole geophysics, to enhance knowledge of orebody
-          structures and improve underground mine planning.
+          <h3> MIN07 :Minimizing  Material  Spillage  and  Contamination  on  Underground 
+          Conveyors </h3>
+          ransportation  process  on  underground  mine  conveyors,  focusing  on  maintaining  a  clean  and 
+efficient material flow. 
         </p>
 
         <p>
-          <h3> MIN08 : Eco-Friendly Blasting Technologies. </h3>
-          Develop eco-friendly blasting technologies and practices to minimize
-          air overpressure, dust generation, and toxic gas emissions, ensuring
-          reduced environmental impact.
+          <h3> MIN08 :  Improving  Blast  Design  for  Selective  Ore  Fragmentation  in  Surface 
+          Mining  </h3>
+          Develop  blast  design  techniques  that  enable  selective  ore  fragmentation,  ensuring  efficient 
+separation of ore and waste materials during surface mining operations. 
         </p>
 
         <p>
-          <h3> MIN09 : Pillar strength assessment. </h3>
-          Pillar stability is one of the prerequisites for safe working
-          conditions in room and pillar mine. develop reliable methods to assess
-          the strength and load-bearing capacity of pillars, considering
-          geotechnical factors and stress distribution. And also develop
-          real-time monitoring systems to continuously assess the stability of
-          pillars during and after board and pillar mining, enhancing safety and
-          preventing accidents.
+          <h3> MIN09 : Enhancing Grid Resilience Against Power Surges and Faults </h3>
+          The  challenge  addressed  by  this  problem  statement  is  to  develop  measures  that 
+enhance  the  resilience  of  electrical  power  transmission  grids  in  mining  operations 
+against power surges and faults. A  resilient  grid  is  crucial  for  maintaining  a  stable  and  reliable  power  supply, 
+minimizing the risk of disruptions and equipment damage. 
         </p>
 
         <p>
-          <h3> MIN10 : Emergency Evacuation Procedures </h3>
-          Design efficient and well-practiced emergency evacuation procedures
-          for man riding conveyances to ensure quick and safe evacuation in the
-          event of emergency.
+          <h3> MIN10 : Optimising dewatering strategies for flooded mines  </h3>
+          Develop  efficient  and  cost-effective  dewatering  strategies  to  rapidly  remove  water  from 
+flooded  mines,  considering  factors  such  as  pump  selection,  water  inflow  rates,  and  geological 
+conditions  to  expedite  recovery.  The  recovery  process  heavily  relies  on  effective  dewatering, 
+and optimising the strategies for this operation is crucial. 
         </p>
 
         <p>
-          <h3> MIN11 : Coal Transportation Efficiency </h3>
-          Conveyors, trams, and trucks transport coal around mines, for short
-          distances from mines to consumers, coal spillage takes place during
-          transportation. Investigate techniques and technologies to minimize
-          coal spillage during transportation. Develop tracking systems to
-          ensure the timely delivery of coal and enable proactive responses to
-          potential transportation issues.
+          <h3> MIN11 : Innovative Techniques for Precise Mineral Recovery in Hydraulic Mining </h3>
+          Develop  and  implement  novel  techniques  and  technologies  to  achieve  more  precise  mineral 
+recovery in hydraulic mining operations, minimising waste and optimising resource utilisation. 
         </p>
 
         <p>
-          <h3> MIN12 : Innovative Water Management in Mining </h3>
-          As we all know water inflow during a box cut excavation can be a
-          significant concern,as it can impact the stability of the cut and
-          safety of workers develop innovative water management and treatment
-          solutions to handle water inflow during box cut excavation
+          <h3> MIN12 :   Eco-friendly Reclamation of Acid Mine Drainage </h3>
+          Investigate  and  implement  innovative,  environmentally  sustainable  methods  for  the 
+reclamation  of  acid  mine  drainage,  integrating  biological  treatments,  passive  systems,  and 
+geochemical stabilisation during mine closure. 
         </p>
 
         <p>
-          <h3> MIN13 : RFID Tracking for Mine Safety </h3>
-          Develop a system using RFID tags to track the movement and location of
-          personnel inside underground mines for improved safety and emergency
-          responses. And what are the feasibilities of implementing RFID tags in
-          monitoring environmental conditions, such as gas levels and
-          temperature to enhance safety protocols in underground mines
+          <h3> MIN13 :  Ambient air quality improvement system for open-pit mines  </h3>
+          Develop  an  ambient  air  quality  improvement  system  for  open-pit  mines,  integrating  green 
+infrastructure  and  innovative  landscaping  techniques  to  naturally  enhance  air  purification  and 
+reduce particulate matter dispersion. 
         </p>
 
         <p>
-          <h3> MIN14 : RFID Automation for Mine Entry. </h3>
-          Create a solution using RFID technology to automate the identification
-          and tracking of vehicles and machinery entering and exiting
-          underground mine sites
+          <h3> MIN14 :  Automated drone fleet to continuously monitor mine atmosphere  </h3>
+          Create  an  automated  drone  fleet  equipped  with  air  sampling  devices  to  continuously  monitor 
+the  mine  atmosphere,  providing  real-time  data  for  early  detection  of  pollutant  sources  and 
+enabling rapid response to environmental concerns. 
         </p>
 
         <p>
-          <h3> MIN15 : Innovative Roof Support Systems </h3>
-          Develop innovative roof support systems and reinforcement techniques
-          for underground mines to enhance roof stability under varying
-          geological conditions. And advanced monitoring technologies to detect
-          early signs of roof instability in and mines, enabling timely
-          interventions for safety.
-        </p>
-
-        <p>
-          <h3> MIN16 : Roof Stability Risk Assessment </h3>
-          Develop a risk assessment framework to identify potential roof
-          stability issues in construction projects and recommend suitable
-          preventive measures.
+          <h3> MIN15 :  Mine  lighting  solution  with  integrated  environmental  sensors  to  detect 
+          hazardous gases  </h3>
+          Design  a  mine  lighting  solution  with  integrated  environmental  sensors  to  detect  hazardous 
+gases,  providing  real-time  feedback  to  miners  through  colour-coded  illumination,  ensuring 
+their safety and well-being.
         </p>
       </div>
       <div

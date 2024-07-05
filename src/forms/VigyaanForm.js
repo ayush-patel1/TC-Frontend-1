@@ -401,17 +401,34 @@ const VigyaanForm = () => {
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p>1. A team can have 2 to 3 members.</p>
+                <p>1. A team can have 2 to 3 members(including team leader).</p>
                 <p>
-                  2. Each and every team is expected to have a Name and a Team
-                  Leader
+                2. Each team must designate a team leader and select a team name.
+(up to 20 characters, for e.g., Tech_Titans)
                 </p>
                 <p>
-                  3. A maximum of 30% plagiarism is permitted in the abstract
-                  submission. If more, then the respective team will be
-                  eliminated.
+                3. A Team ID will be assigned to the team upon registration, which will be used for future reference.
+(for e.g., ECE_A1)
                 </p>
-                <p>4. A team can opt for only one problem statement.</p>
+              </div>
+              <div
+                data-aos="fade-down"
+                style={{ paddingTop: "2rem" }}
+                className="mint_time"
+              >
+                <h4>VIGYAAN</h4>
+                <h3 className="metaportal_fn_countdown">Guidelines</h3>
+              </div>
+              <div data-aos="fade-down" className="mint_info">
+              <p>1. This competition is open for all.</p>
+<p>2. A team is free to select any one Problem Statement regardless of their engineering department.</p>
+<p>3. Teams can include members from various academic disciplines or academic years, provided all participants are from the same institution.</p>
+<p>4. Each participant can be a part of only one team.</p>
+<p>5. Multiple entries are not permitted.</p>
+<p>6. On-campus accommodation is available during the two-day Vigyaan exhibition for team members from institutes outside Chhattisgarh. Additional stay must be arranged and paid for by the teams. Accommodation is not provided for accompanying individuals, such as teachers or guardians.</p>
+<p>7. Plagiarism in any form will lead to immediate disqualification.</p>
+<p>8. Each round will be an eliminatory round.</p>
+
               </div>
               <div
                 data-aos="fade-down"
@@ -423,31 +440,27 @@ const VigyaanForm = () => {
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  The procedure to conduct Vigyaan ensures that only the most
-                  excellent, unique and original ideas are selected.
+                  <div style={{ color: "white" }}>Round 1: Idea Submission Round</div> 
+                  <p>1. Create a concise and effective presentation for the idea submission round.</p>
+<p>2. Teams must strictly adhere to the provided template without making any modifications. Refer to the template for additional details.</p>
+<p>3. File type: .ppt, .pptx or PDF</p>
+<p>4. Document Name: TeamName_ProblemNum (e.g., TeamName_ECE01)</p>
+
                 </p>
                 <p>
-                  Problem Statements for each branch are posted . Irrespective
-                  of their branch, contestants are free to choose any of the
-                  problem statements.
+                  <div style={{ color: "white" }}>Round 2: Presentation Round</div>
+                  <p>1. Selected teams are required to present their project in front of concerned faculty in-charge.</p>
+<p>2. This round is mandatorily offline for NIT Raipur students. Non-NIT Raipur students have the option
+to participate either online or offline.</p>
+<p>3. You will have 10-15 minutes to present, followed by a Q&A session with the judges.</p>
+<p>4. File type: .ppt, .pptx or PDF</p>
+<p>5. Document Name: TeamName_ProblemNum (e.g., TeamName_ECE01).</p>
                 </p>
                 <p>
-                  <div style={{ color: "white" }}>Round 1 :</div> In this round,
-                  the contestants have to submit a blueprint or an overview and
-                  concept of their project idea in around 200-300 words before
-                  the deadline.
-                </p>
-                <p>
-                  <div style={{ color: "white" }}>Round 2 :</div>Round 2 will
-                  begin after the teams have been narrowed down based on their
-                  abstracts presented .Here the contestants will have to
-                  illustrate the working of their project with the help of a
-                  PowerPoint presentation.
-                </p>
-                <p>
-                  <div style={{ color: "white" }}>Round 3 :</div>Round 3 is the
-                  prototype round.Here the teams will bring a working prototype
-                  that they will present on the exhibition day.
+                  <div style={{ color: "white" }}>Round 3: Prototype Round</div>
+                  <p>1. Shortlisted teams will need to develop a functional prototype based on their proposed approach,
+ensuring that the prototype demonstrates core features and functionalities effectively.</p>
+                  <p>2. Qualified teams will present their project in VIGYAAN Exhibition.</p>
                 </p>
               </div>
               <a style={{ textDecoration: "none" }} href={VigyaanTemplate}>
@@ -456,6 +469,7 @@ const VigyaanForm = () => {
             </div>
           </div>
         </div>
+
         <div className="metaportal_fn_nft_cats">
           <ul data-aos="fade-down">
             <li>

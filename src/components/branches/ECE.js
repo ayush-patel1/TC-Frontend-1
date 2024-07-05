@@ -3,87 +3,80 @@ import Title from '../Title'
 import pdf from "../../assets/problem_statements/ECE.pdf"
 
 const ECE = () => {
-  return (
-    <div className="sidebar_left">
-    <div className="single_title">
-      <Title color="ELECTRONICS & COMMUNICATION" />
-      <br />
-    </div>
-    <div className="single_desc">
+	return (
+		<div className="sidebar_left">
+			<div className="single_title">
+				<Title color="ELECTRONICS & COMMUNICATION" />
+				<br />
+			</div>
 
-    <p>
-        <h3> ECE01 : Smart Traffic & Transit Optimization System </h3>
-        Design a hardware and software based smart traffic monitoring system to optimize traffic flow and public transportation efficiency, reduce congestion in urban areas as well as to reduce accidents.
-        <br />• Controls traffic lights based on the density of traffic. 
-        <br />• Image processing techniques can be used. 
-        <br />• System will count the number of vehicles at each lane and give time accordingly to that lane.
-    </p>
-    
-    <p>
-        <h3> ECE02 : Automated Pool Cleaning Robot with Water Quality Monitoring </h3>
-        Design a pool cleaning robot that not only cleans the pool surfaces but also monitors water quality, ensuring safe and pristine swimming conditions.
-    </p>
-    
-    <p>
-        <h3> ECE03 : Automated Greenhouse System </h3>
-        Design an automated greenhouse system that leverages advanced sensors, actuators, and control algorithms to optimize and maintain ideal environmental conditions for the cultivation of various plants. The system should monitor and regulate factors such as temperature, humidity, light intensity, soil moisture, pH of soil light, CO2 level and air quality to ensure optimal growth and yield. Additionally, the solution should incorporate remote monitoring and control capabilities, enabling users to adjust settings and receive real-time updates to facilitate efficient management and cultivation within the greenhouse environment.
-    </p>
-    
-    <p>
-        <h3> ECE04 : Solar Powered Floor Cleaner Robot </h3>
-        Develop a solar-powered floor cleaning robot with navigation and obstacle avoidance which can auto dump the garbage to the specified location provided in the navigation. It provides a hands-free and eco-friendly solution for maintaining outdoor cleanliness in residential and commercial environments.
-    </p>
-    
-    <p>
-        <h3> ECE05 : Affordable Indoor Air Quality Monitor with Integrated Filtering System </h3>
-        Develop an affordable indoor smart air quality real-time monitoring system to track essential parameters such as temperature, humidity, particulate matter (PM2.5 and PM10), volatile organic compounds (VOCs), carbon dioxide (CO2), and potentially other pollutants. It should also have an integrated filtering system capable of removing particulate matter and airborne pollutants, enhancing the air quality in real time as well as providing timely alerts for maintaining healthy indoor environments. (Can be used in industries, mining-vehicles etc.)
-    </p>
-    
-    <p>
-        <h3> ECE06 : Real-time Language Translation </h3>
-        Create a portable and affordable language translation device with as low as latency that uses speech recognition and machine translation to facilitate communication between people speaking different languages. It can be made for only some languages like English-to-Hindi/Chinese-to-Hindi or as much as language translation. Foreigners can use it and as well as a person of India itself who is living/traveling in a different region.
-    </p>
-    
-    <p>
-        <h3> ECE07 : Smart Crop Monitoring Drone </h3>
-        Create a drone equipped with sensors and camera which monitor real-time data and analysis to provide insights into crop health, growth patterns, identify pests, and optimize agricultural practices. The data collected by the drone should be transmitted in real-time to the farmer's computer or mobile device.
-    </p>
-    
-    <p>
-        <h3> ECE08 : Water Quality Monitoring via Robotic Fish </h3>
-        Design and develop a cost effective and automated system that can collect water quality parameters in real-time, contributing to timely pollution detection and informed decision-making for water resource management and conservation which can be used for large water bodies like for rivers, lakes and oceans.
-    </p>
-    
-    <p>
-        <h3> ECE09 : Smart Parking Management System </h3>
-        The increasing challenges of traffic congestion and driver frustration due to limited parking spaces have led to a pressing need for an innovative parking management solution. To address this issue, the development of smart parking systems that utilize advanced sensors and communication technologies is essential. Design a smart parking system using sensors and communication technologies can guide drivers to available parking spaces in nearby regions, reducing traffic congestion and frustration of drivers.
-    </p>
-    
-    <p>
-        <h3> ECE10 : Smart Lighting Control System </h3>
-        Develop a hardware and software based smart lighting system that adjusts brightness based on real-time traffic flow and pedestrian presence to save energy. (Which can be used for street lights, industries as well as households.)
-    </p>
-    
-    <p>
-        <h3> ECE11 : Smart Pollutant Guard </h3>
-        Create a wearable environmental monitoring device that integrates electronic sensors to measure personal exposure to pollutants and harmful substances. The device should communicate with smartphones or other devices to provide users with real-time information about their surroundings, enabling them to make informed decisions and take necessary precautions to safeguard their health and well-being in polluted environments.
-    </p>
-    
-    </div>
-    <div
-        style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          padding: "1rem 0rem",
-        }}
-      >
-        <a href={pdf} style={{ textDecoration: "none" }}>
-          <div className="goodbtn">DOWNLOAD PDF</div>
-        </a>
-      </div>
-</div>
-  )
+			<div className="single_desc">
+				<p>
+					<h3> ECE 01.Smart Frequency Detection and Jamming System </h3>
+					Develop an innovative prototype for a Smart Frequency Detection and Jamming System designed specifically for classroom or similar environments.
+					<br />• <b>Frequency Detection and Jamming :</b> The primary functionality of the prototype will be to detect and jam unauthorized electronic devices.
+					<br />• <b>Real-time Data Provision :</b> The system will provide real-time data related to detected frequencies and signals to the user interface.
+				</p>
+				
+				<p>
+					<h3> ECE 02. Monitoring through Al Based Remote Access Vehicle  </h3>
+					Develop an AI-based Remote Access Vehicle (RAV) equipped with advanced sensors and communication systems for efficient, non-disruptive submerged inspections and maintenance of Head Race Tunnels (HRTs) in hydroelectric projects.
+				</p>
+				
+				<p>
+					<h3> ECE03. Gesture-Based Human-Computer Interaction </h3>
+					Design and implement a sophisticated hardware-based system integrating sensor and camera technology to robustly capture and interpret diverse hand gestures with exceptional precision.
+				</p>
+				
+				<p>
+					<h3> ECE04. Smart Home Automation and Security with IOT integration </h3>
+					Develop an integrated Smart Home Automation, Security, and IoT System that seamlessly manages and controls diverse electronic devices within a household, leveraging IoT technologies. This system should encompass lighting, door locks, appliances, and other IoT-enabled devices, ensuring interoperability and unified control through a centralized interface
+				</p>
+				
+				<p>
+					<h3> ECE05. Integrated Crop Monitoring Drone System </h3>
+					Create a prototype of an integrated crop monitoring drone system that addresses the challenges of efficient crop management faced by farmers. The prototype aims to leverage drone technology equipped with multispectral imaging capabilities to provide real-time crop health assessment,enabling precision agriculture practices.
+				</p>
+				
+				<p>
+					<h3> ECE06. Personalized Environmental Exposure Monitoring Device (PEEMD) </h3>
+					Develop a portable and accurate Personalized Environmental Exposure Monitoring Device (PEEMD) to empower individuals with real-time data, fostering informed decisions for minimizing personal exposure to pollutants and advocating for healthier environments. 
+				</p>
+				
+				<p>
+					<h3> ECE07. MediMate: Smart Medication Adherence System for Elderly Care </h3>
+					Design and develop a portable, user-friendly electronic pillbox prototype equipped with a dispensing mechanism, programmable scheduling interface, and reminder system.
+				</p>
+				
+				<p>
+					<h3> ECE08. Portable Water Quality Assessment Device </h3>
+					Develop a Portable Water Quality Tester equipped with advanced sensors to enable real-time assessment of water quality. Incorporate technologies such as spectrophotometry and microbial sensors to detect pollutants, bacteria, and various contaminants swiftly.</p>
+				
+				<p>
+					<h3> ECE09. Intelligent Security Framework: AI-Powered Multi-Sector Solution  </h3>
+					Develop a prototype for an Intelligent Security Framework integrating different technologies applicable across sectors, with real-time data capture, automated alerts, and comprehensive oversight for enhanced security measures. 
+
+				</p>
+				
+				<p>
+					<h3> ECE10. Robotics Arm with Computer Vision for Object Recognition </h3>
+					Design and develop a robotic arm integrated with computer vision for precise object recognition and manipulation in industrial automation and assistive technology applications. 
+
+				</p>
+				
+				<p>
+					<h3> ECE11. Smart Energy Meter with Real-Time Monitoring </h3>
+					Design a user-friendly Smart Energy Meter with real-time monitoring capabilities to track electricity consumption, offer insights for energy-saving opportunities, and integrate seamlessly with existing home or business systems.
+				</p>
+			</div>
+
+			<div style={{width: "100%", display: "flex", justifyContent: "center", padding: "1rem 0rem"}}>
+				<a href={pdf} style={{ textDecoration: "none" }}>
+					<div className="goodbtn">DOWNLOAD PDF</div>
+				</a>
+			</div>
+		</div>
+	)
 }
 
 export default ECE

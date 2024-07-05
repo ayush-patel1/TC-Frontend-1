@@ -3,98 +3,92 @@ import Title from '../Title'
 import pdf from "../../assets/problem_statements/Civil.pdf"
 
 const Civil = () => {
-  return (
-    <div className="sidebar_left">
-            <div className="single_title">
-              <Title color="CIVIL" />
-              <br />
-            </div>
-            <div className="single_desc">
-              <p>
-                <h3>CIV01: Improved Levelling Survey Techniques. </h3>
-Investigate and quantify the sources of error in levelling surveys, such as instrumental inaccuracies, atmospheric conditions, and human errors, to develop improved techniques for more accurate elevation measurements.
-              </p>
-              <p>
-                <h3>CIV02: Durability of Construction Paints. </h3>
-Evaluate the durability and weather resistance of paints commonly used in civil construction, including exterior paints and coatings, to recommend suitable products for specific environmental conditions.
-              </p>
-              <p>
-                <h3>CIV03: Sustainable Concrete Mix for Dams. </h3>
-Develop a sustainable concrete mix design with reduced shrinkage properties to minimize cracking in large concrete dam construction and incorporating recycled aggregates and supplementary cementitious materials (SCM) to reduce the environmental impact of construction.
-              </p>
-              <p>
-                <h3>CIV04: Temperature Effects on Concrete Strength. </h3>
-Evaluate the influence of temperature variations during curing on the strength development of concrete and propose suitable curing methods for different climatic conditions.           
-   </p>
-              <p>
-                <h3>CIV05: Innovative Sustainable Bridge Design.  </h3>
-Develop a sustainable bridge design using innovative materials and construction techniques to minimize environmental impact during the construction phase and evaluate the feasibility of building a floating bridge across a wide river or bay, considering the effects of water currents, wave action, and potential environmental concerns
-              </p>
-              <p>
-                <h3>CIV06:  Urban Green Roof and Truss Design. </h3>
-How can we design a green roof system or robust roof truss design for an urban building, considering the added weight of vegetation, agriculture storage facility and water retention, while ensuring the overall roof strength.
-              </p>
-              <p>
-                <h3>CIV07: Foundation Effects on Soil Permeability. </h3>
-Investigate the effects of foundation on soil permeability & the seepage patterns and uplift pressures under a concrete dam structure. And evaluate the permeability reduction in compacted clay due to hydration and propose measures to minimize permeability
-              </p>
-              <p>
-                <h3>CIV08: Fire Escape Plan for Public Buildings. </h3>
-Develop a fire escape plan for a public building, illustrating the locations of emergency exists and evacuation routes in different sections of the building.
-              </p>
-              <p>
-                <h3>CIV09: Landslide Risk Assessment in Himalayan Areas. </h3>
-                Develop a systematic landslide risk assessment framework for key transportation routes in hilly and Himalayan areas, identifying high-risk zones and recommending risk mitigation measures to enhance the safety of army convoys.
-              </p>
-              <p>
-                <h3>CIV10: High-speed Rail Track Design. </h3>
-Develop optimized track designs (using low-cost materials) and alignments for high-speed rail systems, considering factors like track curvature, super elevation to ensure safe and smooth travel at high speeds. Showcase your ideas and prepare model
-              </p>
-              <p>
-                <h3>CIV11: Railway bridge inspection and maintenance. </h3>
-                Develop comprehensive inspection and maintenance protocols for railway bridges, including assessment of structural integrity, fatigue analysis, corrosion protection to ensure the safety and reliability of rail transportation.
+	return (
+		<div className="sidebar_left">
+			<div className="single_title">
+				<Title color="CIVIL" />
+				<br />
+			</div>
+		
+			<div className="single_desc">
+				<p>
+					<h3>CIV01. Investigating Structural Integrity and Accessibility Challenges in Urban Skywalk Projects : </h3>
+					Develop a comprehensive framework to address structural integrity and accessibility  challenges in urban skywalk projects across Indian cities. Analyze past failures such as  the Raipur Skywalk, examining root causes including design flaws, foundation issues,  and inadequate accessibility features.
+				</p>
 
-              </p>
-              <p>
-                <h3>CIV12: Corrosion Protection in Railways </h3>
-Develop innovative corrosion protection solutions for various railway infrastructure components, including signaling systems, communication networks to ensure reliable railway operations.
-              </p>
+				<p>
+					<h3>CIV02. Low-carbon Cement alternatives</h3>
+					Investigate the environmental impact of traditional concrete production and explore solutions to reduce the industry's carbon footprint, focusing on innovative alternatives like carbon-negative CalMag cement from desalination waste.
+				</p>
 
-<p>
-                <h3>CIV13: Early Warning System for Earthquakes.  </h3>
-Prepare models for early warning systems for earthquake - prone regions to minimize the impact on buildings. And what are the ideas and strategies for construction approach for earthquake -resistant buildings using sensor-based health monitoring of structures.
-              </p>
-<p>
-                <h3>CIV14: Modeling Smart Road Systems. </h3>
-Prepare a model of smart road systems with integrated sensors and data analytics to enhance traffic management, safety and maintenance efficiency.
-              </p>
-<p>
-               <h3>CIV15: Smart water distribution system</h3>
-               Water distribution technology today is old and becoming obsolete causing loss of
-water, time and money. Develop a smart water distribution system ensuring
-increased efficiency in the distribution of water with less maintenance and
-increased reliability.
+				<p>
+					<h3>CIV0 3. Sustainable Solutions for the Effective Disposal and Recycling of Plastic Waste through Innovative Composite Tiles</h3>
+					Explore a solution involving the unique combination of LDPE plastic, fly ash, and a flame retardant to create composite tiles. The proposed solution should address the limitations of current plastic recycling practices and provide a multi-faceted approach,
+				</p>
 
-</p>
-             
+				<p>
+					<h3>CIV0 4. Real-time In-situ Concrete Strength Assessment</h3>
+					Develop a non-invasive technology-driven solution that enables real-time determination of concrete strength directly at the construction site, that reduces reliance on specialized instruments, ensuring practicality and accessibility in diverse construction settings. 
+				</p>
 
+				<p>
+					<h3>CIV 05. Designing a Responsive Suspension Bridge</h3>
+					Develop a  suspension bridge model that incorporates dynamically adaptive technologies to adjust its shape and distribute loads in real-time, optimizing performance and ensuring safety under varying external forces
+				</p>
 
+				<p>
+					<h3>CIV 06. Engineering a Resilient and Adaptable Shelter for Disaster Relief</h3>
+					Design and develop a prototype for a portable, rapidly deployable, and highly adaptable shelter system that overcomes the limitations of existing solutions and addresses the unique challenges of disaster relief in diverse conditions.
+				</p>
 
-            </div>
-            <div
-        style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          padding: "1rem 0rem",
-        }}
-      >
-        <a href={pdf} style={{ textDecoration: "none" }}>
-          <div className="goodbtn">DOWNLOAD PDF</div>
-        </a>
-      </div>
-          </div>
-  )
+				<p>
+					<h3>CIV 07. Predicting and Mitigating Rockfall Hazards on Transportation Infrastructure</h3>
+					Develop an innovative and integrated system that can predict, prevent, and mitigate rockfall hazards on transportation infrastructure in mountainous regions. 
+				</p>
+
+				<p>
+					<h3>CIV 08. Designing an Integrated Traffic Management Strategy for Sustainable Urban Mobility</h3>
+					Create a comprehensive traffic management plan for a growing city to minimize congestion, optimize traffic flow, and improve overall transportation efficiency, considering the integration of smart technologies and sustainable practices.
+				</p>
+
+				<p>
+					<h3>CIV 09. Transportation  system for a coastal city prone to rising sea levels</h3>
+					Design a resilient and energy-efficient transportation system for a coastal city prone to rising sea levels and extreme weather events, considering the potential impacts of climate change on infrastructure.
+				</p>
+
+				<p>
+					<h3>CIV 10. Urban planning strategy to address the challenges of urbanization</h3>
+					Develop an urban planning strategy that promotes mixed-use development, green spaces, and sustainable infrastructure to address the challenges of urbanization while maintaining a high quality of life for residents. 
+				</p>
+
+				<p>
+					<h3>CIV 11. Create an energy-efficient and sustainable bridge design that incorporates innovative materials and construction methods, ensuring durability, reduced maintenance costs, and minimal environmental impact over the bridge's lifecycle.</h3>
+				</p>
+
+				<p>
+					<h3>CIV 12. Implement Sustainable Urban Drainage Systems to manage stormwater runoff</h3>
+					Design and Implement Sustainable Urban Drainage Systems (SUDS) for a rapidly growing city to manage stormwater runoff and mitigate the impact of urbanization on local water bodies, considering climate change and increasing impervious surfaces. 
+				</p>
+
+				<p>
+					<h3>CIV 13. Optimizing Hospital Layout for Efficient Patient Flow</h3>
+					Design a detailed hospital layout plan that optimizes patient flow and enhances operational efficiency. Improved patient satisfaction scores and reduced wait times.
+				</p>
+	
+				<p>
+					<h3>CIV 14. Structural Health Monitoring of Aging Infrastructure</h3>
+					develop a state-of-the-art Structural Health Monitoring (SHM) system that seamlessly integrates advanced sensor technologies, data analytics, and real-time monitoring. The system should be capable of continuously collecting data on structural parameters such as vibrations, strains, and material conditions.
+				</p>
+
+			</div>
+
+			<div style={{ width: "100%", display: "flex", justifyContent: "center", padding: "1rem 0rem", }}>
+				<a href={pdf} style={{ textDecoration: "none" }}>
+					<div className="goodbtn">DOWNLOAD PDF</div>
+				</a>
+			</div>
+		</div>
+	)
 }
 
 export default Civil

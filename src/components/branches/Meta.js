@@ -13,138 +13,64 @@ const Meta = () => {
         <p>
           <h3>
             {" "}
-            META01 : The challenge of phosphorus reduction in steel produced
-            directly from DRI through induction root.{" "}
+            MME01 : Dust-Repellent Thin-Film Coating for Solar Cells{" "}
           </h3>
-          In the current era of research, focusing on green technologies as a
-          consequence, the consumption of fossil fuels in the production of
-          steel is disregarded. So, the use of DRI directly induction melting
-          becomes found to be a new root in steel production, however, the scope
-          of dephosphorization of molten steel in induction melting root is
-          limited. To assure good quality and to compete for the international
-          market it is necessary to achieve a phosphorus level of steel should
-          be less than 0.03%. An Innovative process root to produce low
-          phosphorus quality steel using an induction furnace and DRI is a
-          challenging problem of the day. So, your task is to suggest suitable
-          alternatives to Blast furnace root for large-scale High-quality steel
-          production.
+          Solar cell efficiency can be significantly reduced by dust and dirt accumulation on their surface. Frequent cleaning can be expensive and impractical in remote locations. The goal is to create a surface coating for solar cells that repels dust and dirt particles, minimizing maintenance and maximizing energy output.
         </p>
 
         <p>
           <h3>
             {" "}
-            META02 : Create an environmentally conscious metal 3D printer design
-            to tackle the intricate challenge of sustainable additive
-            manufacturing for complex metallic shapes.{" "}
+            MME02 : Green Iron and Steel Production{" "}
           </h3>
-          Additive manufacturing is emerging as an advanced technique to
-          manufacture complex structures in 3-D printing roots. How metal can be
-          3- D printed to form complex metallic shapes is a great challenge in
-          3-D printing technology. What processes can be used to design a 3-D
-          printer for metals in an open challenge. your task is to propose a
-          design model for a metallic 3-D printer.
+          The Steel industry is a significant contributor to global carbon emissions. Traditional methods of steel production rely heavily on coal as a reductant, which results in greenhouse gas emissions and environmental pollution. With increasing environmental regulations and the urgent need to combat climate change, there is a pressing need to develop more sustainable methods of iron and steel production.
         </p>
 
         <p>
           <h3>
             {" "}
-            META03 : Innovate processes to attain globally recognized structural
-            aluminum alloy.{" "}
+            MME03 : E-Waste Metal Extraction{" "}
           </h3>
-          Production of international standard quality aluminum alloys for
-          structural applications is a business challenge for Indian aluminum
-          industries. The grain refinement and achieving a suitable
-          microstructure in impurity-free aluminum is a processing challenge.
-          Propose a suitable solution to modify the existing processes to
-          achieve a global standard of aluminum alloys.
+          Electronic waste is one of the fastest-growing waste streams globally, driven by rapid technological advancements and high demand for electronic products. E-waste contains a variety of valuable metals such as gold, silver, copper, and rare earth elements, which can be recovered and recycled. However, existing extraction methods are often inefficient, environmentally hazardous, and expensive.
         </p>
 
         <p>
           <h3>
             {" "}
-            META04 : Optimization of Corrosion Resistance in Multi-Principal
-            Element Alloys.{" "}
+            MME04 : Advanced Battery System Design for High-Performance EVs{" "}
           </h3>
-          Corrosion is a pervasive challenge in various industries, from
-          aerospace to infrastructure. Multi-principal element alloys offer a
-          promising avenue for enhanced corrosion resistance, but understanding
-          the intricate relationships between alloy compositions and corrosion
-          performance is complex. Your task is to approach that identifies
-          optimal descriptors and models the corrosion resistance of these
-          alloys, revolutionizing materials' design.
+          Electric vehicles (EVs) are playing a crucial role in the transition towards sustainable transportation. However, battery technology remains a key challenge, limiting factors like range, charging speed, and overall cost. There is a need to develop a next-generation battery system that addresses the limitations of current EV batteries.
         </p>
 
         <p>
           <h3>
             {" "}
-            META05 : Enhancing Consistency of Sinter Characteristics for
-            Economical Pig Iron Production.{" "}
+            MME05 : Recover Aluminium from Dross{" "}
           </h3>
-          A steel manufacturer produces pig iron through blast furnace roots.
-          The major raw materials used are iron ore, limestone/dolomite, and
-          coke. A company observes that due to the lack of supply of good
-          quality ore and iron ore and associated hike in the prices of these
-          raw materials resultant pig iron production is uneconomical. The
-          company also found as an alternative they find that iron ore is found
-          at low prices. therefore, they dic=scide the iron ore fine in the form
-          of a sinter with the appreciation that the use of a sinter in a blast
-          furnace increases the rate of production, reduces the coke rate, and
-          thus reduces the production cost. The company started using ore fines
-          by setting up a new sinter plant. Input to the sinter plant or iron
-          ore fines, lime and dolomite fines, coke breeze, mill scale, quick
-          lime, black furnace return, cold sinter return, hot sinter return, and
-          flue dust. The company has performed several trials to get the
-          required properties of sinter, but they have observed that the sinters
-          produced in their sinter plant have irregular characteristics
-          (measured by basicity ratio ((CaO%+MgO%)/(SiO_2%)), tumbling index
-          (TI) and reduction degradation index (RDI) even after maintaining
-          uniform operational parameter. The details of compositional and sinter
-          property data obtained during these trials are available if required
-          You as a Metallurgical Engineer suggests a suitable reason for fixing
-          the irregularity of the sinter characteristics that can be used for
-          the production of pig iron through the blast furnace route.
+          Aluminium dross, a by-product of aluminium smelting and casting processes, poses significant environmental and economic challenges. It consists of a mixture of aluminium metal and oxides, along with other impurities such as aluminium nitride, aluminium carbide, and aluminium oxide. The efficient recovery of aluminium from dross is essential to minimize waste generation, promote resource sustainability, and alleviate environmental concerns associated with its disposal.
         </p>
 
         <p>
           <h3>
             {" "}
-            META06 : Develop an environmentally conscious, advanced integrated
-            steel plant design optimizing technology and location for efficient
-            steel production.{" "}
+            MME06 : Innovative Waste Management System for Iron and Steel Production{" "}
           </h3>
-          The modern world heavily relies on steel as a fundamental building
-          material for various industries. To cater to the growing demand, a
-          company aims to construct an integrated steel plant that efficiently
-          produces steel while minimizing its environmental impact. Your task is
-          to propose an innovative and sustainable design for this integrated
-          steel plant. Your proposal should include the optimal location for the
-          plant, the recommended technologies for different production units,
-          and a focus on minimizing the ecological footprint. Design an
-          Integrated Steel Plant that incorporates and optimizes cutting-edge
-          technologies like hot blast stove technologies, fuel-efficient
-          technologies, fuel gas recycling technologies, development of top
-          charging technology and auxiliary fuel injection technology, and
-          environmentally conscious practices to ensure efficient and
-          sustainable steel production.
+          The iron and steel industry is fundamental to modern infrastructure and manufacturing, providing essential materials for construction, transportation, and various industrial applications. However, this industry is also a major producer of waste, generating substantial amounts of solid, liquid, and gaseous byproducts. Efficient and sustainable waste management is crucial to mitigate the environmental impact, comply with regulatory standards, and enhance the overall efficiency of production processes. Innovations in waste management can significantly contribute to the sustainability and economic viability of the iron and steel industry.
         </p>
 
         <p>
           <h3>
             {" "}
-            META07 : Propose an automated quality control system for surface
-            defects in continuous steel rolling using advanced imaging and
-            machine learning technologies{" "}
+            META07 : Advanced Biocompatible Material for Enhanced Biofluid Diagnostics{" "}
           </h3>
-          During the rolling of long flat products in continuous and
-          semi-continuous mills, few surface defects such as central bursting,
-          oxide entrapment, surface crack, or frequently conserved defects. In
-          continuous production lines, these defects impact the productivity and
-          quality of the rolled steel. In conventional methods, the problems are
-          identified by visual inspection and discarding the defective part
-          interrupting the quelling of the long product. The industry is looking
-          for an automatic process for this quality control activity. Suggest a
-          suitable automotive-controlled system using the latest imaging and
-          machine learning technologies
+          Accurate detection and analysis of biomarkers in biofluids such as blood, saliva, and cerebrospinal fluid (CSF) are essential for early disease diagnosis and effective monitoring. However, these biomarkers often face degradation and interference within biofluids, leading to unreliable diagnostic results. There is an urgent need for innovative materials that can protect these biomarkers from degradation, selectively capture them, and possess antimicrobial properties. Such materials would significantly enhance diagnostic precision and efficiency across a range of biofluids, paving the way for improved healthcare outcomes.
+        </p>
+        <p>
+          <h3>
+            {" "}
+            META08 : AI-Powered Refractory Monitoring and Optimization{" "}
+          </h3>
+          The efficient operation of high-temperature industrial furnaces is crucial for various manufacturing processes across multiple industries, including steel, cement, glass, and ceramics. Central to the functionality of these furnaces is the integrity of their refractory linings, which protect the furnace walls from extreme temperatures, chemical corrosion, and mechanical stress. However, the maintenance and management of refractory linings present significant challenges due to the harsh operating conditions and the complex nature of degradation mechanisms.
         </p>
       </div>
       <div

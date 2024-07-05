@@ -11,84 +11,43 @@ const Arch = () => {
       </div>
       <div className="single_desc">
         <p>
-          <h3>ARCH01 : Low-Cost Rural Housing Model</h3>
-          Precast Concrete System is more economical than Conventional Cast in
-          place method but still there are some conditions which have to be
-          taken care while using precast. Construct a working model of low-cost
-          housing in rural areas of Chhattisgarh.
+          <h3>ARCH01 : Futuristic architecture bamboo construction</h3>
+          Bamboo is a woody grass that is known to be the fastest-growing plant in the world. It has become a popular material choice in architecture and design projects because of its sustainable qualities and hardwearing characteristics as it has a higher compressive strength than concrete or wood, and rivals the tensility of steel. Bamboo can be cut and laminated into sheets and planks. This process involves cutting stalks into thin strips, planing them flat, and drying the strips; they are then glued, pressed, and finished. Bamboo is stronger than steel. This makes it an ideal material for construction projects, both big and small. Bamboo can also be processed in different ways to make it stronger. For instance, carbonization is a process that involves heating bamboo in an oxygen-free environment.
         </p>
         <p>
-          <h3>ARCH02 : Modern Vernacular Architecture</h3>
-          Vernacular Architecture is about using old method and techniques,
-          every region has its own Vernacular Architecture. Develop modern
-          architecture using Vernacular elements of India, it should be energy
-          efficient and modern in design.
+          <h3>ARCH02 : Modern solution for overcrowding in commercial space of Chandni Chowk Delhi</h3>
+          Old Delhi is full of wonders, and Chandni Chowk tops this list. From housing some of the unique architecture belonging to the bygone era to being the oldest and busiest market, this place forms an integral part of Old Delhi. Besides, it is the end destination for every shopaholic and food lover. Whether it is a traditional dress or kitchen accessory, you will get almost everything here at Chandni Chowk Market Delhi. Chandni Chowk keeps its doors open for tourists and locals alike for the entire year except on Sundays. So, you can visit this place at any time without worrying about encountering a closed market. If you are visiting Old Delhi during the summer season, try and avoid going to the market during the daytime, as that would be quite uncomfortable, courtesy of the scorching Delhi heat. After sundown, the place gets more crowded as several shops open after 5 PM. So, be prepared to witness a humongous crowd after dusk. Also, try to avoid visiting the place during monsoons, as heavy showers create a mess in the narrow alleys.
         </p>
         <p>
-          <h3>ARCH03 : Crematorium Settlement Redevelopment</h3>
-          Redevelopment of crematorium workers' settlement at Varanasi for
-          better quality of life.
+          <h3>ARCH03 : Climatic responsive architecture for hot and dry area</h3>
+          Architecture as a set of various climatic conditions. Architecture doesn't end within its walls - it starts in skies, goes through walls, and ends in us. The invention of glass and its immaterial properties enabled the outside sensations like warmth and light to enter the building. Responsive architecture envisions the built environment to adapt to the changing needs of its occupants dynamically. Although it is increasingly feasible to move space-defining objects like room dividers by mobile robots, little is known about how or when such spatial adaptations should occur.
         </p>
         <p>
-          <h3>ARCH04 : Dharavi New Settlement Design</h3>
-          Dharavi is the biggest slum cluster of Asia that lies on prime
-          property right in the middle of Mumbai. Design a plan and model for a
-          new Settlement at low cost.
+          <h3>ARCH04 : Construction method without the help of RCC in construction</h3>
+          RCC is a popular choice for projects because it is lightweight and easy to work with, making it a good choice for bridges and other large construction projects. Reinforced cement concrete (RCC) is a type of concrete that uses reinforcing fibers to improve the strength and stability of the concrete. The fibers are woven into the concrete before it’s poured, and they help to distribute pressure and stress throughout the material. This makes RCC more resistant to compressive loading and less likely to crack or shatter under stress. It is also more durable than traditional concrete, which means it can last longer without needing repairs or replacement.
+          <ul>
+            <li>It must have the ability to withstand adequate tensile strength, compressive strength, bending, and shear forces.</li>
+            <li>The concrete must not show excessive deflection and spoil serviceability requirement.</li>
+            <li>The reinforcement needs to have a good covering so that corrosion does not occur.</li>
+            <li>The hair cracks that are formed should be within the permissible limit.</li>
+            <li>It should be good fire and weather-resistant.</li>
+            <li>The concrete can be molded into any desired shape and size while it is still fresh.</li>
+            <li>It should be a high-durability material.</li>
+            <li>Any load can be constructed to be supported by an RCC structure.</li>
+          </ul>
+          The earliest recordings of concrete structures date back to 6500BC by the Nabataea traders in regions of Syria and Jordan. They created concrete floors, housing structures, and underground cisterns. 3000 BC – Egypt and China: Egyptians used mud mixed with straw to bind dried bricks. François Coignet used iron-reinforced concrete as a technique for constructing building structures. In 1853, Coignet built the first iron-reinforced concrete structure, a four-story house at 72 rue Charles Michels in the suburbs of Paris.
         </p>
         <p>
-          <h3>
-            ARCH05 : Using natural material to replace the air conditioner
-          </h3>
-          Design a sculptural installation or a device that can cover all the
-          three main things; the increase in temperature, worldwide energy
-          consumption and green alternatives.
+          <h3>ARCH05 : Plan to build houses on the moon by 2040</h3>
+          Rather than searching for real estate listings in another state or even country, you may eventually be looking for homes in an area much farther away: the moon. NASA has announced that it plans to build residences on the moon by 2040, which you may be eligible to live in during your lifetime.
         </p>
         <p>
-          <h3>ARCH06 : Old monuments in Modern Cloth</h3>
-          Monuments Historique is a designation given to some natural heritage
-          sites what if these monuments change its façade into modern era.
-          Develop a model of any historic monument in which uses of material are
-          modern and explain what changes can be there after changing the
-          material.
+          <h3>ARCH06 : How to Improve Internal and External Environments with Glass Ceilings</h3>
+          As a highly transparent material that stands up to all but the most extreme of weather conditions, is easily formed into any size or shape, and, once formed, will last for thousands of years, glass is still one of the most innovative and crucial materials used in architecture. Although contemporary building practices allow us to form huge, glittering skyscrapers of glass that rise hundreds of meters into the air, the ancient material’s original purpose – to welcome light into weathertight and secure interiors – remains its most important more than a thousand years on. As important as glass is to almost every typology of architecture in the form of windows, when it comes to the roof of a building, the use of glass is not so simple. We’ve understood the power and danger of combining light and glass ever since we saw a magnifying glass used to concentrate the heat of sunlight into incredibly high temperatures in children’s cartoons. Under a glass roof, the solar gain can make for uncomfortable internal environments without the correct protective precautions.
         </p>
         <p>
-          <h3>ARCH07 : Urban Low-Income Housing Plan</h3>
-          Design a master plan and model for the low-income housing integrating
-          urban architecture emphasizing. How will the impact of the cohesive
-          social image on urban dwellers be achieved?
-        </p>
-        <p>
-          <h3>ARCH08 : Indus Valley Sewage Design</h3>
-          Indus Valley civilization is known for its urban planning, baked brick
-          house, elaborate drainage system, water supply system, cluster of
-          large nonresidential buildings and techniques of handicraft and
-          metallurgy. Design technique of the sewage system of Indus Valley
-          civilization.
-        </p>
-        <p>
-          <h3>ARCH09 : Earthquake-Resistant Building Model</h3>
-          Degree of architectural expression of earthquake resistance or
-          implication of architectural configuration form or style in earthquake
-          inspired by historical examples. Design a working model of building of
-          earthquake resistance.
-        </p>
-        <p>
-          <h3>ARCH10 : Indoor Vertical Farming in Vacant Buildings</h3>
-          Vacant buildings today are functionless structures of steel, glass,
-          concrete. So making these structures useful in other terms can give
-          major changes. Design the potential and challenges of transforming
-          vacant buildings in dense urban areas into an indoor vertical farm.
-        </p>
-        <p>
-          <h3>
-            ARCH11 : Sustainable Revival of Traditional Manufacturing Structures
-          </h3>
-          In the practice of repurposing old structures for entirely new
-          repurposing structures. Accomplish this while preserving some of the
-          historic elements. One of the main reasons is, it can reduce the
-          environmental impact of urban development by reusing existing
-          material. Design how traditional manufacturing structures will be made
-          more environmentally sustainable and energy efficient.
+          <h3>ARCH07 : Temple Complex of the Future (Religious Architecture)</h3>
+          Temples have always held central importance around the world and can be active sites of cultural confluence. Possible areas to explore in your architecture dissertation for this topic are the uses of sustainability in creating religious structures, materials used, analysing the cultural significance of the architectural elements in structures, and classifying their types and historical context.
         </p>
       </div>
       <div

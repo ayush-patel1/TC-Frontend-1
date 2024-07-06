@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import urls from "../keys.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import SampleAbstract from "../assets/sample_abstract/SampleAbstract.pdf";
+import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate.pdf";
 
 const backend = urls.backend;
 
@@ -234,7 +234,7 @@ const VigyaanForm = () => {
       style={{ position: "relative", zIndex: "0" }}
     >
       <div className="container small" style={{ paddingTop: "3rem" }}>
-        {<div className="metaportal_fn_mintbox">
+         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
             <div className="mint_title">
               <span>REGISTER NOW</span>
@@ -463,12 +463,13 @@ ensuring that the prototype demonstrates core features and functionalities effec
                   <p>2. Qualified teams will present their project in VIGYAAN Exhibition.</p>
                 </p>
               </div>
-              <a style={{ textDecoration: "none" }} href={SampleAbstract}>
-                <span className="metaportal_fn_button_4">Sample Abstract</span>
+              <a style={{ textDecoration: "none" }} href={VigyaanTemplate}>
+                <span className="metaportal_fn_button_4">Vigyaan Template</span>
               </a>
             </div>
           </div>
-        </div> }
+        </div>
+
         <div className="metaportal_fn_nft_cats">
           <ul data-aos="fade-down">
             <li>

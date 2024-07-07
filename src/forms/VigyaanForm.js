@@ -98,7 +98,7 @@ const VigyaanForm = () => {
   };
 
   const submit = async () => {
-    alert('Registrations are closed.');
+    alert('Registrations will be open soon.');
     return;
     setSubmit(true);
     if (memberCount < 1) {

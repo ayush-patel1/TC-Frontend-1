@@ -436,7 +436,7 @@ const VigyaanForm = () => {
                 className="mint_time"
               >
                 <h4>VIGYAAN</h4>
-                <h3 className="metaportal_fn_countdown">PROCEDURES</h3>
+                <h3 className="metaportal_fn_countdown">ROUNDS</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>

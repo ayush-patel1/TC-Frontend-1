@@ -98,6 +98,8 @@ const VigyaanForm = () => {
   };
 
   const submit = async () => {
+    alert('Registrations are closed.');
+    return;
     setSubmit(true);
     if (memberCount < 1) {
       alert("Minimum Team Size: 2");

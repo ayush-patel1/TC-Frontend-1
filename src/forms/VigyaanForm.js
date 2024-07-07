@@ -463,10 +463,31 @@ ensuring that the prototype demonstrates core features and functionalities effec
                   <p>2. Qualified teams will present their project in VIGYAAN Exhibition.</p>
                 </p>
               </div>
+            </div>
+            <div
+                data-aos="fade-down"
+                style={{ paddingTop: "2rem" }}
+                className="mint_time"
+              >
+                <h4>VIGYAAN</h4>
+                <h3 className="metaportal_fn_countdown">Certificates & Rewards</h3>
+              </div>
+              <div data-aos="fade-down" className="mint_info">
+                <p>
+                ▪ Top teams from each branch will receive goodies.
+
+                </p>
+                <p>
+                ▪ A digital Certificate of Participation will be awarded to teams that qualified the presentation round but narrowly missed clearing the prototype round subject to the approval of concerned faculty incharges.
+                </p>
+                <p>
+                ▪ A digital Certificate of Appreciation will be awarded to those teams who presented their project in
+the VIGYAAN exhibition.
+                </p>
+              </div>
               <a style={{ textDecoration: "none" }} href={VigyaanTemplate}>
                 <span className="metaportal_fn_button_4">Vigyaan Template</span>
               </a>
-            </div>
           </div>
         </div>
 

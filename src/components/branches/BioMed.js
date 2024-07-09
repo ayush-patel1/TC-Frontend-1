@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../Title'
 import pdf from "../../assets/problem_statements/BioMed.pdf"
+import ScrollButton from '../ScrollButton'
 
 const BioMed = () => {
     return (
@@ -9,6 +10,7 @@ const BioMed = () => {
                 <Title color="BIOMEDICAL" />
                 <br />
             </div>
+            <ScrollButton destinationId="downloadPDF"/>
             <div className="single_desc">
                 <p>
                     <h3>BME01:  Developing easy to use portable radiological device(X-RAY)  </h3>
@@ -55,6 +57,7 @@ surgeon and physical therapist may recommend that you exercise for 20 to 30 minu
                 </p>
             </div>
             <div
+      id="downloadPDF"
         style={{
           width: "100%",
           display: "flex",

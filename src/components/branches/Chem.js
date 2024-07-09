@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Title";
 import pdf from "../../assets/problem_statements/Chemical.pdf";
+import ScrollButton from "../ScrollButton";
 
 const Chem = () => {
   return (
@@ -9,6 +10,7 @@ const Chem = () => {
         <Title color="CHEMICAL" />
         <br />
       </div>
+      <ScrollButton destinationId="downloadPDF"/>
       <div className="single_desc">
         <p>
           <h3>CHEM01 : Novel delivery systems for preservation agents</h3>
@@ -61,6 +63,7 @@ const Chem = () => {
         </p>
       </div>
       <div
+      id="downloadPDF"
         style={{
           width: "100%",
           display: "flex",

@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../Title'
 import pdf from "../../assets/problem_statements/Civil.pdf"
+import ScrollButton from '../ScrollButton'
 
 const Civil = () => {
 	return (
@@ -9,7 +10,7 @@ const Civil = () => {
 				<Title color="CIVIL" />
 				<br />
 			</div>
-		
+			<ScrollButton destinationId="downloadPDF"/>
 			<div className="single_desc">
 				<p>
 					<h3>CIV01. Investigating Structural Integrity and Accessibility Challenges in Urban Skywalk Projects : </h3>
@@ -82,11 +83,19 @@ const Civil = () => {
 
 			</div>
 
-			<div style={{ width: "100%", display: "flex", justifyContent: "center", padding: "1rem 0rem", }}>
-				<a href={pdf} style={{ textDecoration: "none" }}>
-					<div className="goodbtn">DOWNLOAD PDF</div>
-				</a>
-			</div>
+			<div
+      id="downloadPDF"
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          padding: "1rem 0rem",
+        }}
+      >
+        <a href={pdf} style={{ textDecoration: "none" }}>
+          <div className="goodbtn">DOWNLOAD PDF</div>
+        </a>
+      </div>
 		</div>
 	)
 }

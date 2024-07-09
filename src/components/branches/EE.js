@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../Title'
 import pdf from "../../assets/problem_statements/EE.pdf"
+import ScrollButton from '../ScrollButton'
 
 const EE = () => {
 	return (
@@ -9,7 +10,7 @@ const EE = () => {
 				<Title color="ELECTRICAL" />
 				<br />
 			</div>
-
+			<ScrollButton destinationId="downloadPDF"/>
 			<div className="single_desc">
 				<p>
 					<h3>EE 01: Energy Harvesting IoT Devices: Unlocking Sustainable Power Sources</h3>
@@ -62,11 +63,19 @@ const EE = () => {
 				</p>
 			</div>
 
-			<div style={{ width: "100%", display: "flex", justifyContent: "center", padding: "1rem 0rem", }}>
-				<a href={pdf} style={{ textDecoration: "none" }}>
-					<div className="goodbtn">DOWNLOAD PDF</div>
-				</a>
-			</div>
+			<div
+      id="downloadPDF"
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          padding: "1rem 0rem",
+        }}
+      >
+        <a href={pdf} style={{ textDecoration: "none" }}>
+          <div className="goodbtn">DOWNLOAD PDF</div>
+        </a>
+      </div>
 		</div>
 	)
 }

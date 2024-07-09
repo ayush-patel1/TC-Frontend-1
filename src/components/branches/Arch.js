@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Title";
 import pdf from "../../assets/problem_statements/Arch.pdf";
+import ScrollButton from "../ScrollButton";
 
 const Arch = () => {
   return (
@@ -9,6 +10,7 @@ const Arch = () => {
         <br />
         <Title color="ARCHITECTURE" />
       </div>
+      <ScrollButton destinationId="downloadPDF" />
       <div className="single_desc">
         <p>
           <h3>ARCH01 : Futuristic architecture bamboo construction</h3>
@@ -51,6 +53,7 @@ const Arch = () => {
         </p>
       </div>
       <div
+      id="downloadPDF"
         style={{
           width: "100%",
           display: "flex",

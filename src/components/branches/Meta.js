@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Title";
 import pdf from "../../assets/problem_statements/Meta.pdf";
+import ScrollButton from "../ScrollButton";
 
 const Meta = () => {
   return (
@@ -9,6 +10,7 @@ const Meta = () => {
         <Title color="METALLURGY" />
         <br />
       </div>
+      <ScrollButton destinationId="downloadPDF"/>
       <div className="single_desc">
         <p>
           <h3>
@@ -74,6 +76,7 @@ const Meta = () => {
         </p>
       </div>
       <div
+      id="downloadPDF"
         style={{
           width: "100%",
           display: "flex",

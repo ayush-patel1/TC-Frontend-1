@@ -237,7 +237,7 @@ const VigyaanForm = () => {
     >
       <div className="container small" style={{ paddingTop: "3rem" }}>
          <div className="metaportal_fn_mintbox">
-          <div className="mint_left">
+          {/* <div className="mint_left">
             <div className="mint_title">
               <span>REGISTER NOW</span>
             </div>
@@ -393,7 +393,8 @@ const VigyaanForm = () => {
               )}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
-          </div>
+          </div> */}
+    
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">

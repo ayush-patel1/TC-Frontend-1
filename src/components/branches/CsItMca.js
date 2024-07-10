@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../Title'
 import pdf from "../../assets/problem_statements/CseItMca.pdf"
+import ScrollButton from '../ScrollButton'
 
 const CsItMca = () => {
   return (
@@ -9,6 +10,7 @@ const CsItMca = () => {
               <Title color="CS / IT / MCA" />
               <br />
             </div>
+            <ScrollButton destinationId="downloadPDF"/>
             <div className="single_desc">
               <p>
                 <h3>MCSIT01:  Real-time Enemy Detection and Localization</h3>
@@ -82,6 +84,7 @@ Navigating the world can be a challenge for blind individuals. While assistive t
 
             </div>
             <div
+      id="downloadPDF"
         style={{
           width: "100%",
           display: "flex",

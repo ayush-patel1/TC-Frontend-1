@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../Title'
 import pdf from "../../assets/problem_statements/BioTech.pdf"
+import ScrollButton from '../ScrollButton'
 
 const Biotech = () => {
 	return (
@@ -9,7 +10,7 @@ const Biotech = () => {
 				<Title color="BIOTECHNOLOGY" />
 				<br />
 			</div>
-			
+			<ScrollButton destinationId="downloadPDF"/>
 			<div className="single_desc">
 				<p>
 					<h3>BIT 01: Enhance the expression and stability of therapeutic  proteins in microbial hosts for cost-effective pharmaceutical production.</h3>
@@ -38,11 +39,19 @@ const Biotech = () => {
 				
 			</div>
 			
-			<div style={{ width: "100%", display: "flex", justifyContent: "center", padding: "1rem 0rem", }}>
-				<a href={pdf} style={{ textDecoration: "none" }}>
-					<div className="goodbtn">DOWNLOAD PDF</div>
-				</a>
-			</div>
+			<div
+      id="downloadPDF"
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          padding: "1rem 0rem",
+        }}
+      >
+        <a href={pdf} style={{ textDecoration: "none" }}>
+          <div className="goodbtn">DOWNLOAD PDF</div>
+        </a>
+      </div>
 		</div>
 	)
 }

@@ -233,11 +233,11 @@ const VigyaanForm = () => {
     <div
       className="metaportal_fn_mintpage"
       id="registration"
-      style={{ position: "relative", zIndex: "0" }}
+      style={{  zIndex: "0"}}
     >
-      <div className="container small" style={{ paddingTop: "3rem" }}>
-         <div className="metaportal_fn_mintbox">
-          {/* <div className="mint_left">
+      <div className="container small centered-container" style={{ paddingTop: "3rem"}}>
+         <div className="metaportal_fn_mintbox" style={{maxWidth: "100%"}}>
+          {/*<div className="mint_left">
             <div className="mint_title">
               <span>REGISTER NOW</span>
             </div>
@@ -393,8 +393,10 @@ const VigyaanForm = () => {
               )}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
-          </div> */}
+
     
+
+              </div>*/}
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
@@ -466,6 +468,9 @@ ensuring that the prototype demonstrates core features and functionalities effec
                   <p>2. Qualified teams will present their project in VIGYAAN Exhibition.</p>
                 </p>
               </div>
+              <a style={{ textDecoration: "none" }} href={VigyaanTemplate}>
+                <span className="metaportal_fn_button_4">Idea Submission Template</span>
+              </a>
             </div>
             <div
                 data-aos="fade-down"
@@ -488,40 +493,9 @@ ensuring that the prototype demonstrates core features and functionalities effec
 the VIGYAAN exhibition.
                 </p>
               </div>
-              <a style={{ textDecoration: "none" }} href={VigyaanTemplate}>
-                <span className="metaportal_fn_button_4">Vigyaan Template</span>
-              </a>
           </div>
         </div>
 
-        <div className="metaportal_fn_nft_cats">
-          <ul data-aos="fade-down">
-            <li>
-              <div className="item">
-                <h4 className="parent_category">27th & 28th September</h4>
-                <h3 className="child_category" title="Black Yukata">
-                Presentation Round
-                </h3>
-              </div>
-            </li>
-            <li>
-              <div className="item">
-                <h4 className="parent_category">25-26 October</h4>
-                <h3 className="child_category" title="Daydreaming">
-                Prototype Round
-                </h3>
-              </div>
-            </li>
-            <li>
-              <div className="item">
-                <h4 className="parent_category">28-29 October</h4>
-                <h3 className="child_category" title="Fireflies, Smoke">
-                Exhibition
-                </h3>
-              </div>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   );

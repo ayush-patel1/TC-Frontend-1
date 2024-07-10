@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Title";
 import pdf from "../../assets/problem_statements/Mining.pdf";
+import ScrollButton from "../ScrollButton";
 
 const Mining = () => {
   return (
@@ -9,6 +10,7 @@ const Mining = () => {
         <Title color="MINING" />
         <br />
       </div>
+      <ScrollButton destinationId="downloadPDF"/>
       <div className="single_desc">
         <p>
           <h3> MIN01 :  Dynamic Route Planning and Optimization for Truck Haulage </h3>
@@ -125,6 +127,7 @@ their safety and well-being.
         </p>
       </div>
       <div
+      id="downloadPDF"
         style={{
           width: "100%",
           display: "flex",

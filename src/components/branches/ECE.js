@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../Title'
 import pdf from "../../assets/problem_statements/ECE.pdf"
+import ScrollButton from '../ScrollButton'
 
 const ECE = () => {
 	return (
@@ -9,7 +10,7 @@ const ECE = () => {
 				<Title color="ELECTRONICS & COMMUNICATION" />
 				<br />
 			</div>
-
+			<ScrollButton destinationId="downloadPDF"/>
 			<div className="single_desc">
 				<p>
 					<h3> ECE 01.Smart Frequency Detection and Jamming System </h3>
@@ -70,11 +71,19 @@ const ECE = () => {
 				</p>
 			</div>
 
-			<div style={{width: "100%", display: "flex", justifyContent: "center", padding: "1rem 0rem"}}>
-				<a href={pdf} style={{ textDecoration: "none" }}>
-					<div className="goodbtn">DOWNLOAD PDF</div>
-				</a>
-			</div>
+			<div
+      id="downloadPDF"
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          padding: "1rem 0rem",
+        }}
+      >
+        <a href={pdf} style={{ textDecoration: "none" }}>
+          <div className="goodbtn">DOWNLOAD PDF</div>
+        </a>
+      </div>
 		</div>
 	)
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../Title'
 import pdf from "../../assets/problem_statements/Mech.pdf"
+import ScrollButton from '../ScrollButton'
 
 const Mechanical = () => {
   return (
@@ -9,6 +10,7 @@ const Mechanical = () => {
       <Title color="MECHANICAL" />
       <br />
     </div>
+    <ScrollButton destinationId="downloadPDF"/>
     <div className="single_desc">
       <p>
         <h3>MECH01:  UAV surveillance drone  </h3>
@@ -58,6 +60,7 @@ a critical component of the circular economy.
      </p>
     </div>
     <div
+      id="downloadPDF"
         style={{
           width: "100%",
           display: "flex",

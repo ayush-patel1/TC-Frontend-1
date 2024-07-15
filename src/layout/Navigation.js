@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { navigationToggle } from "../redux/actions/siteSettings";
 import { Link } from "react-router-dom";
 // import TechTeam from "./pages/TechTeam";
+import Tcfavicon from "../assets/TCfavicon.jpg"
 import fb from "../assets/svgs/facebook.svg"
 import insta from "../assets/svgs/insta.svg"
 import linkedin from "../assets/svgs/linkedin.svg"
@@ -37,7 +38,7 @@ const Navigation = ({ navigation, navigationToggle }) => {
                   />
                   <span className="icon">
                     <img
-                      src="https://apprecs.org/gp/images/app-icons/300/eb/com.technocracy.app.aavartan.jpg"
+                      src={Tcfavicon}
                       alt="aavartan_logo"
                       width={100}
                     />

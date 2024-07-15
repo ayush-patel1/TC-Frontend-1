@@ -2734,6 +2734,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	border-radius: 100%;
 	position: relative;
 	margin-bottom: 9px;
+	overflow: hidden;
 }
 .metaportal_fn_items .icon img{
 	z-index: 5;
@@ -3257,7 +3258,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	border-radius: 15px 0 0 15px;
 }
 .metaportal_fn_mintbox .mint_right{
-	width: 60%;
+	width: 100%;
 	padding: 60px 50px 25px 50px;
 	border-radius: 0 15px 15px 0;
 	background-color: rgba(255, 255, 255, 0.066);

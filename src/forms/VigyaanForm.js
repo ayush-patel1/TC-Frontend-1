@@ -393,6 +393,9 @@ const VigyaanForm = () => {
               )}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
+
+    
+
               </div>*/}
           <div className="mint_right">
             <div className="mright">

@@ -162,6 +162,7 @@ const VigyaanForm = () => {
     }
   };
 
+  {/* Member Details */}
   const renderMemberFields = () => {
     const members = [];
     for (let i = 1; i <= memberCount; i++) {
@@ -175,6 +176,49 @@ const VigyaanForm = () => {
               placeholder={`Member ${i} Name`}
               onChange={(e) => handle(e)}
               value={form[`Member${i + 1}_name`]}
+            />
+          </li>
+          <li>
+            <input
+              name={`Member${i + 1}_branch`}
+              className="memberName"
+              type="text"
+              placeholder={`Member ${i}'s Branch`}
+              onChange={(e) => handle(e)}
+              value={form[`Member${i + 1}_branch`]}
+            />
+          </li>
+          <li>
+            <input
+              name={`Member${i + 1}_yog`}
+              className="memberName"
+              type="text"
+              placeholder={`Member ${i}'s Current Year`}
+              onChange={(e) => handle(e)}
+              value={form[`Member${i + 1}_yog`]}
+            />
+          </li>
+          <li>
+            <input
+              name={`Member${i + 1}_email`}
+              className="memberName"
+              type="text"
+              placeholder={`Member ${i} Email ID`}
+              onChange={(e) => handle(e)}
+              value={form[`Member${i + 1}_email`]}
+            />
+            <span style={{ fontSize: "0.7rem"}}>
+              * If from NIT Raipur then only institute id accepted.
+            </span>
+          </li>
+          <li>
+            <input
+              name={`Member${i + 1}_rollNo`}
+              className="memberName"
+              type="text"
+              placeholder={`Member ${i} Roll Number`}
+              onChange={(e) => handle(e)}
+              value={form[`Member${i + 1}_rollNo`]}
             />
           </li>
           <li>
@@ -193,36 +237,6 @@ const VigyaanForm = () => {
               <p style={{ color: "red" }}>Enter a number of 10 digits only.</p>
             )}
           </li>
-          <li>
-            <input
-              name={`Member${i + 1}_email`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i} Email ID`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_email`]}
-            />
-          </li>
-          <li>
-            <input
-              name={`Member${i + 1}_branch`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i}'s Branch`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_branch`]}
-            />
-          </li>
-          <li>
-            <input
-              name={`Member${i + 1}_yog`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i}'s year of graduation`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_yog`]}
-            />
-          </li>
         </div>
       );
     }
@@ -237,13 +251,31 @@ const VigyaanForm = () => {
     >
       <div className="container small centered-container" style={{ paddingTop: "3rem"}}>
          <div className="metaportal_fn_mintbox" style={{maxWidth: "100%"}}>
-          {/*<div className="mint_left">
+          <div className="mint_left">
             <div className="mint_title">
               <span>REGISTER NOW</span>
             </div>
+          
+            {/* From NITRR or not */}
+            <div style={{ paddingBottom: "1rem" }}>
+            <h3 className="metaportal_fn_countdown" style={{ paddingBottom: "1rem" }}>Are You From NITRR?</h3>
+            <ul style={{ listStyleType: "none", padding: 0 }}>
+              <li style={{ marginBottom: "0.5rem" }}>
+                <input type="radio" id="yes" name="nitrr" value="yes" />
+                <label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>Yes</label>
+              </li>
+              <span style={{fontSize: "1rem"}}>* If selected Yes, then only institute mail id accepted.</span>
+              <li style={{ marginBottom: "0.5rem" }}>
+                <input type="radio" id="no" name="nitrr" value="no" />
+                <label htmlFor="no" style={{ marginLeft: "0.5rem" }}>No</label>
+              </li>
+              <span style={{fontSize: "1rem"}}>* If selected No, then write your College Name and any type of Email accepted.</span>
+            </ul>
+            </div>
+            {/* Important Details */}
             <div className="mint_list">
               <ul>
-                <li data-aos="fade-down">
+              <li data-aos="fade-down">
                   <input
                     name="Team_name"
                     id="teamName"
@@ -263,50 +295,19 @@ const VigyaanForm = () => {
                     value={form.Problem_code}
                   />
                 </li>
+              </ul>
+
+              {/* Team Leader Details */}
+              <h3 className="metaportal_fn_countdown" style={{paddingBottom: "1rem"}}>Team Leader Details</h3>
+              <ul>
                 <li data-aos="fade-down">
                   <input
                     id="leaderName"
                     type="text"
                     name="Leader_name"
-                    placeholder="Your Leader Name"
+                    placeholder="Leader Name"
                     onChange={(e) => handle(e)}
                     value={form.Leader_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    id="leaderNumber"
-                    type="text"
-                    name="Leader_whatsapp"
-                    placeholder="Your Leader Whatsapp Number"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
-                  />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  {form.Leader_whatsapp !== "" && form.Leader_whatsapp.length !== 10 && (
-                    <p style={{ color: "red" }}>Enter a number of 10 digits only.</p>
-                  )}
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    id="leaderEmail"
-                    type="text"
-                    name="Leader_email"
-                    placeholder="Your Leader Email ID"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_email}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="College"
-                    id="collegeName"
-                    type="text"
-                    placeholder="College Name"
-                    onChange={(e) => handle(e)}
-                    value={form.College}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -324,11 +325,55 @@ const VigyaanForm = () => {
                     name="Leader_yog"
                     id="leaderYog"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Leader Current Year"
                     onChange={(e) => handle(e)}
                     value={form.Leader_yog}
                   />
                 </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderEmail"
+                    type="text"
+                    name="Leader_email"
+                    placeholder="Leader Email ID"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_email}
+                  />
+                  <span style={{ fontSize: "0.7rem"}}>
+                    * If from NIT Raipur then only institute id accepted.
+                  </span>
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_rollNo"
+                    id="rollNumber"
+                    type="text"
+                    placeholder="Leader Roll Number"
+                    onChange={(e) => handle(e)}
+                    value={form.College}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderNumber"
+                    type="text"
+                    name="Leader_whatsapp"
+                    placeholder="Leader Whatsapp Number"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_whatsapp}
+                  />
+                  <span style={{ fontSize: "0.7rem" }}>
+                    * Don't include +91 or 0.
+                  </span>
+                  {form.Leader_whatsapp !== "" && form.Leader_whatsapp.length !== 10 && (
+                    <p style={{ color: "red" }}>Enter a number of 10 digits only.</p>
+                  )}
+                </li>
+                </ul>
+                <h3 className="metaportal_fn_countdown" style={{paddingBottom: "1rem"}}>Member Details</h3>
+                <ul>
+                
+                {/* Member's Field*/}
                 {renderMemberFields()}
                 <li
                   data-aos="fade-down"
@@ -367,7 +412,7 @@ const VigyaanForm = () => {
                 htmlFor="file-input"
               >
                 <span className="metaportal_fn_button_2">
-                  Upload Your Abstract
+                  Upload Idea Submission PPT
                 </span>
                 {uploadedFileName && (
                   <p style={{ color: "white", paddingTop: "1rem" }}>
@@ -396,7 +441,7 @@ const VigyaanForm = () => {
 
     
 
-              </div>*/}
+              </div>
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">

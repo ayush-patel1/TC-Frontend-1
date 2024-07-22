@@ -22,21 +22,23 @@ const VigyaanForm = () => {
   const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
     Team_name: "",
     Leader_name: "",
-    Leader_email: "",
-    Leader_whatsapp: "",
-    College: "",
     Leader_branch: "",
-    Leader_yog: "",
+    Leader_year: "",
+    Leader_email: "",
+    Leader_rollNo: "",
+    Leader_whatsapp: "",
     Member2_name: "",
-    Member2_email: "",
-    Member2_yog: "",
-    Member2_whatsapp: "",
     Member2_branch: "",
+    Member2_year: "",
+    Member2_email: "",
+    Member2_rollNo: "",
+    Member2_whatsapp: "",
     Member3_name: "",
-    Member3_email: "",
-    Member3_yog: "",
-    Member3_whatsapp: "",
     Member3_branch: "",
+    Member3_year: "",
+    Member3_email: "",
+    Member3_rollNo: "",
+    Member3_whatsapp: "",
     Problem_code: "",
   };
 
@@ -110,13 +112,14 @@ const VigyaanForm = () => {
         form.Team_name !== "" &&
         form.Leader_name !== "" &&
         form.Leader_email !== "" &&
+        form.Leader_year !== "" &&
+        form.Leader_rollNo !== "" &&
         form.Leader_whatsapp !== "" &&
-        form.College !== "" &&
-        form.Leader_yog !== "" &&
         form.Leader_branch !== "" &&
         form.Member2_name !== "" &&
         form.Member2_email !== "" &&
-        form.Member2_yog !== "" &&
+        form.Member2_year !== "" &&
+        form.Member2_rollNo !== "" &&
         form.Member2_whatsapp !== "" &&
         form.Member2_branch !== "" &&
         form.Problem_code !== "" &&
@@ -130,7 +133,8 @@ const VigyaanForm = () => {
           form.Member3_name !== "" &&
           form.Member3_whatsapp !== "" &&
           form.Member3_whatsapp.length === 10 &&
-          form.Member3_yog !== "" &&
+          form.Member3_year !== "" &&
+          form.Member3_rollNo !== "" &&
           form.Member3_branch !== "";
       }
       if (condition1 && condition2) {
@@ -190,12 +194,12 @@ const VigyaanForm = () => {
           </li>
           <li>
             <input
-              name={`Member${i + 1}_yog`}
+              name={`Member${i + 1}_year`}
               className="memberName"
               type="text"
               placeholder={`Member ${i}'s Current Year`}
               onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_yog`]}
+              value={form[`Member${i + 1}_year`]}
             />
           </li>
           <li>
@@ -322,12 +326,12 @@ const VigyaanForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="Leader_year"
+                    id="leaderYear"
                     type="text"
                     placeholder="Leader Current Year"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.Leader_year}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -350,7 +354,7 @@ const VigyaanForm = () => {
                     type="text"
                     placeholder="Leader Roll Number"
                     onChange={(e) => handle(e)}
-                    value={form.College}
+                    value={form.Leader_rollNo}
                   />
                 </li>
                 <li data-aos="fade-down">

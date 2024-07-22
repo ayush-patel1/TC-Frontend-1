@@ -264,13 +264,13 @@ const VigyaanForm = () => {
             <div style={{ paddingBottom: "1rem" }}>
             <h3 className="metaportal_fn_countdown" style={{ paddingBottom: "1rem" }}>Are You From NITRR?</h3>
             <ul style={{ listStyleType: "none", padding: 0 }}>
-              <li style={{ marginBottom: "0.5rem" }}>
-                <input type="radio" id="yes" name="nitrr" value="yes" />
+              <li style={{ marginBottom: "0.5rem"}}>
+                <input type="radio" style={{cursor:"pointer"}} id="yes" name="nitrr" value="yes" />
                 <label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>Yes</label>
               </li>
               <span style={{fontSize: "1rem"}}>* If selected Yes, then only institute mail id accepted.</span>
               <li style={{ marginBottom: "0.5rem" }}>
-                <input type="radio" id="no" name="nitrr" value="no" />
+                <input type="radio" style={{cursor:"pointer"}} id="no" name="nitrr" value="no" />
                 <label htmlFor="no" style={{ marginLeft: "0.5rem" }}>No</label>
               </li>
               <span style={{fontSize: "1rem"}}>* If selected No, then write your College Name and any type of Email accepted.</span>

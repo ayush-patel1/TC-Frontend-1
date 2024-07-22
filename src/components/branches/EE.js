@@ -72,7 +72,7 @@ const EE = () => {
           padding: "1rem 0rem",
         }}
       >
-        <a href={pdf} style={{ textDecoration: "none" }}>
+        <a href={pdf} target="_blank" style={{ textDecoration: "none" }}>
           <div className="goodbtn">DOWNLOAD PDF</div>
         </a>
       </div>

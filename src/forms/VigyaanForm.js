@@ -13,11 +13,27 @@ const VigyaanForm = () => {
     AOS.init();
     console.log(cachedForm);
   }, []);
-  const [memberCount, setMemberCount] = useState(0);
 
+  const [memberCount, setMemberCount] = useState(0);
   const [phoneNumberError, setPhoneNumberError] = useState("");
-  const [memberPhoneNumberValidations, setMemberPhoneNumberValidations] =
-    useState([true, true, true]);
+  const [memberPhoneNumberValidations, setMemberPhoneNumberValidations] = useState([true, true, true]);
+  const [isNITRR, setIsNITRR] = useState(null);
+  const [emailError, setEmailError] = useState('');
+
+  const handleRadioChange = (event) => {
+    setIsNITRR(event.target.value === 'yes');
+  };
+
+  const handleEmail = (event) => {
+    const { name, value } = event.target;
+    set({ ...form, [name]: value });
+
+    if (isNITRR && !value.endsWith('nitrr.ac.in')) {
+        setEmailError('Email must be from @nitrr.ac.in domain.');
+    } else {
+        setEmailError('');
+    }
+  };
 
   const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
     Team_name: "",
@@ -50,7 +66,6 @@ const VigyaanForm = () => {
 
 
   const [form, set] = useState(cachedForm);
-
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
 
@@ -102,8 +117,8 @@ const VigyaanForm = () => {
   };
 
   const submit = async () => {
-    alert('Registrations will be open soon.');
-    return;
+    // alert('Registrations will be open soon.');
+    // return;
     setSubmit(true);
     if (memberCount < 1) {
       alert("Minimum Team Size: 2");
@@ -139,6 +154,7 @@ const VigyaanForm = () => {
           form.Member3_rollNo !== "" &&
           form.Member3_branch !== "";
       }
+
       if (condition1 && condition2) {
         try {
           const res = await axios.post(`${backend}/vigyaanReg`, form, {
@@ -204,19 +220,15 @@ const VigyaanForm = () => {
               value={form[`Member${i + 1}_year`]}
             />
           </li>
+
           <li>
-            <input
-              name={`Member${i + 1}_email`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i} Email ID`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_email`]}
-            />
-            <span style={{ fontSize: "0.7rem"}}>
-              * If from NIT Raipur then only institute id accepted.
-            </span>
+            <input name={`Member${i + 1}_email`} className="memberName" type="text" placeholder={`Member ${i} Email ID`} onChange={(e) => handleEmail(e)} value={form[`Member${i + 1}_email`]} />
+			{emailError && (
+				<div style={{ color: "red", marginTop: "0.5rem" }}>{emailError}</div>
+			)}
+            <span style={{ fontSize: "0.7rem"}}>* If from NIT Raipur then only institute id accepted.</span>
           </li>
+
           <li>
             <input
               name={`Member${i + 1}_rollNo`}
@@ -264,19 +276,21 @@ const VigyaanForm = () => {
           
             {/* From NITRR or not */}
             <div style={{ paddingBottom: "1rem" }}>
-            <h3 className="metaportal_fn_countdown" style={{ paddingBottom: "1rem" }}>Are You From NITRR?</h3>
-            <ul style={{ listStyleType: "none", padding: 0 }}>
-              <li style={{ marginBottom: "0.5rem"}}>
-                <input type="radio" style={{cursor:"pointer"}} id="yes" name="nitrr" value="yes" />
-                <label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>Yes</label>
-              </li>
-              <span style={{fontSize: "1rem"}}>* If selected Yes, then only institute mail id accepted.</span>
-              <li style={{ marginBottom: "0.5rem" }}>
-                <input type="radio" style={{cursor:"pointer"}} id="no" name="nitrr" value="no" />
-                <label htmlFor="no" style={{ marginLeft: "0.5rem" }}>No</label>
-              </li>
-              <span style={{fontSize: "1rem"}}>* If selected No, then write your College Name and any type of Email accepted.</span>
-            </ul>
+				<h3 className="metaportal_fn_countdown" style={{ paddingBottom: "1rem" }}>Are You From NITRR?</h3>
+				<ul style={{ listStyleType: "none", padding: 0 }}>
+					<li style={{ marginBottom: "0.5rem" }}>
+						<input type="radio" style={{ cursor: "pointer" }} id="yes" name="nitrr" value="yes" onChange={handleRadioChange} />
+						<label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>Yes</label>
+					</li>
+					
+					<span style={{ fontSize: "1rem" }}>* If selected Yes, then only institute mail id accepted.</span>
+					<li style={{ marginBottom: "0.5rem" }}>
+						<input type="radio" style={{ cursor: "pointer" }} id="no" name="nitrr" value="no" onChange={handleRadioChange} />
+						<label htmlFor="no" style={{ marginLeft: "0.5rem" }}>No</label>
+					</li>
+
+					<span style={{ fontSize: "1rem" }}>* If selected No, then write your College Name and any type of Email accepted.</span>
+				</ul>
             </div>
             {/* Important Details */}
             <div className="mint_list">
@@ -336,19 +350,15 @@ const VigyaanForm = () => {
                     value={form.Leader_year}
                   />
                 </li>
+
                 <li data-aos="fade-down">
-                  <input
-                    id="leaderEmail"
-                    type="text"
-                    name="Leader_email"
-                    placeholder="Leader Email ID"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_email}
-                  />
-                  <span style={{ fontSize: "0.7rem"}}>
-                    * If from NIT Raipur then only institute id accepted.
-                  </span>
+					<input id="leaderEmail" type="text" name="Leader_email" placeholder="Leader Email ID" onChange={(e) => handleEmail(e)} value={form.Leader_email} />
+					{emailError && (
+					<div style={{ color: "red", marginTop: "0.5rem" }}>{emailError}</div>
+					)}
+                  <span style={{ fontSize: "0.7rem"}}> * If from NIT Raipur then only institute id accepted.</span>
                 </li>
+
                 <li data-aos="fade-down">
                   <input
                     name="Leader_rollNo"

@@ -31,9 +31,12 @@ const VigyaanForm = () => {
 
   const handleEmail = (event) => {
     const { name, value } = event.target;
-    set({ ...form, [name]: value });
-
-    if (isNITRR && !value.endsWith("nitrr.ac.in")) {
+    const updatedForm = { ...form, [name]: value };
+    set(updatedForm);
+  
+    localStorage.setItem("vigyaanForm", JSON.stringify(updatedForm));
+  
+    if (name.includes("email") && isNITRR && !value.endsWith("nitrr.ac.in")) {
       setEmailError("Email must be from @nitrr.ac.in domain.");
     } else {
       setEmailError("");

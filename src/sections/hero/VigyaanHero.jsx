@@ -44,7 +44,7 @@ const VigyaanHero = () => {
             <a className="cta2" onClick={scrollToRegistration} >
               {/* <span >CLICK TO REGISTER</span> */}
 {/*               <span >Registration Closed</span> */}
-                <span>Registrations opening soon</span>
+                <span>Registrations open</span>
               <span >
                 <svg
                   width="66px"

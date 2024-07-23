@@ -507,11 +507,6 @@ a.full_link{
 
 
 
-
-
-
-
-
 /*Main Button*/
 .metaportal_fn_protected input[type="submit"],
 .metaportal_fn_button{
@@ -1729,8 +1724,84 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 
 
 
+@media (min-width:1325px) and (max-width:1375px) {
+	.hcap{
+		position: relative;
+		left: -30px;
+		transform: scale(0.9);
+	}
+}
+
+@media (min-width:1080px) and (max-width:1324px) {
+	.hcap{
+		position: relative;
+		transform: scale(0.8);
+		left: -60px;
+	}
+}
+
+@media (min-width:900px) and (max-width:1080px){
+	.hcap{
+		position: relative;
+		transform: scale(0.68);
+		left: -60px;
+	}
+}
 
 
+@media(min-width:705px) and (max-width:900px){
+	.hcap{
+		position: relative;
+		left: -10px;
+	}
+}
+
+@media(min-width:600px) and (max-width: 704px){
+	.hcap{
+		position: relative;
+		left: -50px;
+		transform: scale(0.73); 
+	}
+}
+
+@media(max-width:365px){
+	.hcap{
+		position: relative;
+		left: -24px;
+		transform: scale(0.90); 
+	}
+}
+@media (max-width:320px) {
+	.hcap{
+		position: relative;
+		left: -45px;
+		transform: scale(0.85);
+	}
+}
+
+@media (max-width:297px) {
+	.hcap{
+		position: relative;
+		left: -40px;
+		transform: scale(0.80);
+	}
+}
+
+@media (max-width:285px) {
+	.hcap{
+		position: relative;
+		left: -40px;
+		transform: scale(0.75);
+	}
+}
+
+@media (max-width:270px) {
+	.hcap{
+		position: relative;
+		left: -48px;
+		transform: scale(0.70);
+	}
+}
 
 
 #collection{

@@ -551,12 +551,13 @@ const VigyaanForm = () => {
                 )}
               </label>
             </div>
-            <div style={{paddingTop: "3rem"}}>
+            <div className="hcap" style={{paddingTop: "3rem"}}>
             <HCaptcha
               sitekey={keys.hcaptcha}
               onClick={onLoad}
               onVerify={setToken}
               ref={captchaRef}
+              className="custom-captcha"
             />
             </div>
             <div className="mint_desc" style={{ paddingTop: "3rem" }}>

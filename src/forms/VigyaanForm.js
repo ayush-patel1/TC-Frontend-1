@@ -24,7 +24,9 @@ const VigyaanForm = () => {
   const [emailError, setEmailError] = useState("");
 
   const handleRadioChange = (event) => {
-    setIsNITRR(event.target.value === "yes");
+    setIsNITRR(event.target.value === "Yes");
+    set({ ...form, isNITRR: event.target.value });
+    localStorage.setItem("vigyaanForm", JSON.stringify({ ...form, isNITRR: event.target.value }));
   };
 
   const handleEmail = (event) => {
@@ -39,22 +41,26 @@ const VigyaanForm = () => {
   };
 
   const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
+    isNITRR: "",
     Team_name: "",
     Leader_name: "",
     Leader_branch: "",
     Leader_year: "",
+    Leader_college: "",
     Leader_email: "",
     Leader_rollNo: "",
     Leader_whatsapp: "",
     Member2_name: "",
     Member2_branch: "",
     Member2_year: "",
+    Member2_college: "",
     Member2_email: "",
     Member2_rollNo: "",
     Member2_whatsapp: "",
     Member3_name: "",
     Member3_branch: "",
     Member3_year: "",
+    Member3_college: "",
     Member3_email: "",
     Member3_rollNo: "",
     Member3_whatsapp: "",
@@ -93,7 +99,8 @@ const VigyaanForm = () => {
       form[`Member${memberCount + 1}_whatsapp`] = "";
       form[`Member${memberCount + 1}_email`] = "";
       form[`Member${memberCount + 1}_branch`] = "";
-      form[`Member${memberCount + 1}_yog`] = "";
+      form[`Member${memberCount + 1}_rollNo`] = "";
+      form[`Member${memberCount + 1}_year`] = "";
 
       setMemberCount(memberCount - 1);
       localStorage.setItem("memberCount", memberCount - 1);
@@ -142,6 +149,7 @@ const VigyaanForm = () => {
       alert("Please fill all phone numbers with 10 digits.");
     } else {
       let condition1 =
+        form.isNITRR !== "" &&
         form.Team_name !== "" &&
         form.Leader_name !== "" &&
         form.Leader_email !== "" &&
@@ -159,6 +167,9 @@ const VigyaanForm = () => {
         form.file &&
         form.Member2_whatsapp.length === 10;
 
+        let isNITRRConditions = form.isNITRR === "No" ? 
+        (form.Leader_college !== "" && form.Member2_college !== "") : true;
+
       let condition2 = true;
       if (memberCount === 2) {
         condition2 =
@@ -168,10 +179,11 @@ const VigyaanForm = () => {
           form.Member3_whatsapp.length === 10 &&
           form.Member3_year !== "" &&
           form.Member3_rollNo !== "" &&
-          form.Member3_branch !== "";
+          form.Member3_branch !== "" &&
+          (form.isNITRR === "No" ? form.Member3_college !== "" : true);
       }
 
-      if (condition1 && condition2) {
+      if (condition1 && condition2 && isNITRRConditions) {
         try {
           const res = await axios.post(`${backend}/vigyaanReg`, form, {
             headers: {
@@ -238,7 +250,16 @@ const VigyaanForm = () => {
               value={form[`Member${i + 1}_year`]}
             />
           </li>
-
+          {!isNITRR && <li data-aos="fade-down">
+            <input
+              name={`Member${i + 1}_college`}
+              className="memberName"
+              type="text"
+              placeholder={`Member ${i}'s College`}
+              onChange={(e) => handle(e)}
+              value={form[`Member${i + 1}_college`]}
+            />
+          </li>}
           <li>
             <input
               name={`Member${i + 1}_email`}
@@ -319,14 +340,12 @@ const VigyaanForm = () => {
               </h3>
               <ul style={{ listStyleType: "none", padding: 0 }}>
                 <li style={{ marginBottom: "0.5rem" }}>
-                  <input
-                    type="radio"
-                    style={{ cursor: "pointer" }}
-                    id="yes"
-                    name="nitrr"
-                    value="yes"
-                    onChange={handleRadioChange}
-                  />
+                <input
+                  type="radio"
+                  name="isNITRR"
+                  value="Yes"
+                  onChange={handleRadioChange}
+                />
                   <label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>
                     Yes
                   </label>
@@ -336,14 +355,12 @@ const VigyaanForm = () => {
                   * If selected Yes, then only institute mail id accepted.
                 </span>
                 <li style={{ marginBottom: "0.5rem" }}>
-                  <input
-                    type="radio"
-                    style={{ cursor: "pointer" }}
-                    id="no"
-                    name="nitrr"
-                    value="no"
-                    onChange={handleRadioChange}
-                  />
+                <input
+                  type="radio"
+                  name="isNITRR"
+                  value="No"
+                  onChange={handleRadioChange}
+                  />          
                   <label htmlFor="no" style={{ marginLeft: "0.5rem" }}>
                     No
                   </label>
@@ -418,6 +435,16 @@ const VigyaanForm = () => {
                     value={form.Leader_year}
                   />
                 </li>
+                {!isNITRR && <li data-aos="fade-down">
+                  <input
+                    name="Leader_college"
+                    id="leaderCollege"
+                    type="text"
+                    placeholder="Leader College"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_college}
+                  />
+                </li>}
 
                 <li data-aos="fade-down">
                   <input
@@ -524,13 +551,15 @@ const VigyaanForm = () => {
                 )}
               </label>
             </div>
+            <div style={{paddingTop: "3rem"}}>
             <HCaptcha
               sitekey={keys.hcaptcha}
               onClick={onLoad}
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div className="mint_desc" style={{ paddingTop: "4rem" }}>
+            </div>
+            <div className="mint_desc" style={{ paddingTop: "3rem" }}>
               {!isSubmitting ? (
                 <div
                   target="_blank"

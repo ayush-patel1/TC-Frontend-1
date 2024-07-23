@@ -205,6 +205,12 @@ const VigyaanForm = () => {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
+      const maxSize = 2 * 1024 * 1024;
+      if (file.size > maxSize) {
+        alert("File size exceeds the 2MB limit. Please choose a smaller file.");
+        return;
+      }
+
       const newData = { ...form };
       newData["file"] = file;
       set(newData);

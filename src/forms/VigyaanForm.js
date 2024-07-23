@@ -1,8 +1,10 @@
 import axios from "axios";
-import { React, useEffect, useState } from "react";
+import { React, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import urls from "../keys.json";
 import AOS from "aos";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import keys from "../keys.json";
 import "aos/dist/aos.css";
 import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate.pdf";
 
@@ -16,22 +18,23 @@ const VigyaanForm = () => {
 
   const [memberCount, setMemberCount] = useState(0);
   const [phoneNumberError, setPhoneNumberError] = useState("");
-  const [memberPhoneNumberValidations, setMemberPhoneNumberValidations] = useState([true, true, true]);
+  const [memberPhoneNumberValidations, setMemberPhoneNumberValidations] =
+    useState([true, true, true]);
   const [isNITRR, setIsNITRR] = useState(null);
-  const [emailError, setEmailError] = useState('');
+  const [emailError, setEmailError] = useState("");
 
   const handleRadioChange = (event) => {
-    setIsNITRR(event.target.value === 'yes');
+    setIsNITRR(event.target.value === "yes");
   };
 
   const handleEmail = (event) => {
     const { name, value } = event.target;
     set({ ...form, [name]: value });
 
-    if (isNITRR && !value.endsWith('nitrr.ac.in')) {
-        setEmailError('Email must be from @nitrr.ac.in domain.');
+    if (isNITRR && !value.endsWith("nitrr.ac.in")) {
+      setEmailError("Email must be from @nitrr.ac.in domain.");
     } else {
-        setEmailError('');
+      setEmailError("");
     }
   };
 
@@ -63,11 +66,19 @@ const VigyaanForm = () => {
     setMemberCount(tmp);
   });
 
-
-
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
+  const [token, setToken] = useState(null);
+  const captchaRef = useRef(null);
+
+  const onLoad = () => {
+    // this reaches out to the hCaptcha JS API and runs the
+    // execute function on it. you can use other functions as
+    // documented here:
+    // https://docs.hcaptcha.com/configuration#jsapi
+    captchaRef.current.execute();
+  };
 
   const handleAddMember = () => {
     if (memberCount < 2) {
@@ -119,6 +130,11 @@ const VigyaanForm = () => {
   const submit = async () => {
     // alert('Registrations will be open soon.');
     // return;
+    if (!token) {
+      alert("Human verification is mandatory");
+      return;
+    }
+
     setSubmit(true);
     if (memberCount < 1) {
       alert("Minimum Team Size: 2");
@@ -141,7 +157,7 @@ const VigyaanForm = () => {
         form.Member2_branch !== "" &&
         form.Problem_code !== "" &&
         form.file &&
-        form.Member2_whatsapp.length === 10
+        form.Member2_whatsapp.length === 10;
 
       let condition2 = true;
       if (memberCount === 2) {
@@ -184,7 +200,9 @@ const VigyaanForm = () => {
     }
   };
 
-  {/* Member Details */}
+  {
+    /* Member Details */
+  }
   const renderMemberFields = () => {
     const members = [];
     for (let i = 1; i <= memberCount; i++) {
@@ -222,11 +240,22 @@ const VigyaanForm = () => {
           </li>
 
           <li>
-            <input name={`Member${i + 1}_email`} className="memberName" type="text" placeholder={`Member ${i} Email ID`} onChange={(e) => handleEmail(e)} value={form[`Member${i + 1}_email`]} />
-			{emailError && (
-				<div style={{ color: "red", marginTop: "0.5rem" }}>{emailError}</div>
-			)}
-            <span style={{ fontSize: "0.7rem"}}>* If from NIT Raipur then only institute id accepted.</span>
+            <input
+              name={`Member${i + 1}_email`}
+              className="memberName"
+              type="text"
+              placeholder={`Member ${i} Email ID`}
+              onChange={(e) => handleEmail(e)}
+              value={form[`Member${i + 1}_email`]}
+            />
+            {emailError && (
+              <div style={{ color: "red", marginTop: "0.5rem" }}>
+                {emailError}
+              </div>
+            )}
+            <span style={{ fontSize: "0.7rem" }}>
+              * If from NIT Raipur then only institute id accepted.
+            </span>
           </li>
 
           <li>
@@ -251,9 +280,12 @@ const VigyaanForm = () => {
             <span style={{ fontSize: "0.7rem" }}>
               * Don't include +91 or 0.
             </span>
-            {form[`Member${i + 1}_whatsapp`] !== "" && form[`Member${i + 1}_whatsapp`].length !== 10 && (
-              <p style={{ color: "red" }}>Enter a number of 10 digits only.</p>
-            )}
+            {form[`Member${i + 1}_whatsapp`] !== "" &&
+              form[`Member${i + 1}_whatsapp`].length !== 10 && (
+                <p style={{ color: "red" }}>
+                  Enter a number of 10 digits only.
+                </p>
+              )}
           </li>
         </div>
       );
@@ -265,37 +297,68 @@ const VigyaanForm = () => {
     <div
       className="metaportal_fn_mintpage"
       id="registration"
-      style={{  zIndex: "0"}}
+      style={{ zIndex: "0" }}
     >
-      <div className="container small centered-container" style={{ paddingTop: "3rem"}}>
-         <div className="metaportal_fn_mintbox" style={{maxWidth: "100%"}}>
+      <div
+        className="container small centered-container"
+        style={{ paddingTop: "3rem" }}
+      >
+        <div className="metaportal_fn_mintbox" style={{ maxWidth: "100%" }}>
           <div className="mint_left">
             <div className="mint_title">
               <span>REGISTER NOW</span>
             </div>
-          
+
             {/* From NITRR or not */}
             <div style={{ paddingBottom: "1rem" }}>
-				<h3 className="metaportal_fn_countdown" style={{ paddingBottom: "1rem" }}>Are You From NITRR?</h3>
-				<ul style={{ listStyleType: "none", padding: 0 }}>
-					<li style={{ marginBottom: "0.5rem" }}>
-						<input type="radio" style={{ cursor: "pointer" }} id="yes" name="nitrr" value="yes" onChange={handleRadioChange} />
-						<label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>Yes</label>
-					</li>
-					
-					<span style={{ fontSize: "1rem" }}>* If selected Yes, then only institute mail id accepted.</span>
-					<li style={{ marginBottom: "0.5rem" }}>
-						<input type="radio" style={{ cursor: "pointer" }} id="no" name="nitrr" value="no" onChange={handleRadioChange} />
-						<label htmlFor="no" style={{ marginLeft: "0.5rem" }}>No</label>
-					</li>
+              <h3
+                className="metaportal_fn_countdown"
+                style={{ paddingBottom: "1rem" }}
+              >
+                Are You From NITRR?
+              </h3>
+              <ul style={{ listStyleType: "none", padding: 0 }}>
+                <li style={{ marginBottom: "0.5rem" }}>
+                  <input
+                    type="radio"
+                    style={{ cursor: "pointer" }}
+                    id="yes"
+                    name="nitrr"
+                    value="yes"
+                    onChange={handleRadioChange}
+                  />
+                  <label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>
+                    Yes
+                  </label>
+                </li>
 
-					<span style={{ fontSize: "1rem" }}>* If selected No, then write your College Name and any type of Email accepted.</span>
-				</ul>
+                <span style={{ fontSize: "1rem" }}>
+                  * If selected Yes, then only institute mail id accepted.
+                </span>
+                <li style={{ marginBottom: "0.5rem" }}>
+                  <input
+                    type="radio"
+                    style={{ cursor: "pointer" }}
+                    id="no"
+                    name="nitrr"
+                    value="no"
+                    onChange={handleRadioChange}
+                  />
+                  <label htmlFor="no" style={{ marginLeft: "0.5rem" }}>
+                    No
+                  </label>
+                </li>
+
+                <span style={{ fontSize: "1rem" }}>
+                  * If selected No, then write your College Name and any type of
+                  Email accepted.
+                </span>
+              </ul>
             </div>
             {/* Important Details */}
             <div className="mint_list">
               <ul>
-              <li data-aos="fade-down">
+                <li data-aos="fade-down">
                   <input
                     name="Team_name"
                     id="teamName"
@@ -318,7 +381,12 @@ const VigyaanForm = () => {
               </ul>
 
               {/* Team Leader Details */}
-              <h3 className="metaportal_fn_countdown" style={{paddingBottom: "1rem"}}>Team Leader Details</h3>
+              <h3
+                className="metaportal_fn_countdown"
+                style={{ paddingBottom: "1rem" }}
+              >
+                Team Leader Details
+              </h3>
               <ul>
                 <li data-aos="fade-down">
                   <input
@@ -352,11 +420,23 @@ const VigyaanForm = () => {
                 </li>
 
                 <li data-aos="fade-down">
-					<input id="leaderEmail" type="text" name="Leader_email" placeholder="Leader Email ID" onChange={(e) => handleEmail(e)} value={form.Leader_email} />
-					{emailError && (
-					<div style={{ color: "red", marginTop: "0.5rem" }}>{emailError}</div>
-					)}
-                  <span style={{ fontSize: "0.7rem"}}> * If from NIT Raipur then only institute id accepted.</span>
+                  <input
+                    id="leaderEmail"
+                    type="text"
+                    name="Leader_email"
+                    placeholder="Leader Email ID"
+                    onChange={(e) => handleEmail(e)}
+                    value={form.Leader_email}
+                  />
+                  {emailError && (
+                    <div style={{ color: "red", marginTop: "0.5rem" }}>
+                      {emailError}
+                    </div>
+                  )}
+                  <span style={{ fontSize: "0.7rem" }}>
+                    {" "}
+                    * If from NIT Raipur then only institute id accepted.
+                  </span>
                 </li>
 
                 <li data-aos="fade-down">
@@ -381,14 +461,21 @@ const VigyaanForm = () => {
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" && form.Leader_whatsapp.length !== 10 && (
-                    <p style={{ color: "red" }}>Enter a number of 10 digits only.</p>
-                  )}
+                  {form.Leader_whatsapp !== "" &&
+                    form.Leader_whatsapp.length !== 10 && (
+                      <p style={{ color: "red" }}>
+                        Enter a number of 10 digits only.
+                      </p>
+                    )}
                 </li>
-                </ul>
-                <h3 className="metaportal_fn_countdown" style={{paddingBottom: "1rem"}}>Member Details</h3>
-                <ul>
-                
+              </ul>
+              <h3
+                className="metaportal_fn_countdown"
+                style={{ paddingBottom: "1rem" }}
+              >
+                Member Details
+              </h3>
+              <ul>
                 {/* Member's Field*/}
                 {renderMemberFields()}
                 <li
@@ -437,6 +524,12 @@ const VigyaanForm = () => {
                 )}
               </label>
             </div>
+            <HCaptcha
+              sitekey={keys.hcaptcha}
+              onClick={onLoad}
+              onVerify={setToken}
+              ref={captchaRef}
+            />
             <div className="mint_desc" style={{ paddingTop: "4rem" }}>
               {!isSubmitting ? (
                 <div
@@ -454,10 +547,7 @@ const VigyaanForm = () => {
               )}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
-
-    
-
-              </div>
+          </div>
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
@@ -469,12 +559,12 @@ const VigyaanForm = () => {
               <div data-aos="fade-down" className="mint_info">
                 <p>1. A team can have 2 to 3 members(including team leader).</p>
                 <p>
-                2. Each team must designate a team leader and select a team name.
-(up to 20 characters, for e.g., Tech_Titans)
+                  2. Each team must designate a team leader and select a team
+                  name. (up to 20 characters, for e.g., Tech_Titans)
                 </p>
                 <p>
-                3. A Team ID will be assigned to the team upon registration, which will be used for future reference.
-(for e.g., ECE_A1)
+                  3. A Team ID will be assigned to the team upon registration,
+                  which will be used for future reference. (for e.g., ECE_A1)
                 </p>
               </div>
               <div
@@ -486,15 +576,30 @@ const VigyaanForm = () => {
                 <h3 className="metaportal_fn_countdown">Guidelines</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-              <p>1. This competition is open for all.</p>
-<p>2. A team is free to select any one Problem Statement regardless of their engineering department.</p>
-<p>3. Teams can include members from various academic disciplines or academic years, provided all participants are from the same institution.</p>
-<p>4. Each participant can be a part of only one team.</p>
-<p>5. Multiple entries are not permitted.</p>
-<p>6. On-campus accommodation is available during the two-day Vigyaan exhibition for team members from institutes outside Chhattisgarh. Additional stay must be arranged and paid for by the teams. Accommodation is not provided for accompanying individuals, such as teachers or guardians.</p>
-<p>7. Plagiarism in any form will lead to immediate disqualification.</p>
-<p>8. Each round will be an eliminatory round.</p>
-
+                <p>1. This competition is open for all.</p>
+                <p>
+                  2. A team is free to select any one Problem Statement
+                  regardless of their engineering department.
+                </p>
+                <p>
+                  3. Teams can include members from various academic disciplines
+                  or academic years, provided all participants are from the same
+                  institution.
+                </p>
+                <p>4. Each participant can be a part of only one team.</p>
+                <p>5. Multiple entries are not permitted.</p>
+                <p>
+                  6. On-campus accommodation is available during the two-day
+                  Vigyaan exhibition for team members from institutes outside
+                  Chhattisgarh. Additional stay must be arranged and paid for by
+                  the teams. Accommodation is not provided for accompanying
+                  individuals, such as teachers or guardians.
+                </p>
+                <p>
+                  7. Plagiarism in any form will lead to immediate
+                  disqualification.
+                </p>
+                <p>8. Each round will be an eliminatory round.</p>
               </div>
               <div
                 data-aos="fade-down"
@@ -506,57 +611,91 @@ const VigyaanForm = () => {
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  <div style={{ color: "white" }}>Round 1: Idea Submission Round</div> 
-                  <p>1. Create a concise and effective presentation for the idea submission round.</p>
-<p>2. Teams must strictly adhere to the provided template without making any modifications. Refer to the template for additional details.</p>
-<p>3. File type: .ppt, .pptx or PDF</p>
-<p>4. Document Name: TeamName_ProblemNum (e.g., TeamName_ECE01)</p>
-
+                  <div style={{ color: "white" }}>
+                    Round 1: Idea Submission Round
+                  </div>
+                  <p>
+                    1. Create a concise and effective presentation for the idea
+                    submission round.
+                  </p>
+                  <p>
+                    2. Teams must strictly adhere to the provided template
+                    without making any modifications. Refer to the template for
+                    additional details.
+                  </p>
+                  <p>3. File type: .ppt, .pptx or PDF</p>
+                  <p>
+                    4. Document Name: TeamName_ProblemNum (e.g., TeamName_ECE01)
+                  </p>
                 </p>
                 <p>
-                  <div style={{ color: "white" }}>Round 2: Presentation Round</div>
-                  <p>1. Selected teams are required to present their project in front of concerned faculty in-charge.</p>
-<p>2. This round is mandatorily offline for NIT Raipur students. Non-NIT Raipur students have the option
-to participate either online or offline.</p>
-<p>3. You will have 10-15 minutes to present, followed by a Q&A session with the judges.</p>
-<p>4. File type: .ppt, .pptx or PDF</p>
-<p>5. Document Name: TeamName_ProblemNum (e.g., TeamName_ECE01).</p>
+                  <div style={{ color: "white" }}>
+                    Round 2: Presentation Round
+                  </div>
+                  <p>
+                    1. Selected teams are required to present their project in
+                    front of concerned faculty in-charge.
+                  </p>
+                  <p>
+                    2. This round is mandatorily offline for NIT Raipur
+                    students. Non-NIT Raipur students have the option to
+                    participate either online or offline.
+                  </p>
+                  <p>
+                    3. You will have 10-15 minutes to present, followed by a Q&A
+                    session with the judges.
+                  </p>
+                  <p>4. File type: .ppt, .pptx or PDF</p>
+                  <p>
+                    5. Document Name: TeamName_ProblemNum (e.g.,
+                    TeamName_ECE01).
+                  </p>
                 </p>
                 <p>
                   <div style={{ color: "white" }}>Round 3: Prototype Round</div>
-                  <p>1. Shortlisted teams will need to develop a functional prototype based on their proposed approach,
-ensuring that the prototype demonstrates core features and functionalities effectively.</p>
-                  <p>2. Qualified teams will present their project in VIGYAAN Exhibition.</p>
+                  <p>
+                    1. Shortlisted teams will need to develop a functional
+                    prototype based on their proposed approach, ensuring that
+                    the prototype demonstrates core features and functionalities
+                    effectively.
+                  </p>
+                  <p>
+                    2. Qualified teams will present their project in VIGYAAN
+                    Exhibition.
+                  </p>
                 </p>
               </div>
               <a style={{ textDecoration: "none" }} href={VigyaanTemplate}>
-                <span className="metaportal_fn_button_4">Idea Submission Template</span>
+                <span className="metaportal_fn_button_4">
+                  Idea Submission Template
+                </span>
               </a>
             </div>
             <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <h4>VIGYAAN</h4>
-                <h3 className="metaportal_fn_countdown">Certificates & Rewards</h3>
-              </div>
-              <div data-aos="fade-down" className="mint_info">
-                <p>
-                ▪ Top teams from each branch will receive goodies.
-
-                </p>
-                <p>
-                ▪ A digital Certificate of Participation will be awarded to teams that qualified the presentation round but narrowly missed clearing the prototype round subject to the approval of concerned faculty incharges.
-                </p>
-                <p>
-                ▪ A digital Certificate of Appreciation will be awarded to those teams who presented their project in
-the VIGYAAN exhibition.
-                </p>
-              </div>
+              data-aos="fade-down"
+              style={{ paddingTop: "2rem" }}
+              className="mint_time"
+            >
+              <h4>VIGYAAN</h4>
+              <h3 className="metaportal_fn_countdown">
+                Certificates & Rewards
+              </h3>
+            </div>
+            <div data-aos="fade-down" className="mint_info">
+              <p>▪ Top teams from each branch will receive goodies.</p>
+              <p>
+                ▪ A digital Certificate of Participation will be awarded to
+                teams that qualified the presentation round but narrowly missed
+                clearing the prototype round subject to the approval of
+                concerned faculty incharges.
+              </p>
+              <p>
+                ▪ A digital Certificate of Appreciation will be awarded to those
+                teams who presented their project in the VIGYAAN exhibition.
+              </p>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   );

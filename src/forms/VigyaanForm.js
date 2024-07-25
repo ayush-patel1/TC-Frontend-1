@@ -722,7 +722,29 @@ const VigyaanForm = () => {
                 teams who presented their project in the VIGYAAN exhibition.
               </p>
             </div>
+
           </div>
+        </div>
+
+        <div className="metaportal_fn_nft_cats">
+          <ul data-aos="fade-down">
+            <li>
+              <div className="item">
+                <h4 className="parent_category">9th & 10th September</h4>
+                <h3 className="child_category" title="Black Yukata">
+                Presentation Round (Expected)
+                </h3>
+              </div>
+            </li>
+            <li>
+              <div className="item">
+                <h4 className="parent_category">15th & 16th October</h4>
+                <h3 className="child_category" title="Daydreaming">
+                Prototype Round (Expected)
+                </h3>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

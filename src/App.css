@@ -3608,10 +3608,11 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	-o-flex-direction: row;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: space-around;
 	margin-left: -40px;
 }
 .metaportal_fn_nft_cats li{
-	width: 33%;
+	width: 40%;
 	padding-left: 40px;
 	margin-bottom: 45px;
 }

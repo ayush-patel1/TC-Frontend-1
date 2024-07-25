@@ -7,6 +7,7 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 import keys from "../keys.json";
 import "aos/dist/aos.css";
 import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate.pdf";
+import FullPageLoader from "../layout/FullPageLoader"
 
 const backend = urls.backend;
 
@@ -194,12 +195,15 @@ const VigyaanForm = () => {
             },
           });
           alert(res.data.message);
+         
         } catch (err) {
           console.error(err);
           alert(err.response.data.message);
+          
         }
       } else {
         alert("Please fill all the necessary details correctly");
+        
       }
     }
     setSubmit(false);
@@ -582,7 +586,7 @@ const VigyaanForm = () => {
                   <span>Submit</span>
                 </div>
               ) : (
-                <>Submitting...</>
+                <FullPageLoader />
               )}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>

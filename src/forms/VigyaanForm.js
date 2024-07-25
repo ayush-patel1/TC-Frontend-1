@@ -47,24 +47,22 @@ const VigyaanForm = () => {
   const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
     isNITRR: "",
     Team_name: "",
+    College_name: "",
     Leader_name: "",
     Leader_branch: "",
     Leader_year: "",
-    Leader_college: "",
     Leader_email: "",
     Leader_rollNo: "",
     Leader_whatsapp: "",
     Member2_name: "",
     Member2_branch: "",
     Member2_year: "",
-    Member2_college: "",
     Member2_email: "",
     Member2_rollNo: "",
     Member2_whatsapp: "",
     Member3_name: "",
     Member3_branch: "",
     Member3_year: "",
-    Member3_college: "",
     Member3_email: "",
     Member3_rollNo: "",
     Member3_whatsapp: "",
@@ -171,8 +169,7 @@ const VigyaanForm = () => {
         form.file &&
         form.Member2_whatsapp.length === 10;
 
-        let isNITRRConditions = form.isNITRR === "No" ? 
-        (form.Leader_college !== "" && form.Member2_college !== "") : true;
+        let isNITRRConditions = form.isNITRR === "No" ? form.College_name !== "" : true;
 
       let condition2 = true;
       if (memberCount === 2) {
@@ -183,8 +180,7 @@ const VigyaanForm = () => {
           form.Member3_whatsapp.length === 10 &&
           form.Member3_year !== "" &&
           form.Member3_rollNo !== "" &&
-          form.Member3_branch !== "" &&
-          (form.isNITRR === "No" ? form.Member3_college !== "" : true);
+          form.Member3_branch !== "" ;
       }
 
       if (condition1 && condition2 && isNITRRConditions) {
@@ -263,16 +259,6 @@ const VigyaanForm = () => {
               value={form[`Member${i + 1}_year`]}
             />
           </li>
-          {!isNITRR && <li data-aos="fade-down">
-            <input
-              name={`Member${i + 1}_college`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i}'s College`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_college`]}
-            />
-          </li>}
           <li>
             <input
               name={`Member${i + 1}_email`}
@@ -408,6 +394,16 @@ const VigyaanForm = () => {
                     value={form.Problem_code}
                   />
                 </li>
+                {!isNITRR && <li data-aos="fade-down">
+                  <input
+                    name="College_name"
+                    id="collegeName"
+                    type="text"
+                    placeholder="College Name"
+                    onChange={(e) => handle(e)}
+                    value={form.College_name}
+                  />
+                </li>}
               </ul>
 
               {/* Team Leader Details */}
@@ -448,17 +444,6 @@ const VigyaanForm = () => {
                     value={form.Leader_year}
                   />
                 </li>
-                {!isNITRR && <li data-aos="fade-down">
-                  <input
-                    name="Leader_college"
-                    id="leaderCollege"
-                    type="text"
-                    placeholder="Leader College"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_college}
-                  />
-                </li>}
-
                 <li data-aos="fade-down">
                   <input
                     id="leaderEmail"

@@ -8,6 +8,7 @@ import keys from "../keys.json";
 import "aos/dist/aos.css";
 import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate.pdf";
 import VigyaanLoader from "../layout/VigyaanLoader"
+import { Link } from "react-router-dom";
 
 const backend = urls.backend;
 
@@ -332,6 +333,12 @@ const VigyaanForm = () => {
 
             {/* From NITRR or not */}
             <div style={{ paddingBottom: "1rem" }}>
+                {isNITRR && (
+                  <div style={{paddingBottom: "1rem"}}><h3
+                  className="metaportal_fn_countdown"
+                  style={{ paddingBottom: "1rem" }}
+                >To generate NITRR college email ID, go to:</h3><Link to="https://ldap.nitrr.ac.in/" style={{color: "lightblue"}}>https://ldap.nitrr.ac.in/</Link></div>
+                )}
               <h3
                 className="metaportal_fn_countdown"
                 style={{ paddingBottom: "1rem" }}

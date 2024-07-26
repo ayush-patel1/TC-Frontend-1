@@ -7,7 +7,7 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 import keys from "../keys.json";
 import "aos/dist/aos.css";
 import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate.pdf";
-import FullPageLoader from "../layout/FullPageLoader";
+import VigyaanLoader from "../layout/VigyaanLoader"
 
 const backend = urls.backend;
 
@@ -574,8 +574,7 @@ const VigyaanForm = () => {
                   <span>Submit</span>
                 </div>
               ) : (
-                // <FullPageLoader />
-                <>Submitting...</>
+                <VigyaanLoader/>
               )}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>

@@ -12,3 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.toastBody{
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}

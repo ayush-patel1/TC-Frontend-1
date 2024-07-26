@@ -591,8 +591,7 @@ const VigyaanForm = () => {
                   <span>Submit</span>
                 </div>
               ) : (
-                // <VigyaanLoader/>
-                <>Submitting...</>
+                <VigyaanLoader/>
               )}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>

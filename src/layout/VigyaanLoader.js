@@ -1,29 +1,34 @@
-import React, { useEffect } from 'react';
-import styles from './VigyaanLoader.module.css';
+import React from 'react';
+import styles from "./VigyaanLoader.module.css"
 
 const VigyaanLoader = () => {
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, []);
-
   return (
-    <div className={styles.loaderOverlay}>
-      <div className={styles.cont}>
-        <div className={styles.paper}></div>
-        <button>
-          <div className={styles.loader}>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          Submitting...
-        </button>
+    <div className={styles.loader_overlay}>
+      <div className={styles.boxes}>
+        <div className={styles.box}>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className={styles.box}>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className={styles.box}>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className={styles.box}>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </div>
   );

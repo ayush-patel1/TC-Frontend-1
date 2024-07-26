@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate.pdf";
 import VigyaanLoader from "../layout/VigyaanLoader";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const backend = urls.backend;
 
@@ -195,10 +196,10 @@ const VigyaanForm = () => {
               "Content-Type": "multipart/form-data",
             },
           });
-          alert(res.data.message);
+          toast.success(res.data.message);
         } catch (err) {
           console.error(err);
-          alert(err.response.data.message);
+          toast.error(err.response.data.message);
         }
       } else {
         alert("Please fill all the necessary details correctly");

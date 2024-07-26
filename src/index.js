@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'; // Import the Provider component
 import store from './redux/store'; // Import your Redux store
 import './index.css';
 import App from './App';
+import { Toaster } from 'react-hot-toast';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +12,11 @@ root.render(
     {/* Wrap your App component with the Provider */}
     <Provider store={store}>
       <App />
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+  containerClassName='toastBody'
+/>
     </Provider>
   </React.StrictMode>
 );

@@ -7,8 +7,7 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 import keys from "../keys.json";
 import "aos/dist/aos.css";
 import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanTemplate.pdf";
-import FullPageLoader from "../layout/FullPageLoader"
-import VigyaanLoader from "../layout/VigyaanLoader";
+import VigyaanLoader from "../layout/VigyaanLoader"
 
 const backend = urls.backend;
 
@@ -28,16 +27,19 @@ const VigyaanForm = () => {
   const handleRadioChange = (event) => {
     setIsNITRR(event.target.value === "Yes");
     set({ ...form, isNITRR: event.target.value });
-    localStorage.setItem("vigyaanForm", JSON.stringify({ ...form, isNITRR: event.target.value }));
+    localStorage.setItem(
+      "vigyaanForm",
+      JSON.stringify({ ...form, isNITRR: event.target.value })
+    );
   };
 
   const handleEmail = (event) => {
     const { name, value } = event.target;
     const updatedForm = { ...form, [name]: value };
     set(updatedForm);
-  
+
     localStorage.setItem("vigyaanForm", JSON.stringify(updatedForm));
-  
+
     if (name.includes("email") && isNITRR && !value.endsWith("nitrr.ac.in")) {
       setEmailError("Email must be from @nitrr.ac.in domain.");
     } else {
@@ -48,24 +50,22 @@ const VigyaanForm = () => {
   const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
     isNITRR: "",
     Team_name: "",
+    College_name: "",
     Leader_name: "",
     Leader_branch: "",
     Leader_year: "",
-    Leader_college: "",
     Leader_email: "",
     Leader_rollNo: "",
     Leader_whatsapp: "",
     Member2_name: "",
     Member2_branch: "",
     Member2_year: "",
-    Member2_college: "",
     Member2_email: "",
     Member2_rollNo: "",
     Member2_whatsapp: "",
     Member3_name: "",
     Member3_branch: "",
     Member3_year: "",
-    Member3_college: "",
     Member3_email: "",
     Member3_rollNo: "",
     Member3_whatsapp: "",
@@ -172,8 +172,8 @@ const VigyaanForm = () => {
         form.file &&
         form.Member2_whatsapp.length === 10;
 
-        let isNITRRConditions = form.isNITRR === "No" ? 
-        (form.Leader_college !== "" && form.Member2_college !== "") : true;
+      let isNITRRConditions =
+        form.isNITRR === "No" ? form.College_name !== "" : true;
 
       let condition2 = true;
       if (memberCount === 2) {
@@ -184,8 +184,7 @@ const VigyaanForm = () => {
           form.Member3_whatsapp.length === 10 &&
           form.Member3_year !== "" &&
           form.Member3_rollNo !== "" &&
-          form.Member3_branch !== "" &&
-          (form.isNITRR === "No" ? form.Member3_college !== "" : true);
+          form.Member3_branch !== "";
       }
 
       if (condition1 && condition2 && isNITRRConditions) {
@@ -261,16 +260,6 @@ const VigyaanForm = () => {
               value={form[`Member${i + 1}_year`]}
             />
           </li>
-          {!isNITRR && <li data-aos="fade-down">
-            <input
-              name={`Member${i + 1}_college`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i}'s College`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_college`]}
-            />
-          </li>}
           <li>
             <input
               name={`Member${i + 1}_email`}
@@ -351,12 +340,12 @@ const VigyaanForm = () => {
               </h3>
               <ul style={{ listStyleType: "none", padding: 0 }}>
                 <li style={{ marginBottom: "0.5rem" }}>
-                <input
-                  type="radio"
-                  name="isNITRR"
-                  value="Yes"
-                  onChange={handleRadioChange}
-                />
+                  <input
+                    type="radio"
+                    name="isNITRR"
+                    value="Yes"
+                    onChange={handleRadioChange}
+                  />
                   <label htmlFor="yes" style={{ marginLeft: "0.5rem" }}>
                     Yes
                   </label>
@@ -366,12 +355,12 @@ const VigyaanForm = () => {
                   * If selected Yes, then only institute mail id accepted.
                 </span>
                 <li style={{ marginBottom: "0.5rem" }}>
-                <input
-                  type="radio"
-                  name="isNITRR"
-                  value="No"
-                  onChange={handleRadioChange}
-                  />          
+                  <input
+                    type="radio"
+                    name="isNITRR"
+                    value="No"
+                    onChange={handleRadioChange}
+                  />
                   <label htmlFor="no" style={{ marginLeft: "0.5rem" }}>
                     No
                   </label>
@@ -406,6 +395,18 @@ const VigyaanForm = () => {
                     value={form.Problem_code}
                   />
                 </li>
+                {!isNITRR && (
+                  <li data-aos="fade-down">
+                    <input
+                      name="College_name"
+                      id="collegeName"
+                      type="text"
+                      placeholder="College Name"
+                      onChange={(e) => handle(e)}
+                      value={form.College_name}
+                    />
+                  </li>
+                )}
               </ul>
 
               {/* Team Leader Details */}
@@ -446,17 +447,6 @@ const VigyaanForm = () => {
                     value={form.Leader_year}
                   />
                 </li>
-                {!isNITRR && <li data-aos="fade-down">
-                  <input
-                    name="Leader_college"
-                    id="leaderCollege"
-                    type="text"
-                    placeholder="Leader College"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_college}
-                  />
-                </li>}
-
                 <li data-aos="fade-down">
                   <input
                     id="leaderEmail"
@@ -562,14 +552,14 @@ const VigyaanForm = () => {
                 )}
               </label>
             </div>
-            <div className="hcap" style={{paddingTop: "3rem"}}>
-            <HCaptcha
-              sitekey={keys.hcaptcha}
-              onClick={onLoad}
-              onVerify={setToken}
-              ref={captchaRef}
-              className="custom-captcha"
-            />
+            <div className="hcap" style={{ paddingTop: "3rem" }}>
+              <HCaptcha
+                sitekey={keys.hcaptcha}
+                onClick={onLoad}
+                onVerify={setToken}
+                ref={captchaRef}
+                className="custom-captcha"
+              />
             </div>
             <div className="mint_desc" style={{ paddingTop: "3rem" }}>
               {!isSubmitting ? (
@@ -736,6 +726,27 @@ const VigyaanForm = () => {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="metaportal_fn_nft_cats">
+          <ul data-aos="fade-down">
+            <li>
+              <div className="item">
+                <h4 className="parent_category">9th & 10th September</h4>
+                <h3 className="child_category" title="Black Yukata">
+                  Presentation Round (Expected)
+                </h3>
+              </div>
+            </li>
+            <li>
+              <div className="item">
+                <h4 className="parent_category">15th & 16th October</h4>
+                <h3 className="child_category" title="Daydreaming">
+                  Prototype Round (Expected)
+                </h3>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

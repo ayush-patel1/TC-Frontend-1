@@ -1,0 +1,58 @@
+/* Full-screen overlay */
+.splashscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's above other components */
+  backdrop-filter: blur(8px); /* Add blur effect to background */
+}
+
+/* Centered content */
+.splashscreen-content {
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.splashscreen-content >:nth-child(1){
+  color: rgb(252, 73, 73);
+}
+
+/* Heading style */
+.splashscreen-content h2 {
+  font-size: 24px;
+  color: #333; /* Dark color for better contrast */
+  margin-bottom: 15px;
+}
+
+/* Paragraph style */
+.splashscreen-content p {
+  font-size: 16px;
+  color: #555; /* Slightly lighter color for the text */
+  margin-bottom: 20px;
+}
+
+/* Button style */
+button {
+  background: #ff7e5f; /* Matching button color with gradient */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #feb47b; /* Lighter shade on hover */
+}

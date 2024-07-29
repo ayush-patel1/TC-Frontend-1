@@ -334,7 +334,7 @@ const VigyaanForm = () => {
 
             {/* From NITRR or not */}
             <div style={{ paddingBottom: "1rem" }}>
-              {isNITRR && (
+              {/*{isNITRR && (
                 <div style={{ paddingBottom: "1rem" }}>
                   <h3
                     className="metaportal_fn_countdown"
@@ -349,7 +349,7 @@ const VigyaanForm = () => {
                     https://ldap.nitrr.ac.in/
                   </Link>
                 </div>
-              )}
+              )}*/}
               <h3
                 className="metaportal_fn_countdown"
                 style={{ paddingBottom: "1rem" }}

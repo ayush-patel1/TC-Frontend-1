@@ -11,8 +11,6 @@ import VigyaanLoader from "../layout/VigyaanLoader";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 
-import SplashScreen from '../components/alertScreen.js';
-
 const backend = urls.backend;
 
 const VigyaanForm = () => {
@@ -87,8 +85,6 @@ const VigyaanForm = () => {
   const [token, setToken] = useState(null);
   const captchaRef = useRef(null);
 
-  const [isSplashScreenVisible, setSplashScreenVisible] = useState(false);
-
   const onLoad = () => {
     // this reaches out to the hCaptcha JS API and runs the
     // execute function on it. you can use other functions as
@@ -96,24 +92,6 @@ const VigyaanForm = () => {
     // https://docs.hcaptcha.com/configuration#jsapi
     captchaRef.current.execute();
   };
-
-  useEffect(() => {
-		const handleTabChange = () => {
-		  if (!isSubmitting) {
-			setSplashScreenVisible(true);
-		  }
-		};
-	
-		window.addEventListener('blur', handleTabChange);
-	
-		return () => {
-		  window.removeEventListener('blur', handleTabChange);
-		};
-	}, [isSubmitting]);
-
-	const handleCloseSplashScreen = () => {
-		setSplashScreenVisible(false);
-	};
 
   const handleAddMember = () => {
     if (memberCount < 2) {
@@ -344,7 +322,6 @@ const VigyaanForm = () => {
       id="registration"
       style={{ zIndex: "0" }}
     >
-      {isSplashScreenVisible && <SplashScreen onClose={handleCloseSplashScreen} />}
       <div
         className="container small centered-container"
         style={{ paddingTop: "3rem" }}

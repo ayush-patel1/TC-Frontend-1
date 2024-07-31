@@ -10,6 +10,7 @@ import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanT
 import VigyaanLoader from "../layout/VigyaanLoader";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import AlertScreen from "../components/alertScreen";
 
 const backend = urls.backend;
 
@@ -21,8 +22,7 @@ const VigyaanForm = () => {
 
   const [memberCount, setMemberCount] = useState(0);
   const [phoneNumberError, setPhoneNumberError] = useState("");
-  const [memberPhoneNumberValidations, setMemberPhoneNumberValidations] =
-    useState([true, true, true]);
+  const [memberPhoneNumberValidations, setMemberPhoneNumberValidations] = useState([true, true, true]);
   const [isNITRR, setIsNITRR] = useState(null);
   const [emailError, setEmailError] = useState("");
 
@@ -141,19 +141,33 @@ const VigyaanForm = () => {
     localStorage.setItem("vigyaanForm", JSON.stringify(update));
   };
 
+  const [alertMessage, setAlertMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+  };
+
+
   const submit = async () => {
     // alert('Registrations will be open soon.');
     // return;
     if (!token) {
-      alert("Human verification is mandatory");
+      // alert("Human verification is mandatory")
+      setAlertMessage("Human verification is mandatory");
+      setShowAlert(true);
       return;
     }
 
     setSubmit(true);
     if (memberCount < 1) {
-      alert("Minimum Team Size: 2");
+      setAlertMessage("Minimum Team Size: 2");
+      setShowAlert(true);
+      // alert("Minimum Team Size: 2");
     } else if (memberPhoneNumberValidations.includes(false)) {
-      alert("Please fill all phone numbers with 10 digits.");
+      setAlertMessage("Please fill all phone numbers with 10 digits.");
+      setShowAlert(true);
+      // alert("Please fill all phone numbers with 10 digits.");
     } else {
       let condition1 =
         form.isNITRR !== "" &&
@@ -196,13 +210,19 @@ const VigyaanForm = () => {
               "Content-Type": "multipart/form-data",
             },
           });
-          toast.success(res.data.message);
+          setAlertMessage(res.data.message);
+          setShowAlert(true);
+          // toast.success(res.data.message);
         } catch (err) {
           console.error(err);
-          toast.error(err.response.data.message);
+          setAlertMessage(err.response.data.message);
+          setShowAlert(true);
+          // toast.error(err.response.data.message);
         }
       } else {
-        alert("Please fill all the necessary details correctly");
+        setAlertMessage("Please fill all the necessary details correctly");
+        setShowAlert(true);
+        // alert("Please fill all the necessary details correctly");
       }
     }
     setSubmit(false);
@@ -322,6 +342,7 @@ const VigyaanForm = () => {
       id="registration"
       style={{ zIndex: "0" }}
     >
+      <AlertScreen message={alertMessage} onClose={handleCloseAlert} showAlert={showAlert} />
       <div
         className="container small centered-container"
         style={{ paddingTop: "3rem" }}

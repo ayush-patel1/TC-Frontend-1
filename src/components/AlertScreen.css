@@ -27,8 +27,7 @@
     animation: fadeIn 0.3s ease-in-out;
 }
 
-.popup_heading {
-    color: #fc5050;
+.popup-heading {
     font-family: poppins;
     font-weight: 500;
     font-size: 30px;

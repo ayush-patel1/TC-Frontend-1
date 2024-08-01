@@ -22,7 +22,8 @@ const VigyaanForm = () => {
 
   const [memberCount, setMemberCount] = useState(0);
   const [phoneNumberError, setPhoneNumberError] = useState("");
-  const [memberPhoneNumberValidations, setMemberPhoneNumberValidations] = useState([true, true, true]);
+  const [memberPhoneNumberValidations, setMemberPhoneNumberValidations] =
+    useState([true, true, true]);
   const [isNITRR, setIsNITRR] = useState(null);
   const [emailError, setEmailError] = useState("");
 
@@ -35,6 +36,7 @@ const VigyaanForm = () => {
     );
   };
 
+  //Email handling
   const handleEmail = (event) => {
     const { name, value } = event.target;
     const updatedForm = { ...form, [name]: value };
@@ -48,6 +50,16 @@ const VigyaanForm = () => {
       setEmailError("");
     }
   };
+
+
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertType, setAlertType] = useState('error');
+  const [alertMessage, setAlertMessage] = useState('');
+
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+  };
+
 
   const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
     isNITRR: "",
@@ -141,21 +153,13 @@ const VigyaanForm = () => {
     localStorage.setItem("vigyaanForm", JSON.stringify(update));
   };
 
-  const [alertMessage, setAlertMessage] = useState("");
-  const [showAlert, setShowAlert] = useState(false);
-
-  const handleCloseAlert = () => {
-    setShowAlert(false);
-  };
-
-
   const submit = async () => {
     // alert('Registrations will be open soon.');
     // return;
     if (!token) {
-      // alert("Human verification is mandatory")
       setAlertMessage("Human verification is mandatory");
       setShowAlert(true);
+      setAlertType('error');
       return;
     }
 
@@ -163,11 +167,9 @@ const VigyaanForm = () => {
     if (memberCount < 1) {
       setAlertMessage("Minimum Team Size: 2");
       setShowAlert(true);
-      // alert("Minimum Team Size: 2");
+      setAlertType('error');
     } else if (memberPhoneNumberValidations.includes(false)) {
-      setAlertMessage("Please fill all phone numbers with 10 digits.");
-      setShowAlert(true);
-      // alert("Please fill all phone numbers with 10 digits.");
+      
     } else {
       let condition1 =
         form.isNITRR !== "" &&
@@ -212,17 +214,17 @@ const VigyaanForm = () => {
           });
           setAlertMessage(res.data.message);
           setShowAlert(true);
-          // toast.success(res.data.message);
+          setAlertType('success');
         } catch (err) {
           console.error(err);
           setAlertMessage(err.response.data.message);
           setShowAlert(true);
-          // toast.error(err.response.data.message);
+          setAlertType('error');
         }
       } else {
         setAlertMessage("Please fill all the necessary details correctly");
         setShowAlert(true);
-        // alert("Please fill all the necessary details correctly");
+        setAlertType('error');
       }
     }
     setSubmit(false);
@@ -342,7 +344,7 @@ const VigyaanForm = () => {
       id="registration"
       style={{ zIndex: "0" }}
     >
-      <AlertScreen message={alertMessage} onClose={handleCloseAlert} showAlert={showAlert} />
+       <AlertScreen message={alertMessage} onClose={handleCloseAlert} showAlert={showAlert} type={alertType}/>
       <div
         className="container small centered-container"
         style={{ paddingTop: "3rem" }}

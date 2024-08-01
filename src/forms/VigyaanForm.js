@@ -10,6 +10,7 @@ import VigyaanTemplate from "../assets/Vigyaan_Idea_Submission_Template/VigyaanT
 import VigyaanLoader from "../layout/VigyaanLoader";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import AlertScreen from "../components/alertScreen";
 
 const backend = urls.backend;
 
@@ -35,6 +36,7 @@ const VigyaanForm = () => {
     );
   };
 
+  //Email handling
   const handleEmail = (event) => {
     const { name, value } = event.target;
     const updatedForm = { ...form, [name]: value };
@@ -48,6 +50,16 @@ const VigyaanForm = () => {
       setEmailError("");
     }
   };
+
+
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertType, setAlertType] = useState('error');
+  const [alertMessage, setAlertMessage] = useState('');
+
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+  };
+
 
   const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
     isNITRR: "",
@@ -145,15 +157,19 @@ const VigyaanForm = () => {
     // alert('Registrations will be open soon.');
     // return;
     if (!token) {
-      alert("Human verification is mandatory");
+      setAlertMessage("Human verification is mandatory");
+      setShowAlert(true);
+      setAlertType('error');
       return;
     }
 
     setSubmit(true);
     if (memberCount < 1) {
-      alert("Minimum Team Size: 2");
+      setAlertMessage("Minimum Team Size: 2");
+      setShowAlert(true);
+      setAlertType('error');
     } else if (memberPhoneNumberValidations.includes(false)) {
-      alert("Please fill all phone numbers with 10 digits.");
+      
     } else {
       let condition1 =
         form.isNITRR !== "" &&
@@ -196,13 +212,19 @@ const VigyaanForm = () => {
               "Content-Type": "multipart/form-data",
             },
           });
-          toast.success(res.data.message);
+          setAlertMessage(res.data.message);
+          setShowAlert(true);
+          setAlertType('success');
         } catch (err) {
           console.error(err);
-          toast.error(err.response.data.message);
+          setAlertMessage(err.response.data.message);
+          setShowAlert(true);
+          setAlertType('error');
         }
       } else {
-        alert("Please fill all the necessary details correctly");
+        setAlertMessage("Please fill all the necessary details correctly");
+        setShowAlert(true);
+        setAlertType('error');
       }
     }
     setSubmit(false);
@@ -322,6 +344,7 @@ const VigyaanForm = () => {
       id="registration"
       style={{ zIndex: "0" }}
     >
+       <AlertScreen message={alertMessage} onClose={handleCloseAlert} showAlert={showAlert} type={alertType}/>
       <div
         className="container small centered-container"
         style={{ paddingTop: "3rem" }}

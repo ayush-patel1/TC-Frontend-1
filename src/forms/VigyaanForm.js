@@ -51,15 +51,13 @@ const VigyaanForm = () => {
     }
   };
 
-
   const [showAlert, setShowAlert] = useState(false);
-  const [alertType, setAlertType] = useState('error');
-  const [alertMessage, setAlertMessage] = useState('');
+  const [alertType, setAlertType] = useState("error");
+  const [alertMessage, setAlertMessage] = useState("");
 
   const handleCloseAlert = () => {
     setShowAlert(false);
   };
-
 
   const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
     isNITRR: "",
@@ -159,7 +157,7 @@ const VigyaanForm = () => {
     if (!token) {
       setAlertMessage("Human verification is mandatory");
       setShowAlert(true);
-      setAlertType('error');
+      setAlertType("error");
       return;
     }
 
@@ -167,9 +165,8 @@ const VigyaanForm = () => {
     if (memberCount < 1) {
       setAlertMessage("Minimum Team Size: 2");
       setShowAlert(true);
-      setAlertType('error');
+      setAlertType("error");
     } else if (memberPhoneNumberValidations.includes(false)) {
-      
     } else {
       let condition1 =
         form.isNITRR !== "" &&
@@ -214,17 +211,17 @@ const VigyaanForm = () => {
           });
           setAlertMessage(res.data.message);
           setShowAlert(true);
-          setAlertType('success');
+          setAlertType("success");
         } catch (err) {
           console.error(err);
           setAlertMessage(err.response.data.message);
           setShowAlert(true);
-          setAlertType('error');
+          setAlertType("error");
         }
       } else {
         setAlertMessage("Please fill all the necessary details correctly");
         setShowAlert(true);
-        setAlertType('error');
+        setAlertType("error");
       }
     }
     setSubmit(false);
@@ -299,7 +296,7 @@ const VigyaanForm = () => {
               </div>
             )}
             <span style={{ fontSize: "0.7rem" }}>
-              * If from NIT Raipur then only institute id accepted.
+              {/* * If from NIT Raipur then only institute id accepted. */}
             </span>
           </li>
 
@@ -344,7 +341,12 @@ const VigyaanForm = () => {
       id="registration"
       style={{ zIndex: "0" }}
     >
-       <AlertScreen message={alertMessage} onClose={handleCloseAlert} showAlert={showAlert} type={alertType}/>
+      <AlertScreen
+        message={alertMessage}
+        onClose={handleCloseAlert}
+        showAlert={showAlert}
+        type={alertType}
+      />
       <div
         className="container small centered-container"
         style={{ paddingTop: "3rem" }}
@@ -504,7 +506,7 @@ const VigyaanForm = () => {
                   )}
                   <span style={{ fontSize: "0.7rem" }}>
                     {" "}
-                    * If from NIT Raipur then only institute id accepted.
+                    {/* * If from NIT Raipur then only institute id accepted. */}
                   </span>
                 </li>
 
@@ -615,7 +617,7 @@ const VigyaanForm = () => {
                   <span>Submit</span>
                 </div>
               ) : (
-                <VigyaanLoader/>
+                <VigyaanLoader />
               )}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>

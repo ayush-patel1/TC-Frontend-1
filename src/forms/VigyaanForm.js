@@ -37,19 +37,19 @@ const VigyaanForm = () => {
   };
 
   //Email handling
-  const handleEmail = (event) => {
-    const { name, value } = event.target;
-    const updatedForm = { ...form, [name]: value };
-    set(updatedForm);
+  // const handleEmail = (event) => {
+  //   const { name, value } = event.target;
+  //   const updatedForm = { ...form, [name]: value };
+  //   set(updatedForm);
 
-    localStorage.setItem("vigyaanForm", JSON.stringify(updatedForm));
+  //   localStorage.setItem("vigyaanForm", JSON.stringify(updatedForm));
 
-    if (name.includes("email") && isNITRR && !value.endsWith("nitrr.ac.in")) {
-      setEmailError("Email must be from @nitrr.ac.in domain.");
-    } else {
-      setEmailError("");
-    }
-  };
+  //   if (name.includes("email") && isNITRR && !value.endsWith("nitrr.ac.in")) {
+  //     setEmailError("Email must be from @nitrr.ac.in domain.");
+  //   } else {
+  //     setEmailError("");
+  //   }
+  // };
 
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState("error");
@@ -261,6 +261,7 @@ const VigyaanForm = () => {
               value={form[`Member${i + 1}_name`]}
             />
           </li>
+
           <li>
             <input
               name={`Member${i + 1}_branch`}
@@ -271,6 +272,7 @@ const VigyaanForm = () => {
               value={form[`Member${i + 1}_branch`]}
             />
           </li>
+
           <li>
             <input
               name={`Member${i + 1}_year`}
@@ -281,22 +283,23 @@ const VigyaanForm = () => {
               value={form[`Member${i + 1}_year`]}
             />
           </li>
+
           <li>
             <input
               name={`Member${i + 1}_email`}
               className="memberName"
               type="text"
               placeholder={`Member ${i} Email ID`}
-              onChange={(e) => handleEmail(e)}
+              onChange={(e) => handle(e)}
               value={form[`Member${i + 1}_email`]}
             />
-            {emailError && (
+            {/* {emailError && (
               <div style={{ color: "red", marginTop: "0.5rem" }}>
                 {emailError}
               </div>
-            )}
+            )} */}
             <span style={{ fontSize: "0.7rem" }}>
-              {/* * If from NIT Raipur then only institute id accepted. */}
+              {/* * If from NIT Raipur then use institute Email ID if you have one. */}
             </span>
           </li>
 
@@ -310,6 +313,7 @@ const VigyaanForm = () => {
               value={form[`Member${i + 1}_rollNo`]}
             />
           </li>
+
           <li>
             <input
               name={`Member${i + 1}_whatsapp`}
@@ -394,9 +398,9 @@ const VigyaanForm = () => {
                   </label>
                 </li>
 
-                <span style={{ fontSize: "1rem" }}>
+                {/* <span style={{ fontSize: "1rem" }}>
                   * If selected Yes, then only institute mail id accepted.
-                </span>
+                </span> */}
                 <li style={{ marginBottom: "0.5rem" }}>
                   <input
                     type="radio"
@@ -496,17 +500,18 @@ const VigyaanForm = () => {
                     type="text"
                     name="Leader_email"
                     placeholder="Leader Email ID"
-                    onChange={(e) => handleEmail(e)}
+                    onChange={(e) => handle(e)}
                     value={form.Leader_email}
                   />
-                  {emailError && (
+                  {/* {emailError && (
                     <div style={{ color: "red", marginTop: "0.5rem" }}>
                       {emailError}
                     </div>
-                  )}
+                  )} */}
                   <span style={{ fontSize: "0.7rem" }}>
                     {" "}
-                    {/* * If from NIT Raipur then only institute id accepted. */}
+                    {/* * If from NIT Raipur then use institute Email ID if you have */}
+                    one.
                   </span>
                 </li>
 

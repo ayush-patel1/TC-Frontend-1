@@ -37,20 +37,19 @@ const VigyaanForm = () => {
   };
 
   //Email handling
-  const handleEmail = (event) => {
-    const { name, value } = event.target;
-    const updatedForm = { ...form, [name]: value };
-    set(updatedForm);
+  // const handleEmail = (event) => {
+  //   const { name, value } = event.target;
+  //   const updatedForm = { ...form, [name]: value };
+  //   set(updatedForm);
 
-    localStorage.setItem("vigyaanForm", JSON.stringify(updatedForm));
+  //   localStorage.setItem("vigyaanForm", JSON.stringify(updatedForm));
 
-    if (name.includes("email") && isNITRR && !value.endsWith("nitrr.ac.in")) {
-      setEmailError("Email must be from @nitrr.ac.in domain.");
-    } else {
-      setEmailError("");
-    }
-  };
-
+  //   if (name.includes("email") && isNITRR && !value.endsWith("nitrr.ac.in")) {
+  //     setEmailError("Email must be from @nitrr.ac.in domain.");
+  //   } else {
+  //     setEmailError("");
+  //   }
+  // };
 
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState('error');
@@ -255,73 +254,35 @@ const VigyaanForm = () => {
       members.push(
         <div key={i}>
           <li>
-            <input
-              name={`Member${i + 1}_name`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i} Name`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_name`]}
-            />
+            <input name={`Member${i + 1}_name`} className="memberName" type="text" placeholder={`Member ${i} Name`} onChange={(e) => handle(e)} value={form[`Member${i + 1}_name`]} />
           </li>
+
           <li>
-            <input
-              name={`Member${i + 1}_branch`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i}'s Branch`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_branch`]}
-            />
+            <input name={`Member${i + 1}_branch`} className="memberName" type="text" placeholder={`Member ${i}'s Branch`} onChange={(e) => handle(e)} value={form[`Member${i + 1}_branch`]} />
           </li>
+
           <li>
-            <input
-              name={`Member${i + 1}_year`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i}'s Current Year`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_year`]}
-            />
+            <input name={`Member${i + 1}_year`} className="memberName" type="text" placeholder={`Member ${i}'s Current Year`} onChange={(e) => handle(e)} value={form[`Member${i + 1}_year`]} />
           </li>
+
           <li>
-            <input
-              name={`Member${i + 1}_email`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i} Email ID`}
-              onChange={(e) => handleEmail(e)}
-              value={form[`Member${i + 1}_email`]}
-            />
-            {emailError && (
+            <input name={`Member${i + 1}_email`} className="memberName" type="text" placeholder={`Member ${i} Email ID`} onChange={(e) => handle(e)} value={form[`Member${i + 1}_email`]} />
+            {/* {emailError && (
               <div style={{ color: "red", marginTop: "0.5rem" }}>
                 {emailError}
               </div>
-            )}
+            )} */}
             <span style={{ fontSize: "0.7rem" }}>
               * If from NIT Raipur then only institute id accepted.
             </span>
           </li>
 
           <li>
-            <input
-              name={`Member${i + 1}_rollNo`}
-              className="memberName"
-              type="text"
-              placeholder={`Member ${i} Roll Number`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_rollNo`]}
-            />
+            <input name={`Member${i + 1}_rollNo`} className="memberName" type="text" placeholder={`Member ${i} Roll Number`} onChange={(e) => handle(e)} value={form[`Member${i + 1}_rollNo`]} />
           </li>
+
           <li>
-            <input
-              name={`Member${i + 1}_whatsapp`}
-              className="memberNumber"
-              type="text"
-              placeholder={`Member ${i} Whatsapp Number`}
-              onChange={(e) => handle(e)}
-              value={form[`Member${i + 1}_whatsapp`]}
-            />
+            <input name={`Member${i + 1}_whatsapp`} className="memberNumber" type="text" placeholder={`Member ${i} Whatsapp Number`} onChange={(e) => handle(e)} value={form[`Member${i + 1}_whatsapp`]} />
             <span style={{ fontSize: "0.7rem" }}>
               * Don't include +91 or 0.
             </span>
@@ -494,14 +455,14 @@ const VigyaanForm = () => {
                     type="text"
                     name="Leader_email"
                     placeholder="Leader Email ID"
-                    onChange={(e) => handleEmail(e)}
+                    onChange={(e) => handle(e)}
                     value={form.Leader_email}
                   />
-                  {emailError && (
+                  {/* {emailError && (
                     <div style={{ color: "red", marginTop: "0.5rem" }}>
                       {emailError}
                     </div>
-                  )}
+                  )} */}
                   <span style={{ fontSize: "0.7rem" }}>
                     {" "}
                     * If from NIT Raipur then only institute id accepted.

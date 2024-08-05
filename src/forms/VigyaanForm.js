@@ -155,17 +155,19 @@ const VigyaanForm = () => {
     // alert('Registrations will be open soon.');
     // return;
     if (!token) {
-      setAlertMessage("Human verification is mandatory");
-      setShowAlert(true);
-      setAlertType("error");
+      alert("Human verification is mandatory");
+      // setAlertMessage("Human verification is mandatory");
+      // setShowAlert(true);
+      // setAlertType("error");
       return;
     }
 
     setSubmit(true);
     if (memberCount < 1) {
-      setAlertMessage("Minimum Team Size: 2");
-      setShowAlert(true);
-      setAlertType("error");
+      alert("Minimum Team Size: 2");
+      // setAlertMessage("Minimum Team Size: 2");
+      // setShowAlert(true);
+      // setAlertType("error");
     } else if (memberPhoneNumberValidations.includes(false)) {
     } else {
       let condition1 =
@@ -209,19 +211,22 @@ const VigyaanForm = () => {
               "Content-Type": "multipart/form-data",
             },
           });
-          setAlertMessage(res.data.message);
-          setShowAlert(true);
-          setAlertType("success");
+          alert(res.data.message);
+          // setAlertMessage(res.data.message);
+          // setShowAlert(true);
+          // setAlertType("success");
         } catch (err) {
           console.error(err);
-          setAlertMessage(err.response.data.message);
-          setShowAlert(true);
-          setAlertType("error");
+          alert(err.response.data.message);
+          // setAlertMessage(err.response.data.message);
+          // setShowAlert(true);
+          // setAlertType("error");
         }
       } else {
-        setAlertMessage("Please fill all the necessary details correctly");
-        setShowAlert(true);
-        setAlertType("error");
+        alert("Please fill all the necessary details correctly");
+        // setAlertMessage("Please fill all the necessary details correctly");
+        // setShowAlert(true);
+        // setAlertType("error");
       }
     }
     setSubmit(false);

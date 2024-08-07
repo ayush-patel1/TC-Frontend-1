@@ -51,12 +51,21 @@ const VigyaanForm = () => {
   //   }
   // };
 
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertType, setAlertType] = useState("error");
-  const [alertMessage, setAlertMessage] = useState("");
+  // const [showAlert, setShowAlert] = useState(false);
+  // const [alertType, setAlertType] = useState("error");
+  // const [alertMessage, setAlertMessage] = useState("");
+  const [alert, setAlert] = useState({
+    message: '',
+    show: false,
+    type: 'error'
+  });
 
   const handleCloseAlert = () => {
-    setShowAlert(false);
+    setAlert({
+      message:'',
+      show:false,
+      type:'error'
+    })
   };
 
   const cachedForm = JSON.parse(localStorage.getItem("vigyaanForm")) || {
@@ -155,17 +164,27 @@ const VigyaanForm = () => {
     // alert('Registrations will be open soon.');
     // return;
     if (!token) {
-      setAlertMessage("Human verification is mandatory");
-      setShowAlert(true);
-      setAlertType("error");
+      // setAlertMessage("Human verification is mandatory");
+      // setShowAlert(true);
+      // setAlertType("error");
+      setAlert({
+        message: "Human verification is mandatory",
+        show: true,
+        type: "error"
+      });
       return;
     }
 
     setSubmit(true);
     if (memberCount < 1) {
-      setAlertMessage("Minimum Team Size: 2");
-      setShowAlert(true);
-      setAlertType("error");
+      // setAlertMessage("Minimum Team Size: 2");
+      // setShowAlert(true);
+      // setAlertType("error");
+      setAlert({
+        message: "Minimum Team Size: 2",
+        show: true,
+        type: "error"
+      });
     } else if (memberPhoneNumberValidations.includes(false)) {
     } else {
       let condition1 =
@@ -209,19 +228,34 @@ const VigyaanForm = () => {
               "Content-Type": "multipart/form-data",
             },
           });
-          setAlertMessage(res.data.message);
-          setShowAlert(true);
-          setAlertType("success");
+          // setAlertMessage(res.data.message);
+          // setShowAlert(true);
+          // setAlertType("success");
+          setAlert({
+            message: res.data.message,
+            show: true,
+            type: "success"
+          });
         } catch (err) {
           console.error(err);
-          setAlertMessage(err.response.data.message);
-          setShowAlert(true);
-          setAlertType("error");
+          // setAlertMessage(err.response.data.message);
+          // setShowAlert(true);
+          // setAlertType("error");
+          setAlert({
+            message: err.response.data.message,
+            show: true,
+            type: "error"
+          });
         }
       } else {
-        setAlertMessage("Please fill all the necessary details correctly");
-        setShowAlert(true);
-        setAlertType("error");
+        // setAlertMessage("Please fill all the necessary details correctly");
+        // setShowAlert(true);
+        // setAlertType("error");
+        setAlert({
+          message: "Please fill all the necessary details correctly",
+          show: true,
+          type: "error"
+        });
       }
     }
     setSubmit(false);
@@ -346,10 +380,10 @@ const VigyaanForm = () => {
       style={{ zIndex: "0" }}
     >
       <AlertScreen
-        message={alertMessage}
+        message={alert.message}
         onClose={handleCloseAlert}
-        showAlert={showAlert}
-        type={alertType}
+        showAlert={alert.show}
+        type={alert.type}
       />
       <div
         className="container small centered-container"

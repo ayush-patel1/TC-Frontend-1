@@ -671,19 +671,11 @@ const IgniteForm = () => {
               <div data-aos="fade-down" className="mint_time">
                 <h4>Vigyaan Ignite</h4>
                 <h3 className="metaportal_fn_countdown">
-                  Rules and Regulations
+                  ELIGIBILITY
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p>1. A team can have 2 to 3 members(including team leader).</p>
-                <p>
-                  2. Each team must designate a team leader and select a team
-                  name. (up to 20 characters, for e.g., Tech_Titans)
-                </p>
-                {/* <p>
-                  3. A Team ID will be assigned to the team upon registration,
-                  which will be used for future reference. (for e.g., ECE_A1)
-                </p> */}
+                <p> Only first-year [2028 Batch] students from NIT Raipur. </p>
               </div>
               <div
                 data-aos="fade-down"
@@ -691,26 +683,47 @@ const IgniteForm = () => {
                 className="mint_time"
               >
                 <h4>VIGYAAN IGNITE</h4>
-                <h3 className="metaportal_fn_countdown">Guidelines</h3>
+                <h3 className="metaportal_fn_countdown">RULES</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p>1. This competition is open for only first-year [2028 Batch] students from NIT Raipur..</p>
+                <p>▪ A team can have 2-3 members (including team leader). </p>
                 <p>
-                  2. A team is free to select any one Problem Statement
-                  regardless of their engineering department.
+                ▪ Each team must designate a team leader and select a team name. 
                 </p>
+                <p>▪ Teams may consist of members from different departments, provided all are students of NIT Raipur. </p>
+                <p>▪ Each participant can only be a part of one team.</p>
+                <p>▪ Multiple entries are not allowed.</p>
+              </div>
+
+              <div
+                data-aos="fade-down"
+                style={{ paddingTop: "2rem" }}
+                className="mint_time"
+              >
+                <h4>VIGYAAN IGNITE</h4>
+                <h3 className="metaportal_fn_countdown">GUIDELINES</h3>
+              </div>
+              <div data-aos="fade-down" className="mint_info">
+                <p>▪ Identify any real-world problem, its impact, and propose relevant solutions. Students from any 
+                academic stream can submit their issues along with their innovative solutions.</p>
                 <p>
-                  3. Teams can include members from various academic disciplines
-                  or academic years, provided all participants are from the same
-                  institution.
+                ▪ Judges will evaluate based on the problem's severity, the solution's significance, and the 
+                product's scalability. 
                 </p>
-                <p>4. Each participant can be a part of only one team.</p>
-                <p>5. Multiple entries are not permitted.</p>
-                <p>
-                  7. Plagiarism in any form will lead to immediate
-                  disqualification.
-                </p>
-                <p>8. Each round will be an eliminatory round.</p>
+                <p>▪ Plagiarism is strictly prohibited, and any plagiarized submissions will result in disqualification. </p>
+                <p>▪ Each round will be an eliminatory round. </p>
+              </div>
+
+              <div
+                data-aos="fade-down"
+                style={{ paddingTop: "2rem" }}
+                className="mint_time"
+              >
+                <h4>VIGYAAN IGNITE</h4>
+                <h3 className="metaportal_fn_countdown">STRUCTURE</h3>
+              </div>
+              <div data-aos="fade-down" className="mint_info">
+                <p> Round 1 (Registration + Idea submission) ➜ Round 2 ➜ Round 3 ➜ VIGYAAN Exhibition </p>
               </div>
               <div
                 data-aos="fade-down"
@@ -726,17 +739,17 @@ const IgniteForm = () => {
                     Round 1: Idea Submission Round
                   </div>
                   <p>
-                    1. Create a concise and effective presentation for the idea
+                  ▪  Create a concise and effective presentation for the idea
                     submission round.
                   </p>
                   <p>
-                    2. Teams must strictly adhere to the provided template
+                  ▪  Teams must strictly adhere to the provided template
                     without making any modifications. Refer to the template for
                     additional details.
                   </p>
-                  <p>3. File type: .ppt, .pptx or PDF</p>
+                  <p>▪  File type: .ppt, .pptx or PDF</p>
                   <p>
-                    4. Document Name: TeamName_ProblemNum (e.g., TeamName_ECE01)
+                  ▪  Document Name: Team_Name
                   </p>
                 </p>
                 <p>
@@ -744,38 +757,28 @@ const IgniteForm = () => {
                     Round 2: Presentation Round
                   </div>
                   <p>
-                    1. Selected teams are required to present their project in
+                  ▪  Selected teams are required to present their project in
                     front of concerned faculty in-charge.
                   </p>
                   <p>
-                    2. You will have 10-15 minutes to present, followed by a Q&A
+                  ▪  You will have 10-15 minutes to present, followed by a Q&A
                     session with the judges.
                   </p>
-                  <p>4. File type: .ppt, .pptx or PDF</p>
-                  <p>
-                    5. Document Name: TeamName_ProblemNum (e.g.,
-                    TeamName_ECE01).
-                  </p>
+                  <p>▪  File type: .ppt, .pptx or PDF</p>
+                  
                 </p>
                 <p>
                   <div style={{ color: "white" }}>Round 3: Prototype Round</div>
                   <p>
-                    1. Shortlisted teams will need to develop a functional
+                  ▪  Shortlisted teams will need to develop a functional
                     prototype based on their proposed approach, ensuring that
                     the prototype demonstrates core features and functionalities
                     effectively.
                   </p>
-                  <p>
-                    2. Qualified teams will present their project in VIGYAAN
-                    Exhibition.
-                  </p>
+                  
                 </p>
               </div>
-              <a style={{ textDecoration: "none" }} href={VigyaanTemplate}>
-                <span className="metaportal_fn_button_4">
-                  Idea Submission Template
-                </span>
-              </a>
+              
             </div>
             <div
               data-aos="fade-down"
@@ -784,20 +787,19 @@ const IgniteForm = () => {
             >
               <h4>VIGYAAN</h4>
               <h3 className="metaportal_fn_countdown">
-                Certificates & Rewards
+                Certificates & REWARDS
               </h3>
             </div>
             <div data-aos="fade-down" className="mint_info">
-              <p>▪ Top teams from each branch will receive goodies.</p>
+              <p>▪ Prizes will be awarded to the top teams based on the evaluation criteria. </p>
               <p>
-                ▪ A digital Certificate of Participation will be awarded to
-                teams that qualified the presentation round but narrowly missed
-                clearing the prototype round subject to the approval of
-                concerned faculty incharges.
+              ▪ A digital Certificate of Appreciation will be awarded to all teams who presented their project 
+              in the VIGYAAN Exhibition. 
               </p>
               <p>
-                ▪ A digital Certificate of Appreciation will be awarded to those
-                teams who presented their project in the VIGYAAN exhibition.
+              ▪ A digital Certificate of Participation will be awarded to teams that qualified the presentation 
+              round but narrowly missed clearing the prototype round subject to the approval of concerned 
+              faculty in-charges.
               </p>
             </div>
           </div>

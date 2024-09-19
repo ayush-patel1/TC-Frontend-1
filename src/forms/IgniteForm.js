@@ -205,7 +205,8 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
         form.member2_email !== "" &&
         form.member2_year !== "" &&
         form.member2_whatsapp !== "" &&
-        form.member2_branch !== "" ;
+        form.member2_branch !== "" &&
+        form.file;
 
       let isnitrrConditions =true;
 
@@ -612,14 +613,14 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                   )}
                 </li>
               </ul>
-              {/* <input
+              <input
                 accept="application/pdf"
                 style={{ display: "none" }}
                 id="file-input"
                 type="file"
                 onChange={handleFileChange}
-              /> */}
-              {/* <label
+              />
+              <label
                 style={{
                   display: "flex",
                   justifyContent: "center",
@@ -635,7 +636,7 @@ let cachedForm = JSON.parse(localStorage.getItem("igniteForm")) || {
                     Uploaded File: {uploadedFileName}
                   </p>
                 )}
-              </label> */}
+              </label>
             </div>
             <div className="hcap" style={{ paddingTop: "3rem" }}>
               <HCaptcha

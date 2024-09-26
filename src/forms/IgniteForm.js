@@ -11,7 +11,7 @@ import IgniteLoader from "../layout/IgniteLoader";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import AlertScreen from "../components/alertScreen";
-import style from "styled-jsx/style";
+
 
 
 

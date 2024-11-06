@@ -104,7 +104,7 @@ const AavartanStyleWrapper = styled.section`
     align-items:center;
     .aavartan-font { 
        position:relative;
-       height: 15vh;
+       height: 18vh;
       width: 30vw;
       .star{
         position:absolute;
@@ -315,6 +315,10 @@ const AavartanStyleWrapper = styled.section`
       top:20%;
       width:100vw;
     }
+      // .decrp{
+      //    line-height:1.6rem !important;
+      //    font-size:rem !important;
+      // }
 
     .gamfi_v2_hero_left .rocket_thumb {
       height: 80px !important;
@@ -352,8 +356,8 @@ const AavartanStyleWrapper = styled.section`
       bottom: 15vh !important;
     }
       .decrp{
-        font-size:5px !important;
-        line-height:10px;
+        font-size:3px !important;
+        line-height:1.4rem !important;
         margin-left:-2px !important;
          text-align:center
       }

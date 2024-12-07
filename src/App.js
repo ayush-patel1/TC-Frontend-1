@@ -205,11 +205,10 @@ function App() {
         </ContentContainer>
         <BackgroundContainer>
 //           {/* <ParticlesBackground /> */}
-// <<<<<<< main
-// //           <StarFieldAnimation />
+
 // =======
 //           {/* <StarFieldAnimation/> */}
-// >>>>>>> dev
+//dev
         </BackgroundContainer>
       </CustomCursorContainer>
     </div>

@@ -37,12 +37,6 @@ const Circle = keyframes`
 `; 
 
 const VigyaanStyleWrapper = styled.section`
-  @font-face {
-    font-family: "Minecraftia";
-    src: url("../../assets/font/Minecraftia-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
 
   position: relative;
   height: 100vh;
@@ -87,17 +81,18 @@ const VigyaanStyleWrapper = styled.section`
     z-index: 1;
   }
 
-  .vigyaan-font p {
-    font-family: "Minecraftia", sans-serif;
+  .vigyaan-font img {
+     width:40vw;
+     max-height:20vw;
   }
 
   .vigyaan-font {
     left: 32%;
     position: absolute;
-    top: 35vh;
+    top: 30vh;
     font-size: 5.5rem;
     color: black;
-    font-family: "Minecraftia", sans-serif;
+    font-family:;
     z-index: 2;
     font-weight: 900;
     text-shadow: 2px 2px 5px #fe7be5d1;
@@ -105,12 +100,21 @@ const VigyaanStyleWrapper = styled.section`
 
   .vigyaan-desc {
     position: absolute;
-    top: 53vh;
+    top: 53vh; left:18vw;
+    text-align:center;
     z-index: 2;
-    padding: 0 13rem 0 10rem;
-    font-family: "Minecraftia", sans-serif;
+    font-family: 'VigyaanFont';
+    font-weight:700;
+    font-size:1rem;
     color: white;
     z-index: 2;
+    width:70%;
+    letter-spacing:2px;
+    background: rgba(75, 0, 130, 0.3); /* Slightly transparent black */
+    color: #fff; /* White text for contrast */
+    padding: 10px; /* Space around the content */
+    border-radius: 5px; /* Smooth rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 130, 0.5);
   }
 
   .vigyaan-ring {
@@ -126,7 +130,7 @@ const VigyaanStyleWrapper = styled.section`
 
   .btncontainer2 {
     position: absolute;
-    top: 55%;
+    top: 73%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -193,8 +197,59 @@ const VigyaanStyleWrapper = styled.section`
       top: 70%;
     }
   }
+   @media (max-width: 435px){
+
+     .vigyaan-font{
+        left:3vw !important;
+        top:20% !important;
+     }
+    .vigyaan-font img {
+      
+     width:95% !important;
+     max-height:20vh !important;
+  }
+      .vigyaan-desc{
+        top:40% !important;
+        left:3vw !important;
+        line-height:7vw;
+         width:90% !important;
+         font-size:3vw !important;
+       margin-left:10px !important;
+       padding:0 4px !important;
+    //  background: rgba(0, 0, 0, 0.4); /* Slightly transparent black */
+    // color: #fff; /* White text for contrast */
+    // padding: 10px; /* Space around the content */
+    // border-radius: 5px; /* Smooth rounded corners */
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+    .vigyaan-planet{
+      top:10%;
+      right:2vw;
+    }
+    .planet1{
+    display:none}
+      }
+      .btncontainer2{
+        top:95%;
+      }
+   }
+    @media (max-width: 800px){
+      .vigyaan-desc{
+        width:80%; 
+        font-size:2.5vw !important;
+        top:43% !important;
+        padding:0;
+      }
+      .vigyaan-font img{
+        height:20vh;
+        width:80vw;
+      }
+    }
 
   // Add remaining media queries and other styles
+
 `;
+
+
 
 export default VigyaanStyleWrapper;

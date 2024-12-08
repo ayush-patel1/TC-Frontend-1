@@ -3,6 +3,7 @@
 import planet from "../../assets/images/vighero/minecraft-png-13361.png";
 import ring from "../../assets/images/vighero/planet_orbit.webp";
 import VigyaanStyleWrapper from "./VigyaanHero.style";
+import font from '../../assets/Aavartan New/VIGYAAN-12-8-2024.png'
  import prop6 from "../../assets/prop6.webp";
 //  import prop7 from "../../assets/prop7.webp";
 import prop8 from "../../assets/prop8.webp";
@@ -29,7 +30,7 @@ const VigyaanHero = () => {
          {/*<img className="planet2" src={prop6} alt="pl2" /> */}
           <img className="planet3" src={prop7} alt="pl3" />
           <div className="vigyaan-font">
-            <p>VIGYAAN</p>
+            <img src={font} alt="" />
           </div>
           <div className="vigyaan-desc">
             Vigyaan, the science exhibition organized during the tech fest,

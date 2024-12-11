@@ -1586,10 +1586,10 @@ a.full_link {
 .fn_cs_desc p {
 	margin: 0;
 	color: rgba(255, 255, 255, 1);
-	font-weight: 800;
+	font-weight: 200;
 	font-family: "AavartanFont";
 	letter-spacing: 2px;
-	text-shadow: 2px 2px 5px rgb(238, 14, 14);
+	text-shadow: 2px 2px 5px rgb(168, 10, 10);
 	font-size: 25px;
 	line-height: 30px;
 	margin-bottom: 41px;
@@ -7687,7 +7687,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .Vigyaanscrolled {
-	background: url("./assets/images/vigyaanbg.webp");
+	background: url("./assets/new-vigyaanbg.png");
 	background-size: cover;
 	background-attachment: fixed;
 	/* transition: background-color 0.9s ease; */
@@ -7819,6 +7819,10 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 @font-face {
 	font-family: 'AavartanFont';
 	src: url('./assets/font/IrishGrover-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'VigyaanFont';
+	src: url('./assets/font/Minecraftia-Regular.ttf') format('truetype')
 }
 
 @font-face {

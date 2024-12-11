@@ -12,7 +12,19 @@ const rocketAnimation = keyframes`
         bottom: 3rem;
     }
 `;
-
+const popIn = keyframes`
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 const rocketAnimation2 = keyframes`
     0%,
     100% {
@@ -33,6 +45,7 @@ const AavartanStyleWrapper = styled.section`
   height: 100vh;
   padding: 250px 0;
   overflow: hidden;
+  animation: ${popIn} 2s ease forwards; 
 
   .btncontainer {
     position: absolute;
@@ -48,6 +61,25 @@ const AavartanStyleWrapper = styled.section`
     left: 10%;
     z-index: 0;
   }
+  ${'' /* .moving-cloud-container {
+  position: relative;
+  height: 100vh;
+}
+
+.moving-cloud {
+  position: relative;
+  animation: moveCloud 180s linear infinite; 
+}
+
+@keyframes moveCloud {
+  0% {
+    transform: translateX(-80%); 
+  }
+  50% {
+    transform: translateX(5vw); 
+  }
+} */}
+
 
   .row {
     display: flex;
@@ -108,7 +140,7 @@ const AavartanStyleWrapper = styled.section`
       width: 30vw;
       .star{
         position:absolute;
-        top:-52px;
+        top:-55px;
         left:0;
         height:100%;
         width:100%;
@@ -122,19 +154,24 @@ const AavartanStyleWrapper = styled.section`
 }
   
   .decrp {
-      color:#e6d0cb;
-      font-weight: 300;
-      font-size: 30px;
-      line-height: 30px;
+      color:#993d3d;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 35px;
       margin-top: 60px;
       text-align: center;
-      text-shadow: 1px 1px 5px #970000;
+      text-shadow: 1px 0px 3px white;
       font-family: "AavartanFont";
       position: absolute;
       top:45vh;
-      right: 2vw;
-      width: 50vw;
+      right: 3vw;
+      width: 45vw;
       z-index: 2;
+        background: rgba(0, 0, 0, 0.4); /* Slightly transparent black */
+    color: #fff; /* White text for contrast */
+    padding: 10px; /* Space around the content */
+    border-radius: 5px; /* Smooth rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   
     }
 
@@ -303,7 +340,7 @@ const AavartanStyleWrapper = styled.section`
   @media only screen and (max-width: 426px) {
 
     .btncontainer{
-       top:80vh !important;
+       top:90vh !important;
        left:43% !important;
     }
     .colmd2 .gamfi_v2_hero_right .decrp {
@@ -315,10 +352,10 @@ const AavartanStyleWrapper = styled.section`
       top:20%;
       width:100vw;
     }
-      // .decrp{
-      //    line-height:1.6rem !important;
-      //    font-size:rem !important;
-      // }
+      .decrp{
+         top:50%;
+         margin-left:2vw;
+      }
 
     .gamfi_v2_hero_left .rocket_thumb {
       height: 80px !important;

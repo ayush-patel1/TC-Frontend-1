@@ -1,42 +1,42 @@
-import React, { useEffect,useState } from 'react'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Faq from '../sections/Faq'
-import FullPageLoader from '../layout/FullPageLoader';
-import About from '../components/About';
-import Timeline from '../sections/Timeline';
-import FloatingImage from '../sections/FloatingImage';
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Faq from "../sections/Faq";
+import FullPageLoader from "../layout/FullPageLoader";
+import About from "../components/About";
+import Timeline from "../sections/Timeline";
+import FloatingImage from "../sections/FloatingImage";
+import Section1 from "../sections/Home/Section1";
+import PetalAnimation from "../components/PetalAnimation";
 // import { RecruitForm } from '../components/Recruitment';
 
 const Homepage = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    AOS.init({ duration: 1000, });
-    window.scrollTo(0, 0)
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-  }, [])
+  const [isLoading, setIsLoading] = useState(false);
+//   useEffect(() => {
+//     AOS.init({ duration: 1000 });
+//     window.scrollTo(0, 0);
+//     setTimeout(() => {
+//       setIsLoading(false);
+//     }, 1500);
+//   }, []);
   return (
-    <div>
+    <>
       {isLoading ? (
         <FullPageLoader />
       ) : (
-        <div className="Homescrolled">
+        <div>
           {/* <div className="dark-overlay" style={{position:"relative", zIndex:"0"}}></div> */}
-          <FloatingImage/>
+          <Section1 />
           {/* <HomeHero /> */}
-          <div className="HomeContainer" style={{position:"relative", zIndex:"2"}}>
-            {/* <RecruitForm/> */}
-            <About/>
-            {/* <Blog/> */}
-            <Timeline/>
-            <Faq />
-          </div>
+          {/* <RecruitForm/> */}
+          <About />
+          {/* <Blog/> */}
+          {/* <Timeline />
+          <Faq /> */}
         </div>
       )}
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default Homepage
+export default Homepage;

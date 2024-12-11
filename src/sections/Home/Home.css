@@ -1,0 +1,101 @@
+.Home-sec1{
+    min-height: 100vh;
+    background-image: url("../../assets/images/HomePage/section1BG.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    scroll-snap-align: start;
+}
+
+.petal-canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.title-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.img-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-cont-inn{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-title{
+    width: 100%;
+    margin: 0;
+}
+
+.po-img{
+    /* left: 20px; */
+    height: 20vw;
+}
+
+.stone{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    transition: color .2s ease-in-out, background-image .2s ease-in-out, transform .2s ease-in-out;
+    background-image: url("../../assets/images/stone.png");
+    color: yellow;
+}
+
+.stone:hover{
+    transform: scale(1.1);
+    background-image: url("../../assets/images/stone2.png");
+    color: rgb(126, 59, 59);
+}
+
+.stone:active{
+    transform: scale(1);
+}
+
+.btn-cont{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.btn-sec1{
+    height: 74px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: 'chisled', Courier, monospace;
+}
+
+
+@media (max-width: 768px) {
+    .title-cont-inn{
+        width: 95%;
+    }
+    .home-title{
+        min-height: 15vh;
+    }
+    .po-img{
+        height: 25vh;
+    }
+}

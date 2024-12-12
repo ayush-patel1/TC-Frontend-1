@@ -1,58 +1,109 @@
-.Home-sec1{
-    min-height: 100vh;
+.homecontainer {
     background-image: url("../../assets/images/HomePage/section1BG.jpeg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    position: relative;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    scroll-snap-align: start;
+    gap: 50px;
+    padding: 50px 0;
 }
 
-.petal-canvas{
+.Home-sec1 {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 80px;
+}
+
+.petal-canvas {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.title-cont{
+.title-cont {
+    min-height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     width: 100%;
 }
 
-.img-cont{
+.img-cont {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.title-cont-inn{
-    width: 90%;
+@keyframes home-title-ani {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title-cont-inn {
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    animation-name: home-title-ani;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
-.home-title{
+.home-title {
     width: 100%;
     margin: 0;
 }
 
-.po-img{
-    /* left: 20px; */
-    height: 20vw;
+@keyframes po-ani {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+@keyframes po-entry-ani {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    50%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.stone{
+.po-img {
+    height: 18vw;
+    animation: po-ani 4s ease-in-out 2s infinite, po-entry-ani 2s linear;
+}
+
+
+.stone {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -63,23 +114,43 @@
     color: yellow;
 }
 
-.stone:hover{
+.stone:hover {
     transform: scale(1.1);
     background-image: url("../../assets/images/stone2.png");
     color: rgb(126, 59, 59);
 }
 
-.stone:active{
+.stone:active {
     transform: scale(1);
 }
 
-.btn-cont{
+
+@keyframes btn-cont-ani {
+    0% {
+        transform: scalex(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scalex(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scalex(1);
+        opacity: 1;
+    }
+}
+
+.btn-cont {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    /* transform: scalex(0); */
+    animation-name: btn-cont-ani;
+    animation-duration: 2s;
+    animation-timing-function: linera;
 }
 
-.btn-sec1{
+.btn-sec1 {
     height: 74px;
     width: 200px;
     cursor: pointer;
@@ -89,13 +160,20 @@
 
 
 @media (max-width: 768px) {
-    .title-cont-inn{
+    .title-cont-inn {
         width: 95%;
     }
-    .home-title{
+
+    .home-title {
         min-height: 15vh;
     }
-    .po-img{
+
+    .po-img {
         height: 25vh;
+    } 
+    .btn-sec1{
+        height: 55.5px;
+        width: 150px;
+        font-size: 22.5px;
     }
 }

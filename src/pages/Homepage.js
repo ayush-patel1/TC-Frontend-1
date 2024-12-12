@@ -5,34 +5,33 @@ import Faq from "../sections/Faq";
 import FullPageLoader from "../layout/FullPageLoader";
 import About from "../components/About";
 import Timeline from "../sections/Timeline";
-import FloatingImage from "../sections/FloatingImage";
 import Section1 from "../sections/Home/Section1";
-import PetalAnimation from "../components/PetalAnimation";
-// import { RecruitForm } from '../components/Recruitment';
+import "../sections/Home/Home.css";
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(false);
-//   useEffect(() => {
-//     AOS.init({ duration: 1000 });
-//     window.scrollTo(0, 0);
-//     setTimeout(() => {
-//       setIsLoading(false);
-//     }, 1500);
-//   }, []);
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+  }, []);
+
   return (
     <>
       {isLoading ? (
         <FullPageLoader />
       ) : (
-        <div>
+        <div className="homecontainer">
           {/* <div className="dark-overlay" style={{position:"relative", zIndex:"0"}}></div> */}
           <Section1 />
           {/* <HomeHero /> */}
           {/* <RecruitForm/> */}
           <About />
           {/* <Blog/> */}
-          {/* <Timeline />
-          <Faq /> */}
+          <Timeline />
+          <Faq />
         </div>
       )}
     </>

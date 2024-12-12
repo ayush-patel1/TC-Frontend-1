@@ -6,6 +6,8 @@ import prizeIcon from "../assets/images/HomePage/trophy.png";
 import eventsIcon from "../assets/images/HomePage/events.png";
 import participantsIcon from "../assets/images/HomePage/participants.png";
 import collegesIcon from "../assets/images/HomePage/colleges.png";
+import mantis from "../assets/images/HomePage/mantis-about.png";
+import CountUp from "react-countup";
 
 function About() {
   return (
@@ -15,7 +17,16 @@ function About() {
         {/* <FireAnimation /> */}
         {/* </div> */}
         {/* <Title color={"ABOUT"} noncolor={"US"} /> */}
-        <h1 className={styles.about_title}>ABOUT</h1>
+        {/* <h1 className={styles.about_title}>ABOUT</h1> */}
+        <div className={styles.about_title}>
+          <span style={{ "--i": 0 }}>A</span>
+          <span style={{ "--i": 1 }}>B</span>
+          <span style={{ "--i": 2 }}>O</span>
+          <span style={{ "--i": 3 }}>U</span>
+          <span style={{ "--i": 4 }}>
+            T <img src={mantis} alt="" />
+          </span>
+        </div>
         <div className={styles.about_des_out}>
           <div className={styles.about_des_in}>
             <p>
@@ -27,29 +38,81 @@ function About() {
             </p>
           </div>
         </div>
-        <div className={styles.about_boxes}>
+        <div className={styles.about_boxes} data-aos="fade-up">
           <div className={styles.about_box}>
-            <img
-              className={styles.abox_icon}
-              src="https://www.tryst-iitd.org/static/media/about-5.973f96e28be79bfad0f1c0b987f3ab85.svg"
-              alt="icon"
-            />
-            <div className={styles.abox_num}> 10,000 +</div>
+            <img className={styles.abox_icon} src={eventsIcon} alt="icon" />
+            {/* <div className={styles.abox_num}> 10,000 +</div> */}
+            <CountUp
+              start={0}
+              end={10000}
+              suffix="+"
+              delay={0}
+              enableScrollSpy="true"
+              scrollSpyOnce='true'
+            >
+              {({ countUpRef }) => (
+                <div className={styles.abox_num}>
+                  <span ref={countUpRef} />
+                </div>
+              )}
+            </CountUp>
             <div className={styles.abox_Title}>FOOTFALL</div>
           </div>
           <div className={styles.about_box}>
             <img className={styles.abox_icon} src={collegesIcon} alt="icon" />
-            <div className={styles.abox_num}> 50 +</div>
+            {/* <div className={styles.abox_num}> 50 +</div> */}
+            <CountUp
+              start={0}
+              end={50}
+              suffix="+"
+              delay={0}
+              enableScrollSpy="true"
+              scrollSpyOnce="true"
+            >
+              {({ countUpRef }) => (
+                <div className={styles.abox_num}>
+                  <span ref={countUpRef} />
+                </div>
+              )}
+            </CountUp>
             <div className={styles.abox_Title}>COLLEGES</div>
           </div>
           <div className={styles.about_box}>
             <img className={styles.abox_icon} src={eventsIcon} alt="icon" />
-            <div className={styles.abox_num}> 30 +</div>
+            {/* <div className={styles.abox_num}> 30 +</div> */}
+            <CountUp
+              start={0}
+              end={30}
+              suffix="+"
+              delay={0}
+              enableScrollSpy="true"
+              scrollSpyOnce="true"
+            >
+              {({ countUpRef }) => (
+                <div className={styles.abox_num}>
+                  <span ref={countUpRef} />
+                </div>
+              )}
+            </CountUp>
             <div className={styles.abox_Title}>EVENTS</div>
           </div>
           <div className={styles.about_box}>
             <img className={styles.abox_icon} src={prizeIcon} alt="icon" />
-            <div className={styles.abox_num}> 6 Lacs +</div>
+            {/* <div className={styles.abox_num}> 6 Lacs +</div> */}
+            <CountUp
+              start={0}
+              end={6}
+              suffix=" Lacs+"
+              delay={0}
+              enableScrollSpy="true"
+              scrollSpyOnce="true"
+            >
+              {({ countUpRef }) => (
+                <div className={styles.abox_num}>
+                  <span ref={countUpRef} />
+                </div>
+              )}
+            </CountUp>
             <div className={styles.abox_Title}>PRIZES</div>
           </div>
           <div className={styles.about_box}>
@@ -58,7 +121,21 @@ function About() {
               src={participantsIcon}
               alt="icon"
             />
-            <div className={styles.abox_num}> 200 +</div>
+            {/* <div className={styles.abox_num}> 200 +</div> */}
+            <CountUp
+              start={0}
+              end={200}
+              suffix="+"
+              delay={0}
+              enableScrollSpy="true"
+              scrollSpyOnce="true"
+            >
+              {({ countUpRef }) => (
+                <div className={styles.abox_num}>
+                  <span ref={countUpRef} />
+                </div>
+              )}
+            </CountUp>
             <div className={styles.abox_Title}>PARTICIPANTS</div>
           </div>
         </div>

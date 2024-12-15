@@ -13,6 +13,7 @@
     "dotenv-webpack": "^8.0.1",
     "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^3.1.0",
     "react-hot-toast": "^2.4.1",
@@ -26,7 +27,9 @@
     "redux-thunk": "^2.4.2",
     "styled-components": "^6.0.7",
     "swiper": "^10.3.1",
-    "vanilla-tilt": "^1.8.1"
+    "three": "^0.169.0",
+    "vanilla-tilt": "^1.8.1",
+    "vanta": "^0.5.24"
   },
   "scripts": {
     "start": "react-scripts start",

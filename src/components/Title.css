@@ -9,7 +9,8 @@
 
 .title h1{
   font-size: 3.4rem;
-  font-family: 'AavartanFont';
+  /* font-family: 'AavartanFont'; */
+
 }
 
 .heading {
@@ -24,7 +25,6 @@
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
             font-family: 'AavartanFont';
-
 }
 
 @media(width<769px){

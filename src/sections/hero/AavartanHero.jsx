@@ -30,6 +30,11 @@ const AavartanHero = () => {
             <img src={plants} alt="plant image"/>
           </div> */}
 
+        {/* plants Container */}
+        {/* <div className="plants">
+            <img src={plants} alt="plant image"/>
+          </div> */}
+
         <div className="container">
        
           <div className="row">

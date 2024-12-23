@@ -63,7 +63,7 @@ const EventSec = () => {
             <div className={styles.thumbnail} ref={thumbnailRef}>
                 {EventsList.map(event => (
                     <Thumbnail key={event.id} props={event} />
-                ))}
+                ))}     
             </div>
 
             <div className={styles.arrows}>

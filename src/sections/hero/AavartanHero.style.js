@@ -4,9 +4,11 @@ const rocketAnimation = keyframes`
     0%,
     100% {
         bottom: 1rem;
+        bottom: 1rem;
     }
 
     50% {
+        bottom: 3rem;
         bottom: 3rem;
     }
 `;
@@ -27,9 +29,11 @@ const rocketAnimation2 = keyframes`
     0%,
     100% {
         left:0.5rem;
+        left:0.5rem;
     }
 
     50% {
+        left:2rem;
         left:2rem;
     }
 `;
@@ -141,13 +145,18 @@ const AavartanStyleWrapper = styled.section`
         position: absolute;
         bottom: 0.5rem;
         right: 2rem;
+        bottom: 0.5rem;
+        right: 2rem;
         animation: ${rocketAnimation} 5s infinite;
         z-index: 0;
+        height: 9vw;
         height: 9vw;
       }
 
       .rocket_thumb2 {
         position: absolute;
+        top: 8rem;
+        left: 1rem;
         top: 8rem;
         left: 1rem;
         animation: ${rocketAnimation2} 5s infinite;

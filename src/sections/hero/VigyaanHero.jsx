@@ -1,11 +1,8 @@
-// import Button from "components/button";
-// import BannerStyleWrapper from "./Banner.styl
 import planet from "../../assets/images/vighero/minecraft-png-13361.png";
 import ring from "../../assets/images/vighero/planet_orbit.webp";
 import VigyaanStyleWrapper from "./VigyaanHero.style";
 import font from '../../assets/Aavartan New/VIGYAAN-12-8-2024.png'
  import prop6 from "../../assets/prop6.webp";
-//  import prop7 from "../../assets/prop7.webp";
 import prop8 from "../../assets/prop8.webp";
 import prop5 from "../../assets/minecraft-png-13354.png";
 import prop7 from "../../assets/minecraft-png-13357.png"

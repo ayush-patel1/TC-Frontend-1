@@ -41,6 +41,7 @@ import TalentShowForm from "./forms/TalentShowForm";
 import TicTacToeForm from "./forms/TicTacToeForm";
 import EcopolisForm from "./forms/Ecopolis";
 import HydroliftForm from "./forms/Hydrolift";
+import ChatAssistant from "../src/components/ChatAssistant";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -64,6 +65,7 @@ function CustomCursorContainer({ children }) {
 function App() {
   return (
     <div>
+      <ChatAssistant />
       <CustomCursorContainer>
         <ContentContainer>
           <BrowserRouter>

@@ -34,7 +34,7 @@ The comfortable and trendy attire awaits you! Hurry up and Order now through the
 Price: Rs 350
 
           </p>
-          <div className="btn-container" style={{ display: "flex",zIndex:2000 }}>
+          <div className="btn-container" style={{ display: "flex",zIndex:1 }}>
                  <a className="cta" href="https://docs.google.com/forms/d/e/1FAIpQLScJgWhzPO5QMSWxAml2-Y8K9ob6QWCFvyTwxDNbPZcC-LCmRg/viewform">
                 <span>BUY NOW</span>
                 <span>

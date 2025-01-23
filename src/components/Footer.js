@@ -17,7 +17,7 @@ import yt from "../assets/svgs/youtube.svg"
 function Footer (){
 	let curQuote = Quotes[Math.floor(Math.random() * Quotes.length)];
 	return (
-		<div>
+		<div style={{position:"relative", zIndex:"10"}}>
 			<footer className={styles.footer}>
 				<div  className={styles.fcontainer}>
 					<div className={styles.frow}>

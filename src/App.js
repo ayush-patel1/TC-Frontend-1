@@ -41,6 +41,7 @@ import TalentShowForm from "./forms/TalentShowForm";
 import TicTacToeForm from "./forms/TicTacToeForm";
 import EcopolisForm from "./forms/Ecopolis";
 import HydroliftForm from "./forms/Hydrolift";
+import OpenMicForm from "./forms/OpenMicForm";
 import ChatAssistant from "../src/components/ChatAssistant";
 
 const BackgroundContainer = styled.div`
@@ -178,6 +179,11 @@ function App() {
                 exact="true"
                 path="/events/hydroliftForm"
                 element={<HydroliftForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/openMicForm"
+                element={<OpenMicForm/>}
               />
 
               <Route

@@ -219,15 +219,26 @@ export const EventsList = [
   //   link:"/events/hydroliftForm",
   //   deadline:"27th October 8 P.M."
   // },
+  // {
+  //   id: 19,
+  //   name: "SPEEDCUBING",
+  //   imgUrl: event19,
+  //   date:"28th October",
+  //   time:"1 P.M.",
+  //   venue:"Left Garden",
+  //   des: "Twist. Turn. Triumph. 🕒 Join the speedcubing race and prove you're the fastest!",
+  //   link:"/events/SpeedCubingForm",
+  //   deadline:"27th October 8 P.M."
+  // },
   {
-    id: 19,
-    name: "SPEEDCUBING",
-    imgUrl: event19,
+    id: 20,
+    name: "OPENMIC",
+    imgUrl: event20,
     date:"28th October",
     time:"1 P.M.",
-    venue:"Left Garden",
-    des: "Twist. Turn. Triumph. 🕒 Join the speedcubing race and prove you're the fastest!",
-    link:"/events/SpeedCubingForm",
+    venue:"Behind AMUL PARLOUR",
+    des: "A fun-filled event on day one! Showcase your talent—singing, poetry, mimicry, or any act. Groups are welcome to perform as a band!",
+    link:"/events/OpenMicForm",
     deadline:"27th October 8 P.M."
   }
 

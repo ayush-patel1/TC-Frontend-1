@@ -1,158 +1,158 @@
-import event1 from '../assets/eventsPoster/terrainTreader.webp'
+import event1 from '../assets/eventsAssets/Images/bgmi.webp'
 import event2 from '../assets/eventsAssets/Images/roboSoccer.webp'
 import event3 from '../assets/eventsAssets/Images/bgmi.webp'
-import event4 from '../assets/eventsPoster/aerofilia.webp'
-import event5 from '../assets/eventsPoster/logoDesign.webp'
+import event4 from '../assets/eventsAssets/Images/bgmi.webp'
+import event5 from '../assets/eventsAssets/Images/bgmi.webp'
 import event6 from '../assets/eventsAssets/Images/speedCubing.webp'
-import event7 from '../assets/eventsPoster/codemimeQuest.webp'
-import event8 from '../assets/eventsPoster/circuitrix.webp'
+import event7 from '../assets/eventsAssets/Images/bgmi.webp'
+import event8 from '../assets/eventsAssets/Images/bgmi.webp'
 import event9 from '../assets/eventsAssets/Images/valorant.webp'
-import event10 from '../assets/eventsPoster/autocad.webp'
-import event11 from '../assets/eventsPoster/survivalArtboard.webp'
-import event12 from '../assets/eventsPoster/reactionRacing.webp'
+import event10 from '../assets/eventsAssets/Images/bgmi.webp'
+import event11 from '../assets/eventsAssets/Images/bgmi.webp'
+import event12 from '../assets/eventsAssets/Images/bgmi.webp'
 import event13 from '../assets/eventsAssets/Images/treasureHunt.webp'
-import event14 from '../assets/eventsPoster/mechanicalJunkyard.webp'
+import event14 from '../assets/eventsAssets/Images/bgmi.webp'
 import event15 from '../assets/eventsAssets/Images/talentShow.webp'
 import event16 from '../assets/eventsAssets/Images/ticTacToe.jpg'
-import event17 from '../assets/eventsPoster/ecopolis.webp'
-import event18 from '../assets/eventsPoster/hydrolift.webp'
-import event19 from '../assets/eventsPoster/comingSoon.webp'
-import event20 from '../assets/eventsPoster/comingSoon.webp'
+import event17 from '../assets/eventsAssets/Images/bgmi.webp'
+import event18 from '../assets/eventsAssets/Images/bgmi.webp'
+import event19 from '../assets/eventsAssets/Images/bgmi.webp'
+import event20 from '../assets/eventsAssets/Images/bgmi.webp'
 
 
 export const EventsList = [
-    /*{
+    {
       id: 1,
-      name: "TERRAIN TREADER",
+      name: "TECHNO GRAPHIX",
       imgUrl: event1,
-      date:"28th October",
-      time:"12 P.M.",
-      venue:"Front Of CCD",
-      des: "Life is full of hurdles, and so is Terrain Treader 2.0 . Imagine crafting your own bots, unleashing them into a maze of challenges.",
-      link:"/events/terrainTreaderForm",
-      deadline:"26th October"
-    },*/
+      date:"comming soon",
+      time:"comming soon",
+      venue:"G-4",
+      des: "An Event based on Graphic designing/poster making based on the theme of the fest.",
+      link:"/events/technoGraphixForm",
+      deadline:"comming soon"
+    },
     {
       id: 2,
-      name: "ROBO SOCCER",
+      name: "DSA MARATHON",
       imgUrl: event2,
       date:"29th October",
       time:"12 P.M.",
-      venue:"Front Of CCD",
-      des: "Where Champions Are Forged in the Fires of Innovation!",
-      link:"/events/roboSoccerForm",
-      deadline:"26th October"
+      venue:"S-4",
+      des: "An event based on quick selection and solving maximum questions from a set of 30 Standard DSA questions.",
+      link:"/events/dsaMarathonForm",
+      deadline:"comming soon"
     },
     {
       id: 3,
-      name: "BGMI TOURNAMENT",
+      name: "DRONE RACING",
       imgUrl: event3,
       date:"27-28th October",
       time:"12 P.M.",
-      venue:"Online",
-      des: "Enter a digital realm where bullets meet anime magic – the BGMI Tournament awaits!",
-      link:"/events/bgmiForm",
-      deadline:"26th October"
+      venue:"Outdoors",
+      des: "Each Teams have to bring their own drone and complete the given track in minimum time.",
+      link:"/events/droneRacingForm",
+      deadline:"comming soon"
     },
-    /*{
+    {
       id: 4,
-      name: "AEROFILIA",
+      name: "TECH CLASH",
       imgUrl: event4,
       date:"29th October",
       time:"2 P.M. - 5 P.M.",
-      venue:"S-42",
-      des: "Bridge the gap! Can your bridge handle the weight",
-      link:"/events/aerofiliaForm",
+      venue:"Any Classroom",
+      des: "Tech Clash is a debate competition on cutting-edge tech topics like AI, Blockchain, and data privacy.",
+      link:"/events/techClashForm",
       deadline:"27th October"
     },
     {
       id: 5,
-      name: "LOGO DESIGN",
+      name: "CODE SPRINT RELAY",
       imgUrl: event5,
       date:"29th October",
       time:"11 A.M.",
-      venue:"F-42",
-      des: "Embark on a creative exploration of design excellence at our Logo Designing Event. Join us in celebrating the synergy of art, innovation, and limitless creativity!",
-      link:"/events/logoDesignForm",
+      venue:"CCC Lab",
+      des: "A dynamic, team-based coding challenge where teamwork, creativity, and problem-solving are tested.",
+      link:"/events/codeSprintRelayForm",
       deadline:"28th October"
-    },*/
+    },
     {
       id: 6,
-      name: "SPEED CUBING",
+      name: "DIMENSIONS (AUTOCAD)",
       imgUrl: event6,
       date:"28th October",
       time:"4 P.M.",
-      venue:"Cricket Ground",
-      des: "Can you solve the cube and seize glory? The challenge awaits, and victory beckons!",
-      link:"/events/speedCubingForm",
+      venue:"Any Classroom",
+      des: "AUTOCAD enthusiasts can showcase their talent by creating designs.",
+      link:"/events/dimensionsForm",
       deadline:"27th October"
     },
-    /*{
+    {
       id: 7,
-      name: "CODEMIME QUEST",
+      name: "ECOPOLIS",
       imgUrl: event7,
       date:"28th October",
       time:"11:30 A.M. to 2:30 P.M.",
-      venue:"F-42",
-      des: "CodeMime Quest: Where Programming Meets Pantomime!",
-      link:"/events/codemimeQuestForm",
+      venue:"G-4",
+      des: "Design with Creativity tackles real-life architectural challenges in India, We'll focus on the real problems of our own country.",
+      link:"/events/ecopolisForm",
       deadline:"27th October"
     },
     {
       id: 8,
-      name: "CIRCUITRIX 2.0",
+      name: "ROBO WARS",
       imgUrl: event8,
       date:"R1: 27th, R2 & 3: 28th",
       time:"R1(Online): 10-10:30PM R2&3: 1-4PM",
-      venue:"S-42",
-      des: "Dynamic competition focused on the art and science of assembling circuits",
-        link:"/events/circuitrix2Form",
-        deadline:"26th October, 6 P.M."
-    },*/
+      venue:"Outdoors",
+      des: "A fun and exhilarating event, where participants will bring their own small robots for an epic death match.",
+      link:"/events/roboWarsForm",
+      deadline:"26th October, 6 P.M."
+    },
     {
       id: 9,
-      name: "VALORANT TOURNAMENT",
+      name: "PIXEL PLAYGROUND",
       imgUrl: event9,
       date:"29th October",
       time:"11 A.M.",
       venue:"CCC",
-      des: "Amidst the fervor of Valorant's arena, where tactical genius and epic showdowns reign supreme.",
-      link:"/events/valorantForm",
+      des: "A fast-paced video editing competition where participants capture and craft a short film showcasing the 2-day fest.",
+      link:"/events/pixelPlaygroundForm",
       deadline:"28th October, 6 P.M."
     },
-    /*{
+    {
       id: 10,
-      name: "AUTOCAD",
+      name: "OCTOBER SKY",
       imgUrl: event10,
       date:"28th October",
       time:"11 A.M.",
-      venue:"G-4",
-      des: "Dive into the world of creativity with Dimensions. Let your imagination soar to new heights as you envision the extraordinary. Design the future and leave your mark on the world.",
-      link:"/events/autocadForm",
+      venue:"Outdoors",
+      des: "Self-made rocket launching event.",
+      link:"/events/octoberSkyForm",
       deadline:"27th October"
     },
     {
       id: 11,
-      name: "SURVIVAL",
+      name: "ESCAPE THE MATRIX",
       imgUrl: event11,
       date:"28th October",
       time:"2 P.M.",
       venue:"S-4",
-      des: "Get the opportunity to script an epic tale of survival! Here, every choice counts, for the consequences remain shrouded in mystery. Remember, Survival is only Of The Fittest.",
-      link:"/events/survivalForm",
+      des: "A survival quiz testing knowledge, problem-solving, and quick thinking to escape the virtual matrix.",
+      link:"/events/escape",
       deadline:"25th October"
     },
-    // {
-    //   id: 12,
-    //   name: "REACTION RACING",
-    //   imgUrl: event12,
-    //   date:"29th October",
-    //   time:"2 P.M. to 5 P.M.",
-    //   venue:"Amul Parlour",
-    //   des: "Ready, steady, react! Brace yourself for a pulse-pounding spectacle of physics showdown with chemical chaos in this turbo-charged event. Can your reaction propel you to victory? Get ready to race, roar, and discover!",
-    //   link:"/events/reactionRacingForm",
-    //   deadline:"29th October"
-    // },
+    {
+      id: 12,
+      name: "REACTION RACING",
+      imgUrl: event12,
+      date:"29th October",
+      time:"2 P.M. to 5 P.M.",
+      venue:"Amul Parlour",
+      des: "Ready, steady, react! Brace yourself for a pulse-pounding spectacle of physics showdown with chemical chaos in this turbo-charged event. Can your reaction propel you to victory? Get ready to race, roar, and discover!",
+      link:"/events/reactionRacingForm",
+      deadline:"29th October"
+    },
     {
       id: 13,
       name: "MOCK CID (TREASURE HUNT 2.0)",
@@ -174,7 +174,7 @@ export const EventsList = [
       des: "This event is an on-spot design and fabrication task for the teams, we will provide them with some mechanical junk or waste, the teams will be provided some limited time to discuss and execute their ideas of making something creative with that junk.",
       link:"/events/mechanicalJunkyardForm",
       deadline:"27th October"
-    },*/
+    },
     {
       id: 15,
       name: "TALENT SHOW",
@@ -197,7 +197,7 @@ export const EventsList = [
       link:"/events/ticTacToeForm",
       deadline:"coming soon"
     },
-    /*{
+    {
     id: 17,
     name: "ECOPOLIS",
     imgUrl: event17,
@@ -218,6 +218,6 @@ export const EventsList = [
     des: "Elevate your Engineering with the power of Pascal's law.",
     link:"/events/hydroliftForm",
     deadline:"27th October 8 P.M."
-  }*/
+  }
 
   ];

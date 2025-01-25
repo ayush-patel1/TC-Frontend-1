@@ -48,6 +48,7 @@
 
 .carousel .list .item .des{
     font-family: 'poppins';
+    margin-bottom: 10px;
 }
 
 .carousel .list .item .title{
@@ -304,10 +305,34 @@
     }
 }
 @media screen and (max-width: 678px) {
+    
     .carousel .list .item .content{
+        top: 13%;
+    }
+    .carousel .list .item .title{
+        margin-top: 5px;
+        line-height: 1.5rem;
+    }
+    .carousel .list .item .topic{
+        grid-template-columns: 100px 200px;
+    }
+    .carousel .list .item .buttons{
+        grid-template-columns: repeat(2,120px);
+        margin-top: 10px;
+    }
+    .carousel .list .item .content .des{
         padding-right: 0;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    .carousel .list .item .content .topic{
+        padding-right: 0;
+        font-size: 15px;
+    }
+    .carousel .list .item .content .author{
+        font-size: 13px;
     }
     .carousel .list .item .content .title{
-        font-size: 30px;
+        font-size: 20px;
     }
 }

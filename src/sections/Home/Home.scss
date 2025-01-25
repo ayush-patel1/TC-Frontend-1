@@ -10,8 +10,20 @@
   gap: 25vmax;
 }
 
+.hero-vid{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
 .Home-sec1 {
-  /* min-height: 90vh; */
+  height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,10 +38,12 @@
 }
 
 .title-cont {
-  min-height: 60vh;
+  z-index: 2;
+  // min-height: 60vh;
+  height: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
   width: 100%;
 }
@@ -62,9 +76,9 @@
   justify-content: center;
   align-items: center;
 
-  animation-name: home-title-ani;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
+  // animation-name: home-title-ani;
+  // animation-duration: 2s;
+  // animation-timing-function: ease-out;
 }
 
 .home-title {
@@ -354,37 +368,60 @@ $bubble-border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white,
 
 .btn-cont {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
   width: 100%;
   /* transform: scalex(0); */
-  animation-name: btn-cont-ani;
-  animation-duration: 2s;
-  animation-timing-function: linera;
+  // animation-name: btn-cont-ani;
+  // animation-duration: 2s;
+  // animation-timing-function: linera;
 }
 
 .btn-sec1 {
   height: 74px;
-  width: 200px;
+  width: 30%;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 35px;
   font-family: "chisled", Courier, monospace;
+  border: solid red 6px;
+  box-shadow: 5px 5px 3px black;
+  border-radius: 30px;
+
+  transition: all .2s ease;
+}
+.btn-sec1:hover{
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
+  .Home-sec1{
+    // justify-content: flex-start;
+  }
+  .title-cont{
+    // height: 60%;
+    height: auto;
+  }
   .title-cont-inn {
     width: 95%;
   }
 
   .home-title {
     min-height: 15vh;
+    margin-bottom: 50px;
   }
 
   .po-img {
     height: 25vh;
   }
+  .btn-cont{
+    // margin-top: 30px;
+    flex-direction: column;
+    gap: 20px;
+  }
   .btn-sec1 {
-    height: 55.5px;
-    width: 150px;
+    width: 80%;
+    height: 50px;
     font-size: 22.5px;
   }
 }

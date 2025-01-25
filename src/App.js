@@ -194,6 +194,11 @@ function App() {
                 path="/events/codesprintrelayForm"
                 element={<CodeSprintRelayForm />}
               />
+               <Route
+                exact="true"
+                path="/events/openMicForm"
+                element={<OpenMicForm />}
+              />
               <Route
                 exact="true"
                 path="/events/dsaMarathonForm"

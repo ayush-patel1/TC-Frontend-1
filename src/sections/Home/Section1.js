@@ -17,10 +17,10 @@ export default function Section1() {
           <img className="po-img title-comp" src={po} alt="" />
         </div> */}
         <div className="btn-cont">
-          <button className="stone btn-sec1" onClick={(e) => {
+          <button className="btn-sec1" onClick={(e) => {
             navigate('/vigyaan')
           }}>VIGYAAN</button>
-          <button className="stone btn-sec1" onClick={(e) => {
+          <button className="btn-sec1" onClick={(e) => {
             navigate('/ignite')
           }}>igNITe</button>
         </div>

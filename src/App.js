@@ -42,6 +42,10 @@ import TicTacToeForm from "./forms/TicTacToeForm";
 import EcopolisForm from "./forms/Ecopolis";
 import HydroliftForm from "./forms/Hydrolift";
 import ChatAssistant from "../src/components/ChatAssistant";
+import CodeSprintRelayForm from "./forms/CodeSprintRelay";
+import DsaMarathonForm from "./forms/DsaMarathonForm";
+import DimensionsForm from "./forms/DimensionsForm.js";
+import DroneRaceForm from "./forms/DroneRaceForm.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -178,6 +182,26 @@ function App() {
                 exact="true"
                 path="/events/hydroliftForm"
                 element={<HydroliftForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/dimensionForm"
+                element={<DimensionsForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/codesprintrelayForm"
+                element={<CodeSprintRelayForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/dsaMarathonForm"
+                element={<DsaMarathonForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/droneraceForm"
+                element={<DroneRaceForm />}
               />
 
               <Route

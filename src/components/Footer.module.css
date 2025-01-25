@@ -24,7 +24,7 @@ ul{
     padding: 50px 50px 60px 50px;
 	/* border-top: 0.5px solid whitesmoke; */
 	/* position: relative; */
-	/* z-index: 3; */
+	z-index: 1000;
 }
 
 .fcontainer{

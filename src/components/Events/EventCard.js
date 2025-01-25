@@ -19,7 +19,7 @@ const EventCard = ({props}) => {
             <div className={styles.topic}><span>Deadline:</span> <span>{props.deadline}</span></div>
             <div className={styles.buttons}>
                 <button><Link style={{textDecoration: 'none'}} to={props.link}>SEE MORE</Link></button>
-                <button><Link style={{color:'white', textDecoration:'none'}} to={props.link}>REGISTER</Link></button>
+                <button><Link style={{color:'white', textDecoration:'none', fontWeight: 'bold'}} to={props.link}>REGISTER</Link></button>
             </div>
         </div>
     </div>

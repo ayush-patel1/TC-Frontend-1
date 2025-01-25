@@ -182,7 +182,7 @@ export const EventsList = [
       date:"28th October",
       time:"3-6 P.M.",
       venue:"Amul Parlour",
-      des: "An engaging show to provide peers a platform to discover themselves and showcase their talents. ",
+      des: "Talent Show is where students will showcase diverse talents like singing, dancing, acting, comedy, and more.",
       link:"/events/talentShowForm",
       deadline:"26th October"
     },

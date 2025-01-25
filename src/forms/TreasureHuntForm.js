@@ -135,6 +135,39 @@ const TreasureHuntForm = () => {
               )}
             </div>
           </div>
+          <div className="mint_right">
+            <div className="mright">
+              <div data-aos="fade-down" className="mint_time">
+                <h4></h4>
+                <h3 className="metaportal_fn_countdown">
+                  Rules and Regulations
+                </h3>
+              </div>
+              <div data-aos="fade-down" className="mint_info">
+                <p>• An interesting on-campus murder story can be created.</p>
+                <p>• Clues are left behind all around the campus.</p>
+                <p>• Some volunteers and team members can act as witnesses.</p>
+                <p>• The one who finds out the real murderer first wins.</p>
+                <p>• Multiple participating teams (5-6 teams).</p>
+                <p>
+                  • Clues can be left behind all around the campus (left garden,
+                  central garden, parking area, in Mandir area, etc.).
+                </p>
+                <p>
+                  • A quiz round first for the selection of participating teams.
+                </p>
+                <p>• Online registrations.</p>
+                <p>
+                  • This year we can conduct this on both days if it attracts a
+                  great audience on the first day
+                </p>
+              </div>
+
+              {/* <a style={{ textDecoration: "none" }} href={docs}>
+                <span className="metaportal_fn_button_4">Download PDF</span>
+              </a> */}
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -10,14 +10,13 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
-const SpeedCubingForm = () => {
+const OrigamiForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("speedCubingForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("origami")) || {
     Name: "",
-    Email: "",
     Phone: "",
     Branch: "",
     Gender: "",
@@ -34,7 +33,7 @@ const SpeedCubingForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("speedCubingForm", JSON.stringify(update));
+    localStorage.setItem("OrigamiForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -58,7 +57,6 @@ const SpeedCubingForm = () => {
     setSubmit(true);
     let condition =
       form.Name !== "" &&
-      form.Email !== "" &&
       form.Phone !== "" &&
       form.Gender !== "" &&
       form.Branch !== "" &&
@@ -68,15 +66,11 @@ const SpeedCubingForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(
-          `/server/register?event=speedCubing`,
-          form,
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        const res = await axios.post(`/server/register?event=origami`, form, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         setValue(true);
         alert(res.data.message);
       } catch (err) {
@@ -95,7 +89,7 @@ const SpeedCubingForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"SPEED"} noncolor={"CUBING"} />
+      <Title color={"Origami"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -116,16 +110,6 @@ const SpeedCubingForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="emailId"
-                    type="text"
-                    name="Email"
-                    placeholder="Email Id"
-                    onChange={(e) => handle(e)}
-                    value={form.Email}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
                     id="whatsappNumber"
                     type="text"
                     name="Phone"
@@ -133,10 +117,10 @@ const SpeedCubingForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Phone}
                   />
-                  <span style={{ fontSize: "0.7rem" ,color:"white" }}>
+                  <span style={{ fontSize: "0.7rem", color: "white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Phone.length > 10 && (
+                  { form.Phone.length > 10 && (
                     <p style={{ color: "red" }}>
                       Enter a number of 10 digits only.
                     </p>
@@ -208,45 +192,25 @@ const SpeedCubingForm = () => {
               ) : (
                 <>Submitting...</>
               )}
-              <div>
-                {isSubmitted && (
-                  <div>
-                    <div>
-                      <a
-                        style={{ textDecoration: "none" }}
-                        href="https://chat.whatsapp.com/LhuUE4GCgnhGy5nYrJ9S3q"
-                      >
-                        <span className="metaportal_fn_button_4">
-                          Join WA Group
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                )}
-              </div>
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
           </div>
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Speed Cubing</h4>
+                <h4>Origami</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p>• Individual participants.</p>
                 <p>
-                  • According to number of participants we’ll divide all
-                  participants in group of 6 people.
+                  • Theme – space craft parts, vehicle, object, architectural,
+                  parts of buildings aircraft, decoration animal, etc.
                 </p>
-                <p>• For each group we’ll conduct the competition.</p>
-                <p>• There will be a time-based winner for each group.</p>
-                <p>
-                  • In second match all the winners from first match will be
-                  competing against each other.
-                </p>
+                <p>• Time limit 2 hrs </p>
+                <p>• Single person participation </p>
+                <p>• Only use papers provided to them</p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>
                 {/* <span className="metaportal_fn_button_4">Download PDF</span> */}
@@ -259,4 +223,4 @@ const SpeedCubingForm = () => {
   );
 };
 
-export default SpeedCubingForm;
+export default OrigamiForm;

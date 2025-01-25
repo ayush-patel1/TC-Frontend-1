@@ -149,7 +149,7 @@ const OpenMicForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"TALENT"} noncolor={"SHOW"} />
+      <Title color={"Open"} noncolor={"Mic"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -258,7 +258,7 @@ const OpenMicForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Talent Show</h4>
+                <h4>Open Mic</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>

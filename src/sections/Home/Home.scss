@@ -10,8 +10,20 @@
   gap: 25vmax;
 }
 
+.hero-vid{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
 .Home-sec1 {
-  /* min-height: 90vh; */
+  height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +38,7 @@
 }
 
 .title-cont {
+  z-index: 2;
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -354,7 +367,8 @@ $bubble-border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white,
 
 .btn-cont {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
   width: 100%;
   /* transform: scalex(0); */
   animation-name: btn-cont-ani;

@@ -33,10 +33,6 @@ const Homepage = () => {
           <Timeline />
           <Faq />
           {/* <RecruitForm/> */}
-          <About />
-          {/* <Blog/> */}
-          <Timeline />
-          <Faq />
         </div>
       )}
     </>

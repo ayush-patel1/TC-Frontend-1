@@ -208,9 +208,14 @@ const ValorantForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
+                  {form.Leader_whatsapp.length > 10 && (
+                    <p style={{ color: "red" }}>
+                      Enter a number of 10 digits only.
+                    </p>
+                  )}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -553,6 +558,13 @@ const ValorantForm = () => {
           </div>
           <div className="mint_right">
             <div className="mright">
+            <div data-aos="fade-down" className="mint_time">
+                <h4>VALORANT TOURNAMENT</h4>
+                <h3 className="metaportal_fn_countdown">Description</h3>
+              </div>
+              <div data-aos="fade-down" style={{marginBottom:"3rem"}} className="mint_info">
+                <p>Valorant Gaming competition.</p>
+              </div>
               <div data-aos="fade-down" className="mint_time">
                 <h4>VALORANT TOURNAMENT</h4>
                 <h3 className="metaportal_fn_countdown">Rules</h3>
@@ -569,24 +581,9 @@ const ValorantForm = () => {
                 <p>● These matches will be conducted prior through a Discord server</p>
                 <p>● The semifinal and final between 4 and 2 teams respectively played offline</p>
               </div>
-              <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <h4>VALORANT TOURNAMENT</h4>
-                <h3 className="metaportal_fn_countdown">Requirements</h3>
-              </div>
-              <div data-aos="fade-down" className="mint_info">
-                <p>●	An online form for early registrations</p>
-                <p>●	Stable and high-speed internet </p>
-                <p>●	Setting up a Discord server for the tournament</p>
-                <p>●	2-3 TC members and 4 volunteers</p>
-                <p>Winners : Assured Exciting Prizes</p>
-              </div>
-              <a style={{ textDecoration: "none" }} href={docs}>
+              {/* <a style={{ textDecoration: "none" }} href={docs}>
                 <span className="metaportal_fn_button_4">Download PDF</span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

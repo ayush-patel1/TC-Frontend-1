@@ -188,72 +188,72 @@ export const EventsList = [
   //     link:"/events/dBugShowdownForm",
   //     deadline:"comming soon"
   //   },
-  //   {
-  //     id: 16,
-  //     name: "MOCK CID",
-  //     imgUrl: event16,
-  //     date:"comming soon",
-  //     time:"comming soon",
-  //     venue:"Amul Parlor",
-  //     des: "A thriller version of Treasure Hunt.",
-  //     link:"/events/mockCIDForm",
-  //     deadline:"coming soon"
-  //   },
-  //   {
-  //   id: 17,
-  //   name: "GIANT KERPLUNK",
-  //   imgUrl: event17,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"Left Garden/Amul Parlor",
-  //   des: "A classic kerplunk game of carefully removing the sticks from a tube without causing the marbles to fall.",
-  //   link:"/events/giantKerplunkForm",
-  //   deadline:"coming soon"
-  // },
-  // {
-  //   id: 18,
-  //   name: "OPEN MIC",
-  //   imgUrl: event18,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"AMUL PARLOUR",
-  //   des: "A fun event on Day 1 where participants can entertain the audience with singing, poetry, mimicry, or any act. Groups can also perform as a band.",
-  //   link:"/events/openMicForm",
-  //   deadline:"comming soon"
-  // },
-  // {
-  //   id: 19,
-  //   name: "SPEED CUBING",
-  //   imgUrl: event19,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"Left Garden",
-  //   des: "Cube solving competition.",
-  //   link:"/events/speedCubingForm",
-  //   deadline:"comming soon"
-  // },
-  // {
-  //   id: 20,
-  //   name: "VALORANT TOURNAMENT",
-  //   imgUrl: event20,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"CCC",
-  //   des: "Valorant Gaming competition.",
-  //   link:"/events/valorantForm",
-  //   deadline:"comming soon"
-  // },
-  // {
-  //   id: 21,
-  //   name: "COSPLAY COMPETITION",
-  //   imgUrl: event21,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"YOGA HALL",
-  //   des: "Participants dress up in characters or object and act or change their accent according to their character.",
-  //   link:"/events/cosplayCompetitionForm",
-  //   deadline:"comming soon"
-  // },
+    {
+      id: 16,
+      name: "MOCK CID",
+      imgUrl: event16,
+      date:"comming soon",
+      time:"comming soon",
+      venue:"Amul Parlor",
+      des: "A thriller version of Treasure Hunt.",
+      link:"/events/treasureHuntForm",
+      deadline:"coming soon"
+    },
+    {
+    id: 17,
+    name: "GIANT KERPLUNK",
+    imgUrl: event17,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"Left Garden/Amul Parlor",
+    des: "A classic kerplunk game of carefully removing the sticks from a tube without causing the marbles to fall.",
+    link:"/events/giantKerplunkForm",
+    deadline:"coming soon"
+  },
+  {
+    id: 18,
+    name: "OPEN MIC",
+    imgUrl: event18,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"AMUL PARLOUR",
+    des: "A fun event on Day 1 where participants can entertain the audience with singing, poetry, mimicry, or any act. Groups can also perform as a band.",
+    link:"/events/openMicForm",
+    deadline:"comming soon"
+  },
+  {
+    id: 19,
+    name: "SPEED CUBING",
+    imgUrl: event19,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"Left Garden",
+    des: "Cube solving competition.",
+    link:"/events/speedCubingForm",
+    deadline:"comming soon"
+  },
+  {
+    id: 20,
+    name: "VALORANT TOURNAMENT",
+    imgUrl: event20,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"CCC",
+    des: "Valorant Gaming competition.",
+    link:"/events/valorantForm",
+    deadline:"comming soon"
+  },
+  {
+    id: 21,
+    name: "COSPLAY COMPETITION",
+    imgUrl: event21,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"yoga hall or in front of Central Garden ",
+    des: "Participants dress up in characters or object and act or change their accent according to their character.",
+    link:"/events/cosplayCompetitionForm",
+    deadline:"comming soon"
+  },
   {
     id: 22,
     name: "ORIGAMI COMPETITION",

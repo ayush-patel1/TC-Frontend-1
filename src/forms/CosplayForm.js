@@ -46,7 +46,7 @@ const RemoveButton = styled.button`
   }
 `;
 
-const OpenMicForm = () => {
+const CosplayForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -57,12 +57,11 @@ const OpenMicForm = () => {
     members: [
       {
         name: "",
-          branch: "",
-          whatsapp: "",
-          gender:"",
-          Program_of_Study:"",
-          sem:""
-
+        branch: "",
+        whatsapp: "",
+        gender: "",
+        Program_of_Study: "",
+        sem: "",
       },
     ],
   };
@@ -80,20 +79,24 @@ const OpenMicForm = () => {
   };
 
   const handleAddMember = () => {
-    setForm({
-      ...form,
-      members: [
-        ...form.members,
-        {
-          name: "",
-          branch: "",
-          whatsapp: "",
-          gender:"",
-          Program_of_Study:"",
-          sem:""
-        },
-      ],
-    });
+    if (form.members.length < 3) {
+      setForm({
+        ...form,
+        members: [
+          ...form.members,
+          {
+            name: "",
+            branch: "",
+            whatsapp: "",
+            gender: "",
+            Program_of_Study: "",
+            sem: "",
+          },
+        ],
+      });
+    } else {
+      alert("You can only add up to 3 members.");
+    }
   };
 
   const handleRemoveMember = (index) => {
@@ -123,7 +126,7 @@ const OpenMicForm = () => {
     if (valid) {
       try {
         const res = await axios.post(
-          "/server/register?event=openmic",
+          "/server/register?event=cosplayform",
           form,
           {
             headers: {
@@ -149,7 +152,7 @@ const OpenMicForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"Open"} noncolor={"Mic"} />
+      <Title color={"COSPLAY"} noncolor={"COMPETETION"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -193,7 +196,9 @@ const OpenMicForm = () => {
                       <input
                         name="Program_of_Study"
                         type="text"
-                        placeholder={`Participant ${index + 1} Program of Study`}
+                        placeholder={`Participant ${
+                          index + 1
+                        } Program of Study`}
                         value={member.Program_of_Study}
                         onChange={(e) => handleMemberChange(index, e)}
                       />
@@ -202,7 +207,7 @@ const OpenMicForm = () => {
                       <input
                         name="sem"
                         type="text"
-                        placeholder={`Participant ${index + 1} semester`}
+                        placeholder={`Participant ${index + 1} Semester`}
                         value={member.sem}
                         onChange={(e) => handleMemberChange(index, e)}
                       />
@@ -224,7 +229,7 @@ const OpenMicForm = () => {
                         value={member.whatsapp}
                         onChange={(e) => handleMemberChange(index, e)}
                       />
-                      <span style={{ fontSize: "0.7rem",color:"white" }}>
+                      <span style={{ fontSize: "0.7rem", color: "white" }}>
                         * Don't include +91 or 0.
                       </span>
                       {member.whatsapp.length > 10 && member.whatsapp && (
@@ -240,7 +245,9 @@ const OpenMicForm = () => {
                     )}
                   </div>
                 ))}
-                <AddButton onClick={handleAddMember}>+ Add Members</AddButton>
+                {form.members.length < 3 && (
+                  <AddButton onClick={handleAddMember}>+ Add Members</AddButton>
+                )}
               </ul>
             </div>
 
@@ -266,18 +273,31 @@ const OpenMicForm = () => {
 
           <div className="mint_right">
             <div className="mright">
-              <div data-aos="fade-down" className="mint_time">
-                <h4>Open Mic</h4>
+            <div data-aos="fade-down" className="mint_time">
+                <h4>Cosplay Competition</h4>
+                <h3 className="metaportal_fn_countdown">
+                  Description
+                </h3>
+              </div>
+              <div data-aos="fade-down" style={{marginBottom:"3rem"}} className="mint_info">
+               <p>Participants (or team max 3) have to dressed up in characters or object of their choice (but it should be descent). They may act or change their accent according to their character
+                </p>
+              </div>
+              <div data-aos="fade-down"  className="mint_time">
+                <h4>Cosplay Competition</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p>● No offensive/violent content should be presented</p>
-                <p>● Participants will be giving their names on the spot</p>
+                <p>• Time limit – 3 to 4 hrs</p>
+                <p>• No rules in particular </p>
+                <p>• People can take pictures with them</p>
                 <p>
-                  ● The participants will perform on a first come first serve
-                  manner
+                  • Judging will be done as 1st, 2nd and 3rd are according to
+                  the Highest number of pictures taken by the people with a
+                  particular cosplayer and one by people's choice - through
+                  voting.
                 </p>
               </div>
               {/* <a style={{ textDecoration: "none" }} href={docs}> */}
@@ -291,4 +311,4 @@ const OpenMicForm = () => {
   );
 };
 
-export default OpenMicForm;
+export default CosplayForm;

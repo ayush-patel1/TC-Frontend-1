@@ -48,6 +48,8 @@ import DsaMarathonForm from "./forms/DsaMarathonForm";
 import DimensionsForm from "./forms/DimensionsForm.js";
 import DroneRaceForm from "./forms/DroneRaceForm.js";
 import OrigamiForm from "./forms/OrigamiForm.js";
+import CosplayForm from "./forms/CosplayForm.js";
+import GiantKerplunkForm from "./forms/GiantKerplunk.js";
 import CaseOpsForm from "./forms/CaseOpsForm.js";
 import TechClashForm from "./forms/TechClashForm.js";
 
@@ -211,6 +213,16 @@ function App() {
                 exact="true"
                 path="/events/origamiForm"
                 element={<OrigamiForm/>}
+              />
+              <Route
+                exact="true"
+                path="/events/cosplayCompetitionForm"
+                element={<CosplayForm/>}
+              />
+               <Route
+                exact="true"
+                path="/events/giantKerplunkForm"
+                element={<GiantKerplunkForm/>}
               />
               <Route
                 exact="true"

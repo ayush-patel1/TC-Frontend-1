@@ -10,14 +10,13 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
-const SpeedCubingForm = () => {
+const GiantKerplunkForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("speedCubingForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("giantKerplunkForm")) || {
     Name: "",
-    Email: "",
     Phone: "",
     Branch: "",
     Gender: "",
@@ -58,7 +57,6 @@ const SpeedCubingForm = () => {
     setSubmit(true);
     let condition =
       form.Name !== "" &&
-      form.Email !== "" &&
       form.Phone !== "" &&
       form.Gender !== "" &&
       form.Branch !== "" &&
@@ -69,7 +67,7 @@ const SpeedCubingForm = () => {
     if (condition) {
       try {
         const res = await axios.post(
-          `/server/register?event=speedCubing`,
+          `/server/register?event=giantKerplunkForm`,
           form,
           {
             headers: {
@@ -95,7 +93,7 @@ const SpeedCubingForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"SPEED"} noncolor={"CUBING"} />
+      <Title color={"GIANT"} noncolor={"KERPLUNK"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -116,16 +114,6 @@ const SpeedCubingForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="emailId"
-                    type="text"
-                    name="Email"
-                    placeholder="Email Id"
-                    onChange={(e) => handle(e)}
-                    value={form.Email}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
                     id="whatsappNumber"
                     type="text"
                     name="Phone"
@@ -133,10 +121,10 @@ const SpeedCubingForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Phone}
                   />
-                  <span style={{ fontSize: "0.7rem" ,color:"white" }}>
+                  <span style={{ fontSize: "0.7rem", color: "white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  { form.Phone.length > 10 && (
+                  {form.Phone.length > 10 && (
                     <p style={{ color: "red" }}>
                       Enter a number of 10 digits only.
                     </p>
@@ -230,22 +218,41 @@ const SpeedCubingForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Speed Cubing</h4>
+                <h4>Giant kerplunk</h4>
+                <h3 className="metaportal_fn_countdown">Description</h3>
+              </div>
+              <div data-aos="fade-down" style={{marginBottom:"3rem"}} className="mint_info">
+                <p>A classic kerplunk game of carefully removing the sticks from a tube without causing the marbles to fall.</p>
+              </div>
+              <div data-aos="fade-down" className="mint_time">
+                <h4>Giant kerplunk</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p>• Individual participants.</p>
                 <p>
-                  • According to number of participants we’ll divide all
-                  participants in group of 6 people.
+                  • A classic Kerplunk game consists of a tube and through its
+                  middle many sticks are inserted. Marbles are introduced from
+                  the top part of the tube. The player has to pull the stick in
+                  a way such that least possible marbles fall.
                 </p>
-                <p>• For each group we’ll conduct the competition.</p>
-                <p>• There will be a time-based winner for each group.</p>
                 <p>
-                  • In second match all the winners from first match will be
-                  competing against each other.
+                  • Lower part of the tube is rotatable and the bottom part will
+                  have an opening through which marbles will fall out and get
+                  collected in a tray. Four players can participate at a time
+                  and the bottom most point has a tray for individual
+                  participants in which the fallen marble will get collected.
+                </p>
+                <p>• Play moves clockwise to the next player.</p>
+                <p>
+                  • The game ends when all the sticks are removed and the
+                  marbles have fallen. Each player then counts the marbles in
+                  their tray{" "}
+                </p>
+                <p>
+                  • The player with the fewest marbles in their tray is the
+                  winner.
                 </p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>
@@ -259,4 +266,4 @@ const SpeedCubingForm = () => {
   );
 };
 
-export default SpeedCubingForm;
+export default GiantKerplunkForm;

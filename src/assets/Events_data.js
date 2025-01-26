@@ -254,16 +254,16 @@ export const EventsList = [
     link:"/events/cosplayCompetitionForm",
     deadline:"comming soon"
   },
-  // {
-  //   id: 22,
-  //   name: "ORIGAMI COMPETITION",
-  //   imgUrl: event22,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"Any classroom",
-  //   des: "Participants have to make an origami with the given papers on the particular themes.",
-  //   link:"/events/origamiForm",
-  //   deadline:"comming soon"
-  // }
+  {
+    id: 22,
+    name: "ORIGAMI COMPETITION",
+    imgUrl: event22,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"Any classroom",
+    des: "Participants have to make an origami with the given papers on the particular themes.",
+    link:"/events/origamiForm",
+    deadline:"comming soon"
+  }
 
   ];

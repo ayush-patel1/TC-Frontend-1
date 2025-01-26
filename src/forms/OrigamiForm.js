@@ -89,7 +89,7 @@ const OrigamiForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"Origami"} noncolor={""} />
+      <Title color={"Origami"} noncolor={"COMPETITION"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -197,8 +197,17 @@ const OrigamiForm = () => {
           </div>
           <div className="mint_right">
             <div className="mright">
-              <div data-aos="fade-down" className="mint_time">
-                <h4>Origami</h4>
+            <div data-aos="fade-down" className="mint_time">
+                <h4>Origami Competetion</h4>
+                <h3 className="metaportal_fn_countdown">
+                  Description
+                </h3>
+              </div>
+              <div data-aos="fade-down" style={{marginBottom:"3rem"}} className="mint_info">
+                <p>Participants have to make an origami with the given papers on the particular themes</p>
+              </div>
+            <div data-aos="fade-down" className="mint_time">
+                <h4>Origami Competetion</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>

@@ -326,7 +326,7 @@ const RoboRaceForm = () => {
                 <p>A 300g payload is placed on the bot's holder.</p>
                 <p>Each payload drop adds 3 seconds to the total time.</p>
               </div>
-              <div
+              {/* <div
                 data-aos="fade-down"
                 style={{ paddingTop: "2rem" }}
                 className="mint_time"
@@ -334,7 +334,7 @@ const RoboRaceForm = () => {
                 <a style={{ textDecoration: "none" }} href={docs}>
                   <span className="metaportal_fn_button_4">Download PDF</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

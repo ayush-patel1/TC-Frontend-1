@@ -48,6 +48,7 @@ import DsaMarathonForm from "./forms/DsaMarathonForm";
 import DimensionsForm from "./forms/DimensionsForm.js";
 import DroneRaceForm from "./forms/DroneRaceForm.js";
 import OrigamiForm from "./forms/OrigamiForm.js";
+import CosplayForm from "./forms/CosplayForm.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -209,6 +210,11 @@ function App() {
                 exact="true"
                 path="/events/origamiForm"
                 element={<OrigamiForm/>}
+              />
+              <Route
+                exact="true"
+                path="/events/cosplayCompetitionForm"
+                element={<CosplayForm/>}
               />
               <Route
                 exact="true"

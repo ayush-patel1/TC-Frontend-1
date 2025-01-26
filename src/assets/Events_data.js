@@ -243,27 +243,27 @@ export const EventsList = [
   //   link:"/events/valorantForm",
   //   deadline:"comming soon"
   // },
-  // {
-  //   id: 21,
-  //   name: "COSPLAY COMPETITION",
-  //   imgUrl: event21,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"YOGA HALL",
-  //   des: "Participants dress up in characters or object and act or change their accent according to their character.",
-  //   link:"/events/cosplayCompetitionForm",
-  //   deadline:"comming soon"
-  // },
   {
-    id: 22,
-    name: "ORIGAMI COMPETITION",
-    imgUrl: event22,
+    id: 21,
+    name: "COSPLAY COMPETITION",
+    imgUrl: event21,
     date:"comming soon",
     time:"comming soon",
-    venue:"Any classroom",
-    des: "Participants have to make an origami with the given papers on the particular themes.",
-    link:"/events/origamiForm",
+    venue:"YOGA HALL",
+    des: "Participants dress up in characters or object and act or change their accent according to their character.",
+    link:"/events/cosplayCompetitionForm",
     deadline:"comming soon"
   }
+  // {
+  //   id: 22,
+  //   name: "ORIGAMI COMPETITION",
+  //   imgUrl: event22,
+  //   date:"comming soon",
+  //   time:"comming soon",
+  //   venue:"Any classroom",
+  //   des: "Participants have to make an origami with the given papers on the particular themes.",
+  //   link:"/events/origamiForm",
+  //   deadline:"comming soon"
+  // }
 
   ];

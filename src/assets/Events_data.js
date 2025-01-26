@@ -12,14 +12,14 @@ import event11 from '../assets/eventsPoster/escapeTheMatrix.webp'
 import event12 from '../assets/eventsPoster/comingSoon.webp'
 import event13 from '../assets/eventsPoster/reverseCoding.webp'
 // import event14 from '../assets/eventsPoster/comingSoon.webp'
-import event15 from '../assets/eventsAssets/Images/talentShow.webp'
+import event15 from '../assets/eventsPoster/comingSoon.webp'
 import event16 from '../assets/eventsPoster/tresureHunt.webp'
 import event17 from '../assets/eventsPoster/comingSoon.webp'
 import event18 from '../assets/eventsPoster/openMic.webp'
 import event19 from '../assets/eventsPoster/speedCubing.jpg'
 import event20 from '../assets/eventsPoster/valorant.webp'
-// import event21 from '../assets/eventsPoster/comingSoon.webp'
-// import event22 from '../assets/eventsPoster/comingSoon.webp'
+import event21 from '../assets/eventsPoster/comingSoon.webp'
+import event22 from '../assets/eventsPoster/comingSoon.webp'
 
 
 export const EventsList = [
@@ -177,17 +177,17 @@ export const EventsList = [
     //   link:"/events/caseOpsForm",
     //   deadline:"31/01/2025"
     // },
-    // {
-    //   id: 15,
-    //   name: "D-BUG SHOWDOWN",
-    //   imgUrl: event15,
-    //   date:"comming soon",
-    //   time:"comming soon",
-    //   venue:"comming soon",
-    //   des: "A two-round coding competition focusing on programming, debugging, and problem-solving skills.",
-    //   link:"/events/dBugShowdownForm",
-    //   deadline:"31/01/2025"
-    // },
+    {
+      id: 15,
+      name: "Workshop on Vehicle Data Acquisition",
+      imgUrl: event15,
+      date:"comming soon",
+      time:"comming soon",
+      venue:"E-Hall, NIT Raipur",
+      des: "A Certified workshop on the basics of CAN (Controller Area Network) protocol, teaching participants to communicate with vehicle networks, collect data, and analyze it effectively.",
+      link:"/events/workshopVDAForm",
+      deadline:"31/01/2025"
+    },
     {
       id: 16,
       name: "MOCK CID",
@@ -243,26 +243,26 @@ export const EventsList = [
     link:"/events/valorantForm",
     deadline:"31/01/2025"
   },
-  // {
-  //   id: 21,
-  //   name: "COSPLAY COMPETITION",
-  //   imgUrl: event21,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"YOGA HALL ",
-  //   des: "Participants dress up as characters or objects and act or modify their accents accordingly.",
-  //   link:"/events/cosplayCompetitionForm",
-  //   deadline:"31/01/2025"
-  // },
-  // {
-  //   id: 22,
-  //   name: "ORIGAMI COMPETITION",
-  //   imgUrl: event22,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"Any classroom",
-  //   des: "Participants have to make an origami with the given papers on the particular themes.",
-  //   link:"/events/origamiForm",
-  //   deadline:"31/01/2025"
-  // }
+  {
+    id: 21,
+    name: "JENGA",
+    imgUrl: event21,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"comming soon",
+    des: "Classic wooden jenga game competition.",
+    link:"/events/JengaForm",
+    deadline:"31/01/2025"
+  },
+  {
+    id: 22,
+    name: "ROBO RACE",
+    imgUrl: event22,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"Outdoors",
+    des: "",
+    link:"/events/roboRaceForm",
+    deadline:"31/01/2025"
+  }
   ];

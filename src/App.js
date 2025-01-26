@@ -116,31 +116,6 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/terrainTreaderForm"
-                element={<TerrainTreaderForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/roboSoccerForm"
-                element={<RoboSoccerForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/bgmiForm"
-                element={<BgmiForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/aerofiliaForm"
-                element={<AerofiliaForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/logoDesignForm"
-                element={<LogoDesignForm />}
-              />
-              <Route
-                exact="true"
                 path="/events/speedCubingForm"
                 element={<SpeedCubingForm />}
               />
@@ -148,11 +123,6 @@ function App() {
                 exact="true"
                 path="/events/valorantForm"
                 element={<ValorantForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/autocadForm"
-                element={<AutocadForm />}
               />
               <Route
                 exact="true"
@@ -166,27 +136,12 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/talentShowForm"
-                element={<TalentShowForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/tictacToeForm"
-                element={<TicTacToeForm />}
-              />
-              <Route
-                exact="true"
                 path="/events/ecopolisForm"
                 element={<EcopolisForm />}
               />
               <Route
                 exact="true"
-                path="/events/hydroliftForm"
-                element={<HydroliftForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/dimensionForm"
+                path="/events/dimensionsForm"
                 element={<DimensionsForm />}
               />
               <Route
@@ -220,21 +175,6 @@ function App() {
                 path="/events/dsaMarathonForm"
                 element={<DsaMarathonForm />}
               />
-               <Route
-                exact="true"
-                path="/events/origamiForm"
-                element={<OrigamiForm/>}
-              />
-              <Route
-                exact="true"
-                path="/events/cosplayCompetitionForm"
-                element={<CosplayForm/>}
-              />
-               <Route
-                exact="true"
-                path="/events/giantKerplunkForm"
-                element={<GiantKerplunkForm/>}
-              />
               <Route
                 exact="true"
                 path="/events/droneraceForm"
@@ -257,11 +197,6 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/techClashForm"
-                element={<TechClashForm/>}
-              />
-              <Route
-                exact="true"
                 path="/events/workshopsForm"
                 element={<WorkshopsForm/>}
               />
@@ -269,16 +204,6 @@ function App() {
                 exact="true"
                 path="/events/roboWarsForm"
                 element={<RoboWarsForm/>}
-              />
-              <Route
-                exact="true"
-                path="/events/smackDbugForm"
-                element={<SmackDBugForm/>}
-              />
-              <Route
-                exact="true"
-                path="/events/roboraceform"
-                element={<RoboRaceForm />}
               />
               <Route
                 exact="true"

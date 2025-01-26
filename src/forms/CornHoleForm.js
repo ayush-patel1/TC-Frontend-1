@@ -22,9 +22,11 @@ const CornholeGameForm = () => {
     Leader_branch: "",
     Leader_yog: "",
     P2_name: "",
+    P2_branch: "",
+    P2_email: "",
+    P2_sem: ""
   };
   const [form, set] = useState(cachedForm);
-  const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
 
   const handle = (e) => {
@@ -68,6 +70,9 @@ const CornholeGameForm = () => {
       form.Leader_branch !== "" &&
       form.Leader_yog !== "" &&
       form.P2_name !== "" &&
+      form.P2_branch !=="" &&
+      form.P2_email !== "" &&
+      form.P2_sem !== "" &&
       form.Leader_whatsapp.length == 10;
 
     if (condition) {
@@ -176,12 +181,42 @@ const CornholeGameForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
+                    name="P2_name"
                     id="leaderYog"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
                     value={form.P2_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_email"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Team Member 2 Email"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_branch"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Team Member 2 Branch"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_sem"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Team Member 2 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_sem}
                   />
                 </li>
               </ul>
@@ -241,7 +276,7 @@ const CornholeGameForm = () => {
                 1. Each board should be 27 feet apart from front edge to front edge.
                 </p>
                 <p>
-                2. It is a team based game . Each team will be having 2 members 
+                2. It is a team based game . Each team will be having 2 members.
                 </p>
                 <p>
                 3. Scoring criteria :<br></br>
@@ -256,7 +291,7 @@ const CornholeGameForm = () => {
                 </p>
                 <p>
                 5.  The game is typically played to 18 points. The first team
-                 to reach or exceed 18 points at the end of a round wins
+                 to reach or exceed 18 points at the end of a round wins.
                 </p>               
               </div>             
             </div>

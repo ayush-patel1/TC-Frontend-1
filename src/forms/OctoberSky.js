@@ -72,7 +72,7 @@ const OctoberSkyForm = () => {
     if (condition) {
       try {
         const res = await axios.post(
-          `/server/register?event=octobersky`,
+          `/server/register?event=OctoberSky`,
           form,
           {
             headers: {
@@ -241,7 +241,7 @@ const OctoberSkyForm = () => {
                   hydraulic pressure only.
                 </p>
               </div>
-              <div
+              {/* <div
                 data-aos="fade-down"
                 style={{ paddingTop: "2rem" }}
                 className="mint_time"
@@ -249,7 +249,7 @@ const OctoberSkyForm = () => {
                 <a style={{ textDecoration: "none" }} href={docs}>
                   <span className="metaportal_fn_button_4">Download PDF</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

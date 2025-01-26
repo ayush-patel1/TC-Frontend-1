@@ -185,7 +185,7 @@ export const EventsList = [
       time:"comming soon",
       venue:"comming soon",
       des: "A two-round coding competition focusing on programming, debugging, and problem-solving skills.",
-      link:"/events/dBugShowdownForm",
+      link:"/events/smackDbugForm",
       deadline:"comming soon"
     },
     {

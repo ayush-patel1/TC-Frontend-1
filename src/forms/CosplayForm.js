@@ -152,7 +152,7 @@ const CosplayForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"Open"} noncolor={"Mic"} />
+      <Title color={"COSPLAY"} noncolor={"COMPETETION"} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -273,7 +273,17 @@ const CosplayForm = () => {
 
           <div className="mint_right">
             <div className="mright">
-              <div data-aos="fade-down" className="mint_time">
+            <div data-aos="fade-down" className="mint_time">
+                <h4>Cosplay Competition</h4>
+                <h3 className="metaportal_fn_countdown">
+                  Description
+                </h3>
+              </div>
+              <div data-aos="fade-down" style={{marginBottom:"3rem"}} className="mint_info">
+               <p>Participants (or team max 3) have to dressed up in characters or object of their choice (but it should be descent). They may act or change their accent according to their character
+                </p>
+              </div>
+              <div data-aos="fade-down"  className="mint_time">
                 <h4>Cosplay Competition</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations

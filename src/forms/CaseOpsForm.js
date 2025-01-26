@@ -10,12 +10,12 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
-const EcopolisForm = () => {
+const CaseOpsForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("ecopolisform")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("caseopsform")) || {
     Team_name: "",
     Leader_name: "",
     Leader_email: "",
@@ -24,8 +24,8 @@ const EcopolisForm = () => {
     Leader_branch: "",
     Leader_yog: "",
     P2_name: "",
-    P3_name: "",
-    P4_name: "",
+    P2_branch: "",
+    P2_yog: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -35,7 +35,7 @@ const EcopolisForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("ecopolisform", JSON.stringify(update));
+    localStorage.setItem("caseopsform", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -100,7 +100,7 @@ const EcopolisForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"Ecopolis"} noncolor={""} />
+      <Title color={"Case Ops 3.0"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -200,22 +200,22 @@ const EcopolisForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
+                    name="P2_name"
                     id="leaderYog"
                     type="text"
-                    placeholder="Team Member 3 Name"
+                    placeholder="Team Member 2 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.P3_name}
+                    value={form.P2_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_name"
+                    name="P2_name"
                     id="leaderYog"
                     type="text"
-                    placeholder="Team Member 4 Name"
+                    placeholder="Team Member 2 Year of Graduation"
                     onChange={(e) => handle(e)}
-                    value={form.P4_name}
+                    value={form.P2_yog}
                   />
                 </li>
               </ul>
@@ -251,30 +251,80 @@ const EcopolisForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Ecopolis</h4>
+                <h4>Case Ops 3.0</h4>
                 <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
+                <p>Complete any one of the case studies provided.</p>
+                <p>Team size: 1-2</p>
                 <p>
-                  Design with creativity, an event which can be made to solve
-                  real life architectural/planning issues. Not only for the B.
-                  Arch (majorly for them) but for everyone. We'll focus on the
-                  real problems of our own country.
+                  Eligibility: - Undergraduate students in their first, second,
+                  third, and fourth years should participate.
                 </p>
-                <p>Team Size: Single or team of 3-4</p>
-                <p>Rounds: 2</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4>Ecopolis</h4>
-                <h3 className="metaportal_fn_countdown">Phases</h3>
+                <h4>Case Ops 3.0</h4>
+                <h3 className="metaportal_fn_countdown">
+                  Rules and Regulations
+                </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <h4>Round 1: </h4>
-                <p>PPT presentation (1 slider)</p>
-                <p>Top 5 teams will qualify / top 6 teams will qualify</p>
-                <h4>Round 2: </h4>
-                <p>Proper PPT presentation (max 10 slides)</p>
-                <p>Model presentation</p>
+                <p>
+                  1. Any Cheating, Plagiarism or Unethical Behaviour will lead
+                  to immediate disqualification.
+                </p>
+                <p>
+                  2. Participation can be individual or in a group (maximum 2
+                  person).
+                </p>
+                <p>3. Event commencement and registration on UNSTOP only.</p>
+                <p>4. Event will be conducted in 2 rounds.</p>
+                <p>
+                  5. Solution according to the problem statement will be
+                  considered only.
+                </p>
+                <p>
+                  6. Decisions regarding eligibility and final judgment shall
+                  rest with Team Technocracy.
+                </p>
+              </div>
+              <div data-aos="fade-down" className="mint_time">
+                <h4>Case Ops 3.0</h4>
+                <h3 className="metaportal_fn_countdown">Details of Rounds</h3>
+              </div>
+              <div data-aos="fade-down" className="mint_info">
+                <h4>Round 1: Aptitude Test</h4>
+                <p>
+                  1. The participants are expected to solve 20 aptitude
+                  questions and 2 small reading comprehensions in a time
+                  interval of 35 minutes.
+                </p>
+                <p>
+                  2. All questions are compulsory. Negative marking of -1 will
+                  be applied to all incorrect answers and +3 will be awarded for
+                  each correct answer.
+                </p>
+                <p>
+                  3. Shortlisted students will be informed for the final case
+                  study round.
+                </p>
+                <h4>Round 2: Case Study Round</h4>
+                <p>
+                  1. This round comprises three case study problems. Any one has
+                  to be attempted.
+                </p>
+                <p>2. All the three case studies will be industry based.</p>
+                <p>
+                  3. A duration of 48 hours will be provided to the shortlisted
+                  students to submit the solution of the chosen problem
+                  statement.
+                </p>
+                <p>
+                  4. Solution of the problem statement must be in a single file
+                  (PPT format only) and the slide count must not exceed a total
+                  of 7 slides.
+                </p>
+                <p>5. Plagiarized answer will not be entertained.</p>
               </div>
               <div
                 data-aos="fade-down"
@@ -293,4 +343,4 @@ const EcopolisForm = () => {
   );
 };
 
-export default EcopolisForm;
+export default CaseOpsForm;

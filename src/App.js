@@ -48,6 +48,8 @@ import DsaMarathonForm from "./forms/DsaMarathonForm";
 import DimensionsForm from "./forms/DimensionsForm.js";
 import DroneRaceForm from "./forms/DroneRaceForm.js";
 import OrigamiForm from "./forms/OrigamiForm.js";
+import CaseOpsForm from "./forms/CaseOpsForm.js";
+import TechClashForm from "./forms/TechClashForm.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -214,6 +216,16 @@ function App() {
                 exact="true"
                 path="/events/droneraceForm"
                 element={<DroneRaceForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/caseopsForm"
+                element={<CaseOpsForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/techclashform"
+                element={<TechClashForm />}
               />
 
               <Route

@@ -7842,6 +7842,12 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background-attachment: fixed;
 	/* transition: background-color 0.9s ease; */
 }
+.Eventscrolled {
+	background: url("./assets/spacebg.webp");
+	background-size: cover;
+	background-attachment: fixed;
+	/* transition: background-color 0.9s ease; */
+}
 
 /* .Homescrolled::before { */
 /* content: "";

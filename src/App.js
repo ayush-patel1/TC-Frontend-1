@@ -58,6 +58,10 @@ import EscapeTheMatrixForm from "./forms/EscapeTheMatrixForm.js";
 import OctoberSkyForm from "./forms/OctoberSky.js";
 import PixelPlaygroundForm from "./forms/PixelPlaygroundForm.js";
 import TechnoGraphixForm from "./forms/TechnoGraphixForm.js";
+import TechClashForm from "./forms/TechClash.js";
+import WorkshopsForm from "./forms/WorkshopsForm.js";
+import RoboWarsForm from "./forms/RoboWarsForm.js";
+import SmackDBugForm from "./forms/SmackDBugForm.js";
 import RoboRaceForm from "./forms/RoboRaceForm.js";
 
 const BackgroundContainer = styled.div`
@@ -140,16 +144,6 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/codemimeQuestForm"
-                element={<CodemimeQuestForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/circuitrix2Form"
-                element={<Circuitrix2Form />}
-              />
-              <Route
-                exact="true"
                 path="/events/valorantForm"
                 element={<ValorantForm />}
               />
@@ -160,11 +154,6 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/survivalForm"
-                element={<SurvivalArtboardForm />}
-              />
-              <Route
-                exact="true"
                 path="/events/reactionRacingForm"
                 element={<ReactionRacingForm />}
               />
@@ -172,11 +161,6 @@ function App() {
                 exact="true"
                 path="/events/treasureHuntForm"
                 element={<TreasureHuntForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/mechanicalJunkyardForm"
-                element={<MechanicalJunkyardForm />}
               />
               <Route
                 exact="true"
@@ -268,6 +252,26 @@ function App() {
                 exact="true"
                 path="/events/escapeTheMatrixForm"
                 element={<EscapeTheMatrixForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/techClashForm"
+                element={<TechClashForm/>}
+              />
+              <Route
+                exact="true"
+                path="/events/workshopsForm"
+                element={<WorkshopsForm/>}
+              />
+              <Route
+                exact="true"
+                path="/events/roboWarsForm"
+                element={<RoboWarsForm/>}
+              />
+              <Route
+                exact="true"
+                path="/events/smackDbugForm"
+                element={<SmackDBugForm/>}
               />
               <Route
                 exact="true"

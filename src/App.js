@@ -58,6 +58,10 @@ import EscapeTheMatrixForm from "./forms/EscapeTheMatrixForm.js";
 import OctoberSkyForm from "./forms/OctoberSky.js";
 import PixelPlaygroundForm from "./forms/PixelPlaygroundForm.js";
 import TechnoGraphixForm from "./forms/TechnoGraphixForm.js";
+import TechClashForm from "./forms/TechClash.js";
+import WorkshopsForm from "./forms/WorkshopsForm.js";
+import RoboWarsForm from "./forms/RoboWarsForm.js";
+import SmackDBugForm from "./forms/SmackDBugForm.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -267,6 +271,26 @@ function App() {
                 exact="true"
                 path="/events/escapeTheMatrixForm"
                 element={<EscapeTheMatrixForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/techClashForm"
+                element={<TechClashForm/>}
+              />
+              <Route
+                exact="true"
+                path="/events/workshopsForm"
+                element={<WorkshopsForm/>}
+              />
+              <Route
+                exact="true"
+                path="/events/roboWarsForm"
+                element={<RoboWarsForm/>}
+              />
+              <Route
+                exact="true"
+                path="/events/smackDbugForm"
+                element={<SmackDBugForm/>}
               />
 
               <Route

@@ -10,15 +10,17 @@ import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const backend = keys.backend;
 
-const TechnoGraphixForm = () => {
+const SmackDBugForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("technoGraphixForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("smackDbugForm")) || {
     Name: "",
+    Gender: "",
     Email: "",
     Whatsapp: "",
+    College: "",
     Program_of_study: "",
     Branch: "",
     Sem: ""
@@ -31,7 +33,7 @@ const TechnoGraphixForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("technoGraphixForm", JSON.stringify(update));
+    localStorage.setItem("smackDbugForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -62,8 +64,10 @@ const TechnoGraphixForm = () => {
     setSubmit(true);
     let condition =
       form.Name !== "" &&
+      form.Gender !== "" &&
       form.Email !== "" &&
       form.Whatsapp !== "" &&
+      form.College !== "" &&
       form.Branch !== "" &&
       form.Sem !== "" &&
       form.Program_of_study !== "" &&
@@ -71,7 +75,7 @@ const TechnoGraphixForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=TechnoGraphics`, form, {
+        const res = await axios.post(`/server/register?event=DBugShowdown`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -97,7 +101,7 @@ const TechnoGraphixForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"TECHNO GRAPHIX"} noncolor={""} />
+      <Title color={"D-BUGSHOWDOWN"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -114,6 +118,16 @@ const TechnoGraphixForm = () => {
                     placeholder="Full Name"
                     onChange={(e) => handle(e)}
                     value={form.Name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderName"
+                    type="text"
+                    name="Gender"
+                    placeholder="Gender"
+                    onChange={(e) => handle(e)}
+                    value={form.Gender}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -143,6 +157,16 @@ const TechnoGraphixForm = () => {
                     placeholder="Email Address"
                     onChange={(e) => handle(e)}
                     value={form.Email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderName"
+                    type="text"
+                    name="College"
+                    placeholder="College"
+                    onChange={(e) => handle(e)}
+                    value={form.College}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -209,56 +233,77 @@ const TechnoGraphixForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Techno Graphix</h4>
-                <h3 className="metaportal_fn_countdown">
-                DESCRIPTION
-                </h3>
+                <h4>D-Bug Showdown</h4>
+                <h3 className="metaportal_fn_countdown">Rules and Regulations</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
+                <p>1. D-Bug Showdown consists of two rounds.</p>
+                <p>2. Interested students can participate individually. </p>
                 <p>
-                An Event based on Graphic designing/poster making based on the theme of the fest.
+                  3. The registration and testing for the event will be held on UNSTOP.
+                </p>
+                <p>
+                    4. The assessment will be hosted in full-screen mode.
+                </p>
+                <p>
+                  5. Malpractice of any sort is strictly condemned and if caught, the participant will be promptly eliminated.
+                </p>
+                <p>
+                  6. All decisions regarding eligibility and final judgement shall rest with the Technocracy team.
                 </p>
               </div>
-              
-              <div style={{ paddingTop: "2rem" }} data-aos="fade-down" className="mint_time">
-                <h4>TECHNO Graphix</h4>
-                <h3 className="metaportal_fn_countdown">
-                  Rules and Regulations
-                </h3>
+              <div data-aos="fade-down" className="mint_time">
+                <h4>D-Bug Showdown </h4>
+                <h3 className="metaportal_fn_countdown">Details of Rounds</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
+                <h4>Round 1: MCQ Round</h4>
                 <p>
-                  1. Participation will be individual.
-                </p>
-                <p>2. Registration will be online through google form and spot registration is allowed too. </p>
-                <p>
-                  3. Event will contain two sections namely research and execution sections.
+                  1. The participants are expected to solve 25 programming-related questions in 20 minutes.
                 </p>
                 <p>
-                  4. Poster has to be designed according to the theme only.
+                  2. Candidates will be awarded +4 marks for each correct answer and -1 mark for wrong answer.
                 </p>
                 <p>
-                  5. All the participants will be given 15 minutes to collect the resources from any source possible and organise the structure of the design.
+                  3. Questions will be based on OOPs, Operating Systems, DSA and Code Debugging.
                 </p>
                 <p>
-                  6. After 15 minutes, collecting any further resources from any sources will be restricted.
+                    4. Shortlisted students from round one will be informed for the final round.
                 </p>
                 <p>
-                  7. Time duration of 1hr will be allocated to complete the design page.
+                  5. Malpractice of any sort will lead to immediate elimination.
+                </p>
+                <h4>Round 2: Code Debugging Round</h4>
+                <p>
+                  1. This round comprises 5 code snippets with errors (logical and syntactical).
+                </p>
+                <p>2. A duration of 30 minutes will be provided to the participants for submitting the corrected codes.</p>
+                <p>
+                  3. The code snippets in this round will be in C++. 
                 </p>
                 <p>
-                  8. Allowed platforms are CANVA and ADOBE ILLUSTRATOR only (pro version is not allowed).
+                  4. All questions are compulsory. There is no negative marking.
+                </p>
+                <p>5. Maximum marks: 50, i.e. 10 marks for each question and partial marks will be given for correct sections of the code.</p>
+                <p>
+                  6. Candidates need to debug the given snippets and submit the correct code.
                 </p>
                 <p>
-                  9. After completion of the round the designed poster has to be submitted through email.
+                7. Plagiarised answers will not be entertained.
                 </p>
                 <p>
-                  10. Decision regarding final judgement shall rest on Team Technocracy.
+                  8. Mode of Conduction: Online on Unstop.
                 </p>
               </div>
-              {/*<a style={{ textDecoration: "none" }} href={docs}>
-                <span className="metaportal_fn_button_4">Download PDF</span>
-              </a>*/}
+              {/* <div
+                data-aos="fade-down"
+                style={{ paddingTop: "2rem" }}
+                className="mint_time"
+              >
+                <a style={{ textDecoration: "none" }} href={docs}>
+                  <span className="metaportal_fn_button_4">Download PDF</span>
+                </a>
+              </div> */}
             </div>
           </div>
         </div>
@@ -267,4 +312,4 @@ const TechnoGraphixForm = () => {
   );
 };
 
-export default TechnoGraphixForm;
+export default SmackDBugForm;

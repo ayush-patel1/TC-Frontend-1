@@ -99,18 +99,105 @@ const TreasureHuntForm = () => {
             </div>
             <div className="mint_list">
               <ul>
-                {Object.keys(form).map((key, index) => (
-                  <li key={index} data-aos="fade-down">
-                    <input
-                      name={key}
-                      id={key}
-                      type="text"
-                      placeholder={key.replace(/_/g, " ")}
-                      onChange={handle}
-                      value={form[key]}
-                    />
-                  </li>
-                ))}
+                <li data-aos="fade-down">
+                  <input
+                    name="Team_name"
+                    type="text"
+                    placeholder="Team Name"
+                    onChange={handle}
+                    value={form.Team_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_name"
+                    type="text"
+                    placeholder="Leader Name"
+                    onChange={handle}
+                    value={form.Leader_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_whatsapp"
+                    type="text"
+                    placeholder="Leader WhatsApp"
+                    onChange={handle}
+                    value={form.Leader_whatsapp}
+                  />
+                  <span style={{ fontSize: "0.7rem" ,color:"white" }}>
+                    * Don't include +91 or 0.
+                  </span>
+                  {form.Leader_whatsapp.length > 10 && (
+                    <p style={{ color: "red" }}>
+                      Enter a number of 10 digits only.
+                    </p>
+                  )}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_branch"
+                    type="text"
+                    placeholder="Leader Branch"
+                    onChange={handle}
+                    value={form.Leader_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_sem"
+                    type="text"
+                    placeholder="Leader Semester"
+                    onChange={handle}
+                    value={form.Leader_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_gender"
+                    type="text"
+                    placeholder="Leader Gender"
+                    onChange={handle}
+                    value={form.Leader_gender}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_Program_of_Study"
+                    type="text"
+                    placeholder="Leader Program of Study"
+                    onChange={handle}
+                    value={form.Leader_Program_of_Study}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_name"
+                    type="text"
+                    placeholder="Participant 2 Name"
+                    onChange={handle}
+                    value={form.P2_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_sem"
+                    type="text"
+                    placeholder="Participant 2 Semester"
+                    onChange={handle}
+                    value={form.P2_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_branch"
+                    type="text"
+                    placeholder="Participant 2 Branch"
+                    onChange={handle}
+                    value={form.P2_branch}
+                  />
+                </li>
+                {/* Add similar fields for other participants */}
               </ul>
             </div>
             <HCaptcha
@@ -137,8 +224,17 @@ const TreasureHuntForm = () => {
           </div>
           <div className="mint_right">
             <div className="mright">
+            <div data-aos="fade-down" className="mint_time">
+                <h4>Treasure Hunt</h4>
+                <h3 className="metaportal_fn_countdown">
+                  Description
+                </h3>
+              </div>
+              <div data-aos="fade-down" style={{marginBottom:"3rem"}} className="mint_info">
+                <p>A thriller version of Treasure Hunt.</p>
+              </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4></h4>
+                <h4>Treasure Hunt</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
@@ -162,10 +258,6 @@ const TreasureHuntForm = () => {
                   great audience on the first day
                 </p>
               </div>
-
-              {/* <a style={{ textDecoration: "none" }} href={docs}>
-                <span className="metaportal_fn_button_4">Download PDF</span>
-              </a> */}
             </div>
           </div>
         </div>

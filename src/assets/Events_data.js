@@ -1,25 +1,25 @@
 import event1 from '../assets/eventsPoster/technoGraphix.webp'
-import event2 from '../assets/eventsPoster/comingSoon.webp'
-import event3 from '../assets/eventsPoster/comingSoon.webp'
+import event2 from '../assets/eventsPoster/dsaMarathon.webp'
+import event3 from '../assets/eventsPoster/droneRacing.webp'
 import event4 from '../assets/eventsPoster/comingSoon.webp'
-import event5 from '../assets/eventsPoster/comingSoon.webp'
-import event6 from '../assets/eventsPoster/comingSoon.webp'
+import event5 from '../assets/eventsPoster/codeSprintRelay.webp'
+import event6 from '../assets/eventsPoster/dimensionsAutocad.webp'
 import event7 from '../assets/eventsPoster/ecopolis.webp'
 import event8 from '../assets/eventsPoster/comingSoon.webp'
 import event9 from '../assets/eventsPoster/pixelPlayground.webp'
-import event10 from '../assets/eventsPoster/comingSoon.webp'
-import event11 from '../assets/eventsPoster/comingSoon.webp'
+import event10 from '../assets/eventsPoster/rocketRage.webp'
+import event11 from '../assets/eventsPoster/escapeTheMatrix.webp'
 import event12 from '../assets/eventsPoster/comingSoon.webp'
-import event13 from '../assets/eventsPoster/comingSoon.webp'
-import event14 from '../assets/eventsPoster/comingSoon.webp'
+import event13 from '../assets/eventsPoster/reverseCoding.webp'
+// import event14 from '../assets/eventsPoster/comingSoon.webp'
 import event15 from '../assets/eventsAssets/Images/talentShow.webp'
-import event16 from '../assets/eventsPoster/comingSoon.webp'
+import event16 from '../assets/eventsPoster/tresureHunt.webp'
 import event17 from '../assets/eventsPoster/comingSoon.webp'
 import event18 from '../assets/eventsPoster/openMic.webp'
 import event19 from '../assets/eventsPoster/speedCubing.jpg'
-import event20 from '../assets/eventsPoster/comingSoon.webp'
-import event21 from '../assets/eventsPoster/comingSoon.webp'
-import event22 from '../assets/eventsPoster/comingSoon.webp'
+import event20 from '../assets/eventsPoster/valorant.webp'
+// import event21 from '../assets/eventsPoster/comingSoon.webp'
+// import event22 from '../assets/eventsPoster/comingSoon.webp'
 
 
 export const EventsList = [
@@ -124,10 +124,10 @@ export const EventsList = [
     },
     {
       id: 10,
-      name: "OCTOBER SKY",
+      name: "ROCKET RAGE",
       imgUrl: event10,
-      date:"comming soon",
-      time:"comming soon",
+      date:"01/02/2025",
+      time:"2:30 PM - 3:30 PM",
       venue:"Outdoors",
       des: "Self-made rocket launching event.",
       link:"/events/octoberSkyForm",
@@ -166,28 +166,28 @@ export const EventsList = [
       link:"/events/reverseCodingForm",
       deadline:"31/01/2025"
     },
-    {
-      id: 14,
-      name: "CASE OPS- 3.0",
-      imgUrl: event14,
-      date:"comming soon",
-      time:"comming soon",
-      venue:"comming soon",
-      des: "A two-round competition for undergraduate students focusing on aptitude and case study problem-solving.",
-      link:"/events/caseOpsForm",
-      deadline:"31/01/2025"
-    },
-    {
-      id: 15,
-      name: "D-BUG SHOWDOWN",
-      imgUrl: event15,
-      date:"comming soon",
-      time:"comming soon",
-      venue:"comming soon",
-      des: "A two-round coding competition focusing on programming, debugging, and problem-solving skills.",
-      link:"/events/dBugShowdownForm",
-      deadline:"31/01/2025"
-    },
+    // {
+    //   id: 14,
+    //   name: "CASE OPS- 3.0",
+    //   imgUrl: event14,
+    //   date:"comming soon",
+    //   time:"comming soon",
+    //   venue:"comming soon",
+    //   des: "A two-round competition for undergraduate students focusing on aptitude and case study problem-solving.",
+    //   link:"/events/caseOpsForm",
+    //   deadline:"31/01/2025"
+    // },
+    // {
+    //   id: 15,
+    //   name: "D-BUG SHOWDOWN",
+    //   imgUrl: event15,
+    //   date:"comming soon",
+    //   time:"comming soon",
+    //   venue:"comming soon",
+    //   des: "A two-round coding competition focusing on programming, debugging, and problem-solving skills.",
+    //   link:"/events/dBugShowdownForm",
+    //   deadline:"31/01/2025"
+    // },
     {
       id: 16,
       name: "MOCK CID",
@@ -201,7 +201,7 @@ export const EventsList = [
     },
     {
     id: 17,
-    name: "GIANT KERPLUNK",
+    name: "CORN HOLE",
     imgUrl: event17,
     date:"comming soon",
     time:"comming soon",
@@ -243,27 +243,26 @@ export const EventsList = [
     link:"/events/valorantForm",
     deadline:"31/01/2025"
   },
-  {
-    id: 21,
-    name: "COSPLAY COMPETITION",
-    imgUrl: event21,
-    date:"comming soon",
-    time:"comming soon",
-    venue:"YOGA HALL ",
-    des: "Participants dress up as characters or objects and act or modify their accents accordingly.",
-    link:"/events/cosplayCompetitionForm",
-    deadline:"31/01/2025"
-  },
-  {
-    id: 22,
-    name: "ORIGAMI COMPETITION",
-    imgUrl: event22,
-    date:"comming soon",
-    time:"comming soon",
-    venue:"Any classroom",
-    des: "Participants have to make an origami with the given papers on the particular themes.",
-    link:"/events/origamiForm",
-    deadline:"31/01/2025"
-  }
-
+  // {
+  //   id: 21,
+  //   name: "COSPLAY COMPETITION",
+  //   imgUrl: event21,
+  //   date:"comming soon",
+  //   time:"comming soon",
+  //   venue:"YOGA HALL ",
+  //   des: "Participants dress up as characters or objects and act or modify their accents accordingly.",
+  //   link:"/events/cosplayCompetitionForm",
+  //   deadline:"31/01/2025"
+  // },
+  // {
+  //   id: 22,
+  //   name: "ORIGAMI COMPETITION",
+  //   imgUrl: event22,
+  //   date:"comming soon",
+  //   time:"comming soon",
+  //   venue:"Any classroom",
+  //   des: "Participants have to make an origami with the given papers on the particular themes.",
+  //   link:"/events/origamiForm",
+  //   deadline:"31/01/2025"
+  // }
   ];

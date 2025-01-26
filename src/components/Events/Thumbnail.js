@@ -13,3 +13,5 @@ const Thumbnail = ({props}) => {
 }
 
 export default Thumbnail
+
+

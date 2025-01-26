@@ -143,16 +143,6 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/codemimeQuestForm"
-                element={<CodemimeQuestForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/circuitrix2Form"
-                element={<Circuitrix2Form />}
-              />
-              <Route
-                exact="true"
                 path="/events/valorantForm"
                 element={<ValorantForm />}
               />
@@ -163,11 +153,6 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/survivalForm"
-                element={<SurvivalArtboardForm />}
-              />
-              <Route
-                exact="true"
                 path="/events/reactionRacingForm"
                 element={<ReactionRacingForm />}
               />
@@ -175,11 +160,6 @@ function App() {
                 exact="true"
                 path="/events/treasureHuntForm"
                 element={<TreasureHuntForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/mechanicalJunkyardForm"
-                element={<MechanicalJunkyardForm />}
               />
               <Route
                 exact="true"

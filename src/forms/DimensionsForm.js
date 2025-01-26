@@ -16,7 +16,6 @@ const DimensionsForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("dimensionsform")) || {
-    Team_name: "",
     Leader_name: "",
     Leader_email: "",
     Leader_whatsapp: "",
@@ -62,7 +61,6 @@ const DimensionsForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
       form.Leader_name !== "" &&
       form.Leader_email !== "" &&
       form.Leader_whatsapp !== "" &&
@@ -73,7 +71,7 @@ const DimensionsForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=aerofilia`, form, {
+        const res = await axios.post(`/server/register?event=dimension`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -108,20 +106,10 @@ const DimensionsForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
-                    id="teamName"
-                    type="text"
-                    placeholder="Team Name"
-                    onChange={(e) => handle(e)}
-                    value={form.Team_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
                     id="leaderName"
                     type="text"
                     name="Leader_name"
-                    placeholder="Leader Name"
+                    placeholder="Full Name"
                     onChange={(e) => handle(e)}
                     value={form.Leader_name}
                   />
@@ -131,7 +119,7 @@ const DimensionsForm = () => {
                     id="leaderName"
                     type="text"
                     name="Leader_email"
-                    placeholder="Leader Email"
+                    placeholder="Email"
                     onChange={(e) => handle(e)}
                     value={form.Leader_email}
                   />
@@ -141,7 +129,7 @@ const DimensionsForm = () => {
                     id="leaderNumber"
                     type="text"
                     name="Leader_whatsapp"
-                    placeholder="Leader Whatsapp Number"
+                    placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
@@ -160,7 +148,7 @@ const DimensionsForm = () => {
                     name="Leader_college"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader College"
+                    placeholder="College"
                     onChange={(e) => handle(e)}
                     value={form.Leader_college}
                   />
@@ -170,7 +158,7 @@ const DimensionsForm = () => {
                     name="Leader_branch"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader Branch"
+                    placeholder="Branch"
                     onChange={(e) => handle(e)}
                     value={form.Leader_branch}
                   />
@@ -180,7 +168,7 @@ const DimensionsForm = () => {
                     name="Leader_yog"
                     id="leaderYog"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Year of Graduation"
                     onChange={(e) => handle(e)}
                     value={form.Leader_yog}
                   />

@@ -1,33 +1,31 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
+import keys from "../keys.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
-import docs from "../assets/eventsAssets/ecopolis.docx";
-import keys from "../keys.json";
+import docs from "../assets/eventsAssets/aerofilia.docx";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
-
-// const backend = keys.backend;
+const backend = keys.backend;
 
 const EcopolisForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("ecopolisForm")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("ecopolisform")) || {
     Team_name: "",
     Leader_name: "",
-    Leader_whatsapp: "",
     Leader_email: "",
-    Leader_semester: "",
+    Leader_whatsapp: "",
+    Leader_college: "",
+    Leader_branch: "",
+    Leader_yog: "",
     P2_name: "",
-    P2_number: "",
-    P2_semester:"",
     P3_name: "",
-    P3_number: "",
-    P3_semester:"",
+    P4_name: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -37,7 +35,7 @@ const EcopolisForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("ecopolisForm", JSON.stringify(update));
+    localStorage.setItem("ecopolisform", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -61,30 +59,28 @@ const EcopolisForm = () => {
   const submit = async () => {
     // const recaptchaValue = recaptchaRef.current.getValue();
     // Send the recaptchaValue along with the form data to your server for verification.
-    // if (!token) {
-    //   alert("Human verification is mandatory");
-    //   return;
-    // }
+    if (!token) {
+      alert("Human verification is mandatory");
+      return;
+    }
     setSubmit(true);
-    let condition1 =
+    let condition =
       form.Team_name !== "" &&
       form.Leader_name !== "" &&
-      form.Leader_whatsapp !== "" &&
       form.Leader_email !== "" &&
-      form.Leader_semester!==""&&
-      form.Leader_whatsapp.length === 10;
-    
-    if (condition1) {
+      form.Leader_whatsapp !== "" &&
+      form.Leader_college !== "" &&
+      form.Leader_branch !== "" &&
+      form.Leader_yog !== "" &&
+      form.Leader_whatsapp.length == 10;
+
+    if (condition) {
       try {
-        const res = await axios.post(
-          `/server/register?event=Ecopolis`,
-          form,
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        const res = await axios.post(`/server/register?event=ecopolis`, form, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -96,13 +92,15 @@ const EcopolisForm = () => {
     setSubmit(false);
   };
 
+  const onVerifyCaptcha = () => {};
+
   return (
     <div
       className="metaportal_fn_mintpage"
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"ECOPOLIS"} noncolor={""} />
+      <Title color={"Ecopolis"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -133,10 +131,20 @@ const EcopolisForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    id="leaderName"
+                    type="text"
+                    name="Leader_email"
+                    placeholder="Leader Email"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
                     id="leaderNumber"
                     type="text"
                     name="Leader_whatsapp"
-                    placeholder="Leader  Number"
+                    placeholder="Leader Whatsapp Number"
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
@@ -152,100 +160,62 @@ const EcopolisForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_semester"
+                    name="Leader_college"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader Semester"
+                    placeholder="Leader College"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_semester}
+                    value={form.Leader_college}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_email"
-                    id="leaderEmail"
+                    name="Leader_branch"
+                    id="leaderBranch"
                     type="text"
-                    placeholder="Leader Email"
+                    placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.Leader_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_yog"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Leader's year of graduation"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_yog}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="P2_name"
-                    id="P2Name"
+                    id="leaderYog"
                     type="text"
-                    placeholder="Member 2 Name "
+                    placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
                     value={form.P2_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_number"
-                    id="P2Number"
-                    type="text"
-                    placeholder="Member 2 Mobile Number"
-                    onChange={(e) => handle(e)}
-                    value={form.P2_number}
-                  />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  {form.P2_number !== "" &&
-                    form.P2_number.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P2_semester"
-                    id="P2Branch"
-                    type="text"
-                    placeholder="Member 2 Semester"
-                    onChange={(e) => handle(e)}
-                    value={form.P2_semester}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
                     name="P3_name"
-                    id="P3Name"
+                    id="leaderYog"
                     type="text"
-                    placeholder="Member 3 Name "
+                    placeholder="Team Member 3 Name"
                     onChange={(e) => handle(e)}
                     value={form.P3_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_number"
-                    id="P3Number"
+                    name="P4_name"
+                    id="leaderYog"
                     type="text"
-                    placeholder="Member 3 Mobile Number"
+                    placeholder="Team Member 4 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P3_number}
-                  />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  {form.P3_number !== "" &&
-                    form.P3_number.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P3_semester"
-                    id="P3Branch"
-                    type="text"
-                    placeholder="Member 3 Semester"
-                    onChange={(e) => handle(e)}
-                    value={form.P3_semester}
+                    value={form.P4_name}
                   />
                 </li>
               </ul>
@@ -281,65 +251,40 @@ const EcopolisForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Terrain Treader</h4>
-                <h3 className="metaportal_fn_countdown">
-                  Rules and Regulations
-                </h3>
+                <h4>Ecopolis</h4>
+                <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                1. It is a city planning event. The purpose of this competition is choosing the best architectural and urban planning concept (master plan) of a new city.
+                  Design with creativity, an event which can be made to solve
+                  real life architectural/planning issues. Not only for the B.
+                  Arch (majorly for them) but for everyone. We'll focus on the
+                  real problems of our own country.
                 </p>
-                <p>2. Date: 28/10/2023</p>
-                <p>
-                  3. Venue: architecture studio 3,4
-                </p>
-                <p>
-                4. Time : 11:00 am – 1: pm 
-                  
-                </p>
-                <p>
-                5. Team of max 3 members will be allowed.
-                   
-                </p>
-                <p>
-                6. Requirement : 2-3 architecture executives and 3-4 volunteers
-                  
-                </p>
-                <p>7. The problem statement will be given to the participants 45 mins prior competition .</p>
-                <p>8. Participants  have to make city plan according to the problem statement given on the sheet provided to them. </p>
+                <p>Team Size: Single or team of 3-4</p>
+                <p>Rounds: 2</p>
+              </div>
+              <div data-aos="fade-down" className="mint_time">
+                <h4>Ecopolis</h4>
+                <h3 className="metaportal_fn_countdown">Phases</h3>
+              </div>
+              <div data-aos="fade-down" className="mint_info">
+                <h4>Round 1: </h4>
+                <p>PPT presentation (1 slider)</p>
+                <p>Top 5 teams will qualify / top 6 teams will qualify</p>
+                <h4>Round 2: </h4>
+                <p>Proper PPT presentation (max 10 slides)</p>
+                <p>Model presentation</p>
               </div>
               <div
                 data-aos="fade-down"
                 style={{ paddingTop: "2rem" }}
                 className="mint_time"
               >
-                <h4>PROCEDURES</h4>
-                <h3 className="metaportal_fn_countdown">PHASES IN THE EVENT</h3>
+                <a style={{ textDecoration: "none" }} href={docs}>
+                  <span className="metaportal_fn_button_4">Download PDF</span>
+                </a>
               </div>
-              <div data-aos="fade-down" className="mint_info">
-                <p>1. Round 1:
-                
-                                 
-                  <br />
-                  <br />• PPT presentation(1 slider).
-                  <br />
-                  <br />•	Top 5 teams will qualify   
-
-
-                  <br />
-                  <br />2. Round 2:  
-                  <br />
-                  <br />• Proper ppt presentation(max 10 slides). 
-                  <br /> 
-                  <br />• 3 winners.
-                  <br/>
-                  <br />• Model presentation.
-                </p>
-              </div>
-              <a style={{ textDecoration: "none" }} href={docs}>
-                <span className="metaportal_fn_button_4">Download PDF</span>
-              </a>
             </div>
           </div>
         </div>

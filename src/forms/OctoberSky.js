@@ -10,27 +10,18 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
-const DsaMarathonForm = () => {
+const OctoberSkyForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("dsamarathonform")) || {
-    Team_name: "",
+  const cachedForm = JSON.parse(localStorage.getItem("octoberskyform")) || {
     Leader_name: "",
     Leader_email: "",
     Leader_whatsapp: "",
     Leader_college: "",
     Leader_branch: "",
     Leader_yog: "",
-    Leader_Hackerrank: "",
-    Leader_Hackerearth: "",
-    P2_name: "",
-    P2_Hackerrank: "",
-    P2_Hackerearth: "",
-    P3_name: "",
-    P3_Hackerrank: "",
-    P3_Hackerearth: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -40,7 +31,7 @@ const DsaMarathonForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("dsamarathonform", JSON.stringify(update));
+    localStorage.setItem("octoberskyform", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -70,30 +61,25 @@ const DsaMarathonForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
       form.Leader_name !== "" &&
       form.Leader_email !== "" &&
       form.Leader_whatsapp !== "" &&
       form.Leader_college !== "" &&
       form.Leader_branch !== "" &&
       form.Leader_yog !== "" &&
-      form.Leader_Hackerearth !== "" &&
-      form.Leader_Hackerrank !== "" &&
-      form.P2_name !== "" &&
-      form.P2_Hackerearth !== "" &&
-      form.P2_Hackerrank !== "" &&
-      form.P3_name !== "" &&
-      form.P3_Hackerearth !== "" &&
-      form.P3_Hackerrank !== "" &&
       form.Leader_whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=dsamarathon`, form, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await axios.post(
+          `/server/register?event=octobersky`,
+          form,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -113,7 +99,7 @@ const DsaMarathonForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"DSA Marathon"} noncolor={""} />
+      <Title color={"October Sky"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -124,20 +110,10 @@ const DsaMarathonForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
-                    id="teamName"
-                    type="text"
-                    placeholder="Team Name"
-                    onChange={(e) => handle(e)}
-                    value={form.Team_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
                     id="leaderName"
                     type="text"
                     name="Leader_name"
-                    placeholder="Leader Name"
+                    placeholder="Full Name"
                     onChange={(e) => handle(e)}
                     value={form.Leader_name}
                   />
@@ -147,7 +123,7 @@ const DsaMarathonForm = () => {
                     id="leaderName"
                     type="text"
                     name="Leader_email"
-                    placeholder="Leader Email"
+                    placeholder="Email"
                     onChange={(e) => handle(e)}
                     value={form.Leader_email}
                   />
@@ -157,7 +133,7 @@ const DsaMarathonForm = () => {
                     id="leaderNumber"
                     type="text"
                     name="Leader_whatsapp"
-                    placeholder="Leader Whatsapp Number"
+                    placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
@@ -176,7 +152,7 @@ const DsaMarathonForm = () => {
                     name="Leader_college"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader College"
+                    placeholder="College"
                     onChange={(e) => handle(e)}
                     value={form.Leader_college}
                   />
@@ -186,7 +162,7 @@ const DsaMarathonForm = () => {
                     name="Leader_branch"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader Branch"
+                    placeholder="Branch"
                     onChange={(e) => handle(e)}
                     value={form.Leader_branch}
                   />
@@ -196,89 +172,9 @@ const DsaMarathonForm = () => {
                     name="Leader_yog"
                     id="leaderYog"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Year of Graduation"
                     onChange={(e) => handle(e)}
                     value={form.Leader_yog}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_yog"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Leader's Hackerrank ID"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_Hackerrank}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_yog"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Leader's HackerEarth ID"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_Hackerearth}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P2_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 2 Name"
-                    onChange={(e) => handle(e)}
-                    value={form.P2_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P2_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 2 Hackerrank ID"
-                    onChange={(e) => handle(e)}
-                    value={form.P2_Hackerrank}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P2_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 2 HackerEarth ID"
-                    onChange={(e) => handle(e)}
-                    value={form.P2_Hackerearth}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P3_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 3 Name"
-                    onChange={(e) => handle(e)}
-                    value={form.P3_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P3_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 3 Hackerrank ID"
-                    onChange={(e) => handle(e)}
-                    value={form.P3_Hackerrank}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P3_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 3 HackerEarth ID"
-                    onChange={(e) => handle(e)}
-                    value={form.P3_Hackerearth}
                   />
                 </li>
               </ul>
@@ -314,45 +210,35 @@ const DsaMarathonForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>DSA Marathon</h4>
+                <h4>October Sky</h4>
                 <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
-                <p>
-                  An event based on quick selection and solving maximum
-                  questions from a set of 30 Standard DSA questions.
-                </p>
-                <p>Team size: 3</p>
-                <p>Time duration: 45mins</p>
+                <p>Self-made rocket launching event.</p>
+                <p>Individual Participation</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4>DSA Marathon</h4>
+                <h4>October Sky</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. All the team members of a team have to login through the
-                  platform and have to solve maximum questions possible from a
-                  set of 30 questions in 45 minutes.
+                  1. Participants have to make rockets using bottles of cold
+                  drinks and other commonly available things.
                 </p>
                 <p>
-                  2. Students will be assessed from the number of test cases
-                  passed per question.
+                  2. The Rockets will be launched outdoors and whichever reaches
+                  the highest point will be the winner.
                 </p>
                 <p>
-                  3. Same question can be solved by different members of the
-                  team and a solution with maximum passed test cases will be
-                  counted.
+                  3. The contestants will have to make the rockets during the
+                  event itself.
                 </p>
                 <p>
-                  4. The team with the maximum number of questions solved will
-                  be declared winners.
-                </p>
-                <p>
-                  5. Any unfair means and plagiarism will lead to immediate
-                  disqualification.
+                  4. The Rockets must not ignite; the motion should be using
+                  hydraulic pressure only.
                 </p>
               </div>
               <div
@@ -372,4 +258,4 @@ const DsaMarathonForm = () => {
   );
 };
 
-export default DsaMarathonForm;
+export default OctoberSkyForm;

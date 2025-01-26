@@ -76,7 +76,7 @@ const EcopolisForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=aerofilia`, form, {
+        const res = await axios.post(`/server/register?event=ecopolis`, form, {
           headers: {
             "Content-Type": "application/json",
           },

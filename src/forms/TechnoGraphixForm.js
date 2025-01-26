@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/aerofilia.docx";
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
@@ -15,16 +15,13 @@ const TechnoGraphixForm = () => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("aerofiliaForm")) || {
-    Team_name: "",
+  const cachedForm = JSON.parse(localStorage.getItem("technographixform")) || {
     Leader_name: "",
     Leader_email: "",
     Leader_whatsapp: "",
     Leader_college: "",
     Leader_branch: "",
     Leader_yog: "",
-    P2_name: "",
-    P3_name: ""
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -34,7 +31,7 @@ const TechnoGraphixForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("aerofiliaForm", JSON.stringify(update));
+    localStorage.setItem("technographixform", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -50,9 +47,9 @@ const TechnoGraphixForm = () => {
 
   useEffect(() => {
     if (token) {
-      console.log('Captcha verified')
+      console.log("Captcha verified");
     }
-      // console.log(`hCaptcha Token: ${token}`);
+    // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
@@ -64,23 +61,25 @@ const TechnoGraphixForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
       form.Leader_name !== "" &&
       form.Leader_email !== "" &&
       form.Leader_whatsapp !== "" &&
       form.Leader_college !== "" &&
       form.Leader_branch !== "" &&
       form.Leader_yog !== "" &&
-      form.P2_name !== "" &&
       form.Leader_whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=aerofilia`, form, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await axios.post(
+          `/server/register?event=technographix`,
+          form,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -92,9 +91,7 @@ const TechnoGraphixForm = () => {
     setSubmit(false);
   };
 
-  const onVerifyCaptcha = () => {
-
-  }
+  const onVerifyCaptcha = () => {};
 
   return (
     <div
@@ -102,7 +99,7 @@ const TechnoGraphixForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"AEROFILIA"} noncolor={""} />
+      <Title color={"Techno Graphix"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -113,20 +110,10 @@ const TechnoGraphixForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
-                    id="teamName"
-                    type="text"
-                    placeholder="Team Name"
-                    onChange={(e) => handle(e)}
-                    value={form.Team_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
                     id="leaderName"
                     type="text"
                     name="Leader_name"
-                    placeholder="Leader Name"
+                    placeholder="Name"
                     onChange={(e) => handle(e)}
                     value={form.Leader_name}
                   />
@@ -136,7 +123,7 @@ const TechnoGraphixForm = () => {
                     id="leaderName"
                     type="text"
                     name="Leader_email"
-                    placeholder="Leader Email"
+                    placeholder="Email"
                     onChange={(e) => handle(e)}
                     value={form.Leader_email}
                   />
@@ -146,7 +133,7 @@ const TechnoGraphixForm = () => {
                     id="leaderNumber"
                     type="text"
                     name="Leader_whatsapp"
-                    placeholder="Leader Whatsapp Number"
+                    placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
@@ -165,7 +152,7 @@ const TechnoGraphixForm = () => {
                     name="Leader_college"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader College"
+                    placeholder="College"
                     onChange={(e) => handle(e)}
                     value={form.Leader_college}
                   />
@@ -175,7 +162,7 @@ const TechnoGraphixForm = () => {
                     name="Leader_branch"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader Branch"
+                    placeholder="Branch"
                     onChange={(e) => handle(e)}
                     value={form.Leader_branch}
                   />
@@ -185,29 +172,9 @@ const TechnoGraphixForm = () => {
                     name="Leader_yog"
                     id="leaderYog"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Year of Graduation"
                     onChange={(e) => handle(e)}
                     value={form.Leader_yog}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P2_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Player 2 Name"
-                    onChange={(e) => handle(e)}
-                    value={form.P2_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P3_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Player 3 Name"
-                    onChange={(e) => handle(e)}
-                    value={form.P3_name}
                   />
                 </li>
               </ul>
@@ -243,78 +210,57 @@ const TechnoGraphixForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Aerofilia</h4>
-                <h3 className="metaportal_fn_countdown">
-                DESCRIPTION
-                </h3>
+                <h4>Techno Graphix</h4>
+                <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                Design a bridge using spaghetti under the given dimensions. Weights will be placed on the top parts of the bridges. The team with a bridge handling the maximum load wins. A complete bridge should contain no other materials than spaghetti and the glue or tapes provided. Each team will be provided spaghetti at the beginning of the event.
+                  An Event based on Graphic designing/poster making based on the
+                  theme of the fest.
                 </p>
-                <p>
-                Team size: 2-3
-                </p>
-                <p>
-                Time duration:  3 hrs
-                </p>
+                <p>Team size: Individual Participation</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4>Aerofilia</h4>
+                <h4>Techon Graphix</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
+                <p>1. Participation will be individual.</p>
                 <p>
-                  1. Bridges must be constructed entirely using the spaghetti provided.
-                </p>
-                <p>2. Ensure to complete the model designing and preparation before specified time</p>
-                <p>
-                  3. Bridges must adhere specified dimensions
+                  2. Registration will be online through google form and spot
+                  registration is allowed too.
                 </p>
                 <p>
-                  4. Loads will be incrementally increased until the bridge breaks
+                  3. Event will contain two sections namely research and
+                  execution sections.
+                </p>
+                <p>4. Poster has to be designed according to the theme only.</p>
+                <p>
+                  5. All the participants will be given 15 minutes to collect
+                  the resources from any source possible and organise the
+                  structure of the design.
                 </p>
                 <p>
-                  5. A standard, wood #2 pencil will be supplied prior to the event beginning. This pencil must be incorporated into the bridge so that the pencil is located within the center third of the span. The exact location of the pencil is up to the team. A bucket will be attached to a hook placed on the pencil to hold the loading weights in the testing phase. Clearance should be provided such that the hook can be placed on the pencil without obstruction from other truss parts. The pencil must rest on both sides of the truss.
+                  6. After 15 minutes, collecting any further resources from any
+                  sources will be restricted.
                 </p>
                 <p>
-                  6. The bridge will be free-standing and must span two level surfaces which are 35 cm apart. Maximum length of the bridge will be 40 cm.
+                  7. Time duration of 1hr will be allocated to complete the
+                  design page.
                 </p>
-                <p>7. At the competition, bridges will be loaded with increasingly greater amounts of weight until they fail. After a bridge fails, team members are responsible for cleaning up the spaghetti from their bridge.</p>
-                {/* <p>8. Certificates will be given to all the participants.</p> */}
-              </div>
-              <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <h4>Aerofilia</h4>
-                <h3 className="metaportal_fn_countdown">PHASES OF COMPETITION</h3>
-              </div>
-              <div data-aos="fade-down" className="mint_info">
                 <p>
-                Design and construction phase: Within the specified amount of time, a bridge is supposed to be designed and constructed to support weight.
-                  <br />
-                  <br /> Judging: The bridges will be judged on the basis of their structure stability by testing the weight that can be handled.
-                  <br />
-                  {/* <br /> 3. 2 hand touches are allowed without any penalty after
-                  that there will be penalty of 7 sec for each hand touch,
-                  penalty time will be added further too overall time required
-                  by robot for completion of specified round.
-                  <br />
-                  <br /> 4. If any of the robots starts off before start up
-                  call, the counter would be restarted and the machines will get
-                  a second chance.
-                  <br />
-                  <br /> 5. Your robot must be ready when call is made for your
-                  team.
-                  <br />
-                  <br /> 6. Machine must not contain any readymade kits,
-                  pneumatic & hydraulic systems, IC engines.
-                  <br /> <br /> 7. Decision about your robot will be taken by
-                  the organizers. */}
+                  8. Allowed platforms are CANVA and ADOBE ILLUSTRATOR only (pro
+                  version is not allowed).
+                </p>
+                <p>
+                  9. After completion of the round the designed poster has to be
+                  submitted through email.
+                </p>
+                <p>
+                  10. Decision regarding final judgement shall rest on Team
+                  Technocracy.
                 </p>
               </div>
               <a style={{ textDecoration: "none" }} href={docs}>
@@ -328,4 +274,4 @@ const TechnoGraphixForm = () => {
   );
 };
 
-export default AerofiliaForm;
+export default TechnoGraphixForm;

@@ -51,7 +51,10 @@ import OrigamiForm from "./forms/OrigamiForm.js";
 import CosplayForm from "./forms/CosplayForm.js";
 import GiantKerplunkForm from "./forms/GiantKerplunk.js";
 import CaseOpsForm from "./forms/CaseOpsForm.js";
-import TechClashForm from "./forms/TechClashForm.js";
+import EscapeTheMatrixForm from "./forms/EscapeTheMatrixForm.js";
+import OctoberSkyForm from "./forms/OctoberSky.js";
+import PixelPlaygroundForm from "./forms/PixelPlaygroundForm.js";
+import TechnoGraphixForm from "./forms/TechnoGraphixForm.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -196,6 +199,22 @@ function App() {
               />
               <Route
                 exact="true"
+                path="/events/octoberSkyForm"
+                element={<OctoberSkyForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/pixelplaygroundform"
+                element={<PixelPlaygroundForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/technographixForm"
+                element={<TechnoGraphixForm />}
+              />
+
+              <Route
+                exact="true"
                 path="/events/codesprintrelayForm"
                 element={<CodeSprintRelayForm />}
               />
@@ -236,8 +255,8 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/techclashform"
-                element={<TechClashForm />}
+                path="/events/escapeTheMatrixForm"
+                element={<EscapeTheMatrixForm />}
               />
 
               <Route

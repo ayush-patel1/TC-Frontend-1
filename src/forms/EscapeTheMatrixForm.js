@@ -10,12 +10,12 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
-const DsaMarathonForm = () => {
+const EscapeTheMatrixForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("dsamarathonform")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("escapethematrix")) || {
     Team_name: "",
     Leader_name: "",
     Leader_email: "",
@@ -23,14 +23,9 @@ const DsaMarathonForm = () => {
     Leader_college: "",
     Leader_branch: "",
     Leader_yog: "",
-    Leader_Hackerrank: "",
-    Leader_Hackerearth: "",
     P2_name: "",
-    P2_Hackerrank: "",
-    P2_Hackerearth: "",
     P3_name: "",
-    P3_Hackerrank: "",
-    P3_Hackerearth: "",
+    P4_name: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -40,7 +35,7 @@ const DsaMarathonForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("dsamarathonform", JSON.stringify(update));
+    localStorage.setItem("escapethematrix", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -77,19 +72,13 @@ const DsaMarathonForm = () => {
       form.Leader_college !== "" &&
       form.Leader_branch !== "" &&
       form.Leader_yog !== "" &&
-      form.Leader_Hackerearth !== "" &&
-      form.Leader_Hackerrank !== "" &&
       form.P2_name !== "" &&
-      form.P2_Hackerearth !== "" &&
-      form.P2_Hackerrank !== "" &&
       form.P3_name !== "" &&
-      form.P3_Hackerearth !== "" &&
-      form.P3_Hackerrank !== "" &&
       form.Leader_whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=dsamarathon`, form, {
+        const res = await axios.post(`/server/register?event=escapethematrix`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -113,7 +102,7 @@ const DsaMarathonForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"DSA Marathon"} noncolor={""} />
+      <Title color={"Escape The Matrix"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -203,52 +192,12 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Leader's Hackerrank ID"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_Hackerrank}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_yog"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Leader's HackerEarth ID"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_Hackerearth}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
                     name="P2_name"
                     id="leaderYog"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
                     value={form.P2_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P2_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 2 Hackerrank ID"
-                    onChange={(e) => handle(e)}
-                    value={form.P2_Hackerrank}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P2_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 2 HackerEarth ID"
-                    onChange={(e) => handle(e)}
-                    value={form.P2_Hackerearth}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -263,22 +212,12 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
+                    name="P4_name"
                     id="leaderYog"
                     type="text"
-                    placeholder="Team Member 3 Hackerrank ID"
+                    placeholder="Team Member 4 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P3_Hackerrank}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P3_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 3 HackerEarth ID"
-                    onChange={(e) => handle(e)}
-                    value={form.P3_Hackerearth}
+                    value={form.P4_name}
                   />
                 </li>
               </ul>
@@ -314,56 +253,95 @@ const DsaMarathonForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>DSA Marathon</h4>
+                <h4>Escape The Matrix</h4>
                 <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  An event based on quick selection and solving maximum
-                  questions from a set of 30 Standard DSA questions.
+                  "Escape the Matrix" is a thrilling survival quiz designed to
+                  test participant's knowledge, problem-solving skills, and
+                  quick thinking. Participants will navigate through a series of
+                  challenging questions and tasks, each more difficult than the
+                  last, to escape the virtual matrix. This event combines
+                  elements of a quiz, making it a unique and engaging
+                  experience.
                 </p>
-                <p>Team size: 3</p>
-                <p>Time duration: 45mins</p>
+                <p>Team size: 3-4</p>
+                <p>Rounds: 4</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4>DSA Marathon</h4>
+                <h4>Escape The Matrix</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. All the team members of a team have to login through the
-                  platform and have to solve maximum questions possible from a
-                  set of 30 questions in 45 minutes.
+                  1. Team Composition: Teams must consist of 3-4 members. No
+                  changes in team composition are allowed once the event starts.
                 </p>
                 <p>
-                  2. Students will be assessed from the number of test cases
-                  passed per question.
+                  2. All participants must adhere to the rules and instructions
+                  provided by the event coordinators.
                 </p>
                 <p>
-                  3. Same question can be solved by different members of the
-                  team and a solution with maximum passed test cases will be
-                  counted.
-                </p>
-                <p>
-                  4. The team with the maximum number of questions solved will
-                  be declared winners.
-                </p>
-                <p>
-                  5. Any unfair means and plagiarism will lead to immediate
+                  3. Any form of cheating or misconduct will result in immediate
                   disqualification.
                 </p>
+                <p>
+                  4. Time Limits: Each round has a specific time limit which
+                  must be adhered to. Teams must submit their answers and
+                  solutions within the given time frame.
+                </p>
               </div>
-              <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <a style={{ textDecoration: "none" }} href={docs}>
-                  <span className="metaportal_fn_button_4">Download PDF</span>
-                </a>
+              <div data-aos="fade-down" className="mint_time">
+                <h4>Escape The Matrix</h4>
+                <h3 className="metaportal_fn_countdown">Event Structure</h3>
               </div>
+              <div data-aos="fade-down" className="mint_info">
+                <p>
+                  Pre-Event Briefing: All teams will gather for a briefing where
+                  the rules and structure of the event will be explained.
+                </p>
+                <h4>Round 1: The Entry Point (Buzzer Round): 40 teams</h4>
+                <p>Teams will face a set of 10 multiple-choice questions.</p>
+                <p>
+                  Each correct answer earns points, and negative marks for
+                  pressing the buzzer and telling a wrong answer and a minimum
+                  score is required to progress to the next round.
+                </p>
+                <h4>Round 2: The Movie Quiz: 20 teams</h4>
+                <p>
+                  Teams will be prompted with dialogues and they have to
+                  complete the dialogues
+                </p>
+                <p>
+                  Teams must solve all puzzles within a given time frame to
+                  advance.
+                </p>
+                <h4>Round 3: The Code Breaker: 10 teams</h4>
+                <p>
+                  Teams will be given encrypted messages and codes to decipher.
+                </p>
+                <p>
+                  Points are awarded for each correct code, with higher points
+                  for faster solutions.
+                </p>
+                <p>
+                  The top teams based on points and time will proceed to the
+                  final round.
+                </p>
+                <h4>Round 4: The Final Escape: 3-5 teams</h4>
+                <p>
+                  Teams will face a mix of high-difficulty rapid fire questions
+                  and those who will give the most correct answers will win.
+                </p>
+              </div>
+              
+              
+              <a style={{ textDecoration: "none" }} href={docs}>
+                <span className="metaportal_fn_button_4">Download PDF</span>
+              </a>
             </div>
           </div>
         </div>
@@ -372,4 +350,4 @@ const DsaMarathonForm = () => {
   );
 };
 
-export default DsaMarathonForm;
+export default EscapeTheMatrixForm;

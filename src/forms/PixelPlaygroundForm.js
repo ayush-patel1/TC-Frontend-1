@@ -1,27 +1,28 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
-import { connect } from "react-redux";
 import keys from "../keys.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/aerofilia.docx";
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
-const TechnoGraphixForm = () => {
+const PixelPlaygroundForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("technoGraphixForm")) || {
-    Name: "",
-    Email: "",
-    Whatsapp: "",
-    Program_of_study: "",
-    Branch: "",
-    Sem: ""
+  const cachedForm = JSON.parse(localStorage.getItem("pixelplayground")) || {
+    Leader_name: "",
+    Leader_email: "",
+    Leader_whatsapp: "",
+    Leader_college: "",
+    Leader_branch: "",
+    Leader_yog: "",
+    P2_name: "",
+    P3_name: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -31,7 +32,7 @@ const TechnoGraphixForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("technoGraphixForm", JSON.stringify(update));
+    localStorage.setItem("pixelplayground", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -47,9 +48,9 @@ const TechnoGraphixForm = () => {
 
   useEffect(() => {
     if (token) {
-      console.log('Captcha verified')
+      console.log("Captcha verified");
     }
-      // console.log(`hCaptcha Token: ${token}`);
+    // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
@@ -61,17 +62,17 @@ const TechnoGraphixForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Name !== "" &&
-      form.Email !== "" &&
-      form.Whatsapp !== "" &&
-      form.Branch !== "" &&
-      form.Sem !== "" &&
-      form.Program_of_study !== "" &&
-      form.Whatsapp.length == 10;
+      form.Leader_name !== "" &&
+      form.Leader_email !== "" &&
+      form.Leader_whatsapp !== "" &&
+      form.Leader_college !== "" &&
+      form.Leader_branch !== "" &&
+      form.Leader_yog !== "" &&
+      form.Leader_whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=TechnoGraphics`, form, {
+        const res = await axios.post(`/server/register?event=pixelplayground`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -87,9 +88,7 @@ const TechnoGraphixForm = () => {
     setSubmit(false);
   };
 
-  const onVerifyCaptcha = () => {
-
-  }
+  const onVerifyCaptcha = () => {};
 
   return (
     <div
@@ -97,7 +96,7 @@ const TechnoGraphixForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"TECHNO GRAPHIX"} noncolor={""} />
+      <Title color={"Pixel Playground"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -110,26 +109,36 @@ const TechnoGraphixForm = () => {
                   <input
                     id="leaderName"
                     type="text"
-                    name="Name"
+                    name="Leader_name"
                     placeholder="Full Name"
                     onChange={(e) => handle(e)}
-                    value={form.Name}
+                    value={form.Leader_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    id="leaderName"
+                    type="text"
+                    name="Leader_email"
+                    placeholder="Email"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="Whatsapp"
-                    placeholder="Contact Number"
+                    name="Leader_whatsapp"
+                    placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Whatsapp}
+                    value={form.Leader_whatsapp}
                   />
                   <span style={{ fontSize: "0.7rem" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Whatsapp !== "" &&
-                    form.Whatsapp.length !== 10 && (
+                  {form.Leader_whatsapp !== "" &&
+                    form.Leader_whatsapp.length !== 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -137,45 +146,54 @@ const TechnoGraphixForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderEmail"
+                    name="Leader_college"
+                    id="leaderBranch"
                     type="text"
-                    name="Email"
-                    placeholder="Email Address"
+                    placeholder="College"
                     onChange={(e) => handle(e)}
-                    value={form.Email}
+                    value={form.Leader_college}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Program_of_study"
-                    id="leaderProgramOfStudy"
-                    type="text"
-                    placeholder="Program of Study"
-                    onChange={(e) => handle(e)}
-                    value={form.Program_of_study}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Branch"
+                    name="Leader_branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Branch}
+                    value={form.Leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Sem"
-                    id="leaderSem"
+                    name="Leader_yog"
+                    id="leaderYog"
                     type="text"
-                    placeholder="Semester"
+                    placeholder="Year of Graduation"
                     onChange={(e) => handle(e)}
-                    value={form.Sem}
+                    value={form.Leader_yog}
                   />
                 </li>
-                
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_yog"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Team Member 2 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_yog"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Team Member 3 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_name}
+                  />
+                </li>
               </ul>
             </div>
             <HCaptcha
@@ -209,56 +227,82 @@ const TechnoGraphixForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Techno Graphix</h4>
-                <h3 className="metaportal_fn_countdown">
-                DESCRIPTION
-                </h3>
+                <h4>Pixel Playground</h4>
+                <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                An Event based on Graphic designing/poster making based on the theme of the fest.
+                  Pixel Playground is an exhilarating video editing competition
+                  where creativity meets time pressure. Participants will
+                  capture the essence of our 2-day fest through videos or photos
+                  and craft a stunning short film within a limited timeframe on
+                  Day 2. Show off your editing prowess and storytelling skills
+                  as you bring the fest's highlights to life. With only a few
+                  hours to create, edit, and render your masterpiece, this event
+                  is all about speed, precision, and creativity. The best edits
+                  will be showcased, and winners will be announced at the end of
+                  Day 2.
                 </p>
+                <p>Team Size: 1 to 3</p>
               </div>
-              
-              <div style={{ paddingTop: "2rem" }} data-aos="fade-down" className="mint_time">
-                <h4>TECHNO Graphix</h4>
+              <div data-aos="fade-down" className="mint_time">
+                <h4>Pixel Playground</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. Participation will be individual.
-                </p>
-                <p>2. Registration will be online through google form and spot registration is allowed too. </p>
-                <p>
-                  3. Event will contain two sections namely research and execution sections.
+                  1. Team Size: Participants can compete individually or in
+                  teams of up to 3 members.
                 </p>
                 <p>
-                  4. Poster has to be designed according to the theme only.
+                  2. Content Capture: All video footage or photos must be
+                  captured during the fest's first day. Use of pre-existing
+                  content is prohibited.
                 </p>
                 <p>
-                  5. All the participants will be given 15 minutes to collect the resources from any source possible and organise the structure of the design.
+                  3. Theme: The video should represent the fest's spirit and
+                  activities. A specific theme or keyword will be provided at
+                  the start of Day 2.
                 </p>
                 <p>
-                  6. After 15 minutes, collecting any further resources from any sources will be restricted.
+                  4. Duration: The final edited video should be between 2 to 5
+                  minutes long.
                 </p>
                 <p>
-                  7. Time duration of 1hr will be allocated to complete the design page.
+                  5. Editing Time: Participants will have a total of 4-5 hours
+                  on Day 2 to edit and submit their final video.
                 </p>
                 <p>
-                  8. Allowed platforms are CANVA and ADOBE ILLUSTRATOR only (pro version is not allowed).
+                  6. Software: Participants can use any video editing software
+                  they prefer. However, all editing must be done during the
+                  allocated time.
                 </p>
                 <p>
-                  9. After completion of the round the designed poster has to be submitted through email.
+                  7. Submission: Final videos must be submitted in MP4 format. Late
+                  submissions will not be accepted.
                 </p>
                 <p>
-                  10. Decision regarding final judgement shall rest on Team Technocracy.
+                  8. Originality: All work must be original. Plagiarism or using
+                  templates that undermine creativity will lead to
+                  disqualification.
+                </p>
+                <p>
+                  9. Judging Criteria: Videos will be judged based on creativity,
+                  storytelling, technical editing skills, and adherence to the
+                  theme.
                 </p>
               </div>
-              {/*<a style={{ textDecoration: "none" }} href={docs}>
-                <span className="metaportal_fn_button_4">Download PDF</span>
-              </a>*/}
+              <div
+                data-aos="fade-down"
+                style={{ paddingTop: "2rem" }}
+                className="mint_time"
+              >
+                <a style={{ textDecoration: "none" }} href={docs}>
+                  <span className="metaportal_fn_button_4">Download PDF</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -267,4 +311,4 @@ const TechnoGraphixForm = () => {
   );
 };
 
-export default TechnoGraphixForm;
+export default PixelPlaygroundForm;

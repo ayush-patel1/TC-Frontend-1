@@ -6,31 +6,37 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/aerofilia.docx";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const backend = keys.backend;
 
-const DsaMarathonForm = () => {
+const ReverseCodingForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("dsamarathonform")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("reverseCodingForm")) || {
     Team_name: "",
     Leader_name: "",
+    Leader_gender: "",
     Leader_email: "",
     Leader_whatsapp: "",
     Leader_college: "",
+    Leader_program_of_study: "",
     Leader_branch: "",
-    Leader_yog: "",
-    Leader_Hackerrank: "",
-    Leader_Hackerearth: "",
+    Leader_sem: "",
     P2_name: "",
-    P2_Hackerrank: "",
-    P2_Hackerearth: "",
+    P2_email: "",
+    P2_sem: "",
+    P2_Branch: "",
     P3_name: "",
-    P3_Hackerrank: "",
-    P3_Hackerearth: "",
+    P3_email: "",
+    P3_sem: "",
+    P3_Branch: "",
+    P4_name: "",
+    P4_email: "",
+    P4_sem: "",
+    P4_Branch: ""
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -40,7 +46,7 @@ const DsaMarathonForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("dsamarathonform", JSON.stringify(update));
+    localStorage.setItem("reverseCodingForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -56,9 +62,9 @@ const DsaMarathonForm = () => {
 
   useEffect(() => {
     if (token) {
-      console.log("Captcha verified");
+      console.log('Captcha verified')
     }
-    // console.log(`hCaptcha Token: ${token}`);
+      // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
@@ -73,23 +79,29 @@ const DsaMarathonForm = () => {
       form.Team_name !== "" &&
       form.Leader_name !== "" &&
       form.Leader_email !== "" &&
+      form.Leader_gender !== "" &&
       form.Leader_whatsapp !== "" &&
       form.Leader_college !== "" &&
       form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
-      form.Leader_Hackerearth !== "" &&
-      form.Leader_Hackerrank !== "" &&
+      form.Leader_sem !== "" &&
+      form.Leader_program_of_study !== "" &&
       form.P2_name !== "" &&
-      form.P2_Hackerearth !== "" &&
-      form.P2_Hackerrank !== "" &&
+      form.P2_email !== "" &&
+      form.P2_sem !== "" &&
+      form.P2_branch !== "" &&
       form.P3_name !== "" &&
-      form.P3_Hackerearth !== "" &&
-      form.P3_Hackerrank !== "" &&
+      form.P3_email !== "" &&
+      form.P3_sem !== "" &&
+      form.P3_branch !== "" &&
+      form.P4_name !== "" &&
+      form.P4_email !== "" &&
+      form.P4_sem !== "" &&
+      form.P4_branch !== "" &&
       form.Leader_whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=dsamarathon`, form, {
+        const res = await axios.post(`/server/register?event=ReverseCoding`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -105,7 +117,9 @@ const DsaMarathonForm = () => {
     setSubmit(false);
   };
 
-  const onVerifyCaptcha = () => {};
+  const onVerifyCaptcha = () => {
+
+  }
 
   return (
     <div
@@ -113,7 +127,7 @@ const DsaMarathonForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"DSA Marathon"} noncolor={""} />
+      <Title color={"REVERSE CODING"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -124,9 +138,9 @@ const DsaMarathonForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
                     id="teamName"
                     type="text"
+                    name="Team_name"
                     placeholder="Team Name"
                     onChange={(e) => handle(e)}
                     value={form.Team_name}
@@ -144,12 +158,12 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    id="leaderGender"
                     type="text"
-                    name="Leader_email"
-                    placeholder="Leader Email"
+                    name="Leader_gender"
+                    placeholder="Leader Gender"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.Leader_gender}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -173,12 +187,32 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    id="leaderEmail"
+                    type="text"
+                    name="Leader_email"
+                    placeholder="Leader Email"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
                     name="Leader_college"
                     id="leaderBranch"
                     type="text"
                     placeholder="Leader College"
                     onChange={(e) => handle(e)}
                     value={form.Leader_college}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_program_of_study"
+                    id="leaderProgramOfStudy"
+                    type="text"
+                    placeholder="Program of Study"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -193,94 +227,134 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="Leader_sem"
+                    id="leaderSem"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Leader Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_yog"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Leader's Hackerrank ID"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_Hackerrank}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_yog"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Leader's HackerEarth ID"
-                    onChange={(e) => handle(e)}
-                    value={form.Leader_Hackerearth}
+                    value={form.Leader_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="P2_name"
-                    id="leaderYog"
+                    id="P2_name"
                     type="text"
-                    placeholder="Team Member 2 Name"
+                    placeholder="Member 2 Name"
                     onChange={(e) => handle(e)}
                     value={form.P2_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_name"
-                    id="leaderYog"
+                    name="P2_email"
+                    id="P2_name"
                     type="text"
-                    placeholder="Team Member 2 Hackerrank ID"
+                    placeholder="Member 2 Email"
                     onChange={(e) => handle(e)}
-                    value={form.P2_Hackerrank}
+                    value={form.P2_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_name"
+                    name="P2_sem"
                     id="leaderYog"
                     type="text"
-                    placeholder="Team Member 2 HackerEarth ID"
+                    placeholder="Member 2 Sem"
                     onChange={(e) => handle(e)}
-                    value={form.P2_Hackerearth}
+                    value={form.P2_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_branch"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Member 2 Branch"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="P3_name"
-                    id="leaderYog"
+                    id="P3_name"
                     type="text"
-                    placeholder="Team Member 3 Name"
+                    placeholder="Member 3 Name"
                     onChange={(e) => handle(e)}
                     value={form.P3_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
-                    id="leaderYog"
+                    name="P3_email"
+                    id="P2_name"
                     type="text"
-                    placeholder="Team Member 3 Hackerrank ID"
+                    placeholder="Member 3 Email"
                     onChange={(e) => handle(e)}
-                    value={form.P3_Hackerrank}
+                    value={form.P3_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
+                    name="P3_sem"
                     id="leaderYog"
                     type="text"
-                    placeholder="Team Member 3 HackerEarth ID"
+                    placeholder="Member 3 Sem"
                     onChange={(e) => handle(e)}
-                    value={form.P3_Hackerearth}
+                    value={form.P3_sem}
                   />
                 </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_branch"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Member 3 Branch"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_branch}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="P4_name"
+                    id="P2_name"
+                    type="text"
+                    placeholder="Member 4 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_email"
+                    id="P2_name"
+                    type="text"
+                    placeholder="Member 4 Email"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_sem"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Member 4 Sem"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_branch"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Member 4 Branch"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_branch}
+                  />
+                </li>
+                
               </ul>
             </div>
             <HCaptcha
@@ -314,56 +388,43 @@ const DsaMarathonForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>DSA Marathon</h4>
-                <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
+                <h4>Reverse Coding</h4>
+                <h3 className="metaportal_fn_countdown">
+                DESCRIPTION
+                </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  An event based on quick selection and solving maximum
-                  questions from a set of 30 Standard DSA questions.
+                Reverse Coding is a unique coding competition designed to challenge participant's problem-solving skills by presenting coding challenges that require them to work backward from a given output to the original code. The event aims to foster creative thinking, logical reasoning, and algorithmic understanding among participants.
                 </p>
-                <p>Team size: 3</p>
-                <p>Time duration: 45mins</p>
               </div>
-              <div data-aos="fade-down" className="mint_time">
-                <h4>DSA Marathon</h4>
+              <div style={{ paddingTop: "2rem" }} data-aos="fade-down" className="mint_time">
+                <h4>Reverse Coding</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. All the team members of a team have to login through the
-                  platform and have to solve maximum questions possible from a
-                  set of 30 questions in 45 minutes.
+                  1. 4 members should be there in the team.
+                </p>
+                <p>2. No external help allowed.</p>
+                <p>
+                  3. Time limit should not exceed 30 minutes.
                 </p>
                 <p>
-                  2. Students will be assessed from the number of test cases
-                  passed per question.
+                  4. Panel decision shall be final.
                 </p>
                 <p>
-                  3. Same question can be solved by different members of the
-                  team and a solution with maximum passed test cases will be
-                  counted.
+                  5. 4-5 rounds should be there.
                 </p>
                 <p>
-                  4. The team with the maximum number of questions solved will
-                  be declared winners.
-                </p>
-                <p>
-                  5. Any unfair means and plagiarism will lead to immediate
-                  disqualification.
+                  6. The team completing all the rounds shall be declared as winner.
                 </p>
               </div>
-              <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <a style={{ textDecoration: "none" }} href={docs}>
-                  <span className="metaportal_fn_button_4">Download PDF</span>
-                </a>
-              </div>
+              {/*<a style={{ textDecoration: "none" }} href={docs}>
+                <span className="metaportal_fn_button_4">Download PDF</span>
+              </a>*/}
             </div>
           </div>
         </div>
@@ -372,4 +433,4 @@ const DsaMarathonForm = () => {
   );
 };
 
-export default DsaMarathonForm;
+export default ReverseCodingForm;

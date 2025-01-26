@@ -148,7 +148,7 @@ const ValorantForm = () => {
 
     if (condition1 && condition2 && condition3 && condition4 && condition5) {
       try {
-        const res = await axios.post(`/server/register?event=valo`, form, {
+        const res = await axios.post(`/server/register?event=Valorant`, form, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

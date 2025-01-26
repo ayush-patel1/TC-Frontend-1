@@ -78,7 +78,7 @@ const EscapeTheMatrixForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=escapethematrix`, form, {
+        const res = await axios.post(`/server/register?event=EscapeTheMatrix`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -339,9 +339,9 @@ const EscapeTheMatrixForm = () => {
               </div>
               
               
-              <a style={{ textDecoration: "none" }} href={docs}>
+              {/* <a style={{ textDecoration: "none" }} href={docs}>
                 <span className="metaportal_fn_button_4">Download PDF</span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

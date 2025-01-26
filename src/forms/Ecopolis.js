@@ -76,7 +76,7 @@ const EcopolisForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=ecopolis`, form, {
+        const res = await axios.post(`/server/register?event=Ecopolis`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -276,7 +276,7 @@ const EcopolisForm = () => {
                 <p>Proper PPT presentation (max 10 slides)</p>
                 <p>Model presentation</p>
               </div>
-              <div
+              {/* <div
                 data-aos="fade-down"
                 style={{ paddingTop: "2rem" }}
                 className="mint_time"
@@ -284,7 +284,7 @@ const EcopolisForm = () => {
                 <a style={{ textDecoration: "none" }} href={docs}>
                   <span className="metaportal_fn_button_4">Download PDF</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

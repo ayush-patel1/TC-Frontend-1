@@ -71,7 +71,7 @@ const DimensionsForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=dimension`, form, {
+        const res = await axios.post(`/server/register?event=Dimensions`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -240,7 +240,7 @@ const DimensionsForm = () => {
                   speed of completion of the task
                 </p>
               </div>
-              <div
+              {/* <div
                 data-aos="fade-down"
                 style={{ paddingTop: "2rem" }}
                 className="mint_time"
@@ -248,7 +248,7 @@ const DimensionsForm = () => {
                 <a style={{ textDecoration: "none" }} href={docs}>
                   <span className="metaportal_fn_button_4">Download PDF</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

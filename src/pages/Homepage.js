@@ -26,17 +26,13 @@ const Homepage = () => {
         <div className="homecontainer">
           {/* <div className="dark-overlay" style={{position:"relative", zIndex:"0"}}></div> */}
           <Section1 />
-          <Section1 />
           {/* <HomeHero /> */}
           {/* <RecruitForm/> */}
           <About />
           {/* <Blog/> */}
           <Timeline />
-          <Faq />
           {/* <RecruitForm/> */}
-          <About />
           {/* <Blog/> */}
-          <Timeline />
           <Faq />
         </div>
       )}

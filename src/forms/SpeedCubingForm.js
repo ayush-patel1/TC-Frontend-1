@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/terrainTreader.docx";
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
@@ -19,15 +19,12 @@ const SpeedCubingForm = () => {
     Name: "",
     Email: "",
     Phone: "",
-    Additional_phone: "",
-    College: "",
     Branch: "",
-    YOG: "",
-    Roll_number: "",
-    Preferred_cube_type: "",
-    Experience: "",
-    Achievements: ""
+    Gender: "",
+    Program_of_study: "",
+    Sem: "",
   };
+
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
@@ -49,14 +46,11 @@ const SpeedCubingForm = () => {
 
   useEffect(() => {
     if (token) {
-      console.log('Captcha verified')
+      console.log("Captcha verified");
     }
-      // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
-    // const recaptchaValue = recaptchaRef.current.getValue();
-    // Send the recaptchaValue along with the form data to your server for verification.
     if (!token) {
       alert("Human verification is mandatory");
       return;
@@ -66,20 +60,24 @@ const SpeedCubingForm = () => {
       form.Name !== "" &&
       form.Email !== "" &&
       form.Phone !== "" &&
-      form.College !== "" &&
+      form.Gender !== "" &&
       form.Branch !== "" &&
-      form.YOG !== "" &&
-      form.Preferred_cube_type !== "" &&
+      form.Sem !== "" &&
+      form.Program_of_study !== "" &&
       form.Phone.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=speedCubing`, form, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-	setValue(true);
+        const res = await axios.post(
+          `/server/register?event=speedCubing`,
+          form,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        setValue(true);
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -90,9 +88,6 @@ const SpeedCubingForm = () => {
     }
     setSubmit(false);
   };
-
-  const onVerifyCaptcha = () => {
-  }
 
   return (
     <div
@@ -138,43 +133,33 @@ const SpeedCubingForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Phone}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Phone !== "" &&
-                    form.Phone.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
+                  { form.Phone.length > 10 && (
+                    <p style={{ color: "red" }}>
+                      Enter a number of 10 digits only.
+                    </p>
+                  )}
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="whatsappNumber"
+                    name="Gender"
+                    id="gender"
                     type="text"
-                    name="Additional_phone"
-                    placeholder="Additional phone Number"
+                    placeholder="Gender"
                     onChange={(e) => handle(e)}
-                    value={form.Additional_phone}
+                    value={form.Gender}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  {form.Additional_phone !== "" &&
-                    form.Additional_phone.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="College"
-                    id="collegeName"
+                    name="program of study"
+                    id="program_of_study"
                     type="text"
-                    placeholder="College Name"
+                    placeholder="Program of study"
                     onChange={(e) => handle(e)}
-                    value={form.College}
+                    value={form.Program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -189,42 +174,12 @@ const SpeedCubingForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="YOG"
-                    id="year"
+                    name="Sem"
+                    id="sem"
                     type="text"
-                    placeholder="Year"
+                    placeholder="Semester"
                     onChange={(e) => handle(e)}
-                    value={form.YOG}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Preferred_cube_type"
-                    id="rollNumber"
-                    type="text"
-                    placeholder="Preferred Cube Type"
-                    onChange={(e) => handle(e)}
-                    value={form.Preferred_cube_type}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Experience"
-                    id="howLong"
-                    type="text"
-                    placeholder="How long have you been solving the cube?"
-                    onChange={(e) => handle(e)}
-                    value={form.Experience}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Achievements"
-                    id="achievement"
-                    type="text"
-                    placeholder="Any achievement(s) in solving cube-related events?"
-                    onChange={(e) => handle(e)}
-                    value={form.Achievements}
+                    value={form.Sem}
                   />
                 </li>
               </ul>
@@ -235,14 +190,10 @@ const SpeedCubingForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div style={{ fontSize: '17px' }}>
+            <div style={{ fontSize: "17px" }}>
               Don't forget to join the WhatsApp Group after registration!
             </div>
             <div className="mint_desc" style={{ paddingTop: "2rem" }}>
-              {/* <ReCAPTCHA
-                sitekey="6LcIzaMoAAAAAHJK_7w8zc2WlllaZm4asH4POtWI"
-                ref={recaptchaRef}
-              /> */}
               {!isSubmitting ? (
                 <div
                   target="_blank"
@@ -257,17 +208,22 @@ const SpeedCubingForm = () => {
               ) : (
                 <>Submitting...</>
               )}
-	      <div>
-              {isSubmitted && (
-                <div>
+              <div>
+                {isSubmitted && (
                   <div>
-                    <a style={{ textDecoration: "none"}} href="https://chat.whatsapp.com/LhuUE4GCgnhGy5nYrJ9S3q">
-                      <span className="metaportal_fn_button_4">Join WA Group</span>
-                    </a>
+                    <div>
+                      <a
+                        style={{ textDecoration: "none" }}
+                        href="https://chat.whatsapp.com/LhuUE4GCgnhGy5nYrJ9S3q"
+                      >
+                        <span className="metaportal_fn_button_4">
+                          Join WA Group
+                        </span>
+                      </a>
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
           </div>
@@ -280,60 +236,18 @@ const SpeedCubingForm = () => {
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
+                <p>• Individual participants.</p>
                 <p>
-                1. Any modification or tampering with the cubes is strictly prohibited.
+                  • According to number of participants we’ll divide all
+                  participants in group of 6 people.
                 </p>
+                <p>• For each group we’ll conduct the competition.</p>
+                <p>• There will be a time-based winner for each group.</p>
                 <p>
-                2. Participants are expected to maintain the highest standards of sportsmanship. Any form of cheating or disruptive behaviour will result in disqualification. 
-                </p>
-                <p>
-                3. In Round 3, participants must allow volunteers/executives to scramble their cubes. The cube's pattern should be unknown to the participants until the start of the round. Any attempt to do so will result in immediate disqualification. 
-                </p>
-                <p>
-                4. Participants must follow all instructions and directions given by the organizers, volunteers, and executives. Failure to do so may result in disqualification.
-                </p>
-                <p>
-                6. All the participants must report to concerned venue at the reported time. Late reporting can lead to disqualification.
-                </p>
-		 <p>
-                7. Joining the WhatsApp group through the link which is given is mandatory
+                  • In second match all the winners from first match will be
+                  competing against each other.
                 </p>
               </div>
-              {/* <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <h4>PROCEDURES</h4>
-                <h3 className="metaportal_fn_countdown">PHASES IN THE EVENT</h3>
-              </div>
-              <div data-aos="fade-down" className="mint_info">
-                <p>
-                  1. The competition is based on time, performance and
-                  perfection trail system. There will a qualifying round for
-                  each team.
-                  <br />
-                  <br /> 2. The top team from qualifying round makes it to the
-                  final round on basis of time trials.
-                  <br />
-                  <br /> 3. 2 hand touches are allowed without any penalty after
-                  that there will be penalty of 7 sec for each hand touch,
-                  penalty time will be added further too overall time required
-                  by robot for completion of specified round.
-                  <br />
-                  <br /> 4. If any of the robots starts off before start up
-                  call, the counter would be restarted and the machines will get
-                  a second chance.
-                  <br />
-                  <br /> 5. Your robot must be ready when call is made for your
-                  team.
-                  <br />
-                  <br /> 6. Machine must not contain any readymade kits,
-                  pneumatic & hydraulic systems, IC engines.
-                  <br /> <br /> 7. Decision about your robot will be taken by
-                  the organizers.
-                </p>
-              </div> */}
               <a style={{ textDecoration: "none" }} href={docs}>
                 {/* <span className="metaportal_fn_button_4">Download PDF</span> */}
               </a>

@@ -7,7 +7,7 @@ import Title from "../components/Title";
 import docs from "../assets/eventsAssets/valorant.pdf";
 import keys from "../keys.json";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import qr from "../assets/eventsAssets/valorantQr.png"
+import qr from "../assets/eventsAssets/valorantQr.png";
 
 // const backend = keys.backend;
 
@@ -21,18 +21,33 @@ const ValorantForm = () => {
     Leader_name: "",
     Leader_whatsapp: "",
     Leader_branch: "",
-    Leader_yog: "",
+    Leader_gender: "",
+    Leader_sem: "",
+    Leader_program_of_study: "",
     Leader_email: "",
     Leader_college: "",
     Leader_game_id: "",
+    Leader_discord: "",
+    P2_name: "",
+    P2_email: "",
     P2_game_id: "",
-    P2_number: "",
+    P2_branch: "",
+    P2_sem: "",
+    P3_name: "",
+    P3_email: "",
     P3_game_id: "",
-    P3_number: "",
+    P3_branch: "",
+    P3_sem: "",
+    P4_name: "",
+    P4_email: "",
     P4_game_id: "",
-    P4_number: "",
+    P4_branch: "",
+    P4_sem: "",
+    P5_name: "",
+    P5_email: "",
     P5_game_id: "",
-    P5_number: "",
+    P5_branch: "",
+    P5_sem: "",
   };
   const [form, set] = useState(cachedForm);
   // const [uploadedFileName, setUploadedFileName] = useState("");
@@ -106,62 +121,38 @@ const ValorantForm = () => {
     let condition2 = false;
     if (form.P2_game_id === form.P2_number && form.P2_number === "") {
       condition2 = true;
-    }
-    else if (
-      form.P2_game_id !== "" &&
-      form.P2_number !== "" &&
-      form.P2_number.length === 10
-    ) {
+    } else if (form.P2_game_id !== "" && form.P2_number !== "") {
       condition2 = true;
     }
 
     let condition3 = false;
     if (form.P3_game_id === form.P3_number && form.P3_number === "") {
       condition3 = true;
-    }
-    else if (
-      form.P3_game_id !== "" &&
-      form.P3_number !== "" &&
-      form.P3_number.length === 10
-    ) {
+    } else if (form.P3_game_id !== "") {
       condition3 = true;
     }
 
     let condition4 = false;
     if (form.P4_game_id === form.P4_number && form.P4_number === "") {
       condition4 = true;
-    }
-    else if (
-      form.P4_game_id !== "" &&
-      form.P4_number !== "" &&
-      form.P4_number.length === 10
-    ) {
+    } else if (form.P4_game_id !== "" && form.P4_number !== "") {
       condition4 = true;
     }
 
     let condition5 = false;
     if (form.P5_game_id === form.P5_number && form.P5_number === "") {
       condition5 = true;
-    }
-    else if (
-      form.P5_game_id !== "" &&
-      form.P5_number !== "" &&
-      form.P5_number.length === 10
-    ) {
+    } else if (form.P5_game_id !== "" && form.P5_number !== "") {
       condition5 = true;
     }
 
     if (condition1 && condition2 && condition3 && condition4 && condition5) {
       try {
-        const res = await axios.post(
-          `/server/register?event=valo`,
-          form,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
+        const res = await axios.post(`/server/register?event=valo`, form, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -217,15 +208,14 @@ const ValorantForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
+                  {form.Leader_whatsapp.length > 10 && (
+                    <p style={{ color: "red" }}>
+                      Enter a number of 10 digits only.
+                    </p>
+                  )}
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -249,12 +239,32 @@ const ValorantForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="Leader_gender"
+                    id="leaderGender"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Leader's Gender"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.Leader_gender}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_sem"
+                    id="leaderSem"
+                    type="text"
+                    placeholder="Leader Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Leader_program_of_study"
+                    id="leaderProgramOfStudy"
+                    type="text"
+                    placeholder="Leader's Program of Study"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
@@ -279,90 +289,183 @@ const ValorantForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    name="Leader_discord"
+                    id="leaderDiscord"
+                    type="text"
+                    placeholder="Leader's Discord"
+                    onChange={(e) => handle(e)}
+                    value={form.Leader_discord}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_name"
+                    id="P2Name"
+                    type="text"
+                    placeholder="Player 2 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_email"
+                    id="P2Email"
+                    type="text"
+                    placeholder="Player 2 Email"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
                     name="P2_game_id"
                     id="P2Id"
                     type="text"
-                    placeholder="Player 2 Game ID "
+                    placeholder="Player 2 Game ID"
                     onChange={(e) => handle(e)}
                     value={form.P2_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_number"
-                    id="P2Number"
+                    name="P2_branch"
+                    id="P2Branch"
                     type="text"
-                    placeholder="Player 2 Mobile Number"
+                    placeholder="Player 2 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.P2_number}
+                    value={form.P2_branch}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  {form.P2_number !== "" &&
-                    form.P2_number.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_sem"
+                    id="P2Sem"
+                    type="text"
+                    placeholder="Player 2 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_name"
+                    id="P3Name"
+                    type="text"
+                    placeholder="Player 3 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_email"
+                    id="P3Email"
+                    type="text"
+                    placeholder="Player 3 Email"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_email}
+                  />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="P3_game_id"
                     id="P3Id"
                     type="text"
-                    placeholder="Player 3 Game ID "
+                    placeholder="Player 3 Game ID"
                     onChange={(e) => handle(e)}
                     value={form.P3_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_number"
-                    id="P3Number"
+                    name="P3_branch"
+                    id="P3Branch"
                     type="text"
-                    placeholder="Player 3 Mobile Number"
+                    placeholder="Player 3 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.P3_number}
+                    value={form.P3_branch}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  {form.P3_number !== "" &&
-                    form.P3_number.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_sem"
+                    id="P3Sem"
+                    type="text"
+                    placeholder="Player 3 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_name"
+                    id="P4Name"
+                    type="text"
+                    placeholder="Player 4 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_email"
+                    id="P4Email"
+                    type="text"
+                    placeholder="Player 4 Email"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_email}
+                  />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="P4_game_id"
                     id="P4Id"
                     type="text"
-                    placeholder="Player 4 Game ID "
+                    placeholder="Player 4 Game ID"
                     onChange={(e) => handle(e)}
                     value={form.P4_game_id}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_number"
-                    id="P4Number"
+                    name="P4_branch"
+                    id="P4Branch"
                     type="text"
-                    placeholder="Player 4 Mobile Number"
+                    placeholder="Player 4 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.P4_number}
+                    value={form.P4_branch}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  {form.P4_number !== "" &&
-                    form.P4_number.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P4_sem"
+                    id="P4Sem"
+                    type="text"
+                    placeholder="Player 4 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P4_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P5_name"
+                    id="P5Name"
+                    type="text"
+                    placeholder="Player 5 Name"
+                    onChange={(e) => handle(e)}
+                    value={form.P5_name}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P5_email"
+                    id="P5Email"
+                    type="text"
+                    placeholder="Player 5 Email"
+                    onChange={(e) => handle(e)}
+                    value={form.P5_email}
+                  />
                 </li>
                 <li data-aos="fade-down">
                   <input
@@ -376,22 +479,23 @@ const ValorantForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P5_number"
-                    id="P5Number"
+                    name="P5_branch"
+                    id="P5Branch"
                     type="text"
-                    placeholder="Player 5 Mobile Number"
+                    placeholder="Player 5 Branch"
                     onChange={(e) => handle(e)}
-                    value={form.P5_number}
+                    value={form.P5_branch}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
-                    * Don't include +91 or 0.
-                  </span>
-                  {form.P5_number !== "" &&
-                    form.P5_number.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P5_sem"
+                    id="P5Sem"
+                    type="text"
+                    placeholder="Player 5 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P5_sem}
+                  />
                 </li>
               </ul>
               {/* <div>
@@ -454,48 +558,32 @@ const ValorantForm = () => {
           </div>
           <div className="mint_right">
             <div className="mright">
+            <div data-aos="fade-down" className="mint_time">
+                <h4>VALORANT TOURNAMENT</h4>
+                <h3 className="metaportal_fn_countdown">Description</h3>
+              </div>
+              <div data-aos="fade-down" style={{marginBottom:"3rem"}} className="mint_info">
+                <p>Valorant Gaming competition.</p>
+              </div>
               <div data-aos="fade-down" className="mint_time">
                 <h4>VALORANT TOURNAMENT</h4>
-                <h3 className="metaportal_fn_countdown">
-                  Rules
-                </h3>
-              </div>
-              <div data-aos="fade-down" className="mint_info">
-                <p>Each team’s roster must consist of exactly 5 players. The format will be of 5 v 5
-matches. </p>
-                <p>Maps: Bind, Haven, Split, Ascent, Icebox, Breeze, Fracture.</p>
-    <p>Participants should bring their own system.</p>
-              </div>
-              <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <h4>VALORANT TOURNAMENT</h4>
-                <h3 className="metaportal_fn_countdown">Game Format</h3>
+                <h3 className="metaportal_fn_countdown">Rules</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                Round 1: The tournament will follow knockout system. The teams that win this
-round will be forwarded to the next round and the teams losing will be
-directly eliminated. 
-                  <br />
-                  <br />
-                  Round 2: The winning teams will face each other in the semifinals of the
-tournament. 
-                  <br />
-                  <br />
-                  Round 3: The Finals will be played between the winners of the semifinals. The
-team winning the final match will be crowned as the Valorant Champions at
-Aavartan ’23-24. 
+                ●	Team of 5 members
                 </p>
                 <p>
-                Winners : Assured Exciting Prizes
+                ●	A total of 32 teams will be allowed at maximum to participate in the tournament.
                 </p>
+                <p>● Every match is elimination.</p>
+                <p>● Three matches per team will be online, reducing the team pool to 32-16-8-4</p>
+                <p>● These matches will be conducted prior through a Discord server</p>
+                <p>● The semifinal and final between 4 and 2 teams respectively played offline</p>
               </div>
-              <a style={{ textDecoration: "none" }} href={docs}>
+              {/* <a style={{ textDecoration: "none" }} href={docs}>
                 <span className="metaportal_fn_button_4">Download PDF</span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

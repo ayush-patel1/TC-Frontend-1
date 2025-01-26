@@ -23,6 +23,8 @@ import BlogPage from "./pages/BlogPage";
 import BlogSinglePage from "./pages/BlogSinglePage";
 import EventPage from "./pages/EventPage";
 import EventFormPage from "./pages/EventFormPage";
+
+//Forms
 import TerrainTreaderForm from "./forms/TerrainTreaderForm";
 import RoboSoccerForm from "./forms/RoboSoccerForm";
 import BgmiForm from "./forms/BgmiForm";
@@ -41,7 +43,16 @@ import TalentShowForm from "./forms/TalentShowForm";
 import TicTacToeForm from "./forms/TicTacToeForm";
 import EcopolisForm from "./forms/Ecopolis";
 import HydroliftForm from "./forms/Hydrolift";
+import OpenMicForm from "./forms/OpenMicForm";
 import ChatAssistant from "../src/components/ChatAssistant";
+import CodeSprintRelayForm from "./forms/CodeSprintRelay";
+import DsaMarathonForm from "./forms/DsaMarathonForm";
+import DimensionsForm from "./forms/DimensionsForm.js";
+import DroneRaceForm from "./forms/DroneRaceForm.js";
+import OrigamiForm from "./forms/OrigamiForm.js";
+import CosplayForm from "./forms/CosplayForm.js";
+import GiantKerplunkForm from "./forms/GiantKerplunk.js";
+import ReverseCodingForm from "./forms/ReverseCodingForm.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -71,8 +82,8 @@ function App() {
           <BrowserRouter>
             <Navigation />
             <Login />
-            {/* <ScrollTop /> */}
-            {/* <HailTechno /> */}
+            <ScrollTop />
+            <HailTechno />
             <Navbar />
             <Routes>
               <Route exact="true" path="/" element={<Homepage />} />
@@ -83,6 +94,8 @@ function App() {
                 element={<BlogSinglePage />}
               />
               <Route exact="true" path="/blog" element={<BlogPage />} />
+
+              {/* Events */}
               <Route exact="true" path="/events" element={<EventPage />} />
               <Route
                 exact="true"
@@ -179,6 +192,51 @@ function App() {
                 path="/events/hydroliftForm"
                 element={<HydroliftForm />}
               />
+              <Route
+                exact="true"
+                path="/events/dimensionForm"
+                element={<DimensionsForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/codesprintrelayForm"
+                element={<CodeSprintRelayForm />}
+              />
+               <Route
+                exact="true"
+                path="/events/openMicForm"
+                element={<OpenMicForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/dsaMarathonForm"
+                element={<DsaMarathonForm />}
+              />
+               <Route
+                exact="true"
+                path="/events/origamiForm"
+                element={<OrigamiForm/>}
+              />
+              <Route
+                exact="true"
+                path="/events/cosplayCompetitionForm"
+                element={<CosplayForm/>}
+              />
+               <Route
+                exact="true"
+                path="/events/giantKerplunkForm"
+                element={<GiantKerplunkForm/>}
+              />
+              <Route
+                exact="true"
+                path="/events/droneraceForm"
+                element={<DroneRaceForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/reverseCodingForm"
+                element={<ReverseCodingForm />}
+              />
 
               <Route
                 exact="true"
@@ -190,6 +248,7 @@ function App() {
                 path="/vigyaan/gallery"
                 element={<VigyaanGalleryPage />}
               />
+
               <Route exact="true" path="/vigyaan" element={<Vigyaan />} />
               <Route exact="true" path="/ignite" element={<Ignite />} />
               <Route exact="true" path="/team" element={<TeamPage />} />
@@ -212,6 +271,7 @@ function App() {
            {/* <StarFieldAnimation/> */}
 
         </BackgroundContainer>
+        <ScrollTop/>
       </CustomCursorContainer>
     </div>
   );

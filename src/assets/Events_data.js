@@ -199,17 +199,17 @@ export const EventsList = [
   //     link:"/events/mockCIDForm",
   //     deadline:"coming soon"
   //   },
-  //   {
-  //   id: 17,
-  //   name: "GIANT KERPLUNK",
-  //   imgUrl: event17,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"Left Garden/Amul Parlor",
-  //   des: "A classic kerplunk game of carefully removing the sticks from a tube without causing the marbles to fall.",
-  //   link:"/events/giantKerplunkForm",
-  //   deadline:"coming soon"
-  // },
+    {
+    id: 17,
+    name: "GIANT KERPLUNK",
+    imgUrl: event17,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"Left Garden/Amul Parlor",
+    des: "A classic kerplunk game of carefully removing the sticks from a tube without causing the marbles to fall.",
+    link:"/events/giantKerplunkForm",
+    deadline:"coming soon"
+  },
   // {
   //   id: 18,
   //   name: "OPEN MIC",
@@ -243,17 +243,17 @@ export const EventsList = [
   //   link:"/events/valorantForm",
   //   deadline:"comming soon"
   // },
-  {
-    id: 21,
-    name: "COSPLAY COMPETITION",
-    imgUrl: event21,
-    date:"comming soon",
-    time:"comming soon",
-    venue:"YOGA HALL",
-    des: "Participants dress up in characters or object and act or change their accent according to their character.",
-    link:"/events/cosplayCompetitionForm",
-    deadline:"comming soon"
-  }
+  // {
+  //   id: 21,
+  //   name: "COSPLAY COMPETITION",
+  //   imgUrl: event21,
+  //   date:"comming soon",
+  //   time:"comming soon",
+  //   venue:"YOGA HALL",
+  //   des: "Participants dress up in characters or object and act or change their accent according to their character.",
+  //   link:"/events/cosplayCompetitionForm",
+  //   deadline:"comming soon"
+  // },
   // {
   //   id: 22,
   //   name: "ORIGAMI COMPETITION",

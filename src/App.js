@@ -49,6 +49,7 @@ import DimensionsForm from "./forms/DimensionsForm.js";
 import DroneRaceForm from "./forms/DroneRaceForm.js";
 import OrigamiForm from "./forms/OrigamiForm.js";
 import CosplayForm from "./forms/CosplayForm.js";
+import GiantKerplunkForm from "./forms/GiantKerplunk.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -215,6 +216,11 @@ function App() {
                 exact="true"
                 path="/events/cosplayCompetitionForm"
                 element={<CosplayForm/>}
+              />
+               <Route
+                exact="true"
+                path="/events/giantKerplunkForm"
+                element={<GiantKerplunkForm/>}
               />
               <Route
                 exact="true"

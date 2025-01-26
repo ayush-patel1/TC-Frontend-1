@@ -23,6 +23,8 @@ import BlogPage from "./pages/BlogPage";
 import BlogSinglePage from "./pages/BlogSinglePage";
 import EventPage from "./pages/EventPage";
 import EventFormPage from "./pages/EventFormPage";
+
+//Forms
 import TerrainTreaderForm from "./forms/TerrainTreaderForm";
 import RoboSoccerForm from "./forms/RoboSoccerForm";
 import BgmiForm from "./forms/BgmiForm";
@@ -50,6 +52,7 @@ import DroneRaceForm from "./forms/DroneRaceForm.js";
 import OrigamiForm from "./forms/OrigamiForm.js";
 import CosplayForm from "./forms/CosplayForm.js";
 import GiantKerplunkForm from "./forms/GiantKerplunk.js";
+import ReverseCodingForm from "./forms/ReverseCodingForm.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -91,6 +94,8 @@ function App() {
                 element={<BlogSinglePage />}
               />
               <Route exact="true" path="/blog" element={<BlogPage />} />
+
+              {/* Events */}
               <Route exact="true" path="/events" element={<EventPage />} />
               <Route
                 exact="true"
@@ -227,6 +232,11 @@ function App() {
                 path="/events/droneraceForm"
                 element={<DroneRaceForm />}
               />
+              <Route
+                exact="true"
+                path="/events/reverseCodingForm"
+                element={<ReverseCodingForm />}
+              />
 
               <Route
                 exact="true"
@@ -238,6 +248,7 @@ function App() {
                 path="/vigyaan/gallery"
                 element={<VigyaanGalleryPage />}
               />
+
               <Route exact="true" path="/vigyaan" element={<Vigyaan />} />
               <Route exact="true" path="/ignite" element={<Ignite />} />
               <Route exact="true" path="/team" element={<TeamPage />} />

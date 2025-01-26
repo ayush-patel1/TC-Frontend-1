@@ -17,7 +17,6 @@ import EventsGalleryPage from "./pages/EventsGalleryPage";
 import VigyaanGalleryPage from "./pages/VigyaanGalleryPage";
 import SponsorsPage from "./pages/SponsorsPage";
 
-import StarFieldAnimation from "./layout/StarFieldAnimation";
 import TechTeam from "./pages/TechTeam";
 import BlogPage from "./pages/BlogPage";
 import BlogSinglePage from "./pages/BlogSinglePage";
@@ -25,43 +24,24 @@ import EventPage from "./pages/EventPage";
 import EventFormPage from "./pages/EventFormPage";
 
 //Forms
-import TerrainTreaderForm from "./forms/TerrainTreaderForm";
-import RoboSoccerForm from "./forms/RoboSoccerForm";
-import BgmiForm from "./forms/BgmiForm";
-import AerofiliaForm from "./forms/AerofiliaForm";
-import LogoDesignForm from "./forms/LogoDesignForm";
 import SpeedCubingForm from "./forms/SpeedCubingForm";
-import CodemimeQuestForm from "./forms/CodemimeQuestForm";
-import Circuitrix2Form from "./forms/Circuitrix2Form";
 import ValorantForm from "./forms/ValorantForm";
-import AutocadForm from "./forms/AutocadForm";
-import SurvivalArtboardForm from "./forms/SurvivalArtboardForm";
-import ReactionRacingForm from "./forms/ReactionRacingForm";
 import TreasureHuntForm from "./forms/TreasureHuntForm";
-import MechanicalJunkyardForm from "./forms/MechanicalJunkyardForm";
-import TalentShowForm from "./forms/TalentShowForm";
-import TicTacToeForm from "./forms/TicTacToeForm";
 import EcopolisForm from "./forms/Ecopolis";
-import HydroliftForm from "./forms/Hydrolift";
 import OpenMicForm from "./forms/OpenMicForm";
 import ChatAssistant from "../src/components/ChatAssistant";
 import CodeSprintRelayForm from "./forms/CodeSprintRelay";
 import DsaMarathonForm from "./forms/DsaMarathonForm";
 import DimensionsForm from "./forms/DimensionsForm.js";
 import DroneRaceForm from "./forms/DroneRaceForm.js";
-import OrigamiForm from "./forms/OrigamiForm.js";
-import CosplayForm from "./forms/CosplayForm.js";
-import GiantKerplunkForm from "./forms/GiantKerplunk.js";
 import ReverseCodingForm from "./forms/ReverseCodingForm.js";
 import CaseOpsForm from "./forms/CaseOpsForm.js";
 import EscapeTheMatrixForm from "./forms/EscapeTheMatrixForm.js";
 import OctoberSkyForm from "./forms/OctoberSky.js";
 import PixelPlaygroundForm from "./forms/PixelPlaygroundForm.js";
 import TechnoGraphixForm from "./forms/TechnoGraphixForm.js";
-import TechClashForm from "./forms/TechClash.js";
 import WorkshopsForm from "./forms/WorkshopsForm.js";
 import RoboWarsForm from "./forms/RoboWarsForm.js";
-import SmackDBugForm from "./forms/SmackDBugForm.js";
 import RoboRaceForm from "./forms/RoboRaceForm.js";
 import JengaForm from "./forms/JengaForm.js";
 import CornholeGameForm from "./forms/CornHoleForm.js";
@@ -124,11 +104,6 @@ function App() {
                 exact="true"
                 path="/events/valorantForm"
                 element={<ValorantForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/reactionRacingForm"
-                element={<ReactionRacingForm />}
               />
               <Route
                 exact="true"

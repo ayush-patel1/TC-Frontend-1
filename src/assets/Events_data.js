@@ -232,17 +232,17 @@ export const EventsList = [
   //   link:"/events/speedCubingForm",
   //   deadline:"comming soon"
   // },
-  // {
-  //   id: 20,
-  //   name: "VALORANT TOURNAMENT",
-  //   imgUrl: event20,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"CCC",
-  //   des: "Valorant Gaming competition.",
-  //   link:"/events/valorantForm",
-  //   deadline:"comming soon"
-  // },
+  {
+    id: 20,
+    name: "VALORANT TOURNAMENT",
+    imgUrl: event20,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"CCC",
+    des: "Valorant Gaming competition.",
+    link:"/events/valorantForm",
+    deadline:"comming soon"
+  },
   {
     id: 21,
     name: "COSPLAY COMPETITION",

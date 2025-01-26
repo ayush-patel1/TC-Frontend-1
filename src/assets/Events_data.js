@@ -53,12 +53,12 @@ export const EventsList = [
       time:"2:30 PM -4:00 PM",
       venue:"Outdoors",
       des: "Each Teams have to bring their own drone and complete the given track in minimum time.",
-      link:"/events/droneRacingForm",
+      link:"/events/droneRaceForm",
       deadline:"31/01/2025"
     },
-    {
+    /*{
       id: 4,
-      name: " ",
+      name: "TECH CLASH",
       imgUrl: event4,
       date:"comming soon",
       time:"comming soon",
@@ -66,7 +66,7 @@ export const EventsList = [
       des: "Tech Clash is a debate competition on cutting-edge tech topics like AI, Blockchain, and data privacy.",
       link:"/events/techClashForm",
       deadline:"31/01/2025"
-    },
+    },*/
     {
       id: 5,
       name: "CODE SPRINT RELAY",
@@ -205,9 +205,9 @@ export const EventsList = [
     imgUrl: event17,
     date:"comming soon",
     time:"comming soon",
-    venue:"Left Garden/Amul Parlor",
-    des: "A classic kerplunk game of carefully removing the sticks from a tube without causing the marbles to fall.",
-    link:"/events/giantKerplunkForm",
+    venue:"Central Garden",
+    des: "Cornhole is a popular lawn game where players or teams take turns throwing bags filled with sand at a raised platform with a hole in it. The objective is to score points by landing the bags either on the platform or through the hole.",
+    link:"/events/cornHoleForm",
     deadline:"31/01/2025"
   },
   {

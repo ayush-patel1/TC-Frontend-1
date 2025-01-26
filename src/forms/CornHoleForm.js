@@ -1,6 +1,5 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
-import { connect } from "react-redux";
 import keys from "../keys.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,13 +9,12 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
-const DroneRaceForm = () => {
+const CornholeGameForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("droneraceform")) || {
-    Team_name: "",
+  const cachedForm = JSON.parse(localStorage.getItem("cornholegame")) || {
     Leader_name: "",
     Leader_email: "",
     Leader_whatsapp: "",
@@ -24,17 +22,18 @@ const DroneRaceForm = () => {
     Leader_branch: "",
     Leader_yog: "",
     P2_name: "",
-    P3_name: "",
+    P2_branch: "",
+    P2_email: "",
+    P2_sem: ""
   };
   const [form, set] = useState(cachedForm);
-  const [uploadedFileName, setUploadedFileName] = useState("");
   const [isSubmitting, setSubmit] = useState(false);
 
   const handle = (e) => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("droneraceform", JSON.stringify(update));
+    localStorage.setItem("cornholegame", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -52,7 +51,7 @@ const DroneRaceForm = () => {
     if (token) {
       console.log("Captcha verified");
     }
-    // console.log(`hCaptcha Token: ${token}`);
+    // console.log(hCaptcha Token: ${token});
   }, [token]);
 
   const submit = async () => {
@@ -64,18 +63,21 @@ const DroneRaceForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
       form.Leader_name !== "" &&
       form.Leader_email !== "" &&
       form.Leader_whatsapp !== "" &&
       form.Leader_college !== "" &&
       form.Leader_branch !== "" &&
       form.Leader_yog !== "" &&
+      form.P2_name !== "" &&
+      form.P2_branch !=="" &&
+      form.P2_email !== "" &&
+      form.P2_sem !== "" &&
       form.Leader_whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=DroneRacing`, form, {
+        const res = await axios.post("/server/register?event=cornholegame", form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -99,7 +101,7 @@ const DroneRaceForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"Drone Race"} noncolor={""} />
+      <Title color={"Cornhole Game"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -110,20 +112,10 @@ const DroneRaceForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
-                    id="teamName"
-                    type="text"
-                    placeholder="Team Name"
-                    onChange={(e) => handle(e)}
-                    value={form.Team_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
                     id="leaderName"
                     type="text"
                     name="Leader_name"
-                    placeholder="Leader Name"
+                    placeholder="Leader Full Name"
                     onChange={(e) => handle(e)}
                     value={form.Leader_name}
                   />
@@ -182,7 +174,7 @@ const DroneRaceForm = () => {
                     name="Leader_yog"
                     id="leaderYog"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Leader Year of Graduation"
                     onChange={(e) => handle(e)}
                     value={form.Leader_yog}
                   />
@@ -199,12 +191,32 @@ const DroneRaceForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
+                    name="P2_email"
                     id="leaderYog"
                     type="text"
-                    placeholder="Team Member 3 Name"
+                    placeholder="Team Member 2 Email"
                     onChange={(e) => handle(e)}
-                    value={form.P3_name}
+                    value={form.P2_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_branch"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Team Member 2 Branch"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_sem"
+                    id="leaderYog"
+                    type="text"
+                    placeholder="Team Member 2 Semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_sem}
                   />
                 </li>
               </ul>
@@ -240,46 +252,48 @@ const DroneRaceForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Drone Race</h4>
+                <h4>Cornhole Game</h4>
                 <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  Each Teams have to bring their own drone and complete the
-                  given track in minimum time
+                Cornhole is a popular lawn game where players or teams 
+                take turns throwing bags filled with sand at a raised 
+                platform with a hole in it. The objective is to score 
+                points by landing the bags either on the platform or 
+                through the hole.
                 </p>
-                <p>Team size: 1-3</p>
+                <p>Team Size: 2</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4>Drone Race</h4>
+                <h4>Cornhole Game</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. Drone must pass through the 10 circular or rectangular
-                  loops
+                1. Each board should be 27 feet apart from front edge to front edge.
                 </p>
                 <p>
-                  2. They have to choose the optimum path to pass through all
-                  the 10 loops
+                2. It is a team based game . Each team will be having 2 members.
                 </p>
-                <p>3. 1 to 3 members in a team</p>
                 <p>
-                  4. 3 chances to continue their race if the drone falls down to
-                  the group
+                3. Scoring criteria :<br></br>
+                  - 3 points for a bag that goes through the hole.<br></br>
+                  - 1 point for a bag that lands and stays on the board.<br></br>
+                  - No points if the bag touches the ground before landing 
+                  on the board.
                 </p>
-              </div>
-              {/* <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <a style={{ textDecoration: "none" }} href={docs}>
-                  <span className="metaportal_fn_button_4">Download PDF</span>
-                </a>
-              </div> */}
+                <p>
+                4.  Teams alternate tossing one bag at a time until all bags
+                 have been thrown.
+                </p>
+                <p>
+                5.  The game is typically played to 18 points. The first team
+                 to reach or exceed 18 points at the end of a round wins.
+                </p>               
+              </div>             
             </div>
           </div>
         </div>
@@ -288,4 +302,4 @@ const DroneRaceForm = () => {
   );
 };
 
-export default DroneRaceForm;
+export default CornholeGameForm;

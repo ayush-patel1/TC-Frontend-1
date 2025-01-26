@@ -62,6 +62,9 @@ import TechClashForm from "./forms/TechClash.js";
 import WorkshopsForm from "./forms/WorkshopsForm.js";
 import RoboWarsForm from "./forms/RoboWarsForm.js";
 import SmackDBugForm from "./forms/SmackDBugForm.js";
+import RoboRaceForm from "./forms/RoboRaceForm.js";
+import JengaForm from "./forms/JengaForm.js";
+import CornholeGameForm from "./forms/CornHoleForm.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -113,31 +116,6 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/terrainTreaderForm"
-                element={<TerrainTreaderForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/roboSoccerForm"
-                element={<RoboSoccerForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/bgmiForm"
-                element={<BgmiForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/aerofiliaForm"
-                element={<AerofiliaForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/logoDesignForm"
-                element={<LogoDesignForm />}
-              />
-              <Route
-                exact="true"
                 path="/events/speedCubingForm"
                 element={<SpeedCubingForm />}
               />
@@ -145,11 +123,6 @@ function App() {
                 exact="true"
                 path="/events/valorantForm"
                 element={<ValorantForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/autocadForm"
-                element={<AutocadForm />}
               />
               <Route
                 exact="true"
@@ -163,27 +136,12 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/talentShowForm"
-                element={<TalentShowForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/tictacToeForm"
-                element={<TicTacToeForm />}
-              />
-              <Route
-                exact="true"
                 path="/events/ecopolisForm"
                 element={<EcopolisForm />}
               />
               <Route
                 exact="true"
-                path="/events/hydroliftForm"
-                element={<HydroliftForm />}
-              />
-              <Route
-                exact="true"
-                path="/events/dimensionForm"
+                path="/events/dimensionsForm"
                 element={<DimensionsForm />}
               />
               <Route
@@ -217,21 +175,6 @@ function App() {
                 path="/events/dsaMarathonForm"
                 element={<DsaMarathonForm />}
               />
-               <Route
-                exact="true"
-                path="/events/origamiForm"
-                element={<OrigamiForm/>}
-              />
-              <Route
-                exact="true"
-                path="/events/cosplayCompetitionForm"
-                element={<CosplayForm/>}
-              />
-               <Route
-                exact="true"
-                path="/events/giantKerplunkForm"
-                element={<GiantKerplunkForm/>}
-              />
               <Route
                 exact="true"
                 path="/events/droneraceForm"
@@ -254,11 +197,6 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/techClashForm"
-                element={<TechClashForm/>}
-              />
-              <Route
-                exact="true"
                 path="/events/workshopsForm"
                 element={<WorkshopsForm/>}
               />
@@ -269,8 +207,13 @@ function App() {
               />
               <Route
                 exact="true"
-                path="/events/smackDbugForm"
-                element={<SmackDBugForm/>}
+                path="/events/jengaform"
+                element={<JengaForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/cornholeform"
+                element={<CornholeGameForm />}
               />
 
               <Route

@@ -1,6 +1,5 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
-import { connect } from "react-redux";
 import keys from "../keys.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,21 +9,18 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
-const DroneRaceForm = () => {
+const JengaForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("droneraceform")) || {
-    Team_name: "",
+  const cachedForm = JSON.parse(localStorage.getItem("jenga")) || {
     Leader_name: "",
     Leader_email: "",
     Leader_whatsapp: "",
     Leader_college: "",
     Leader_branch: "",
     Leader_yog: "",
-    P2_name: "",
-    P3_name: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -34,7 +30,7 @@ const DroneRaceForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("droneraceform", JSON.stringify(update));
+    localStorage.setItem("jenga", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -52,7 +48,7 @@ const DroneRaceForm = () => {
     if (token) {
       console.log("Captcha verified");
     }
-    // console.log(`hCaptcha Token: ${token}`);
+    // console.log(hCaptcha Token: ${token});
   }, [token]);
 
   const submit = async () => {
@@ -64,7 +60,6 @@ const DroneRaceForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
       form.Leader_name !== "" &&
       form.Leader_email !== "" &&
       form.Leader_whatsapp !== "" &&
@@ -75,7 +70,7 @@ const DroneRaceForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=DroneRacing`, form, {
+        const res = await axios.post("/server/register?event=jenga", form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -99,7 +94,7 @@ const DroneRaceForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"Drone Race"} noncolor={""} />
+      <Title color={"Jenga"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -110,20 +105,10 @@ const DroneRaceForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
-                    id="teamName"
-                    type="text"
-                    placeholder="Team Name"
-                    onChange={(e) => handle(e)}
-                    value={form.Team_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
                     id="leaderName"
                     type="text"
                     name="Leader_name"
-                    placeholder="Leader Name"
+                    placeholder="Full Name"
                     onChange={(e) => handle(e)}
                     value={form.Leader_name}
                   />
@@ -133,7 +118,7 @@ const DroneRaceForm = () => {
                     id="leaderName"
                     type="text"
                     name="Leader_email"
-                    placeholder="Leader Email"
+                    placeholder="Email"
                     onChange={(e) => handle(e)}
                     value={form.Leader_email}
                   />
@@ -143,7 +128,7 @@ const DroneRaceForm = () => {
                     id="leaderNumber"
                     type="text"
                     name="Leader_whatsapp"
-                    placeholder="Leader Whatsapp Number"
+                    placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
@@ -162,7 +147,7 @@ const DroneRaceForm = () => {
                     name="Leader_college"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader College"
+                    placeholder="College"
                     onChange={(e) => handle(e)}
                     value={form.Leader_college}
                   />
@@ -172,7 +157,7 @@ const DroneRaceForm = () => {
                     name="Leader_branch"
                     id="leaderBranch"
                     type="text"
-                    placeholder="Leader Branch"
+                    placeholder="Branch"
                     onChange={(e) => handle(e)}
                     value={form.Leader_branch}
                   />
@@ -182,29 +167,9 @@ const DroneRaceForm = () => {
                     name="Leader_yog"
                     id="leaderYog"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Year of Graduation"
                     onChange={(e) => handle(e)}
                     value={form.Leader_yog}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P2_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 2 Name"
-                    onChange={(e) => handle(e)}
-                    value={form.P2_name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="P3_name"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 3 Name"
-                    onChange={(e) => handle(e)}
-                    value={form.P3_name}
                   />
                 </li>
               </ul>
@@ -240,46 +205,47 @@ const DroneRaceForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>Drone Race</h4>
+                <h4>Jenga</h4>
                 <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  Each Teams have to bring their own drone and complete the
-                  given track in minimum time
+                   Classic wooden jenga game competition.
                 </p>
-                <p>Team size: 1-3</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4>Drone Race</h4>
+                <h4>Jenga</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. Drone must pass through the 10 circular or rectangular
-                  loops
+                  1. A classic Jenga game consists of 54 wooden blocks.
+                     All of the blocks should be stacked in groups of three,
+                     next to one another along their long sides and at a 
+                     right angle to the level below.
                 </p>
                 <p>
-                  2. They have to choose the optimum path to pass through all
-                  the 10 loops
+                  2. Take one block from any level of the tower, except the
+                     one below the incomplete top level. Place the wooden block
+                     at the topmost level to complete it. Players must use only 
+                     one hand at a time to touch the tower.
                 </p>
-                <p>3. 1 to 3 members in a team</p>
                 <p>
-                  4. 3 chances to continue their race if the drone falls down to
-                  the group
+                  3. Players may tap any block to find loose one. The turn of 
+                     the player ends after 10 seconds or when the next player 
+                     touches the tower, whichever occurs first.
                 </p>
-              </div>
-              {/* <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <a style={{ textDecoration: "none" }} href={docs}>
-                  <span className="metaportal_fn_button_4">Download PDF</span>
-                </a>
-              </div> */}
+                <p>
+                  4. The game ends when the tower falls completely, or if any
+                     block falls from the tower.
+                </p>
+                <p>
+                  5. Loser is the player who make the tower fall i.e., whose turn
+                     it was when the tower fell.
+                </p>               
+              </div>             
             </div>
           </div>
         </div>
@@ -288,4 +254,4 @@ const DroneRaceForm = () => {
   );
 };
 
-export default DroneRaceForm;
+export default JengaForm;

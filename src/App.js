@@ -64,6 +64,7 @@ import RoboWarsForm from "./forms/RoboWarsForm.js";
 import SmackDBugForm from "./forms/SmackDBugForm.js";
 import RoboRaceForm from "./forms/RoboRaceForm.js";
 import JengaForm from "./forms/JengaForm.js";
+import CornholeGameForm from "./forms/CornHoleForm.js";
 
 const BackgroundContainer = styled.div`
   position: fixed;
@@ -283,6 +284,11 @@ function App() {
                 exact="true"
                 path="/events/jengaform"
                 element={<JengaForm />}
+              />
+              <Route
+                exact="true"
+                path="/events/cornholeform"
+                element={<CornholeGameForm />}
               />
 
               <Route

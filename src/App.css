@@ -7890,13 +7890,28 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	/* Ensure the overlay is above the background image */
 }
 
-.Homescrolled {
+/* .Homescrolled {
+	background: url("./assets/the-minions-celebrating-in-despicable-me-2.avif");
+	background-size: cover;
+	background-attachment: fixed;
+	
+} */
+.TeamScrolled{
 	background: url("./assets/the-minions-celebrating-in-despicable-me-2.avif");
 	background-size: cover;
 	background-attachment: fixed;
 	/* transition: background-color 0.9s ease; */
 }
-
+.Homescrolled::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 0;
+}
 .Eventscrolled {
 	background: url("./assets/spacebg.webp");
 	background-size: cover;
@@ -7915,18 +7930,18 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	z-index: 0;
   }
 
-.Homescrolled::before {
+/* .Homescrolled::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.2); */
 	/* Adjust the opacity (last value) as needed */
-	z-index: 0;
+	/* z-index: 0; */
 	/* Ensure the overlay is above the background image */
-}
+/* } */
 /* .Homescrolled::before { */
 /* content: "";
 	position: absolute;

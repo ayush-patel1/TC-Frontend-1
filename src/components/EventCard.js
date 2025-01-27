@@ -30,19 +30,19 @@ function EventCard(props) {
         <div className={styles.cardBody}>
           <div className={styles.cardTitle}><div>{props.name}</div></div>
           <div className={styles.cardText}><div>{props.des}</div></div>
-          <div>
+          <div className={styles.topic}>
             <div>Date</div>
             <div>{props.date}</div>
           </div>
-          <div>
+          <div className={styles.topic}>
             <div>Time</div>
             <div>{props.time}</div>
           </div>
-          <div>
+          <div className={styles.topic}>
             <div>Venue</div>
             <div>{props.venue}</div>
           </div>
-          <div>
+          <div className={styles.topic}>
             <div>Deadline</div>
             <div>{props.deadline}</div>
           </div>

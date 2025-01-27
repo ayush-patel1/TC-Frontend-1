@@ -69,7 +69,7 @@ const SpeedCubingForm = () => {
     if (condition) {
       try {
         const res = await axios.post(
-          `${backend}/server/register?event=SpeedCubing`,
+          "/register?event=SpeedCubing",
           form,
           {
             headers: {

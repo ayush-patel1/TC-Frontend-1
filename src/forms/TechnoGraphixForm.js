@@ -71,7 +71,7 @@ const TechnoGraphixForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=TechnoGraphics`, form, {
+        const res = await axios.post(`${backend}/server/register?event=TechnoGraphics`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -125,11 +125,11 @@ const TechnoGraphixForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Whatsapp !== "" &&
-                    form.Whatsapp.length !== 10 && (
+                  {
+                    form.Whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>

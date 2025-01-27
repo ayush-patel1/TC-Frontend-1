@@ -9,17 +9,17 @@ import event8 from '../assets/eventsPoster/comingSoon.webp'
 import event9 from '../assets/eventsPoster/pixelPlayground.webp'
 import event10 from '../assets/eventsPoster/rocketRage.webp'
 import event11 from '../assets/eventsPoster/escapeTheMatrix.webp'
-import event12 from '../assets/eventsPoster/comingSoon.webp'
+// import event12 from '../assets/eventsPoster/comingSoon.webp'
 import event13 from '../assets/eventsPoster/reverseCoding.webp'
 // import event14 from '../assets/eventsPoster/comingSoon.webp'
-import event15 from '../assets/eventsPoster/comingSoon.webp'
-import event16 from '../assets/eventsPoster/tresureHunt.webp'
+import event15 from '../assets/eventsPoster/workshop.webp'
+import event16 from '../assets/eventsPoster/mockCid.webp'
 import event17 from '../assets/eventsPoster/comingSoon.webp'
 import event18 from '../assets/eventsPoster/openMic.webp'
 import event19 from '../assets/eventsPoster/speedCubing.jpg'
 import event20 from '../assets/eventsPoster/valorant.webp'
 import event21 from '../assets/eventsPoster/comingSoon.webp'
-import event22 from '../assets/eventsPoster/comingSoon.webp'
+import event22 from '../assets/eventsPoster/roboRace.webp'
 
 
 export const EventsList = [
@@ -144,17 +144,17 @@ export const EventsList = [
       link:"/events/escapeTheMatrixForm",
       deadline:"31/01/2025"
     },
-    {
-      id: 12,
-      name: "Workshops",
-      imgUrl: event12,
-      date:"02/02/2025",
-      time:"11:00 AM -1:00 PM +2:00 PM - 3:30 PM",
-      venue:" E-Hall/Architecture Auditorium",
-      des: "Organize a paid 2-day workshop on Python, AI/ML, or Ethical Hacking in collaboration with renowned organizations like GFG.",
-      link:"/events/workshopsForm",
-      deadline:"31/01/2025"
-    },
+    // {
+    //   id: 12,
+    //   name: "Workshops",
+    //   imgUrl: event12,
+    //   date:"02/02/2025",
+    //   time:"11:00 AM -1:00 PM +2:00 PM - 3:30 PM",
+    //   venue:" E-Hall/Architecture Auditorium",
+    //   des: "Organize a paid 2-day workshop on Python, AI/ML, or Ethical Hacking in collaboration with renowned organizations like GFG.",
+    //   link:"/events/workshopsForm",
+    //   deadline:"31/01/2025"
+    // },
     {
       id: 13,
       name: "REVERSE CODING",

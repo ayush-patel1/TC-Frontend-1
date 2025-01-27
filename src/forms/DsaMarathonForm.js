@@ -22,13 +22,21 @@ const DsaMarathonForm = () => {
     Leader_whatsapp: "",
     Leader_college: "",
     Leader_branch: "",
-    Leader_yog: "",
+    Leader_sem: "",
+    Leader_gender: "",
+    Leader_program_Of_Study: "",
+    P2_email: "",
+    P2_sem: "",
+    P2_branch: "",
+    P2_name: "",
+    P3_name: "",
+    P3_email: "",
+    P3_sem: "",
+    P3_branch: "",
     Leader_Hackerrank: "",
     Leader_Hackerearth: "",
-    P2_name: "",
     P2_Hackerrank: "",
     P2_Hackerearth: "",
-    P3_name: "",
     P3_Hackerrank: "",
     P3_Hackerearth: "",
   };
@@ -76,24 +84,36 @@ const DsaMarathonForm = () => {
       form.Leader_whatsapp !== "" &&
       form.Leader_college !== "" &&
       form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
+      form.Leader_sem !== "" &&
+      form.Leader_program_Of_Study !== "" &&
+      form.Leader_gender !== "" &&
       form.Leader_Hackerearth !== "" &&
       form.Leader_Hackerrank !== "" &&
       form.P2_name !== "" &&
+      form.P2_sem !== "" &&
+      form.P2_branch !== "" &&
+      form.P2_email !== "" &&
       form.P2_Hackerearth !== "" &&
       form.P2_Hackerrank !== "" &&
       form.P3_name !== "" &&
+      form.P3_email !== "" &&
+      form.P3_branch !== "" &&
+      form.P3_sem !== "" &&
       form.P3_Hackerearth !== "" &&
       form.P3_Hackerrank !== "" &&
       form.Leader_whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=DsaMarathon`, form, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await axios.post(
+          `/server/register?event=DsaMarathon`,
+          form,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
         alert(res.data.message);
       } catch (err) {
         console.error(err);
@@ -122,7 +142,7 @@ const DsaMarathonForm = () => {
             </div>
             <div className="mint_list">
               <ul>
-                <li data-aos="fade-down">
+            <li data-aos="fade-down">
                   <input
                     name="Team_name"
                     id="teamName"
@@ -144,7 +164,7 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    id="leaderEmail"
                     type="text"
                     name="Leader_email"
                     placeholder="Leader Email"
@@ -161,11 +181,11 @@ const DsaMarathonForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {
+                    form.Leader_whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -193,18 +213,18 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="Leader_sem"
+                    id="leadersem"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.Leader_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="Leader_Hackerrank"
+                    id="Leader_Hackerrank"
                     type="text"
                     placeholder="Leader's Hackerrank ID"
                     onChange={(e) => handle(e)}
@@ -213,8 +233,8 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="Leader_Hackerearth"
+                    id="Leader_Hackerearth"
                     type="text"
                     placeholder="Leader's HackerEarth ID"
                     onChange={(e) => handle(e)}
@@ -224,7 +244,7 @@ const DsaMarathonForm = () => {
                 <li data-aos="fade-down">
                   <input
                     name="P2_name"
-                    id="leaderYog"
+                    id="P2_name"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
@@ -233,8 +253,38 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_name"
-                    id="leaderYog"
+                    name="P2_branch"
+                    id="P2_branch"
+                    type="text"
+                    placeholder="Team Member 2 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_email"
+                    id="P2_email"
+                    type="text"
+                    placeholder="Team Member 2 email"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_sem"
+                    id="P2_sem"
+                    type="text"
+                    placeholder="Team Member 2 semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_Hackerrank"
+                    id="P2_Hackerrank"
                     type="text"
                     placeholder="Team Member 2 Hackerrank ID"
                     onChange={(e) => handle(e)}
@@ -243,8 +293,8 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_name"
-                    id="leaderYog"
+                    name="P2_Hackerearth"
+                    id="P2_Hackerearth"
                     type="text"
                     placeholder="Team Member 2 HackerEarth ID"
                     onChange={(e) => handle(e)}
@@ -254,7 +304,7 @@ const DsaMarathonForm = () => {
                 <li data-aos="fade-down">
                   <input
                     name="P3_name"
-                    id="leaderYog"
+                    id="P3_name"
                     type="text"
                     placeholder="Team Member 3 Name"
                     onChange={(e) => handle(e)}
@@ -263,8 +313,36 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
-                    id="leaderYog"
+                    name="P3_sem"
+                    id="P3_sem"
+                    type="text"
+                    placeholder="Team Member 3 sem"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_sem}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="P3_branch"
+                    id="P3_branch"
+                    type="text"
+                    placeholder="Team Member 3 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_branch}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="P3_email"
+                    id="P3_email"
+                    type="text"
+                    placeholder="Team Member 3 email"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P3_Hackerrank"
+                    id="P3_Hackerrank"
                     type="text"
                     placeholder="Team Member 3 Hackerrank ID"
                     onChange={(e) => handle(e)}
@@ -273,8 +351,8 @@ const DsaMarathonForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
-                    id="leaderYog"
+                    name="P3_Hackerearth"
+                    id="P3_Hackerearth"
                     type="text"
                     placeholder="Team Member 3 HackerEarth ID"
                     onChange={(e) => handle(e)}

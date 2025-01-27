@@ -134,11 +134,11 @@ const PixelPlaygroundForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {
+                    form.Leader_whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -176,8 +176,8 @@ const PixelPlaygroundForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="P2_name"
+                    id="P2_name"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
@@ -186,8 +186,8 @@ const PixelPlaygroundForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="P3_name"
+                    id="P3_name"
                     type="text"
                     placeholder="Team Member 3 Name"
                     onChange={(e) => handle(e)}

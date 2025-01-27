@@ -15,12 +15,12 @@ const JengaForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("jenga")) || {
-    Leader_name: "",
-    Leader_email: "",
-    Leader_whatsapp: "",
-    Leader_college: "",
-    Leader_branch: "",
-    Leader_yog: "",
+    name: "",
+    email: "",
+    whatsapp: "",
+    college: "",
+    branch: "",
+    yog: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -60,17 +60,17 @@ const JengaForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
-      form.Leader_whatsapp.length == 10;
+      form.name !== "" &&
+      form.email !== "" &&
+      form.whatsapp !== "" &&
+      form.college !== "" &&
+      form.branch !== "" &&
+      form.yog !== "" &&
+      form.whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post("/server/register?event=jenga", form, {
+        const res = await axios.post("/server/register?event=Jenga", form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -105,38 +105,38 @@ const JengaForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    id="Name"
                     type="text"
-                    name="Leader_name"
+                    name="name"
                     placeholder="Full Name"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    id="email"
                     type="text"
-                    name="Leader_email"
+                    name="email"
                     placeholder="Email"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderNumber"
+                    id="Number"
                     type="text"
-                    name="Leader_whatsapp"
+                    name="whatsapp"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {
+                    form.whatsapp.length>10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -144,32 +144,32 @@ const JengaForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
-                    id="leaderBranch"
+                    name="college"
+                    id="Branch"
                     type="text"
                     placeholder="College"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_college}
+                    value={form.college}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
-                    id="leaderBranch"
+                    name="branch"
+                    id="Branch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="yog"
+                    id="Yog"
                     type="text"
                     placeholder="Year of Graduation"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.yog}
                   />
                 </li>
               </ul>

@@ -6,6 +6,8 @@ import Title from "../components/Title";
 import keys from "../keys.json";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
+const backend = keys.backend;
+
 const TreasureHuntForm = () => {
   useEffect(() => {
     AOS.init();
@@ -69,7 +71,7 @@ const TreasureHuntForm = () => {
     if (isFormValid) {
       try {
         const res = await axios.post(
-          `/server/register?event=MockCid`,
+          `${backend}/server/register?event=MockCid`,
           form,
           { headers: { "Content-Type": "multipart/form-data" } }
         );

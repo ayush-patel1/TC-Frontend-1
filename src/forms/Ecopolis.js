@@ -148,11 +148,11 @@ const EcopolisForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {
+                    form.Leader_whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>

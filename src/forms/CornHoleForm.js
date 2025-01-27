@@ -77,7 +77,7 @@ const CornholeGameForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post("/server/register?event=cornholegame", form, {
+        const res = await axios.post("/server/register?event=CornHoleGame", form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -139,11 +139,11 @@ const CornholeGameForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {
+                    form.Leader_whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>

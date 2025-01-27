@@ -16,12 +16,13 @@ const OctoberSkyForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("octoberskyform")) || {
-    Leader_name: "",
-    Leader_email: "",
-    Leader_whatsapp: "",
-    Leader_college: "",
-    Leader_branch: "",
-    Leader_yog: "",
+    Name: "",
+    Email: "",
+    Phone: "",
+    Branch: "",
+    Gender: "",
+    Program_of_study: "",
+    Sem: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -61,13 +62,14 @@ const OctoberSkyForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
-      form.Leader_whatsapp.length == 10;
+    form.Name !== "" &&
+    form.Email !== "" &&
+    form.Phone !== "" &&
+    form.Gender !== "" &&
+    form.Branch !== "" &&
+    form.Sem !== "" &&
+    form.Program_of_study !== "" &&
+    form.Phone.length == 10;
 
     if (condition) {
       try {
@@ -99,7 +101,7 @@ const OctoberSkyForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"October Sky"} noncolor={""} />
+      <Title color={"Rocket Rage"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -108,73 +110,82 @@ const OctoberSkyForm = () => {
             </div>
             <div className="mint_list">
               <ul>
-                <li data-aos="fade-down">
+              <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    name="Name"
+                    id="participantName"
                     type="text"
-                    name="Leader_name"
-                    placeholder="Full Name"
+                    placeholder="Name Of Participant"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.Name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    id="emailId"
                     type="text"
-                    name="Leader_email"
-                    placeholder="Email"
+                    name="Email"
+                    placeholder="Email Id"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.Email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderNumber"
+                    id="whatsappNumber"
                     type="text"
-                    name="Leader_whatsapp"
+                    name="Phone"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.Phone}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
-                      <p style={{ color: "red" }}>
-                        Enter a number of 10 digits only.
-                      </p>
-                    )}
+                  { form.Phone.length > 10 && (
+                    <p style={{ color: "red" }}>
+                      Enter a number of 10 digits only.
+                    </p>
+                  )}
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
-                    id="leaderBranch"
+                    name="Gender"
+                    id="gender"
                     type="text"
-                    placeholder="College"
+                    placeholder="Gender"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_college}
+                    value={form.Gender}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
-                    id="leaderBranch"
+                    name="Program_of_study"
+                    id="program_of_study"
+                    type="text"
+                    placeholder="Program of study"
+                    onChange={(e) => handle(e)}
+                    value={form.Program_of_study}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Branch"
+                    id="branch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.Branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="Sem"
+                    id="sem"
                     type="text"
-                    placeholder="Year of Graduation"
+                    placeholder="Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.Sem}
                   />
                 </li>
               </ul>
@@ -210,7 +221,7 @@ const OctoberSkyForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>October Sky</h4>
+                <h4>Rocket Rage</h4>
                 <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
@@ -218,7 +229,7 @@ const OctoberSkyForm = () => {
                 <p>Individual Participation</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4>October Sky</h4>
+                <h4>Rocket Rage</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>

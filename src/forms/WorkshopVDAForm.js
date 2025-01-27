@@ -125,11 +125,11 @@ const WorkshopVDAForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Whatsapp !== "" &&
-                    form.Whatsapp.length !== 10 && (
+                  {
+                    form.Whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -147,7 +147,7 @@ const WorkshopVDAForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_program_of_study"
+                    name="Program_of_study"
                     id="leaderProgramOfStudy"
                     type="text"
                     placeholder="Program of Study"

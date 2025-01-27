@@ -16,12 +16,14 @@ const DimensionsForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("dimensionsform")) || {
-    Leader_name: "",
-    Leader_email: "",
-    Leader_whatsapp: "",
-    Leader_college: "",
-    Leader_branch: "",
-    Leader_yog: "",
+    name: "",
+    email: "",
+    whatsapp: "",
+    sem: "",
+    branch: "",
+    gender: "",
+    program_of_Study :""
+    
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -61,13 +63,14 @@ const DimensionsForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
-      form.Leader_whatsapp.length == 10;
+      form.name !== "" &&
+      form.email !== "" &&
+      form.whatsapp !== "" &&
+      form.sem !== "" &&
+      form.branch !== "" &&
+      form.gender !== "" &&
+      form.program_of_Study !== "" &&
+      form.whatsapp.length == 10;
 
     if (condition) {
       try {
@@ -108,36 +111,36 @@ const DimensionsForm = () => {
                   <input
                     id="leaderName"
                     type="text"
-                    name="Leader_name"
+                    name="name"
                     placeholder="Full Name"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderName"
                     type="text"
-                    name="Leader_email"
+                    name="email"
                     placeholder="Email"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="Leader_whatsapp"
+                    name="whatsapp"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {
+                    form.whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -145,32 +148,42 @@ const DimensionsForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
-                    id="leaderBranch"
+                    name="sem"
+                    id="Sem"
                     type="text"
-                    placeholder="College"
+                    placeholder="Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_college}
+                    value={form.sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
+                    name="branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="gender"
+                    id="gender"
                     type="text"
-                    placeholder="Year of Graduation"
+                    placeholder="Gender"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.gender}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="program_of_Study"
+                    id="program_of_Study"
+                    type="text"
+                    placeholder="program of Study"
+                    onChange={(e) => handle(e)}
+                    value={form.program_of_Study}
                   />
                 </li>
               </ul>

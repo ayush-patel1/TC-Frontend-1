@@ -69,7 +69,7 @@ const SpeedCubingForm = () => {
     if (condition) {
       try {
         const res = await axios.post(
-          `/server/register?event=SpeedCubing`,
+          `${backend}/server/register?event=SpeedCubing`,
           form,
           {
             headers: {
@@ -154,7 +154,7 @@ const SpeedCubingForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="program of study"
+                    name="Program_of_study"
                     id="program_of_study"
                     type="text"
                     placeholder="Program of study"
@@ -190,10 +190,10 @@ const SpeedCubingForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div style={{ fontSize: "17px" }}>
+            {/* <div style={{ fontSize: "17px",color:"white" }}>
               Don't forget to join the WhatsApp Group after registration!
-            </div>
-            <div className="mint_desc" style={{ paddingTop: "2rem" }}>
+            </div> */}
+            <div className="mint_desc" style={{ paddingTop: "2rem",color:"white" }}>
               {!isSubmitting ? (
                 <div
                   target="_blank"
@@ -208,7 +208,7 @@ const SpeedCubingForm = () => {
               ) : (
                 <>Submitting...</>
               )}
-              <div>
+              {/* <div>
                 {isSubmitted && (
                   <div>
                     <div>
@@ -223,7 +223,7 @@ const SpeedCubingForm = () => {
                     </div>
                   </div>
                 )}
-              </div>
+              </div> */}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
           </div>

@@ -23,7 +23,6 @@ const RoboRaceForm = () => {
     Leader_yog: "",
     P2_name: "",
     P3_name: "",
-    P4_name: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -70,11 +69,12 @@ const RoboRaceForm = () => {
       form.Leader_branch !== "" &&
       form.Leader_yog !== "" &&
       form.P2_name !== "" &&
+      form.P3_name !== "" &&
       form.Leader_whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post("/server/register?event=roborace", form, {
+        const res = await axios.post("/server/register?event=RoboRace", form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -136,11 +136,11 @@ const RoboRaceForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem" ,color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {
+                    form.Leader_whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -178,33 +178,29 @@ const RoboRaceForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="P2_name"
+                    id="p2 name"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
                     value={form.P2_name}
                   />
+                   <span style={{ fontSize: "0.7rem" ,color:"white"}}>
+                    * Fill NIL if single Participation
+                  </span>
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="P3_name"
+                    id="P3_name"
                     type="text"
                     placeholder="Team Member 3 Name"
                     onChange={(e) => handle(e)}
                     value={form.P3_name}
                   />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="Leader_yog"
-                    id="leaderYog"
-                    type="text"
-                    placeholder="Team Member 4 Name"
-                    onChange={(e) => handle(e)}
-                    value={form.P4_name}
-                  />
+                  <span style={{ fontSize: "0.7rem" ,color:"white"}}>
+                    * Fill NIL if single Participation
+                  </span>
                 </li>
               </ul>
             </div>

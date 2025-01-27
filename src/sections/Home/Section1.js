@@ -7,28 +7,28 @@ import { ScrollTrigger } from "gsap/all";
 import home_hero from "../../assets/videos/home-hero2.mp4";
 import { useNavigate } from "react-router-dom";
 
-gsap.registerPlugin(ScrollTrigger);
+//gsap.registerPlugin(ScrollTrigger);
 
 export default function Section1() {
   const navigate = useNavigate();
 
-  useGSAP(() => {
-    gsap.set("#video-frame", {
-      clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
-      borderRadius: "0% 0% 40% 10%",
-    });
-    gsap.from("#video-frame", {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      borderRadius: "0% 0% 0% 0%",
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: "#video-frame",
-        start: "center center",
-        end: "bottom center",
-        scrub: true,
-      },
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.set("#video-frame", {
+  //     clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
+  //     borderRadius: "0% 0% 40% 10%",
+  //   });
+  //   gsap.from("#video-frame", {
+  //     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+  //     borderRadius: "0% 0% 0% 0%",
+  //     ease: "power1.inOut",
+  //     scrollTrigger: {
+  //       trigger: "#video-frame",
+  //       start: "center center",
+  //       end: "bottom center",
+  //       scrub: true,
+  //     },
+  //   });
+  //});
 
   return (
     <div id="video-frame" className="Home-sec1">

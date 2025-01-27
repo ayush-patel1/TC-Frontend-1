@@ -78,6 +78,7 @@ function App() {
             <ScrollTop />
             <HailTechno />
             <Navbar />
+            <div style={{paddingTop: "85px"}}>
             <Routes>
               <Route exact="true" path="/" element={<Homepage />} />
               <Route exact="true" path="/aavartan" element={<Aavartan />} />
@@ -225,6 +226,7 @@ function App() {
               <Route exact="true" path="/tech-team" element={<TechTeam />} />
               {/* <Route exact path="/ourjourney" element={<OurJourney />} /> */}
             </Routes>
+            </div>
             <Footer />
           </BrowserRouter>
         </ContentContainer>

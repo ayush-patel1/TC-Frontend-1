@@ -71,7 +71,7 @@ const TreasureHuntForm = () => {
     if (isFormValid) {
       try {
         const res = await axios.post(
-          `${backend}/server/register?event=MockCid`,
+          `/server/register?event=MockCid`,
           form,
           { headers: { "Content-Type": "multipart/form-data" } }
         );

@@ -41,7 +41,7 @@
   width: 0px;
   height: 0px;
   z-index: 1;
-  border-top: 115px solid black;
+  border-top: 115px solid rgb(29, 27, 27);
   border-left: 115px solid transparent;
   border-right: 115px solid transparent;
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -53,7 +53,7 @@
   top: 0;
   transform: translateX(-50%);
   height: 101%;
-  background: black;
+  background: rgb(29, 27, 27);
   clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
   transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
 }
@@ -87,7 +87,7 @@
   top: 20%;
   font-weight: bold;
   font-size: 20px;
-  color: white;
+  color: rgb(65, 10, 10);
   opacity: 0;
   z-index: 1;
   transition: all 0.2s ease-out 0s;

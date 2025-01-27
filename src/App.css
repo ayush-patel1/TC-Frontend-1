@@ -7890,7 +7890,7 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .Homescrolled {
-	background: url(https://static1.srcdn.com/wordpress/wp-content/uploads/2023/10/the-minions-celebrating-in-despicable-me-2.jpg);
+	background: url("./assets/the-minions-celebrating-in-despicable-me-2.avif");
 	background-size: cover;
 	background-attachment: fixed;
 	/* transition: background-color 0.9s ease; */

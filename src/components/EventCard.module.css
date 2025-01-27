@@ -39,6 +39,10 @@
     padding: 0 2rem 2rem 2rem;
 }
 
+.cardBody .topic div{
+    font-weight: bold;
+}
+
 .cardBody p{
     margin: 0;
     font-weight: normal;

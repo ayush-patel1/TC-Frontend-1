@@ -13,7 +13,7 @@ const TeamPage = () => {
   }, []);
 
   return (
-    <div className='Homescrolled' style={{ position: 'relative' ,zIndex: '1' , background: 'transparent'}}>
+    <div className='Homescrolled' style={{ position: 'relative' ,zIndex: '1'}}>
       {/* Render Spheres in the background */}
       <div style={{}}>
       {/* <SpheresBackground style={{opacity: '1'}}/> */}

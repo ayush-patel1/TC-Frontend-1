@@ -4,14 +4,13 @@ import HeadCard from "../components/HeadCard";
 import { coordinatorsList } from "../assets/heads_data";
 import { coresList } from "../assets/cores_data";
 import OCCard from "../components/OCCard";
-// import Title from "../components/Title";
 import Domain from "./Domain";
 import teampic from "../assets/images/teampic.webp"
 import PTitle from "../components/PokemonTitle";
 const Team = () => {
   return (
     <div className={styles.container}>
-      <PTitle  color={"TEAM"} noncolor={" TECHNOCRACY"} />
+      <PTitle  color={"TEAM"} noncolor={" TECHNOCRACY"} style={{marginBottom:"2rem"}}></PTitle>
       <div data-aos="fade-up" className="container">
         <div className="fn_cs_news container">
           <div className="news_part">

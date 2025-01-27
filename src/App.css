@@ -2385,8 +2385,9 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 }
 
 .blog__item {
-	padding: 20px;
-	border: 1px solid rgba(255, 255, 255, .15);
+	margin-top: 20px;
+	padding: 0px;
+	border: 10px solid rgb(0, 0, 0);
 	border-radius: 10px;
 	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
 }
@@ -2590,108 +2591,160 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	}
 }
 
-.fn_cs_contact_info {
+.ptitle {
+	color: rgba(233, 215, 15, 0.838);
+	margin: 50px 0px 50px 0px;
+	position: relative;
+	text-align: center;
+	z-index: 3;
+	font-family: "Minion";
+  
+	/* Add padding to give some space around the text */
+	padding: 10px 20px;
+  
+	/* Create a semi-transparent background */
+	background-color: rgba(0, 0, 0, 0.5);
+  
+	/* Add backdrop filter for blur effect */
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px); /* For Safari */
+  
+	/* Rounded corners for a softer look */
+	border-radius: 8px;
+  
+	/* Add a subtle text shadow for better contrast */
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Update the .fn_cs_contact_info class */
+  .fn_cs_contact_info {
 	padding: 140px 0 32px;
-}
-
-.fn_cs_contact_info p {
-	margin-bottom: 27px;
-}
-
-.fn_cs_contact_info p:last-child {
-	margin-bottom: 0;
-}
-
-.fn_cs_contact_info ul {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.7); /*This line is kept from the original code as it's not replaced in the update*/
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Add a pseudo-element for the blurred background */
+  .fn_cs_contact_info::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	z-index: -1;
+	border-radius: 10px;
+  }
+  
+  /* Update the .fn_cs_contact_info ul class */
+  .fn_cs_contact_info ul {
 	margin: 0;
 	list-style-type: none;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: -150px;
-}
-
-.fn_cs_contact_info li {
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 5px;
+  }
+  
+  /* Update the .fn_cs_contact_info li class */
+  .fn_cs_contact_info li {
 	padding-left: 150px;
 	width: 33.333%;
 	margin-bottom: 40px;
-}
-
-.fn_cs_contact_info h4 {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Update the .fn_cs_contact_info h4 class */
+  .fn_cs_contact_info h4 {
 	margin: 0;
 	margin-bottom: 9px;
 	font-weight: 500;
-	color: var(--bc);
+	color: var(--mc1);
 	text-transform: uppercase;
 	font-size: 16px;
 	letter-spacing: .5px;
-}
-
-.fn_cs_contact_info h3 {
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Update the .fn_cs_contact_info h3 class */
+  .fn_cs_contact_info h3 {
 	margin: 0;
 	margin-bottom: 39px;
 	font-weight: 300;
 	letter-spacing: 0;
 	font-size: 30px;
-}
-
-.fn_cs_contact_info .item *:last-child {
-	margin-bottom: 0;
-}
-
-
-
-.fn_cs_contact_form ul {
-	list-style-type: none;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	margin: 0;
-	margin-left: -40px;
-	flex-wrap: wrap;
-}
-
-.fn_cs_contact_form input[type="text"] {
-	height: 80px;
-	padding: 0 27px;
-}
-
-.fn_cs_contact_form input[type="text"],
-.fn_cs_contact_form textarea {
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Add styles for better text visibility */
+  .fn_cs_contact_info p,
+  .fn_cs_contact_info h3,
+  .fn_cs_contact_info h4 {
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Update the .fn_cs_contact_form class */
+  .fn_cs_contact_form {
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Update the input and textarea styles */
+  .fn_cs_contact_form input[type="text"],
+  .fn_cs_contact_form textarea {
 	display: block;
 	width: 100%;
 	min-width: 100%;
-	border: 2px solid rgba(255, 255, 255, .15);
+	border: 2px solid rgba(255, 255, 255, 0.15);
 	border-radius: 5px;
-	background-color: transparent !important;
+	background-color: rgba(0, 0, 0, 0.3) !important;
 	outline: none;
 	color: #fff;
-}
-
-.fn_cs_contact_form textarea:focus,
-.fn_cs_contact_form input[type="text"]:focus {
+  }
+  
+  .fn_cs_contact_form textarea:focus,
+  .fn_cs_contact_form input[type="text"]:focus {
 	border-color: var(--mc1);
-}
-
-.fn_cs_contact_form li {
+	box-shadow: 0 0 10px rgba(var(--mc1-rgb), 0.5);
+  }
+  
+  /* Update the form list item styles */
+  .fn_cs_contact_form li {
 	width: 50%;
 	padding-left: 40px;
 	margin-bottom: 40px;
-}
-
-.fn_cs_contact_form li:last-child {
-	margin-bottom: 0;
-}
-
-.fn_cs_contact_form li.full {
-	width: 100%;
-}
-
+	position: relative;
+  }
+  
+  .fn_cs_contact_form li:before {
+	content: "";
+	position: absolute;
+	left: 40px;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	/* background-color: var(--mc1); */
+	opacity: 0.5;
+  }
+  
+  .fn_cs_contact_form li.full:before {
+	display: none;
+  }
+  
+  
 .empty_notice,
 .returnmessage {
 	padding: 20px;
@@ -7837,30 +7890,56 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	/* Ensure the overlay is above the background image */
 }
 
-.Homescrolled {
-	background: url("./assets/images/vigyaanbg.jpg");
+/* .Homescrolled {
+	background: url("./assets/the-minions-celebrating-in-despicable-me-2.avif");
+	background-size: cover;
+	background-attachment: fixed;
+	
+} */
+.TeamScrolled{
+	background: url("./assets/the-minions-celebrating-in-despicable-me-2.avif");
 	background-size: cover;
 	background-attachment: fixed;
 	/* transition: background-color 0.9s ease; */
 }
-.Eventscrolled {
-	background: url("./assets/spacebg.webp");
-	background-size: cover;
-	background-attachment: fixed;
-	/* z-index: -400; */
-	/* transition: background-color 0.9s ease; */
-}
-/* .Eventscrolled::before {
+.TeamScrolled::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.65); 
-	z-index: -400;
-  } */
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 0;
+}
+.Eventscrolled {
+	background: url("./assets/spacebg.webp");
+	background-size: cover;
+	background-attachment: fixed;
+}
+.Eventscrolled::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.65);
+	z-index: 0;
+  }
 
+/* .Homescrolled::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2); */
+	/* Adjust the opacity (last value) as needed */
+	/* z-index: 0; */
+	/* Ensure the overlay is above the background image */
+/* } */
 /* .Homescrolled::before { */
 /* content: "";
 	position: absolute;

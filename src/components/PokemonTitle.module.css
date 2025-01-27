@@ -1,44 +1,57 @@
 @font-face {
-    font-family: 'Pokemon';
-    src: url('../assets/font/Pokemon.ttf') format('truetype');
+    font-family: 'Minion';
+    src: url('../assets/font/Roundo.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   
   
-  .ptitle{
-    /* color:white; */
+  .ptitle {
     color: rgba(233, 215, 15, 0.838);
-    /* text-decoration-color: yellow; */
-    margin:50px 0px 50px 0px;
-    position:relative;
+    margin: 50px 0px 50px 0px;
+    position: relative;
     text-align: center;
     z-index: 3;
-    font-family: 'Pokemon';
+    font-family: 'Minion';
+    
+    /* Add padding to give some space around the text */
+    padding: 5px 20px;
+    
+    /* Create a semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    /* Add backdrop filter for blur effect */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+    
+    /* Rounded corners for a softer look */
+    border-radius: 8px;
+    
+    /* Add a subtle text shadow for better contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
-  
 
   
   .ptitle h1{
     font-size: 2.8rem;
-    color: yellow;
+    color: rgb(255, 200, 0);
     text-decoration: solid blue 2px;
-    font-family: 'Pokemon';
+    font-family: 'Minion';
   }
   
   .pheading {
     font-size: 4rem;
-    color: yellow;
+    color: rgb(242, 182, 40);
     font-family: "Pokemon";
     padding-top: 20px;
   }
   .pheading span {
     
-              font-family: 'Pokemon';
+              font-family: 'Minion';
               /* font-style: yellow;  */
               
-              background: linear-gradient(to bottom, #4c90d5 20%,
-                    #FE7BE5 100%);
+              background: linear-gradient(to bottom, #ffffff 20%,
+                    #ffffff 100%);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
 

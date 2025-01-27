@@ -7847,19 +7847,18 @@ a.metaportal_fn_videobutton:hover .fn__svg,
 	background: url("./assets/spacebg.webp");
 	background-size: cover;
 	background-attachment: fixed;
-	/* z-index: -400; */
 	/* transition: background-color 0.9s ease; */
 }
-/* .Eventscrolled::before {
+.Eventscrolled::before {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.65); 
-	z-index: -400;
-  } */
+	background-color: rgba(0, 0, 0, 0.65);
+	z-index: 0;
+  }
 
 /* .Homescrolled::before { */
 /* content: "";

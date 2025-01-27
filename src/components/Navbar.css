@@ -155,12 +155,10 @@ nav {
   transition: transform 0.3s ease;
 }
 .notscrolled {
-  background-color: black;
-  padding: 7px 14px;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
   z-index: 1;
   width: 100%;
   position: fixed;
-  height: 85px;
-  z-index: 10;
-  transition: transform 0.3s ease;
+  z-index: 9999999;
 }

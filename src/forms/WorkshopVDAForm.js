@@ -6,24 +6,22 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../components/Title";
 import docs from "../assets/eventsAssets/aerofilia.docx";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const backend = keys.backend;
 
-const DimensionsForm = () => {
+const WorkshopVDAForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("dimensionsform")) || {
-    name: "",
-    email: "",
-    whatsapp: "",
-    sem: "",
-    branch: "",
-    gender: "",
-    program_of_Study :""
-    
+  const cachedForm = JSON.parse(localStorage.getItem("workshopsForm")) || {
+    Name: "",
+    Email: "",
+    Whatsapp: "",
+    Program_of_study: "",
+    Branch: "",
+    Sem: ""
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -33,7 +31,7 @@ const DimensionsForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("dimensionsform", JSON.stringify(update));
+    localStorage.setItem("workshopsForm", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -49,9 +47,9 @@ const DimensionsForm = () => {
 
   useEffect(() => {
     if (token) {
-      console.log("Captcha verified");
+      console.log('Captcha verified')
     }
-    // console.log(`hCaptcha Token: ${token}`);
+      // console.log(`hCaptcha Token: ${token}`);
   }, [token]);
 
   const submit = async () => {
@@ -63,18 +61,17 @@ const DimensionsForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.name !== "" &&
-      form.email !== "" &&
-      form.whatsapp !== "" &&
-      form.sem !== "" &&
-      form.branch !== "" &&
-      form.gender !== "" &&
-      form.program_of_Study !== "" &&
-      form.whatsapp.length == 10;
+      form.Name !== "" &&
+      form.Email !== "" &&
+      form.Whatsapp !== "" &&
+      form.Branch !== "" &&
+      form.Sem !== "" &&
+      form.Program_of_study !== "" &&
+      form.Whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=Dimensions`, form, {
+        const res = await axios.post(`/server/register?event=Workshops`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -90,7 +87,9 @@ const DimensionsForm = () => {
     setSubmit(false);
   };
 
-  const onVerifyCaptcha = () => {};
+  const onVerifyCaptcha = () => {
+
+  }
 
   return (
     <div
@@ -98,7 +97,7 @@ const DimensionsForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"DIMENSIONS (AUTOCAD)"} noncolor={""} />
+      <Title color={"WORKSHOP ON VEHICLE DATA AQUISITITION"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -111,36 +110,26 @@ const DimensionsForm = () => {
                   <input
                     id="leaderName"
                     type="text"
-                    name="name"
+                    name="Name"
                     placeholder="Full Name"
                     onChange={(e) => handle(e)}
-                    value={form.name}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    id="leaderName"
-                    type="text"
-                    name="email"
-                    placeholder="Email"
-                    onChange={(e) => handle(e)}
-                    value={form.email}
+                    value={form.Name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="leaderNumber"
                     type="text"
-                    name="whatsapp"
-                    placeholder="Whatsapp Number"
+                    name="Whatsapp"
+                    placeholder="Contact Number"
                     onChange={(e) => handle(e)}
-                    value={form.whatsapp}
+                    value={form.Whatsapp}
                   />
                   <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
                   {
-                    form.whatsapp.length > 10 && (
+                    form.Whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -148,44 +137,45 @@ const DimensionsForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="sem"
-                    id="Sem"
+                    id="leaderEmail"
                     type="text"
-                    placeholder="Semester"
+                    name="Email"
+                    placeholder="Email Address"
                     onChange={(e) => handle(e)}
-                    value={form.sem}
+                    value={form.Email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="branch"
+                    name="Program_of_study"
+                    id="leaderProgramOfStudy"
+                    type="text"
+                    placeholder="Program of Study"
+                    onChange={(e) => handle(e)}
+                    value={form.Program_of_study}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="Branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.branch}
+                    value={form.Branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="gender"
-                    id="gender"
+                    name="Sem"
+                    id="leaderSem"
                     type="text"
-                    placeholder="Gender"
+                    placeholder="Semester"
                     onChange={(e) => handle(e)}
-                    value={form.gender}
+                    value={form.Sem}
                   />
                 </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="program_of_Study"
-                    id="program_of_Study"
-                    type="text"
-                    placeholder="program of Study"
-                    onChange={(e) => handle(e)}
-                    value={form.program_of_Study}
-                  />
-                </li>
+                
               </ul>
             </div>
             <HCaptcha
@@ -219,49 +209,29 @@ const DimensionsForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>DIMENSIONS (AUTOCAD)</h4>
-                <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
-              </div>
-              <div data-aos="fade-down" className="mint_info">
-                <p>
-                  AUTOCAD enthusiasts can showcase their talent by creating
-                  designs.
-                </p>
-                <p>Individual Participation</p>
-              </div>
-              <div data-aos="fade-down" className="mint_time">
-                <h4>Dimensions (AUTOCAD)</h4>
+                <h4>Workshop on Vehicle Data Acquisition</h4>
                 <h3 className="metaportal_fn_countdown">
-                  Rules and Regulations
+                DESCRIPTION
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. Candidates must bring their own laptops with AUTOCAD
-                  software installed.
-                </p>
-                <p>2. Two Drawings will be provided to all the students</p>
-                <p>
-                  3. First drawing is Mandatory for all (Time Limit 20 Minutes)
+                A Certified workshop on the basics of CAN (Controller Area Network) protocol, teaching participants to communicate with vehicle networks, collect data, and analyze it effectively. Gain hands-on experience in data logging and signal extraction, addressing real-world challenges.
                 </p>
                 <p>
-                  4. Second Drawing will be for shortlisted Participants (Time
-                  Limit 60 Minutes)
+                Total Duration: 5 hours
                 </p>
                 <p>
-                  5. Judgment will be done considering the technical details and
-                  speed of completion of the task
+                Theory Session: 3 hours on CAN protocol basics and data analysis.
+                </p>
+                <p>
+                Practical Session: 2 hours working with a vehicle to log and analyze data.
                 </p>
               </div>
-              {/* <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <a style={{ textDecoration: "none" }} href={docs}>
-                  <span className="metaportal_fn_button_4">Download PDF</span>
-                </a>
-              </div> */}
+              
+              {/* <a style={{ textDecoration: "none" }} href={docs}>
+                <span className="metaportal_fn_button_4">Download PDF</span>
+              </a> */}
             </div>
           </div>
         </div>
@@ -270,4 +240,4 @@ const DimensionsForm = () => {
   );
 };
 
-export default DimensionsForm;
+export default WorkshopVDAForm

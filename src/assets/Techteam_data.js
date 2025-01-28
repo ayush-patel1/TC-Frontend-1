@@ -6,6 +6,7 @@ import Nehil_Sahu from '../assets/images/TechTeam/Nehil_Sahu.webp'
 import Ayush_Patel from '../assets/images/TechTeam/Ayush_Patel.webp'
 import Devesh_Agarwal from '../assets/images/TechTeam/Devesh_Agarwal.webp'
 import Gourav_Deep_Shahni from '../assets/images/TechTeam/Gourav_Deep_Shahni.webp'
+
 import Aditya_Kumar_Shah from '../assets/images/TechTeam/Aditya_Kumar_Shah.webp'
 import Vibhor_Shukla from '../assets/images/TechTeam/Vibhor_Shukla.webp'
 
@@ -84,12 +85,12 @@ export const techteamList = [
       desi: "Executive"
     },
     {
-      id:8,
-      name: "Devesh Agarwal",
-      imgUrl: Devesh_Agarwal,
-      githubUrl:"https://github.com/CodeWithDevesh",
-      linkedinUrl: "https://www.linkedin.com/in/devesh-agarwal-736888292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      instaUrl: "https://www.instagram.com/deveshhh_652/",
+      id: 5,
+      name: "Gourav Deep Shahni",
+      imgUrl: Gourav_Deep_Shahni,
+      githubUrl:"https://www.github.com/maxcillius",
+      linkedinUrl: "https://www.linkedin.com/in/gouravdeep",
+      instaUrl: "",
       gmail:"",
       desi: "Executive"
     },
@@ -100,7 +101,14 @@ export const techteamList = [
       githubUrl:"https://github.com/VibhorShukla-BHRT",
       linkedinUrl: "https://www.linkedin.com/in/vibhor-shukla-a07577237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       instaUrl: "https://www.instagram.com/shukla_vibhor/",
+    },
+      id:6,
+      name: "Devesh Agarwal",
+      imgUrl: Devesh_Agarwal,
+      githubUrl:"https://github.com/CodeWithDevesh",
+      linkedinUrl: "https://www.linkedin.com/in/devesh-agarwal-736888292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      instaUrl: "https://www.instagram.com/deveshhh_652/",
       gmail:"",
       desi: "Executive"
-    }
+    },
   ];

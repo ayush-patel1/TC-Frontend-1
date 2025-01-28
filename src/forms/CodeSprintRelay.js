@@ -16,17 +16,27 @@ const CodeSprintRelayForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("codesprintform")) || {
-    Team_name: "",
-    Leader_name: "",
-    Leader_email: "",
-    Leader_whatsapp: "",
-    Leader_college: "",
-    Leader_branch: "",
-    Leader_yog: "",
-    P2_name: "",
-    P3_name: "",
-    P4_name: "",
-    Preffered_Language: "",
+    team_name: "",
+    leader_name: "",
+    email: "",
+    whatsapp_number: "",
+    curr_institution: "",
+    leader_branch: "",
+    leader_sem: "",
+    gender:"",
+    member2_email:"",
+    member2_sem:"",
+    member2_branch:"",
+    member2_name: "",
+    member3_name: "",
+    member3_email:"",
+    member3_sem:"",
+    member3_branch:"",
+    member4_name: "",
+    member4_email:"",
+    member4_sem:"",
+    member4_branch:"",
+    pref_prog_lang: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -66,22 +76,32 @@ const CodeSprintRelayForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
-      form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
-      form.P2_name !== "" &&
-      form.P3_name !== "" &&
-      form.P4_name !== "" &&
-      form.Preffered_Language !== "" &&
-      form.Leader_whatsapp.length == 10;
+      form.team_name !== "" &&
+      form.leader_name !== "" &&
+      form.email !== "" &&
+      form.whatsapp_number !== "" &&
+      form.curr_institution !== "" &&
+      form.leader_branch !== "" &&
+      form.leader_sem !== "" &&
+      form.gender !== "" &&
+      form.member2_name !== "" &&
+      form.member2_sem !== "" &&
+      form.member2_branch !== "" &&
+      form.member2_email !== "" &&
+      form.member3_name !== "" &&
+      form.member3_email !== "" &&
+      form.member3_branch !== "" &&
+      form.member3_sem !== "" &&
+      form.member4_name !== "" &&
+      form.member4_email !== "" && 
+      form.member4_branch !== "" &&
+      form.member4_sem !== "" &&
+      form.pref_prog_lang !== "" &&
+      form.whatsapp_number?.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=codesprint`, form, {
+        const res = await axios.post(`/register?event=CodeSprintRelay`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -116,48 +136,58 @@ const CodeSprintRelayForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Team_name"
+                    name="team_name"
                     id="teamName"
                     type="text"
                     placeholder="Team Name"
                     onChange={(e) => handle(e)}
-                    value={form.Team_name}
+                    value={form.team_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    name="leader_name"
                     id="leaderName"
                     type="text"
-                    name="Leader_name"
                     placeholder="Leader Name"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_name}
+                    value={form.leader_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    name="email"
+                    id="leaderEmail"
                     type="text"
-                    name="Leader_email"
                     placeholder="Leader Email"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_email}
+                    value={form.email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    name="gender"
+                    id="gender"
+                    type="text"
+                    placeholder="Gender"
+                    onChange={(e) => handle(e)}
+                    value={form.gender}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="whatsapp_number"
                     id="leaderNumber"
                     type="text"
-                    name="Leader_whatsapp"
                     placeholder="Leader Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_whatsapp}
+                    value={form.whatsapp_number}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {
+                    form.whatsapp_number.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -165,72 +195,156 @@ const CodeSprintRelayForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_college"
-                    id="leaderBranch"
+                    name="curr_institution"
+                    id="leaderCollege"
                     type="text"
                     placeholder="Leader College"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_college}
+                    value={form.curr_institution}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_branch"
+                    name="leader_branch"
                     id="leaderBranch"
                     type="text"
                     placeholder="Leader Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_branch}
+                    value={form.leader_branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="leader_sem"
+                    id="leaderSem"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="Leader Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.leader_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P2_name"
-                    id="leaderYog"
+                    name="member2_name"
+                    id="P2_name"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P2_name}
+                    value={form.member2_name}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P3_name"
-                    id="leaderYog"
+                    name="member2_branch"
+                    id="P2_branch"
+                    type="text"
+                    placeholder="Team Member 2 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.member2_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_email"
+                    id="P2_email"
+                    type="text"
+                    placeholder="Team Member 2 email"
+                    onChange={(e) => handle(e)}
+                    value={form.member2_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member2_sem"
+                    id="P2_sem"
+                    type="text"
+                    placeholder="Team Member 2 semester"
+                    onChange={(e) => handle(e)}
+                    value={form.member2_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="member3_name"
+                    id="P3_name"
                     type="text"
                     placeholder="Team Member 3 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P3_name}
+                    value={form.member3_name}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="member3_sem"
+                    id="P3_sem"
+                    type="text"
+                    placeholder="Team Member 3 sem"
+                    onChange={(e) => handle(e)}
+                    value={form.member3_sem}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="member3_branch"
+                    id="P3_branch"
+                    type="text"
+                    placeholder="Team Member 3 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.member3_branch}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="member3_email"
+                    id="P3_email"
+                    type="text"
+                    placeholder="Team Member 3 email"
+                    onChange={(e) => handle(e)}
+                    value={form.member3_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="P4_name"
-                    id="leaderYog"
+                    name="member4_name"
+                    id="P4_name"
                     type="text"
                     placeholder="Team Member 4 Name"
                     onChange={(e) => handle(e)}
-                    value={form.P4_name}
+                    value={form.member4_name}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="member4_sem"
+                    id="P4_sem"
+                    type="text"
+                    placeholder="Team Member 4 sem"
+                    onChange={(e) => handle(e)}
+                    value={form.member4_sem}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="member4_branch"
+                    id="P4_branch"
+                    type="text"
+                    placeholder="Team Member 4 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.member4_branch}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="member4_email"
+                    id="P4_email"
+                    type="text"
+                    placeholder="Team Member 4 email"
+                    onChange={(e) => handle(e)}
+                    value={form.member4_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Preffered_Language"
-                    id="leaderYog"
+                    name="pref_prog_lang"
+                    id="Preffered_Language"
                     type="text"
                     placeholder="Preffered Programming Language"
                     onChange={(e) => handle(e)}
-                    value={form.Preffered_Language}
+                    value={form.pref_prog_lang}
                   />
                 </li>
               </ul>
@@ -315,7 +429,7 @@ const CodeSprintRelayForm = () => {
                   prohibited.
                 </p>
               </div>
-              <div
+              {/* <div
                 data-aos="fade-down"
                 style={{ paddingTop: "2rem" }}
                 className="mint_time"
@@ -323,7 +437,7 @@ const CodeSprintRelayForm = () => {
                 <a style={{ textDecoration: "none" }} href={docs}>
                   <span className="metaportal_fn_button_4">Download PDF</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -1,25 +1,25 @@
 import event1 from '../assets/eventsPoster/technoGraphix.webp'
-import event2 from '../assets/eventsPoster/dsaMarathon.webp'
+import event2 from '../assets/eventsPoster/dsaMarathon.jpg'
 import event3 from '../assets/eventsPoster/droneRacing.webp'
 import event4 from '../assets/eventsPoster/comingSoon.webp'
-import event5 from '../assets/eventsPoster/codeSprintRelay.webp'
-import event6 from '../assets/eventsPoster/dimensionsAutocad.webp'
-import event7 from '../assets/eventsPoster/ecopolis.webp'
-import event8 from '../assets/eventsPoster/comingSoon.webp'
+import event5 from '../assets/eventsPoster/codeSprintRelay.jpg'
+import event6 from '../assets/eventsPoster/dimensionsAutocad.jpg'
+import event7 from '../assets/eventsPoster/ecopolis.jpg'
+import event8 from '../assets/eventsPoster/robowar.webp'
 import event9 from '../assets/eventsPoster/pixelPlayground.webp'
-import event10 from '../assets/eventsPoster/rocketRage.webp'
-import event11 from '../assets/eventsPoster/escapeTheMatrix.webp'
-import event12 from '../assets/eventsPoster/comingSoon.webp'
-import event13 from '../assets/eventsPoster/reverseCoding.webp'
+import event10 from '../assets/eventsPoster/rocketRage.jpg'
+import event11 from '../assets/eventsPoster/escapeTheMatrix.jpg'
+// import event12 from '../assets/eventsPoster/comingSoon.webp'
+import event13 from '../assets/eventsPoster/reverseCoding.jpg'
 // import event14 from '../assets/eventsPoster/comingSoon.webp'
-import event15 from '../assets/eventsAssets/Images/talentShow.webp'
-import event16 from '../assets/eventsPoster/tresureHunt.webp'
-import event17 from '../assets/eventsPoster/comingSoon.webp'
-import event18 from '../assets/eventsPoster/openMic.webp'
+import event15 from '../assets/eventsPoster/workshop.webp'
+import event16 from '../assets/eventsPoster/mockCid.jpg'
+import event17 from '../assets/eventsPoster/cornhole.webp'
+import event18 from '../assets/eventsPoster/openMic.jpg'
 import event19 from '../assets/eventsPoster/speedCubing.jpg'
-import event20 from '../assets/eventsPoster/valorant.webp'
-// import event21 from '../assets/eventsPoster/comingSoon.webp'
-// import event22 from '../assets/eventsPoster/comingSoon.webp'
+import event20 from '../assets/eventsPoster/valorant.jpg'
+import event21 from '../assets/eventsPoster/jenga.webp'
+import event22 from '../assets/eventsPoster/roboRace.jpg'
 
 
 export const EventsList = [
@@ -53,12 +53,12 @@ export const EventsList = [
       time:"2:30 PM -4:00 PM",
       venue:"Outdoors",
       des: "Each Teams have to bring their own drone and complete the given track in minimum time.",
-      link:"/events/droneRacingForm",
+      link:"/events/droneRaceForm",
       deadline:"31/01/2025"
     },
-    {
+    /*{
       id: 4,
-      name: " ",
+      name: "TECH CLASH",
       imgUrl: event4,
       date:"comming soon",
       time:"comming soon",
@@ -66,7 +66,7 @@ export const EventsList = [
       des: "Tech Clash is a debate competition on cutting-edge tech topics like AI, Blockchain, and data privacy.",
       link:"/events/techClashForm",
       deadline:"31/01/2025"
-    },
+    },*/
     {
       id: 5,
       name: "CODE SPRINT RELAY",
@@ -144,17 +144,17 @@ export const EventsList = [
       link:"/events/escapeTheMatrixForm",
       deadline:"31/01/2025"
     },
-    {
-      id: 12,
-      name: "Workshops",
-      imgUrl: event12,
-      date:"02/02/2025",
-      time:"11:00 AM -1:00 PM +2:00 PM - 3:30 PM",
-      venue:" E-Hall/Architecture Auditorium",
-      des: "Organize a paid 2-day workshop on Python, AI/ML, or Ethical Hacking in collaboration with renowned organizations like GFG.",
-      link:"/events/workshopsForm",
-      deadline:"31/01/2025"
-    },
+    // {
+    //   id: 12,
+    //   name: "Workshops",
+    //   imgUrl: event12,
+    //   date:"02/02/2025",
+    //   time:"11:00 AM -1:00 PM +2:00 PM - 3:30 PM",
+    //   venue:" E-Hall/Architecture Auditorium",
+    //   des: "Organize a paid 2-day workshop on Python, AI/ML, or Ethical Hacking in collaboration with renowned organizations like GFG.",
+    //   link:"/events/workshopsForm",
+    //   deadline:"31/01/2025"
+    // },
     {
       id: 13,
       name: "REVERSE CODING",
@@ -177,17 +177,17 @@ export const EventsList = [
     //   link:"/events/caseOpsForm",
     //   deadline:"31/01/2025"
     // },
-    // {
-    //   id: 15,
-    //   name: "D-BUG SHOWDOWN",
-    //   imgUrl: event15,
-    //   date:"comming soon",
-    //   time:"comming soon",
-    //   venue:"comming soon",
-    //   des: "A two-round coding competition focusing on programming, debugging, and problem-solving skills.",
-    //   link:"/events/dBugShowdownForm",
-    //   deadline:"31/01/2025"
-    // },
+    {
+      id: 15,
+      name: "Workshop on Vehicle Data Acquisition",
+      imgUrl: event15,
+      date:"comming soon",
+      time:"comming soon",
+      venue:"E-Hall, NIT Raipur",
+      des: "A Certified workshop on the basics of CAN (Controller Area Network) protocol, teaching participants to communicate with vehicle networks, collect data, and analyze it effectively.",
+      link:"/events/workshopVDAForm",
+      deadline:"31/01/2025"
+    },
     {
       id: 16,
       name: "MOCK CID",
@@ -205,9 +205,9 @@ export const EventsList = [
     imgUrl: event17,
     date:"comming soon",
     time:"comming soon",
-    venue:"Left Garden/Amul Parlor",
-    des: "A classic kerplunk game of carefully removing the sticks from a tube without causing the marbles to fall.",
-    link:"/events/giantKerplunkForm",
+    venue:"Central Garden",
+    des: "Cornhole is a popular lawn game where players or teams take turns throwing bags filled with sand at a raised platform with a hole in it. The objective is to score points by landing the bags either on the platform or through the hole.",
+    link:"/events/cornHoleForm",
     deadline:"31/01/2025"
   },
   {
@@ -243,26 +243,26 @@ export const EventsList = [
     link:"/events/valorantForm",
     deadline:"31/01/2025"
   },
-  // {
-  //   id: 21,
-  //   name: "COSPLAY COMPETITION",
-  //   imgUrl: event21,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"YOGA HALL ",
-  //   des: "Participants dress up as characters or objects and act or modify their accents accordingly.",
-  //   link:"/events/cosplayCompetitionForm",
-  //   deadline:"31/01/2025"
-  // },
-  // {
-  //   id: 22,
-  //   name: "ORIGAMI COMPETITION",
-  //   imgUrl: event22,
-  //   date:"comming soon",
-  //   time:"comming soon",
-  //   venue:"Any classroom",
-  //   des: "Participants have to make an origami with the given papers on the particular themes.",
-  //   link:"/events/origamiForm",
-  //   deadline:"31/01/2025"
-  // }
+  {
+    id: 21,
+    name: "JENGA",
+    imgUrl: event21,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"comming soon",
+    des: "Classic wooden jenga game competition.",
+    link:"/events/JengaForm",
+    deadline:"31/01/2025"
+  },
+  {
+    id: 22,
+    name: "ROBO RACE",
+    imgUrl: event22,
+    date:"comming soon",
+    time:"comming soon",
+    venue:"Outdoors",
+    des: "",
+    link:"/events/roboRaceForm",
+    deadline:"31/01/2025"
+  }
   ];

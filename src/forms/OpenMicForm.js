@@ -123,7 +123,7 @@ const OpenMicForm = () => {
     if (valid) {
       try {
         const res = await axios.post(
-          "/server/register?event=openmic",
+          "/server/register?event=OpenMic",
           form,
           {
             headers: {

@@ -1,6 +1,5 @@
 import axios from "axios";
 import { React, useEffect, useRef, useState } from "react";
-import { connect } from "react-redux";
 import keys from "../keys.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,20 +9,18 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const backend = keys.backend;
 
-const DimensionsForm = () => {
+const JengaForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const cachedForm = JSON.parse(localStorage.getItem("dimensionsform")) || {
+  const cachedForm = JSON.parse(localStorage.getItem("jenga")) || {
     name: "",
     email: "",
     whatsapp: "",
-    sem: "",
+    college: "",
     branch: "",
-    gender: "",
-    program_of_Study :""
-    
+    yog: "",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -33,7 +30,7 @@ const DimensionsForm = () => {
     const update = { ...form };
     update[e.target.name] = e.target.value;
     set(update);
-    localStorage.setItem("dimensionsform", JSON.stringify(update));
+    localStorage.setItem("jenga", JSON.stringify(update));
   };
 
   const [token, setToken] = useState(null);
@@ -51,7 +48,7 @@ const DimensionsForm = () => {
     if (token) {
       console.log("Captcha verified");
     }
-    // console.log(`hCaptcha Token: ${token}`);
+    // console.log(hCaptcha Token: ${token});
   }, [token]);
 
   const submit = async () => {
@@ -66,15 +63,14 @@ const DimensionsForm = () => {
       form.name !== "" &&
       form.email !== "" &&
       form.whatsapp !== "" &&
-      form.sem !== "" &&
+      form.college !== "" &&
       form.branch !== "" &&
-      form.gender !== "" &&
-      form.program_of_Study !== "" &&
+      form.yog !== "" &&
       form.whatsapp.length == 10;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=Dimensions`, form, {
+        const res = await axios.post("/server/register?event=Jenga", form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -98,7 +94,7 @@ const DimensionsForm = () => {
       id="registration"
       style={{ position: "relative", zIndex: "0", paddingTop: "5rem" }}
     >
-      <Title color={"DIMENSIONS (AUTOCAD)"} noncolor={""} />
+      <Title color={"Jenga"} noncolor={""} />
       <div className="container small" style={{ paddingTop: "3rem" }}>
         <div className="metaportal_fn_mintbox">
           <div className="mint_left">
@@ -109,7 +105,7 @@ const DimensionsForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    id="Name"
                     type="text"
                     name="name"
                     placeholder="Full Name"
@@ -119,7 +115,7 @@ const DimensionsForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderName"
+                    id="email"
                     type="text"
                     name="email"
                     placeholder="Email"
@@ -129,18 +125,18 @@ const DimensionsForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    id="leaderNumber"
+                    id="Number"
                     type="text"
                     name="whatsapp"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
                     value={form.whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem",color:"white" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
                   {
-                    form.whatsapp.length > 10 && (
+                    form.whatsapp.length>10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -148,18 +144,18 @@ const DimensionsForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="sem"
-                    id="Sem"
+                    name="college"
+                    id="Branch"
                     type="text"
-                    placeholder="Semester"
+                    placeholder="College"
                     onChange={(e) => handle(e)}
-                    value={form.sem}
+                    value={form.college}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="branch"
-                    id="leaderBranch"
+                    id="Branch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
@@ -168,22 +164,12 @@ const DimensionsForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="gender"
-                    id="gender"
+                    name="yog"
+                    id="Yog"
                     type="text"
-                    placeholder="Gender"
+                    placeholder="Year of Graduation"
                     onChange={(e) => handle(e)}
-                    value={form.gender}
-                  />
-                </li>
-                <li data-aos="fade-down">
-                  <input
-                    name="program_of_Study"
-                    id="program_of_Study"
-                    type="text"
-                    placeholder="program of Study"
-                    onChange={(e) => handle(e)}
-                    value={form.program_of_Study}
+                    value={form.yog}
                   />
                 </li>
               </ul>
@@ -219,49 +205,47 @@ const DimensionsForm = () => {
           <div className="mint_right">
             <div className="mright">
               <div data-aos="fade-down" className="mint_time">
-                <h4>DIMENSIONS (AUTOCAD)</h4>
+                <h4>Jenga</h4>
                 <h3 className="metaportal_fn_countdown">DESCRIPTION</h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  AUTOCAD enthusiasts can showcase their talent by creating
-                  designs.
+                   Classic wooden jenga game competition.
                 </p>
-                <p>Individual Participation</p>
               </div>
               <div data-aos="fade-down" className="mint_time">
-                <h4>Dimensions (AUTOCAD)</h4>
+                <h4>Jenga</h4>
                 <h3 className="metaportal_fn_countdown">
                   Rules and Regulations
                 </h3>
               </div>
               <div data-aos="fade-down" className="mint_info">
                 <p>
-                  1. Candidates must bring their own laptops with AUTOCAD
-                  software installed.
-                </p>
-                <p>2. Two Drawings will be provided to all the students</p>
-                <p>
-                  3. First drawing is Mandatory for all (Time Limit 20 Minutes)
+                  1. A classic Jenga game consists of 54 wooden blocks.
+                     All of the blocks should be stacked in groups of three,
+                     next to one another along their long sides and at a 
+                     right angle to the level below.
                 </p>
                 <p>
-                  4. Second Drawing will be for shortlisted Participants (Time
-                  Limit 60 Minutes)
+                  2. Take one block from any level of the tower, except the
+                     one below the incomplete top level. Place the wooden block
+                     at the topmost level to complete it. Players must use only 
+                     one hand at a time to touch the tower.
                 </p>
                 <p>
-                  5. Judgment will be done considering the technical details and
-                  speed of completion of the task
+                  3. Players may tap any block to find loose one. The turn of 
+                     the player ends after 10 seconds or when the next player 
+                     touches the tower, whichever occurs first.
                 </p>
-              </div>
-              {/* <div
-                data-aos="fade-down"
-                style={{ paddingTop: "2rem" }}
-                className="mint_time"
-              >
-                <a style={{ textDecoration: "none" }} href={docs}>
-                  <span className="metaportal_fn_button_4">Download PDF</span>
-                </a>
-              </div> */}
+                <p>
+                  4. The game ends when the tower falls completely, or if any
+                     block falls from the tower.
+                </p>
+                <p>
+                  5. Loser is the player who make the tower fall i.e., whose turn
+                     it was when the tower fell.
+                </p>               
+              </div>             
             </div>
           </div>
         </div>
@@ -270,4 +254,4 @@ const DimensionsForm = () => {
   );
 };
 
-export default DimensionsForm;
+export default JengaForm;

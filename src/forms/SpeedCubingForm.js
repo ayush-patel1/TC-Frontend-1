@@ -8,7 +8,7 @@ import Title from "../components/Title";
 import docs from "../assets/eventsAssets/terrainTreader.docx";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
-const axios = require("axios");
+//const axios = require("axios");
 const backend = keys.backend;
 
 const SpeedCubingForm = () => {

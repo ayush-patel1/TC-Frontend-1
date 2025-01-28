@@ -13,12 +13,12 @@ const Spons = () => {
   }, []);
   return (
     <div className="metaportal_fn_collectionpage" style={{paddingTop:"0"}}>
-      <div data-aos="fade-down" className={styles.page}>
+      {/* <div data-aos="fade-down" className={styles.page}>
         <div className={styles.top}>
           <h1>TITLE SPONSOR</h1>
           <img src={tsp} alt="" />
         </div>
-      </div>
+      </div> */}
       <div className="container">
         <div className="metaportal_fn_collection">
           {/* Filters */}

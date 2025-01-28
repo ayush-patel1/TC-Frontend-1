@@ -18,7 +18,7 @@ import event17 from '../assets/eventsPoster/cornhole.webp'
 import event18 from '../assets/eventsPoster/openMic.jpg'
 import event19 from '../assets/eventsPoster/speedCubing.jpg'
 import event20 from '../assets/eventsPoster/valorant.jpg'
-import event21 from '../assets/eventsPoster/comingSoon.webp'
+import event21 from '../assets/eventsPoster/jenga.webp'
 import event22 from '../assets/eventsPoster/roboRace.jpg'
 
 

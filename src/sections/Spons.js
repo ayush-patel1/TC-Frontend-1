@@ -12,7 +12,7 @@ const Spons = () => {
     AOS.init();
   }, []);
   return (
-    <div className="metaportal_fn_collectionpage" style={{paddingTop:"0"}}>
+    <div className="metaportal_fn_collectionpage" style={{paddingTop:"2rem"}}>
       {/* <div data-aos="fade-down" className={styles.page}>
         <div className={styles.top}>
           <h1>TITLE SPONSOR</h1>

@@ -8,6 +8,7 @@ import Title from "../components/Title";
 import docs from "../assets/eventsAssets/terrainTreader.docx";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
+//const axios = require("axios");
 const backend = keys.backend;
 
 const SpeedCubingForm = () => {
@@ -16,13 +17,13 @@ const SpeedCubingForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("speedCubingForm")) || {
-    Name: "",
-    Email: "",
-    Phone: "",
-    Branch: "",
-    Gender: "",
-    Program_of_study: "",
-    Sem: "",
+    username: "",
+    leader_email: "",
+    whatsapp_number: "",
+    branch: "",
+    gender: "",
+    program_of_study: "",
+    curr_semester: "",
   };
 
   const [form, set] = useState(cachedForm);
@@ -57,19 +58,19 @@ const SpeedCubingForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Name !== "" &&
-      form.Email !== "" &&
-      form.Phone !== "" &&
-      form.Gender !== "" &&
-      form.Branch !== "" &&
-      form.Sem !== "" &&
-      form.Program_of_study !== "" &&
-      form.Phone.length == 10;
+      form.username!== "" &&
+      form.leader_email !== "" &&
+      form.whatsapp_number !== "" &&
+      form.gender !== "" &&
+      form.branch !== "" &&
+      form.curr_semester !== "" &&
+      form.program_of_study !== "" &&
+      form.whatsapp_number.length == 10;
 
     if (condition) {
       try {
         const res = await axios.post(
-          `/server/register?event=speedCubing`,
+          `${backend}/register?event=SpeedCubing`,
           form,
           {
             headers: {
@@ -106,37 +107,37 @@ const SpeedCubingForm = () => {
               <ul>
                 <li data-aos="fade-down">
                   <input
-                    name="Name"
+                    name="username"
                     id="participantName"
                     type="text"
                     placeholder="Name Of Participant"
                     onChange={(e) => handle(e)}
-                    value={form.Name}
+                    value={form.username}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="emailId"
                     type="text"
-                    name="Email"
+                    name="leader_email"
                     placeholder="Email Id"
                     onChange={(e) => handle(e)}
-                    value={form.Email}
+                    value={form.leader_email}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     id="whatsappNumber"
                     type="text"
-                    name="Phone"
+                    name="whatsapp_number"
                     placeholder="Whatsapp Number"
                     onChange={(e) => handle(e)}
-                    value={form.Phone}
+                    value={form.whatsapp_number}
                   />
                   <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  { form.Phone.length > 10 && (
+                  { form.whatsapp_number.length > 10 && (
                     <p style={{ color: "red" }}>
                       Enter a number of 10 digits only.
                     </p>
@@ -144,42 +145,42 @@ const SpeedCubingForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Gender"
+                    name="gender"
                     id="gender"
                     type="text"
                     placeholder="Gender"
                     onChange={(e) => handle(e)}
-                    value={form.Gender}
+                    value={form.gender}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="program of study"
+                    name="program_of_study"
                     id="program_of_study"
                     type="text"
                     placeholder="Program of study"
                     onChange={(e) => handle(e)}
-                    value={form.Program_of_study}
+                    value={form.program_of_study}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Branch"
+                    name="branch"
                     id="branch"
                     type="text"
                     placeholder="Branch"
                     onChange={(e) => handle(e)}
-                    value={form.Branch}
+                    value={form.branch}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Sem"
+                    name="curr_semester"
                     id="sem"
                     type="text"
                     placeholder="Semester"
                     onChange={(e) => handle(e)}
-                    value={form.Sem}
+                    value={form.curr_semester}
                   />
                 </li>
               </ul>
@@ -190,10 +191,10 @@ const SpeedCubingForm = () => {
               onVerify={setToken}
               ref={captchaRef}
             />
-            <div style={{ fontSize: "17px" }}>
+            {/* <div style={{ fontSize: "17px",color:"white" }}>
               Don't forget to join the WhatsApp Group after registration!
-            </div>
-            <div className="mint_desc" style={{ paddingTop: "2rem" }}>
+            </div> */}
+            <div className="mint_desc" style={{ paddingTop: "2rem",color:"white" }}>
               {!isSubmitting ? (
                 <div
                   target="_blank"
@@ -208,7 +209,7 @@ const SpeedCubingForm = () => {
               ) : (
                 <>Submitting...</>
               )}
-              <div>
+              {/* <div>
                 {isSubmitted && (
                   <div>
                     <div>
@@ -223,7 +224,7 @@ const SpeedCubingForm = () => {
                     </div>
                   </div>
                 )}
-              </div>
+              </div> */}
               <p>* Read the Rules & Regulations before Submitting</p>
             </div>
           </div>

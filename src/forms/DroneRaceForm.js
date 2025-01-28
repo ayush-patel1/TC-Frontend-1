@@ -16,15 +16,21 @@ const DroneRaceForm = () => {
   }, []);
 
   const cachedForm = JSON.parse(localStorage.getItem("droneraceform")) || {
-    Team_name: "",
-    Leader_name: "",
     Leader_email: "",
     Leader_whatsapp: "",
     Leader_college: "",
     Leader_branch: "",
-    Leader_yog: "",
+    Leader_sem: "",
+    Leader_gender:"",
+    Leader_program_Of_Study:"",
+    P2_email:"",
+    P2_sem:"",
+    P2_branch:"",
     P2_name: "",
     P3_name: "",
+    P3_email:"",
+    P3_sem:"",
+    P3_branch:"",
   };
   const [form, set] = useState(cachedForm);
   const [uploadedFileName, setUploadedFileName] = useState("");
@@ -64,18 +70,27 @@ const DroneRaceForm = () => {
     }
     setSubmit(true);
     let condition =
-      form.Team_name !== "" &&
-      form.Leader_name !== "" &&
-      form.Leader_email !== "" &&
-      form.Leader_whatsapp !== "" &&
-      form.Leader_college !== "" &&
-      form.Leader_branch !== "" &&
-      form.Leader_yog !== "" &&
-      form.Leader_whatsapp.length == 10;
+    form.Team_name !== "" &&
+    form.Leader_name !== "" &&
+    form.Leader_email !== "" &&
+    form.Leader_whatsapp !== "" &&
+    form.Leader_college !== "" &&
+    form.Leader_branch !== "" &&
+    form.Leader_sem !== "" &&
+    form.Leader_program_Of_Study !== "" &&
+    form.Leader_gender !== "" &&
+    form.P2_name !== "" &&
+    form.P2_sem !== "" &&
+    form.P2_branch !== "" &&
+    form.P2_email !== "" &&
+    form.P3_name !== "" &&
+    form.P3_email !== "" &&
+    form.P3_branch !== "" &&
+    form.P3_sem !== "" ;
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=dronerace`, form, {
+        const res = await axios.post(`/server/register?event=DroneRacing`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -108,7 +123,7 @@ const DroneRaceForm = () => {
             </div>
             <div className="mint_list">
               <ul>
-                <li data-aos="fade-down">
+              <li data-aos="fade-down">
                   <input
                     name="Team_name"
                     id="teamName"
@@ -147,11 +162,11 @@ const DroneRaceForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white"}}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {
+                    form.Leader_whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -179,18 +194,18 @@ const DroneRaceForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
-                    name="Leader_yog"
-                    id="leaderYog"
+                    name="Leader_sem"
+                    id="leadersem"
                     type="text"
-                    placeholder="Leader's year of graduation"
+                    placeholder="semester"
                     onChange={(e) => handle(e)}
-                    value={form.Leader_yog}
+                    value={form.Leader_sem}
                   />
                 </li>
                 <li data-aos="fade-down">
                   <input
                     name="P2_name"
-                    id="leaderYog"
+                    id="P2_name"
                     type="text"
                     placeholder="Team Member 2 Name"
                     onChange={(e) => handle(e)}
@@ -199,12 +214,69 @@ const DroneRaceForm = () => {
                 </li>
                 <li data-aos="fade-down">
                   <input
+                    name="P2_branch"
+                    id="P2_branch"
+                    type="text"
+                    placeholder="Team Member 2 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_branch}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_email"
+                    id="P2_email"
+                    type="text"
+                    placeholder="Team Member 2 email"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_email}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
+                    name="P2_sem"
+                    id="P2_sem"
+                    type="text"
+                    placeholder="Team Member 2 semester"
+                    onChange={(e) => handle(e)}
+                    value={form.P2_sem}
+                  />
+                </li>
+                <li data-aos="fade-down">
+                  <input
                     name="P3_name"
-                    id="leaderYog"
+                    id="P3_name"
                     type="text"
                     placeholder="Team Member 3 Name"
                     onChange={(e) => handle(e)}
                     value={form.P3_name}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="P3_sem"
+                    id="P3_sem"
+                    type="text"
+                    placeholder="Team Member 3 sem"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_sem}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="P3_branch"
+                    id="P3_branch"
+                    type="text"
+                    placeholder="Team Member 3 branch"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_branch}
+                  />
+                </li><li data-aos="fade-down">
+                  <input
+                    name="P3_email"
+                    id="P3_email"
+                    type="text"
+                    placeholder="Team Member 3 email"
+                    onChange={(e) => handle(e)}
+                    value={form.P3_email}
                   />
                 </li>
               </ul>
@@ -271,7 +343,7 @@ const DroneRaceForm = () => {
                   the group
                 </p>
               </div>
-              <div
+              {/* <div
                 data-aos="fade-down"
                 style={{ paddingTop: "2rem" }}
                 className="mint_time"
@@ -279,7 +351,7 @@ const DroneRaceForm = () => {
                 <a style={{ textDecoration: "none" }} href={docs}>
                   <span className="metaportal_fn_button_4">Download PDF</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

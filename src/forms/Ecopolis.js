@@ -76,7 +76,7 @@ const EcopolisForm = () => {
 
     if (condition) {
       try {
-        const res = await axios.post(`/server/register?event=ecopolis`, form, {
+        const res = await axios.post(`/server/register?event=Ecopolis`, form, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -148,11 +148,11 @@ const EcopolisForm = () => {
                     onChange={(e) => handle(e)}
                     value={form.Leader_whatsapp}
                   />
-                  <span style={{ fontSize: "0.7rem" }}>
+                  <span style={{ fontSize: "0.7rem",color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  {form.Leader_whatsapp !== "" &&
-                    form.Leader_whatsapp.length !== 10 && (
+                  {
+                    form.Leader_whatsapp.length > 10 && (
                       <p style={{ color: "red" }}>
                         Enter a number of 10 digits only.
                       </p>
@@ -276,7 +276,7 @@ const EcopolisForm = () => {
                 <p>Proper PPT presentation (max 10 slides)</p>
                 <p>Model presentation</p>
               </div>
-              <div
+              {/* <div
                 data-aos="fade-down"
                 style={{ paddingTop: "2rem" }}
                 className="mint_time"
@@ -284,7 +284,7 @@ const EcopolisForm = () => {
                 <a style={{ textDecoration: "none" }} href={docs}>
                   <span className="metaportal_fn_button_4">Download PDF</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

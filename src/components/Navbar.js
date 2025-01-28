@@ -33,7 +33,7 @@ const Navbar = ({ walletToggle, navigationToggle }) => {
     }, [location.pathname]);
 
     const handleScroll = () => {
-        if (window.scrollY > 500) {
+        if (window.scrollY > 85) {
             setScrolled(true); // User has scrolled down
         } else {
             setScrolled(false); // User is at the top

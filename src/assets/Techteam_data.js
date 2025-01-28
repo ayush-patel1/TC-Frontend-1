@@ -1,12 +1,13 @@
 
 import Piyush_Kumar from '../assets/images/TechTeam/Piyush_Kumar.webp'
+import Prabhat_Sharma from '../assets/images/TechTeam/Prabhat_Sharma.webp'
 import B_Deewakar_Rao from '../assets/images/TechTeam/B_Deewakar_Rao.webp'
 import Nehil_Sahu from '../assets/images/TechTeam/Nehil_Sahu.webp'
 import Ayush_Patel from '../assets/images/TechTeam/Ayush_Patel.webp'
 import Devesh_Agarwal from '../assets/images/TechTeam/Devesh_Agarwal.webp'
 import Gourav_Deep_Shahni from '../assets/images/TechTeam/Gourav_Deep_Shahni.webp'
 import Aditya_Kumar_Shah from '../assets/images/TechTeam/Aditya_Kumar_Shah.webp'
-//import Anupam_Malviya from '../assets/images/TechTeam/Anupam_Malviya.jpg'
+import Vibhor_Shukla from '../assets/images/TechTeam/Vibhor_Shukla.webp'
 
 export const techteamList = [
     {
@@ -46,17 +47,17 @@ export const techteamList = [
       name: "Aditya Kumar Sah",
       imgUrl: Aditya_Kumar_Shah,
       githubUrl: "https://github.com/Aditya-kumar-sah",
-      linkedinUrl: "https://www.linkedin.com/in/aditya-sah-1932a7284/",
-      instaUrl: "https://www.instagram.com/aditya_sah_",
-      gmail:"",
+      linkedinUrl: "https://www.linkedin.com/in/prabhatsharma2508",
+      instaUrl: "https://www.instagram.com/pruhbhat",
+      gmail:"ps25082005@gmail.com",
         desi: "Core Coordinator"
 
     }, 
     {
       id:5,
       name: "Prabhat Sharma",
-      imgUrl: "",
-      githubUrl: "https://github.com/Aditya-kumar-sah",
+      imgUrl: Prabhat_Sharma, 
+      githubUrl: "https://github.com/probot-codes",
       linkedinUrl: "https://www.linkedin.com/in/aditya-sah-1932a7284/",
       instaUrl: "https://www.instagram.com/aditya_sah_",
       gmail:"",
@@ -95,7 +96,7 @@ export const techteamList = [
     {
       id: 9,
       name: "Vibhor Shukla",
-      imgUrl: "",
+      imgUrl: Vibhor_Shukla,
       githubUrl:"https://github.com/VibhorShukla-BHRT",
       linkedinUrl: "https://www.linkedin.com/in/vibhor-shukla-a07577237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       instaUrl: "https://www.instagram.com/shukla_vibhor/",

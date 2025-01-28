@@ -137,7 +137,7 @@ const SpeedCubingForm = () => {
                   <span style={{ fontSize: "0.7rem" ,color:"white" }}>
                     * Don't include +91 or 0.
                   </span>
-                  { form.Phone.length > 10 && (
+                  { form.whatsapp_number.length > 10 && (
                     <p style={{ color: "red" }}>
                       Enter a number of 10 digits only.
                     </p>
